@@ -1,0 +1,94 @@
+/// @description Insert description here
+// You can write your code in this editor
+
+window_set_cursor(cr_none);
+
+room_goto(room_gp);
+
+global.bg_depth = -170;
+global.player_hitbox_depth = 0;
+global.danmaku_depth = 1;
+global.player_depth = 30;
+global.item_depth = 33;
+global.player_shot_depth = 35;
+global.boss_depth = 40;
+global.spell_bg_depth = 50;
+
+
+global.spell_file = "SpellData.ini"
+
+
+global.difficulty = 3;
+// 0 = easy;
+// 1 = normal;
+// 2 = hard;
+// 3 = lunatic;
+
+
+
+
+//define player_id
+#macro P_REIMU 0
+#macro P_MARISA 1
+#macro P_SANAE 2
+#macro P_SUIKA 3
+
+//define boss_id
+#macro BOSS_APPLE 1
+#macro BOSS_SERENE 2
+#macro BOSS_PALE 3
+#macro BOSS_4 4
+#macro BOSS_5 5
+#macro BOSS_6 6
+#macro BOSS_7 7
+
+//define enn_id
+#macro EN_RED 0
+#macro EN_BLUE 1
+#macro EN_GREEN 2
+#macro EN_BIG 3
+#macro EN_DEATH 4
+#macro EN_YY 5
+#macro EN_CRAB 6
+#macro EN_CIRNO 9
+
+// define danmaku_id
+#macro DAN_AMULET 0
+#macro DAN_ANCHOR 1
+#macro DAN_ARROW 2
+#macro DAN_ARROWHEAD 3
+#macro DAN_BALL 4
+#macro DAN_BUBBLE 5
+#macro DAN_BULLET 6
+#macro DAN_FIREBALL 7
+#macro DAN_HEART 8
+#macro DAN_JELLYBEAN 9
+#macro DAN_KNIFE 10
+#macro DAN_KUNAI 11
+#macro DAN_MENTOS 12
+#macro DAN_NOTE 13
+#macro DAN_PELLET 14
+#macro DAN_RAINDROP 15
+#macro DAN_REST 16
+#macro DAN_RICE 17
+#macro DAN_STARBIG 18
+#macro DAN_STARSMALL 19
+#macro DAN_CRAB 20
+
+//define rot_type
+#macro ROT_FOLLOW 0
+#macro ROT_SET 1
+#macro ROT_SPIN 2
+
+//define pos_type
+#macro POS_ANGLE 0
+#macro POS_SP 1
+#macro POS_MANUAL 2
+
+//define item_type
+#macro ITEM_POINT 0
+#macro ITEM_CANCEL 1
+#macro ITEM_LIFE 2
+#macro ITEM_BOMB 3
+#macro ITEM_LIFEPIECE 4
+#macro ITEM_BOMBPIECE 5

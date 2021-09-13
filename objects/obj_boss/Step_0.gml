@@ -1,0 +1,140 @@
+/// @description Insert description here
+// You can write your code in this editor
+
+if (global.gp_active)
+{
+	
+	if (state != last_state)
+	{
+		last_state = state;
+		state_time = 0;
+	}
+	else
+	{
+		state_time += 1;
+	}
+	
+	switch(state)
+	{
+		case 0://normal
+			if (state_time % 120 == 119)
+			{
+				//boss_movement_random(4);
+				
+			}
+		break;
+		case 1://leaving
+			if (x == x_to) and (y == y_to)
+			{
+				instance_destroy(self)
+			}
+		break;
+		case 2: //death
+			var ang = rng(360,true,2);
+			
+			if (state_time % 3 == 0)
+			{
+				var inst = instance_create_depth(x,y,depth -1,obj_boss_explode);
+				inst.scale = rng(1,false,5);
+				
+			}
+			switch(state_time)
+			{
+				case 0:
+					boss_movement_goto(x + lengthdir_x(30,ang),y + lengthdir_y(30,ang),0.5);
+					play_sound(sfx_boss_preexplosion,1,false);
+				break;
+				case 40:
+					play_sound(sfx_boss_explosion,1,false);
+					screen_shake(20,10);
+					repeat(120)
+					{
+						instance_create_depth(x,y,depth -1,obj_boss_explode);
+					}
+					instance_destroy();
+				break;
+			}
+		break;
+	}
+	
+	switch(pos_type)
+	{
+		case POS_SP:
+			//Movement
+			var ang = find_angle(x,y,x_to,y_to);
+			
+			var xa = recursiv(x, x_to, 4, 0.5);
+			var ya = recursiv(y, y_to, 4, 0.5);
+			
+			var hyp = sqrt(sqr(xa) + sqr(ya));
+			if (hyp > spd_max)
+			{
+				hyp = spd_max;
+			}
+			
+			hsp = lengthdir_x(hyp,ang);
+			vsp = lengthdir_y(hyp,ang);
+		break;
+		case POS_ANGLE:
+			hsp = lengthdir_x(spd,angle)
+			vsp = lengthdir_y(spd,angle)
+		break;
+	}
+
+	
+	//
+	if (abs(hsp) > 0)
+	{
+		dir = goto_value(dir,dir_max * sign(hsp),dir_spd);
+		
+		spr_dir = sign(dir);
+	}
+	else
+	{
+		dir = goto_value(dir,0,dir_spd);
+	}
+	
+	
+	switch(movement_type)
+	{
+		case 0:
+			if (dir == 0)
+			{
+				sprite_index = idle_spr;
+				image_index = state_time * idle_spd;
+			}
+			else 
+			{
+				sprite_index = move_spr;
+				image_index = abs(dir);
+			}
+		break;
+	}
+	
+	
+	// taking damage sfx when no pattern active
+	if (!instance_exists(obj_spell))
+	{
+		var damage = check_damage();
+		
+		if(damage > 0)
+		{
+			play_sound(sfx_damage,1,false);
+		}
+	}
+	
+	
+	x += hsp;
+	y += vsp;
+	
+	in_position = ((x == x_to) and (y == y_to))
+	
+	
+	//setting hitbox
+	if (instance_exists(my_hitbox))
+	{
+		my_hitbox.x = x;
+		my_hitbox.y = y;
+	}
+	
+}

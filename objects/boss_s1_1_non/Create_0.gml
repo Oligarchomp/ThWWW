@@ -1,0 +1,11 @@
+/// @description Insert description here
+// You can write your code in this editor
+
+// Inherit the parent event
+event_inherited();
+
+
+spell_set_life(500,130);
+spell_set_time(16,false,100)
+
+shot_dir = 1;
