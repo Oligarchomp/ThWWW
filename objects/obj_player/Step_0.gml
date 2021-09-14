@@ -152,6 +152,10 @@ if (global.gp_active)
 				{
 					auto_collect = true;
 				}
+				with(obj_item_auto)
+				{
+					max_value = true;
+				}
 			}
 			
 		break;

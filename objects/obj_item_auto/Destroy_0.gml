@@ -8,7 +8,7 @@ var y_pos = obj_player.y;
 switch(item_type)
 {
 	case ITEM_POINT:
-		if(y_pos < global.poc)
+		if(y_pos < global.poc) or (max_value)
 		{
 			var scr = global.piv;
 		}

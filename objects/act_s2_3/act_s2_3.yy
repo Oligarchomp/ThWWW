@@ -4,7 +4,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_act",
+    "path": "objects/obj_act/obj_act.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -28,7 +31,7 @@
     "path": "folders/Objects/STAGES/Stage2.yy",
   },
   "resourceVersion": "1.0",
-  "name": "act_s2_0",
+  "name": "act_s2_3",
   "tags": [],
   "resourceType": "GMObject",
 }

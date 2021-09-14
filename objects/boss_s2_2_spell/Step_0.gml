@@ -34,7 +34,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var knife_row_spd = 1.5;
 			var knife_row_wait = 50;
 			
-			var crab_lenght = 140;
+			var crab_lenght = 125;
 			var crab_wait = 40;
 			var crab_spd = 5;
 			

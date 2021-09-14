@@ -41,3 +41,5 @@ switch(item_type)
 		play_sound(sfx_bombpiece,1,false);
 	break;
 }
+
+max_value = false;
