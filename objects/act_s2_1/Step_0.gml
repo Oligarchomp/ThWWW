@@ -6,13 +6,31 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
+			var arrowhead_nbr = 0;
+			var arrowhead_spd = 2;
 			
+			var ring_nbr = 6;
+			var ring_row = 1;
+			var ring_spd_min = 2.5;
+			var ring_spd_max = 3;
 		break;
 		case 1:
+			var arrowhead_nbr = 6;
+			var arrowhead_spd = 2.3;
 			
+			var ring_nbr = 10;
+			var ring_row = 2;
+			var ring_spd_min = 3;
+			var ring_spd_max = 3.5;
 		break;
 		case 2:
-		
+			var arrowhead_nbr = 10;
+			var arrowhead_spd = 2.5;
+			
+			var ring_nbr = 16;
+			var ring_row = 3;
+			var ring_spd_min = 3.5;
+			var ring_spd_max = 4;
 		break;
 		case 3:
 			var arrowhead_nbr = 16;

@@ -6,28 +6,64 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
+			//arrow
+			var shoot_lenght = 90;
+			var shoot_wait = 15;
+			var shoot_nbr = 10;
+			//green arrowhead
+			var wall_nbr = 1;
+			var wall_ring = shoot_nbr / 2;
+			var wall_spd = 2.5;
 			
+			//aim
+			var ring_nbr = 3;
+			var ring_row = 1;
+			var ring_spd_min = 3;
+			var ring_spd_max = 3.2;
 		break;
 		case 1:
-			
-		break;
-		case 2:
-		
-		break;
-		case 3:
+			//arrow
 			var shoot_lenght = 90;
-			var shoot_wait = 12;
-			var shoot_nbr = 40;
-			
+			var shoot_wait = 15;
+			var shoot_nbr = 24;
+			//green arrowhead
 			var wall_nbr = 3;
 			var wall_ring = shoot_nbr / 2;
 			var wall_spd = 2.5;
-			var wall_wait = 20;
 			
-			var fairy_lenght = 120;
-			var fairy_off = 40;
-			var fairy_wait = 10;
+			//aim
+			var ring_nbr = 6;
+			var ring_row = 2;
+			var ring_spd_min = 3.5;
+			var ring_spd_max = 3.8;
+		break;
+		case 2:
+			//arrow
+			var shoot_lenght = 90;
+			var shoot_wait = 15;
+			var shoot_nbr = 32;
+			//green arrowhead
+			var wall_nbr = 3;
+			var wall_ring = shoot_nbr / 2;
+			var wall_spd = 2.5;
 			
+			//aim
+			var ring_nbr = 12;
+			var ring_row = 2;
+			var ring_spd_min = 4;
+			var ring_spd_max = 4.2;
+		break;
+		case 3:
+			//arrow
+			var shoot_lenght = 90;
+			var shoot_wait = 15;
+			var shoot_nbr = 40;
+			//green arrowhead
+			var wall_nbr = 3;
+			var wall_ring = shoot_nbr / 2;
+			var wall_spd = 2.5;
+			
+			//aim
 			var ring_nbr = 18;
 			var ring_row = 2;
 			var ring_spd_min = 5;
@@ -37,6 +73,10 @@ if(global.gp_active)
 	
 	var fairy_life = 165;
 	var small_fairy_life = 6;
+	
+	var fairy_lenght = 120;
+	var fairy_off = 40;
+	var fairy_wait = 10;
 	
 	switch(step)
 	{
@@ -119,10 +159,6 @@ if(global.gp_active)
 			case 1://shoot
 				if(state_time < shoot_lenght)
 				{
-					if(state_time % wall_wait == 0)
-					{
-						
-					}
 					if(state_time % shoot_wait == 0)
 					{
 						shoot_ring(DAN_ARROW,1,shoot_nbr,x,y,angle_shoot - 360 / shoot_nbr / 2,wall_spd,sfx_shot3,8);

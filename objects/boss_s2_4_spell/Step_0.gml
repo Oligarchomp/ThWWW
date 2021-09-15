@@ -56,7 +56,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var move_wait = 130;
 			
 			var aim_wait = 36;
-			var aim_nbr_ring = 56;
+			var aim_nbr_ring = 55;
 			var aim_nbr_row = 1;
 			var aim_spd_min = 3;
 			var aim_spd_max = 4;
@@ -206,11 +206,16 @@ if(global.gp_active) and (spell_wait == 0)
 			play_sound(sfx_redirect3,1,false);
 		}
 		
-		for(var i = 0; i < 1; i += 1)
+		//rain
+		if(step % 2 == 0)
 		{
-			shoot(DAN_KNIFE,2,rng(100,false,i),-rng(10,false,i),-90,10 + rng(5,false,i),noone,8);
-			shoot(DAN_KNIFE,2,room_width - rng(100,false,i),-rng(10,false,i),-90,10 + rng(5,false,i),noone,8);
+			shoot(DAN_KNIFE,2,rng(100,false,1),-rng(10,false,2),-90,10 + rng(5,false,3),noone,8);
 		}
+		else
+		{
+			shoot(DAN_KNIFE,2,room_width - rng(100,false,6),-rng(10,false,4),-90,10 + rng(5,false,5),noone,8);
+		}
+		
 	}
 	
 	

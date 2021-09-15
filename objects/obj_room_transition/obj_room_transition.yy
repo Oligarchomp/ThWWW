@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_road",
-    "path": "sprites/spr_road/spr_road.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -24,16 +21,15 @@
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "S1",
-    "path": "folders/Objects/BACKGROUND/S1.yy",
+    "name": "EVENT",
+    "path": "folders/Objects/EVENT.yy",
   },
   "resourceVersion": "1.0",
-  "name": "bg_s1",
+  "name": "obj_room_transition",
   "tags": [],
   "resourceType": "GMObject",
 }

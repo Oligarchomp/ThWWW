@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-event_inherited();
-global.stage = 2;
 
-bg_to_destroy = bg_s1;
-bg_to_create = bg_s2;
-music = noone;
+// Inherit the parent event
+event_inherited();
+
+act_set_time(410,450);
+

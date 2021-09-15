@@ -72,7 +72,7 @@ dir_spd = 0.2;
 
 x_disjoint = 60;
 y_disjoint = 78;
-y_dis_max = 150; // from the top of the screen
+y_dis_max = 135; // from the top of the screen
 
 // Hitbox
 my_hitbox = instance_create_depth(x,y,depth - 1, obj_hitbox);

@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 5,
+  "bbox_right": 3,
   "bbox_top": 0,
-  "bbox_bottom": 5,
+  "bbox_bottom": 3,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 6,
-  "height": 6,
+  "width": 4,
+  "height": 4,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4232ca29-7a24-445f-953a-1776b3479069","path":"sprites/spr_player_hurtbox_collision/spr_player_hurtbox_collision.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4232ca29-7a24-445f-953a-1776b3479069","path":"sprites/spr_player_hurtbox_collision/spr_player_hurtbox_collision.yy",},"LayerId":{"name":"5433becf-c3ae-4802-9f4e-b27b47185ae6","path":"sprites/spr_player_hurtbox_collision/spr_player_hurtbox_collision.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_player_hurtbox_collision","path":"sprites/spr_player_hurtbox_collision/spr_player_hurtbox_collision.yy",},"resourceVersion":"1.0","name":"4232ca29-7a24-445f-953a-1776b3479069","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4e8b2b8d-38be-44da-93dc-226d912bf136","path":"sprites/spr_player_hurtbox_collision/spr_player_hurtbox_collision.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4e8b2b8d-38be-44da-93dc-226d912bf136","path":"sprites/spr_player_hurtbox_collision/spr_player_hurtbox_collision.yy",},"LayerId":{"name":"5433becf-c3ae-4802-9f4e-b27b47185ae6","path":"sprites/spr_player_hurtbox_collision/spr_player_hurtbox_collision.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_player_hurtbox_collision","path":"sprites/spr_player_hurtbox_collision/spr_player_hurtbox_collision.yy",},"resourceVersion":"1.0","name":"4e8b2b8d-38be-44da-93dc-226d912bf136","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"a5ad249d-5c87-4d5a-90ad-d331b8361f63","path":"sprites/spr_player_hurtbox_collision/spr_player_hurtbox_collision.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"a5ad249d-5c87-4d5a-90ad-d331b8361f63","path":"sprites/spr_player_hurtbox_collision/spr_player_hurtbox_collision.yy",},"LayerId":{"name":"ab3764d4-7c02-4ca6-8d01-23a5614b9e4b","path":"sprites/spr_player_hurtbox_collision/spr_player_hurtbox_collision.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_player_hurtbox_collision","path":"sprites/spr_player_hurtbox_collision/spr_player_hurtbox_collision.yy",},"resourceVersion":"1.0","name":"a5ad249d-5c87-4d5a-90ad-d331b8361f63","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"443d7c55-09a7-4688-8f20-6156376422fc","path":"sprites/spr_player_hurtbox_collision/spr_player_hurtbox_collision.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"443d7c55-09a7-4688-8f20-6156376422fc","path":"sprites/spr_player_hurtbox_collision/spr_player_hurtbox_collision.yy",},"LayerId":{"name":"ab3764d4-7c02-4ca6-8d01-23a5614b9e4b","path":"sprites/spr_player_hurtbox_collision/spr_player_hurtbox_collision.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_player_hurtbox_collision","path":"sprites/spr_player_hurtbox_collision/spr_player_hurtbox_collision.yy",},"resourceVersion":"1.0","name":"443d7c55-09a7-4688-8f20-6156376422fc","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_player_hurtbox_collision","path":"sprites/spr_player_hurtbox_collision/spr_player_hurtbox_collision.yy",},
@@ -44,8 +44,8 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"8f7b029d-35ca-4173-af15-a474d863a5ab","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4232ca29-7a24-445f-953a-1776b3479069","path":"sprites/spr_player_hurtbox_collision/spr_player_hurtbox_collision.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"ac22ed76-7cfb-4fce-ae5a-0b1ea74b6202","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4e8b2b8d-38be-44da-93dc-226d912bf136","path":"sprites/spr_player_hurtbox_collision/spr_player_hurtbox_collision.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2f626247-5e38-47f4-86fc-43fe9b8c8bb3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a5ad249d-5c87-4d5a-90ad-d331b8361f63","path":"sprites/spr_player_hurtbox_collision/spr_player_hurtbox_collision.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"13118ade-6813-4eb3-8abd-f4e18841b28b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"443d7c55-09a7-4688-8f20-6156376422fc","path":"sprites/spr_player_hurtbox_collision/spr_player_hurtbox_collision.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,8 +58,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 3,
-    "yorigin": 3,
+    "xorigin": 2,
+    "yorigin": 2,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_player_hurtbox_collision","path":"sprites/spr_player_hurtbox_collision/spr_player_hurtbox_collision.yy",},
@@ -69,7 +69,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5433becf-c3ae-4802-9f4e-b27b47185ae6","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ab3764d4-7c02-4ca6-8d01-23a5614b9e4b","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

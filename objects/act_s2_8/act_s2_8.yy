@@ -1,13 +1,13 @@
 {
-  "spriteId": {
-    "name": "spr_road",
-    "path": "sprites/spr_road/spr_road.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_act",
+    "path": "objects/obj_act/obj_act.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -23,17 +23,15 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "S1",
-    "path": "folders/Objects/BACKGROUND/S1.yy",
+    "name": "Stage2",
+    "path": "folders/Objects/STAGES/Stage2.yy",
   },
   "resourceVersion": "1.0",
-  "name": "bg_s1",
+  "name": "act_s2_8",
   "tags": [],
   "resourceType": "GMObject",
 }

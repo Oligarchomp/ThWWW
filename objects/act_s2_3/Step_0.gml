@@ -6,13 +6,43 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
+			var aim_spd_min = 2;
+			var aim_spd_max = 2.5;
+			var aim_row = 1;
+			var aim_arc = 1;
+			var aim_dist = 28;
 			
+			var angle_plus_plus = 20;
+			var ball_spd = 1.5;
+			
+			var pretty_lenght = 210;
+			var pretty_wait = 30;
 		break;
 		case 1:
+			var aim_spd_min = 3;
+			var aim_spd_max = 3.2;
+			var aim_row = 2;
+			var aim_arc = 3;
+			var aim_dist = 28;
 			
+			var angle_plus_plus = 10;
+			var ball_spd = 2;
+			
+			var pretty_lenght = 210;
+			var pretty_wait = 14;
 		break;
 		case 2:
-		
+			var aim_spd_min = 3.5;
+			var aim_spd_max = 3.8;
+			var aim_row = 2;
+			var aim_arc = 5;
+			var aim_dist = 28;
+			
+			var angle_plus_plus = 8;
+			var ball_spd = 2;
+			
+			var pretty_lenght = 210;
+			var pretty_wait = 10;
 		break;
 		case 3:
 			var aim_spd_min = 4.1;
@@ -31,8 +61,8 @@ if(global.gp_active)
 	
 	var fairy_lenght = 240;
 	var fairy_y_off = 250;
-	var fairy_wait = 10;
-	var fairy_life = 12;
+	var fairy_wait = 15;
+	var fairy_life = 15;
 	
 	
 	

@@ -32,7 +32,7 @@ switch(player_id)
 		
 		ms_spd = 1;
 		
-		deathbomb_time = 7;
+		deathbomb_time = 8;
 	break;
 	case P_SANAE: 
 		idle_spr = spr_sanae_idle;
@@ -48,7 +48,7 @@ switch(player_id)
 		hurt_im = 1;
 		grab_im = 0;
 		
-		deathbomb_time = 8;
+		deathbomb_time = 10;
 	break;
 	case P_SUIKA: 
 		idle_spr = spr_suika_idle;
@@ -75,7 +75,7 @@ switch(player_id)
 		hurt_im = 0;
 		grab_im = 0;
 		
-		deathbomb_time = 10;
+		deathbomb_time = 12;
 	break;
 }
 global.poc = poc;
