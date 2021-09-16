@@ -10,10 +10,6 @@ image_nbr = 1;
 
 image_spd = 0.1;
 
-
-image_xscale = 1;
-image_yscale = 1;
-
 is_cancelable = true;
 grazed = false;
 
@@ -38,77 +34,77 @@ rot_type = ROT_FOLLOW;
 switch(danmaku_id)
 {
 	case DAN_AMULET:
-		sprite_index = spr_amulet;
+		sprite_danmaku = spr_amulet;
 	break;
 	case DAN_ANCHOR:
-		sprite_index = spr_anchor;
+		sprite_danmaku = spr_anchor;
 	break;
 	case DAN_ARROW:
-		sprite_index = spr_arrow;
+		sprite_danmaku = spr_arrow;
 	break;
 	case DAN_ARROWHEAD:
-		sprite_index = spr_arrowhead;
+		sprite_danmaku = spr_arrowhead;
 	break;
 	case DAN_BALL:
-		sprite_index = spr_ball;
+		sprite_danmaku = spr_ball;
 		rot_type = ROT_SET;
 	break;
 	case DAN_BUBBLE:
-		sprite_index = spr_bubble;
+		sprite_danmaku = spr_bubble;
 		rot_type = ROT_SPIN;
 	break;
 	case DAN_BULLET:
-		sprite_index = spr_bullet;
+		sprite_danmaku = spr_bullet;
 	break;
 	case DAN_FIREBALL:
-		sprite_index = spr_fireball;
+		sprite_danmaku = spr_fireball;
 		image_nbr = 4;
 	break;
 	case DAN_HEART:
-		sprite_index = spr_heart;
+		sprite_danmaku = spr_heart;
 	break;
 	case DAN_JELLYBEAN:
-		sprite_index = spr_jellybean;
+		sprite_danmaku = spr_jellybean;
 	break;
 	case DAN_KNIFE:
-		sprite_index = spr_knife;
+		sprite_danmaku = spr_knife;
 	break;
 	case DAN_KUNAI:
-		sprite_index = spr_kunai;
+		sprite_danmaku = spr_kunai;
 	break;
 	case DAN_MENTOS:
-		sprite_index = spr_mentos;
+		sprite_danmaku = spr_mentos;
 		rot_type = ROT_SET;
 	break;
 	case DAN_NOTE:
-		sprite_index = spr_note;
+		sprite_danmaku = spr_note;
 		rot_type = ROT_SET;
 		image_nbr = 4;
 		rot_set_rot = -90;
 	break;
 	case DAN_PELLET:
-		sprite_index = spr_pellet;
+		sprite_danmaku = spr_pellet;
 		rot_type = ROT_SET;
 	break;
 	case DAN_RAINDROP:
-		sprite_index = spr_raindrop;
+		sprite_danmaku = spr_raindrop;
 	break;
 	case DAN_REST:
-		sprite_index = spr_rest;
+		sprite_danmaku = spr_rest;
 	break;
 	case DAN_RICE:
-		sprite_index = spr_rice;
+		sprite_danmaku = spr_rice;
 	break;
 	case DAN_STARBIG:
-		sprite_index = spr_starbig;
+		sprite_danmaku = spr_starbig;
 		rot_type = ROT_SPIN;
 	break;
 	case DAN_STARSMALL:
-		sprite_index = spr_starsmall;
+		sprite_danmaku = spr_starsmall;
 		rot_type = ROT_SPIN;
 	break;
 	case DAN_CRAB:
-		sprite_index = spr_danmakrab;
+		sprite_danmaku = spr_danmakrab;
 		rot_type = ROT_SET;
 		image_nbr = 2;
 		rot_set_rot = 0;
@@ -116,7 +112,7 @@ switch(danmaku_id)
 }
 
 
-x_offscreen = max(sprite_get_width(sprite_index),sprite_get_height(sprite_index)) + 5; // when considered offscreen
+x_offscreen = max(sprite_get_width(sprite_danmaku),sprite_get_height(sprite_danmaku)) + 5; // when considered offscreen
 y_offscreen = x_offscreen;
 
 
@@ -157,5 +153,7 @@ step = 0;
 is_spawning = true; // not to be used if THIS object is like appearing
 // this object spawns, the first thing it does in step is to not do anything and to create the spawn object
 
+image_index = danmaku_id;
+image_danmaku = (color_id * image_nbr ) + (step * image_spd) % image_nbr; // to avoid the thing to turn purple for no reason
 
-image_index = (color_id * image_nbr ) + (step * image_spd) % image_nbr; // to avoid the thing to turn purple for no reason
+sprite_index = spr_danmaku_hitbox;

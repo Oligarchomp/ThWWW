@@ -17,11 +17,6 @@ if (global.gp_active)
 	switch(state)
 	{
 		case 0://normal
-			if (state_time % 120 == 119)
-			{
-				//boss_movement_random(4);
-				
-			}
 		break;
 		case 1://leaving
 			if (x == x_to) and (y == y_to)

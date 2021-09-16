@@ -25,7 +25,7 @@ movement_type = 0;
 // 1 = Spins when moving
 // 2 = two moving animation, for asymetrical character.
 
-global.boss = BOSS_PALE;
+//global.boss = BOSS_PALE;
 boss_id = global.boss;
 // 0 = Wakasagihime
 // 1 = Apple
@@ -86,6 +86,7 @@ y_disjoint = 78;
 y_dis_max = 135; // from the top of the screen
 
 // Hitbox
+
 my_hitbox = instance_create_depth(x,y,depth - 1, obj_hitbox);
 my_hitbox.owner = self;
 my_hitbox.owner_type = 1;

@@ -15,7 +15,7 @@ if(global.gp_active)
 			state_time += 1;
 		}
 	
-		image_index = (color_id * image_nbr ) + (step * image_spd) % image_nbr;
+		image_danmaku = (color_id * image_nbr ) + (step * image_spd) % image_nbr;
 	
 		switch(rot_type)
 		{
@@ -64,7 +64,7 @@ if(global.gp_active)
 	{
 		// first thing it ever does
 		var inst = instance_create_depth(x,y,depth - 1,obj_danmaku_spawn);
-		inst.sprite_index = sprite_index;
+		inst.sprite_index = sprite_danmaku;
 		inst.image_index = color_id * image_nbr;
 		inst.rot = rot;
 		inst.my_danmaku = self;

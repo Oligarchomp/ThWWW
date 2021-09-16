@@ -12,7 +12,7 @@ if (global.gp_active)
 		case 0:
 			//image_angle = owner.rot;
 	
-			image_index = danmaku_id;
+			//image_index = danmaku_id;
 		break;
 		case 1:
 			image_index = 0;

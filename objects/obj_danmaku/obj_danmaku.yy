@@ -1,13 +1,16 @@
 {
   "spriteId": {
-    "name": "spr_bubble",
-    "path": "sprites/spr_bubble/spr_bubble.yy",
+    "name": "spr_danmaku_hitbox",
+    "path": "sprites/spr_danmaku_hitbox/spr_danmaku_hitbox.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_hitbox",
+    "path": "objects/obj_hitbox/obj_hitbox.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
