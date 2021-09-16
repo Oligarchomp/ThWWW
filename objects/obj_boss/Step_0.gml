@@ -83,7 +83,7 @@ if (global.gp_active)
 
 	
 	//
-	if (abs(hsp) > 0)
+	if (abs(hsp) > 0) or (rot != 0)
 	{
 		dir = goto_value(dir,dir_max * sign(hsp),dir_spd);
 		
@@ -97,6 +97,12 @@ if (global.gp_active)
 	
 	switch(movement_type)
 	{
+		case 1:
+			if(!in_position) and (rot == 0)
+			{
+				rot += 360;
+			}
+			rot = goto_value(rot,0,20);
 		case 0:
 			if (dir == 0)
 			{

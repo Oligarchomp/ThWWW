@@ -6,7 +6,6 @@ depth = global.boss_depth;
 instance_create_depth(x,y,depth + 1,obj_boss_indicator);
 
 
-
 state = 0;
 // 0 = normal
 // 1 = leaving
@@ -14,6 +13,19 @@ state = 0;
 last_state = -1;
 state_time = 0;
 
+
+// animation
+idle_spd = 0.1;
+dir = 0; //goes from - dir_max to dir_max, idle when 0
+dir_max = 2;
+dir_spd = 0.2;
+
+movement_type = 0;
+// 0 = one moving animation, changing spr_dir
+// 1 = Spins when moving
+// 2 = two moving animation, for asymetrical character.
+
+global.boss = BOSS_PALE;
 boss_id = global.boss;
 // 0 = Wakasagihime
 // 1 = Apple
@@ -33,6 +45,12 @@ switch(boss_id)
 		move_spr = spr_serene_move;
 		x = 520;
 		y = 90;
+	case BOSS_PALE:
+		idle_spr = spr_pale_idle;
+		move_spr = spr_pale_move;
+		dir_max = 4;
+		movement_type = 1;
+	break;
 	break;
 }
 	
@@ -40,10 +58,7 @@ switch(boss_id)
 pos_type = POS_SP;
 
 
-movement_type = 0;
-// 0 = one moving animation, changing spr_dir
-// 1 = Spins when moving
-// 2 = two moving animation, for asymetrical character.
+rot = 0;
 
 spr_dir = 1;
 
@@ -62,11 +77,7 @@ grazed = true; //please don't graze the boss
 
 boss_movement_goto(room_width / 2,100,7);
 
-// animation
-idle_spd = 0.1;
-dir = 0; //goes from - dir_max to dir_max, idle when 0
-dir_max = 2;
-dir_spd = 0.2;
+
 
 // To stay on screen
 
