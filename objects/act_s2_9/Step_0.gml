@@ -100,7 +100,7 @@ if(global.gp_active)
 				{
 					if(state_time % shoot_wait == 0)
 					{
-						shoot_ring(DAN_ARROW,1,shoot_nbr * 2,x,y,angle_shoot - 360 / shoot_nbr / 2,wall_spd,sfx_shot3,8);
+						shoot_ring(DAN_ARROW,1,shoot_nbr * 2,x,y,angle_shoot - 360 / shoot_nbr / 2,wall_spd + 1,sfx_shot3,8);
 						
 						var ang = angle_shoot;
 						for(var i = ang; i < ang + 360; i += 360 / wall_ring)
