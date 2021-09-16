@@ -8,3 +8,5 @@ rot = rng(360,true,9);
 vsp = bg_s3.spd + rng(2,false,7);
 
 scale = 1;
+
+color = $cccccc;

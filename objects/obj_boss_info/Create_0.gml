@@ -14,6 +14,10 @@ switch(global.stage)
 		name = "Serene Heikegani";
 		spell_nbr = 3;
 	break;
+	case 3:
+		name = "Pale Fanhead";
+		spell_nbr = 3;
+	break;
 }
 
 x = global.game_x_offset - 30;

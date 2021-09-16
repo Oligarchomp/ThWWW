@@ -18,6 +18,9 @@ switch(user_id)
 	case BOSS_SERENE:
 		sprite_index = spr_serene_art;
 	break;
+	case BOSS_PALE:
+		sprite_index = spr_pale_art;
+	break;
 	default:
 		sprite_index = spr_apple_art;
 	break;

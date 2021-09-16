@@ -32,24 +32,25 @@ switch(global.player_chosen)
 	break;
 	case P_MARISA:
 		boss_step = 2;
-		bgm_step = 12;
-		title_step = 4;
+		bgm_step = 13;
+		title_step = 5;
 		set_dialogue(spr_marisa_art,0,true,spr_nothing,0,false,get_text("diag_s3_m1"),-1)
 		set_dialogue(spr_marisa_art,4,true,spr_nothing,0,false,get_text("diag_s3_m2"),-1)
 		set_dialogue(spr_marisa_art,4,false,spr_nothing,0,false,get_text("diag_s3_m3"),-1)
-		set_dialogue(spr_marisa_art,2,true,spr_nothing,0,false,get_text("diag_s3_m4"),-1)
-		set_dialogue(spr_marisa_art,2,false,spr_pale_art,2,true,get_text("diag_s3_m5"),-1)
-		set_dialogue(spr_marisa_art,5,true,spr_pale_art,2,false,get_text("diag_s3_m6"),-1)
-		set_dialogue(spr_marisa_art,5,false,spr_pale_art,0,true,get_text("diag_s3_m7"),-1)
-		set_dialogue(spr_marisa_art,0,true,spr_pale_art,0,false,get_text("diag_s3_m8"),-1)
-		set_dialogue(spr_marisa_art,0,false,spr_pale_art,1,true,get_text("diag_s3_m9"),-1)
-		set_dialogue(spr_marisa_art,1,true,spr_pale_art,1,false,get_text("diag_s3_m10"),-1)
-		set_dialogue(spr_marisa_art,1,false,spr_pale_art,1,true,get_text("diag_s3_m11"),-1)
-		set_dialogue(spr_marisa_art,5,true,spr_pale_art,1,false,get_text("diag_s3_m12"),-1)
-		set_dialogue(spr_marisa_art,5,false,spr_pale_art,0,true,get_text("diag_s3_m13"),-1)
-		set_dialogue(spr_marisa_art,1,true,spr_pale_art,0,false,get_text("diag_s3_m14"),-1)
-		set_dialogue(spr_marisa_art,1,false,spr_pale_art,2,true,get_text("diag_s3_m15"),-1)
-		set_dialogue(spr_marisa_art,2,true,spr_pale_art,2,false,get_text("diag_s3_m16"),-1)
+		set_dialogue(spr_marisa_art,4,false,spr_pale_art,2,true,get_text("diag_s3_m4"),-1)
+		set_dialogue(spr_marisa_art,2,true,spr_pale_art,2,false,get_text("diag_s3_m5"),-1)
+		set_dialogue(spr_marisa_art,2,false,spr_pale_art,2,true,get_text("diag_s3_m6"),-1)
+		set_dialogue(spr_marisa_art,5,true,spr_pale_art,2,false,get_text("diag_s3_m7"),-1)
+		set_dialogue(spr_marisa_art,5,false,spr_pale_art,0,true,get_text("diag_s3_m8"),-1)
+		set_dialogue(spr_marisa_art,0,true,spr_pale_art,0,false,get_text("diag_s3_m9"),-1)
+		set_dialogue(spr_marisa_art,0,false,spr_pale_art,1,true,get_text("diag_s3_m10"),-1)
+		set_dialogue(spr_marisa_art,1,true,spr_pale_art,1,false,get_text("diag_s3_m11"),-1)
+		set_dialogue(spr_marisa_art,1,false,spr_pale_art,1,true,get_text("diag_s3_m12"),-1)
+		set_dialogue(spr_marisa_art,5,true,spr_pale_art,1,false,get_text("diag_s3_m13"),-1)
+		set_dialogue(spr_marisa_art,5,false,spr_pale_art,0,true,get_text("diag_s3_m14"),-1)
+		set_dialogue(spr_marisa_art,1,true,spr_pale_art,0,false,get_text("diag_s3_m15"),-1)
+		set_dialogue(spr_marisa_art,1,false,spr_pale_art,2,true,get_text("diag_s3_m16"),-1)
+		set_dialogue(spr_marisa_art,2,true,spr_pale_art,2,false,get_text("diag_s3_m17"),-1)
 	break;
 	case P_SANAE:
 		boss_step = 2;

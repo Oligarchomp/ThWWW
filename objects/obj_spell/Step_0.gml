@@ -21,6 +21,9 @@ if (global.gp_active)
 				case BOSS_SERENE:
 					instance_create_depth(0,0, global.spell_bg_depth,obj_spell_bg_serene);
 				break;
+				case BOSS_PALE:
+					instance_create_depth(0,0, global.spell_bg_depth,obj_spell_bg_pale);
+				break;
 			}
 			
 			spell_initialize = true;

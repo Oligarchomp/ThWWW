@@ -83,13 +83,13 @@ if (global.gp_active)
 
 	
 	//
-	if (abs(hsp) > 0) or (rot != 0)
+	if (abs(hsp) > 0) 
 	{
 		dir = goto_value(dir,dir_max * sign(hsp),dir_spd);
 		
 		spr_dir = sign(dir);
 	}
-	else
+	else if (rot == 0)
 	{
 		dir = goto_value(dir,0,dir_spd);
 	}
