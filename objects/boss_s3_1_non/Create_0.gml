@@ -1,18 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if(global.gp_active)
-{
-	x += hsp;
-	y += vsp;
-	
-	x %= width;
-	y %= height;
-	
-	flower_rot += flower_rot_spd;
-	
-}
-
 // Inherit the parent event
 event_inherited();
 
+
+spell_set_life(750,140);
+spell_set_time(18,false,90)
+
+
+
+
+
+angle_shoot = 0;

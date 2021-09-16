@@ -5,8 +5,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_spell_bg",
-    "path": "objects/obj_spell_bg/obj_spell_bg.yy",
+    "name": "obj_spell",
+    "path": "objects/obj_spell/obj_spell.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -23,16 +23,15 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Spell",
-    "path": "folders/Objects/BACKGROUND/Spell.yy",
+    "name": "Stage3",
+    "path": "folders/Objects/STAGES/Stage3.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_spell_bg_pale",
+  "name": "boss_s3_1_non",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -81,7 +81,7 @@ boss_movement_goto(room_width / 2,100,7);
 
 // To stay on screen
 
-x_disjoint = 60;
+x_disjoint = 86;
 y_disjoint = 78;
 y_dis_max = 135; // from the top of the screen
 

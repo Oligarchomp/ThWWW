@@ -2,9 +2,10 @@
 // You can write your code in this editor
 if(global.gp_active)
 {
-	
-	instance_create_depth(-250 + rng(room_width + 500,false,5),-300,global.bg_depth - rng(100,true,3),obj_cloud);
-	
+	if(step % 2 == 0)
+	{
+		instance_create_depth(-250 + rng(room_width + 500,false,5),-300,global.bg_depth - rng(100,true,3),obj_cloud);
+	}
 	/*
 	if(step % 130 == 0)
 	{

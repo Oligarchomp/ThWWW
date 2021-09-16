@@ -87,7 +87,10 @@ if (global.gp_active)
 	{
 		dir = goto_value(dir,dir_max * sign(hsp),dir_spd);
 		
-		spr_dir = sign(dir);
+		if(movement_type == 0)
+		{
+			spr_dir = sign(dir);
+		}
 	}
 	else if (rot == 0)
 	{

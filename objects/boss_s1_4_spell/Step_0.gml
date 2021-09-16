@@ -48,7 +48,7 @@ if(global.gp_active)
 				var arrow_spd = 5;
 			break;
 			case 3:
-				var ring_spd = 4;
+				var ring_spd = 3.5;
 				var ring_nbr = 24;
 				
 				var bubble_arc = 8;

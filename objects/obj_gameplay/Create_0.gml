@@ -93,6 +93,10 @@ add_stage_event(dialogue_s2_post,70);
 */
 
 add_stage_event(act_s3_0,0);
+/*
+add_stage_event(boss_s3_1_non,0);
+add_stage_event(boss_s3_3_non,0);
+*/
 add_stage_event(boss_s3_6_spell,0);
 //add_stage_event(dialogue_s3_pre,100);
 

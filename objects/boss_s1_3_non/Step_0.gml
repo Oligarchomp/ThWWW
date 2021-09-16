@@ -39,8 +39,8 @@ if(global.gp_active)
 				var move_wait = 105
 				
 				var ring_wait = 46;
-				var ring_nbr = 12;
-				var apple_nbr = 8;
+				var ring_nbr = 11;
+				var apple_nbr = 7;
 			break;
 		}
 		
