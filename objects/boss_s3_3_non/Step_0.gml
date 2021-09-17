@@ -5,23 +5,44 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
+			var aim_spd_max = 2;
+			var aim_spd_min = 1.5;
+			var aim_row = 2;
+			var aim_wait = 2;
+			var aim_arc = 3;
+			var aim_dist = 25;
 			
+			var wait_wave = 60;
 		break;
 		case 1:
+			var aim_spd_max = 3;
+			var aim_spd_min = 2.5;
+			var aim_row = 3;
+			var aim_wait = 2;
+			var aim_arc = 5;
+			var aim_dist = 22;
 			
+			var wait_wave = 40;
 		break;
 		case 2:
+			var aim_spd_max = 3.2;
+			var aim_spd_min = 2.7;
+			var aim_row = 4;
+			var aim_wait = 2;
+			var aim_arc = 7;
+			var aim_dist = 20;
 			
+			var wait_wave = 26;
 		break;
 		case 3:
-			var boss_wait = 60;
-			
 			var aim_spd_max = 4;
 			var aim_spd_min = 3;
 			var aim_row = 4;
 			var aim_wait = 2;
 			var aim_arc = 7;
 			var aim_dist = 18;
+			
+			var wait_wave = 10;
 		break;
 	}
 	
@@ -29,7 +50,12 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(state)
 	{
 		case 0:
-			if(state_time == 10)
+			if(first_wave)
+			{
+				state_time = wait_wave;
+				first_wave = false;
+			}
+			if(state_time == wait_wave)
 			{
 				boss_movement_goto(room_width / 2, y_ref + lengthdir_y(dist_pale,90),6);
 				state = 1;

@@ -6,13 +6,28 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			
+			var fan_shoot_wait = 15;
+			var fan_nbr = 3;
+			var fan_dist = 9;
+			var fan_spd = 3;
+			var fan_plus = 9;
+			var boss_wait = 180;
 		break;
 		case 1:
-			
+			var fan_shoot_wait = 9;
+			var fan_nbr = 4;
+			var fan_dist = 6;
+			var fan_spd = 3.8;
+			var fan_plus = 7;
+			var boss_wait = 180;
 		break;
 		case 2:
-			
+			var fan_shoot_wait = 5;
+			var fan_nbr = 4;
+			var fan_dist = 5.5;
+			var fan_spd = 4;
+			var fan_plus = 6.6;
+			var boss_wait = 150;
 		break;
 		case 3:
 			var fan_shoot_wait = 4;

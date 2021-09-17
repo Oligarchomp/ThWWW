@@ -6,21 +6,48 @@ if(global.gp_active) and(spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
+			var bubble_nbr = 7;
+			var shoot_wait = 5;
+			var bubble_spd = 2;
+			var step1_angle_spd = 4;
+			var step2_angle_spd = 0.5;
 			
+			var bubble_wait = 10;//must be a multiple of 2
+			var wait_wave = 90;
+			var angle_max = 80;
 		break;
 		case 1:
+			var bubble_nbr = 14;
+			var shoot_wait = 5;
+			var bubble_spd = 3;
+			var step1_angle_spd = 4;
+			var step2_angle_spd = 1;
 			
+			var bubble_wait = 10;//must be a multiple of 2
+			var wait_wave = 60;
+			var angle_max = 110;
 		break;
 		case 2:
+			var bubble_nbr = 18;
+			var shoot_wait = 4;
+			var bubble_spd = 4;
+			var step1_angle_spd = 7;
+			var step2_angle_spd = 2;
 			
+			var bubble_wait = 24;//must be a multiple of 2
+			var wait_wave = 40;
+			var angle_max = 130;
 		break;
 		case 3:
 			var bubble_nbr = 24;
 			var shoot_wait = 3;
+			var bubble_spd = 5;
 			var step1_angle_spd = 5;
 			var step2_angle_spd = 1;
 			
 			var bubble_wait = 30;//must be a multiple of 2
+			var wait_wave = 30;
+			var angle_max = 140;
 		break;
 	}
 	var wait_move = 150;
@@ -49,15 +76,16 @@ if(global.gp_active) and(spell_wait == 0)
 						var col = 3.5 + dir_shoot * 0.5;
 						if(state_time % (bubble_wait / 2) == 0)
 						{
-							var inst = shoot(DAN_BUBBLE,col,obj_boss.x,obj_boss.y,ang,5,sfx_shot1,3);
+							var inst = shoot(DAN_BUBBLE,col,obj_boss.x,obj_boss.y,ang,bubble_spd,sfx_shot1,3);
 						}
 						else
 						{
-							var inst = shoot(DAN_ARROWHEAD,col,obj_boss.x,obj_boss.y,ang,5,sfx_shot1,3);
+							var inst = shoot(DAN_ARROWHEAD,col,obj_boss.x,obj_boss.y,ang,bubble_spd,sfx_shot1,3);
 							
 						}
 						inst.angle_ref = ang + 360 * dir_shoot;
 						inst.dir_dan = dir_shoot;
+						inst.y_offscreen = 50;
 					}
 		
 				}
@@ -70,7 +98,7 @@ if(global.gp_active) and(spell_wait == 0)
 			}
 		break;
 		case 1:
-			if(state_time == 30)
+			if(state_time == wait_wave)
 			{
 				state = 0;
 			}
@@ -89,7 +117,7 @@ if(global.gp_active) and(spell_wait == 0)
 				}
 			break;
 			case 1:
-				angle = goto_value(angle,angle_ref + 140 * dir_dan, step2_angle_spd)
+				angle = goto_value(angle,angle_ref + angle_max * dir_dan, step2_angle_spd)
 			break;
 		}
 		

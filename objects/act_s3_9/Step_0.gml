@@ -6,13 +6,40 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
+			var mentos_arc = 5;
+			var mentos_row = 4;
+			var mentos_spd_min = 2;
+			var mentos_spd_max = 4;
+			var mentos_dist = 36;
 			
+			var aim_ring = 5;
+			var aim_row = 3;
+			var aim_spd_min = 1;
+			var aim_spd_max = 5;
 		break;
 		case 1:
+			var mentos_arc = 11;
+			var mentos_row = 5;
+			var mentos_spd_min = 2;
+			var mentos_spd_max = 6;
+			var mentos_dist = 20;
 			
+			var aim_ring = 10;
+			var aim_row = 5;
+			var aim_spd_min = 1;
+			var aim_spd_max = 6
 		break;
 		case 2:
+			var mentos_arc = 13;
+			var mentos_row = 5;
+			var mentos_spd_min = 2;
+			var mentos_spd_max = 6;
+			var mentos_dist = 12;
 			
+			var aim_ring = 14;
+			var aim_row = 7;
+			var aim_spd_min = 1;
+			var aim_spd_max = 6.8
 		break;
 		case 3:
 			var mentos_arc = 15;
@@ -60,6 +87,7 @@ if(global.gp_active)
 			case 1://shoot
 				shoot_ring_row(DAN_BUBBLE,3,aim_ring,aim_row,x,y,999,aim_spd_min,aim_spd_max,sfx_redirect1,3);
 				state = 2;
+				life = min(life,10);
 			break;
 			case 2://wait
 				if(state_time == 80)
@@ -89,6 +117,7 @@ if(global.gp_active)
 			case 1://shoot
 				shoot_arc_row(DAN_MENTOS,7,mentos_arc,mentos_row,x,y,999,mentos_dist,mentos_spd_min,mentos_spd_max,sfx_shot1,2);
 				state = 2;
+				life = min(life,10)
 			break;
 			case 2://wait
 				if(state_time == 80)

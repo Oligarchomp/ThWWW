@@ -57,8 +57,8 @@ text_alpha = 0;
 text_appearing_spd = 9;
 text_sliding_spd = 8;
 
-text_col_top = $ffffff;
-text_col_bottom = $8d8dff;
+text_col_top = c_white//$ffffff;
+text_col_bottom = c_white// $8d8dff;
 
 
 spell_info_alpha = 0;

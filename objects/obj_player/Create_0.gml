@@ -143,6 +143,8 @@ hitbox_scale = 1.7;
 hitbox_scale_ref = hitbox_scale;
 hitbox_alpha = 0;
 hitbox_spd = 2;
+hitbox_rot = 0;
+hitbox_rot_spd = 1;
 
 focus_angle = 0;
 focus_angle_spd = 2;

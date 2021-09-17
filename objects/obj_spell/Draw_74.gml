@@ -60,7 +60,7 @@ var str = add_zero(string(dec),2);
 draw_score(str,x_draw_time + 20,y_draw_time + 8,spr_number,0.5,spell_info_alpha)
 
 
-var col_out = $1c1c47;
+var col_out = c_black// $1c1c47;
 
 // draw spell name
 if (is_spell)

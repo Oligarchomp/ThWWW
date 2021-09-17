@@ -20,7 +20,7 @@ vsp = -5;
 hsp = 0;
 
 grav = 0.1;
-vsp_max = 3;
+vsp_max = 2;
 
 auto_collect = false;
 

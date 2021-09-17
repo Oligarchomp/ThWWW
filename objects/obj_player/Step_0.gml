@@ -258,6 +258,7 @@ if (global.gp_active)
 		hitbox_x = x;
 		hitbox_y = y;
 		
+		
 		focus_alpha += recursiv(focus_alpha, focus_alpha_max,focus_alpha_spd,0.05)
 		focus_scale += recursiv(focus_scale,1,focus_scale_spd,0.1)
 	}
@@ -269,7 +270,7 @@ if (global.gp_active)
 		focus_alpha += recursiv(focus_alpha, 0,focus_alpha_spd,0.05)
 		focus_scale += recursiv(focus_scale,focus_scale_max,focus_scale_spd,0.1)
 	}
-		
+	hitbox_rot += hitbox_rot_spd;
 	focus_angle += focus_angle_spd;
 	
 }

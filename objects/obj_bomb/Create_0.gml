@@ -52,8 +52,8 @@ text_y = 480;
 
 text_sliding_spd = 8;
 
-text_col_top = $ffffff;
-text_col_bottom = $8d8dff;
+text_col_top = c_white//$ffffff;
+text_col_bottom = c_white// $8d8dff;
 
 
 state = 0;

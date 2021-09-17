@@ -11,20 +11,46 @@ if(global.gp_active)
 			switch(global.difficulty)
 			{
 				case 0:
+					var bubble_nbr = 9;
+					var bubble_spd = 2;
+	
+					var bubble_wait = 55;
 			
+					var arrow_nbr = 5;
+					var arrow_spd = 4;
+			
+					var arrow_wait = 20;
+					var arrow_dist = 10;
 				break;
 				case 1:
+					var bubble_nbr = 16;
+					var bubble_spd = 3;
+	
+					var bubble_wait = 45;
 			
+					var arrow_nbr = 6;
+					var arrow_spd = 4.5;
+			
+					var arrow_wait = 12;
+					var arrow_dist = 5;
 				break;
 				case 2:
+					var bubble_nbr = 20;
+					var bubble_spd = 3;
+	
+					var bubble_wait = 40;
 			
+					var arrow_nbr = 7;
+					var arrow_spd = 5;
+			
+					var arrow_wait = 10;
+					var arrow_dist = 4;
 				break;
 				case 3:
 					var bubble_nbr = 24;
 					var bubble_spd = 3;
 	
 					var bubble_wait = 30;
-					var bubble_dist = 15;
 			
 					var arrow_nbr = 10;
 					var arrow_spd = 5;

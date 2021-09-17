@@ -5,24 +5,52 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
+			var spin_spd = 4;
 			
+			var bubble_way = 4;
+			var bubble_spd = 2;
+			var bubble_time = 1;
+			
+			var head_way = 0;
+			var head_spd = 3;
+			var head_time = 5;
+			var head_layer = 0;
 		break;
 		case 1:
+			var spin_spd = 4;
 			
+			var bubble_way = 5;
+			var bubble_spd = 2.5;
+			var bubble_time = 2;
+			
+			var head_way = 10;
+			var head_spd = 3;
+			var head_time = 3;
+			var head_layer = 1;
 		break;
 		case 2:
+			var spin_spd = 4;
 			
+			var bubble_way = 5;
+			var bubble_spd = 3;
+			var bubble_time = 2;
+			
+			var head_way = 18;
+			var head_spd = 2.8;
+			var head_time = 3;
+			var head_layer = 2;
 		break;
 		case 3:
 			var spin_spd = 4;
 			
 			var bubble_way = 5;
-			var bubble_spd = 2;
+			var bubble_spd = 2.5;
 			var bubble_time = 2;
 			
 			var head_way = 20;
 			var head_spd = 3;
 			var head_time = 3;
+			var head_layer = 4;
 		break;
 	}
 	
@@ -56,17 +84,16 @@ if(global.gp_active) and (spell_wait == 0)
 			inst.wait_start = (abs(angle_pale - angle_start) % (360 / bubble_way)) * bubble_time;
 			
 			//arrowhead
-			var inst = shoot(DAN_ARROWHEAD,3,obj_boss.x,obj_boss.y,aim,0,sfx_redirect3,1);
-			inst.pos_type = POS_MANUAL;
-			inst.pot_spd = head_spd;
-			inst.wait_start = (abs(angle_pale - angle_start) % (360 / head_way)) * head_time;
+			for(var i = 0; i < head_layer ; i += 1)
+			{
+				var inst = shoot(DAN_ARROWHEAD,3,obj_boss.x,obj_boss.y,aim,0,sfx_redirect3,1);
+				inst.pos_type = POS_MANUAL;
+				inst.pot_spd = head_spd;
+				inst.wait_start = (abs(angle_pale - angle_start) % (360 / head_way)) * head_time;
+				inst.wait_start += ((360 / head_way) * head_time) * i;
+			}
+
 			
-			//arrowhead
-			var inst = shoot(DAN_ARROWHEAD,3,obj_boss.x,obj_boss.y,aim,0,sfx_redirect3,1);
-			inst.pos_type = POS_MANUAL;
-			inst.pot_spd = head_spd;
-			inst.wait_start = (abs(angle_pale - angle_start) % (360 / head_way)) * head_time;
-			inst.wait_start += (360 / head_way) * head_time;
 			
 			//garbage
 			shoot(DAN_BUBBLE,3,obj_boss.x,obj_boss.y,aim + 180,3 + rng(3,false,2),noone,3);
