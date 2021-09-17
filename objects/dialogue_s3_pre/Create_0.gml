@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-global.boss = BOSS_SERENE;
+global.boss = BOSS_PALE;
 // Inherit the parent event
 event_inherited();
 

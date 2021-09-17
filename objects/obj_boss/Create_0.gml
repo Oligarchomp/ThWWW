@@ -45,12 +45,12 @@ switch(boss_id)
 		move_spr = spr_serene_move;
 		x = 520;
 		y = 90;
+	break;
 	case BOSS_PALE:
 		idle_spr = spr_pale_idle;
 		move_spr = spr_pale_move;
 		dir_max = 4;
 		movement_type = 1;
-	break;
 	break;
 }
 	

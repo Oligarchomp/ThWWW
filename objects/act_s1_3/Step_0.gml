@@ -63,9 +63,7 @@ if(global.gp_active)
 	if (step == 0) or (step == big_wait * 2)
 	{
 		//big
-		var inst = create_enemy(EN_RED,big_x_off,big_y_off,big_life,1);
-		inst.angle = -90;
-		inst.spd = 5
+		var inst = create_enemy(EN_RED,big_x_off,big_y_off,big_life,1,5,-90);
 		inst.item_nbr = 5;
 		
 		//small
@@ -78,9 +76,7 @@ if(global.gp_active)
 	if (step == big_wait)  or (step == big_wait * 3)
 	{
 		//big
-		var inst = create_enemy(EN_RED,room_width - big_x_off,big_y_off,big_life,1);
-		inst.angle = -90;
-		inst.spd = 5
+		var inst = create_enemy(EN_RED,room_width - big_x_off,big_y_off,big_life,1,5,-90);
 		inst.item_nbr = 5;
 		
 		//small
@@ -107,9 +103,7 @@ if(global.gp_active)
 			{
 				//small
 				var x_pos = room_width / 2 + small_x_off_middle * spawn_x_dir + rng(50,true,1) * spawn_x_dir;
-				var inst = create_enemy(EN_BLUE, x_pos,small_y_off,small_life,2);
-				inst.spd = 10 + rng(1,false,4);
-				inst.angle = -90;
+				var inst = create_enemy(EN_BLUE, x_pos,small_y_off,small_life,2,10 + rng(1,false,4),-90);
 				inst.item_nbr = 2;
 			}
 		}

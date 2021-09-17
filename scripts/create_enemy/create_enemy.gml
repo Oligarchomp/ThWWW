@@ -1,10 +1,12 @@
-/// create_enemy(enemy_type,x,y,life,id_number)
+/// create_enemy(enemy_type,x,y,life,id_number,speed,angle)
 ///@param enemy_type real
 ///@param x real
 ///@param y real
 ///@param life real
 ///@param id_number real
-function create_enemy(argument0,argument1,argument2,argument3,argument4){
+///@param speed real
+///@param angle real
+function create_enemy(argument0,argument1,argument2,argument3,argument4,argument5,argument6){
 	
 
 	switch(argument4)
@@ -29,6 +31,8 @@ function create_enemy(argument0,argument1,argument2,argument3,argument4){
 	global.enemy_type = argument0;
 	var inst = instance_create_depth(argument1,argument2,0,id_num);
 	inst.life = argument3;
+	inst.spd = argument5;
+	inst.angle = argument6
 	
 	return inst;
 }

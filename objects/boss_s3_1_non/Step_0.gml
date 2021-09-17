@@ -19,14 +19,14 @@ if(global.gp_active) and (spell_wait == 0)
 			var fan_nbr = 5;
 			var fan_dist = 5.5;
 			var fan_spd = 4.5;
-			var fan_plus = 7;
+			var fan_plus = 6.7;
 			var boss_wait = 135;
 		break;
 	}
 	
-	if(step % boss_wait == 0)
+	if(step % boss_wait == boss_wait -1)
 	{
-		boss_movement_random(5,20,3);
+		boss_movement_random(2,6,3);
 	}
 	
 	switch(state)

@@ -56,7 +56,7 @@ if(global.gp_active)
 			}
 			if(crab_nbr != 21)
 			{
-				var inst = create_enemy(EN_CRAB,x_pos,i * crab_dist,crab_life,2)
+				var inst = create_enemy(EN_CRAB,x_pos,i * crab_dist,crab_life,2,0,0)
 			}
 			else
 			{

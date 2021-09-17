@@ -23,7 +23,12 @@ if(global.gp_active) and(spell_wait == 0)
 			var bubble_wait = 30;//must be a multiple of 2
 		break;
 	}
+	var wait_move = 150;
 	
+	if(step % wait_move == wait_move - 1)
+	{
+		boss_movement_random(2,3,1);
+	}
 	
 	switch(state)
 	{
