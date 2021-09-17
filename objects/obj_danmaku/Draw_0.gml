@@ -4,5 +4,8 @@ if (!is_spawning)
 {
 	draw_sprite_ext(sprite_danmaku,image_danmaku,x,y,image_xscale,image_yscale,rot,c_white,alpha);
 	
-	event_inherited();//draw hitbox when debug
+	if(global.view_hitbox)
+	{
+		draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,c_white,1)
+	}
 }

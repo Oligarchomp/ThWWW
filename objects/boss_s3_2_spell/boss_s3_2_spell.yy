@@ -1,15 +1,12 @@
 {
-  "spriteId": {
-    "name": "spr_danmaku_hitbox",
-    "path": "sprites/spr_danmaku_hitbox/spr_danmaku_hitbox.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "parent_hitbox",
-    "path": "objects/parent_hitbox/parent_hitbox.yy",
+    "name": "obj_spell",
+    "path": "objects/obj_spell/obj_spell.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -26,17 +23,15 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "DANMAKU",
-    "path": "folders/Objects/DANMAKU.yy",
+    "name": "Stage3",
+    "path": "folders/Objects/STAGES/Stage3.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_danmaku",
+  "name": "boss_s3_2_spell",
   "tags": [],
   "resourceType": "GMObject",
 }

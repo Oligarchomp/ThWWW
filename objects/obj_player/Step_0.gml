@@ -130,7 +130,7 @@ if (global.gp_active)
 				var plr = self;
 				with(obj_player_hurtbox)
 				{
-					var meet = instance_place(x,y,obj_hitbox)//danmaku is child of hitbox
+					var meet = instance_place(x,y,parent_hitbox)//danmaku is child of hitbox
 					if(meet != noone)
 					{
 						plr.state = 1;
