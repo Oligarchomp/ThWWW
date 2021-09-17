@@ -36,6 +36,7 @@ if(global.gp_active) and(spell_wait == 0)
 			if(state_time == bubble_wait / 2)
 			{
 				dir_shoot *= -1;
+				angle_shoot = rng(360,false,5);
 			}
 		
 			if(state_time < bubble_wait)

@@ -80,6 +80,7 @@ bgm_step = 0;
 title_step = 0;
 
 need_boss_info = false;
+need_clear_bonus = false;
 
 
 

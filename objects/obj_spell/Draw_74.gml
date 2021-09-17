@@ -15,13 +15,11 @@ if(!is_spell)
 		{
 			var change_bar_x =  life_bar_size * global.spell_life;
 		
-			draw_line_color(x-1,y_pos,min(x + change_bar_x,life_uncover),y_pos,c_red,c_red);
-		
-		
+			draw_line_width_color(x-1,y_pos,min(x + change_bar_x,life_uncover),y_pos,2,c_red,c_red);
 			var true_bar_x = x + change_bar_x + (life_bar_size - change_bar_x) * (life_left / life)
 			if(life_uncover > x + change_bar_x)
 			{
-				draw_line_color(x + change_bar_x,y_pos,min(true_bar_x,life_uncover),y_pos,c_white,c_white);
+				draw_line_width_color(x + change_bar_x,y_pos,min(true_bar_x,life_uncover),y_pos,2,c_white,c_white);
 			}
 		
 			y_pos += 1;
@@ -41,14 +39,14 @@ else
 	
 	repeat (3)
 	{
-		draw_line_color(x-1,y_pos,min(x_pos,life_uncover),y_pos,c_red,c_red);
+		draw_line_width_color(x-1,y_pos,min(x_pos,life_uncover),y_pos,2,c_red,c_red);
 	
 		y_pos += 1;
 	}
 	var x_black = x_pos;
 }
 
-draw_line_color(x -1,y_pos,min(life_uncover,x_black),y_pos,c_black,c_black);
+draw_line_width_color(x -1,y_pos,min(life_uncover,x_black),y_pos,1,c_black,c_black);
 
 // draw time
 
