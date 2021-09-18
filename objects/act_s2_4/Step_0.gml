@@ -8,10 +8,9 @@ if(global.gp_active)
 	{
 		case 0:
 			//actually isn't aimed
-			var aim_spd_min = 2;
-			var aim_spd_max = 2.2;
-			var aim_row = 1;
-			var aim_ring = 3;
+			var aim_spd = 2;
+
+			var aim_ring = 5;
 			
 			var tri_spd = 1.5;
 			var tri_dist = 2;
@@ -19,10 +18,9 @@ if(global.gp_active)
 		break;
 		case 1:
 			//actually isn't aimed
-			var aim_spd_min = 3;
-			var aim_spd_max = 3.2;
-			var aim_row = 2;
-			var aim_ring = 5;
+			var aim_spd = 2.3;
+
+			var aim_ring = 13;
 			
 			var tri_spd = 2;
 			var tri_dist = 2;
@@ -30,10 +28,9 @@ if(global.gp_active)
 		break;
 		case 2:
 			//actually isn't aimed
-			var aim_spd_min = 4;
-			var aim_spd_max = 4.2;
-			var aim_row = 2;
-			var aim_ring = 13;
+			var aim_spd = 2.5;
+
+			var aim_ring = 23;
 			
 			var tri_spd = 2;
 			var tri_dist = 2;
@@ -41,10 +38,9 @@ if(global.gp_active)
 		break;
 		case 3:
 			//actually isn't aimed
-			var aim_spd_min = 4.5;
-			var aim_spd_max = 4.8;
-			var aim_row = 2;
-			var aim_ring = 17;
+			var aim_spd = 2.5;
+			
+			var aim_ring = 30;
 			
 			var tri_spd = 2;
 			var tri_dist = 2;
@@ -58,7 +54,7 @@ if(global.gp_active)
 	var fairy_life = 14;
 	
 	var fairy_wait_big = 100;
-	var big_life = 60;
+	var big_life = 80;
 	
 	
 	if(step < fairy_lenght)
@@ -96,7 +92,7 @@ if(global.gp_active)
 				}
 			break;
 			case 1://shoot
-					shoot_ring_row(DAN_ARROWHEAD,1,aim_ring,aim_row,x,y,rng(360,false,8),aim_spd_min,aim_spd_max,sfx_shot3,3);
+					shoot_ring(DAN_ARROWHEAD,1,aim_ring,x,y,rng(360,false,4),aim_spd,sfx_shot3,3);
 					state = 2;
 			break;
 			case 2:

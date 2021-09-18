@@ -5,7 +5,7 @@
 event_inherited();
 
 
-spell_set_spell("s1_2",1,130000)
+spell_set_spell("s1_2",1,1530000)
 spell_set_name("spell_s1_2a","spell_s1_2a","spell_s1_2b","spell_s1_2b");
 spell_set_life(950,200);
 spell_set_time(23,false,95);

@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-spell_set_spell("s3_3",BOSS_PALE,220000)
+spell_set_spell("s3_3",BOSS_PALE,3450000)
 spell_set_name("spell_s3_3a","spell_s3_3a","spell_s3_3b","spell_s3_3b")
 spell_set_life(1000,240);
 spell_set_time(20,true,95);
