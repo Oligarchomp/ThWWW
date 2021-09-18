@@ -31,14 +31,22 @@ if(global.gp_active)
 	{
 		if(activated_time == 0)
 		{
-			var inst = create_shot_hitbox(x,y,1,spr_bomb_isoterica_collision,2.5,60,true);
-			inst.image_angle = image_angle;
+			if(need_hitbox)
+			{
+				var inst = create_shot_hitbox(0,0,1,spr_fullscreen_collision,10,60,false);
+				with(obj_isoterica)
+				{
+					need_hitbox = false;
+				}
+			}
+			
 			
 		}
 		
 		if(activated_time <= 60)
 		{
 			y_scale += recursiv(y_scale,4,5,0.1);
+			screen_clean(true,false);
 		}
 		else
 		{

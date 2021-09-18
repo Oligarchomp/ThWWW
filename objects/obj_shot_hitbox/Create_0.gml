@@ -1,7 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
 my_shot = noone //given when created
 
 hitbox_type = 0;

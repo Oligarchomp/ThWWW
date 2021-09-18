@@ -193,7 +193,8 @@ if (global.gp_active)
 				
 				state = 0;
 				
-				screen_clear(false,false);
+				screen_clean(false,false);
+				create_shot_hitbox(0,0,1,spr_fullscreen_collision,2,10,false);
 				
 				invincibility = invincibility_death;
 				

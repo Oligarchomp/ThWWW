@@ -87,19 +87,29 @@ if (global.gp_active)
 	//Check for damage
 
 	var damage = 0;
-	with(obj_boss)
+	if(!is_timeout)
 	{
-		var damage = check_damage();
-	
-	
-		if (damage > 0)
+		with(obj_boss)
 		{
-			if( other.invincibility == 0)
+			var damage = check_damage();
+	
+			if (damage > 0)
 			{
+				if( other.invincibility == 0)
 				{
-					other.life_left -= damage;
+					{
+						other.life_left -= damage;
+					}
 				}
 			}
+		}
+	}
+	else
+	{
+		life_left = (time_left * life) / time;
+		with(obj_boss)
+		{
+			mask_index = spr_nothing;
 		}
 	}
 	
@@ -159,14 +169,21 @@ if (global.gp_active)
 	// end of spell
 	if (life_left <= 0) or (time_left <= 0)
 	{
-		if(time_left == 0)
+		if(!is_timeout)
 		{
-			is_capturing = false;
-			item_nbr = 0;
-			if(is_spell)
+			if(time_left == 0)
 			{
-				play_sound(sfx_timeout,1,false);
+				is_capturing = false;
+				item_nbr = 0;
+				if(is_spell)
+				{
+					play_sound(sfx_timeout,1,false);
+				}
 			}
+		}
+		else
+		{
+			mask_index = spr_boss_hurtbox;
 		}
 		
 		if(is_spell)
@@ -224,9 +241,11 @@ if (global.gp_active)
 		
 		
 		step += 1;
-		
-		bonus -= floor(bonus_max / 5000);
-		bonus -= bonus % 10;
+		if(!is_timeout)
+		{
+			bonus -= floor(bonus_max / 5000);
+			bonus -= bonus % 10;
+		}
 	}
 	
 	if (spell_wait > 0)

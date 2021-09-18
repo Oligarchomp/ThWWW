@@ -21,3 +21,5 @@ col = make_color_hsv(col_step % 255,100,255);
 activated = false;
 activated_time = 0;
 step = 0;
+
+need_hitbox = true;

@@ -19,10 +19,10 @@ x_boss_ref = middle + x_offset  // when not active
 y_boss_ref = global.game_y_offset + y_offset;
 
 plr_active = 0; //goes from 0 to 1;
-plr_active_to = 1;
+plr_active_to = 0;
 
 boss_active = 0; //goes from 0 to 1;
-boss_active_to = 1;
+boss_active_to = 0;
 
 active_offset = 50; //goes that closer ot he middle when active
 active_angle = 30;
