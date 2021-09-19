@@ -5,13 +5,40 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
+			var angle_ball_spd = -12;
+			var ball_start = 40;
+			var ball_spd = 3;
+			var ball_wait = 6;
+			var ball_ring = 5;
 			
+			var bubble_nbr = 3;
+			var bubble_start = ball_start;
+			var bubble_spd = 2.5;
+			var bubble_wait = 20;
 		break;
 		case 1:
-		
+			var angle_ball_spd = -10;
+			var ball_start = 40;
+			var ball_spd = 3.5;
+			var ball_wait = 4;
+			var ball_ring = 6;
+			
+			var bubble_nbr = 5;
+			var bubble_start = ball_start;
+			var bubble_spd = 2.7;
+			var bubble_wait = 13;
 		break;
 		case 2:
+			var angle_ball_spd = -10;
+			var ball_start = 40;
+			var ball_spd = 4;
+			var ball_wait = 3;
+			var ball_ring = 7;
 			
+			var bubble_nbr = 7;
+			var bubble_start = ball_start;
+			var bubble_spd = 2.8;
+			var bubble_wait = 11;
 		break;
 		case 3:
 			var angle_ball_spd = -8;

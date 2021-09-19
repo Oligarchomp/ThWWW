@@ -5,23 +5,36 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-		
+			var bubble_nbr = 1;
+			var bubble_spd = 1.5;
+			var bubble_dist = 29;
+			
+			var arrow_nbr = 1;
+			var arrow_spd = 2;
 		break;
 		case 1:
+			var bubble_nbr = 2;
+			var bubble_spd = 1.8;
+			var bubble_dist = 27;
 			
+			var arrow_nbr = 4;
+			var arrow_spd = 2;
 		break;
 		case 2:
+			var bubble_nbr = 2;
+			var bubble_spd = 2;
+			var bubble_dist = 24;
 			
+			var arrow_nbr = 5;
+			var arrow_spd = 2.5;
 		break;
 		case 3:
-			
 			var bubble_nbr = 2;
 			var bubble_spd = 2;
 			var bubble_dist = 16;
 			
 			var arrow_nbr = 8;
 			var arrow_spd = 3;
-			var arrow_dist = 16;
 		break;
 	}
 	

@@ -96,8 +96,11 @@ add_stage_event(dialogue_s2_post,70);
 
 
 add_stage_event(act_s3_0,0);
+//add_stage_event(act_s3_1,0);
+
+
 add_stage_event(act_s3_5,0);
-add_stage_event(act_s3_6,60);
+add_stage_event(act_s3_6,90);
 add_stage_event(act_s3_7_midspell,0);
 add_stage_event(act_s3_8,0);
 add_stage_event(act_s3_9,180);

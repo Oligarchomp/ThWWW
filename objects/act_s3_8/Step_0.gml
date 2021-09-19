@@ -5,13 +5,25 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			
+			var wait_shoot = 20;
+			var shoot_nbr = 4;
+			var shoot_dist = 16;
+			var shoot_start = 30; //when start moving
+			var shoot_spd = 2;
 		break;
 		case 1:
-			
+			var wait_shoot = 10;
+			var shoot_nbr = 6;
+			var shoot_dist = 15;
+			var shoot_start = 30; //when start moving
+			var shoot_spd = 2.5;
 		break;
 		case 2:
-			
+			var wait_shoot = 7;
+			var shoot_nbr = 6;
+			var shoot_dist = 14;
+			var shoot_start = 30; //when start moving
+			var shoot_spd = 3;
 		break;
 		case 3:
 			var wait_shoot = 5;

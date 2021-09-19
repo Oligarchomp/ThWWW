@@ -29,15 +29,15 @@ switch(global.player_chosen)
 		set_dialogue(spr_reimu_art,2,false,spr_serene_art,4,true,get_text("diag_s2_r13"),-1);
 	break;
 	case P_MARISA:
-		boss_step = 4;
-		bgm_step = 10;
-		title_step = 5;
+		boss_step = 2;
+		bgm_step = 8;
+		title_step = 3;
 		set_dialogue(spr_marisa_art,0,true,spr_nothing,0,false,get_text("diag_s2_m1"),-1)
 		set_dialogue(spr_marisa_art,5,true,spr_nothing,0,false,get_text("diag_s2_m2"),-1)
-		set_dialogue(spr_marisa_art,4,true,spr_nothing,0,false,get_text("diag_s2_m3"),-1)
-		set_dialogue(spr_marisa_art,1,true,spr_nothing,0,false,get_text("diag_s2_m4"),-1)
-		set_dialogue(spr_marisa_art,1,false,spr_nothing,0,false,get_text("diag_s2_m5"),-1)
-		set_dialogue(spr_marisa_art,1,false,spr_serene_art,3,true,get_text("diag_s2_m6"),-1)
+		//set_dialogue(spr_marisa_art,4,true,spr_nothing,0,false,get_text("diag_s2_m3"),-1)
+		//set_dialogue(spr_marisa_art,1,true,spr_nothing,0,false,get_text("diag_s2_m4"),-1)
+		set_dialogue(spr_marisa_art,5,false,spr_nothing,0,false,get_text("diag_s2_m5"),-1)
+		set_dialogue(spr_marisa_art,5,false,spr_serene_art,3,true,get_text("diag_s2_m6"),-1)
 		set_dialogue(spr_marisa_art,4,true,spr_serene_art,3,false,get_text("diag_s2_m7"),-1)
 		set_dialogue(spr_marisa_art,4,false,spr_serene_art,4,true,get_text("diag_s2_m8"),-1)
 		set_dialogue(spr_marisa_art,5,true,spr_serene_art,4,false,get_text("diag_s2_m9"),-1)

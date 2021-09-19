@@ -7,16 +7,34 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
+			var ring_nbr = 5;
+			var ring_spd = 2;
 			
+			var aim_spd = 2;
+			var aim_wait = 6;
+			var aim_lenght = 5;
+			var aim_start = 15;
 		break;
 		case 1:
-		
+			var ring_nbr = 10;
+			var ring_spd = 2;
+			
+			var aim_spd = 2.5;
+			var aim_wait = 6;
+			var aim_lenght = 35;
+			var aim_start = 15;
 		break;
 		case 2:
+			var ring_nbr = 17;
+			var ring_spd = 2;
 			
+			var aim_spd = 3;
+			var aim_wait = 6;
+			var aim_lenght = 50;
+			var aim_start = 15;
 		break;
 		case 3:
-			var ring_nbr = 21;
+			var ring_nbr = 22;
 			var ring_spd = 2;
 			
 			var aim_spd = 3;
