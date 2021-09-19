@@ -78,7 +78,7 @@ if(global.gp_active) and (spell_wait == 0)
 						pos_type = POS_ANGLE;
 					}
 				break;
-				case 11:
+				case 20:
 					state = 0;
 				break
 			}

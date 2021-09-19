@@ -228,6 +228,13 @@ if (global.gp_active)
 
 	if (spell_wait == 0)
 	{
+		if(is_spell)
+		{
+			with(parent_bg)
+			{
+				instance_deactivate_object(self);
+			}
+		}
 		//curstom
 		if (old_state != state)
 		{
@@ -247,8 +254,7 @@ if (global.gp_active)
 			bonus -= bonus % 10;
 		}
 	}
-	
-	if (spell_wait > 0)
+	else
 	{
 		spell_wait -= 1;
 	}

@@ -5,3 +5,5 @@ with(obj_boss_info)
 {
 	instance_destroy()
 }
+
+event_inherited();

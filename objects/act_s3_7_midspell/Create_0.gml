@@ -7,7 +7,7 @@ event_inherited();
 spell_set_spell("s3_mid",BOSS_PALE,1922000)
 spell_set_name("spell_s3_mida","spell_s3_mida","spell_s3_midb","spell_s3_midb")
 spell_set_life(700,170);
-spell_set_time(18,false,95);
+spell_set_time(16,false,95);
 
 with(obj_boss)
 {
@@ -24,3 +24,7 @@ y_ref = 100;
 
 angle_start = 90;
 angle_shoot = 0;
+
+
+// to sync with the music
+instance_create_depth(0,0,0,act_s3_8);

@@ -3,3 +3,5 @@
 obj_boss.pos_type = POS_SP;
 obj_boss.state = 1;
 boss_movement_goto(room_width + 100, -100, 10);
+
+event_inherited();

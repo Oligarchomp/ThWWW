@@ -6,8 +6,7 @@ event_inherited();
 
 act_set_time(600,600);
 
-
-instance_create_depth(-80,70,global.boss_depth,obj_boss);
+instance_create_depth(-80,50,global.boss_depth,obj_boss);
 instance_destroy(obj_boss_indicator);
 
 wave = 0;

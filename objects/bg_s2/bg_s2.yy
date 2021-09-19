@@ -7,7 +7,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "parent_bg",
+    "path": "objects/parent_bg/parent_bg.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

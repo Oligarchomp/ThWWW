@@ -3,3 +3,5 @@
 
 obj_boss.state = 1;
 boss_movement_goto(600, -100, 10);
+
+event_inherited();
