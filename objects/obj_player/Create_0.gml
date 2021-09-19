@@ -23,7 +23,7 @@ switch(player_id)
 
 		// Stats
 		focus_spd = 2.4;
-		unfocus_spd = 5.2;
+		unfocus_spd = 5.3;
 		poc = 160;
 		
 		graze_im = 0;
@@ -41,7 +41,7 @@ switch(player_id)
 
 		// Stats
 		focus_spd = 2.3;
-		unfocus_spd = 4.8;
+		unfocus_spd = 4.9;
 		poc = 120;
 		
 		graze_im = 1;
@@ -68,7 +68,7 @@ switch(player_id)
 
 		// Stats
 		focus_spd = 2.2;
-		unfocus_spd = 4.6;
+		unfocus_spd = 4.7;
 		poc = 130;
 		
 		graze_im = 0;

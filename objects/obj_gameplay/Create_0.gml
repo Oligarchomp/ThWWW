@@ -96,9 +96,13 @@ add_stage_event(dialogue_s2_post,70);
 
 
 add_stage_event(act_s3_0,0);
+add_stage_event(act_s3_6,0);
+add_stage_event(act_s3_7_midspell,0);
 /*
+add_stage_event(act_s3_5,0);
+
 add_stage_event(act_s3_9,0);
-*/
+
 add_stage_event(dialogue_s3_pre,100);
 
 add_stage_event(boss_s3_1_non,0);
@@ -111,7 +115,7 @@ add_stage_event(boss_s3_6_spell,0);
 add_stage_event(dialogue_s3_post,100);
 
 
-
+*/
 
 
 event_step = 0; // current event step

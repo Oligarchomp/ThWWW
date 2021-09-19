@@ -11,5 +11,5 @@ true_time_end = 100;//when this act is 100% done and destroyed
 
 //custom
 state = 0;
-old_state = -1;
+old_state = 0;
 state_time = 0;
