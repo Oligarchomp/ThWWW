@@ -16,14 +16,14 @@ if(global.gp_active)
 			
 		break;
 		case 3:
-			var bubble_ring = 32;
+			var bubble_ring = 31;
 			var bubble_spd1 = 2.5;
 			var bubble_spd2 = 3;
 		break;
 	}
 	
 	var fairy_wait = 60;
-	var fairy_life = 45;
+	var fairy_life = 55;
 	
 	if (step % fairy_wait == 0)
 	{

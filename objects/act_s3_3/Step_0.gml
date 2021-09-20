@@ -16,18 +16,18 @@ if(global.gp_active)
 			
 		break;
 		case 3:
-			var bubble_spd_shoot = 16;
+			var bubble_spd_shoot = 14.5;
 			var bubble_spd_final = 4;
 			var bubble_arc = 5;
 			var bubble_dist = 25;
-			var bubble_wait = 20;
+			var bubble_wait = 26;
 			
 			
-			var ring_wait = 10;
+			var ring_wait = 15;
 			var ring_lenght = 105;
 			var ring_spd_to = 10;
 			var ring_accel = 0.05;
-			var ring_nbr = 32;
+			var ring_nbr = 28;
 		break;
 	}
 	

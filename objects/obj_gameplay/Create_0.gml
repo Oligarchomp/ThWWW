@@ -100,7 +100,7 @@ add_stage_event(act_s3_0,0);
 add_stage_event(act_s3_1,0);
 add_stage_event(act_s3_2,0);
 add_stage_event(act_s3_3,0);
-add_stage_event(act_s3_4,0);
+
 
 add_stage_event(act_s3_5,0);
 add_stage_event(act_s3_6,90);
@@ -119,8 +119,6 @@ add_stage_event(boss_s3_5_non,10);
 
 add_stage_event(boss_s3_6_spell,0);
 add_stage_event(dialogue_s3_post,100);
-
-
 
 
 

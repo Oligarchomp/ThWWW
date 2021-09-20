@@ -7,7 +7,7 @@ event_inherited();
 act_set_time(700,700);
 
 x_fairy = ds_list_create();
-ds_list_add(x_fairy,270,130,270,130,200);
+ds_list_add(x_fairy,130,270,130,270,200);
 
-aim_dir = -1;
+aim_dir = 1;
 need_aim_time = 0;
