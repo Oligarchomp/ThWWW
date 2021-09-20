@@ -89,7 +89,7 @@ if(global.gp_active)
 				if (state_time > 30)
 				{
 					state = 3;
-					angle = find_angle(x,y,room_width / 2,y - 180);
+					angle = find_angle(x,y,room_width / 2,y - 20);
 				}
 			break;
 			case 3: //leaving

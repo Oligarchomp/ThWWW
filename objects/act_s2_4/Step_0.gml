@@ -40,7 +40,7 @@ if(global.gp_active)
 			//actually isn't aimed
 			var aim_spd = 2.5;
 			
-			var aim_ring = 30;
+			var aim_ring = 26;
 			
 			var tri_spd = 2;
 			var tri_dist = 2;

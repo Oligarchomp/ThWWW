@@ -249,7 +249,12 @@ if (global.gp_active)
 	}
 	y += vsp;
 	
-
+	var me = self;
+	with(obj_player_hurtbox)
+	{
+		x = me.x;
+		y = me.y;
+	}
 	
 	//Visual
 	if (focused)
