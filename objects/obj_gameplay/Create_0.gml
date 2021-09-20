@@ -97,10 +97,11 @@ add_stage_event(dialogue_s2_post,70);
 
 add_stage_event(act_s3_0,0);
 
+
 add_stage_event(act_s3_1,0);
 add_stage_event(act_s3_2,0);
 add_stage_event(act_s3_3,0);
-
+add_stage_event(act_s3_4,0);
 
 add_stage_event(act_s3_5,0);
 add_stage_event(act_s3_6,90);

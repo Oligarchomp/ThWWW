@@ -7,13 +7,46 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
+			var bubble_spd_shoot = 12;
+			var bubble_spd_final = 3;
+			var bubble_arc = 1;
+			var bubble_dist = 30;
+			var bubble_wait = 26;
 			
+			
+			var ring_wait = 30;
+			var ring_lenght = 90;
+			var ring_spd_to = 8;
+			var ring_accel = 0.05;
+			var ring_nbr = 14;
 		break;
 		case 1:
+			var bubble_spd_shoot = 14.5;
+			var bubble_spd_final = 4;
+			var bubble_arc = 1;
+			var bubble_dist = 30;
+			var bubble_wait = 26;
 			
+			
+			var ring_wait = 20;
+			var ring_lenght = 105;
+			var ring_spd_to = 8;
+			var ring_accel = 0.05;
+			var ring_nbr = 18;
 		break;
 		case 2:
+			var bubble_spd_shoot = 14.5;
+			var bubble_spd_final = 4;
+			var bubble_arc = 3;
+			var bubble_dist = 30;
+			var bubble_wait = 26;
 			
+			
+			var ring_wait = 18;
+			var ring_lenght = 105;
+			var ring_spd_to = 10;
+			var ring_accel = 0.05;
+			var ring_nbr = 24;
 		break;
 		case 3:
 			var bubble_spd_shoot = 14.5;

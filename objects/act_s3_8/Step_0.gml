@@ -28,7 +28,7 @@ if(global.gp_active)
 		case 3:
 			var wait_shoot = 5;
 			var shoot_nbr = 6;
-			var shoot_dist = 12;
+			var shoot_dist = 10;
 			var shoot_start = 30; //when start moving
 			var shoot_spd = 3;
 		break;

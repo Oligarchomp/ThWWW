@@ -273,6 +273,7 @@
     {"id":{"name":"shad_invert","path":"shaders/shad_invert/shad_invert.yy",},"order":0,},
     {"id":{"name":"boss_s1_3_non","path":"objects/boss_s1_3_non/boss_s1_3_non.yy",},"order":9,},
     {"id":{"name":"spr_tower","path":"sprites/spr_tower/spr_tower.yy",},"order":1,},
+    {"id":{"name":"act_s3_4","path":"objects/act_s3_4/act_s3_4.yy",},"order":17,},
     {"id":{"name":"sfx_spawn_light","path":"sounds/sfx_spawn_light/sfx_spawn_light.yy",},"order":0,},
     {"id":{"name":"obj_score","path":"objects/obj_score/obj_score.yy",},"order":3,},
     {"id":{"name":"sfx_shot2","path":"sounds/sfx_shot2/sfx_shot2.yy",},"order":5,},

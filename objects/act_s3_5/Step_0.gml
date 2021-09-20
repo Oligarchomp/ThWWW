@@ -28,7 +28,7 @@ if(global.gp_active)
 			var ring_nbr = 17;
 			var ring_spd = 2;
 			
-			var aim_spd = 3;
+			var aim_spd = 4;
 			var aim_wait = 6;
 			var aim_lenght = 50;
 			var aim_start = 15;
@@ -37,7 +37,7 @@ if(global.gp_active)
 			var ring_nbr = 22;
 			var ring_spd = 2;
 			
-			var aim_spd = 3;
+			var aim_spd = 4.5;
 			var aim_wait = 6;
 			var aim_lenght = 50;
 			var aim_start = 15;
