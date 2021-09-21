@@ -77,7 +77,6 @@ if(global.gp_active)
 	}
 	
 	var aim_y_off = 60;
-	var aim_y_git = 40;
 	var aim_life = 4;
 	var aim_wait = 5;
 	var aim_wave = 5;

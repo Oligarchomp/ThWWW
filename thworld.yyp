@@ -332,6 +332,7 @@
     {"id":{"name":"act_s2_7","path":"objects/act_s2_7/act_s2_7.yy",},"order":14,},
     {"id":{"name":"dialogue_s3_pre","path":"objects/dialogue_s3_pre/dialogue_s3_pre.yy",},"order":1,},
     {"id":{"name":"sfx_boss_charge","path":"sounds/sfx_boss_charge/sfx_boss_charge.yy",},"order":0,},
+    {"id":{"name":"act_s3_42","path":"objects/act_s3_42/act_s3_42.yy",},"order":18,},
     {"id":{"name":"spr_bomb_fantasy_collision","path":"sprites/spr_bomb_fantasy_collision/spr_bomb_fantasy_collision.yy",},"order":5,},
     {"id":{"name":"obj_fantasy","path":"objects/obj_fantasy/obj_fantasy.yy",},"order":7,},
     {"id":{"name":"obj_spell","path":"objects/obj_spell/obj_spell.yy",},"order":2,},
