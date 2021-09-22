@@ -97,14 +97,11 @@ if(global.gp_active) and (spell_wait == 0)
 			if(state_time == 0)
 			{
 				boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);
-				
 			}
-			
 			
 			for(var i = 0; i < 360; i += 360 / 3)
 			{
 				shoot_arc(DAN_BUBBLE,7,2,obj_boss.x,obj_boss.y,fan_angle + i,10,fan_bubble_spd,sfx_shot3,3);
-				
 			}
 			
 			fan_angle += fan_spd;

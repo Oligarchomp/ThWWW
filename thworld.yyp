@@ -48,6 +48,7 @@
     {"id":{"name":"create_enemy","path":"scripts/create_enemy/create_enemy.yy",},"order":14,},
     {"id":{"name":"spr_rest","path":"sprites/spr_rest/spr_rest.yy",},"order":15,},
     {"id":{"name":"spr_grabbox","path":"sprites/spr_grabbox/spr_grabbox.yy",},"order":3,},
+    {"id":{"name":"act_s3_43","path":"objects/act_s3_43/act_s3_43.yy",},"order":19,},
     {"id":{"name":"sfx_masterspark","path":"sounds/sfx_masterspark/sfx_masterspark.yy",},"order":14,},
     {"id":{"name":"sfx_spawn_heavy","path":"sounds/sfx_spawn_heavy/sfx_spawn_heavy.yy",},"order":2,},
     {"id":{"name":"boss_s2_5_spell","path":"objects/boss_s2_5_spell/boss_s2_5_spell.yy",},"order":5,},
