@@ -6,35 +6,35 @@ if(global.gp_active) and(spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			var bubble_nbr = 7;
-			var shoot_wait = 5;
+			var bubble_nbr = 11;
+			var shoot_wait = 4;
 			var bubble_spd = 2;
 			var step1_angle_spd = 4;
 			var step2_angle_spd = 0.5;
 			
-			var bubble_wait = 10;//must be a multiple of 2
-			var wait_wave = 90;
+			var bubble_wait = 40;//must be a multiple of 2
+			var wait_wave = 60;
 			var angle_max = 80;
 		break;
 		case 1:
-			var bubble_nbr = 14;
-			var shoot_wait = 5;
+			var bubble_nbr = 16;
+			var shoot_wait = 3;
 			var bubble_spd = 3;
 			var step1_angle_spd = 4;
 			var step2_angle_spd = 1;
 			
-			var bubble_wait = 10;//must be a multiple of 2
-			var wait_wave = 60;
+			var bubble_wait = 30;//must be a multiple of 2
+			var wait_wave = 50;
 			var angle_max = 110;
 		break;
 		case 2:
-			var bubble_nbr = 18;
-			var shoot_wait = 4;
+			var bubble_nbr = 19;
+			var shoot_wait = 3;
 			var bubble_spd = 4;
 			var step1_angle_spd = 7;
 			var step2_angle_spd = 2;
 			
-			var bubble_wait = 24;//must be a multiple of 2
+			var bubble_wait = 30;//must be a multiple of 2
 			var wait_wave = 40;
 			var angle_max = 130;
 		break;

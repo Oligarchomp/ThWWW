@@ -10,7 +10,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var bubble_nbr = 5;
 			var bubble_spd = 1;
 			var bubble_dist = -20;
-			var bubble_wait = 115;
+			var bubble_wait = 100;
 		break;
 		case 1:
 			var fan_spd_max = 0.6;
@@ -31,7 +31,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 3:
 			var fan_spd_max = 0.9;
 		
-			var bubble_nbr = 13;
+			var bubble_nbr = 14;
 			var bubble_spd = 1;
 			var bubble_dist = -10;
 			var bubble_wait = 70;
