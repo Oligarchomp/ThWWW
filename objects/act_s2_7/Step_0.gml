@@ -6,25 +6,25 @@ if(global.gp_active)
 	{
 		case 0:
 			var fairy_wait_shoot = 120;
-			var ring_nbr = 2;
+			var ring_nbr = 3;
 			var ring_spd_low = 1.5;
 			var ring_spd_hight = 2.5;
 		break;
 		case 1:
 			var fairy_wait_shoot = 95;
-			var ring_nbr = 6;
+			var ring_nbr = 9;
 			var ring_spd_low = 2;
 			var ring_spd_hight = 3;
 		break;
 		case 2:
 			var fairy_wait_shoot = 80;
-			var ring_nbr = 8;
+			var ring_nbr = 14;
 			var ring_spd_low = 2.5;
 			var ring_spd_hight = 3.5;
 		break;
 		case 3:
 			var fairy_wait_shoot = 70;
-			var ring_nbr = 12;
+			var ring_nbr = 18;
 			var ring_spd_low = 3;
 			var ring_spd_hight = 4;
 		break;
