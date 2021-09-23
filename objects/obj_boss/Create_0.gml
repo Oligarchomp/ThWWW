@@ -52,6 +52,14 @@ switch(boss_id)
 		dir_max = 4;
 		movement_type = 1;
 	break;
+	case BOSS_IKU:
+		idle_spr = spr_iku_idle;
+		move_spr = spr_iku_move;
+	break;
+	case BOSS_YUUTO:
+		idle_spr = spr_yuuto_idle;
+		move_spr = spr_yuuto_move;
+	break;
 }
 	
 

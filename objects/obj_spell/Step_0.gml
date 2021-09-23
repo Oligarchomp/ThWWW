@@ -24,6 +24,12 @@ if (global.gp_active)
 				case BOSS_PALE:
 					instance_create_depth(0,0, global.spell_bg_depth,obj_spell_bg_pale);
 				break;
+				case BOSS_IKU:
+					instance_create_depth(0,0, global.spell_bg_depth,obj_spell_bg_iku);
+				break;
+				case BOSS_YUUTO:
+					instance_create_depth(0,0, global.spell_bg_depth,obj_spell_bg_yuuto);
+				break;
 			}
 			
 			spell_initialize = true;

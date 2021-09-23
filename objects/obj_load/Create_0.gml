@@ -37,8 +37,8 @@ global.difficulty = 3;
 #macro BOSS_APPLE 1
 #macro BOSS_SERENE 2
 #macro BOSS_PALE 3
-#macro BOSS_4 4
-#macro BOSS_5 5
+#macro BOSS_IKU 4
+#macro BOSS_YUUTO 5
 #macro BOSS_6 6
 #macro BOSS_7 7
 

@@ -15,6 +15,12 @@ else
 
 switch(user_id)
 {
+	case BOSS_YUUTO:
+		sprite_index = spr_yuuto_art;
+	break;
+	case BOSS_IKU:
+		sprite_index = spr_nothing// spr_iku_art;
+	break;
 	case BOSS_SERENE:
 		sprite_index = spr_serene_art;
 	break;

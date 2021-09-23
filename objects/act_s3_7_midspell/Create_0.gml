@@ -24,7 +24,7 @@ y_ref = 100;
 
 angle_start = 90;
 angle_shoot = 0;
-
+angle_shoot2 = 0;
 
 // to sync with the music
 instance_create_depth(0,0,0,act_s3_8);
