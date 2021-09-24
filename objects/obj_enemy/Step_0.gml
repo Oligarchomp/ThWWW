@@ -98,7 +98,15 @@ if (global.gp_active)
 		instance_destroy();
 	}
 	
-	
+	switch(en_type)
+	{
+		case EN_FAMILIAR:
+		rot += 1;
+		
+		break;
+		
+		
+	}
 	
 	
 	//offscreen

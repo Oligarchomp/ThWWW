@@ -5,8 +5,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_spell",
-    "path": "objects/obj_spell/obj_spell.yy",
+    "name": "obj_enemy",
+    "path": "objects/obj_enemy/obj_enemy.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -20,18 +20,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Stage4",
-    "path": "folders/Objects/STAGES/Stage4.yy",
+    "name": "Fairy Child",
+    "path": "folders/Objects/ENEMY/Fairy/Fairy Child.yy",
   },
   "resourceVersion": "1.0",
-  "name": "boss_s4_2_spell",
+  "name": "obj_enemy2",
   "tags": [],
   "resourceType": "GMObject",
 }

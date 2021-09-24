@@ -43,6 +43,10 @@ switch(en_type)
 		idle_spr = spr_cirno;
 		move_spr = spr_fairy_blue_move;
 	break;
+	case EN_FAMILIAR:
+		idle_spr = spr_familiar;
+		move_spr = spr_familiar;
+	break;
 }
 
 sprite_index = idle_spr;
@@ -57,9 +61,12 @@ spr_dir = 1;
 hsp = 0;
 vsp = 0;
 
+spd = 0;
+
 angle = 0;
 
-spd = 0;
+rot = 0
+
 
 state = 0;
 last_state = -1;

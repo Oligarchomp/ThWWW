@@ -50,6 +50,7 @@ global.difficulty = 3;
 #macro EN_DEATH 4
 #macro EN_YY 5
 #macro EN_CRAB 6
+#macro EN_FAMILIAR 7
 #macro EN_CIRNO 9
 
 // define danmaku_id

@@ -23,8 +23,14 @@ function create_enemy(argument0,argument1,argument2,argument3,argument4,argument
 		case 4:
 			var id_num = obj_enemy4;
 		break;
-		default:// and 5
+		case 5:
 			var id_num = obj_enemy5;
+		break;
+		case 6:
+			var id_num = obj_enemy6;
+		break;
+		default:// and 7
+			var id_num = obj_enemy7;
 		break;
 	}
 	
