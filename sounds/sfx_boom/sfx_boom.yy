@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sfx_boom.ogg",
-  "duration": 1.225533,
+  "duration": 1.850748,
   "parent": {
     "name": "Effect",
     "path": "folders/Sounds/Sound Effect/Effect.yy",

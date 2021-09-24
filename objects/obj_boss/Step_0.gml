@@ -40,11 +40,20 @@ if (global.gp_active)
 					play_sound(sfx_boss_preexplosion,1,false);
 				break;
 				case 40:
-					play_sound(sfx_boss_explosion,1,false);
+				
 					screen_shake(20,10);
-					repeat(120)
+					if(boss_id != BOSS_YUUTO)
 					{
-						instance_create_depth(x,y,depth -1,obj_boss_explode);
+						play_sound(sfx_boss_explosion,1,false);
+						repeat(120)
+						{
+							instance_create_depth(x,y,depth -1,obj_boss_explode);
+						}
+					}
+					else
+					{
+						play_sound(sfx_boom,1,false);	
+						instance_create_depth(x,y,depth -1,obj_boom);
 					}
 					instance_destroy();
 				break;

@@ -61,14 +61,14 @@ function shoot(argument0,argument1,argument2,argument3,argument4,argument5,argum
 	global.danmaku_speed = spd;
 	
 	
+	var inst = noone;
 	if (instance_number(obj_danmaku) < global.bullet_cap)
 	{
 		var inst = instance_create_depth(x_pos,y_pos,0,dan)
 	
 		play_sound(snd,1,false);
-		
-		return inst;
 	}
 	
+	return inst;
 	
 }
