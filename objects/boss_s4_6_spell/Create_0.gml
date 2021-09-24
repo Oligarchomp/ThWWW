@@ -6,7 +6,7 @@ event_inherited();
 
 spell_set_spell("s4_3",BOSS_YUUTO,4521000)
 spell_set_name("spell_s4_3a","spell_s4_3a","spell_s4_3b","spell_s4_3b")
-spell_set_life(800,170);
+spell_set_life(950,170);
 spell_set_time(35,false,95);
 
 boss_movement_goto(room_width / 2, 100,5);
@@ -15,7 +15,7 @@ boss_movement_goto(room_width / 2, 100,5);
 id_list = ds_list_create();
 time_list = ds_list_create();
 
-ds_list_add(id_list,1,2,3,4,5,6);
+ds_list_add(id_list,1,2,3,4,6,7);
 var time = 12;
 ds_list_add(time_list,time,2* time,3 * time,4 * time,5 * time,6 * time);
 
@@ -23,3 +23,8 @@ x_fire_left = 0;
 y_fire_left = 0;
 x_fire_right = 0;
 y_fire_right = 0;
+
+
+
+familiar_wait_death = 240;
+//familiar giving info in obj_enemy detsroy event
