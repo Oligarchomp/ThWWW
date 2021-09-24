@@ -61,15 +61,7 @@ if(global.gp_active)
 	current_step += 1;
 	
 	
-	//skip hold
-	if(global.shot_down)
-	{
-		skip_time += 1;
-	}
-	else
-	{
-		skip_time = 0;
-	}
+	
 	
 		
 	//checking if need to go to next dialogue
@@ -86,6 +78,16 @@ if(global.gp_active)
 		if(global.shot_pressed)
 		{
 			go_to_next = true;
+		}
+		
+		//skip hold
+		if(global.shot_down)
+		{
+			skip_time += 1;
+		}
+		else
+		{
+			skip_time = 0;
 		}
 	}
 	

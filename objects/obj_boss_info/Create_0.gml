@@ -7,19 +7,19 @@ spell_nbr = 50;
 switch(global.stage)
 {
 	case 1:
-		name = "Apple Girlington";
+		name = get_text("boss_apple");
 		spell_nbr = 2;
 	break;
 	case 2:
-		name = "Serene Heikegani";
+		name = get_text("boss_serene");
 		spell_nbr = 3;
 	break;
 	case 3:
-		name = "Pale Fanhead";
+		name = get_text("boss_pale");
 		spell_nbr = 3;
 	break;
 	case 4:
-		name = "Yuuto Ichika";
+		name = get_text("boss_yuuto");
 		spell_nbr = 4;
 	break;
 }

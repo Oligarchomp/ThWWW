@@ -15,9 +15,21 @@ boss_movement_goto(room_width / 2, 100,5);
 id_list = ds_list_create();
 time_list = ds_list_create();
 
-ds_list_add(id_list,1,2,3,4,6,7);
+
 var time = 12;
-ds_list_add(time_list,time,2* time,3 * time,4 * time,5 * time,6 * time);
+
+switch(global.difficulty)
+{
+	case 3:
+	case 2:
+		ds_list_add(id_list,6,7);
+		ds_list_add(time_list,5 * time,6 * time);
+	case 1:
+	case 0:
+		ds_list_add(id_list,1,2,3,4);
+		ds_list_add(time_list,time,2* time,3 * time,4 * time);
+	break;
+}
 
 x_fire_left = 0;
 y_fire_left = 0;
