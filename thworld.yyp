@@ -367,7 +367,6 @@
     {"id":{"name":"obj_spell","path":"objects/obj_spell/obj_spell.yy",},"order":2,},
     {"id":{"name":"obj_option","path":"objects/obj_option/obj_option.yy",},"order":0,},
     {"id":{"name":"dialogue_s1_pre","path":"objects/dialogue_s1_pre/dialogue_s1_pre.yy",},"order":11,},
-    {"id":{"name":"boss_s4_1_non","path":"objects/boss_s4_1_non/boss_s4_1_non.yy",},"order":7,},
     {"id":{"name":"find_angle","path":"scripts/find_angle/find_angle.yy",},"order":0,},
     {"id":{"name":"sfx_redirect1","path":"sounds/sfx_redirect1/sfx_redirect1.yy",},"order":2,},
     {"id":{"name":"act_s2_9","path":"objects/act_s2_9/act_s2_9.yy",},"order":15,},

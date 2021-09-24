@@ -122,7 +122,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var sun_spd_max = 4;
 			
 			var moon_wait = 130;
-			var moon_nbr = 26;
+			var moon_nbr = 24;
 			var moon_spd = 1.5;
 		break;
 		case 3:
@@ -169,7 +169,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var sun_spd_max = 4;
 			
 			var moon_wait = 130;
-			var moon_nbr = 32;
+			var moon_nbr = 30;
 			var moon_spd = 1.5;
 		break;
 	}
