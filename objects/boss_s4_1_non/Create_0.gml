@@ -10,6 +10,6 @@ spell_set_time(24,false,90)
 
 
 angle_laser = -90;
-
+ring_angle = 0;
 
 dir_act = 1;
