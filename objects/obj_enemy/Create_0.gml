@@ -47,6 +47,10 @@ switch(en_type)
 		idle_spr = spr_familiar;
 		move_spr = spr_familiar;
 	break;
+	case EN_ROCK:
+		idle_spr = spr_rock;
+		move_spr = spr_rock;
+	break;
 }
 
 sprite_index = idle_spr;
@@ -66,6 +70,7 @@ spd = 0;
 angle = 0;
 
 rot = 0
+rot_spd = 1;
 
 
 state = 0;

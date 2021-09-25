@@ -164,9 +164,14 @@ if(global.gp_active)
 		case bgm_step:
 			if(current_step == 0)
 			{
-				if(global.stage == 1)
+				switch(global.stage)
 				{
-					set_bgm(mus_boss1,mus_boss1_intro);//changing that when more than 1 song
+					case 1:
+						set_bgm(mus_boss1,mus_boss1_intro);
+					break;
+					case 2:
+						set_bgm(mus_boss2,noone);
+					break;
 				}
 			}
 		break;
