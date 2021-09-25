@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Enemy",
-    "path": "folders/Sprites/Enemy.yy",
+    "name": "Projectile",
+    "path": "folders/Sprites/Danmaku/Projectile.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_rock",

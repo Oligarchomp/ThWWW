@@ -16,7 +16,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 3:
 		
 			var fire_ring = 18;
-			var fire_ring_nbr = 15;
+			var fire_ring_nbr = 13;
 			var fire_spd_min = 3;
 			var fire_spd_git = 3;
 			
@@ -52,19 +52,18 @@ if(global.gp_active) and (spell_wait == 0)
 			}
 		break;
 		case 1:
-			play_sound(sfx_familiar_spawn,1,false);
+			play_sound(sfx_spawn_light,1,false);
 			for(var i = 0; i < 360; i += 360 / rock_nbr)
 			{
-				var inst = create_enemy(EN_ROCK,obj_boss.x,obj_boss.y,99999,1,5.3,i);
+				var inst = shoot(DAN_ROCK,5,obj_boss.x,obj_boss.y,i,5.3,noone,5);
 				inst.rot = rng(360,false,3);
-				inst.mask_index = spr_nothing;
-				inst.item_nbr = 0;
 			}
 			
 			boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);
+			
 			for(var i = 0; i < fire_ring_nbr; i += 1)
 			{
-				shoot_ring(DAN_FIREBALL,6,fire_ring,obj_boss.x,obj_boss.y,rng(360,false,i),fire_spd_min + rng(fire_spd_git,false,i + 1),noone,3);
+				shoot_ring(DAN_FIREBALL,6,fire_ring,obj_boss.x,obj_boss.y,rng(360,false,i),fire_spd_min + fire_spd_git / fire_ring_nbr * i ,noone,3);
 			}
 			state = 2;
 		break;
@@ -85,7 +84,7 @@ if(global.gp_active) and (spell_wait == 0)
 	}
 	
 	
-	with(obj_enemy1)
+	with(obj_danmaku5)
 	{
 		switch(state)
 		{

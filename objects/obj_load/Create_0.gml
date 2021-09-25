@@ -51,7 +51,6 @@ global.difficulty = 3;
 #macro EN_YY 5
 #macro EN_CRAB 6
 #macro EN_FAMILIAR 7
-#macro EN_ROCK 8
 #macro EN_CIRNO 9
 
 // define danmaku_id
@@ -76,6 +75,7 @@ global.difficulty = 3;
 #macro DAN_STARBIG 18
 #macro DAN_STARSMALL 19
 #macro DAN_CRAB 20
+#macro DAN_ROCK 21
 
 //define rot_type
 #macro ROT_FOLLOW 0

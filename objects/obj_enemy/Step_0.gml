@@ -100,7 +100,6 @@ if (global.gp_active)
 	
 	switch(en_type)
 	{
-		case EN_ROCK:
 		case EN_FAMILIAR:
 			rot += rot_spd;
 		break;
