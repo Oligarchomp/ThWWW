@@ -170,7 +170,7 @@ if(global.gp_active)
 						set_bgm(mus_boss1,mus_boss1_intro);
 					break;
 					case 2:
-						set_bgm(mus_boss2,noone);
+						set_bgm(mus_boss2,mus_boss2_intro);
 					break;
 				}
 			}

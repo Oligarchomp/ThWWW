@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "mus_boss2.ogg",
-  "duration": 67.1997757,
+  "soundFile": "mus_boss2_intro.ogg",
+  "duration": 2.939615,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",
   },
   "resourceVersion": "1.0",
-  "name": "mus_boss2",
+  "name": "mus_boss2_intro",
   "tags": [],
   "resourceType": "GMSound",
 }

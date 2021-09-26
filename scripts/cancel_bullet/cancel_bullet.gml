@@ -1,5 +1,5 @@
 /// cancel_bullet(instance)
-///@param insance instance
+///@param instance instance
 function cancel_bullet(argument0){
 
 	with(argument0)

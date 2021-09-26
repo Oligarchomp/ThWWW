@@ -1,0 +1,122 @@
+/// @description Insert description here
+// You can write your code in this editor
+if(global.gp_active) and (spell_wait == 0)
+{
+	switch(global.difficulty)
+	{
+		case 0:
+			
+		break;
+		case 1:
+		
+		break;
+		case 2:
+		
+		break;
+		case 3:
+			var spark_nbr = 10;
+			var spark_lenght = 300;
+			var spark_rand_lenght = 100;
+			var spark_open_max = 8;
+			var spark_open_spd = 15;
+			var spark_spd_aim = 15;
+			var spark_spd_rand = 5;
+			
+			var wave_wait = 90;
+			
+			var star_ring = 30;
+			var star_spd = 3.5;
+			var star_wait = 18;
+		break;
+	}
+	var charge_plus = 50;
+	var wait_shoot = 40;
+	var shoot_off = 50;
+	
+	switch(state)
+	{
+		case 0:
+			switch(state_time)
+			{
+				case 0:
+					aim_dir = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y);
+				break;
+			}
+			if(state_time % 1 == 0) and (charge_dist < 640)
+			{
+				boss_charge(obj_boss.x + lengthdir_x(charge_dist,aim_dir),obj_boss.y + lengthdir_y(charge_dist,aim_dir) )
+				charge_dist += charge_plus;
+			}
+			else
+			{
+				state = 1;
+			}
+		break;
+		case 1:
+			if(state_time == wait_shoot)
+			{
+				state = 2;
+				play_sound(sfx_masterspark,1,false);
+			}
+		break;
+		case 2:
+			if(state_time < spark_lenght)
+			{
+				var x_pos = obj_boss.x + lengthdir_x(shoot_off,aim_dir); 
+				var y_pos = obj_boss.y + lengthdir_y(shoot_off,aim_dir); 
+				
+				if(state_time < spark_lenght - spark_rand_lenght)
+				{
+					for(var i = 0; i < spark_nbr; i += 1)
+					{
+						var open = sin(state_time / spark_open_spd) * spark_open_max;		
+						var ang = aim_dir - open + rng(open * 2,false,i + 1);
+						shoot(DAN_BUBBLE,8,x_pos,y_pos,ang,spark_spd_aim + rng(5,false,i),noone,4);
+					}
+				}
+				else
+				{
+					shoot(DAN_BUBBLE,7,x_pos,y_pos,rng(360,false,8),spark_spd_rand,sfx_shot2,4);
+					
+				}
+				
+				if(state_time % star_wait == 0)
+				{
+					if((state_time / star_wait )% 2 == 0)
+					{
+						var col = 6;	
+					}
+					else
+					{
+						var col = 2;
+					}
+					shoot_ring(DAN_STARBIG,col,star_ring,x_pos,y_pos,ring_angle,star_spd,sfx_shot1,3);
+					ring_angle += 360 / star_ring / 2;
+				}
+				
+				screen_shake(3 + rng(2,true,1),2 + rng(3,true,2));
+			}
+			else
+			{
+				charge_dist = 0;
+				state = 3;
+			}
+		break;
+		case 3:
+			switch(state_time)
+			{
+				case 0:
+					wave_dir *= -1;
+					boss_movement_goto(room_width / 2 + (90 + rng(30,false,5)) * wave_dir,90,4);
+				break;
+				case wave_wait:
+					state = 0;
+				break;
+			}
+		break;
+	}
+	
+}
+// Inherit the parent event
+event_inherited();
+
