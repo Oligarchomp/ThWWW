@@ -19,6 +19,7 @@
     {"id":{"name":"spr_graze","path":"sprites/spr_graze/spr_graze.yy",},"order":2,},
     {"id":{"name":"spr_fairy_red_idle","path":"sprites/spr_fairy_red_idle/spr_fairy_red_idle.yy",},"order":0,},
     {"id":{"name":"act_s4_5_midspell","path":"objects/act_s4_5_midspell/act_s4_5_midspell.yy",},"order":2,},
+    {"id":{"name":"boss_s4_7r_spell","path":"objects/boss_s4_7r_spell/boss_s4_7r_spell.yy",},"order":10,},
     {"id":{"name":"bg_s3","path":"objects/bg_s3/bg_s3.yy",},"order":0,},
     {"id":{"name":"dialogue_s4_mid","path":"objects/dialogue_s4_mid/dialogue_s4_mid.yy",},"order":1,},
     {"id":{"name":"spr_spell_bg","path":"sprites/spr_spell_bg/spr_spell_bg.yy",},"order":0,},

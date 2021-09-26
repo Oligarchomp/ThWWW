@@ -9,7 +9,7 @@ spell_set_name("spell_s4_4m","spell_s4_4m","spell_s4_4m","spell_s4_4m")
 spell_set_life(1300,300);
 spell_set_time(39,false,110);
 
-boss_movement_goto(300,90,5);
+boss_movement_goto(300,80,5);
 
 item_nbr = 0;
 

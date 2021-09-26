@@ -5,13 +5,49 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
+			var ring_wait = 32;
+			var ring_nbr = 16;
+			var ring_spd_shoot = 11;
+			var ring_spd_times_less = 5;
 			
+			var ring_spd_dif = 1.2;
+			
+			var dist_plus = 0.5;
+			var dist_max = 40;
+			var deccel = 0.8;
+			
+			var wave_lenght = 200;
+			var wave_wait = 80;
 		break;
 		case 1:
+			var ring_wait = 25;
+			var ring_nbr = 22;
+			var ring_spd_shoot = 11;
+			var ring_spd_times_less = 4.5;
 			
+			var ring_spd_dif = 1.2;
+			
+			var dist_plus = 0.5;
+			var dist_max = 40;
+			var deccel = 0.8;
+			
+			var wave_lenght = 200;
+			var wave_wait = 70;
 		break;
 		case 2:
+			var ring_wait = 20;
+			var ring_nbr = 27;
+			var ring_spd_shoot = 11;
+			var ring_spd_times_less = 4;
 			
+			var ring_spd_dif = 1.2;
+			
+			var dist_plus = 0.5;
+			var dist_max = 40;
+			var deccel = 0.8;
+			
+			var wave_lenght = 200;
+			var wave_wait = 70;
 		break;
 		case 3:
 			var ring_wait = 18;
@@ -26,7 +62,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var deccel = 0.8;
 			
 			var wave_lenght = 200;
-			var wave_wait = 40;
+			var wave_wait = 60;
 		break;
 	}
 	

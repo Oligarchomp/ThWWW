@@ -5,16 +5,72 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
+			var fire_ring = 10;
+			var fire_ring_nbr = 8;
+			var fire_spd_min = 3;
+			var fire_spd_git = 2;
 			
+			var rock_nbr = 4;
+			var rock_wait_aim = 30;
+			var rock_accel = 0.05;
+			var rock_spd_max = 8;
+			
+			var star_nbr = 22;
+			var star_spd_shoot = 5;
+			var star_spd_final = 2.5;
+			
+			var ball_spd_max = 8;
+			var ball_accel = 0.05
+			var ball_nbr = 2;
+			var ball_dist = 5;
+			
+			var wait_wave = 220;
 		break;
 		case 1:
+			var fire_ring = 13;
+			var fire_ring_nbr = 10;
+			var fire_spd_min = 3;
+			var fire_spd_git = 2;
 			
+			var rock_nbr = 6;
+			var rock_wait_aim = 30;
+			var rock_accel = 0.05;
+			var rock_spd_max = 8;
+			
+			var star_nbr = 27;
+			var star_spd_shoot = 6;
+			var star_spd_final = 2.5;
+			
+			var ball_spd_max = 8;
+			var ball_accel = 0.05
+			var ball_nbr = 2;
+			var ball_dist = 5;
+			
+			var wait_wave = 195;
 		break;
 		case 2:
+			var fire_ring = 15;
+			var fire_ring_nbr = 12;
+			var fire_spd_min = 3;
+			var fire_spd_git = 3;
 			
+			var rock_nbr = 8;
+			var rock_wait_aim = 30;
+			var rock_accel = 0.05;
+			var rock_spd_max = 8;
+			
+			var star_nbr = 32;
+			var star_spd_shoot = 6;
+			var star_spd_final = 2.5;
+			
+			var ball_spd_max = 8;
+			var ball_accel = 0.05
+			var ball_nbr = 2;
+			var ball_dist = 5;
+			
+			var wait_wave = 170;
 		break;
 		case 3:
-		
 			var fire_ring = 18;
 			var fire_ring_nbr = 13;
 			var fire_spd_min = 3;

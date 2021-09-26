@@ -17,7 +17,7 @@ global.spell_bg_depth = 50;
 
 global.spell_file = "SpellData.ini"
 
-
+global.player_chosen = P_REIMU;
 global.difficulty = 3;
 // 0 = easy;
 // 1 = normal;

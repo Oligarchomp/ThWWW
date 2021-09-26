@@ -122,8 +122,8 @@ y_offscreen = x_offscreen;
 
 switch (rot_type)
 {
-	case ROT_FOLLOW:
 	case ROT_SPIN:
+	case ROT_FOLLOW:
 		rot = angle;
 	break;
 	case ROT_SET:

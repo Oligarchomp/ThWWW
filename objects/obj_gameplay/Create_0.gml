@@ -10,7 +10,7 @@ global.gp_active = true;
 
 global.time = 0;
 
-global.player_chosen = 0;
+
 global.danmaku_id = 0; //the id of the next danmaku_id to spawn (or the last one spawn if not using it)
 global.danmaku_color = 0;
 global.danmaku_angle = 0;
@@ -116,25 +116,29 @@ add_stage_event(dialogue_s3_post,100);
 
 add_stage_event(act_s4_0,0);
 
-add_stage_event(boss_s4_7s_spell,0);
 /*
-add_stage_event(boss_s4_7m_spell,0);
 add_stage_event(dialogue_s4_mid,50);
 add_stage_event(act_s4_5_midspell,0);
 
 add_stage_event(dialogue_s4_pre,50);
 
 add_stage_event(boss_s4_2_spell,0);
-
-add_stage_event(boss_s4_5_non,0);
-add_stage_event(boss_s4_6_spell,0);
-
-add_stage_event(dialogue_s4_yuuto,0);
-
-
-
 */
-
+//add_stage_event(boss_s4_5_non,0);
+//add_stage_event(boss_s4_6_spell,0);
+//add_stage_event(dialogue_s4_yuuto,0);
+switch(global.player_chosen)
+{
+	case P_REIMU:
+		add_stage_event(boss_s4_7r_spell,0);
+	break;
+	case P_MARISA:
+		add_stage_event(boss_s4_7m_spell,0);
+	break;
+	case P_SANAE:
+		add_stage_event(boss_s4_7s_spell,0);
+	break;
+}
 
 
 

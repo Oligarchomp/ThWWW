@@ -5,13 +5,55 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
+			var rice_wave = 110;
+			var rice_wait = 9;
+			var rice_nbr = 8;
+			var rice_spd = 2;
+			var rice_dist = 19;
+			var rice_dist_min = 20;
+			var rice_angle_plus = 5;
 			
+			var wait_move = 15;
+			var spawn_time = 65;
+			var rice_accel = 0.02;
+			
+			var rock_nbr = 6;
+			var rock_wait = 90;
+			var rock_spd = 2;
 		break;
 		case 1:
-		
+			var rice_wave = 110;
+			var rice_wait = 6;
+			var rice_nbr = 14;
+			var rice_spd = 2.5;
+			var rice_dist = 17;
+			var rice_dist_min = 20;
+			var rice_angle_plus = 5;
+			
+			var wait_move = 15;
+			var spawn_time = 65;
+			var rice_accel = 0.02;
+			
+			var rock_nbr = 10;
+			var rock_wait = 70;
+			var rock_spd = 2;
 		break;
 		case 2:
-		
+			var rice_wave = 100;
+			var rice_wait = 5;
+			var rice_nbr = 15;
+			var rice_spd = 3;
+			var rice_dist = 15;
+			var rice_dist_min = 20;
+			var rice_angle_plus = 4.8;
+			
+			var wait_move = 15;
+			var spawn_time = 65;
+			var rice_accel = 0.02;
+			
+			var rock_nbr = 13;
+			var rock_wait = 60;
+			var rock_spd = 2;
 		break;
 		case 3:
 			var rice_wave = 90;
@@ -20,7 +62,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var rice_spd = 3;
 			var rice_dist = 15;
 			var rice_dist_min = 20;
-			var rice_angle_plus = 4;
+			var rice_angle_plus = 3.9;
 			
 			var wait_move = 15;
 			var spawn_time = 65;
@@ -29,8 +71,6 @@ if(global.gp_active) and (spell_wait == 0)
 			var rock_nbr = 15;
 			var rock_wait = 50;
 			var rock_spd = 2;
-
-
 		break;
 	}
 	//RICE

@@ -5,13 +5,58 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
+			var spark_nbr = 10;
+			var spark_lenght = 300;
+			var spark_rand_lenght = 100;
+			var spark_open_max = 8;
+			var spark_open_spd = 15;
+			var spark_spd_aim = 15;
 			
+			var spark_spd_rand = 3.5;
+			var spark_ring = 8;
+			var spark_rand_wait = 30;
+			
+			var wave_wait = 140;
+			
+			var star_ring = 18;
+			var star_spd = 3.5;
+			var star_wait = 30;
 		break;
 		case 1:
-		
+			var spark_nbr = 10;
+			var spark_lenght = 300;
+			var spark_rand_lenght = 100;
+			var spark_open_max = 8;
+			var spark_open_spd = 15;
+			var spark_spd_aim = 15;
+			
+			var spark_spd_rand = 4;
+			var spark_ring = 14;
+			var spark_rand_wait = 22;
+			
+			var wave_wait = 125;
+			
+			var star_ring = 26;
+			var star_spd = 4;
+			var star_wait = 22;
 		break;
 		case 2:
-		
+			var spark_nbr = 10;
+			var spark_lenght = 300;
+			var spark_rand_lenght = 100;
+			var spark_open_max = 8;
+			var spark_open_spd = 15;
+			var spark_spd_aim = 15;
+			
+			var spark_spd_rand = 4.5;
+			var spark_ring = 18;
+			var spark_rand_wait = 20;
+			
+			var wave_wait = 110;
+			
+			var star_ring = 31;
+			var star_spd = 4.5;
+			var star_wait = 18;
 		break;
 		case 3:
 			var spark_nbr = 10;
@@ -20,13 +65,16 @@ if(global.gp_active) and (spell_wait == 0)
 			var spark_open_max = 8;
 			var spark_open_spd = 15;
 			var spark_spd_aim = 15;
+			
 			var spark_spd_rand = 5;
+			var spark_ring = 22;
+			var spark_rand_wait = 16;
 			
 			var wave_wait = 90;
 			
-			var star_ring = 30;
-			var star_spd = 3.5;
-			var star_wait = 18;
+			var star_ring = 35;
+			var star_spd = 5;
+			var star_wait = 15;
 		break;
 	}
 	var charge_plus = 50;
@@ -76,7 +124,10 @@ if(global.gp_active) and (spell_wait == 0)
 				}
 				else
 				{
-					shoot(DAN_BUBBLE,7,x_pos,y_pos,rng(360,false,8),spark_spd_rand,sfx_shot2,4);
+					if(state_time % spark_rand_wait == 0)
+					{
+						shoot_ring(DAN_BUBBLE,7,spark_ring,x_pos,y_pos,rng(360,false,8),spark_spd_rand,sfx_shot2,4);
+					}
 					
 				}
 				
@@ -90,7 +141,7 @@ if(global.gp_active) and (spell_wait == 0)
 					{
 						var col = 2;
 					}
-					shoot_ring(DAN_STARBIG,col,star_ring,x_pos,y_pos,ring_angle,star_spd,sfx_shot1,3);
+					shoot_ring(DAN_STARBIG,col,star_ring,x_pos,y_pos,rng(360,false,3),star_spd,sfx_shot1,3);
 					ring_angle += 360 / star_ring / 2;
 				}
 				
@@ -107,7 +158,7 @@ if(global.gp_active) and (spell_wait == 0)
 			{
 				case 0:
 					wave_dir *= -1;
-					boss_movement_goto(room_width / 2 + (90 + rng(30,false,5)) * wave_dir,90,4);
+					boss_movement_goto(room_width / 2 + (90 + rng(30,false,5)) * wave_dir,80,4);
 				break;
 				case wave_wait:
 					state = 0;
