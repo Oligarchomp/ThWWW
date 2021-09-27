@@ -5,27 +5,52 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			
+			var star_ring = 15;
+			var star_row = 3;
+			var star_spd_min = 8;
+			var star_spd_max = 16;
+			var star_spd_redirect_div = 3.5;
+			var star_accel = 0.1;
+			var star_wait_move = 0;
+			var star_wait = 55;
+			var star_frame_stop = 20;
 		break;
 		case 1:
-			
+			var star_ring = 24;
+			var star_row = 3;
+			var star_spd_min = 6;
+			var star_spd_max = 18;
+			var star_spd_redirect_div = 4;
+			var star_accel = 0.1;
+			var star_wait_move = 0;
+			var star_wait = 43;
+			var star_frame_stop = 20;	
 		break;
 		case 2:
-			
+			var star_ring = 22;
+			var star_row = 4;
+			var star_spd_min = 8;
+			var star_spd_max = 20;
+			var star_spd_redirect_div = 4.3;
+			var star_accel = 0.1;
+			var star_wait_move = 0;
+			var star_wait = 36;
+			var star_frame_stop = 20;	
 		break;
 		case 3:
-			var boss_wait = 158;
 			var star_ring = 25;
 			var star_row = 4;
 			var star_spd_min = 8;
 			var star_spd_max = 20;
-			var star_spd_redirect_div = 4;
+			var star_spd_redirect_div = 3.8;
 			var star_accel = 0.1;
 			var star_wait_move = 0;
 			var star_wait = 30;
 			var star_frame_stop = 20;
 		break;
 	}
+	
+	var boss_wait = 158;
 	
 	if(step % boss_wait == boss_wait - 1)
 	{

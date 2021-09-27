@@ -3,7 +3,9 @@
 
 if (global.gp_active)
 {
-
+	ds_list_clear(x_death_list);//need to be used right away by the act object
+	ds_list_clear(y_death_list);
+	
 	// start of the spell
 	if (step == 0)
 	{

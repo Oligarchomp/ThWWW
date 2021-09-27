@@ -90,11 +90,14 @@ invincibility = 60;
 
 spell_wait = 60;
 
-
-
 is_capturing = false;
 
 item_nbr = 40;
 item_dist = 70;
+
+//fairy revenge
+x_death_list = ds_list_create();
+y_death_list = ds_list_create();
+
 
 step = 0;

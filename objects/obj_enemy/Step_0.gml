@@ -78,7 +78,7 @@ if (global.gp_active)
 		var event = get_current_event()
 			if(instance_exists(event))
 			{
-				if (object_get_parent(event) == obj_act)
+				if (object_get_parent(event) == obj_act) or (object_get_parent(event) == obj_spell)
 				{
 					ds_list_add(event.x_death_list,x);
 					ds_list_add(event.y_death_list,y);

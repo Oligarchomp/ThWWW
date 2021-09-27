@@ -11,13 +11,34 @@ if(global.gp_active)
 			switch(global.difficulty)
 			{
 				case 0:
-			
+					var ring_nbr = 34;
+					var ring_wait = 30;
+					var ring_change_time = 50;
+					var ring_spd = 2.5;
+					var ring_spd_mult = 1.1;
+					var ring_accel = 0.2;
+					var ring_angle_plus = 5;
+					var ring_fast = 5;
 				break;
 				case 1:
-			
+					var ring_nbr = 50;
+					var ring_wait = 20;
+					var ring_change_time = 60;
+					var ring_spd = 3;
+					var ring_spd_mult = 1.2;
+					var ring_accel = 0.2;
+					var ring_angle_plus = 6;
+					var ring_fast = 6;
 				break;
 				case 2:
-			
+					var ring_nbr = 54;
+					var ring_wait = 18;
+					var ring_change_time = 70;
+					var ring_spd = 3;
+					var ring_spd_mult = 1.25;
+					var ring_accel = 0.2;
+					var ring_angle_plus = 5;
+					var ring_fast = 8;
 				break;
 				case 3:
 					var ring_nbr = 56;
@@ -28,11 +49,11 @@ if(global.gp_active)
 					var ring_accel = 0.2;
 					var ring_angle_plus = 6;
 					var ring_fast = 8;
-			
-					var boss_wait = 140;
 				break;
 			}
-	
+			
+			var boss_wait = 140;
+			
 			if(step % boss_wait == 0)
 			{
 				boss_movement_random(3,9,3);

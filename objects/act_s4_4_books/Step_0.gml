@@ -6,18 +6,38 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
+			var book_wait = 50;
+			var book_ring = 6;
+			var book_row = 1;
+			var book_spd_shoot_min = 9.5;
+			var book_spd_shoot_max = 12;
+			var book_div = 3.5;
 			
+			var pellet_dist = 8;
 		break;
 		case 1:
+			var book_wait = 50;
+			var book_ring = 8;
+			var book_row = 2;
+			var book_spd_shoot_min = 10;
+			var book_spd_shoot_max = 13.5;
+			var book_div = 3.5;
 			
+			var pellet_dist = 8;
 		break;
 		case 2:
+			var book_wait = 45;
+			var book_ring = 10;
+			var book_row = 2;
+			var book_spd_shoot_min = 10.5;
+			var book_spd_shoot_max = 14;
+			var book_div = 3.5;
 			
+			var pellet_dist = 8;
 		break;
 		case 3:
-			var book_time = 300;
 			var book_wait = 40;
-			var book_ring = 12;
+			var book_ring = 13;
 			var book_row = 2;
 			var book_spd_shoot_min = 10.5;
 			var book_spd_shoot_max = 14;
@@ -27,7 +47,8 @@ if(global.gp_active)
 		break;
 	}
 	
-	var fairy_life = 90;
+	var book_time = 300;
+	var fairy_life = 100;
 	if(step == 0)
 	{
 		var x_off1 = 50;
