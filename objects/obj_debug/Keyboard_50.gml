@@ -3,6 +3,6 @@
 if (global.debug)
 {
 	
-	room_restart();
-	
+	//room_restart();
+	room_goto(room_reload);
 }

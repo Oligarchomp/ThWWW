@@ -330,6 +330,7 @@
     {"id":{"name":"boss_s2_4_spell","path":"objects/boss_s2_4_spell/boss_s2_4_spell.yy",},"order":2,},
     {"id":{"name":"spr_iku_art","path":"sprites/spr_iku_art/spr_iku_art.yy",},"order":7,},
     {"id":{"name":"spr_suika_left","path":"sprites/spr_suika_left/spr_suika_left.yy",},"order":1,},
+    {"id":{"name":"room_reload","path":"rooms/room_reload/room_reload.yy",},"order":2,},
     {"id":{"name":"mus_boss2_intro","path":"sounds/mus_boss2_intro/mus_boss2_intro.yy",},"order":4,},
     {"id":{"name":"spr_item_indicator","path":"sprites/spr_item_indicator/spr_item_indicator.yy",},"order":12,},
     {"id":{"name":"spr_suika_right","path":"sprites/spr_suika_right/spr_suika_right.yy",},"order":2,},
@@ -418,6 +419,7 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"room_load","path":"rooms/room_load/room_load.yy",},},
     {"roomId":{"name":"room_gp","path":"rooms/room_gp/room_gp.yy",},},
+    {"roomId":{"name":"room_reload","path":"rooms/room_reload/room_reload.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":13,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
