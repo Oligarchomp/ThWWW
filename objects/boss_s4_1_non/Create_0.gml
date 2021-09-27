@@ -4,5 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
-boss_movement_random(5,1,1);// for sanae's spell
+spell_set_life(900,180);
+spell_set_time(23,false,90)
 
+
+wave_dir = 1;

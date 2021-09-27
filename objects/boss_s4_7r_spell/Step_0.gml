@@ -194,7 +194,7 @@ if(global.gp_active) and (spell_wait == 0)
 				if(state_time == 0)
 				{
 					spd_ref = spd;
-					y_offscreen = 100;
+					y_offscreen = 30;
 				}
 				spd = goto_value(spd,0,spd_ref / aim_frame_stop);
 				if(spd == 0)

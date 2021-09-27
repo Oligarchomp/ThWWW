@@ -117,9 +117,11 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);
 			
+			var ang = rng(360,false,5);
 			for(var i = 0; i < fire_ring_nbr; i += 1)
 			{
-				shoot_ring(DAN_FIREBALL,6,fire_ring,obj_boss.x,obj_boss.y,rng(360,false,i),fire_spd_min + fire_spd_git / fire_ring_nbr * i ,noone,3);
+				shoot_ring(DAN_FIREBALL,6,fire_ring,obj_boss.x,obj_boss.y,ang,fire_spd_min + fire_spd_git / fire_ring_nbr * i ,noone,3);
+				ang += 360 / fire_ring / 3;
 			}
 			state = 2;
 		break;

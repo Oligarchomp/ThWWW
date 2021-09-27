@@ -17,7 +17,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var water_spd_shot_git = 3;
 			var water_y_grav = 3;
 			var water_x_grav = -1;
-			var water_wait = 145;
+			var water_wait = 175;
 			var water_open = 70;
 			
 			var metal_wait = 175;
@@ -54,7 +54,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var water_spd_shot_git = 3;
 			var water_y_grav = 3;
 			var water_x_grav = -1;
-			var water_wait = 130;
+			var water_wait = 170;
 			var water_open = 70;
 			
 			var metal_wait = 145;
@@ -91,7 +91,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var water_spd_shot_git = 3;
 			var water_y_grav = 3;
 			var water_x_grav = -1;
-			var water_wait = 130;
+			var water_wait = 170;
 			var water_open = 70;
 			
 			var metal_wait = 145;
@@ -138,7 +138,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var water_spd_shot_git = 3;
 			var water_y_grav = 3;
 			var water_x_grav = -1;
-			var water_wait = 130;
+			var water_wait = 170;
 			var water_open = 70;
 			
 			var metal_wait = 145;
@@ -174,7 +174,7 @@ if(global.gp_active) and (spell_wait == 0)
 		break;
 	}
 	
-	var familiar_life = 100;
+	var familiar_life = 95;
 	
 	for(var i = 0; i < ds_list_size(id_list); i += 1)
 	{

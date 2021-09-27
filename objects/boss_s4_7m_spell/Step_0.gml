@@ -72,14 +72,14 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var wave_wait = 90;
 			
-			var star_ring = 35;
-			var star_spd = 5;
+			var star_ring = 36;
+			var star_spd = 5.5;
 			var star_wait = 15;
 		break;
 	}
 	var charge_plus = 50;
 	var wait_shoot = 40;
-	var shoot_off = 50;
+	var shoot_off = 30;
 	
 	switch(state)
 	{
@@ -126,7 +126,7 @@ if(global.gp_active) and (spell_wait == 0)
 				{
 					if(state_time % spark_rand_wait == 0)
 					{
-						shoot_ring(DAN_BUBBLE,7,spark_ring,x_pos,y_pos,rng(360,false,8),spark_spd_rand,sfx_shot2,4);
+						shoot_ring(DAN_BUBBLE,7,spark_ring,x_pos,y_pos,999,spark_spd_rand,sfx_shot2,4);
 					}
 					
 				}

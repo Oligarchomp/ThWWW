@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"42c7d668-6865-4efb-b996-c317df2d3d4a","path":"sprites/spr_shot_frog_collision/spr_shot_frog_collision.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"42c7d668-6865-4efb-b996-c317df2d3d4a","path":"sprites/spr_shot_frog_collision/spr_shot_frog_collision.yy",},"LayerId":{"name":"a7cc9188-7c48-428c-af89-6dbb5ddb9d18","path":"sprites/spr_shot_frog_collision/spr_shot_frog_collision.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_shot_frog_collision","path":"sprites/spr_shot_frog_collision/spr_shot_frog_collision.yy",},"resourceVersion":"1.0","name":"42c7d668-6865-4efb-b996-c317df2d3d4a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"b3284863-2a85-4c6e-b8ee-112f9ae7a428","path":"sprites/spr_shot_frog_collision/spr_shot_frog_collision.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"b3284863-2a85-4c6e-b8ee-112f9ae7a428","path":"sprites/spr_shot_frog_collision/spr_shot_frog_collision.yy",},"LayerId":{"name":"aed8dedc-4619-4dbb-b1c7-4e3ec7c07670","path":"sprites/spr_shot_frog_collision/spr_shot_frog_collision.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_shot_frog_collision","path":"sprites/spr_shot_frog_collision/spr_shot_frog_collision.yy",},"resourceVersion":"1.0","name":"b3284863-2a85-4c6e-b8ee-112f9ae7a428","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_shot_frog_collision","path":"sprites/spr_shot_frog_collision/spr_shot_frog_collision.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ebc3fdc0-37ac-4551-8df5-4c8d94ae9110","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"42c7d668-6865-4efb-b996-c317df2d3d4a","path":"sprites/spr_shot_frog_collision/spr_shot_frog_collision.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"90250785-231c-4af4-9f4b-84ef558b9d4d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b3284863-2a85-4c6e-b8ee-112f9ae7a428","path":"sprites/spr_shot_frog_collision/spr_shot_frog_collision.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a7cc9188-7c48-428c-af89-6dbb5ddb9d18","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"aed8dedc-4619-4dbb-b1c7-4e3ec7c07670","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

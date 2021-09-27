@@ -27,7 +27,7 @@ global.spell_life = 1; //use for sharing heath bar between nons and spells
 
 global.enemy_type = 0;
 
-global.bullet_cap = 840;
+global.bullet_cap = 750;
 global.graze_max = 100;
 
 global.graze = 9;
@@ -114,19 +114,24 @@ add_stage_event(dialogue_s3_post,100);
 */
 
 
-add_stage_event(act_s4_0,0);
+add_stage_event(act_s4_0,0); // keep this one
 
+//add_stage_event(act_s4_4_books,0);
 /*
+
 add_stage_event(dialogue_s4_mid,50);
 add_stage_event(act_s4_5_midspell,0);
 
 add_stage_event(dialogue_s4_pre,50);
-
-add_stage_event(boss_s4_2_spell,0);
 */
-//add_stage_event(boss_s4_5_non,0);
-//add_stage_event(boss_s4_6_spell,0);
-//add_stage_event(dialogue_s4_yuuto,0);
+add_stage_event(boss_s4_1_non,0);
+add_stage_event(boss_s4_2_spell,0);
+add_stage_event(boss_s4_3_non,40);
+/*
+add_stage_event(boss_s4_5_non,0);
+add_stage_event(boss_s4_6_spell,0);
+add_stage_event(dialogue_s4_yuuto,0);
+
 switch(global.player_chosen)
 {
 	case P_REIMU:
@@ -139,7 +144,7 @@ switch(global.player_chosen)
 		add_stage_event(boss_s4_7s_spell,0);
 	break;
 }
-
+*/
 
 
 event_step = 0; // current event step
