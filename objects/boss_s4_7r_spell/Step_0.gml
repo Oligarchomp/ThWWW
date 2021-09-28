@@ -130,7 +130,7 @@ if(global.gp_active) and (spell_wait == 0)
 	{
 		for(var i = 0; i < rock_nbr; i += 1 )
 		{
-			var inst = shoot(DAN_ROCK,5,obj_boss.x,obj_boss.y,0,0,sfx_spawn_light,8);
+			var inst = shoot(DAN_ROCK,6,obj_boss.x,obj_boss.y,0,0,sfx_spawn_light,8);
 			
 			inst.pos_type = POS_MANUAL;
 			inst.ang = i * 360 / rock_nbr;

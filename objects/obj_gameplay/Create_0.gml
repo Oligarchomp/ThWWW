@@ -129,10 +129,9 @@ add_stage_event(boss_s4_2_spell,0);
 add_stage_event(boss_s4_3_non,40);
 */
 add_stage_event(boss_s4_4_spell,0);
-add_stage_event(boss_s4_5_non,0);
+add_stage_event(boss_s4_5_non,40);
 add_stage_event(boss_s4_6_spell,0);
 add_stage_event(dialogue_s4_yuuto,0);
-
 switch(global.player_chosen)
 {
 	case P_REIMU:

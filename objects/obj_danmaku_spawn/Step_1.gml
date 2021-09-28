@@ -26,7 +26,10 @@ if (global.gp_active)
 		if (alpha == 1)
 		{
 			instance_activate_object(my_danmaku);
-		
+			
+			my_danmaku.x = x;// if moving the spawn object
+			my_danmaku.y = y;
+			
 			var inst = instance_create_depth(my_danmaku.x,my_danmaku.y,my_danmaku.depth - 1,obj_grazebox);
 			inst.owner = my_danmaku;
 			inst.danmaku_id = my_danmaku.danmaku_id;

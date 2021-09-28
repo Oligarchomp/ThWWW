@@ -40,6 +40,7 @@ if(global.gp_active) and (spell_wait == 0)
 				inst.pos_type = POS_MANUAL;
 				inst.dist = 0;
 				inst.angle_final = i + rock_side_off * wave_dir + rock_angle_dist_side / 2;
+				inst.rot = rng(360,false,2);
 			}
 			state = 1;
 			wave_dir *= -1;
@@ -74,6 +75,7 @@ if(global.gp_active) and (spell_wait == 0)
 				inst.pos_type = POS_MANUAL;
 				inst.dist = 0;
 				inst.angle_final = i + 180 * wave_dir + rock_angle_dist_top / 2;
+				inst.rot = rng(360,false,2);
 			}
 			state = 3;
 		break;
@@ -102,7 +104,7 @@ if(global.gp_active) and (spell_wait == 0)
 	}
 	with(obj_danmaku_spawn)
 	{
-		if(image_index == spr_rock)
+		if(sprite_index == spr_rock)
 		{
 			x = obj_boss.x;
 			y = obj_boss.y;
@@ -127,15 +129,19 @@ if(global.gp_active) and (spell_wait == 0)
 				{
 					angle = -angle + 180;
 					var need_shoot = true;
+					var x_off = 20 * sign(hsp);
+					var y_off = 0;
 				}
 				if(place_meeting(x,y + vsp,obj_wall))
 				{
 					angle = -angle;
 					var need_shoot = true;
+					var x_off = 9;
+					var y_off = 20 * sign(vsp);
 				}
 				if(need_shoot)
 				{
-					shoot_ring(DAN_BALL,2,ring_nbr,x,y,rng(360,false,5),ring_spd_shoot,sfx_shot1,6);
+					shoot_ring(DAN_BALL,2,ring_nbr,x + x_off,y + y_off,rng(360,false,5),ring_spd_shoot,sfx_shot1,6);
 					state = 2;
 					spd /= 2;
 				}
