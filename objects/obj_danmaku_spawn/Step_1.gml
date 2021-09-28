@@ -11,7 +11,13 @@ if (global.gp_active)
 			scale = goto_value(scale,1,0.2);
 		break;
 		case SPAWN_SCALE:
-			
+			if(!check_spawn)
+			{
+				check_spawn = true;
+				scale = 0;
+			}
+			alpha = goto_value(alpha,1,0.2);
+			scale = goto_value(scale,1,0.2);
 		break;
 	}
 	

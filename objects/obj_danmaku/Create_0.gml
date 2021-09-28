@@ -135,6 +135,8 @@ rot_spd = 2;
 
 spawn_type = SPAWN_ALPHA;
 
+scale_max = 1;
+
 spd = global.danmaku_speed;
 
 alpha = 1;

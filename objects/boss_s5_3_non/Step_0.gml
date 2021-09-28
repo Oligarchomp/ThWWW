@@ -1,0 +1,157 @@
+/// @description Insert description here
+// You can write your code in this editor
+if(global.gp_active) and (spell_wait == 0)
+{
+	switch(global.difficulty)
+	{
+		case 0:
+			
+		break;
+		case 1:
+			
+		break;
+		case 2:
+		
+		break;
+		case 3:
+			var sword_spd_max = 20;
+			var sword_size = 7;
+			
+			var ice_row = 4;
+			var ice_spd = 2.5;
+			var ice_ring = 7;
+			// 4 / 7 is funny
+		break;
+	}
+	var boss_wait = 159;
+	if(step % boss_wait == 0)
+	{
+		//boss_movement_random(3,3,3)
+	}
+	
+	switch(state)
+	{
+		case 0:
+			var x_pos = obj_boss.x - 10 * sword_size * sword_dir;
+			var y_pos = obj_boss.y + 10 * sword_size
+			var angle_sword = find_angle(obj_boss.x,obj_boss.y,x_pos,y_pos);
+			var inst = shoot(DAN_KNIFE,3,x_pos,y_pos,angle_sword,0,sfx_spawn_light,8);
+			inst.spawn_type = SPAWN_SCALE;
+			inst.image_xscale = sword_size;
+			inst.image_yscale = sword_size;
+			inst.pos_type = POS_MANUAL;
+			inst.dist = sqrt(sqr(x_pos - obj_boss.x) + sqr(y_pos - obj_boss.y));
+			inst.x_offscreen = 200;
+			inst.y_offscreen = 200;
+			inst.dir_dan = sword_dir;
+			inst.is_cancelable = false;
+			inst.angle_aim = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y);
+			
+			angle_sword_aim += 45;
+			sword_dir *= -1;
+			state = 1;
+		break;
+		case 1:
+			switch(state_time)
+			{
+				case 20:
+					boss_charge(obj_boss.x,obj_boss.y);
+				break;
+				case 50:
+					//state = 2;
+					with(obj_danmaku8)
+					{
+						state = 1;
+					}
+				break;
+			}
+		break;
+		case 2:
+			switch(state_time)
+			{
+				case 0:
+					boss_movement_random(3,13,2);
+				break;
+				case 20:
+					state = 0;
+				break;
+			}
+		break;
+	}
+	var spell = self;
+	with(obj_danmaku8)
+	{
+		switch(state)
+		{
+			case 0:
+				if(state_time == 0)
+				{
+					angle_final = angle - 360 * dir_dan;
+					//angle_aim = rng(360,false,6);
+				}
+			break;
+			case 1:
+				angle = goto_value(angle,angle_final,sword_spd_max)
+				
+				
+				
+				for(var i = dist * 2/ ice_row; i <= dist * 2; i += dist * 2 / ice_row)
+				{
+					var xx = obj_boss.x + lengthdir_x(i,angle)
+					var yy = obj_boss.y + lengthdir_y(i,angle)
+					for(var j = 0; j < 360; j += 360 / ice_ring)
+					{
+						var inst = shoot(DAN_ARROW,3,xx,yy,angle_aim + i + j,0,sfx_shot2,7);
+					}
+					
+				}
+				
+				
+				if(angle == angle_final)
+				{
+					state = 2;
+					angle_spd = sword_spd_max * -dir_dan;
+				}
+			break;
+			case 2:
+				angle_spd += recursiv(angle_spd,0,5,0.2);
+				angle += angle_spd;
+				if(angle_spd == 0)
+				{
+					spell.state = 2;
+					cancel_bullet(self);
+					with(obj_danmaku7)
+					{
+						state = 1;
+					}
+				}
+			break;
+		}
+		
+		x = obj_boss.x + lengthdir_x(dist,angle);
+		y = obj_boss.y + lengthdir_y(dist,angle)
+	}
+	
+	with(obj_danmaku7)
+	{
+		switch(state)
+		{
+			case 0:
+				x_offscreen = 100;
+				y_offscreen = 100;
+			break;
+			case 1:
+				spd = goto_value(spd,ice_spd,0.1);
+				if(state_time == 60)
+				{
+					x_offscreen = 20;
+					y_offscreen = 20;
+				}
+			break;
+		}
+	}
+	
+}
+// Inherit the parent event
+event_inherited();
+

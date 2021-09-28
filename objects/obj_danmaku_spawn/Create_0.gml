@@ -15,3 +15,5 @@ cancel = false;
 spawn_type = 0;
 // 0 = classic
 // 1 = open like
+
+check_spawn = false;
