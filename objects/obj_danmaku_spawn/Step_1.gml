@@ -4,28 +4,26 @@
 
 if (global.gp_active)
 {
-	alpha = goto_value(alpha,1,0.2);
-	scale = goto_value(scale,1,0.2);
+	switch(spawn_type)
+	{
+		case SPAWN_ALPHA:
+			alpha = goto_value(alpha,1,0.2);
+			scale = goto_value(scale,1,0.2);
+		break;
+		case SPAWN_SCALE:
+			
+		break;
+	}
 	
 	if (!cancel)
 	{
 		if (alpha == 1)
 		{
-			
 			instance_activate_object(my_danmaku);
-			/*
-			var inst = instance_create_depth(my_danmaku.x,my_danmaku.y,my_danmaku.depth - 1,obj_hitbox);
-			inst.owner = my_danmaku;
-			inst.danmaku_id = my_danmaku.danmaku_id;
-			
-			my_danmaku.my_hitbox = inst;
-			*/
 		
-			//
 			var inst = instance_create_depth(my_danmaku.x,my_danmaku.y,my_danmaku.depth - 1,obj_grazebox);
 			inst.owner = my_danmaku;
 			inst.danmaku_id = my_danmaku.danmaku_id;
-			//
 		
 			instance_destroy(self);
 		}

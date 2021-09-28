@@ -68,13 +68,13 @@ if(global.gp_active) and (spell_wait == 0)
 			var arrow_open = 4;
 			
 			var bean_spd_shot = 5;
-			var bean_angle_git = 5;
+			var bean_angle_git = 10;
 			var bean_spd_final = 3.5;
 			var bean_wait = 20;
-			var bean_ring = 35;
+			var bean_ring = 36;
 			
 			var revenge_spd = 2;
-			var revenge_nbr = 24;
+			var revenge_nbr = 25;
 		break;
 	}
 	var familiar_life = 15;

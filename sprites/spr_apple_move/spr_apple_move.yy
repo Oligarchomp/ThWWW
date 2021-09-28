@@ -24,15 +24,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f19fc522-53db-4853-aa6b-0917fbda2657","path":"sprites/spr_apple_move/spr_apple_move.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f19fc522-53db-4853-aa6b-0917fbda2657","path":"sprites/spr_apple_move/spr_apple_move.yy",},"LayerId":{"name":"61435231-19f6-4fdf-a059-16c5a16efc81","path":"sprites/spr_apple_move/spr_apple_move.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_apple_move","path":"sprites/spr_apple_move/spr_apple_move.yy",},"resourceVersion":"1.0","name":"f19fc522-53db-4853-aa6b-0917fbda2657","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"224313e8-6ed1-439a-909a-6cdc7b8616eb","path":"sprites/spr_apple_move/spr_apple_move.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"224313e8-6ed1-439a-909a-6cdc7b8616eb","path":"sprites/spr_apple_move/spr_apple_move.yy",},"LayerId":{"name":"61435231-19f6-4fdf-a059-16c5a16efc81","path":"sprites/spr_apple_move/spr_apple_move.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_apple_move","path":"sprites/spr_apple_move/spr_apple_move.yy",},"resourceVersion":"1.0","name":"224313e8-6ed1-439a-909a-6cdc7b8616eb","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4a15fd75-dc77-40ab-be6d-409d21424dc4","path":"sprites/spr_apple_move/spr_apple_move.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4a15fd75-dc77-40ab-be6d-409d21424dc4","path":"sprites/spr_apple_move/spr_apple_move.yy",},"LayerId":{"name":"61435231-19f6-4fdf-a059-16c5a16efc81","path":"sprites/spr_apple_move/spr_apple_move.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_apple_move","path":"sprites/spr_apple_move/spr_apple_move.yy",},"resourceVersion":"1.0","name":"4a15fd75-dc77-40ab-be6d-409d21424dc4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c4f5adb3-751a-41ae-973b-9bab93959005","path":"sprites/spr_apple_move/spr_apple_move.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c4f5adb3-751a-41ae-973b-9bab93959005","path":"sprites/spr_apple_move/spr_apple_move.yy",},"LayerId":{"name":"a2d56869-1a15-44e5-a0dc-f5c759386adf","path":"sprites/spr_apple_move/spr_apple_move.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_apple_move","path":"sprites/spr_apple_move/spr_apple_move.yy",},"resourceVersion":"1.0","name":"c4f5adb3-751a-41ae-973b-9bab93959005","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"bbbbe185-329f-4b6c-befa-a8065d8960da","path":"sprites/spr_apple_move/spr_apple_move.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"bbbbe185-329f-4b6c-befa-a8065d8960da","path":"sprites/spr_apple_move/spr_apple_move.yy",},"LayerId":{"name":"a2d56869-1a15-44e5-a0dc-f5c759386adf","path":"sprites/spr_apple_move/spr_apple_move.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_apple_move","path":"sprites/spr_apple_move/spr_apple_move.yy",},"resourceVersion":"1.0","name":"bbbbe185-329f-4b6c-befa-a8065d8960da","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"5ca204bc-23f2-49e1-9725-590ec997fcf1","path":"sprites/spr_apple_move/spr_apple_move.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"5ca204bc-23f2-49e1-9725-590ec997fcf1","path":"sprites/spr_apple_move/spr_apple_move.yy",},"LayerId":{"name":"a2d56869-1a15-44e5-a0dc-f5c759386adf","path":"sprites/spr_apple_move/spr_apple_move.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_apple_move","path":"sprites/spr_apple_move/spr_apple_move.yy",},"resourceVersion":"1.0","name":"5ca204bc-23f2-49e1-9725-590ec997fcf1","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_apple_move","path":"sprites/spr_apple_move/spr_apple_move.yy",},
@@ -47,9 +47,9 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"78276941-332f-44e6-8991-c645559fd98b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f19fc522-53db-4853-aa6b-0917fbda2657","path":"sprites/spr_apple_move/spr_apple_move.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"996a0a19-6bc0-4e6d-9576-875a0fda303c","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"224313e8-6ed1-439a-909a-6cdc7b8616eb","path":"sprites/spr_apple_move/spr_apple_move.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"d2e887a1-0c7c-4dbd-83a8-7121fd590ed1","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4a15fd75-dc77-40ab-be6d-409d21424dc4","path":"sprites/spr_apple_move/spr_apple_move.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"364b0526-10f3-4976-858f-f07ff7753b8a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c4f5adb3-751a-41ae-973b-9bab93959005","path":"sprites/spr_apple_move/spr_apple_move.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1e79dffe-43c5-4483-9890-4a4db2b19e20","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bbbbe185-329f-4b6c-befa-a8065d8960da","path":"sprites/spr_apple_move/spr_apple_move.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9e94a888-95f1-4141-962f-5ab39227155a","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5ca204bc-23f2-49e1-9725-590ec997fcf1","path":"sprites/spr_apple_move/spr_apple_move.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -73,7 +73,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"61435231-19f6-4fdf-a059-16c5a16efc81","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a2d56869-1a15-44e5-a0dc-f5c759386adf","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

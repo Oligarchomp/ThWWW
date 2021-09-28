@@ -66,8 +66,9 @@ if(global.gp_active)
 		var inst = instance_create_depth(x,y,depth - 1,obj_danmaku_spawn);
 		inst.sprite_index = sprite_danmaku;
 		inst.image_index = color_id * image_nbr;
-		inst.rot = rot;
+		inst.image_angle = rot;
 		inst.my_danmaku = self;
+		inst.spawn_type = spawn_type;
 
 		is_spawning = false;
 		instance_deactivate_object(self);

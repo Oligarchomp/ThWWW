@@ -133,6 +133,8 @@ switch (rot_type)
 rot_spd = 2;
 
 
+spawn_type = SPAWN_ALPHA;
+
 spd = global.danmaku_speed;
 
 alpha = 1;

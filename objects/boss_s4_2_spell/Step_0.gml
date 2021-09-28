@@ -25,6 +25,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var ball_dist = 5;
 			
 			var wait_wave = 220;
+			
+			var im = 5;
 		break;
 		case 1:
 			var fire_ring = 13;
@@ -47,6 +49,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var ball_dist = 5;
 			
 			var wait_wave = 195;
+			var im = 5;
 		break;
 		case 2:
 			var fire_ring = 15;
@@ -69,6 +72,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var ball_dist = 5;
 			
 			var wait_wave = 170;
+			var im = 6;
 		break;
 		case 3:
 			var fire_ring = 18;
@@ -91,6 +95,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var ball_dist = 5;
 			
 			var wait_wave = 155;
+			var im = 6;
 		break;
 	}
 	
@@ -111,7 +116,7 @@ if(global.gp_active) and (spell_wait == 0)
 			play_sound(sfx_spawn_light,1,false);
 			for(var i = 0; i < 360; i += 360 / rock_nbr)
 			{
-				var inst = shoot(DAN_ROCK,5,obj_boss.x,obj_boss.y,i,5.3,noone,5);
+				var inst = shoot(DAN_ROCK,im,obj_boss.x,obj_boss.y,i,5.3,noone,5);
 				inst.rot = rng(360,false,3);
 			}
 			

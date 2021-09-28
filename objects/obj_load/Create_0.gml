@@ -94,3 +94,7 @@ global.difficulty = 3;
 #macro ITEM_BOMB 3
 #macro ITEM_LIFEPIECE 4
 #macro ITEM_BOMBPIECE 5
+
+//define spawn_type
+#macro SPAWN_ALPHA 0
+#macro SPAWN_SCALE 1

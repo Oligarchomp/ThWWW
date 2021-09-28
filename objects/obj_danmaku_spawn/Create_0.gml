@@ -8,7 +8,10 @@ image_speed = 0;
 alpha = 0;
 scale = 2;
 
-rot = 0;
+image_angle = 0;
 
 cancel = false;
 
+spawn_type = 0;
+// 0 = classic
+// 1 = open like

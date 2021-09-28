@@ -350,6 +350,7 @@
     {"id":{"name":"act_s4_0","path":"objects/act_s4_0/act_s4_0.yy",},"order":0,},
     {"id":{"name":"sfx_extend","path":"sounds/sfx_extend/sfx_extend.yy",},"order":3,},
     {"id":{"name":"parent_bg","path":"objects/parent_bg/parent_bg.yy",},"order":8,},
+    {"id":{"name":"boss_s4_4_spell","path":"objects/boss_s4_4_spell/boss_s4_4_spell.yy",},"order":14,},
     {"id":{"name":"spr_mentos","path":"sprites/spr_mentos/spr_mentos.yy",},"order":17,},
     {"id":{"name":"font_spell","path":"fonts/font_spell/font_spell.yy",},"order":0,},
     {"id":{"name":"goto_value","path":"scripts/goto_value/goto_value.yy",},"order":1,},
