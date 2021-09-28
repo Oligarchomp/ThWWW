@@ -3,8 +3,4 @@
 if(global.gp_active)
 {
 	x += recursiv(x,x_to,8,0.01);
-	
-	
-	
-	
 }

@@ -195,6 +195,7 @@
     {"id":{"name":"spr_arrowhead","path":"sprites/spr_arrowhead/spr_arrowhead.yy",},"order":3,},
     {"id":{"name":"act_s1_0","path":"objects/act_s1_0/act_s1_0.yy",},"order":15,},
     {"id":{"name":"spr_yuuto_art","path":"sprites/spr_yuuto_art/spr_yuuto_art.yy",},"order":6,},
+    {"id":{"name":"spr_danmaku_grazbox","path":"sprites/spr_danmaku_grazbox/spr_danmaku_grazbox.yy",},"order":3,},
     {"id":{"name":"act_s3_8","path":"objects/act_s3_8/act_s3_8.yy",},"order":13,},
     {"id":{"name":"sfx_liberate","path":"sounds/sfx_liberate/sfx_liberate.yy",},"order":3,},
     {"id":{"name":"spr_grazebox","path":"sprites/spr_grazebox/spr_grazebox.yy",},"order":0,},

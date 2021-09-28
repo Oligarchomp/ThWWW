@@ -18,14 +18,14 @@ if(global.gp_active) and (spell_wait == 0)
 			var rock_arc_side = 7;
 			var rock_arc_top = 11;
 			var rock_angle_dist_side = 20;
-			var rock_angle_dist_top = 26;
+			var rock_angle_dist_top = 23;
 			var rock_dist_max = 90;
 			
-			var rock_side_off = 255;
+			var rock_side_off = 250;
 			
-			var ring_nbr = 38;
+			var ring_nbr = 36;
 			var ring_spd_shoot = 7;
-			var ring_spd_final = 2;
+			var ring_spd_final = 1.8;
 			var ring_accel = 0.1;
 		break;
 	}
@@ -33,7 +33,7 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(state)
 	{
 		case 0:
-			boss_movement_goto(room_width / 2 + 120 * wave_dir,120,4);
+			boss_movement_goto(room_width / 2 + 120 * wave_dir,y_pos_ref,4);
 			for(var i = -90 - rock_arc_side * rock_angle_dist_side / 2; i < -90 + rock_arc_side * rock_angle_dist_side / 2; i += rock_angle_dist_side)
 			{
 				var inst = shoot(DAN_ROCK,6,obj_boss.x,obj_boss.y,i,0,sfx_spawn_light,7);
@@ -68,7 +68,7 @@ if(global.gp_active) and (spell_wait == 0)
 			}
 		break;
 		case 2:
-			boss_movement_goto(room_width / 2 ,120,4);
+			boss_movement_goto(room_width / 2 ,y_pos_ref,4);
 			for(var i = -90 - rock_arc_top * rock_angle_dist_top / 2; i < -90 + rock_arc_top * rock_angle_dist_top / 2; i += rock_angle_dist_top)
 			{
 				var inst = shoot(DAN_ROCK,6,obj_boss.x,obj_boss.y,i ,0,sfx_spawn_light,7);

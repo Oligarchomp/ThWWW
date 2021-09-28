@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-spell_set_life(900,180);
+spell_set_life(850,180);
 spell_set_time(23,false,90)
 
 
