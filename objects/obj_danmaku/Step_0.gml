@@ -35,7 +35,7 @@ if(global.gp_active)
 			case POS_ANGLE:
 				hsp = lengthdir_x(spd,angle);
 				vsp = lengthdir_y(spd,angle);
-		
+				
 				x += hsp;
 				y += vsp;
 			break;

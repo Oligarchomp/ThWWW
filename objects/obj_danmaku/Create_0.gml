@@ -135,8 +135,6 @@ rot_spd = 2;
 
 spawn_type = SPAWN_ALPHA;
 
-scale_max = 1;
-
 spd = global.danmaku_speed;
 
 alpha = 1;
@@ -156,6 +154,8 @@ y_grav_max  = 0;
 hsp = lengthdir_x(spd,angle);
 vsp = lengthdir_y(spd,angle);
 
+
+QED = 0;
 step = 0;
 
 is_spawning = true; // not to be used if THIS object is like appearing

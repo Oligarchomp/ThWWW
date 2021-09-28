@@ -18,7 +18,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var sword_size = 7;
 			
 			var ice_row = 4;
-			var ice_spd = 2.5;
+			var ice_spd = 3;
 			var ice_ring = 7;
 			// 4 / 7 is funny
 		break;
@@ -101,7 +101,7 @@ if(global.gp_active) and (spell_wait == 0)
 					var yy = obj_boss.y + lengthdir_y(i,angle)
 					for(var j = 0; j < 360; j += 360 / ice_ring)
 					{
-						var inst = shoot(DAN_ARROW,3,xx,yy,angle_aim + i + j,0,sfx_shot2,7);
+						var inst = shoot(DAN_ARROW,3,xx,yy,angle_aim + i * dir_dan + j,0,sfx_shot2,7);
 					}
 					
 				}
