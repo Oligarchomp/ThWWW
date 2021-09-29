@@ -16,12 +16,12 @@ if(global.gp_active) and (spell_wait == 0)
 		case 3:
 			var rock_spd = 9;
 			var rock_arc_side = 7;
-			var rock_arc_top = 11;
+			var rock_arc_top = 11; // odd, and the middle one isn't spawn ( so it's -1)
 			var rock_angle_dist_side = 20;
-			var rock_angle_dist_top = 23;
+			var rock_angle_dist_top = 25;
 			var rock_dist_max = 90;
 			
-			var rock_side_off = 250;
+			var rock_side_off = 258;
 			
 			var ring_nbr = 36;
 			var ring_spd_shoot = 7;
@@ -71,11 +71,15 @@ if(global.gp_active) and (spell_wait == 0)
 			boss_movement_goto(room_width / 2 ,y_pos_ref,4);
 			for(var i = -90 - rock_arc_top * rock_angle_dist_top / 2; i < -90 + rock_arc_top * rock_angle_dist_top / 2; i += rock_angle_dist_top)
 			{
-				var inst = shoot(DAN_ROCK,6,obj_boss.x,obj_boss.y,i ,0,sfx_spawn_light,7);
-				inst.pos_type = POS_MANUAL;
-				inst.dist = 0;
-				inst.angle_final = i + 180 * wave_dir + rock_angle_dist_top / 2;
-				inst.rot = rng(360,false,2);
+				var pos_off = rock_angle_dist_top / 2;
+				if (i + pos_off != -90)
+				{
+					var inst = shoot(DAN_ROCK,6,obj_boss.x,obj_boss.y,i ,0,sfx_spawn_light,7);
+					inst.pos_type = POS_MANUAL;
+					inst.dist = 0;
+					inst.angle_final = i + 180 * wave_dir + pos_off;
+					inst.rot = rng(360,false,2);
+				}
 			}
 			state = 3;
 		break;
