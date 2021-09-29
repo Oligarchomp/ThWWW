@@ -5,13 +5,40 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
+			var bubble_wait = 10;
+			var bubble_nbr = 6;
+			var bubble_spd_shoot = 14;
+			var bubble_spd_final = 3;
+			var bubble_dist = 360 / bubble_nbr / 2;
 			
+			var aim_wait = 30;
+			var aim_spd_shoot = 15;
+			var aim_spd_final = 2;
+			var aim_ring = 24;
 		break;
 		case 1:
+			var bubble_wait = 10;
+			var bubble_nbr = 8;
+			var bubble_spd_shoot = 14;
+			var bubble_spd_final = 3;
+			var bubble_dist = 360 / bubble_nbr / 2;
 			
+			var aim_wait = 20;
+			var aim_spd_shoot = 15;
+			var aim_spd_final = 2;
+			var aim_ring = 32;
 		break;
 		case 2:
+			var bubble_wait = 10;
+			var bubble_nbr = 9;
+			var bubble_spd_shoot = 14;
+			var bubble_spd_final = 3;
+			var bubble_dist = 360 / bubble_nbr / 2;
 			
+			var aim_wait = 18;
+			var aim_spd_shoot = 15;
+			var aim_spd_final = 2;
+			var aim_ring = 34;
 		break;
 		case 3:
 			var bubble_wait = 10;
@@ -23,7 +50,7 @@ if(global.gp_active)
 			var aim_wait = 16;
 			var aim_spd_shoot = 15;
 			var aim_spd_final = 2;
-			var aim_ring = 38;
+			var aim_ring = 40;
 		break;
 	}
 	

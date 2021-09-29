@@ -5,28 +5,34 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-
+			var shot_spd_min = 1.5;
+			var shot_spd_max = 3.5;
+			var shot_ring = 12;
+			var shot_row = 1;
 		break;
 		case 1:
-			
+			var shot_spd_min = 1.5;
+			var shot_spd_max = 3.8;
+			var shot_ring = 18;
+			var shot_row = 3;
 		break;
 		case 2:
-			
+			var shot_spd_min = 1.5;
+			var shot_spd_max = 4;
+			var shot_ring = 19;
+			var shot_row = 4;
 		break;
 		case 3:
-			var fairy_dist = 101;
-			
 			var shot_spd_min = 1.5;
 			var shot_spd_max = 4;
 			var shot_ring = 22;
 			var shot_row = 5;
-			
 		break;
 	}
 	var fairy_wait = 40;
 	var fairy_life = 30;
 	var fairy_lenght = 1300;
-
+	var fairy_dist = 101;
 	
 	if(step < fairy_lenght)
 	{

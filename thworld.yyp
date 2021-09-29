@@ -238,6 +238,7 @@
     {"id":{"name":"spr_boss_hurtbox","path":"sprites/spr_boss_hurtbox/spr_boss_hurtbox.yy",},"order":1,},
     {"id":{"name":"obj_spell_bg_pale","path":"objects/obj_spell_bg_pale/obj_spell_bg_pale.yy",},"order":3,},
     {"id":{"name":"spr_pale_art","path":"sprites/spr_pale_art/spr_pale_art.yy",},"order":5,},
+    {"id":{"name":"act_s4_7","path":"objects/act_s4_7/act_s4_7.yy",},"order":18,},
     {"id":{"name":"sfx_laser1","path":"sounds/sfx_laser1/sfx_laser1.yy",},"order":0,},
     {"id":{"name":"boss_s3_2_spell","path":"objects/boss_s3_2_spell/boss_s3_2_spell.yy",},"order":4,},
     {"id":{"name":"spr_danmakrab","path":"sprites/spr_danmakrab/spr_danmakrab.yy",},"order":20,},
