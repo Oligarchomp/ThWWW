@@ -78,7 +78,7 @@ if(global.gp_active) and (spell_wait == 0)
 		break;
 	}
 	var familiar_life = 15;
-	var revenge_dist_min = 160;
+	var revenge_dist_min = 170;
 	var boss_wait = 177;
 	
 	switch(state)

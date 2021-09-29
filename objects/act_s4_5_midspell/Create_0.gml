@@ -8,3 +8,7 @@ spell_set_spell("s4_mid",BOSS_IKU,4800000)
 spell_set_name("spell_s4_mida","spell_s4_mida","spell_s4_midb","spell_s4_midb")
 spell_set_life(700,230);
 spell_set_time(24,false,160);
+
+
+// to sync with the music
+instance_create_depth(0,0,0,act_s4_6);
