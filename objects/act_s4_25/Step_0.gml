@@ -6,16 +6,41 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
+			var mentos_ring = 13;
+			var mentos_spd = 2;
+			var mentos_wait = 50;
 			
+			var spam_wait = 4;
+			var spam_shot_spd = 2;
+			var spam_grav_accel = 0.05;
+			var spam_spd_git = 1;
+			var spam_open = 69;
+			
+			var arrow_spd_shot = 11;
+			var arrow_spd_final = 3;
+			var arrow_arc = 1;
+			var arrow_dist = 1;
+			var arrow_wait = 50;
 		break;
 		case 1:
+			var mentos_ring = 18;
+			var mentos_spd = 2.3;
+			var mentos_wait = 38;
 			
+			var spam_wait = 2;
+			var spam_shot_spd = 2;
+			var spam_grav_accel = 0.05;
+			var spam_spd_git = 1;
+			var spam_open = 65;
+			
+			var arrow_spd_shot = 11;
+			var arrow_spd_final = 3.5;
+			var arrow_arc = 3;
+			var arrow_dist = 2;
+			var arrow_wait = 48;
 		break;
 		case 2:
-			
-		break;
-		case 3:
-			var mentos_ring = 26;
+			var mentos_ring = 22;
 			var mentos_spd = 2.5;
 			var mentos_wait = 35;
 			
@@ -23,7 +48,24 @@ if(global.gp_active)
 			var spam_shot_spd = 2;
 			var spam_grav_accel = 0.05;
 			var spam_spd_git = 1;
-			var spam_open = 63;
+			var spam_open = 70;
+			
+			var arrow_spd_shot = 11;
+			var arrow_spd_final = 3.5;
+			var arrow_arc = 5;
+			var arrow_dist = 1;
+			var arrow_wait = 48;
+		break;
+		case 3:
+			var mentos_ring = 30;
+			var mentos_spd = 3;
+			var mentos_wait = 30;
+			
+			var spam_wait = 1;
+			var spam_shot_spd = 2;
+			var spam_grav_accel = 0.05;
+			var spam_spd_git = 1;
+			var spam_open = 60;
 			
 			var arrow_spd_shot = 11;
 			var arrow_spd_final = 3.5;
