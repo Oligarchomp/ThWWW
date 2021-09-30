@@ -56,7 +56,7 @@ if(global.gp_active)
 			var angle_dist = 34;
 			
 			var aim_row = 3;
-			var aim_ring = 16;
+			var aim_ring = 20;
 			var aim_spd_min = 3;
 			var aim_spd_max = 5.5;
 		break;
