@@ -5,13 +5,46 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
+			var ring_wall = 2;
+			var ring_wall_dist = 1;
+			var ring_wait = 7;
+			var ring_nbr = 5;
+			var ring_spd_shoot = 9;
+			var ring_spd_final = 3;
+			var angle_dist = 17;
 			
+			var aim_row = 1;
+			var aim_ring = 8;
+			var aim_spd_min = 2.6;
+			var aim_spd_max = 5;
 		break;
 		case 1:
+			var ring_wall = 2;
+			var ring_wall_dist = 1;
+			var ring_wait = 5;
+			var ring_nbr = 6;
+			var ring_spd_shoot = 11;
+			var ring_spd_final = 3;
+			var angle_dist = 34;
 			
+			var aim_row = 2;
+			var aim_ring = 11;
+			var aim_spd_min = 2.6;
+			var aim_spd_max = 5;
 		break;
 		case 2:
+			var ring_wall = 3;
+			var ring_wall_dist = 1;
+			var ring_wait = 5;
+			var ring_nbr = 7;
+			var ring_spd_shoot = 11;
+			var ring_spd_final = 3;
+			var angle_dist = 35;
 			
+			var aim_row = 3;
+			var aim_ring = 14;
+			var aim_spd_min = 3;
+			var aim_spd_max = 5.5;
 		break;
 		case 3:
 			var ring_wall = 3;
@@ -29,7 +62,6 @@ if(global.gp_active)
 		break;
 	}
 	
-	var fairy_top_lenght = 200;
 	var fairy_life = 50;
 	var fairy_wait = 25;
 	

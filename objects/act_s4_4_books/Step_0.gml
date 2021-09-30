@@ -83,8 +83,8 @@ if(global.gp_active)
 					if(state_time % book_wait == 0)
 					{
 						var ang = rng(360,false,1)
-						shoot_ring_row(DAN_BALL,3,book_ring,book_row,x,y,ang,book_spd_shoot_min,book_spd_shoot_max,sfx_shot2,4);
-						shoot_ring_row(DAN_PELLET,3,book_ring,book_row,x,y,ang + pellet_dist,book_spd_shoot_min,book_spd_shoot_max,sfx_shot2,4);
+						shoot_ring_row(DAN_BALL,3,book_ring,book_row,x,y,ang,book_spd_shoot_min,book_spd_shoot_max,sfx_shot2,5);
+						shoot_ring_row(DAN_PELLET,3,book_ring,book_row,x,y,ang + pellet_dist,book_spd_shoot_min,book_spd_shoot_max,sfx_shot2,5);
 					}
 				}
 				else
@@ -105,7 +105,7 @@ if(global.gp_active)
 		}
 	}
 	
-	with(obj_danmaku4)
+	with(obj_danmaku5)
 	{
 		switch(state)
 		{

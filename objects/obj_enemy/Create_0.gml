@@ -79,6 +79,6 @@ offscreen = 50;
 can_revenge = true;// if can revenge when dying
 
 item_nbr = 3;//how much point item they drop
-item_dist = 20;
+item_dist = 36;
 
 step = 0;
