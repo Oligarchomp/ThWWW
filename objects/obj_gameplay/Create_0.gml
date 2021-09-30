@@ -118,7 +118,7 @@ add_stage_event(act_s4_0,0); // keep this one
 /*
 add_stage_event(act_s4_1,0)
 
-
+add_stage_event(act_s4_3,0)
 add_stage_event(act_s4_4_books,0);
 add_stage_event(dialogue_s4_mid,50)
 add_stage_event(act_s4_5_midspell,0);

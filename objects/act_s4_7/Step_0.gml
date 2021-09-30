@@ -14,10 +14,133 @@ if(global.gp_active)
 			
 		break;
 		case 3:
+			var arrow_wait = 5;
+			var arrow_ring = 6;
+			var arrow_row = 3;
+			var arrow_spd_min_shoot = 10;
+			var arrow_spd_max_shoot = 20;
+			var arrow_frame_stop = 20;
+			var arrow_spd_div = 4.5;
+			var arrow_dist = 13;
 			
+			var bubble_nbr = 16;
+			var bubble_wait = 30;
+			var bubble_spd = 2.5;
+		break;
+	}
+	var fairy_life = 180;
+	var shoot_lenght = 200;
+	
+	switch(step)
+	{
+		case 0:
+			var inst = create_enemy(EN_RED,150, -20,fairy_life,1,7,-90);
+			inst.item_nbr = 8;
+			inst.dir_dan = 1;
+		break;
+		case 260:
+			var inst = create_enemy(EN_RED,250, -20,fairy_life,1,7,-90);
+			inst.item_nbr = 8;
+			inst.dir_dan = -1;
+		break;
+		case 520:
+			var inst = create_enemy(EN_RED,100, -20,fairy_life,1,7,-90);
+			inst.item_nbr = 8;
+			inst.dir_dan = 1;
+		break;
+		case 780:
+			var inst = create_enemy(EN_RED,300, -20,fairy_life,1,7,-90);
+			inst.item_nbr = 8;
+			inst.dir_dan = -1;
 		break;
 	}
 	
+	
+	with(obj_enemy1)
+	{
+		switch(state)
+		{
+			case 0:
+				spd = goto_value(spd,0,0.2);
+				if(spd == 0)
+				{
+					state = 1;
+					angle_shoot = 0;
+				}
+			break;
+			case 1://shoot aim
+				if(state_time < shoot_lenght)
+				{
+					if(state_time % arrow_wait == 0)
+					{
+						shoot_ring_row(DAN_ARROW,3,arrow_ring,arrow_row,x,y,angle_shoot,arrow_spd_min_shoot,arrow_spd_max_shoot,sfx_shot1,6);
+						angle_shoot += arrow_dist * dir_dan;
+						var fairy = self;
+						with(obj_danmaku6)
+						{
+							if(state == 0)
+							{
+								dir_dan = fairy.dir_dan;
+								x_offscreen = 200;
+								y_offscreen = 200;
+							}
+						}
+					}
+					if(state_time % bubble_wait == 0)
+					{
+						shoot_ring(DAN_BUBBLE,6,bubble_nbr,x,y,999,bubble_spd,sfx_redirect1,8);
+					}
+				}
+				else
+				{
+					state = 2;
+				}
+			break;
+			case 2:
+				if(state_time == 30)
+				{
+					state = 3;
+					angle = find_angle(x,y,room_width / 2,y) + 180;;
+				}
+			break;
+			case 3:
+				spd = goto_value(spd,2,0.04);
+			break;
+		}
+	}
+	
+	with(obj_danmaku6)
+	{
+		switch(state)
+		{
+			case 0:
+				state = 1;
+			break;
+			case 1:
+				if(state_time == 0)
+				{
+					spd_ref = spd;
+					x_ref = x;
+					y_ref = y;
+				}
+				spd = goto_value(spd,0,spd_ref / arrow_frame_stop);
+				if(spd == 0)
+				{
+					state = 2;
+					angle_max = angle + (sqrt(sqr(x - x_ref) + sqr(y - y_ref))) * dir_dan ;
+				}
+			break;
+			case 2:
+				angle = goto_value(angle_max,angle,0.5);
+				spd = goto_value(spd,spd_ref / arrow_spd_div,0.1)
+				if(state_time == 120)
+				{
+					x_offscreen = 20;
+					y_offscreen = 20;
+				}
+			break;
+		}
+	}
 	
 }
 // Inherit the parent event
