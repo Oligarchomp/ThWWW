@@ -51,7 +51,7 @@ if(global.gp_active)
 			break;
 		}
 	
-		if (x < - x_offscreen) or (x > room_width + x_offscreen) or (y < -y_offscreen) or (y > room_height + y_offscreen)
+		if (y < -y_offscreen) or (x < - x_offscreen) or (x > room_width + x_offscreen) or (y > room_height + y_offscreen)
 		{
 			instance_destroy(self);
 		}

@@ -154,8 +154,6 @@ y_grav_max  = 0;
 hsp = lengthdir_x(spd,angle);
 vsp = lengthdir_y(spd,angle);
 
-
-QED = 0;
 step = 0;
 
 is_spawning = true; // not to be used if THIS object is like appearing
