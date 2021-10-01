@@ -62,7 +62,8 @@ function shoot(argument0,argument1,argument2,argument3,argument4,argument5,argum
 	
 	
 	var inst = noone;
-	if (instance_number(obj_danmaku) < global.bullet_cap)
+	var cap = global.bullet_cap;
+	if (instance_number(obj_danmaku) < cap)
 	{
 		var inst = instance_create_depth(x_pos,y_pos,0,dan)
 	

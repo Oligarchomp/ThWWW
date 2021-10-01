@@ -47,10 +47,8 @@ if(global.gp_active)
 	}
 	
 	var spawn_dist = 60;
-	var f_life = 25;
+	var f_life = 18;
 	var fairy_wait = 28;
-	
-	var fairy_lenght = 60;
 	
 	switch(state)
 	{

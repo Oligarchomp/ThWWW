@@ -9,15 +9,6 @@ function find_angle(argument0, argument1, argument2, argument3) {
 
 	xd = argument2 - argument0;
 	yd = argument3 - argument1;
-	//hyp = sqrt(sqr(xd) + sqr(yd));
-
-	//xf = (1 / hyp) * xd 
-	//yf = (1 / hyp) * yd
-	/*
-	xa = darccos(xf);
-	ya = darcsin(yf);
-	*/
-
 	if (sign(xd) == sign(yd))
 	{
 		if (yd != 0)

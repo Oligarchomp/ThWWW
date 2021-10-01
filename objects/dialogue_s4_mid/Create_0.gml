@@ -33,7 +33,7 @@ switch(global.player_chosen)
 		set_dialogue(spr_sanae_art,3,false,spr_nothing,1,false,get_text("diag_s4_s1"),90);
 		set_dialogue(spr_sanae_art,3,false,spr_iku_art,2,true,get_text("diag_s4_s2"),140);
 		set_dialogue(spr_sanae_art,2,true,spr_iku_art,2,false,get_text("diag_s4_s3"),140);
-		set_dialogue(spr_sanae_art,6,false,spr_iku_art,1,true,get_text("diag_s4_s4"),120);
+		set_dialogue(spr_sanae_art,2,false,spr_iku_art,1,true,get_text("diag_s4_s4"),120);
 	break;
 }
 

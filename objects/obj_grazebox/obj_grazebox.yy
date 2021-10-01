@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_danmaku_hitbox",
-    "path": "sprites/spr_danmaku_hitbox/spr_danmaku_hitbox.yy",
+    "name": "spr_danmaku_grazbox",
+    "path": "sprites/spr_danmaku_grazbox/spr_danmaku_grazbox.yy",
   },
   "solid": false,
   "visible": true,

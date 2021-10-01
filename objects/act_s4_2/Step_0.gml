@@ -54,7 +54,7 @@ if(global.gp_active)
 	var row_wait = 20;
 	var row_ang = 50;
 	
-	var big_life = 75;
+	var big_life = 42;
 	var big_shoot_lenght = 180;
 	
 	switch(step)
@@ -116,7 +116,7 @@ if(global.gp_active)
 			break;
 		}
 		
-		if(step % jelly_wait == 0)
+		if(step % jelly_wait == jelly_wait - 1)
 		{
 			var angle_shoot = rng(360,false,1);//find_angle(xprevious,yprevious,x,y) + 90;
 			shoot_ring(DAN_JELLYBEAN,3,jelly_nbr,x,y,angle_shoot,0,sfx_shot2,6);	

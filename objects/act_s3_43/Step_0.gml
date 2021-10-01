@@ -7,18 +7,45 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
+			var draw_angle_dist = 15;
+			var draw_wait = 8;
+			var draw_nbr = 5;
+			var draw_start = 40;
+			var draw_spd = 3.5;
 			
+			var bubble_ring = 9;
+			var bubble_row = 2;
+			var bubble_spd_min = 3;
+			var bubble_spd_max = 3.5;
 		break;
 		case 1:
-
+			var draw_angle_dist = 15;
+			var draw_wait = 6;
+			var draw_nbr = 7;
+			var draw_start = 40;
+			var draw_spd = 3.5;
+			
+			var bubble_ring = 13;
+			var bubble_row = 3;
+			var bubble_spd_min = 3;
+			var bubble_spd_max = 4;
 		break;
 		case 2:
+			var draw_angle_dist = 15;
+			var draw_wait = 5;
+			var draw_nbr = 10;
+			var draw_start = 40;
+			var draw_spd = 3.5;
 			
+			var bubble_ring = 13;
+			var bubble_row = 5;
+			var bubble_spd_min = 3;
+			var bubble_spd_max = 5;
 		break;
 		case 3:
-			var draw_angle_dist = 8;
+			var draw_angle_dist = 15;
 			var draw_wait = 4;
-			var draw_nbr = 16;
+			var draw_nbr = 12;
 			var draw_start = 40;
 			var draw_spd = 3.5;
 			
@@ -30,7 +57,7 @@ if(global.gp_active)
 	}
 	
 	var fairy_y_off = 60;
-	var fairy_life = 50;
+	var fairy_life = 40;
 	var fairy_lenght = 780;
 	
 	var fairy_wait = 80;

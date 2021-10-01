@@ -68,7 +68,7 @@ if(global.gp_active)
 			}
 			if (step % wait_shoot == 0)
 			{
-				shoot_ring(DAN_ARROWHEAD,7,shoot_nbr,x,y,angle_shoot,0,sfx_redirect2,8);
+				shoot_ring(DAN_ARROWHEAD,7,shoot_nbr,x,y,angle_shoot,0,sfx_shot2,8);
 				angle_shoot += shoot_dist * dir_dan;
 			}
 		}

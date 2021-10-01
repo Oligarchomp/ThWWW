@@ -50,7 +50,7 @@ if (global.gp_active)
 	//checking damage
 	
 	var damage = 0;
-	if (y > 0) and (y < room_width) and (x > 0) and (x < room_width) 
+	if (y > 0) //and (y < room_width) and (x > 0) and (x < room_width) 
 	{
 		var damage = check_damage();
 	}
@@ -105,26 +105,19 @@ if (global.gp_active)
 		break;
 	}
 	
-	if(global.gp_active)
+	switch(pos_type)
 	{
-		switch(pos_type)
-		{
-			case POS_ANGLE:
-				hsp = lengthdir_x(spd,angle)
-				vsp = lengthdir_y(spd,angle)
+		case POS_ANGLE:
+			hsp = lengthdir_x(spd,angle)
+			vsp = lengthdir_y(spd,angle)
 			
-				x += hsp;
-				y += vsp;
-			break;
-			case POS_SP:
-				x += hsp;
-				y += vsp;
-			break;
-			case POS_MANUAL:
-		
-			break;
-		
-		}
+			x += hsp;
+			y += vsp;
+		break;
+		case POS_SP:
+			x += hsp;
+			y += vsp;
+		break;
 	}
 	
 	//offscreen
