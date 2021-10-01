@@ -4,7 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
-act_set_time(700,700);
+act_set_time(560,560);
 
-need_fairy_time = 0;
-dir_small = 1;
+x_spawn = room_width;

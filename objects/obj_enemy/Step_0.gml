@@ -105,6 +105,27 @@ if (global.gp_active)
 		break;
 	}
 	
+	if(global.gp_active)
+	{
+		switch(pos_type)
+		{
+			case POS_ANGLE:
+				hsp = lengthdir_x(spd,angle)
+				vsp = lengthdir_y(spd,angle)
+			
+				x += hsp;
+				y += vsp;
+			break;
+			case POS_SP:
+				x += hsp;
+				y += vsp;
+			break;
+			case POS_MANUAL:
+		
+			break;
+		
+		}
+	}
 	
 	//offscreen
 	if (step > 60)

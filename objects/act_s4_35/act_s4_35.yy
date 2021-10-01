@@ -1,18 +1,12 @@
 {
-  "spriteId": {
-    "name": "spr_fairy_red_idle",
-    "path": "sprites/spr_fairy_red_idle/spr_fairy_red_idle.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
-  "spriteMaskId": {
-    "name": "spr_fairy_hurtbox",
-    "path": "sprites/spr_fairy_hurtbox/spr_fairy_hurtbox.yy",
-  },
+  "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "parent_enemy",
-    "path": "objects/parent_enemy/parent_enemy.yy",
+    "name": "obj_act",
+    "path": "objects/obj_act/obj_act.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -29,17 +23,15 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Fairy",
-    "path": "folders/Objects/ENEMY/Fairy.yy",
+    "name": "Stage4",
+    "path": "folders/Objects/STAGES/Stage4.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_enemy",
+  "name": "act_s4_35",
   "tags": [],
   "resourceType": "GMObject",
 }
