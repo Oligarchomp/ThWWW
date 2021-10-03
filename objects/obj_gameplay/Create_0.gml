@@ -50,7 +50,6 @@ wait_list = ds_list_create();
 
 //need to remotely inject whatever needed
 
-
 /*
 add_stage_event(act_s1_0,0);//keep this one
 add_stage_event(act_s1_1,0);
@@ -88,15 +87,13 @@ add_stage_event(boss_s2_4_spell,0);
 add_stage_event(boss_s2_5_spell,60);
 add_stage_event(dialogue_s2_post,70);
 
-*/
+
 add_stage_event(act_s3_0,0);//keep this one
-/*
 add_stage_event(act_s3_1,0);
 add_stage_event(act_s3_2,0);
 add_stage_event(act_s3_3,0);
 add_stage_event(act_s3_4,0);
 add_stage_event(act_s3_42,0);
-*/
 add_stage_event(act_s3_43,0);
 add_stage_event(act_s3_5,0);
 add_stage_event(act_s3_6,90);
@@ -113,8 +110,9 @@ add_stage_event(boss_s3_6_spell,0);
 add_stage_event(dialogue_s3_post,100);
 
 
-
+*/
 add_stage_event(act_s4_0,0); // keep this one
+/*
 add_stage_event(act_s4_1,0)
 add_stage_event(act_s4_2,0)
 add_stage_event(act_s4_25,0)
@@ -122,7 +120,9 @@ add_stage_event(act_s4_3,0)
 add_stage_event(act_s4_35,0)
 add_stage_event(act_s4_4_books,0);
 add_stage_event(dialogue_s4_mid,50)
+*/
 add_stage_event(act_s4_5_midspell,0);
+/*
 add_stage_event(act_s4_6,0)
 add_stage_event(act_s4_7,0)
 add_stage_event(act_s4_8,0)
@@ -148,7 +148,7 @@ switch(global.player_chosen)
 	break;
 }
 add_stage_event(dialogue_s4_post,100);
-
+*/
 
 
 

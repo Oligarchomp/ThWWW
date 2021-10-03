@@ -5,10 +5,10 @@ if (global.gp_active)
 	
 	switch(player_id)
 	{
-		case 1:
+		case P_MARISA:
 			angle += 45;
 		break;
-		case 2: //sanae
+		case P_SANAE: 
 			image_index = 1 + step * im_spd
 		break;
 		

@@ -87,7 +87,7 @@ if (global.gp_active)
 		}
 		
 		//instance_create_depth(x,y,depth,obj_enemy_defeat);
-		create_confetti(x,y,8,4);
+		create_confetti(x,y,6,4);
 		
 		repeat(item_nbr)
 		{

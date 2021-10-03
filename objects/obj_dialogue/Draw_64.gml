@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
+
 //draw the girls
 draw_sprite_ext(plr_spr,plr_im,x_plr,y_plr,1,1,0,c_white,plr_alpha);
 draw_sprite_ext(boss_spr,boss_im,x_boss,y_boss,1,1,0,c_white,boss_alpha);
