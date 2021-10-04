@@ -17,6 +17,20 @@ if (global.gp_active)
 		state_time += 1;
 	}
 
+	//NOT THE BEST PLACE
+	var hit_nbr = 0;
+	var p = self;
+	with(obj_danmaku)
+	{
+		sprite_index = spr_nothing;
+		var dist = sqrt(sqr(p.x - x) + sqr(p.y - y));
+		if (hit_nbr < 50) and (dist < 50)
+		{
+			sprite_index = spr_danmaku_hitbox;
+			hit_nbr += 1;
+		}
+	}
+	///
 	
 	switch(state)
 	{

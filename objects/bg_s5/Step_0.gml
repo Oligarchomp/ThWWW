@@ -1,10 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-with(obj_agra_flower)
+if(global.gp_active)
 {
-	instance_destroy()
-}
-with(obj_rain)
-{
-	instance_destroy();
+
+	step += 1;
 }
