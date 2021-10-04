@@ -23,8 +23,9 @@ function vertex_add_wall(argument0,argument1,argument2,argument3,argument4,argum
 	vertex_add(buf,xx1,yy1,zz2,0,0,col,al);
 	vertex_add(buf,xx2,yy2,zz2,1,0,col,al);
 	vertex_add(buf,xx1,yy1,zz1,0,1,col,al);
+	
 	vertex_add(buf,xx2,yy2,zz2,1,0,col,al);
-	vertex_add(buf,xx2,yy2,zz1,1,0,col,al);
+	vertex_add(buf,xx2,yy2,zz1,1,1,col,al);
 	vertex_add(buf,xx1,yy1,zz1,0,1,col,al);
 
 }
