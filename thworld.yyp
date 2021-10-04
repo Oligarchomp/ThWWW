@@ -298,6 +298,7 @@
     {"id":{"name":"act_s1_5_midnon","path":"objects/act_s1_5_midnon/act_s1_5_midnon.yy",},"order":0,},
     {"id":{"name":"boss_s4_6_spell","path":"objects/boss_s4_6_spell/boss_s4_6_spell.yy",},"order":4,},
     {"id":{"name":"obj_stageclear","path":"objects/obj_stageclear/obj_stageclear.yy",},"order":5,},
+    {"id":{"name":"spr_boat_beam","path":"sprites/spr_boat_beam/spr_boat_beam.yy",},"order":3,},
     {"id":{"name":"obj_controle","path":"objects/obj_controle/obj_controle.yy",},"order":1,},
     {"id":{"name":"boss_s4_4_spell","path":"objects/boss_s4_4_spell/boss_s4_4_spell.yy",},"order":14,},
     {"id":{"name":"sfx_timer2","path":"sounds/sfx_timer2/sfx_timer2.yy",},"order":2,},

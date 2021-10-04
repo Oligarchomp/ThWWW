@@ -54,6 +54,8 @@ vertex_begin(dark_buff,vForm)
 	vertex_add_wall(dark_buff,x_pos,far + 210,zz,x_pos2,far + 210,zz + ceiling,c_black,0.2);
 vertex_end(dark_buff);
 
+//Beams
+beams_buff = vertex_create_buffer();
 
 
 x_lookat_ref = room_width / 2;

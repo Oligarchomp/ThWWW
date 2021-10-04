@@ -10,12 +10,12 @@
   "bbox_left": 0,
   "bbox_right": 279,
   "bbox_top": 0,
-  "bbox_bottom": 173,
+  "bbox_bottom": 59,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "width": 280,
-  "height": 174,
+  "height": 60,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5a6d34b6-bd76-45a4-8112-090ec7c73e3f","path":"sprites/spr_boat_interior/spr_boat_interior.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5a6d34b6-bd76-45a4-8112-090ec7c73e3f","path":"sprites/spr_boat_interior/spr_boat_interior.yy",},"LayerId":{"name":"8a26286b-9c5f-40c0-84c6-767329c79604","path":"sprites/spr_boat_interior/spr_boat_interior.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_boat_interior","path":"sprites/spr_boat_interior/spr_boat_interior.yy",},"resourceVersion":"1.0","name":"5a6d34b6-bd76-45a4-8112-090ec7c73e3f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"22d06da2-19a2-463d-bd5a-8ddbb12e2229","path":"sprites/spr_boat_beam/spr_boat_beam.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"22d06da2-19a2-463d-bd5a-8ddbb12e2229","path":"sprites/spr_boat_beam/spr_boat_beam.yy",},"LayerId":{"name":"5422c320-caa0-4f92-8d35-bec66ee26f9e","path":"sprites/spr_boat_beam/spr_boat_beam.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_boat_beam","path":"sprites/spr_boat_beam/spr_boat_beam.yy",},"resourceVersion":"1.0","name":"22d06da2-19a2-463d-bd5a-8ddbb12e2229","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_boat_interior","path":"sprites/spr_boat_interior/spr_boat_interior.yy",},
+    "spriteId": {"name":"spr_boat_beam","path":"sprites/spr_boat_beam/spr_boat_beam.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"8a80cbd4-91ce-4898-a00b-b3286ea780d1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5a6d34b6-bd76-45a4-8112-090ec7c73e3f","path":"sprites/spr_boat_interior/spr_boat_interior.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"92547d78-a691-45c8-a494-0839158aaf17","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"22d06da2-19a2-463d-bd5a-8ddbb12e2229","path":"sprites/spr_boat_beam/spr_boat_beam.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -55,17 +55,17 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 140,
-    "yorigin": 87,
+    "yorigin": 30,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_boat_interior","path":"sprites/spr_boat_interior/spr_boat_interior.yy",},
+    "parent": {"name":"spr_boat_beam","path":"sprites/spr_boat_beam/spr_boat_beam.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_boat_interior",
+    "name": "spr_boat_beam",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8a26286b-9c5f-40c0-84c6-767329c79604","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5422c320-caa0-4f92-8d35-bec66ee26f9e","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Background/S5.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_boat_interior",
+  "name": "spr_boat_beam",
   "tags": [],
   "resourceType": "GMSprite",
 }

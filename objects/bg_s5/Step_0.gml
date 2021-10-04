@@ -36,7 +36,7 @@ if(global.gp_active)
 
 
 
-	obj_camera_3d.x = x_cam_ref + sin(step / 70) * 20;
+	obj_camera_3d.x = x_cam_ref + sin(step / 76) * 28;
 
 
 
