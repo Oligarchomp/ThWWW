@@ -5,7 +5,7 @@
 event_inherited();
 
 
-spell_set_spell("s2_1",BOSS_SERENE,2200000)
+spell_set_spell("s2_1",BOSS_SERENE,5934720)
 spell_set_name("spell_s2_1a","spell_s2_1a","spell_s2_1b","spell_s2_1b")
 spell_set_life(900,290);
 spell_set_time(24,false,100);

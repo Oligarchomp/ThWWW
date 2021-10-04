@@ -147,8 +147,9 @@ switch(global.player_chosen)
 add_stage_event(dialogue_s4_post,100);
 */
 
-add_stage_event(act_s5_0,0); // keep this one
-
+add_stage_event(act_s5_0,0);// keep this one
+add_stage_event(boss_s5_3_non,0);
+//add_stage_event(boss_s5_2_spell,0);
 
 event_step = 0; // current event step
 last_event_step = -1;

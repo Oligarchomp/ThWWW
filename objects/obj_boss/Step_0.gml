@@ -122,6 +122,23 @@ if (global.gp_active)
 				image_index = abs(dir);
 			}
 		break;
+		case 2:
+			if (dir == 0)
+			{
+				sprite_index = idle_spr;
+				image_index = state_time * idle_spd;
+			}
+			else if(dir > 0)
+			{
+				sprite_index = move_right_spr;
+				image_index = abs(dir);
+			}
+			else
+			{
+				sprite_index = move_left_spr;
+				image_index = abs(dir);
+			}
+		break;
 	}
 	
 	

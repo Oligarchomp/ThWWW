@@ -5,7 +5,7 @@
 event_inherited();
 
 
-spell_set_spell("s2_mid",BOSS_SERENE,2120000)
+spell_set_spell("s2_mid",BOSS_SERENE,4262880)
 spell_set_name("spell_s2_mida","spell_s2_mida","spell_s2_midb","spell_s2_midb")
 spell_set_life(600,160);
 spell_set_time(14,false,95);

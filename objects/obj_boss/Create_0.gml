@@ -60,6 +60,12 @@ switch(boss_id)
 		idle_spr = spr_yuuto_idle;
 		move_spr = spr_yuuto_move;
 	break;
+	case BOSS_FEZA:
+		idle_spr = spr_feza_idle;
+		move_left_spr = spr_feza_move_left;
+		move_right_spr = spr_feza_move_right;
+		movement_type = 2;
+	break;
 }
 	
 

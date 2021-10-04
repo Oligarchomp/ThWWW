@@ -11,7 +11,7 @@ vsp = 2;
 
 wall_plus = 0;
 
-ceiling = -290;
+ceiling = -250;
 
 instance_create_depth(0,0,global.bg_depth + ceiling,obj_ceiling);
 
@@ -87,13 +87,13 @@ x_lookat_ref = room_width / 2;
 y_lookat_ref = -160;
 obj_camera_3d.x_lookat = x_lookat_ref;
 obj_camera_3d.y_lookat = y_lookat_ref;
-obj_camera_3d.depth_lookat = global.bg_depth - 160;
+obj_camera_3d.depth_lookat = global.bg_depth + 125;
 
 x_cam_ref = room_width / 2;
 y_cam_ref = room_height;
 obj_camera_3d.x = x_cam_ref;
 obj_camera_3d.y = y_cam_ref;
-obj_camera_3d.depth = global.bg_depth - 160;
+obj_camera_3d.depth = global.bg_depth - 200;
 
 obj_camera_3d.FOV = 65;
 
