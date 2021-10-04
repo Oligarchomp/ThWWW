@@ -35,10 +35,27 @@ if(global.gp_active)
 	vertex_end(wall_buff);
 
 
+	beam_plus += vsp;
+	beam_plus %= beam_dist;
 
-	obj_camera_3d.x = x_cam_ref + sin(step / 76) * 28;
+	vertex_begin(beam_buff,vForm)
+		for(var b = 0; b < beam_nbr; b += 1)
+		{
+			for(var i = 0; i < wall_x_ref * 2; i += beam_size)
+			{
+				vertex_add_wall(beam_buff,x_pos + i,far + b * beam_dist + beam_plus,zz + ceiling + beam_size,x_pos + i + beam_size,far + b * beam_dist + beam_plus,zz + ceiling,c_white,1);
+			}
+		}
+	vertex_end(beam_buff);
 
 
+	if(step % (beam_dist / vsp) == 0)
+	{
+		var inst = instance_create_depth(room_width / 2, far,zz + ceiling + beam_size,obj_beam);
+		inst.vsp = vsp;
+	}
+
+	obj_camera_3d.x = x_cam_ref + sin(step / 98) * 28;
 
 
 	step += 1;

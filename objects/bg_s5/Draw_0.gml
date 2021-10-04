@@ -13,6 +13,12 @@ for(var i = - 500; i < 330; i += height)
 var tex = sprite_get_texture(spr_boat_wall,0);
 vertex_submit(wall_buff,pr_trianglelist,tex);
 
+//draw beam vertex
+var tex = sprite_get_texture(spr_boat_beam,0);
+vertex_submit(beam_buff,pr_trianglelist,tex);
+
+
 //draw dark vertex
 var tex = sprite_get_texture(spr_boat_dark,0);
 vertex_submit(dark_buff,pr_trianglelist,tex);
+

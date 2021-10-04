@@ -1,10 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
-with(obj_ceiling)
+if(global.gp_active)
 {
-	instance_destroy()
-}
-with(obj_beam)
-{
-	instance_destroy();
+	y += vsp
+	
+	if(y > 500)
+	{
+		instance_destroy();
+	}
 }

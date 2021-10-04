@@ -1,10 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-with(obj_ceiling)
+
+for(var i = 60; i < 340; i += width)
 {
-	instance_destroy()
-}
-with(obj_beam)
-{
-	instance_destroy();
+	draw_sprite(sprite_index,0,i,y);
 }
