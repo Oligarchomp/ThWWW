@@ -65,7 +65,7 @@ if(global.gp_active)
 			var spam_shot_spd = 2;
 			var spam_grav_accel = 0.05;
 			var spam_spd_git = 1;
-			var spam_open = 72;
+			var spam_open = 76;
 			
 			var arrow_spd_shot = 11;
 			var arrow_spd_final = 3.5;

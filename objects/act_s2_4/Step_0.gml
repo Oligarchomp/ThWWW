@@ -7,40 +7,38 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			//actually isn't aimed
-			var aim_spd = 2;
-
-			var aim_ring = 5;
+			var aim_spd_shoot = 8;
+			var aim_spd_final = 2.5;
+			var aim_wait = 66;
 			
 			var tri_spd = 1.5;
 			var tri_dist = 2;
 			var tri_div = 20;
 		break;
 		case 1:
-			//actually isn't aimed
-			var aim_spd = 2.3;
+			var aim_spd_shoot = 8.5;
+			var aim_spd_final = 2.5;
+			var aim_wait = 34;
 
-			var aim_ring = 13;
 			
 			var tri_spd = 2;
 			var tri_dist = 2;
 			var tri_div = 6;
 		break;
 		case 2:
-			//actually isn't aimed
-			var aim_spd = 2.5;
+			var aim_spd_shoot = 9;
+			var aim_spd_final = 3
+			var aim_wait = 25;
 
-			var aim_ring = 23;
 			
 			var tri_spd = 2;
 			var tri_dist = 2;
 			var tri_div = 4;
 		break;
 		case 3:
-			//actually isn't aimed
-			var aim_spd = 2.5;
-			
-			var aim_ring = 26;
+			var aim_spd_shoot = 10;
+			var aim_spd_final = 3
+			var aim_wait = 18;
 			
 			var tri_spd = 2;
 			var tri_dist = 2;
@@ -51,7 +49,7 @@ if(global.gp_active)
 	var fairy_lenght = 500;
 	var fairy_wait = 25;
 	var fairy_y_off = 20
-	var fairy_life = 14;
+	var fairy_life = 8;
 	
 	var fairy_wait_big = 100;
 	var big_life = 80;
@@ -61,20 +59,15 @@ if(global.gp_active)
 	{
 		if(step % fairy_wait == 0)
 		{
-			var inst = create_enemy(EN_BLUE,-20,fairy_y_off + rng(100,false,3),fairy_life,5)
-			inst.angle = 0;
-			inst.spd = 3;
-			
-			var inst = create_enemy(EN_BLUE,room_width + 20,fairy_y_off + rng(100,false,3),fairy_life,5)
-			inst.angle = 180;
-			inst.spd = 3;
+			var inst = create_enemy(EN_BLUE,-20,fairy_y_off + rng(100,false,3),fairy_life,5,3,-20)
+			inst.item_nbr = 2;
+			var inst = create_enemy(EN_BLUE,room_width + 20,fairy_y_off + rng(100,false,3),fairy_life,5,3,200)
+			inst.item_nbr = 2;
 		}
 		
 		if(step % fairy_wait_big == 0)
 		{
-			var inst = create_enemy(EN_GREEN,big_list[|step/fairy_wait_big],-20,big_life,4)
-			inst.angle = -90;
-			inst.spd = 4;
+			var inst = create_enemy(EN_GREEN,big_list[|step/fairy_wait_big],-20,big_life,4,4,-90)
 		}
 	
 	}
@@ -82,6 +75,12 @@ if(global.gp_active)
 	//small
 	with(obj_enemy5)
 	{
+		angle = goto_value(angle,90,0.4);
+		if(step % aim_wait == 0)
+		{
+			shoot(DAN_BALL,1,x,y,999,aim_spd_shoot,sfx_shot3,3);
+		}
+		/*
 		switch(state)
 		{
 			case 0:
@@ -106,6 +105,12 @@ if(global.gp_active)
 				spd = goto_value(spd,2,0.05);
 			break;
 		}
+		*/
+	}
+	
+	with(obj_danmaku3)
+	{
+		spd = goto_value(spd,aim_spd_final,0.2);		
 	}
 	
 	//big

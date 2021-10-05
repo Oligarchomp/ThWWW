@@ -191,6 +191,7 @@
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":0,},
     {"id":{"name":"sfx_isoterica","path":"sounds/sfx_isoterica/sfx_isoterica.yy",},"order":4,},
     {"id":{"name":"spr_apple_idle","path":"sprites/spr_apple_idle/spr_apple_idle.yy",},"order":1,},
+    {"id":{"name":"dialogue_s5_pre","path":"objects/dialogue_s5_pre/dialogue_s5_pre.yy",},"order":3,},
     {"id":{"name":"spr_item","path":"sprites/spr_item/spr_item.yy",},"order":11,},
     {"id":{"name":"spr_knife","path":"sprites/spr_knife/spr_knife.yy",},"order":13,},
     {"id":{"name":"obj_enemy6","path":"objects/obj_enemy6/obj_enemy6.yy",},"order":6,},

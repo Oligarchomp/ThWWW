@@ -22,6 +22,10 @@ switch(global.stage)
 		name = get_text("boss_yuuto");
 		spell_nbr = 3;
 	break;
+	case 5:
+		name = get_text("boss_feza");
+		spell_nbr = 3;
+	break;
 }
 
 x = global.game_x_offset - 30;

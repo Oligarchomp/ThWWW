@@ -27,6 +27,7 @@ if (global.gp_active)
 		if (hit_nbr < 50) and (dist < 50)
 		{
 			sprite_index = spr_danmaku_hitbox;
+			image_index = danmaku_id;
 			hit_nbr += 1;
 		}
 	}
@@ -91,20 +92,14 @@ if (global.gp_active)
 				image_index = dir;
 			}
 	
-	
-	
 			if(global.invincible)
 			{
 				invincibility = 1;
 			}
 			
-			
-			
+		
 			if(!in_dialogue)
 			{
-				
-				
-				
 				// SHOOTING
 				if (global.shot_pressed)
 				{
@@ -125,7 +120,6 @@ if (global.gp_active)
 							play_sound(sfx_shooting,1,false)
 						}
 					}
-				
 				}
 			}
 			
@@ -140,17 +134,19 @@ if (global.gp_active)
 			{
 				alpha = 1;
 				
-				//Checking for hitboxes
-				var plr = self;
-				with(obj_player_hurtbox)
+				if(!in_dialogue)
 				{
-					var meet = instance_place(x,y,parent_hitbox)//danmaku is child of hitbox
-					if(meet != noone)
+					//Checking for hitboxes
+					var plr = self;
+					with(obj_player_hurtbox)
 					{
-						plr.state = 1;
+						var meet = instance_place(x,y,parent_hitbox)//danmaku is child of hitbox
+						if(meet != noone)
+						{
+							plr.state = 1;
+						}
 					}
 				}
-					
 			}
 		
 			//item
@@ -249,7 +245,6 @@ if (global.gp_active)
 	}
 	
 	
-	
 	// Moving
 	while(place_meeting(x + hsp,y,obj_wall) and abs(hsp) > 0 )
 	{
@@ -278,7 +273,6 @@ if (global.gp_active)
 		hitbox_x = x;
 		hitbox_y = y;
 		
-		
 		focus_alpha += recursiv(focus_alpha, focus_alpha_max,focus_alpha_spd,0.05)
 		focus_scale += recursiv(focus_scale,1,focus_scale_spd,0.1)
 	}
@@ -292,5 +286,4 @@ if (global.gp_active)
 	}
 	hitbox_rot += hitbox_rot_spd;
 	focus_angle += focus_angle_spd;
-	
 }

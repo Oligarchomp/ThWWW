@@ -16,7 +16,7 @@ if(global.gp_active)
 			
 			var bubble_nbr = 8;
 			var bubble_wait = 40;
-			var bubble_spd = 2.5;
+			var bubble_spd = 2;
 		break;
 		case 1:
 			var arrow_wait = 7;
@@ -30,7 +30,7 @@ if(global.gp_active)
 			
 			var bubble_nbr = 12;
 			var bubble_wait = 35;
-			var bubble_spd = 3;
+			var bubble_spd = 2.2;
 		break;
 		case 2:
 			var arrow_wait = 6;
@@ -44,7 +44,7 @@ if(global.gp_active)
 			
 			var bubble_nbr = 14;
 			var bubble_wait = 33;
-			var bubble_spd = 3.2;
+			var bubble_spd = 2.5;
 		break;
 		case 3:
 			var arrow_wait = 5;
@@ -56,13 +56,13 @@ if(global.gp_active)
 			var arrow_spd_div = 4.5;
 			var arrow_dist = 17;
 			
-			var bubble_nbr = 16;
+			var bubble_nbr = 20;
 			var bubble_wait = 30;
-			var bubble_spd = 3.5;
+			var bubble_spd = 2.5;
 		break;
 	}
 	var fairy_life = 100000;
-	var fairy_life_killable = 100;
+	var fairy_life_killable = 80;
 	var shoot_lenght = 320;
 	
 	if(step == 0)

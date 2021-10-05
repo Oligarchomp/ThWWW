@@ -35,7 +35,7 @@ if(global.gp_active)
 		break;
 		case 3:
 			var ring_nbr = 22;
-			var ring_spd = 2.5;
+			var ring_spd = 2.8;
 			
 			var aim_spd = 4.5;
 			var aim_wait = 6;

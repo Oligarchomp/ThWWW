@@ -173,14 +173,16 @@ if(global.gp_active) and (spell_wait == 0)
 			break;
 			case 1:
 				var need_shoot = false;
-				if(place_meeting(x + hsp,y,obj_wall))
+				var sq = 20;
+				if(collision_rectangle(x - sq + hsp,y - sq ,x + sq + hsp,y + sq,obj_wall,false,true))
 				{
 					angle = -angle + 180;
 					var need_shoot = true;
 					var x_off = 20 * sign(hsp);
 					var y_off = 0;
 				}
-				if(place_meeting(x,y + vsp,obj_wall))
+				
+				if(collision_rectangle(x - sq,y - sq + vsp,x + sq,y + sq + vsp,obj_wall,false,true))
 				{
 					angle = -angle;
 					var need_shoot = true;
