@@ -72,7 +72,7 @@ if(global.gp_active) and (spell_wait == 0)
 				case 0:
 					boss_movement_random(3,13,2);
 				break;
-				case 20:
+				case 10:
 					state = 0;
 				break;
 			}
@@ -114,7 +114,7 @@ if(global.gp_active) and (spell_wait == 0)
 				}
 			break;
 			case 2:
-				angle_spd += recursiv(angle_spd,0,5,0.2);
+				angle_spd += recursiv(angle_spd,0,3,0.2);
 				angle += angle_spd;
 				if(angle_spd == 0)
 				{
@@ -137,12 +137,16 @@ if(global.gp_active) and (spell_wait == 0)
 		switch(state)
 		{
 			case 0:
-				x_offscreen = 100;
-				y_offscreen = 100;
+				if(y < -20) and (angle % 360 < 180)
+				{
+					cancel_bullet(self);
+				}
+				x_offscreen = 80;
+				y_offscreen = 150;
 			break;
 			case 1:
 				spd = goto_value(spd,ice_spd,0.1);
-				if(state_time == 60)
+				if(state_time == 50)
 				{
 					x_offscreen = 20;
 					y_offscreen = 20;

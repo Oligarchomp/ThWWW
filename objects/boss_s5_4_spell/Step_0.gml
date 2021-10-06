@@ -1,0 +1,209 @@
+/// @description Insert description here
+// You can write your code in this editor
+if(global.gp_active) and (spell_wait == 0)
+{
+	switch(global.difficulty)
+	{
+		case 0:
+			
+		break;
+		case 1:
+			
+		break;
+		case 2:
+			
+		break;
+		case 3:
+			var sword_size = 5;
+			
+			var rice_open = 25;
+			var rice_spd_shoot = 4.5;
+			var rice_spd_git = 2;
+			var rice_spd_div = 2;
+			var rice_nbr = 6;
+			
+			var sword_row = 3;
+			var sword_arc = 3;
+			
+			var stab_ring = 16;
+			var stab_row = 3;
+			var stab_spd_min = 2;
+			var stab_spd_max = 4;
+		break;
+	}
+	var swipe_spd = 32;
+	var start_x_off = 0;
+	var start_y_off = 50;
+	switch(state)
+	{
+		case 0://charge
+			switch(state_time)
+			{
+				case 0:
+					boss_charge(obj_boss.x,obj_boss.y);
+					var x_pos = obj_boss.x - 10 * sword_size * dir_act ;
+					var y_pos = obj_boss.y + 10 * sword_size
+					var angle_sword = find_angle(obj_boss.x,obj_boss.y,x_pos,y_pos);
+					var inst = shoot(DAN_KNIFE,3,x_pos,y_pos,angle_sword,0,sfx_spawn_light,8);
+					inst.spawn_type = SPAWN_SCALE;
+					inst.image_xscale = sword_size;
+					inst.image_yscale = sword_size;
+					inst.pos_type = POS_MANUAL;
+					inst.dist = sqrt(sqr(x_pos - obj_boss.x) + sqr(y_pos - obj_boss.y));
+					inst.x_offscreen = 1000;
+					inst.y_offscreen = 1000;
+					inst.dir_dan = dir_act;
+					inst.is_cancelable = false;
+					inst.angle_plus = 0;
+				break;
+				case 30:
+					boss_movement_goto(obj_boss.x + 800 * dir_act,obj_boss.y + 800,swipe_spd);
+					state = 1;
+					obj_boss.dir = obj_boss.dir_max * dir_act;
+				break;
+			}
+		break;
+		case 1://diag swipe 1 and 2
+			if( obj_boss.y > room_height + 10)
+			{
+				state = 2;
+				obj_boss.x = room_width / 2 + (start_x_off + 100) * dir_act;
+				obj_boss.y = start_y_off - 100;
+				obj_boss.dir = -obj_boss.dir_max * dir_act;
+				boss_movement_goto(obj_boss.x - 800 * dir_act,obj_boss.y + 800,swipe_spd);
+				obj_danmaku8.angle = -90 + 45 * dir_act;
+			}
+		break;
+		case 2: 
+			if( obj_boss.y > room_height + 10)
+			{
+				state = 3;
+				obj_boss.y = room_height / 2 - 80;
+				obj_boss.dir = obj_boss.dir_max * dir_act;
+				boss_movement_goto(floor(obj_boss.x + 730 * dir_act),obj_boss.y,swipe_spd);
+				obj_danmaku8.angle = -90;
+			}
+		break;
+		case 3:
+			if(obj_boss.in_position)
+			{
+				state = 4;
+			}
+		break;
+		case 4:
+			if(state_time < 60)
+			{
+				boss_movement_goto(obj_player.x,50,9);
+			}
+			else
+			{
+				state = 5;
+			}
+		break;
+		case 5:
+			var charge_wait = 40;
+			if(state_time < charge_wait * 3)
+			{
+				if(state_time < charge_wait * 2)
+				{
+					boss_movement_goto(obj_player.x,50,4);
+				}
+				
+				if(state_time % charge_wait == 0)
+				{
+					boss_charge(obj_boss.x,obj_boss.y);
+				}
+			}
+			else
+			{
+				state = 6;	
+				boss_movement_goto(obj_boss.x,room_height - 30, 26);
+				obj_danmaku8.state = 1;
+			}
+		break;
+		case 6:
+			if(state_time == 50)
+			{
+				dir_act *= -1;
+				boss_movement_goto(room_width / 2 - start_x_off * dir_act,start_y_off,5);
+				state = 7;
+				cancel_bullet(obj_danmaku8);
+			}
+		break;
+		case 7:
+			if(obj_boss.in_position)
+			{
+				state = 0;
+			}
+		break;
+	}
+	
+	
+	//sword beeg
+	with(obj_danmaku8)
+	{
+		var boss_spd = sqrt(sqr(obj_boss.x - obj_boss.xprevious) + sqr(obj_boss.y - obj_boss.yprevious));
+
+		switch(state)
+		{
+			case 0: //diag
+				if(boss_spd >= 16)
+				{
+					for(var i = dist * 2 / sword_row; i <= dist * 2; i += dist * 2 / sword_row)
+					{
+						var xx = obj_boss.x + lengthdir_x(i,angle)
+						var yy = obj_boss.y + lengthdir_y(i,angle)
+						var sw_ang = 999//angle + i + angle_plus;
+						var sw_spd = 1.3 + i / 80;
+						shoot_arc(DAN_ARROW,7,sword_arc,xx,yy,sw_ang,90,sw_spd,sfx_shot2,6);
+					}
+				}
+				
+				stab_aim_x = obj_player.x;
+				stab_aim_y = obj_player.y;
+			break;
+			case 1:	
+				if(boss_spd >= 16)
+				{
+					var aim = find_angle(x,y,stab_aim_x,stab_aim_y) + 360 / 32;
+					shoot_ring_row(DAN_ARROW,7,stab_ring,stab_row,x,y,aim,stab_spd_min,stab_spd_max,sfx_shot2,7);
+				}
+			break;
+			case 2:
+				
+			break;
+		}
+		if(boss_spd >= 16)
+		{
+			for(var i = 0; i < rice_nbr; i += 1)
+			{
+				var ang = angle + 180 - rice_open + rng(rice_open * 2, false,i);
+				var inst = shoot(DAN_RICE,3,x,y,ang,rice_spd_shoot + rng(rice_spd_git,false,i + 2),sfx_shot3,5);
+			}
+		}
+		
+		x = obj_boss.x + lengthdir_x(dist,angle);
+		y = obj_boss.y + lengthdir_y(dist,angle)
+	}
+	
+	with(obj_danmaku5)
+	{
+		switch(state)
+		{
+			case 0:
+			var sq = 5;
+				if(collision_rectangle(x - sq,y - sq + vsp,x + sq,y + sq + vsp,obj_wall,false,true))
+				{
+					state = 1;
+					angle *= -1;
+					spd /= rice_spd_div;
+					play_sound(sfx_redirect3,1,false);
+				}
+			break;
+		}
+	}
+	
+}
+// Inherit the parent event
+event_inherited();
+

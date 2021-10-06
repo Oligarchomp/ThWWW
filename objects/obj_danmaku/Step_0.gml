@@ -17,6 +17,7 @@ if(global.gp_active)
 	
 		image_danmaku = (color_id * image_nbr ) + (step * image_spd) % image_nbr;
 	
+	
 		switch(rot_type)
 		{
 			case ROT_FOLLOW:
