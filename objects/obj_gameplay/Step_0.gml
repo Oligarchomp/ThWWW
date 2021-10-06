@@ -23,8 +23,6 @@ if(global.gp_active)
 			
 	}
 	
-	
-	
 	if(wait_time == wait)
 	{
 		
@@ -40,7 +38,6 @@ if(global.gp_active)
 	else
 	{
 		wait_time += 1;
-		
 	}
 	
 }

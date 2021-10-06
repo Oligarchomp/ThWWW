@@ -5,21 +5,48 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
+			var sword_spd_max = 20;
+			var sword_size = 7;
+			var sword_wait = 2;
 			
+			var ice_row = 3;
+			var ice_spd = 2;
+			var ice_ring = 5;
+			
+			var wave_wait = 48;
 		break;
 		case 1:
+			var sword_spd_max = 16;
+			var sword_size = 7;
+			var sword_wait = 2;
 			
+			var ice_row = 4;
+			var ice_spd = 2;
+			var ice_ring = 7;
+			
+			var wave_wait = 36;
 		break;
 		case 2:
-		
+			var sword_spd_max = 14;
+			var sword_size = 7;
+			var sword_wait = 2;
+			
+			var ice_row = 4;
+			var ice_spd = 2.5;
+			var ice_ring = 7;
+			
+			var wave_wait = 28;
 		break;
 		case 3:
 			var sword_spd_max = 20;
 			var sword_size = 7;
+			var sword_wait = 1;
 			
 			var ice_row = 4;
 			var ice_spd = 3;
 			var ice_ring = 7;
+			
+			var wave_wait = 10;
 			// 4 / 7 is funny
 		break;
 	}
@@ -62,6 +89,7 @@ if(global.gp_active) and (spell_wait == 0)
 					with(obj_danmaku8)
 					{
 						state = 1;
+						state_time = -1;
 					}
 				break;
 			}
@@ -72,7 +100,7 @@ if(global.gp_active) and (spell_wait == 0)
 				case 0:
 					boss_movement_random(3,13,2);
 				break;
-				case 10:
+				case wave_wait:
 					state = 0;
 				break;
 			}
@@ -94,16 +122,18 @@ if(global.gp_active) and (spell_wait == 0)
 				angle = goto_value(angle,angle_final,sword_spd_max)
 				
 				
-				
-				for(var i = dist * 2/ ice_row; i <= dist * 2; i += dist * 2 / ice_row)
+				if(state_time % sword_wait == 0)
 				{
-					var xx = obj_boss.x + lengthdir_x(i,angle)
-					var yy = obj_boss.y + lengthdir_y(i,angle)
-					for(var j = 0; j < 360; j += 360 / ice_ring)
+					for(var i = dist * 2/ ice_row; i <= dist * 2; i += dist * 2 / ice_row)
 					{
-						var inst = shoot(DAN_ARROW,3,xx,yy,angle_aim + i * dir_dan + j,0,sfx_shot2,7);
-					}
+						var xx = obj_boss.x + lengthdir_x(i,angle)
+						var yy = obj_boss.y + lengthdir_y(i,angle)
+						for(var j = 0; j < 360; j += 360 / ice_ring)
+						{
+							var inst = shoot(DAN_ARROW,3,xx,yy,angle_aim + i * dir_dan + j,0,sfx_shot2,7);
+						}
 					
+					}
 				}
 				
 				

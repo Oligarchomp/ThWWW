@@ -5,27 +5,92 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			
-		break;
-		case 1:
-			
-		break;
-		case 2:
-			
-		break;
-		case 3:
 			var sword_size = 5;
 			
 			var rice_open = 25;
 			var rice_spd_shoot = 4.5;
 			var rice_spd_git = 2;
 			var rice_spd_div = 2;
-			var rice_nbr = 6;
+			var rice_nbr = 0;
 			
+			var sword_wait = 2;
+			var sword_row = 1;
+			var sword_arc = 3;
+			var sword_dist = 0;
+			var sword_spd_min = 1.5;
+			var sword_i_div = 100;
+			
+			var stab_phase = false;
+			var spin_dist = 24;
+			var spin_wait = 1;
+			var spin_row = 3;
+			var spin_spd = 2.5;
+			var spin_ring = 3;
+		break;
+		case 1:
+			var sword_size = 5;
+			
+			var rice_open = 25;
+			var rice_spd_shoot = 4.5;
+			var rice_spd_git = 2;
+			var rice_spd_div = 2;
+			var rice_nbr = 3;
+			
+			var sword_wait = 1;
+			var sword_row = 1;
+			var sword_arc = 3;
+			var sword_dist = 0;
+			var sword_spd_min = 2;
+			var sword_i_div = 100;
+			
+			var stab_phase = false;
+			var spin_dist = 24;
+			var spin_wait = 1;
+			var spin_row = 5;
+			var spin_spd = 2.5;
+			var spin_ring = 3;
+		break;
+		case 2:
+			var sword_size = 5;
+			
+			var rice_open = 25;
+			var rice_spd_shoot = 4.5;
+			var rice_spd_git = 2;
+			var rice_spd_div = 2;
+			var rice_nbr = 4;
+			
+			var sword_wait = 1;
+			var sword_row = 2;
+			var sword_arc = 3;
+			var sword_dist = 90;
+			var sword_spd_min = 1.1;
+			var sword_i_div = 80;
+			
+			var stab_phase = false;
+			var spin_dist = 24;
+			var spin_wait = 1;
+			var spin_row = 6;
+			var spin_spd = 2.5;
+			var spin_ring = 4;
+		break;
+		case 3:
+			var sword_size = 5;
+			
+			var rice_open = 25;
+			var rice_spd_shoot = 4;
+			var rice_spd_git = 2;
+			var rice_spd_div = 2;
+			var rice_nbr = 5;
+			
+			var sword_wait = 1;
 			var sword_row = 3;
 			var sword_arc = 3;
+			var sword_dist = 72;
+			var sword_spd_min = 1.3;
+			var sword_i_div = 80;
 			
-			var stab_ring = 16;
+			var stab_phase = true;
+			var stab_ring = 14;
 			var stab_row = 3;
 			var stab_spd_min = 2;
 			var stab_spd_max = 4;
@@ -87,10 +152,18 @@ if(global.gp_active) and (spell_wait == 0)
 		case 3:
 			if(obj_boss.in_position)
 			{
-				state = 4;
+				if(stab_phase)
+				{
+					state = 4;
+				}
+				else
+				{
+					state = 8;
+					
+				}
 			}
 		break;
-		case 4:
+		case 4://start stab
 			if(state_time < 60)
 			{
 				boss_movement_goto(obj_player.x,50,9);
@@ -101,7 +174,7 @@ if(global.gp_active) and (spell_wait == 0)
 			}
 		break;
 		case 5:
-			var charge_wait = 40;
+			var charge_wait = 43;
 			if(state_time < charge_wait * 3)
 			{
 				if(state_time < charge_wait * 2)
@@ -130,15 +203,40 @@ if(global.gp_active) and (spell_wait == 0)
 				cancel_bullet(obj_danmaku8);
 			}
 		break;
-		case 7:
+		case 7: // end stab
 			if(obj_boss.in_position)
 			{
 				state = 0;
 			}
 		break;
+		case 8: // slash spin
+			if(state_time < 60)
+			{
+				boss_movement_goto(obj_player.x, 90, 9);
+			}
+			else
+			{
+				state = 9;
+			}
+		break;
+		case 9:
+			switch(state_time)
+			{
+				case 0:
+					boss_charge(obj_boss.x,obj_boss.y);
+				break;
+				case 30:
+					with(obj_danmaku8)
+					{
+						angle_aim = find_angle(x,y,obj_player.x,obj_player.y) + 90;
+						state = 2;
+					}
+				break;
+			}
+		break;
 	}
 	
-	
+	var spell = self;
 	//sword beeg
 	with(obj_danmaku8)
 	{
@@ -146,31 +244,73 @@ if(global.gp_active) and (spell_wait == 0)
 
 		switch(state)
 		{
-			case 0: //diag
+			case 0: //slashes
 				if(boss_spd >= 16)
 				{
-					for(var i = dist * 2 / sword_row; i <= dist * 2; i += dist * 2 / sword_row)
+					if(state_time % sword_wait == 0)
 					{
-						var xx = obj_boss.x + lengthdir_x(i,angle)
-						var yy = obj_boss.y + lengthdir_y(i,angle)
-						var sw_ang = 999//angle + i + angle_plus;
-						var sw_spd = 1.3 + i / 80;
-						shoot_arc(DAN_ARROW,7,sword_arc,xx,yy,sw_ang,90,sw_spd,sfx_shot2,6);
+						for(var i = dist * 2 / sword_row; i <= dist * 2; i += dist * 2 / sword_row)
+						{
+							var xx = obj_boss.x + lengthdir_x(i,angle)
+							var yy = obj_boss.y + lengthdir_y(i,angle)
+							var sw_ang = 999//angle + i + angle_plus;
+							var sw_spd = sword_spd_min + i / sword_i_div;
+							shoot_arc(DAN_ARROW,7,sword_arc,xx,yy,sw_ang,sword_dist,sw_spd,sfx_shot2,6);
+						}
 					}
 				}
 				
 				stab_aim_x = obj_player.x;
 				stab_aim_y = obj_player.y;
 			break;
-			case 1:	
+			case 1:	//staby stab 
 				if(boss_spd >= 16)
 				{
-					var aim = find_angle(x,y,stab_aim_x,stab_aim_y) + 360 / 32;
+					var aim = find_angle(x,y,stab_aim_x,stab_aim_y)
 					shoot_ring_row(DAN_ARROW,7,stab_ring,stab_row,x,y,aim,stab_spd_min,stab_spd_max,sfx_shot2,7);
 				}
 			break;
-			case 2:
+			case 2://spin slash
+				var angle_to = -90 + 360 * dir_dan;
+				angle = goto_value(angle,angle_to,spin_dist);
 				
+				if(state_time % spin_wait == 0)
+				{
+					for(var i = dist * 2 / spin_row; i <= dist * 2; i += dist * 2 / spin_row)
+					{
+						var xx = obj_boss.x + lengthdir_x(i,angle)
+						var yy = obj_boss.y + lengthdir_y(i,angle)
+						var ang = angle_aim + i;
+						shoot_ring(DAN_ARROW,3,spin_ring,xx,yy,ang,0,sfx_shot2,5);
+					}
+				}
+				
+				if(angle = angle_to)
+				{
+					state = 3;
+					angle_spd = spin_dist * dir_dan;
+				}
+			break;
+			case 3:
+				angle_spd += recursiv(angle_spd,0,5,0.1);
+				angle += angle_spd;
+				if(angle_spd == 0)
+				{
+					state = 4;
+					
+					with(obj_danmaku5)
+					{
+						state = 1;	
+					}
+				}
+			break;
+			case 4:
+				image_yscale = goto_value(image_yscale,0,0.6);
+				if(image_yscale == 0)
+				{
+					cancel_bullet(self);
+					spell.state = 6;
+				}
 			break;
 		}
 		if(boss_spd >= 16)
@@ -178,7 +318,7 @@ if(global.gp_active) and (spell_wait == 0)
 			for(var i = 0; i < rice_nbr; i += 1)
 			{
 				var ang = angle + 180 - rice_open + rng(rice_open * 2, false,i);
-				var inst = shoot(DAN_RICE,3,x,y,ang,rice_spd_shoot + rng(rice_spd_git,false,i + 2),sfx_shot3,5);
+				var inst = shoot(DAN_RICE,3,x,y,ang,rice_spd_shoot + rng(rice_spd_git,false,i + 2),sfx_shot3,4);
 			}
 		}
 		
@@ -186,7 +326,8 @@ if(global.gp_active) and (spell_wait == 0)
 		y = obj_boss.y + lengthdir_y(dist,angle)
 	}
 	
-	with(obj_danmaku5)
+	//rice
+	with(obj_danmaku4)
 	{
 		switch(state)
 		{
@@ -198,6 +339,26 @@ if(global.gp_active) and (spell_wait == 0)
 					angle *= -1;
 					spd /= rice_spd_div;
 					play_sound(sfx_redirect3,1,false);
+				}
+			break;
+		}
+	}
+	
+	//spin arrow
+	with(obj_danmaku5)
+	{
+		switch(state)
+		{
+			case 0:
+				x_offscreen = 100;
+				y_offscreen = 100;
+			break;
+			case 1:
+				spd = goto_value(spd,spin_spd,0.1);
+				if(state_time == 50)
+				{
+					x_offscreen = 20;
+					y_offscreen = 20;
 				}
 			break;
 		}
