@@ -91,9 +91,12 @@ if (global.gp_active)
 	{
 		dir = goto_value(dir,dir_max * sign(hsp),dir_spd);
 		
-		if(movement_type == 0)
+		switch(movement_type)
 		{
-			spr_dir = sign(dir);
+			case 0:
+			case 3:
+				spr_dir = sign(dir);
+			break;
 		}
 	}
 	else if (rot == 0)
@@ -138,6 +141,10 @@ if (global.gp_active)
 				sprite_index = move_left_spr;
 				image_index = abs(dir);
 			}
+		break;
+		case 3:
+			sprite_index = idle_spr;
+			image_index = state_time * idle_spd;
 		break;
 	}
 	

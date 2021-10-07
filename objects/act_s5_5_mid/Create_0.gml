@@ -1,14 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+global.boss = BOSS_DOVE;
 // Inherit the parent event
 event_inherited();
 
-spell_set_life(800,180);
-spell_set_time(30,false,90)
+spell_set_life(900,180);
+spell_set_time(26,false,90)
 
 boss_movement_goto(room_width / 2, 100,6);
 
-sword_dir = 1;
-
-angle_sword_aim = 0;

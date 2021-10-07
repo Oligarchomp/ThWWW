@@ -145,7 +145,7 @@ if(global.gp_active) and (spell_wait == 0)
 				state = 3;
 				obj_boss.y = room_height / 2 - 80;
 				obj_boss.dir = obj_boss.dir_max * dir_act;
-				boss_movement_goto(floor(obj_boss.x + 730 * dir_act),obj_boss.y,swipe_spd);
+				boss_movement_goto(floor(obj_boss.x + 800 * dir_act),obj_boss.y,swipe_spd);
 				obj_danmaku8.angle = -90;
 			}
 		break;
@@ -166,7 +166,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 4://start stab
 			if(state_time < 60)
 			{
-				boss_movement_goto(obj_player.x,50,9);
+				boss_movement_goto(obj_player.x,50,8);
 			}
 			else
 			{
@@ -179,7 +179,7 @@ if(global.gp_active) and (spell_wait == 0)
 			{
 				if(state_time < charge_wait * 2)
 				{
-					boss_movement_goto(obj_player.x,50,4);
+					boss_movement_goto(obj_player.x,50,3);
 				}
 				
 				if(state_time % charge_wait == 0)
@@ -251,8 +251,8 @@ if(global.gp_active) and (spell_wait == 0)
 					{
 						for(var i = dist * 2 / sword_row; i <= dist * 2; i += dist * 2 / sword_row)
 						{
-							var xx = obj_boss.x + lengthdir_x(i,angle)
-							var yy = obj_boss.y + lengthdir_y(i,angle)
+							var xx = obj_boss.x + lengthdir_x(i - dist / sword_row,angle)
+							var yy = obj_boss.y + lengthdir_y(i - dist / sword_row,angle)
 							var sw_ang = 999//angle + i + angle_plus;
 							var sw_spd = sword_spd_min + i / sword_i_div;
 							shoot_arc(DAN_ARROW,7,sword_arc,xx,yy,sw_ang,sword_dist,sw_spd,sfx_shot2,6);

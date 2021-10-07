@@ -24,6 +24,7 @@ movement_type = 0;
 // 0 = one moving animation, changing spr_dir
 // 1 = Spins when moving
 // 2 = two moving animation, for asymetrical character.
+// 3 = only idle
 
 //global.boss = BOSS_PALE;
 boss_id = global.boss;
@@ -59,6 +60,12 @@ switch(boss_id)
 	case BOSS_YUUTO:
 		idle_spr = spr_yuuto_idle;
 		move_spr = spr_yuuto_move;
+	break;
+	case BOSS_DOVE:
+		idle_spr = spr_dove_idle;
+		movement_type = 3;
+		x = 500;
+		y = -90;
 	break;
 	case BOSS_FEZA:
 		idle_spr = spr_feza_idle;

@@ -4,11 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-spell_set_life(800,180);
-spell_set_time(30,false,90)
+act_set_time(500,500);
 
-boss_movement_goto(room_width / 2, 100,6);
 
-sword_dir = 1;
 
-angle_sword_aim = 0;
