@@ -150,13 +150,14 @@ add_stage_event(dialogue_s4_post,100);
 */
 add_stage_event(act_s5_0,0);// keep this one
 
+add_stage_event(boss_s5_1_non,0);
 
-add_stage_event(act_s5_85,0);
 /*
 add_stage_event(act_s5_1,0);
 add_stage_event(act_s5_8,0);
+add_stage_event(act_s5_85,0);
 add_stage_event(dialogue_s5_pre,60);
-add_stage_event(boss_s5_1_non,0);
+
 add_stage_event(boss_s5_3_non,0);
 add_stage_event(boss_s5_4_spell,0);
 */

@@ -5,13 +5,82 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
+			var wave_time = 80;
+			var wave_lenght = 65;
 			
+			var spin_wait = 3;
+			var spin_ring = 3;
+			var spin_dist = 3;
+			var spin_spd_shoot = 8;
+			var spin_deccel = 0.2;
+			var spin_spd_aim = 6;
+			
+			var ring_wait = 12;
+			var ring_ring = 5;
+			var ring_dist = 26;
+			var ring_arc = 3;
+			var ring_spd_shoot = 7;
+			var ring_deccel = 0.2;
+			var ring_spd_aim = 3;
+			
+			var close_wait = 13;
+			var close_ring = 10;
+			var close_spd_shoot = 10;
+			var close_deccel = 0.2;
+			var close_dist = 48;
+			var close_spd_aim = 2;
 		break;
 		case 1:
+			var wave_time = 80;
+			var wave_lenght = 70;
 			
+			var spin_wait = 2;
+			var spin_ring = 3;
+			var spin_dist = 3;
+			var spin_spd_shoot = 8.5;
+			var spin_deccel = 0.2;
+			var spin_spd_aim = 6.3;
+			
+			var ring_wait = 10;
+			var ring_ring = 6;
+			var ring_dist = 24;
+			var ring_arc = 3;
+			var ring_spd_shoot = 8;
+			var ring_deccel = 0.2;
+			var ring_spd_aim = 3;
+			
+			var close_wait = 12;
+			var close_ring = 10;
+			var close_spd_shoot = 10.5;
+			var close_deccel = 0.2;
+			var close_dist = 48;
+			var close_spd_aim = 2;
 		break;
 		case 2:
+			var wave_time = 80;
+			var wave_lenght = 72;
 			
+			var spin_wait = 2;
+			var spin_ring = 4;
+			var spin_dist = 3;
+			var spin_spd_shoot = 9;
+			var spin_deccel = 0.2;
+			var spin_spd_aim = 6.5;
+			
+			var ring_wait = 9;
+			var ring_ring = 7;
+			var ring_dist = 22;
+			var ring_arc = 3;
+			var ring_spd_shoot = 8;
+			var ring_deccel = 0.2;
+			var ring_spd_aim = 3;
+			
+			var close_wait = 11;
+			var close_ring = 13;
+			var close_spd_shoot = 11;
+			var close_deccel = 0.2;
+			var close_dist = 46;
+			var close_spd_aim = 2;
 		break;
 		case 3:
 			var wave_time = 80;
