@@ -348,6 +348,7 @@
     {"id":{"name":"sfx_boss_explosion","path":"sounds/sfx_boss_explosion/sfx_boss_explosion.yy",},"order":1,},
     {"id":{"name":"spr_fairy_blue_idle","path":"sprites/spr_fairy_blue_idle/spr_fairy_blue_idle.yy",},"order":0,},
     {"id":{"name":"obj_act","path":"objects/obj_act/obj_act.yy",},"order":0,},
+    {"id":{"name":"act_s5_5_mid","path":"objects/act_s5_5_mid/act_s5_5_mid.yy",},"order":10,},
     {"id":{"name":"sfx_timeout","path":"sounds/sfx_timeout/sfx_timeout.yy",},"order":4,},
     {"id":{"name":"act_s5_1","path":"objects/act_s5_1/act_s5_1.yy",},"order":5,},
     {"id":{"name":"vertex_add_wall","path":"scripts/vertex_add_wall/vertex_add_wall.yy",},"order":0,},

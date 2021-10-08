@@ -149,7 +149,8 @@ add_stage_event(dialogue_s4_post,100);
 */
 add_stage_event(act_s5_0,0);// keep this one
 
-add_stage_event(act_s5_6_mid,0);
+add_stage_event(act_s5_5_mid,0);
+add_stage_event(act_s5_6_mid,40);
 
 /*
 add_stage_event(act_s5_1,0);

@@ -13,7 +13,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var aim_dist = 35;
 			var aim_spd = 2;
 			
-			var ring_nbr = 14;
+			var ring_nbr = 11;
 			var ring_spd = 2;
 			var ring_spd_div = 1.5;
 		break;

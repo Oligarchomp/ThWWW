@@ -95,6 +95,8 @@ is_capturing = false;
 item_nbr = 40;
 item_dist = 70;
 
+non_only = false;
+
 //fairy revenge
 x_death_list = ds_list_create();
 y_death_list = ds_list_create();

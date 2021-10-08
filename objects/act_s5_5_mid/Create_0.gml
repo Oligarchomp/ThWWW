@@ -6,10 +6,12 @@ global.boss = BOSS_DOVE;
 event_inherited();
 non_only = true;
 
-spell_set_life(790,100);
+spell_set_life(820,120);
 spell_set_time(26,false,90)
+
+boss_movement_goto(room_width / 2, 100,6);
 
 dir_act = 1;
 
-x_aim = 0;
-y_aim = 0;
+x_aim = noone;
+y_aim = noone;

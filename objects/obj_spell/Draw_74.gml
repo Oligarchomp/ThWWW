@@ -13,7 +13,14 @@ if(!is_spell)
 	{
 		repeat (3)
 		{
-			var change_bar_x =  life_bar_size * global.spell_life;
+			if(!non_only)
+			{
+				var change_bar_x =  life_bar_size * global.spell_life;
+			}
+			else
+			{
+				var change_bar_x =  0;
+			}
 		
 			draw_line_width_color(x-1,y_pos,min(x + change_bar_x,life_uncover),y_pos,2,c_red,c_red);
 			var true_bar_x = x + change_bar_x + (life_bar_size - change_bar_x) * (life_left / life)

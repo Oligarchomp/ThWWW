@@ -41,7 +41,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var spam_open = 26;
 			
 			var tree_dan = DAN_MENTOS;
-			var tree_nbr = 19;
+			var tree_nbr = 20;
 			var tree_spin = 2;
 			var tree_spd = 1.5;
 			var tree_spd_div = 1.5;
@@ -65,7 +65,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var spam_open = 28;
 			
 			var tree_dan = DAN_BUBBLE;
-			var tree_nbr = 19;
+			var tree_nbr = 20;
 			var tree_spin = 2;
 			var tree_spd = 1.5;
 			var tree_spd_div = 1.5;
@@ -89,7 +89,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var spam_open = 28;
 			
 			var tree_dan = DAN_BUBBLE;
-			var tree_nbr = 20;
+			var tree_nbr = 23;
 			var tree_spin = 2;
 			var tree_spd = 1.5;
 			var tree_spd_div = 1.5;
@@ -221,6 +221,7 @@ if(global.gp_active) and (spell_wait == 0)
 					{
 						state = 2;	
 						pos_type = POS_ANGLE;
+						y_offscreen = 40;
 					}
 				break;
 				case 96:
