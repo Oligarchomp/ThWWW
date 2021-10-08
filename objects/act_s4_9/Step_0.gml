@@ -5,7 +5,7 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var arrow_wait = 10;
+			var arrow_wait = 8;
 			var arrow_ring = 2;
 			var arrow_row = 2;
 			var arrow_spd_min_shoot = 10;
@@ -14,12 +14,12 @@ if(global.gp_active)
 			var arrow_spd_div = 5;
 			var arrow_dist = 33;
 			
-			var bubble_nbr = 8;
+			var bubble_nbr = 0;
 			var bubble_wait = 40;
 			var bubble_spd = 2;
 		break;
 		case 1:
-			var arrow_wait = 7;
+			var arrow_wait = 6;
 			var arrow_ring = 3;
 			var arrow_row = 2;
 			var arrow_spd_min_shoot = 10;
@@ -28,7 +28,7 @@ if(global.gp_active)
 			var arrow_spd_div = 4.5;
 			var arrow_dist = 25;
 			
-			var bubble_nbr = 12;
+			var bubble_nbr = 0;
 			var bubble_wait = 35;
 			var bubble_spd = 2.2;
 		break;
@@ -40,23 +40,23 @@ if(global.gp_active)
 			var arrow_spd_max_shoot = 20;
 			var arrow_frame_stop = 20;
 			var arrow_spd_div = 4.5;
-			var arrow_dist = 20;
+			var arrow_dist = 19;
 			
-			var bubble_nbr = 14;
+			var bubble_nbr = 0;
 			var bubble_wait = 33;
 			var bubble_spd = 2.5;
 		break;
 		case 3:
-			var arrow_wait = 5;
+			var arrow_wait = 6;
 			var arrow_ring = 4;
-			var arrow_row = 2;
+			var arrow_row = 3;
 			var arrow_spd_min_shoot = 10;
 			var arrow_spd_max_shoot = 20;
 			var arrow_frame_stop = 20;
 			var arrow_spd_div = 4.5;
 			var arrow_dist = 17;
 			
-			var bubble_nbr = 20;
+			var bubble_nbr = 0;
 			var bubble_wait = 30;
 			var bubble_spd = 2.5;
 		break;

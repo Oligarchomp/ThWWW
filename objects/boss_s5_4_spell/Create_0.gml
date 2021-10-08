@@ -4,8 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
-spell_set_spell("s4_1",BOSS_FEZA,321400000)
-spell_set_name("spell_s5_1a","spell_s5_1a","spell_s5_1b","spell_s5_1c")
+spell_set_spell("s4_2",BOSS_FEZA,321400000)
+spell_set_name("spell_s5_2a","spell_s5_2a","spell_s5_2b","spell_s5_2c")
 spell_set_life(970,170);
 spell_set_time(38,false,95);
 
