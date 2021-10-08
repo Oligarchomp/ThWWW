@@ -315,7 +315,7 @@
     {"id":{"name":"boss_s4_4_spell","path":"objects/boss_s4_4_spell/boss_s4_4_spell.yy",},"order":14,},
     {"id":{"name":"sfx_timer2","path":"sounds/sfx_timer2/sfx_timer2.yy",},"order":2,},
     {"id":{"name":"sfx_laser2","path":"sounds/sfx_laser2/sfx_laser2.yy",},"order":1,},
-    {"id":{"name":"act_s5_5_mid","path":"objects/act_s5_5_mid/act_s5_5_mid.yy",},"order":7,},
+    {"id":{"name":"act_s5_6_mid","path":"objects/act_s5_6_mid/act_s5_6_mid.yy",},"order":7,},
     {"id":{"name":"sfx_pcb_border","path":"sounds/sfx_pcb_border/sfx_pcb_border.yy",},"order":1,},
     {"id":{"name":"spr_yuuto_move","path":"sprites/spr_yuuto_move/spr_yuuto_move.yy",},"order":1,},
     {"id":{"name":"spr_nothing","path":"sprites/spr_nothing/spr_nothing.yy",},"order":8,},

@@ -41,7 +41,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var spam_open = 26;
 			
 			var tree_dan = DAN_MENTOS;
-			var tree_nbr = 18;
+			var tree_nbr = 19;
 			var tree_spin = 2;
 			var tree_spd = 1.5;
 			var tree_spd_div = 1.5;
@@ -50,7 +50,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var aim_wait = 6;
 			var aim_spd = 3;
 			var aim_arc = 7;
-			var aim_dist = 18;
+			var aim_dist = 19;
 		break;
 		case 2:
 			var shock_wave = 4;
@@ -64,17 +64,17 @@ if(global.gp_active) and (spell_wait == 0)
 			var spam_rice_nbr = 35;
 			var spam_open = 28;
 			
-			var tree_dan = DAN_MENTOS;
-			var tree_nbr = 20;
+			var tree_dan = DAN_BUBBLE;
+			var tree_nbr = 19;
 			var tree_spin = 2;
 			var tree_spd = 1.5;
 			var tree_spd_div = 1.5;
 			
-			var aim_dan = DAN_ARROW;
+			var aim_dan = DAN_MENTOS;
 			var aim_wait = 5;
 			var aim_spd = 3;
 			var aim_arc = 9;
-			var aim_dist = 16;
+			var aim_dist = 17;
 		break;
 		case 3:
 			var shock_wave = 4;
