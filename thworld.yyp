@@ -426,6 +426,7 @@
     {"id":{"name":"boss_s5_2_spell","path":"objects/boss_s5_2_spell/boss_s5_2_spell.yy",},"order":9,},
     {"id":{"name":"boss_movement_goto","path":"scripts/boss_movement_goto/boss_movement_goto.yy",},"order":0,},
     {"id":{"name":"spr_iku_pattern","path":"sprites/spr_iku_pattern/spr_iku_pattern.yy",},"order":1,},
+    {"id":{"name":"boss_s5_5_non","path":"objects/boss_s5_5_non/boss_s5_5_non.yy",},"order":11,},
     {"id":{"name":"spr_water","path":"sprites/spr_water/spr_water.yy",},"order":0,},
     {"id":{"name":"spr_apple","path":"sprites/spr_apple/spr_apple.yy",},"order":0,},
     {"id":{"name":"act_s1_2","path":"objects/act_s1_2/act_s1_2.yy",},"order":3,},
