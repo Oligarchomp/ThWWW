@@ -24,12 +24,12 @@ if(global.gp_active)
 					var wave_wait = 32;
 				break;
 				case 1:
-					var knife_dan = DAN_ARROW;
+					var knife_dan = DAN_KNIFE;
 					var knife_row = 5;
-					var knife_ring = 30;
+					var knife_ring = 36;
 					var knife_size = 1;
 					var knife_dist = 60;
-					var knife_spd = 3.5;
+					var knife_spd = 3.4;
 					var knife_spd_div = 1.5;
 					
 					var knife_wait = 8;
@@ -39,10 +39,10 @@ if(global.gp_active)
 				case 2:
 					var knife_dan = DAN_KNIFE;
 					var knife_row = 5;
-					var knife_ring = 34;
-					var knife_size = 1;
+					var knife_ring = 24;
+					var knife_size = 2;
 					var knife_dist = 60;
-					var knife_spd = 3.8;
+					var knife_spd = 3.5;
 					var knife_spd_div = 1.4;
 					
 					var knife_wait = 8;

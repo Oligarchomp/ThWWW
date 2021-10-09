@@ -34,7 +34,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var rice_spd_shoot = 4.5;
 			var rice_spd_git = 2;
 			var rice_spd_div = 2;
-			var rice_nbr = 3;
+			var rice_nbr = 2;
 			
 			var sword_wait = 1;
 			var sword_row = 1;
@@ -57,7 +57,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var rice_spd_shoot = 4.5;
 			var rice_spd_git = 2;
 			var rice_spd_div = 2;
-			var rice_nbr = 4;
+			var rice_nbr = 3;
 			
 			var sword_wait = 1;
 			var sword_row = 2;
@@ -71,7 +71,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var spin_wait = 1;
 			var spin_row = 6;
 			var spin_spd = 2.5;
-			var spin_ring = 4;
+			var spin_ring = 5;
 		break;
 		case 3:
 			var sword_size = 5;
@@ -80,7 +80,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var rice_spd_shoot = 4;
 			var rice_spd_git = 2;
 			var rice_spd_div = 2;
-			var rice_nbr = 5;
+			var rice_nbr = 4;
 			
 			var sword_wait = 1;
 			var sword_row = 3;
@@ -166,7 +166,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 4://start stab
 			if(state_time < 60)
 			{
-				boss_movement_goto(obj_player.x,50,8);
+				boss_movement_goto(obj_player.x,50,7);
 			}
 			else
 			{
@@ -179,7 +179,7 @@ if(global.gp_active) and (spell_wait == 0)
 			{
 				if(state_time < charge_wait * 2)
 				{
-					boss_movement_goto(obj_player.x,50,3);
+					boss_movement_goto(obj_player.x,50,2);
 				}
 				
 				if(state_time % charge_wait == 0)
@@ -212,7 +212,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 8: // slash spin
 			if(state_time < 60)
 			{
-				boss_movement_goto(obj_player.x, 90, 9);
+				boss_movement_goto(obj_player.x, 90, 8);
 			}
 			else
 			{
@@ -317,7 +317,7 @@ if(global.gp_active) and (spell_wait == 0)
 		{
 			for(var i = 0; i < rice_nbr; i += 1)
 			{
-				var ang = angle + 180 - rice_open + rng(rice_open * 2, false,i);
+				var ang = 90 - rice_open + rng(rice_open * 2, false,i);
 				var inst = shoot(DAN_RICE,3,x,y,ang,rice_spd_shoot + rng(rice_spd_git,false,i + 2),sfx_shot3,4);
 			}
 		}
@@ -338,7 +338,6 @@ if(global.gp_active) and (spell_wait == 0)
 					state = 1;
 					angle *= -1;
 					spd /= rice_spd_div;
-					play_sound(sfx_redirect3,1,false);
 				}
 			break;
 		}
