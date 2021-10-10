@@ -15,6 +15,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var ring_nbr = 4;
 			var ring_spd_min = 1.2;
 			var ring_spd_max = 1.5;
+			var ring_accel = 0.05;
 			
 			var fill_ring = 8;
 			var fill_spd = 3.5;
@@ -33,6 +34,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var ring_nbr = 7;
 			var ring_spd_min = 1.2;
 			var ring_spd_max = 1.5;
+			var ring_accel = 0.05;
 			
 			var fill_ring = 11;
 			var fill_spd = 4;
@@ -51,6 +53,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var ring_nbr = 8;
 			var ring_spd_min = 1.2;
 			var ring_spd_max = 1.5;
+			var ring_accel = 0.05;
 			
 			var fill_ring = 15;
 			var fill_spd = 4;
@@ -69,6 +72,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var ring_nbr = 9;
 			var ring_spd_min = 1.2;
 			var ring_spd_max = 1.5;
+			var ring_accel = 0.03;
 			
 			var fill_ring = 20;
 			var fill_spd = 4;
