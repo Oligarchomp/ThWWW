@@ -176,8 +176,6 @@ if(global.gp_active)
 							color_id = 5;
 							depth -= 1;
 						}
-						//no break
-					case 3:
 					break;
 				}
 			}

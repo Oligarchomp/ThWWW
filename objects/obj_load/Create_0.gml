@@ -39,10 +39,10 @@ global.difficulty = 3;
 #macro BOSS_PALE 3
 #macro BOSS_IKU 4
 #macro BOSS_YUUTO 5
-#macro BOSS_DOVE 6
-#macro BOSS_FEZA 7
-#macro BOSS_NUA 8
-#macro BOSS_REVERENCE 9
+#macro BOSS_FEZA 6
+#macro BOSS_NUA 7
+#macro BOSS_REVERENCE 8
+#macro BOSS_DOVE 9
 
 //define enn_id
 #macro EN_RED 0

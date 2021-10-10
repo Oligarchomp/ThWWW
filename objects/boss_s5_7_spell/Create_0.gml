@@ -1,0 +1,15 @@
+/// @description Insert description here
+// You can write your code in this editor
+
+// Inherit the parent event
+event_inherited();
+
+spell_set_spell("s4_4",BOSS_FEZA,321400000)
+spell_set_name("spell_s5_4a","spell_s5_4a","spell_s5_4b","spell_s5_4b")
+spell_set_life(980,170);
+spell_set_time(44,false,95);
+
+boss_movement_goto(room_width / 2,100,6);
+
+dir_act = 1;
+
