@@ -207,7 +207,7 @@ if (global.gp_active)
 			
 			repeat(item_nbr)
 			{
-				create_item(ITEM_POINT,x - item_dist + rng(item_dist * 2 ,true,2),y - item_dist + rng(item_dist * 2,true,2));
+				create_item(ITEM_POINT,obj_boss.x - item_dist + rng(item_dist * 2 ,true,2),obj_boss.y - item_dist + rng(item_dist * 2,true,2));
 			}
 			
 			create_confetti(obj_boss.x,obj_boss.y,30,8);

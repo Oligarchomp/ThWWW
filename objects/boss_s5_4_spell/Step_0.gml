@@ -181,6 +181,11 @@ if(global.gp_active) and (spell_wait == 0)
 				{
 					boss_movement_goto(obj_player.x,50,2);
 				}
+				else
+				{
+					obj_boss.x_to = obj_boss.x;
+					obj_boss.y_to = obj_boss.y;
+				}
 				
 				if(state_time % charge_wait == 0)
 				{
