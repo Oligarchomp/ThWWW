@@ -18,6 +18,10 @@ move_type = 0;
 // 0 = idle + move
 // 1 = just idle;
 
+
+alpha = 1;
+scale = 1;
+
 idle_spd = 0.2;
 switch(en_type)
 {
@@ -46,6 +50,8 @@ switch(en_type)
 	case EN_FAMILIAR:
 		idle_spr = spr_familiar;
 		move_spr = spr_familiar;
+		alpha = 0;
+		scale = 0;
 	break;
 }
 
@@ -67,6 +73,7 @@ angle = 0;
 
 rot = 0
 rot_spd = 1;
+
 
 
 state = 0;

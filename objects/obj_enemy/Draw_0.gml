@@ -8,8 +8,7 @@ if(global.view_hitbox)
 
 if(en_type == EN_FAMILIAR)
 {
-	draw_sprite_ext(sprite_index,image_index,x,y,spr_dir * 1.2,1.2,-rot,c_white,0.5)
-	
+	draw_sprite_ext(sprite_index,image_index,x,y,spr_dir * 1.2 * scale,1.2 * scale,-rot,c_white,0.5 * alpha)
 }
 
-draw_sprite_ext(sprite_index,image_index,x,y,spr_dir,1,rot,c_white,1)
+draw_sprite_ext(sprite_index,image_index,x,y,spr_dir * scale,scale,rot,c_white,alpha)

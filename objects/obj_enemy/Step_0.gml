@@ -102,6 +102,8 @@ if (global.gp_active)
 	{
 		case EN_FAMILIAR:
 			rot += rot_spd;
+			alpha = goto_value(alpha,1,0.1);
+			scale = goto_value(scale,1,0.1);
 		break;
 	}
 	

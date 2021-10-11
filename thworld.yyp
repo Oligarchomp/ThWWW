@@ -239,6 +239,7 @@
     {"id":{"name":"act_s3_5","path":"objects/act_s3_5/act_s3_5.yy",},"order":10,},
     {"id":{"name":"rng","path":"scripts/rng/rng.yy",},"order":3,},
     {"id":{"name":"act_s2_2","path":"objects/act_s2_2/act_s2_2.yy",},"order":11,},
+    {"id":{"name":"act_s5_9","path":"objects/act_s5_9/act_s5_9.yy",},"order":14,},
     {"id":{"name":"boss_s3_5_non","path":"objects/boss_s3_5_non/boss_s3_5_non.yy",},"order":7,},
     {"id":{"name":"spr_ring_small","path":"sprites/spr_ring_small/spr_ring_small.yy",},"order":3,},
     {"id":{"name":"boss_release","path":"scripts/boss_release/boss_release.yy",},"order":1,},
