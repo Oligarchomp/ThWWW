@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-act_set_time(1200,1200);
+act_set_time(960,960);
 
-wall_less = 0;
-ring_less = 0;
+x_list = ds_list_create();
+ds_list_add(x_list,200,100,300,150,250,100,300);

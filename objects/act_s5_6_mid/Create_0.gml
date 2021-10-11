@@ -6,8 +6,8 @@ global.boss = BOSS_DOVE;
 event_inherited();
 non_only = true;
 
-spell_set_life(790,100);
-spell_set_time(26,false,90)
+spell_set_life(600,100);
+spell_set_time(18,false,90)
 
 dir_act = 1;
 
