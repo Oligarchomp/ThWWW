@@ -56,11 +56,6 @@ if(global.gp_active)
 					// 4 / 7 is funny
 				break;
 			}
-			var boss_wait = 159;
-			if(step % boss_wait == 0)
-			{
-				//boss_movement_random(3,3,3)
-			}
 	
 			switch(state)
 			{
@@ -104,7 +99,7 @@ if(global.gp_active)
 					switch(state_time)
 					{
 						case 0:
-							boss_movement_random(3,13,2);
+							boss_movement_random(3,6,2);
 						break;
 						case wave_wait:
 							state = 0;

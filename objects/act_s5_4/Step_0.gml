@@ -141,7 +141,7 @@ if(global.gp_active)
 			case 1:
 				if(state_time % bubble_wait == 0)
 				{
-					shoot_ring(DAN_BUBBLE,7,bubble_ring,x,y,angle_aim,bubble_spd,sfx_shot2,1);
+					shoot_ring(DAN_BUBBLE,7,bubble_ring,x,y,angle_aim,bubble_spd,sfx_shot2,4);
 				}
 				if(state_time % ring_wait == 0)
 				{

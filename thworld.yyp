@@ -261,6 +261,7 @@
     {"id":{"name":"spr_feza_move_left","path":"sprites/spr_feza_move_left/spr_feza_move_left.yy",},"order":1,},
     {"id":{"name":"bg_s5","path":"objects/bg_s5/bg_s5.yy",},"order":0,},
     {"id":{"name":"act_s4_3","path":"objects/act_s4_3/act_s4_3.yy",},"order":18,},
+    {"id":{"name":"act_s5_3","path":"objects/act_s5_3/act_s5_3.yy",},"order":19,},
     {"id":{"name":"sfx_laser1","path":"sounds/sfx_laser1/sfx_laser1.yy",},"order":0,},
     {"id":{"name":"boss_s3_2_spell","path":"objects/boss_s3_2_spell/boss_s3_2_spell.yy",},"order":4,},
     {"id":{"name":"spr_danmakrab","path":"sprites/spr_danmakrab/spr_danmakrab.yy",},"order":20,},
