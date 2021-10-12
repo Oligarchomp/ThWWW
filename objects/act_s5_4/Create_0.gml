@@ -1,15 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-global.boss = BOSS_DOVE;
 // Inherit the parent event
 event_inherited();
-non_only = true;
 
-spell_set_life(600,100);
-spell_set_time(17,false,90)
+act_set_time(960,960);
 
-dir_act = 1;
+need_familiar = false;
 
-x_aim = 0;
-y_aim = 0;
+need_fairy_time = 0;
+fairy_dir = 1;

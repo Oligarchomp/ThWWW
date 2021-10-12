@@ -8,7 +8,7 @@ if(global.gp_active)
 		case 0:
 			var wall_ring = 7;
 			var wall_arc = 3;
-			var wall_row = 4;
+			var wall_row = 2;
 			var wall_dist = 5;
 			var wall_spd_min = 6;
 			var wall_spd_max = 11;
@@ -16,7 +16,7 @@ if(global.gp_active)
 			var wall_spd_div = 3.5;
 			var wall_frame = 30;
 			
-			var ring_nbr = 16;
+			var ring_nbr = 20;
 			var ring_spd_shoot = 7;
 			var ring_spd_final1 = 1.3;
 			var ring_spd_final2 = 1.8;
@@ -26,25 +26,7 @@ if(global.gp_active)
 		case 1:
 			var wall_ring = 11;
 			var wall_arc = 3;
-			var wall_row = 4;
-			var wall_dist = 5;
-			var wall_spd_min = 6;
-			var wall_spd_max = 11;
-			var wall_spd_final = 4.5;
-			var wall_spd_div = 3.5;
-			var wall_frame = 30;
-			
-			var ring_nbr = 21;
-			var ring_spd_shoot = 7;
-			var ring_spd_final1 = 1.3;
-			var ring_spd_final2 = 1.8;
-			var ring_lenght = 100;
-			var ring_wait = 40;
-		break;
-		case 2:
-			var wall_ring = 13;
-			var wall_arc = 3;
-			var wall_row = 4;
+			var wall_row = 3;
 			var wall_dist = 5;
 			var wall_spd_min = 6;
 			var wall_spd_max = 11;
@@ -59,10 +41,10 @@ if(global.gp_active)
 			var ring_lenght = 100;
 			var ring_wait = 40;
 		break;
-		case 3:
+		case 2:
 			var wall_ring = 13;
 			var wall_arc = 3;
-			var wall_row = 4;
+			var wall_row = 3;
 			var wall_dist = 5;
 			var wall_spd_min = 6;
 			var wall_spd_max = 11;
@@ -70,7 +52,25 @@ if(global.gp_active)
 			var wall_spd_div = 3.5;
 			var wall_frame = 30;
 			
-			var ring_nbr = 30;
+			var ring_nbr = 29;
+			var ring_spd_shoot = 7;
+			var ring_spd_final1 = 1.3;
+			var ring_spd_final2 = 1.8;
+			var ring_lenght = 100;
+			var ring_wait = 40;
+		break;
+		case 3:
+			var wall_ring = 13;
+			var wall_arc = 3;
+			var wall_row = 3;
+			var wall_dist = 5;
+			var wall_spd_min = 6;
+			var wall_spd_max = 11;
+			var wall_spd_final = 4.5;
+			var wall_spd_div = 3.5;
+			var wall_frame = 30;
+			
+			var ring_nbr = 34;
 			var ring_spd_shoot = 7;
 			var ring_spd_final1 = 1.3;
 			var ring_spd_final2 = 1.8;
@@ -90,14 +90,14 @@ if(global.gp_active)
 			play_sound(sfx_familiar_spawn,1,false);
 			create_enemy(EN_FAMILIAR,130,110,fam_life,3,0,0);
 			create_enemy(EN_FAMILIAR,270,110,fam_life,3,0,0);
-			ring_less = 4;
+			ring_less = 6;
 		break;
 		case 500:
 			play_sound(sfx_familiar_spawn,1,false);
 			create_enemy(EN_FAMILIAR,room_width / 2,90,fam_life,3,0,0);
 			create_enemy(EN_FAMILIAR,50,200,fam_life,3,0,0);
 			create_enemy(EN_FAMILIAR,350,200,fam_life,3,0,0);
-			ring_less = 6;
+			ring_less = 10;
 			wall_less = 2;
 		break;
 		case 750:
@@ -106,7 +106,7 @@ if(global.gp_active)
 			create_enemy(EN_FAMILIAR,370,30,fam_life,3,0,0);
 			create_enemy(EN_FAMILIAR,30,470,fam_life,3,0,0);
 			create_enemy(EN_FAMILIAR,370,470,fam_life,3,0,0);
-			ring_less = 10;
+			ring_less = 14;
 			wall_less = 3;
 		break;
 	}

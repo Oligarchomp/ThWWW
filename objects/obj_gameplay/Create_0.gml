@@ -149,13 +149,11 @@ add_stage_event(dialogue_s4_post,100);
 */
 add_stage_event(act_s5_0,0);// keep this one
 
-add_stage_event(act_s5_2,0);
-
+add_stage_event(act_s5_4,0);
 /*
-
-add_stage_event(act_s5_1,0);
 add_stage_event(act_s5_5_mid,0);
 add_stage_event(act_s5_6_mid,40);
+add_stage_event(act_s5_7,0);
 add_stage_event(act_s5_8,0);
 add_stage_event(act_s5_85,0);
 add_stage_event(act_s5_9,0);
@@ -168,6 +166,12 @@ add_stage_event(boss_s5_5_non,40);
 add_stage_event(boss_s5_6_spell,0);
 add_stage_event(boss_s5_7_spell,60);
 add_stage_event(dialogue_s5_post,70);
+
+
+
+add_stage_event(act_s5_1,0);
+add_stage_event(act_s5_2,0);
+
 */
 
 

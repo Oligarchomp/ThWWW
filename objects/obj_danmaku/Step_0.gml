@@ -72,6 +72,7 @@ if(global.gp_active)
 		inst.spawn_type = spawn_type;
 		inst.image_xscale = image_xscale;
 		inst.image_yscale = image_yscale;
+		inst.is_cancelable = is_cancelable;
 
 		is_spawning = false;
 		instance_deactivate_object(self);

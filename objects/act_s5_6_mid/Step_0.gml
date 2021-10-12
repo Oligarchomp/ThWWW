@@ -156,7 +156,7 @@ if(global.gp_active) and (spell_wait == 0)
 	
 	if(need_ring)
 	{
-		var rand = rng(360,false,8);
+		var rand = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y);//rng(360,false,8);
 		var sp = ring_spd
 		if(need_ring_slow)
 		{

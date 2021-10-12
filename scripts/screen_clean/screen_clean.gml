@@ -9,14 +9,15 @@ function screen_clean(argument0,argument1){
 	
 	with(obj_danmaku_spawn)
 	{
-		cancel = true;
+		if(is_cancelable) or (cancel_uncancelable)
+		{
+			cancel = true;
+		}
 	}
 	
 	with(obj_danmaku)
 	{
-		
-		
-		if(is_cancelable)
+		if(is_cancelable) or (cancel_uncancelable)
 		{
 			cancel_bullet(self);
 			if(star_item)
@@ -24,6 +25,7 @@ function screen_clean(argument0,argument1){
 				create_item(ITEM_CANCEL,x,y,);
 			}
 		}
+		/*
 		else
 		{
 			if(cancel_uncancelable)
@@ -35,6 +37,7 @@ function screen_clean(argument0,argument1){
 				}
 			}
 		}
+		*/
 	}
 	
 }

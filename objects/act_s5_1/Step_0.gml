@@ -16,7 +16,7 @@ if(global.gp_active)
 			var rev_spd = 1.5;
 		break;
 		case 1:
-			var ball_wait = 9;
+			var ball_wait = 8;
 			var ball_spd = 2;
 			var ball_arc = 2;
 			var ball_dist = 110;
@@ -25,7 +25,7 @@ if(global.gp_active)
 			var rev_spd = 1.5;
 		break;
 		case 2:
-			var ball_wait = 7;
+			var ball_wait = 6;
 			var ball_spd = 2.5;
 			var ball_arc = 2;
 			var ball_dist = 100;
@@ -34,7 +34,7 @@ if(global.gp_active)
 			var rev_spd = 1.5;
 		break;
 		case 3:
-			var ball_wait = 5;
+			var ball_wait = 4;
 			var ball_spd = 2.5;
 			var ball_arc = 2;
 			var ball_dist = 90;

@@ -1,15 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-global.boss = BOSS_DOVE;
 // Inherit the parent event
 event_inherited();
-non_only = true;
 
-spell_set_life(600,100);
-spell_set_time(17,false,90)
+time_active = 34 * 60; // at least greater than midspell
+act_set_time(time_active,time_active + 100);
 
-dir_act = 1;
 
-x_aim = 0;
-y_aim = 0;
