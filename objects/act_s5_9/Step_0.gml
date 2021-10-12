@@ -151,7 +151,6 @@ if(global.gp_active)
 				if(state_time == 60)
 				{
 					life = 0;
-					play_sound(sfx_familiar_desactivate,1,false);
 				}
 			break;
 		}

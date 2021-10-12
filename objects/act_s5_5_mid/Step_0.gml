@@ -46,7 +46,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 3:
 			var wave_lenght = 70;
 			var ring_wait = 10;
-			var ring_nbr = 71;
+			var ring_nbr = 69;
 			var ring_spd = 4.5;
 			var ring_spd_redirect = 2.8;
 			

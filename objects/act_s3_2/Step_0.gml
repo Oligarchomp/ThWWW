@@ -60,11 +60,11 @@ if(global.gp_active)
 			case 1://shoot
 				
 				var ang = rng(360,false,4)
-				shoot_ring(DAN_BUBBLE,3,bubble_ring,x,y,ang + 360 / bubble_ring / 2,bubble_spd2,sfx_redirect2,8);
-				shoot_ring(DAN_BUBBLE,7,bubble_ring,x,y,ang,bubble_spd1,sfx_redirect2,8);
+				shoot_ring(DAN_BUBBLE,3,bubble_ring,x,y,ang + 360 / bubble_ring / 2,bubble_spd2,sfx_redirect1,8);
+				shoot_ring(DAN_BUBBLE,7,bubble_ring,x,y,ang,bubble_spd1,noone,8);
 				if(extra_wave)
 				{
-					shoot_ring(DAN_BUBBLE,7,bubble_ring,x,y,ang,bubble_spd2 + (bubble_spd2 - bubble_spd1),sfx_redirect2,8);
+					shoot_ring(DAN_BUBBLE,7,bubble_ring,x,y,ang,bubble_spd2 + (bubble_spd2 - bubble_spd1),noone,8);
 				}
 				state = 2;
 			break;
