@@ -26,6 +26,10 @@ switch(global.stage)
 		name = get_text("boss_feza");
 		spell_nbr = 3;
 	break;
+	case 6:
+		name = get_text("boss_nua");
+		spell_nbr = 4;
+	break;
 }
 
 x = global.game_x_offset - 30;

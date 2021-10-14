@@ -73,6 +73,10 @@ switch(boss_id)
 		move_right_spr = spr_feza_move_right;
 		movement_type = 2;
 	break;
+	case BOSS_NUA:
+		idle_spr = spr_nua_idle;
+		move_spr = spr_nua_move;
+	break;
 }
 	
 
