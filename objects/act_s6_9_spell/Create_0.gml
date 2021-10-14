@@ -11,20 +11,22 @@ spell_set_name("spell_s6_mid","spell_s6_mid","spell_s6_mid","spell_s6_mid")
 switch(global.player_chosen)
 {
 	case P_REIMU:
-		var life = 155;
+		var life = 160;
 	break;
 	case P_MARISA:
-		var life = 145;
+		var life = 165;
 	break;
 	case P_SANAE:
-		var life = 222;
+		var life = 232;
 	break;
 }
-spell_set_life(life,150);
+spell_set_life(life,100);
 spell_set_time(16,false,95);
 
 item_nbr = 0;
 
-dir_act = 1;
+dir_act = -1;
 
 boss_sp = 0;
+
+boss_movement_goto(550,obj_boss.y - 50,boss_sp)

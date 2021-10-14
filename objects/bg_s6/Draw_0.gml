@@ -9,7 +9,7 @@ for(var i = -1; i < 3; i += 1)
 
 //black bottom
 var y_pos = y + height / 2;
-draw_sprite_pos(spr_black,0,-50,y_pos,room_width + 50,y_pos,room_width + 50,room_height + 200,-50,room_height + 200,1);
+draw_sprite_pos(spr_black,0,-50,y_pos,room_width + 50,y_pos,room_width + 50,room_height ,-50,room_height,1);
 
 //black top
 var y_pos = y - height / 2 + 2;
