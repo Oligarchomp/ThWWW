@@ -76,6 +76,7 @@ switch(boss_id)
 	case BOSS_NUA:
 		idle_spr = spr_nua_idle;
 		move_spr = spr_nua_move;
+		x = 500;
 	break;
 }
 	

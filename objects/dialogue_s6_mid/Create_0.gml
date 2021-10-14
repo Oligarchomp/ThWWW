@@ -8,6 +8,7 @@ global.boss = BOSS_FEZA;
 
 instance_create_depth(0,0,0,obj_boss);
 obj_boss.spd = 2.5;
+obj_boss.x = 450;
 
 switch(global.player_chosen)
 {
