@@ -33,7 +33,7 @@ if(global.gp_active)
 		{
 			if(need_hitbox)
 			{
-				var inst = create_shot_hitbox(0,0,1,spr_fullscreen_collision,10,60,false);
+				var inst = create_shot_hitbox(0,0,1,spr_fullscreen_collision,8.5,60,false);
 				with(obj_isoterica)
 				{
 					need_hitbox = false;

@@ -27,6 +27,7 @@
     {"id":{"name":"dialogue_s4_mid","path":"objects/dialogue_s4_mid/dialogue_s4_mid.yy",},"order":1,},
     {"id":{"name":"act_s4_2","path":"objects/act_s4_2/act_s4_2.yy",},"order":22,},
     {"id":{"name":"act_s5_0","path":"objects/act_s5_0/act_s5_0.yy",},"order":1,},
+    {"id":{"name":"sfx_boat","path":"sounds/sfx_boat/sfx_boat.yy",},"order":25,},
     {"id":{"name":"spr_spell_bg","path":"sprites/spr_spell_bg/spr_spell_bg.yy",},"order":0,},
     {"id":{"name":"spr_shot_frog_collision","path":"sprites/spr_shot_frog_collision/spr_shot_frog_collision.yy",},"order":1,},
     {"id":{"name":"obj_shot_secondary_marisa","path":"objects/obj_shot_secondary_marisa/obj_shot_secondary_marisa.yy",},"order":6,},

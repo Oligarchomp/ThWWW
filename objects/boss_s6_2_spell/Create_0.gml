@@ -6,5 +6,14 @@ event_inherited();
 
 spell_set_spell("s6_1",BOSS_NUA,321400000)
 spell_set_name("spell_s6_1a","spell_s6_1a","spell_s6_1b","spell_s6_1b")
-spell_set_life(900,170);
+spell_set_life(750,160);
 spell_set_time(42,false,95);
+
+
+x_anchor = 0;
+
+x_indicator = 0;
+
+anchor_id = noone;
+
+bullet_angle = -90;

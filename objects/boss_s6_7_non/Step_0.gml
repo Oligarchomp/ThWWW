@@ -5,13 +5,112 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
+			//wave 1
+			var mentos_ring = 36;
+			var mentos_spd = 6.5;
+			var mentos_wait = 19;
 			
+			var around_arc = 4;
+			var around_spd_shot= 18;
+			var around_wait = 3;
+			var around_deccel = 0.3;
+			var around_dist_ref = 50;
+			
+			//wave 2
+			var bubble_wait = 18;
+			var bubble_ring = 11;
+			var bubble_spd = 5.5;
+			
+			var bullet_wait = 10;
+			var bullet_ring = 19;
+			var bullet_spd = 3.5;
+			var bullet_dist  = 180 / bullet_ring;
+			
+			//wave 3
+			var arc_wait = 4;
+			var arc_nbr = 10;
+			var arc_dist = 360 / arc_nbr;
+			var arc_spd = 7;
+			var arc_angle_plus = 6;
+			
+			var wall_wait = 4;
+			var wall_nbr = 10;
+			var wall_spd = 10;
+			var wall_open_final = 360 / wall_nbr;
+			
+			var wave_wait = 100;
 		break;
 		case 1:
+			//wave 1
+			var mentos_ring = 44;
+			var mentos_spd = 8;
+			var mentos_wait = 14;
 			
+			var around_arc = 6;
+			var around_spd_shot= 18;
+			var around_wait = 3;
+			var around_deccel = 0.3;
+			var around_dist_ref = 50;
+			
+			//wave 2
+			var bubble_wait = 14;
+			var bubble_ring = 15;
+			var bubble_spd = 6.5;
+			
+			var bullet_wait = 8;
+			var bullet_ring = 29;
+			var bullet_spd = 4;
+			var bullet_dist  = 180 / bullet_ring;
+			
+			//wave 3
+			var arc_wait = 4;
+			var arc_nbr = 10;
+			var arc_dist = 360 / arc_nbr;
+			var arc_spd = 7.5;
+			var arc_angle_plus = 3;
+			
+			var wall_wait = 4;
+			var wall_nbr = 14;
+			var wall_spd = 10;
+			var wall_open_final = 360 / wall_nbr;
+			
+			var wave_wait = 90;
 		break;
 		case 2:
+			//wave 1
+			var mentos_ring = 49;
+			var mentos_spd = 9;
+			var mentos_wait = 13;
 			
+			var around_arc = 8;
+			var around_spd_shot= 18;
+			var around_wait = 3;
+			var around_deccel = 0.3;
+			var around_dist_ref = 50;
+			
+			//wave 2
+			var bubble_wait = 10;
+			var bubble_ring = 15;
+			var bubble_spd = 6.5;
+			
+			var bullet_wait = 6;
+			var bullet_ring = 35;
+			var bullet_spd = 4.5;
+			var bullet_dist  = 180 / bullet_ring;
+			
+			//wave 3
+			var arc_wait = 3;
+			var arc_nbr = 15;
+			var arc_dist = 360 / arc_nbr;
+			var arc_spd = 7.5;
+			var arc_angle_plus = 27;
+			
+			var wall_wait = 4;
+			var wall_nbr = 16;
+			var wall_spd = 10;
+			var wall_open_final = 360 / wall_nbr;
+			
+			var wave_wait = 90;
 		break;
 		case 3:
 			//wave 1
@@ -27,7 +126,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			//wave 2
 			var bubble_wait = 10;
-			var bubble_ring = 16;
+			var bubble_ring = 18;
 			var bubble_spd = 7;
 			
 			var bullet_wait = 5;
@@ -43,14 +142,16 @@ if(global.gp_active) and (spell_wait == 0)
 			var arc_angle_plus = 34;
 			
 			var wall_wait = 4;
-			var wall_nbr = 16;
+			var wall_nbr = 20;
 			var wall_spd = 10;
 			var wall_open_final = 360 / wall_nbr;
+			
+			var wave_wait = 90;
 		break;
 	}
 	
 	var wave_lenght = 180;
-	var wave_wait = 90;
+
 	
 	switch(state)
 	{
