@@ -27,15 +27,15 @@ r_vsp = 20;
 hsp = 0.5;
 vsp = 0;
 
-tide_spd = 35;
-tide_mult = 0.6;
+tide_spd = 50;
+tide_mult = 30;
 
-tide_row = 15;
+tide_row = 16;
 y_list = ds_list_create();
 time_list = ds_list_create();
 
 for(var i = 0; i < tide_row; i += 1)
 {
-	ds_list_add(y_list,room_height / (tide_row - 2)  * i); // -1 so that there is one offscreen
-	ds_list_add(time_list,(tide_row - i) * 2 * pi / tide_row * tide_spd);
+	ds_list_add(y_list,room_height / (tide_row - 3)  * i); // - so that there is offscreen
+	ds_list_add(time_list,(tide_row - i) * 30);
 }

@@ -85,6 +85,7 @@ pos_type = POS_SP;
 
 
 rot = 0;
+alpha = 1;
 
 spr_dir = 1;
 

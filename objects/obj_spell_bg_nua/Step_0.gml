@@ -11,8 +11,6 @@ if(global.gp_active)
 	
 	for(var i = 0; i < tide_row; i += 1)
 	{
-		y_list[|i] += vsp + sin(time_list[|i] / tide_spd) * tide_mult;
-		
 		time_list[|i] += 1;
 	}
 	

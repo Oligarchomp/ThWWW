@@ -7,7 +7,6 @@ event_inherited();
 spell_set_life(820,180);
 spell_set_time(26,false,90)
 
-boss_movement_goto(room_width / 2, 100,6);
 
 dir_act = 1;
 

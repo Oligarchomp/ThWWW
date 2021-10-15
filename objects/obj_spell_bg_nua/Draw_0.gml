@@ -8,14 +8,16 @@ for(var i = 0; i < tide_row; i += 1)
 {
 	for(var j = -1; j < 5; j += 1)
 	{
-		var col = make_color_hsv(150,178, 10 + y_list[|i] / 2.5 * bg_alpha )
+		var y_true = y_list[|i] + sin(time_list[|i] / tide_spd) * tide_mult;
+		
+		var col = make_color_hsv(150,178, 5 + y_true / 2.3 * bg_alpha )
 		if( i % 2 == 0)
 		{
-			draw_sprite_ext(spr_tide,0,x + j * width,y_list[|i],1,1,0,col,bg_alpha);
+			draw_sprite_ext(spr_tide,0,x + j * width,y_true,1,1,0,col,bg_alpha);
 		}
 		else
 		{
-			draw_sprite_ext(spr_tide,0,room_width - x - j * width,y_list[|i],-1,1,0,col,bg_alpha);
+			draw_sprite_ext(spr_tide,0,room_width - x - j * width,y_true,-1,1,0,col,bg_alpha);
 		}
 	}
 	
