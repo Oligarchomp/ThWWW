@@ -35,6 +35,9 @@ if (global.gp_active)
 				case BOSS_FEZA:
 					instance_create_depth(0,0, global.spell_bg_depth,obj_spell_bg_feza);
 				break;
+				case BOSS_NUA:
+					instance_create_depth(0,0, global.spell_bg_depth,obj_spell_bg_nua);
+				break;
 			}
 			
 			spell_initialize = true;

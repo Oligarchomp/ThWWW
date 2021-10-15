@@ -15,6 +15,9 @@ else
 
 switch(user_id)
 {
+	case BOSS_NUA:
+		sprite_index = spr_nua_art;
+	break;
 	case BOSS_FEZA:
 		sprite_index = spr_feza_art;
 	break;
