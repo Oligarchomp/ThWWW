@@ -31,9 +31,9 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var wave_wait = 70;
 			
-			var bullet_ring = 5;
+			var bullet_ring = 20;
 			var bullet_spd = 2;
-			var bullet_wait = 48;
+			var bullet_wait = 120;
 			var bullet_dist = 180 / bullet_ring;
 		break;
 		case 1:
@@ -55,7 +55,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var debris_dist_git = 3;
 			var debris_open = 16;
 			
-			var spam_nbr = 90;
+			var spam_nbr = 92;
 			var spam_spd_min = 4;
 			var spam_spd_git = 4;
 			var spam_grav = 0.05;
@@ -63,9 +63,9 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var wave_wait = 60;
 			
-			var bullet_ring = 7;
-			var bullet_spd = 2.5;
-			var bullet_wait = 42;
+			var bullet_ring = 36;
+			var bullet_spd = 2.3;
+			var bullet_wait = 90;
 			var bullet_dist = 180 / bullet_ring;
 		break;
 		case 2:
@@ -95,9 +95,9 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var wave_wait = 40;
 			
-			var bullet_ring = 8;
-			var bullet_spd = 3;
-			var bullet_wait = 36;
+			var bullet_ring = 42;
+			var bullet_spd = 2.5;
+			var bullet_wait = 80;
 			var bullet_dist = 180 / bullet_ring;
 		break;
 		case 3:
@@ -127,9 +127,9 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var wave_wait = 40;
 			
-			var bullet_ring = 10;
-			var bullet_spd = 3;
-			var bullet_wait = 30;
+			var bullet_ring = 52;
+			var bullet_spd = 2.5;
+			var bullet_wait = 70;
 			var bullet_dist = 180 / bullet_ring;
 		break;
 	}

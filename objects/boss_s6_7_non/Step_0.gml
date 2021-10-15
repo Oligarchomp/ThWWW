@@ -170,6 +170,11 @@ if(global.gp_active) and (spell_wait == 0)
 					boss_charge(obj_boss.x,obj_boss.y);
 				break;
 				case 35:
+					play_sound(sfx_spawn_heavy,1,false);
+					obj_boss.mask_index = spr_nothing;
+					obj_boss.alpha = 0.4;
+				break;
+				case 65:
 					switch(wave_id)
 					{
 						case 0:
@@ -183,8 +188,6 @@ if(global.gp_active) and (spell_wait == 0)
 							state = 3;
 						break;
 					}
-					obj_boss.mask_index = spr_nothing;
-					obj_boss.alpha = 0.4;
 				break;
 			}
 		break;
