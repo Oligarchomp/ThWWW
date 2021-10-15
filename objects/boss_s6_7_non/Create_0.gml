@@ -13,5 +13,7 @@ dist_bullet = 0;
 
 bullet_aim = 0;
 
-arc_angle = -3600 - 90; // to avoid the thing to reach 999;
+tss_angle = -90;
+tss_dir = 1;
+
 wall_open = 0;

@@ -27,11 +27,13 @@ if(global.gp_active) and (spell_wait == 0)
 			var bullet_dist  = 180 / bullet_ring;
 			
 			//wave 3
-			var arc_wait = 4;
-			var arc_nbr = 10;
-			var arc_dist = 360 / arc_nbr;
-			var arc_spd = 7;
-			var arc_angle_plus = 6;
+			var tss_arc = 11;
+			var tss_dist = 10;
+			var tss_spd = 3.8;
+			var tss_wait = 4;
+			var tss_change = 6;
+			var tss_dist1 = 1.1;
+			var tss_dist2 = 0;
 			
 			var wall_wait = 4;
 			var wall_nbr = 10;
@@ -63,11 +65,13 @@ if(global.gp_active) and (spell_wait == 0)
 			var bullet_dist  = 180 / bullet_ring;
 			
 			//wave 3
-			var arc_wait = 4;
-			var arc_nbr = 10;
-			var arc_dist = 360 / arc_nbr;
-			var arc_spd = 7.5;
-			var arc_angle_plus = 3;
+			var tss_arc = 13;
+			var tss_dist = 9;
+			var tss_spd = 4.3;
+			var tss_wait = 3;
+			var tss_change = 6;
+			var tss_dist1 = 1.2;
+			var tss_dist2 = 0;
 			
 			var wall_wait = 4;
 			var wall_nbr = 14;
@@ -99,11 +103,13 @@ if(global.gp_active) and (spell_wait == 0)
 			var bullet_dist  = 180 / bullet_ring;
 			
 			//wave 3
-			var arc_wait = 3;
-			var arc_nbr = 15;
-			var arc_dist = 360 / arc_nbr;
-			var arc_spd = 7.5;
-			var arc_angle_plus = 27;
+			var tss_arc = 13;
+			var tss_dist = 11;
+			var tss_spd = 5.5;
+			var tss_wait = 2;
+			var tss_change = 6;
+			var tss_dist1 = 0.8;
+			var tss_dist2 = 6.5;
 			
 			var wall_wait = 4;
 			var wall_nbr = 16;
@@ -135,11 +141,13 @@ if(global.gp_active) and (spell_wait == 0)
 			var bullet_dist  = 180 / bullet_ring;
 			
 			//wave 3
-			var arc_wait = 3;
-			var arc_dist = 20;
-			var arc_nbr = 18;
-			var arc_spd = 8.5;
-			var arc_angle_plus = 34;
+			var tss_arc = 13;
+			var tss_dist = 12;
+			var tss_spd = 7;
+			var tss_wait = 2;
+			var tss_change = 6;
+			var tss_dist1 = 1.1;
+			var tss_dist2 = 7.5;
 			
 			var wall_wait = 4;
 			var wall_nbr = 20;
@@ -222,11 +230,17 @@ if(global.gp_active) and (spell_wait == 0)
 		case 3:
 			if(state_time < wave_lenght)
 			{
-				if(state_time % arc_wait == 0)
+				if(state_time % tss_wait == 0)
 				{
-					shoot_arc(DAN_BULLET,7,arc_nbr,obj_boss.x,obj_boss.y,arc_angle,arc_dist,arc_spd,sfx_shot2,5);
-					shoot_arc(DAN_BULLET,7,arc_nbr,obj_boss.x,obj_boss.y,-arc_angle  - 180,arc_dist,arc_spd,sfx_shot2,5);
-					arc_angle += arc_angle_plus;
+					if((state_time / tss_wait) % tss_change == 0)
+					{
+						tss_angle += tss_dist2 * tss_dir; 
+						tss_dir *= -1;
+					}
+					tss_angle += tss_dist1 * tss_dir;
+					
+					shoot_arc(DAN_BULLET,7,tss_arc,obj_boss.x,obj_boss.y,tss_angle,tss_dist,tss_spd,sfx_shot2,2);
+					
 				}
 				
 				if(state_time % wall_wait == 0)
