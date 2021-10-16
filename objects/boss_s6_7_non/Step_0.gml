@@ -173,6 +173,8 @@ if(global.gp_active) and (spell_wait == 0)
 					play_sound(sfx_spawn_heavy,1,false);
 					obj_boss.mask_index = spr_nothing;
 					obj_boss.alpha = 0.4;
+					
+					need_water = true;
 				break;
 				case 65:
 					switch(wave_id)
@@ -268,6 +270,8 @@ if(global.gp_active) and (spell_wait == 0)
 					wave_id %= 3;
 					
 					boss_movement_random(1,5,2);
+					
+					need_water = false;
 				break;
 				case wave_wait:
 					state = 0;
@@ -296,6 +300,7 @@ if(global.gp_active) and (spell_wait == 0)
 		}
 	}
 	
+	water_scale += recursiv(water_scale,0.5 * need_water,16,0.01);	
 	
 }
 
