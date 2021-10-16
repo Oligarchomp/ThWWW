@@ -5,13 +5,73 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
+			var wine_spd = 1;
+			var	wine_row = 5; // must be odd
+			var wine_dist = room_width / wine_row;
 			
+			var mentos_nbr = 5;
+			var mentos_spd = 1.6;
+			var mentos_accel = 0.01;
+			
+			var misha_nbr = 20;
+			var misha_spd = 2;
+			
+			var bubble_row = 1;
+			var bubble_spd_min = 3;
+			var bubble_spd_max = 5;
+			
+			var catch_nbr = 6;
+			var catch_spd_shot = 5;
+			var catch_angle_plus = 4;
+			
+			var nua_lenght = 280;
+			var nua_wait = 70;
 		break;
 		case 1:
+			var wine_spd = 1;
+			var	wine_row = 5; // must be odd
+			var wine_dist = room_width / wine_row;
 			
+			var mentos_nbr = 5;
+			var mentos_spd = 1.6;
+			var mentos_accel = 0.01;
+			
+			var misha_nbr = 24;
+			var misha_spd = 2;
+			
+			var bubble_row = 2;
+			var bubble_spd_min = 3;
+			var bubble_spd_max = 4.2;
+			
+			var catch_nbr = 8;
+			var catch_spd_shot = 5;
+			var catch_angle_plus = 4;
+			
+			var nua_lenght = 280;
+			var nua_wait = 62;
 		break;
 		case 2:
+			var wine_spd = 1;
+			var	wine_row = 7; // must be odd
+			var wine_dist = room_width / wine_row;
 			
+			var mentos_nbr = 5;
+			var mentos_spd = 1.6;
+			var mentos_accel = 0.01;
+			
+			var misha_nbr = 26;
+			var misha_spd = 2;
+			
+			var bubble_row = 3;
+			var bubble_spd_min = 2.5;
+			var bubble_spd_max = 4.5;
+			
+			var catch_nbr = 9;
+			var catch_spd_shot = 5;
+			var catch_angle_plus = 4;
+			
+			var nua_lenght = 280;
+			var nua_wait = 58;
 		break;
 		case 3:
 			var wine_spd = 1;
@@ -29,13 +89,12 @@ if(global.gp_active) and (spell_wait == 0)
 			var bubble_spd_min = 2.5;
 			var bubble_spd_max = 5;
 			
+			var nua_lenght = 280;
 			var nua_wait = 50;
 		break;
 	}
 	
-	var spell = self;
 	
-	var nua_lenght = 280;
 	
 	switch(state)
 	{
@@ -116,10 +175,20 @@ if(global.gp_active) and (spell_wait == 0)
 			}
 			else
 			{
-				state = 4;
+				switch(global.difficulty)
+				{
+					case 0:
+					case 1:
+					case 2:
+						state = 5;
+					break;
+					case 3:
+						state = 4;
+					break;
+				}
 			}
 		break;
-		case 4:
+		case 4://Lunatic
 			switch(state_time)
 			{
 				case 60:
@@ -144,6 +213,20 @@ if(global.gp_active) and (spell_wait == 0)
 					{
 						cancel_bullet(self);	
 					}
+				break;
+			}
+		break;
+		case 5://hard
+			switch(state_time)
+			{
+				case 20:
+					boss_charge(obj_boss.x,obj_boss.y)
+				break;
+				case 50:
+					shoot_ring(DAN_BUBBLE,1,catch_nbr,obj_boss.x,obj_boss.y,-90 + 180 / catch_nbr,catch_spd_shot,sfx_shot1,6);
+				break;
+				case 230:
+					state = 3;
 				break;
 			}
 		break;
@@ -188,9 +271,42 @@ if(global.gp_active) and (spell_wait == 0)
 				{
 					y_offscreen = 20;
 				}
+				
+				//for hard
+				if(collision_circle(x,y,30,obj_danmaku6,false,true))
+				{
+					state = 1;
+					play_sound(sfx_redirect2,1,false);
+				}
 			break;
 			case 1:
 				spd = goto_value(spd,mentos_spd,mentos_accel);
+			break;
+		}
+	}
+	
+	//catch hard
+	with(obj_danmaku6)
+	{
+		switch(state)
+		{
+			case 0:
+				if(state_time == 0)
+				{
+					angle_to = angle + 360;
+					y_offscreen = 200;
+					x_offscreen = 200;
+					is_cancelable = false;
+				}
+				angle = goto_value(angle,angle_to,catch_angle_plus);
+				
+				
+				if(angle == angle_to)
+				{
+					state = 1;
+					y_offscreen = 40;
+					x_offscreen = 40;
+				}
 			break;
 		}
 	}
