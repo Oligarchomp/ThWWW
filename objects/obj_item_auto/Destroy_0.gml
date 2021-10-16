@@ -26,6 +26,7 @@ switch(item_type)
 	case ITEM_CANCEL:
 	break;
 	case ITEM_LIFE :
+		play_sound(sfx_extend,1,false);
 	break;
 	case ITEM_BOMB:
 	break;

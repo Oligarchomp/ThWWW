@@ -62,9 +62,7 @@ if(global.gp_active)
 	
 	if (step == 0)
 	{
-		var inst = create_enemy(EN_CIRNO,room_width / 2, -20,540,1);
-		inst.angle = -90;
-		inst.spd = 5;
+		var inst = create_enemy(EN_CIRNO,room_width / 2, -20,540,1,5,-90);
 		inst.item_nbr = 9;
 	}
 	

@@ -13,15 +13,11 @@ if(global.gp_active)
 			var fairy_off = 46;
 			
 			var x_pos = 26 + (step / wait) * fairy_off;
-			var inst = create_enemy(EN_BLUE,x_pos,-20,fairy_life, 2);
-			inst.angle = -90;
-			inst.spd = fairy_spd;
+			var inst = create_enemy(EN_BLUE,x_pos,-20,fairy_life, 2,fairy_spd,-90);
 			inst.dir_go = 1;
 			inst.item_nbr = 1;
 			
-			var inst = create_enemy(EN_BLUE,room_width - x_pos,-20,fairy_life, 2);
-			inst.angle = -90;
-			inst.spd = fairy_spd;
+			var inst = create_enemy(EN_BLUE,room_width - x_pos,-20,fairy_life, 2,fairy_spd,-90);
 			inst.dir_go = -1;
 			inst.item_nbr = 1;
 	

@@ -81,9 +81,7 @@ if(global.gp_active)
 	switch(step)
 	{
 		case 0:
-			var inst = create_enemy(EN_BLUE,room_width - 50, -10,fairy_life,5);
-			inst.angle = -90;
-			inst.spd = 5;
+			var inst = create_enemy(EN_BLUE,room_width - 50, -10,fairy_life,5,5,-90);
 		break;
 		case 50:
 			need_fairy_time = fairy_lenght;
@@ -91,9 +89,7 @@ if(global.gp_active)
 			step_ref = step;
 		break;
 		case 200:
-			var inst = create_enemy(EN_BLUE,50, -10,fairy_life,5);
-			inst.angle = -90;
-			inst.spd = 5;
+			var inst = create_enemy(EN_BLUE,50, -10,fairy_life,5,5,-90);
 		break;
 		case 250:
 			need_fairy_time = fairy_lenght;
@@ -101,9 +97,7 @@ if(global.gp_active)
 			step_ref = step;
 		break;
 		case 400:
-			var inst = create_enemy(EN_BLUE,room_width - 100, -10,fairy_life,5);
-			inst.angle = -90;
-			inst.spd = 5;
+			var inst = create_enemy(EN_BLUE,room_width - 100, -10,fairy_life,5,5,-90);
 		break;
 		case 450:
 			need_fairy_time = fairy_lenght;
@@ -111,9 +105,7 @@ if(global.gp_active)
 			step_ref = step;
 		break;
 		case 600:
-			var inst = create_enemy(EN_BLUE,100, -10,fairy_life,5);
-			inst.angle = -90;
-			inst.spd = 5;
+			var inst = create_enemy(EN_BLUE,100, -10,fairy_life,5,5,-90);
 		break;
 		case 650:
 			need_fairy_time = fairy_lenght;
@@ -134,9 +126,7 @@ if(global.gp_active)
 			{
 				var x_pos = room_width - fairy_off - ((step - step_ref) * 45) % (room_width - fairy_off * 3);
 			}
-			var inst = create_enemy(EN_GREEN,x_pos,-20,small_fairy_life,4);
-			inst.angle = -90;
-			inst.spd = 5;
+			var inst = create_enemy(EN_GREEN,x_pos,-20,small_fairy_life,4,5,-90);
 			inst.item_nbr = 1;
 		}
 		need_fairy_time -= 1;

@@ -54,9 +54,7 @@ if(global.gp_active)
 				if(state_time % wait == 0)
 				{
 					var x_pos = x_off + state_time / wait * 30
-					var inst = create_enemy(EN_GREEN,x_pos,-20,3,5)
-					inst.angle = -90;
-					inst.spd = fairy_spd;
+					var inst = create_enemy(EN_GREEN,x_pos,-20,3,5,fairy_spd,-90)
 					inst.dir_to_go = -1;
 					inst.item_nbr = 1;
 				}
@@ -78,9 +76,7 @@ if(global.gp_active)
 				if(state_time % wait == 0)
 				{
 					var x_pos = room_width - x_off - state_time / wait * 30
-					var inst = create_enemy(EN_GREEN,x_pos,-20,3,5)
-					inst.angle = -90;
-					inst.spd = fairy_spd;
+					var inst = create_enemy(EN_GREEN,x_pos,-20,3,5,fairy_spd,-90)
 					inst.dir_to_go = 1;
 					inst.item_nbr = 1;
 				}
@@ -103,9 +99,7 @@ if(global.gp_active)
 				if(state_time % wait == 0)
 				{
 					var x_pos = x_off + (state_time * 13) % (room_width - x_off*2)
-					var inst = create_enemy(EN_GREEN,x_pos,-20,3,5)
-					inst.angle = -90;
-					inst.spd = fairy_spd;
+					var inst = create_enemy(EN_GREEN,x_pos,-20,3,5,fairy_spd,-90)
 					inst.dir_to_go = rng(2,true,1) - 1;
 					inst.item_nbr = 1;
 				}

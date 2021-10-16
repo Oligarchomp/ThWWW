@@ -58,14 +58,10 @@ if(global.gp_active)
 	if (step == 0)
 	{
 		//big
-		var inst = create_enemy(EN_RED,x_off,-20,big_life,1);
-		inst.angle = -90;
-		inst.spd = 5
+		var inst = create_enemy(EN_RED,x_off,-20,big_life,1,5,-90);
 		inst.item_nbr = 5;
 		
-		var inst = create_enemy(EN_RED,room_width - x_off,-20,big_life,1);
-		inst.angle = -90;
-		inst.spd = 5
+		var inst = create_enemy(EN_RED,room_width - x_off,-20,big_life,1,5,-90);
 		inst.item_nbr = 5;
 	}
 	

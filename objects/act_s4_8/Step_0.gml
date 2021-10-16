@@ -1,139 +1,90 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
 if(global.gp_active)
 {
 	switch(global.difficulty)
 	{
 		case 0:
-			var spam_wait = 25;
-			var spam_nbr = 2;
-			var spam_spd = 3;
-			var spam_open = 60;
+			var ring_nbr = 5;
+			var ring_spd1 = 1.5;
+			var ring_spd2 = 2;
 			
-			var bubble_wait = 50;
-			var bubble_spd = 3;
-			var bubble_accel = 0.02;
+			var rev_row = 0;
+			var rev_spd_min = 3.5;
+			var rev_spd_max = 5;
 		break;
 		case 1:
-			var spam_wait = 19;
-			var spam_nbr = 3;
-			var spam_spd = 3;
-			var spam_open = 60;
+			var ring_nbr = 9;
+			var ring_spd1 = 1.8;
+			var ring_spd2 = 2.4;
 			
-			var bubble_wait = 40;
-			var bubble_spd = 3;
-			var bubble_accel = 0.02;
+			var rev_row = 3;
+			var rev_spd_min = 3.5;
+			var rev_spd_max = 5;
 		break;
 		case 2:
-			var spam_wait = 16;
-			var spam_nbr = 4;
-			var spam_spd = 3;
-			var spam_open = 60;
+			var ring_nbr = 12;
+			var ring_spd1 = 1.8;
+			var ring_spd2 = 2.4;
 			
-			var bubble_wait = 32;
-			var bubble_spd = 3;
-			var bubble_accel = 0.02;
+			var rev_row = 4;
+			var rev_spd_min = 3;
+			var rev_spd_max = 5.5;
 		break;
 		case 3:
-			var spam_wait = 12;
-			var spam_nbr = 4;
-			var spam_spd = 3;
-			var spam_open = 60;
+			var ring_nbr = 16;
+			var ring_spd1 = 1.8;
+			var ring_spd2 = 2.4;
 			
-			var bubble_wait = 30;
-			var bubble_spd = 3;
-			var bubble_accel = 0.02;
+			var rev_row = 4;
+			var rev_spd_min = 3;
+			var rev_spd_max = 5.5;
 		break;
 	}
 	
-	var spawn_lenght = 600;
-	var spawn_wait = 13;
+	var lenght = 630;
+	var fairy_wait = 12;
 	
-	var f_life = 3;
+	var fairy_life = 5;
+	var	fairy_spd = 4;
+	var fairy_open = 14;
 	
-	var big_life = 40;
-	var big_shoot_lenght = 61;
-	var big_wait = 80;
-	
-	if(step < spawn_lenght)
+	if(step < lenght)
 	{
-		if(step % spawn_wait == 0)
+		if(step % fairy_wait == 0)
 		{
-			create_enemy(EN_GREEN,room_width / 2 - 220 * spawn_dir,80,f_life,3,4,90 - 90 * spawn_dir)	
-			spawn_dir *= -1;
-		}
-	}
-
-	
-	if (step % big_wait == 0)
-	{
-		if(step/big_wait < ds_list_size(x_list))
-		{
-			var inst = create_enemy(EN_BLUE,x_list[|step/big_wait], -20, big_life,4,5.5,-90);
-			inst.item_nbr = 4;
+			var ang = -90 + fairy_open - rng(fairy_open * 2,false,6);
+			var inst = create_enemy(EN_GREEN,40 + rng(320,true,2),-20,fairy_life,5,fairy_spd,ang);
+			inst.wait_shot = 10 + rng(70,true,9);
+			inst.item_nbr = 2;
 		}
 	}
 	
-	
-	if(step % spam_wait = spam_wait - 1)
+	with(obj_enemy5)
 	{
-		with(obj_enemy3)
+		if(wait_shot > 0)
 		{
-			for(var i = 0; i < spam_nbr; i += 1)
+			wait_shot -= 1;
+			if(wait_shot == 0)
 			{
-				var ang = 90 - spam_open + rng(spam_open * 2,false,9);
-				var inst = shoot(DAN_BALL,3,x,y,ang,spam_spd,sfx_shot1,2);
-				inst.pos_type = POS_SP;
-				inst.y_grav_accel = 0.05;
-				inst.y_grav_max = 6;	
+				var rand = rng(360,false,1);
+				shoot_ring(DAN_BALL,3,ring_nbr,x,y,rand,ring_spd1,sfx_shot1,4);
+				shoot_ring(DAN_BALL,4,ring_nbr,x,y,rand + 180 / ring_nbr,ring_spd2,sfx_shot1,4);
 			}
 		}
-		
-	}
-	
-	
-	with(obj_enemy4)
-	{
-		switch(state)
+		else
 		{
-			case 0:
-				spd = goto_value(spd,0,0.1);
-				if(spd == 0)
-				{
-					state = 1;
-				}
-			break;
-			case 1://shoot aim
-				if(state_time < big_shoot_lenght)
-				{
-					if(state_time % bubble_wait == 0)
-					{
-						shoot(DAN_BUBBLE,2,x,y,999,0,sfx_redirect1,4);
-					}
-				}
-				else
-				{
-					state = 2;
-				}
-			break;
-			case 2:
-				if(state_time == 70)
-				{
-					state = 3;
-					angle = -90;
-				}
-			break;
-			case 3:
-				spd = goto_value(spd,2,0.04);
-			break;
+			can_revenge = false;
 		}
 	}
 	
-	with(obj_danmaku4)
+	if(global.difficulty != 0)
 	{
-		spd = goto_value(spd,bubble_spd,bubble_accel);
+		for(var i = 0; i < ds_list_size(x_death_list); i += 1)
+		{
+			shoot_row(DAN_BUBBLE,6,rev_row,x_death_list[|i],y_death_list[|i],999,rev_spd_min,rev_spd_max,sfx_redirect1,5)
+		}
 	}
 	
 }

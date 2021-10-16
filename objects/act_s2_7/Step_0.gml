@@ -41,13 +41,9 @@ if(global.gp_active)
 		{
 			if(step % fairy_wait == 0)
 			{
-				var inst = create_enemy(EN_BLUE,-20,fairy_y_off + rng(90,false,3),fairy_life,1);
-				inst.angle = 0;
-				inst.spd = 4;
-			
-				var inst = create_enemy(EN_BLUE,room_width + 20,fairy_y_off + rng(90,false,3),fairy_life,1);
-				inst.angle = 180;
-				inst.spd = 4;
+				create_enemy(EN_BLUE,-20,fairy_y_off + rng(90,false,3),fairy_life,1,4,0);
+				
+				create_enemy(EN_BLUE,room_width + 20,fairy_y_off + rng(90,false,3),fairy_life,1,4,180);
 			}
 		}
 	

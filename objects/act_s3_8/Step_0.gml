@@ -40,7 +40,14 @@ if(global.gp_active)
 	var fairy_y_git = 50;
 	var fairy_life = 7;
 	
-	if(!instance_exists(obj_spell))
+	if(instance_exists(obj_spell))
+	{
+		wait_time = 90;
+	}
+	
+	wait_time = goto_value(wait_time,0,1);
+	
+	if(wait_time == 0)
 	{
 		if(step % fairy_wait == 0) and (step < time_active)
 		{

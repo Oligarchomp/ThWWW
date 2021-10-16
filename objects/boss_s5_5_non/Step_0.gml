@@ -95,7 +95,7 @@ if(global.gp_active)
 						break;
 						case 60:
 							state = 2;
-							boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);
+							play_sound(sfx_redirect1,1,false);
 							with(obj_danmaku6)
 							{
 								if(state = 0)

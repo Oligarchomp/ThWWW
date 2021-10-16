@@ -63,13 +63,13 @@ if(global.gp_active)
 		{
 			if(dir_spawn == 1)
 			{
-				var inst = create_enemy(EN_BLUE,room_width + 10,120,fairy_life,1);
-				var inst2 = create_enemy(EN_GREEN,-10,120,fairy_life,1);
+				var inst = create_enemy(EN_BLUE,room_width + 10,120,fairy_life,1,0,0);
+				var inst2 = create_enemy(EN_GREEN,-10,120,fairy_life,1,0,0);
 			}
 			else
 			{
-				var inst2 = create_enemy(EN_BLUE,-10,120,fairy_life,1);
-				var inst = create_enemy(EN_GREEN,room_width + 10,120,fairy_life,1);
+				var inst2 = create_enemy(EN_BLUE,-10,120,fairy_life,1,0,0);
+				var inst = create_enemy(EN_GREEN,room_width + 10,120,fairy_life,1,0,0);
 			}
 			inst.angle = 180 - rng(30,false,1);
 			inst.spd = fairy_spd;

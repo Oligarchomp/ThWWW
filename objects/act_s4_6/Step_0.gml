@@ -34,6 +34,16 @@ if(global.gp_active)
 	var fairy_lenght = 1300;
 	var fairy_dist = 101;
 	
+	if(instance_exists(obj_boss))
+	{
+		wait_time = 90;
+	}
+	
+	if(wait_time > 0)
+	{
+		wait_time -= 1;
+	}
+	
 	if(step < fairy_lenght)
 	{
 		if (step % fairy_wait == 0)
@@ -43,7 +53,8 @@ if(global.gp_active)
 				spawn_dir *= -1;
 			}
 			x_spawn += fairy_dist * spawn_dir; 
-			if(!instance_exists(obj_boss))
+			
+			if(wait_time == 0)
 			{
 				create_enemy(EN_RED,x_spawn,-20,fairy_life,5,6,-90);
 			}

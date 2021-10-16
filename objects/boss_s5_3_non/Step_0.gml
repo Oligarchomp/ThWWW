@@ -151,6 +151,10 @@ if(global.gp_active)
 						{
 							spell.state = 2;
 							cancel_bullet(self);
+						}
+						
+						if(state_time == 5)
+						{
 							with(obj_danmaku7)
 							{
 								state = 1;

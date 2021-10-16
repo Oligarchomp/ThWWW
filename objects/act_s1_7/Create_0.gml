@@ -7,3 +7,5 @@ event_inherited();
 act_lenght = 1800 //mid non + mid spell
 
 act_set_time(act_lenght,act_lenght);
+
+time_wait = 0;

@@ -6,86 +6,80 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var aim_spd_min = 2;
-			var aim_spd_max = 2.5;
+			var aim_spd_min = 2.8;
+			var aim_spd_max = 3;
 			var aim_row = 1;
 			var aim_arc = 1;
-			var aim_dist = 28;
+			var aim_dist = 0;
 			
-			var angle_plus_plus = 20;
-			var ball_spd = 1.5;
+			var angle_plus_plus = 12;
+			var ball_spd = 2.2;
 			
 			var pretty_lenght = 210;
-			var pretty_wait = 30;
+			var pretty_wait = 16;
 		break;
 		case 1:
-			var aim_spd_min = 3;
-			var aim_spd_max = 3.2;
+			var aim_spd_min = 4;
+			var aim_spd_max = 4.5;
 			var aim_row = 2;
 			var aim_arc = 3;
-			var aim_dist = 28;
+			var aim_dist = 19;
 			
-			var angle_plus_plus = 10;
-			var ball_spd = 2;
-			
-			var pretty_lenght = 210;
-			var pretty_wait = 14;
-		break;
-		case 2:
-			var aim_spd_min = 3.5;
-			var aim_spd_max = 3.8;
-			var aim_row = 2;
-			var aim_arc = 5;
-			var aim_dist = 28;
-			
-			var angle_plus_plus = 8;
-			var ball_spd = 2;
+			var angle_plus_plus = 6;
+			var ball_spd = 3.5;
 			
 			var pretty_lenght = 210;
 			var pretty_wait = 10;
 		break;
-		case 3:
-			var aim_spd_min = 4.1;
-			var aim_spd_max = 4.5;
-			var aim_row = 2;
+		case 2:
+			var aim_spd_min = 4.3;
+			var aim_spd_max = 5.3;
+			var aim_row = 3;
 			var aim_arc = 5;
-			var aim_dist = 20;
+			var aim_dist = 18;
 			
-			var angle_plus_plus = 5;
-			var ball_spd = 2;
+			var angle_plus_plus = 6;
+			var ball_spd = 3.8;
 			
 			var pretty_lenght = 210;
 			var pretty_wait = 8;
+		break;
+		case 3:
+			var aim_spd_min = 4.5;
+			var aim_spd_max = 5.5;
+			var aim_row = 3;
+			var aim_arc = 5;
+			var aim_dist = 16;
+			
+			var angle_plus_plus = 4;
+			var ball_spd = 4;
+			
+			var pretty_lenght = 210;
+			var pretty_wait = 6;
 		break;
 	}
 	
 	var fairy_lenght = 240;
 	var fairy_y_off = 250;
-	var fairy_wait = 15;
-	var fairy_life = 15;
+	var fairy_wait = 30;
+	var fairy_life = 20;
 	
 	
 	
 	if(step == 0)
 	{
-		var inst = create_enemy(EN_RED,room_width / 2, -20,100,2);
-		inst.angle = -90;
-		inst.spd = 4.5;
+		var inst = create_enemy(EN_RED,room_width / 2, -20,110,2,4.5,-90);
 	}
 	
 	if(step < fairy_lenght)
 	{
 		if(step % fairy_wait == 0)
 		{
-			var inst = create_enemy(EN_BLUE,-10,fairy_y_off + rng(50,false,3),fairy_life,1);
-			inst.angle = 0;
-			inst.spd = 8 + rng(2,false,2);
-			inst.item_nbr = 1;
+			var inst = create_enemy(EN_BLUE,-10,fairy_y_off + rng(50,false,3),fairy_life,1,8 + rng(2,false,2),0);
+			inst.item_nbr = 2;
 			
-			var inst = create_enemy(EN_BLUE,room_width + 10,fairy_y_off + rng(50,false,3),fairy_life,1);
-			inst.angle = 180;
-			inst.spd = 8 + rng(2,false,2);
-			inst.item_nbr = 1;
+			var inst = create_enemy(EN_BLUE,room_width + 10,fairy_y_off + rng(50,false,3),fairy_life,1,8 + rng(2,false,2),180);
+			inst.item_nbr = 2;
 		}
 		
 	}
@@ -152,7 +146,7 @@ if(global.gp_active)
 				if(state_time == 60)
 				{
 					state = 3;
-					angle = find_angle(x,y,room_width / 2, -500);
+					angle = find_angle(x,y,room_width / 2, y - 100);
 				}
 			break;
 			case 3:

@@ -10,11 +10,12 @@ if(global.gp_active)
 			var mentos_spd = 2;
 			var mentos_wait = 70;
 			
-			var spam_wait = 4;
-			var spam_shot_spd = 2;
-			var spam_grav_accel = 0.05;
-			var spam_spd_git = 1;
-			var spam_open = 69;
+			var arc_wait = 800;
+			var arc_nbr = 3;
+			var arc_dist = 20;
+			var arc_spd_shot = 3;
+			var arc_grav = 0.08;
+			var arc_grav_max = 8;
 			
 			var arrow_spd_shot = 11;
 			var arrow_spd_final = 3;
@@ -27,11 +28,12 @@ if(global.gp_active)
 			var mentos_spd = 2.3;
 			var mentos_wait = 62;
 			
-			var spam_wait = 2;
-			var spam_shot_spd = 2;
-			var spam_grav_accel = 0.05;
-			var spam_spd_git = 1;
-			var spam_open = 65;
+			var arc_wait = 18;
+			var arc_nbr = 11;
+			var arc_dist = 9;
+			var arc_spd_shot = 4;
+			var arc_grav = 0.08;
+			var arc_grav_max = 11;
 			
 			var arrow_spd_shot = 11;
 			var arrow_spd_final = 3.5;
@@ -44,11 +46,12 @@ if(global.gp_active)
 			var mentos_spd = 2.5;
 			var mentos_wait = 56;
 			
-			var spam_wait = 1;
-			var spam_shot_spd = 2;
-			var spam_grav_accel = 0.05;
-			var spam_spd_git = 1;
-			var spam_open = 70;
+			var arc_wait = 15;
+			var arc_nbr = 15;
+			var arc_dist = 7;
+			var arc_spd_shot = 4;
+			var arc_grav = 0.08;
+			var arc_grav_max = 11;
 			
 			var arrow_spd_shot = 11;
 			var arrow_spd_final = 3.5;
@@ -61,11 +64,12 @@ if(global.gp_active)
 			var mentos_spd = 3;
 			var mentos_wait = 50;
 			
-			var spam_wait = 1;
-			var spam_shot_spd = 2;
-			var spam_grav_accel = 0.05;
-			var spam_spd_git = 1;
-			var spam_open = 76;
+			var arc_wait = 13;
+			var arc_nbr = 17;
+			var arc_dist = 6;
+			var arc_spd_shot = 4;
+			var arc_grav = 0.08;
+			var arc_grav_max = 11;
 			
 			var arrow_spd_shot = 11;
 			var arrow_spd_final = 3.5;
@@ -150,25 +154,10 @@ if(global.gp_active)
 				{
 					state = 1;
 				}
-				if(state_time % spam_wait == 0)
+				
+				if(state_time % arc_wait == 0)
 				{
-					if(global.difficulty == 3)
-					{
-						var nbr = 2;
-					}
-					else
-					{
-						var nbr = 1;
-					}
-					for(var i = 0; i < nbr; i += 1) 
-					{
-						var spd_spam = spam_shot_spd + rng(spam_spd_git,false,i + 2);
-						var aim = 90 - spam_open + rng(spam_open * 2,false,i + 1);
-						var inst = shoot(DAN_BALL,2,x,y,aim,spd_spam,sfx_shot2,7);
-						inst.pos_type = POS_SP;
-						inst.y_grav_accel = spam_grav_accel;
-						inst.y_grav_max = 6;
-					}
+					shoot_arc(DAN_BALL,2,arc_nbr,x,y,90,arc_dist,arc_spd_shot,sfx_shot2,7);
 				}
 			break;
 			case 1://shoot aim
@@ -236,6 +225,21 @@ if(global.gp_active)
 	with(obj_danmaku5)
 	{
 		spd = goto_value(spd,arrow_spd_final,0.3);
+	}
+	
+	with(obj_danmaku7)
+	{
+		pos_type = POS_SP;
+		y_grav_accel = arc_grav;
+		y_grav_max = arc_grav_max;
+		if(y < 200)
+		{
+			y_offscreen = 200;	
+		}
+		else
+		{
+			y_offscreen = 20;
+		}
 	}
 
 }

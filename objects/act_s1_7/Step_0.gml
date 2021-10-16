@@ -39,16 +39,24 @@ if(global.gp_active)
 	}
 	
 	
-	if(!instance_exists(obj_spell))
+	if(instance_exists(obj_spell))
+	{
+		time_wait = 90;
+	}
+	
+	if(time_wait > 0)
+	{
+		time_wait -= 1;
+	}
+	
+	if(time_wait == 0)
 	{
 		if (step < act_lenght - 60)
 		{
 			if(step % wait == 0)
 			{
 				var x_pos = x_off + (step * 87) % (room_width - 2 * x_off) 
-				var inst = create_enemy(EN_BLUE,x_pos,-20,fairy_life ,1)
-				inst.angle = -90;
-				inst.spd = fairy_spd;
+				var inst = create_enemy(EN_BLUE,x_pos,-20,fairy_life ,1,fairy_spd,-90)
 				inst.dir_to_go = rng(2,true,1) - 1;
 				inst.item_nbr = 1;
 			}
@@ -56,9 +64,7 @@ if(global.gp_active)
 			if(step % wait == wait / 2)
 			{
 				var x_pos = x_off + (step * 117) % (room_width - 2 * x_off) 
-				var inst = create_enemy(EN_RED,x_pos,-20,fairy_life ,1)
-				inst.angle = -90;
-				inst.spd = fairy_spd;
+				var inst = create_enemy(EN_RED,x_pos,-20,fairy_life ,1,fairy_spd,-90)
 				inst.dir_to_go = rng(2,true,1) - 1;
 				inst.item_nbr = 1;
 			}

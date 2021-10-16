@@ -3,7 +3,7 @@
 if(global.debug)
 {
 	instance_destroy(get_current_event());
-	screen_clear(false);
+	screen_clear(false,true);
 	event_next();
 	
 	

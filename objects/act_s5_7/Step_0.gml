@@ -50,6 +50,13 @@ if(global.gp_active)
 	
 	if(!instance_exists(obj_boss))
 	{
+		if(wait_time > 0)
+		{
+			wait_time -= 1;	
+		}
+	}
+	if(wait_time == 0)
+	{
 		if(step < active_lenght)
 		{
 			if(step % familiar_wait == 0)

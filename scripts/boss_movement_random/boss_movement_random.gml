@@ -10,8 +10,19 @@ function boss_movement_random(argument0,argument1,argument2) {
 
 	// The boss has a greater chance to return to the center of the screen
 
-	var x_referen = (room_width / 2) - obj_boss.x;
-	var x_rand_sign = sign(rng(room_width,true,1) - room_width / 2 + x_referen);
+	//var x_referen = (room_width / 2) - obj_boss.x;
+	if(obj_boss.x > 120) and (obj_boss.x < 280)
+	{
+		var x_rand_sign = -sign(obj_boss.x - obj_player.x)//sign(rng(room_width,true,1) - room_width / 2 + x_referen);
+		if(x_rand_sign == 0)
+		{
+			x_rand_sign = rng(2,true,5) * 2 - 1;
+		}
+	}
+	else
+	{
+		var x_rand_sign = -sign(obj_boss.x - room_width / 2)//sign(rng(room_width,true,1) - room_width / 2 + x_referen);
+	}
 	var x_rand = (x_dist + rng(40,true,2)) * x_rand_sign;
 	var new_x_pos = round(obj_boss.x_to + x_rand);
 
