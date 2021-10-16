@@ -18,11 +18,25 @@ if(global.gp_active) and (spell_wait == 0)
 			var	wine_row = 7; // must be odd
 			var wine_dist = room_width / wine_row;
 			
-			var mentos_nbr = 4;
+			var mentos_nbr = 6;
+			var mentos_spd = 1.6;
+			var mentos_accel = 0.005;
+			
+			var misha_nbr = 30;
+			var misha_spd = 2;
+			
+			var bubble_row = 4;
+			var bubble_spd_min = 2.5;
+			var bubble_spd_max = 5;
+			
+			var nua_wait = 50;
 		break;
 	}
 	
 	var spell = self;
+	
+	var nua_lenght = 280;
+	
 	switch(state)
 	{
 		case 0: 
@@ -49,7 +63,6 @@ if(global.gp_active) and (spell_wait == 0)
 					}
 				}
 			}
-			
 			state = 1;
 		break;
 		case 1:
@@ -70,9 +83,8 @@ if(global.gp_active) and (spell_wait == 0)
 							inst.wine_id = wine_nbr;
 							inst.my_pellet = self;
 							inst.y_offscreen = 500;
-							inst.group_id = spell.wine_group_id;
+							inst.is_cancelable = false;
 						}
-						spell.wine_group_id += 1;
 					}
 				}
 			}
@@ -88,31 +100,56 @@ if(global.gp_active) and (spell_wait == 0)
 			}
 		break;
 		case 3:
-			if(state_time % 60 == 0)
+			if(state_time < nua_lenght)
 			{
-				nua_aim = instance_nearest(room_width / 2 + 50 * aim_dir,100,obj_danmaku5);
-				aim_dir *= -1:
+				var move = floor(nua_wait / 2);
+				switch(state_time % nua_wait)
+				{
+					case 0:
+						shoot_ring(DAN_BUBBLE,6,misha_nbr,obj_boss.x,obj_boss.y,rng(360,false,7),misha_spd,sfx_redirect1,7);		
+						shoot_row(DAN_BUBBLE,0,bubble_row,obj_boss.x,obj_boss.y,999,bubble_spd_min,bubble_spd_max,noone,8);
+					break;
+					case move:
+						boss_movement_random(2,4,2);
+					break;
+				}
 			}
-			
+			else
+			{
+				state = 4;
+			}
+		break;
+		case 4:
+			switch(state_time)
+			{
+				case 60:
+					with(obj_danmaku1)
+					{
+						state = 2;
+					}
+					play_sound(sfx_photo_charge,1,false);
+				break;
+				case 140:
+					play_sound(sfx_redirect1,1,false);
+					with(obj_danmaku5)
+					{
+						state = 1;
+						y_offscreen = 20;
+						is_cancelable = true;
+					}
+				break;
+				case 240:
+					state = 0;
+					with(obj_danmaku1)
+					{
+						cancel_bullet(self);	
+					}
+				break;
+			}
 		break;
 	}
 	
-	if(instance_exists(nua_aim))
-	{
-		boss_movement_goto(nua_aim.x,nua_aim.y,2);
-		if (sqrt(sqr(nua_aim.x - obj_boss.x) + sqr(nua_aim.y - obj_boss.y)) < 20)
-		{
-			var id_check = nua_aim.group_id;
-			with(obj_danmaku5)
-			{
-				if(group_id = id_check)
-				{
-					cancel_bullet(self);
-				}
-			}
-		}
-	}
-	
+	//reference pellet
 	with(obj_danmaku1)
 	{
 		switch(state)
@@ -131,14 +168,16 @@ if(global.gp_active) and (spell_wait == 0)
 						inst.wine_id = wine_nbr;
 						inst.my_pellet = self;
 						inst.y_offscreen = 500;
-						inst.group_id = spell.wine_group_id;
+						inst.is_cancelable = false;
 					}
-					spell.wine_group_id += 1;
 				}
+			break;
+			case 2:
+				spd = goto_value(spd,0,0.02);
 			break;
 		}
 	}
-	
+	//mentos
 	with(obj_danmaku5)
 	{
 		switch(state)
@@ -150,9 +189,11 @@ if(global.gp_active) and (spell_wait == 0)
 					y_offscreen = 20;
 				}
 			break;
+			case 1:
+				spd = goto_value(spd,mentos_spd,mentos_accel);
+			break;
 		}
 	}
-	
 }
 
 // Inherit the parent event
