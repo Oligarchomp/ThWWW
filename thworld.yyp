@@ -288,6 +288,7 @@
     {"id":{"name":"spr_serene_art","path":"sprites/spr_serene_art/spr_serene_art.yy",},"order":4,},
     {"id":{"name":"data_read","path":"scripts/data_read/data_read.yy",},"order":0,},
     {"id":{"name":"obj_confetti","path":"objects/obj_confetti/obj_confetti.yy",},"order":1,},
+    {"id":{"name":"obj_helm","path":"objects/obj_helm/obj_helm.yy",},"order":4,},
     {"id":{"name":"vertex_add","path":"scripts/vertex_add/vertex_add.yy",},"order":1,},
     {"id":{"name":"obj_shot_secondary_sanae","path":"objects/obj_shot_secondary_sanae/obj_shot_secondary_sanae.yy",},"order":5,},
     {"id":{"name":"spr_pale_idle","path":"sprites/spr_pale_idle/spr_pale_idle.yy",},"order":0,},

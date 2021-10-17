@@ -5,7 +5,7 @@
 event_inherited();
 
 spell_set_life(920,240);
-spell_set_time(40,false,90);
+spell_set_time(40,false,130);
 
 act_dir = 1;
 

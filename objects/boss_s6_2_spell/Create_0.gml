@@ -9,6 +9,8 @@ spell_set_name("spell_s6_1a","spell_s6_1a","spell_s6_1b","spell_s6_1b")
 spell_set_life(800,170);
 spell_set_time(42,false,95);
 
+boss_movement_goto(room_width / 2, 100,7);
+
 
 x_anchor = 0;
 

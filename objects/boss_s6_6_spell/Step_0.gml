@@ -103,7 +103,7 @@ if(global.gp_active) and (spell_wait == 0)
 			for(var i = 0; i <wine_row; i += 1)
 			{
 				var x_pos = wine_dist / 2 + i * wine_dist;
-				var inst = shoot(DAN_PELLET,7,x_pos,-wine_dist * 2 - (i % 2 == 0) * wine_dist,90,0,noone,1);
+				var inst = shoot(DAN_PELLET,7,x_pos,-wine_dist * 2 - (i % 2 == wave_off) * wine_dist,90,0,noone,1);
 				inst.is_cancelable = false;
 				inst.y_offscreen = 5000;
 				inst.pellet_id = i;
@@ -114,7 +114,7 @@ if(global.gp_active) and (spell_wait == 0)
 			{
 				if(pellet_id = (wine_row - 1) / 2)
 				{
-					for(var i = y; i < room_height + wine_dist * 2; i += wine_dist * 2)
+					for(var i = y; i < room_height + wine_dist * 3; i += wine_dist * 2)
 					{
 						instance_create_depth(x,i,0,obj_wine_laser);
 						var inst = instance_create_depth(x,i,0,obj_wine_laser);
@@ -123,6 +123,9 @@ if(global.gp_active) and (spell_wait == 0)
 				}
 			}
 			state = 1;
+			
+			wave_off += 1;
+			wave_off %= 2;
 		break;
 		case 1:
 			if(state_time == 60)
