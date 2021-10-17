@@ -197,6 +197,7 @@
     {"id":{"name":"obj_bgm","path":"objects/obj_bgm/obj_bgm.yy",},"order":7,},
     {"id":{"name":"obj_enemy1","path":"objects/obj_enemy1/obj_enemy1.yy",},"order":5,},
     {"id":{"name":"spr_reimu_idle","path":"sprites/spr_reimu_idle/spr_reimu_idle.yy",},"order":0,},
+    {"id":{"name":"boss_s6_3_non","path":"objects/boss_s6_3_non/boss_s6_3_non.yy",},"order":7,},
     {"id":{"name":"spr_marisa_idle","path":"sprites/spr_marisa_idle/spr_marisa_idle.yy",},"order":0,},
     {"id":{"name":"boss_s3_1_non","path":"objects/boss_s3_1_non/boss_s3_1_non.yy",},"order":2,},
     {"id":{"name":"spr_spell_boss","path":"sprites/spr_spell_boss/spr_spell_boss.yy",},"order":3,},

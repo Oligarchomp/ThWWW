@@ -6,7 +6,7 @@ if(global.gp_active) and (spell_wait == 0)
 	{
 		case 0:
 			//wave 1
-			var mentos_ring = 36;
+			var mentos_ring = 23;
 			var mentos_spd = 6.5;
 			var mentos_wait = 19;
 			
@@ -44,7 +44,7 @@ if(global.gp_active) and (spell_wait == 0)
 		break;
 		case 1:
 			//wave 1
-			var mentos_ring = 44;
+			var mentos_ring = 30;
 			var mentos_spd = 8;
 			var mentos_wait = 14;
 			
@@ -82,7 +82,7 @@ if(global.gp_active) and (spell_wait == 0)
 		break;
 		case 2:
 			//wave 1
-			var mentos_ring = 49;
+			var mentos_ring = 35;
 			var mentos_spd = 9;
 			var mentos_wait = 13;
 			
@@ -120,7 +120,7 @@ if(global.gp_active) and (spell_wait == 0)
 		break;
 		case 3:
 			//wave 1
-			var mentos_ring = 55;
+			var mentos_ring = 40;
 			var mentos_spd = 9;
 			var mentos_wait = 12;
 			
@@ -198,7 +198,7 @@ if(global.gp_active) and (spell_wait == 0)
 			{
 				if(state_time % mentos_wait == 0)
 				{
-					shoot_ring(DAN_MENTOS,1,mentos_ring,obj_boss.x,obj_boss.y,999,mentos_spd,sfx_shot1,5);
+					shoot_ring(DAN_BUBBLE,1,mentos_ring,obj_boss.x,obj_boss.y,999,mentos_spd,sfx_redirect2,5);
 				}
 				
 				if(state_time % around_wait == 0)

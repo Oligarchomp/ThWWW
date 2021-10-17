@@ -180,7 +180,10 @@ if(global.gp_active)
 						y_offscreen = 150;
 					break;
 					case 1:
-						spd = goto_value(spd,ice_spd,0.1);
+					if(spd < ice_spd)
+					{
+						spd += 0.1;
+					}
 						if(state_time == 50)
 						{
 							x_offscreen = 20;
