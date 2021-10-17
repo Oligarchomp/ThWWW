@@ -219,28 +219,47 @@ if (global.gp_active)
 	
 	if(bomb_time == 0) 
 	{
-		if(state != 2) and (!in_dialogue)
+		if(global.bomb_pressed) and (state != 2) and (!in_dialogue)
 		{
-			if(global.bomb_pressed)
+			instance_create_depth(0,0,0,obj_bomb);
+			state = 0;
+			with(obj_spell)
 			{
-				instance_create_depth(0,0,0,obj_bomb);
-				state = 0;
-				with(obj_spell)
-				{
-					is_capturing = false;
-				}
+				is_capturing = false;
 			}
 		}
 	}
 	else
 	{
-		invincibility = bomb_time;
-		
-		bomb_time -= 1;
-		
 		with(obj_item)
 		{
 			auto_collect = true;
+		}
+		
+		invincibility = bomb_time;
+		bomb_time -= 1;
+		
+		if(bomb_time == 0)
+		{
+			with(obj_danmaku)
+			{
+				if(!is_spawning)
+				{
+					image_xscale = visual_xscale;
+					image_yscale = visual_yscale;
+				}
+			}
+		}
+		else
+		{
+			with(obj_danmaku)
+			{
+				if(!is_spawning)
+				{
+					image_xscale = 1;
+					image_yscale = 1;
+				}
+			}
 		}
 	}
 	
