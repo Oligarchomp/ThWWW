@@ -310,6 +310,7 @@
     {"id":{"name":"spr_pale_move","path":"sprites/spr_pale_move/spr_pale_move.yy",},"order":1,},
     {"id":{"name":"add_score","path":"scripts/add_score/add_score.yy",},"order":23,},
     {"id":{"name":"obj_debug","path":"objects/obj_debug/obj_debug.yy",},"order":4,},
+    {"id":{"name":"boss_s6_5_non","path":"objects/boss_s6_5_non/boss_s6_5_non.yy",},"order":8,},
     {"id":{"name":"spr_kunai","path":"sprites/spr_kunai/spr_kunai.yy",},"order":10,},
     {"id":{"name":"spr_base_marisa","path":"sprites/spr_base_marisa/spr_base_marisa.yy",},"order":0,},
     {"id":{"name":"sfx_pause","path":"sounds/sfx_pause/sfx_pause.yy",},"order":4,},
