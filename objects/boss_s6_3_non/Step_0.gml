@@ -4,128 +4,163 @@ if(global.gp_active)
 {
 	switch(spell_wait)
 	{
-		case 100:
-			boss_charge(obj_boss.x,obj_boss.y);
-		break;
 		case 70:
 			instance_create_depth(obj_boss.x,obj_boss.y,0,obj_helm);
 		break;
 		case 30:
-			boss_charge(obj_boss.x,obj_boss.y)
+			boss_charge(obj_boss.x,obj_boss.y);
 		break;
 		case 0:
 			switch(global.difficulty)
 			{
 				case 0:
-					var torpedo_wait = 120;
-					var torpedo_tail_wait = 18;
-					var torpedo_lenght = 100;
-					var torpedo_ring = 16;
-					var torpedo_spd = 1.5;
-					var torpedo_angle_plus = 1;
-					var torpedo_angle_max = 90;
-			
-					var off_div = 4;
+					var bubble_wait = 14;
+					var bubble_nbr = 5;
+					var bubble_open_max = 360 / bubble_nbr;
+					var bubble_spd_min = 2;
+					var bubble_spd_scale = 2;
+					var bubble_dist_plus = 13;
+					
+					var spam_start = 10;
+					var spam_nbr = 7;
+					var spam_mult = 1.3;
+					
+					var wave_wait = 70;
+					
+					var bullet_wait = 8;
+					var bullet_spd = 2.5;
+					var bullet_ring = 6;
+					var bullet_start = 0;
+					var bullet_dist = 180 / bullet_ring / 4;
 				break;
 				case 1:
-					var torpedo_wait = 86;
-					var torpedo_tail_wait = 13;
-					var torpedo_lenght = 70;
-					var torpedo_ring = 18;
-					var torpedo_spd = 2;
-					var torpedo_angle_plus = 1;
-					var torpedo_angle_max = 100;
-			
-					var off_div = 3;
+					var bubble_wait = 10;
+					var bubble_nbr = 7;
+					var bubble_open_max = 360 / bubble_nbr;
+					var bubble_spd_min = 3;
+					var bubble_spd_scale = 2;
+					var bubble_dist_plus = 10;
+					
+					var spam_start = 10;
+					var spam_nbr = 12;
+					var spam_mult = 1.4;
+					
+					var wave_wait = 70;
+					
+					var bullet_wait = 7;
+					var bullet_spd = 3;
+					var bullet_ring = 7;
+					var bullet_start = 0;
+					var bullet_dist = 180 / bullet_ring / 4;
 				break;
 				case 2:
-					var torpedo_wait = 70;
-					var torpedo_tail_wait = 11;
-					var torpedo_lenght = 60;
-					var torpedo_ring = 21;
-					var torpedo_spd = 2;
-					var torpedo_angle_plus = 1;
-					var torpedo_angle_max = 110;
-			
-					var off_div = 3;
+					var bubble_wait = 10;
+					var bubble_nbr = 7;
+					var bubble_open_max = 360 / bubble_nbr;
+					var bubble_spd_min = 3;
+					var bubble_spd_scale = 3;
+					var bubble_dist_plus = 8.2;
+					
+					var spam_start = 10;
+					var spam_nbr = 13;
+					var spam_mult = 1.5;
+					
+					var wave_wait = 60;
+					
+					var bullet_wait = 7;
+					var bullet_spd = 3;
+					var bullet_ring = 9;
+					var bullet_start = 0;
+					var bullet_dist = 180 / bullet_ring / 4;
 				break;
 				case 3:
-					var torpedo_wait = 70;
-					var torpedo_tail_wait = 9;
-					var torpedo_lenght = 60;
-					var torpedo_ring = 22;
-					var torpedo_spd = 2.5;
-					var torpedo_angle_plus = 1;
-					var torpedo_angle_max = 110;
-			
-					var off_div = 3;
+					var bubble_wait = 10;
+					var bubble_nbr = 7;
+					var bubble_open_max = 360 / bubble_nbr;
+					var bubble_spd_min = 3;
+					var bubble_spd_scale = 4;
+					var bubble_dist_plus = 8;
+					
+					var spam_start = 10;
+					var spam_nbr = 18;
+					var spam_mult = 1.6;
+					
+					var wave_wait = 50;
+					
+					var bullet_wait = 7;
+					var bullet_spd = 3;
+					var bullet_ring = 11;
+					var bullet_start = 0;
+					var bullet_dist = 180 / bullet_ring / 4;
 				break;
 			}
 	
-			var boss_wait = 220;
-	
-			if(step % boss_wait == boss_wait -1)
+			if(step > bullet_start)
 			{
-				boss_movement_random(1,2,1);
-			}
-	
-			if(step % torpedo_wait == 0)
-			{
-				ds_list_add(angle_list,angle_torpedo);
-				ds_list_add(time_list,torpedo_lenght);
-				ds_list_add(dir_list,act_dir);
-		
-				ds_list_add(angle_list,angle_torpedo);
-				ds_list_add(time_list,torpedo_lenght);
-				ds_list_add(dir_list,-act_dir);
-		
-		
-				angle_torpedo = rng(360,false,5);
-			}
-	
-			for(var i = 0; i < ds_list_size(angle_list); i += 1)
-			{
-				if(time_list[|i] > 0)
+				if(step % bullet_wait == 0)
 				{
-					if((torpedo_lenght - time_list[|i]) % torpedo_tail_wait == 0)
+					shoot_ring(DAN_BULLET,7,bullet_ring,obj_boss.x,obj_boss.y,bullet_angle,bullet_spd,sfx_shot2,3);
+					shoot_ring(DAN_BULLET,7,bullet_ring,obj_boss.x,obj_boss.y,-bullet_angle - 180,bullet_spd,sfx_shot2,3);
+					bullet_angle += bullet_dist;
+				}
+			}
+			
+			switch(state)
+			{
+				case 0:
+					if(state_time == 0)
 					{
-						if(time_list[|i] == torpedo_lenght)
+						aim_dist = bubble_open_max;
+					}
+					
+					if(aim_dist >= spam_start)
+					{
+						if(state_time % bubble_wait == 0)
 						{
-							var dan = DAN_BUBBLE;
-							var col = 1;
-							var num = 5;
+							aim_spd = bubble_spd_min + aim_dist / bubble_open_max * bubble_spd_scale;
+							shoot_arc(DAN_BUBBLE,1,bubble_nbr,obj_boss.x,obj_boss.y,999,aim_dist,aim_spd,sfx_shot1,5);	
+							aim_dist = goto_value(aim_dist,0,bubble_dist_plus);
+						}
+					}
+					else
+					{
+						if(spam_total < spam_nbr)
+						{
+							if(state_time % 2 == 0)
+							{
+								var ang = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y) - spam_start * spam_mult + rng(spam_start * 2 * spam_mult,false,4);
+								var sp = bubble_spd_min + aim_dist / bubble_open_max * bubble_spd_scale;
+								shoot(DAN_BUBBLE,1,obj_boss.x,obj_boss.y,ang,sp,sfx_shot1,5);
+								spam_total += 1;
+							}
 						}
 						else
 						{
-							var dan = DAN_BULLET;
-							var col = 7;
-							var num = 4;
-						}
-				
-						var aim =  angle_list[|i] + dir_list[|i] * time_list[|i] / off_div;
-						for(var t = 0 ; t < 360; t += 360 / torpedo_ring)
-						{
-							var inst = shoot(dan,col,obj_boss.x,obj_boss.y,aim + t,torpedo_spd,sfx_shot1,num);
-							if(instance_exists(inst))
-							{
-								inst.dir = dir_list[|i];
-								inst.angle_to = inst.angle + torpedo_angle_max * inst.dir;
-							}
+							state = 1;
+							spam_total = 0;
 						}
 					}
-		
-					time_list[|i] -= 1;
-				}
+				break;
+				case 1:
+					var wave_wait2 = wave_wait + 30;
+					switch(state_time)
+					{
+						case 0:
+							boss_movement_random(2,3,2);
+						break;
+						case wave_wait:
+							boss_charge(obj_boss.x,obj_boss.y);
+						break;
+						case wave_wait2:
+							state = 0;
+						break;
+					}
+				break;
 			}
-	
-			with(obj_danmaku5)
-			{
-				angle = goto_value(angle,angle_to,torpedo_angle_plus);
-			}
-			with(obj_danmaku4)
-			{
-				angle = goto_value(angle,angle_to,torpedo_angle_plus);
-			}
+			
+			
+			
+			
 		break;
 	}
 }

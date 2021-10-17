@@ -4,13 +4,13 @@
 // Inherit the parent event
 event_inherited();
 
-spell_set_life(920,240);
+spell_set_life(850,140);
 spell_set_time(40,false,130);
 
-act_dir = 1;
 
-angle_list = ds_list_create();
-time_list = ds_list_create();
-dir_list = ds_list_create();
+aim_spd = 0;
+aim_dist = 0;
 
-angle_torpedo = rng(360,false,4);
+bullet_angle = 0;
+
+spam_total = 0;
