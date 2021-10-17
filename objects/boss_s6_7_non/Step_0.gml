@@ -8,7 +8,7 @@ if(global.gp_active) and (spell_wait == 0)
 			//wave 1
 			var mentos_ring = 23;
 			var mentos_spd = 6.5;
-			var mentos_wait = 19;
+			var mentos_wait = 30;
 			
 			var around_arc = 4;
 			var around_spd_shot= 18;
@@ -46,7 +46,7 @@ if(global.gp_active) and (spell_wait == 0)
 			//wave 1
 			var mentos_ring = 30;
 			var mentos_spd = 8;
-			var mentos_wait = 14;
+			var mentos_wait = 26;
 			
 			var around_arc = 6;
 			var around_spd_shot= 18;
@@ -84,7 +84,7 @@ if(global.gp_active) and (spell_wait == 0)
 			//wave 1
 			var mentos_ring = 35;
 			var mentos_spd = 9;
-			var mentos_wait = 13;
+			var mentos_wait = 23;
 			
 			var around_arc = 8;
 			var around_spd_shot= 18;
@@ -122,7 +122,7 @@ if(global.gp_active) and (spell_wait == 0)
 			//wave 1
 			var mentos_ring = 40;
 			var mentos_spd = 9;
-			var mentos_wait = 12;
+			var mentos_wait = 20;
 			
 			var around_arc = 8;
 			var around_spd_shot= 18;
@@ -203,8 +203,8 @@ if(global.gp_active) and (spell_wait == 0)
 				
 				if(state_time % around_wait == 0)
 				{
-					dist_bullet = around_dist_ref + sin(state_time / 20) * 30;
-					var dist2 = around_dist_ref - sin(state_time / 20) * 30;
+					dist_bullet = around_dist_ref + sin(state_time / 20) * 20;
+					var dist2 = around_dist_ref - sin(state_time / 20) * 20;
 					shoot_arc(DAN_BULLET,7,around_arc,obj_boss.x,obj_boss.y,-90,dist_bullet,around_spd_shot,sfx_shot2,4);
 					shoot_arc(DAN_BULLET,7,around_arc,obj_boss.x,obj_boss.y,-90,dist2,around_spd_shot,sfx_shot2,4);
 				}
