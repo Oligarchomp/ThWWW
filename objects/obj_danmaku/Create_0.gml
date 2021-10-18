@@ -163,3 +163,5 @@ image_index = danmaku_id;
 image_danmaku = (color_id * image_nbr ) + (step * image_spd) % image_nbr; // to avoid the thing to turn purple for no reason
 
 sprite_index = spr_danmaku_hitbox;
+
+is_danmaku = true;

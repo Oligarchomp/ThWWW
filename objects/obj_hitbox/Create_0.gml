@@ -13,3 +13,5 @@ danmaku_id = 0;
 
 image_angle = 0;
 image_speed = 0;
+
+is_danmaku = false;

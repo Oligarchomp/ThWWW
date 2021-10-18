@@ -43,19 +43,18 @@ if(!instance_exists(obj_bgm))
 	instance_create_depth(0,0,0,obj_bgm);
 }
 
+event_step = 0; // current event step
+last_event_step = -1;
+event_time = 0; //since how long the current event as been going on
+wait_time = 0;
 
 
 event_list = ds_list_create();
 wait_list = ds_list_create();
 
 //need to remotely inject whatever needed
-
-
-
-
-
-/*
 //S1
+/*
 add_stage_event(act_s1_0,0);//keep this one
 add_stage_event(act_s1_1,30);
 add_stage_event(act_s1_2,0);
@@ -154,9 +153,7 @@ switch(global.player_chosen)
 add_stage_event(dialogue_s4_post,100);
 
 //S5
-*/
 add_stage_event(act_s5_0,0);// keep this one
-/*
 add_stage_event(act_s5_1,30);
 add_stage_event(act_s5_2,0);
 add_stage_event(act_s5_3,0);
@@ -172,26 +169,22 @@ add_stage_event(boss_s5_1_non,0);
 add_stage_event(boss_s5_2_spell,0);
 add_stage_event(boss_s5_3_non,40);
 add_stage_event(boss_s5_4_spell,0);
-*/
 add_stage_event(boss_s5_5_non,40);
-/*
 add_stage_event(boss_s5_6_spell,0);
 add_stage_event(boss_s5_7_spell,60);
 add_stage_event(dialogue_s5_post,70);
-
 
 //S6
 */
 add_stage_event(act_s6_0,0);// keep this one
 
+add_stage_event(boss_s6_9_spell,0);
 
-add_stage_event(act_s6_9_spell,0);
 /*
+add_stage_event(act_s6_9_spell,0);
 add_stage_event(dialogue_s6_mid,50)
 
-
 add_stage_event(dialogue_s6_pre,300);
-
 add_stage_event(boss_s6_2_spell,0);
 add_stage_event(boss_s6_3_non,50);
 add_stage_event(boss_s6_5_non,50);
@@ -199,10 +192,3 @@ add_stage_event(boss_s6_6_spell,0);
 add_stage_event(boss_s6_7_non,50);
 */
 
-
-event_step = 0; // current event step
-last_event_step = -1;
-
-event_time = 0; //since how long the current event as been going on
-
-wait_time = 0;

@@ -94,7 +94,7 @@ if (global.gp_active)
 	
 			if(global.invincible)
 			{
-				invincibility = 1;
+				invincibility = 2;
 			}
 			
 		
@@ -133,21 +133,33 @@ if (global.gp_active)
 			else
 			{
 				alpha = 1;
-				
-				if(!in_dialogue)
+			}
+			
+			if (bomb_time == 0) and (!in_dialogue)
+			{
+				//Checking for hitboxes
+				var plr = self;
+				with(obj_player_hurtbox)
 				{
-					//Checking for hitboxes
-					var plr = self;
-					with(obj_player_hurtbox)
+					var meet = instance_place(x,y,parent_hitbox)//danmaku is child of hitbox
+					if(meet != noone)
 					{
-						var meet = instance_place(x,y,parent_hitbox)//danmaku is child of hitbox
-						if(meet != noone)
+						if(plr.invincibility == 0)
 						{
 							plr.state = 1;
+						}
+						
+						if(meet.is_danmaku) and (meet.is_cancelable)
+						{
+							cancel_bullet(meet);
 						}
 					}
 				}
 			}
+			
+			
+			
+			
 		
 			//item
 			while(place_meeting(x,y,obj_item_auto))
@@ -176,6 +188,10 @@ if (global.gp_active)
 			{
 				case 0:
 					play_sound(sfx_death,1,false);
+					create_confetti(x,y,20,7);
+					create_confetti(x,y,20,5);
+					create_confetti(x,y,20,3);
+					boss_release(x,y,noone);
 				break;
 				case deathbomb_time:
 					state = 2;
@@ -228,6 +244,7 @@ if (global.gp_active)
 				is_capturing = false;
 			}
 		}
+		
 	}
 	else
 	{

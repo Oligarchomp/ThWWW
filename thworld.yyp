@@ -216,6 +216,7 @@
     {"id":{"name":"act_s5_85","path":"objects/act_s5_85/act_s5_85.yy",},"order":8,},
     {"id":{"name":"spr_spell_gradient","path":"sprites/spr_spell_gradient/spr_spell_gradient.yy",},"order":3,},
     {"id":{"name":"obj_danmaku3","path":"objects/obj_danmaku3/obj_danmaku3.yy",},"order":2,},
+    {"id":{"name":"boss_s6_9_spell","path":"objects/boss_s6_9_spell/boss_s6_9_spell.yy",},"order":9,},
     {"id":{"name":"obj_danmaku4","path":"objects/obj_danmaku4/obj_danmaku4.yy",},"order":3,},
     {"id":{"name":"spr_road","path":"sprites/spr_road/spr_road.yy",},"order":1,},
     {"id":{"name":"act_s3_6","path":"objects/act_s3_6/act_s3_6.yy",},"order":11,},

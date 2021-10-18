@@ -133,7 +133,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var bullet_dist = 180 / bullet_ring;
 		break;
 	}
-	var boss_wait = 145;
+	var boss_wait = 115;
 	var boss_start_shoot = 160;
 	
 	if(step > boss_start_shoot)

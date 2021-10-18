@@ -9,3 +9,5 @@ state_time = 0;
 alpha = 1;
 size = 1;
 size_max = 6;
+
+is_danmaku = false;
