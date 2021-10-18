@@ -7,7 +7,7 @@ event_inherited();
 spell_set_spell("s6_5",BOSS_NUA,34575000)
 spell_set_name("spell_s6_5a","spell_s6_5a","spell_s6_5b","spell_s6_5c")
 spell_set_life(3600,170);
-spell_set_time(18,false,95);
+spell_set_time(70,false,95);
 
 boss_movement_goto(room_width / 2, 110,7);
 
@@ -18,9 +18,10 @@ bullet_time = 0;
 bullet_aim = 0;
 bullet_off = 0;
 
-timeout_time = 900;
+timeout_time = 1200;
 
 item_nbr = 0;
 
-water_scale = 0;
-need_water = false;
+
+can_shield = true;
+

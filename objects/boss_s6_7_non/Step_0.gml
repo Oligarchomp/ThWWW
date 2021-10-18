@@ -174,7 +174,8 @@ if(global.gp_active) and (spell_wait == 0)
 					obj_boss.mask_index = spr_nothing;
 					obj_boss.alpha = 0.4;
 					
-					need_water = true;
+					var inst = instance_create_depth(obj_boss.x,obj_boss.y,obj_boss.depth - 1, obj_shield_nua);
+					inst.scale_spd = 0.01;
 				break;
 				case 65:
 					switch(wave_id)
@@ -271,7 +272,10 @@ if(global.gp_active) and (spell_wait == 0)
 					
 					boss_movement_random(1,5,2);
 					
-					need_water = false;
+					with(obj_shield_nua)
+					{
+						state = 1;
+					}
 				break;
 				case wave_wait:
 					state = 0;
@@ -299,8 +303,6 @@ if(global.gp_active) and (spell_wait == 0)
 			break;
 		}
 	}
-	
-	water_scale += recursiv(water_scale,0.5 * need_water,16,0.01);	
 	
 }
 

@@ -17,6 +17,3 @@ tss_angle = -90;
 tss_dir = 1;
 
 wall_open = 0;
-
-water_scale = 0;
-need_water = false;

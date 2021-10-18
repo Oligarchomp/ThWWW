@@ -6,3 +6,5 @@ width = sprite_get_width(sprite_index);
 hsp = -0.1;
 
 im = 0;
+
+off_im = 0;

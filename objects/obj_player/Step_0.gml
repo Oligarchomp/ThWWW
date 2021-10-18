@@ -22,9 +22,26 @@ if (global.gp_active)
 	var p = self;
 	with(obj_danmaku)
 	{
+		var hitb = false;
 		sprite_index = spr_nothing;
 		var dist = sqrt(sqr(p.x - x) + sqr(p.y - y));
-		if ((hit_nbr < 50) and (dist < 80)) or (p.bomb_time != 0)
+		
+		if(p.bomb_time == 0)
+		{
+			if ((hit_nbr < 50) and (dist < 80)) 
+			{
+				hitb = true;
+			}
+		}
+		else
+		{
+			if(is_cancelable)
+			{
+				hitb = true;
+			}
+		}
+		
+		if(hitb)
 		{
 			sprite_index = spr_danmaku_hitbox;
 			image_index = danmaku_id;

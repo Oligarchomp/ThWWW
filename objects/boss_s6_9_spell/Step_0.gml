@@ -30,7 +30,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var anchor_nbr = 6;
 			var anchor_spd_max = 10;
 			var anchor_accel = 0.04;
-			var anchor_wait = 160;
+			var anchor_wait = 155;
 		break;
 		case 1:
 			var bullet_wait = 15;
@@ -57,7 +57,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var anchor_nbr = 8;
 			var anchor_spd_max = 10;
 			var anchor_accel = 0.05;
-			var anchor_wait = 150;
+			var anchor_wait = 140;
 		break;
 		case 2:
 			var bullet_wait = 15;
@@ -84,7 +84,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var anchor_nbr = 10;
 			var anchor_spd_max = 10;
 			var anchor_accel = 0.06;
-			var anchor_wait = 136;
+			var anchor_wait = 126;
 		break;
 		case 3: 
 			var bullet_wait = 15;
@@ -108,10 +108,10 @@ if(global.gp_active) and (spell_wait == 0)
 			var mentos_spd = 2;
 			var mentos_wait = 35;
 			
-			var anchor_nbr = 13;
+			var anchor_nbr = 14;
 			var anchor_spd_max = 10;
 			var anchor_accel = 0.07;
-			var anchor_wait = 110;
+			var anchor_wait = 100;
 		break;
 	}
 	
@@ -267,20 +267,27 @@ if(global.gp_active) and (spell_wait == 0)
 		}
 	}
 	
-	if(obj_player.bomb_time == 0)
+	if(obj_player.bomb_time != 0)
 	{
-		need_water = false;
-		obj_boss.mask_index = spr_boss_hurtbox;
-		obj_boss.alpha = 1;
+		if(can_shield)
+		{
+			instance_create_depth(obj_boss.x,obj_boss.y,obj_boss.depth - 1, obj_shield_nua);
+			can_shield = false;
+			obj_boss.mask_index = spr_nothing;
+			obj_boss.alpha = 0.4;
+		}
 	}
 	else
 	{
-		need_water = true;
-		obj_boss.mask_index = spr_nothing;
-		obj_boss.alpha = 0.4;
+		obj_boss.mask_index = spr_boss_hurtbox;
+		obj_boss.alpha = 1;
+		can_shield = true;
+		with(obj_shield_nua)
+		{
+			state = 1;
+		}
 	}
 	
-	water_scale += recursiv(water_scale,0.5 * need_water,16,0.01);	
 }
 
 // Inherit the parent event
