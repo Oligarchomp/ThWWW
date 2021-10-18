@@ -16,15 +16,16 @@ if(global.gp_active) and (spell_wait == 0)
 			var bullet_angle_max = 70;
 			var bullet_angle_plus = 3;
 					
-			var bubble_wait = 60;
-			var bubble_nbr = 8;
-			var bubble_spd = 2.4;
-			var bubble_angle_max = 100;
+			var bubble_wait = bullet_wave;
+			var bubble_nbr = 12;
+			var bubble_spd_shoot = 5.8;
+			var bubble_spd_final = 2.2;
+			var bubble_angle_max = 0;
 			var bubble_angle_plus = 2.5;
 					
-			var mentos_nbr = 15;
-			var mentos_spd = 2;
-			var mentos_wait = 50;
+			var mentos_nbr = 14;
+			var mentos_spd = 1.8;
+			var mentos_wait = 56;
 			
 			var anchor_nbr = 6;
 			var anchor_spd_max = 10;
@@ -34,18 +35,19 @@ if(global.gp_active) and (spell_wait == 0)
 		case 1:
 			var bullet_wait = 15;
 			var bullet_ring = 17;
-			var bullet_spd_shot = 6;
+			var bullet_spd_shot = 6.3;
 			var bullet_spd_final = 3;
 			var bullet_accel = 0.06;
 			var bullet_lenght = 40;
 			var bullet_wave = 120;
-			var bullet_angle_max = 80;
+			var bullet_angle_max = 100;
 			var bullet_angle_plus = 3;
 					
-			var bubble_wait = 54;
-			var bubble_nbr = 10;
-			var bubble_spd = 2.5;
-			var bubble_angle_max = 125;
+			var bubble_wait = bullet_wave;
+			var bubble_nbr = 17;
+			var bubble_spd_shoot = 5.8;
+			var bubble_spd_final = 2.5;
+			var bubble_angle_max = 0;
 			var bubble_angle_plus = 2.5;
 					
 			var mentos_nbr = 17;
@@ -64,14 +66,15 @@ if(global.gp_active) and (spell_wait == 0)
 			var bullet_spd_final = 3.1;
 			var bullet_accel = 0.06;
 			var bullet_lenght = 40;
-			var bullet_wave = 112;
+			var bullet_wave = 108;
 			var bullet_angle_max = 100;
 			var bullet_angle_plus = 3;
 					
-			var bubble_wait = 50;
-			var bubble_nbr = 12;
-			var bubble_spd = 2.5;
-			var bubble_angle_max = 125;
+			var bubble_wait = bullet_wave;
+			var bubble_nbr = 20;
+			var bubble_spd_shoot = 5.8;
+			var bubble_spd_final = 2.5;
+			var bubble_angle_max = 0;
 			var bubble_angle_plus = 2.5;
 					
 			var mentos_nbr = 20;
@@ -81,33 +84,34 @@ if(global.gp_active) and (spell_wait == 0)
 			var anchor_nbr = 10;
 			var anchor_spd_max = 10;
 			var anchor_accel = 0.06;
-			var anchor_wait = 120;
+			var anchor_wait = 115;
 		break;
 		case 3: 
 			var bullet_wait = 15;
-			var bullet_ring = 21;
+			var bullet_ring = 22;
 			var bullet_spd_shot = 6.5;
-			var bullet_spd_final = 3.2;
+			var bullet_spd_final = 3.1;
 			var bullet_accel = 0.06;
 			var bullet_lenght = 40;
 			var bullet_wave = 95;
 			var bullet_angle_max = 100;
 			var bullet_angle_plus = 3;
 					
-			var bubble_wait = 43;
-			var bubble_nbr = 14;
-			var bubble_spd = 2.5;
-			var bubble_angle_max = 125;
+			var bubble_wait = bullet_wave;
+			var bubble_nbr = 24;
+			var bubble_spd_shoot = 5.8;
+			var bubble_spd_final = 2.5;
+			var bubble_angle_max = 0;
 			var bubble_angle_plus = 2.5;
 					
-			var mentos_nbr = 24;
+			var mentos_nbr = 25; 
 			var mentos_spd = 2;
 			var mentos_wait = 36;
 			
 			var anchor_nbr = 13;
 			var anchor_spd_max = 10;
 			var anchor_accel = 0.07;
-			var anchor_wait = 110;
+			var anchor_wait = 100;
 		break;
 	}
 	
@@ -137,22 +141,24 @@ if(global.gp_active) and (spell_wait == 0)
 			//mentos
 			if(step % mentos_wait == 0)
 			{
-				var aim = rng(360,false,7);
+				var aim = rng(360,false,4);
 				for(var i = 0; i < 360; i += 360 / mentos_nbr)
 				{
 					var inst = shoot(DAN_MENTOS,7,obj_boss.x,obj_boss.y,aim + i,mentos_spd,sfx_shot1,4);
 					inst.is_cancelable = false;
 				}
+				
+			//	mentos_aim += 180 / mentos_nbr;
 			}
 		//NO BREAK
 		case 1:
 			//bubble
-			if(step % bubble_wait == 0)
+			if(step % bubble_wait == floor(bubble_wait / 2))
 			{
 				var aim = rng(360,false,1);
 				for(var i = 0; i < 360; i += 360 / bubble_nbr)
 				{
-					var inst = shoot(DAN_BUBBLE,1,obj_boss.x,obj_boss.y,aim + i,bubble_spd,sfx_redirect1,5);
+					var inst = shoot(DAN_BUBBLE,1,obj_boss.x,obj_boss.y,aim  + i,bubble_spd_shoot,sfx_redirect1,5);
 					inst.angle_to = inst.angle + bubble_angle_max * bubble_dir;
 					inst.is_cancelable = false;
 				}
@@ -164,7 +170,7 @@ if(global.gp_active) and (spell_wait == 0)
 			if(step % bullet_wave == 0)
 			{
 				bullet_time = bullet_lenght;
-				bullet_aim = rng(360,false,4);
+				bullet_aim += 180 / bullet_ring;//rng(360,false,4);
 			}
 	
 			if(bullet_time > 0)
@@ -207,6 +213,7 @@ if(global.gp_active) and (spell_wait == 0)
 	with(obj_danmaku5)
 	{
 		angle = goto_value(angle,angle_to,bubble_angle_plus);
+		spd = goto_value(spd,bubble_spd_final,0.1);
 	}
 	//anchor
 	with(obj_danmaku1)

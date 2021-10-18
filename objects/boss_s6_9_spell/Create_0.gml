@@ -9,7 +9,7 @@ spell_set_name("spell_s6_5a","spell_s6_5a","spell_s6_5b","spell_s6_5c")
 spell_set_life(3600,170);
 spell_set_time(70,false,95);
 
-boss_movement_goto(room_width / 2, 110,7);
+boss_movement_goto(room_width / 2, 105,7);
 
 
 phase = 0;
@@ -18,11 +18,13 @@ bullet_time = 0;
 bullet_aim = 0;
 
 bubble_dir = 1;
+bubble_aim = -90;
 
 timeout_time = 1200;
 
 item_nbr = 0;
 
+mentos_aim = -90;
 
 can_shield = true;
 
