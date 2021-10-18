@@ -178,6 +178,7 @@ add_stage_event(dialogue_s5_post,70);
 */
 add_stage_event(act_s6_0,0);// keep this one
 
+//add_stage_event(boss_s6_7_non,50);
 add_stage_event(boss_s6_9_spell,0);
 
 /*
@@ -189,6 +190,6 @@ add_stage_event(boss_s6_2_spell,0);
 add_stage_event(boss_s6_3_non,50);
 add_stage_event(boss_s6_5_non,50);
 add_stage_event(boss_s6_6_spell,0);
-add_stage_event(boss_s6_7_non,50);
+
 */
 

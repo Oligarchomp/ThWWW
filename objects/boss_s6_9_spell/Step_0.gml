@@ -6,89 +6,118 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
+			var bullet_wait = 15;
+			var bullet_ring = 18;
+			var bullet_spd_shot = 7;
+			var bullet_spd_final = 3.2;
+			var bullet_accel = 0.06;
+			var bullet_lenght = 40;
+			var bullet_wave = 130;
+			var bullet_angle_max = 260;
+			var bullet_angle_plus = 3;
+			var bullet_offset = 0;
+					
+			var bubble_wait = 66;
+			var bubble_nbr = 10;
+			var bubble_spd = 2.3;
+			var bubble_angle_max = 120;
+			var bubble_angle_plus = 2.5;
+					
+			var mentos_nbr = 20;
+			var mentos_spd = 2;
+			var mentos_wait = 46;
 			
+			var anchor_nbr = 6;
+			var anchor_spd_max = 10;
+			var anchor_accel = 0.04;
+			var anchor_wait = 160;
 		break;
 		case 1:
+			var bullet_wait = 15;
+			var bullet_ring = 20;
+			var bullet_spd_shot = 7;
+			var bullet_spd_final = 3.2;
+			var bullet_accel = 0.06;
+			var bullet_lenght = 40;
+			var bullet_wave = 120;
+			var bullet_angle_max = 260;
+			var bullet_angle_plus = 3;
+			var bullet_offset = 0;
+					
+			var bubble_wait = 58;
+			var bubble_nbr = 11;
+			var bubble_spd = 2.3;
+			var bubble_angle_max = 130;
+			var bubble_angle_plus = 2.5;
+					
+			var mentos_nbr = 23;
+			var mentos_spd = 2;
+			var mentos_wait = 40;
 			
+			var anchor_nbr = 8;
+			var anchor_spd_max = 10;
+			var anchor_accel = 0.05;
+			var anchor_wait = 150;
 		break;
 		case 2:
+			var bullet_wait = 15;
+			var bullet_ring = 23;
+			var bullet_spd_shot = 7;
+			var bullet_spd_final = 3.2;
+			var bullet_accel = 0.06;
+			var bullet_lenght = 40;
+			var bullet_wave = 110;
+			var bullet_angle_max = 260;
+			var bullet_angle_plus = 3;
+			var bullet_offset = 0;
+					
+			var bubble_wait = 52;
+			var bubble_nbr = 12;
+			var bubble_spd = 2.5;
+			var bubble_angle_max = 130;
+			var bubble_angle_plus = 2.5;
+					
+			var mentos_nbr = 25;
+			var mentos_spd = 2;
+			var mentos_wait = 38;
 			
+			var anchor_nbr = 10;
+			var anchor_spd_max = 10;
+			var anchor_accel = 0.06;
+			var anchor_wait = 136;
 		break;
-		case 3: //LUNATIC
-			switch(phase)
-			{
-				case 0:
-					var bullet_wait = 15;
-					var bullet_ring = 25;
-					var bullet_spd_shot = 7;
-					var bullet_spd_final = 3.2;
-					var bullet_accel = 0.06;
-					var bullet_lenght = 40;
-					var bullet_wave = 95;
-					var bullet_angle_max = 260;
-					var bullet_angle_plus = 3;
-					var bullet_offset = 0;
-				break;
-				case 1:
-					var bullet_wait = 15;
-					var bullet_ring = 25;
-					var bullet_spd_shot = 7;
-					var bullet_spd_final = 3.2;
-					var bullet_accel = 0.06;
-					var bullet_lenght = 40;
-					var bullet_wave = 95;
-					var bullet_angle_max = 260;
-					var bullet_angle_plus = 3;
-					var bullet_offset = 0;
+		case 3: 
+			var bullet_wait = 15;
+			var bullet_ring = 25;
+			var bullet_spd_shot = 7;
+			var bullet_spd_final = 3.2;
+			var bullet_accel = 0.06;
+			var bullet_lenght = 40;
+			var bullet_wave = 95;
+			var bullet_angle_max = 260;
+			var bullet_angle_plus = 3;
+			var bullet_offset = 0;
 					
-					var bubble_wait = 44;
-					var bubble_nbr = 14;
-					var bubble_spd = 2.5;
-					var bubble_angle_max = 130;
-					var bubble_angle_plus = 2.5;
-				break;	
-				case 4:
-				case 3:
-					var anchor_nbr = 12;
-					var anchor_spd_max = 10;
-					var anchor_accel = 0.07;
-					var anchor_wait = 145;
-				case 2:
-					var bullet_wait = 15;
-					var bullet_ring = 25;
-					var bullet_spd_shot = 7;
-					var bullet_spd_final = 3.2;
-					var bullet_accel = 0.06;
-					var bullet_lenght = 40;
-					var bullet_wave = 95;
-					var bullet_angle_max = 260;
-					var bullet_angle_plus = 3;
-					var bullet_offset = 0;
+			var bubble_wait = 44;
+			var bubble_nbr = 14;
+			var bubble_spd = 2.5;
+			var bubble_angle_max = 130;
+			var bubble_angle_plus = 2.5;
 					
-					var bubble_wait = 44;
-					var bubble_nbr = 14;
-					var bubble_spd = 2.5;
-					var bubble_angle_max = 130;
-					var bubble_angle_plus = 2.5;
-					
-					var mentos_nbr = 25;
-					var mentos_spd = 2;
-					var mentos_wait = 35;
-				break;
-			}
+			var mentos_nbr = 25;
+			var mentos_spd = 2;
+			var mentos_wait = 35;
+			
+			var anchor_nbr = 13;
+			var anchor_spd_max = 10;
+			var anchor_accel = 0.07;
+			var anchor_wait = 110;
 		break;
 	}
 	
-	if(phase == 4)
-	{
-		var sp = 1.2;
-		
-		bullet_spd_final *= sp;
-		bubble_spd *= sp;
-		mentos_spd *= sp;
-		
-		anchor_wait = round(anchor_wait / 1.5)
-		
+	if(phase == 4)//timeout
+	{	
+		anchor_wait = round(anchor_wait / 2)
 	}
 	
 	
@@ -204,21 +233,21 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(phase)
 	{
 		case 0:
-			if(life_left < 2500)
+			if(life_left < 3100)
 			{
 				phase = 1;
 				state = 1;
 			}
 		break;
 		case 1:
-			if(life_left < 1800)
+			if(life_left < 2500)
 			{
 				phase = 2;
 				state = 2;
 			}
 		break;
 		case 2:
-			if(life_left < 1000)
+			if(life_left < 1700)
 			{
 				phase = 3;
 				state = 3;
@@ -232,11 +261,26 @@ if(global.gp_active) and (spell_wait == 0)
 		{
 			phase = 4;	
 			state = 3;
-			screen_clean(false,true);
+			//screen_clean(false,true);
 			play_sound(sfx_boat,1,false);
-			step = 0;
+			//step = 0;
 		}
 	}
+	
+	if(obj_player.bomb_time == 0)
+	{
+		need_water = false;
+		obj_boss.mask_index = spr_boss_hurtbox;
+		obj_boss.alpha = 1;
+	}
+	else
+	{
+		need_water = true;
+		obj_boss.mask_index = spr_nothing;
+		obj_boss.alpha = 0.4;
+	}
+	
+	water_scale += recursiv(water_scale,0.5 * need_water,16,0.01);	
 }
 
 // Inherit the parent event

@@ -33,29 +33,73 @@ if (global.gp_active)
 				inst.scale = rng(1,false,5);
 				
 			}
-			switch(state_time)
+			switch(boss_id)
 			{
-				case 0:
-					boss_movement_goto(x + lengthdir_x(30,ang),y + lengthdir_y(30,ang),0.5);
-					play_sound(sfx_boss_preexplosion,1,false);
-				break;
-				case 40:
-				
-					screen_shake(20,10);
-					if(boss_id != BOSS_YUUTO)
-					{
-						play_sound(sfx_boss_explosion,1,false);
-						repeat(120)
+				case BOSS_NUA:
+				case BOSS_REVERENCE:
+				switch(state_time)
+				{
+					case 0:
+						boss_movement_goto(x + lengthdir_x(50,ang),y + lengthdir_y(50,ang),0.2);
+						play_sound(sfx_boss_preexplosion,1,false);
+						for (var i = 0; i < 30; i += 1)
 						{
-							instance_create_depth(x,y,depth -1,obj_boss_explode);
+							var inst = instance_create_depth(x,y,depth -1,obj_boss_explode);
+							inst.scale = rng(1.5,false,i);
 						}
-					}
-					else
+					break;
+					case 10:
+					case 20:
+					case 30:
+					case 40:
+					case 50:
+					case 60:
+						play_sound(sfx_boss_preexplosion,1,false);
+						for (var i = 0; i < 30; i += 1)
+						{
+							var inst = instance_create_depth(x,y,depth -1,obj_boss_explode);
+							inst.scale = rng(1.5,false,i);
+						}
+					break;
+					case 70:
+						screen_shake(30,20);
+						play_sound(sfx_boss_explosion,1,false);
+						for (var i = 0; i < 200; i += 1)
+						{
+							var inst = instance_create_depth(x,y,depth -1,obj_boss_explode);
+							inst.scale = rng(4,false,i);
+						}
+						instance_destroy();
+					break;
+				}
+				
+				break;
+				default:
+					switch(state_time)
 					{
-						play_sound(sfx_boom,1,false);	
-						instance_create_depth(x,y,depth -1,obj_boom);
+						case 0:
+							boss_movement_goto(x + lengthdir_x(30,ang),y + lengthdir_y(30,ang),0.5);
+							play_sound(sfx_boss_preexplosion,1,false);
+						break;
+						case 40:
+				
+							screen_shake(20,10);
+							if(boss_id != BOSS_YUUTO)
+							{
+								play_sound(sfx_boss_explosion,1,false);
+								repeat(120)
+								{
+									instance_create_depth(x,y,depth -1,obj_boss_explode);
+								}
+							}
+							else
+							{
+								play_sound(sfx_boom,1,false);	
+								instance_create_depth(x,y,depth -1,obj_boom);
+							}
+							instance_destroy();
+						break;
 					}
-					instance_destroy();
 				break;
 			}
 		break;
