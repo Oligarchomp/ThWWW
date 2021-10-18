@@ -5,13 +5,31 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-					
+			var bullet_wait = 25;
+			var bullet_ring = 11;
+			var bullet_spd_shot = 5;
+			var bullet_spd_final = 2;
+			var bullet_angle_max = 160;
+			var bullet_angle_plus = 4;
+			var bullet_dist = -6;	
 		break;
 		case 1:
-					
+			var bullet_wait = 15;
+			var bullet_ring = 14;
+			var bullet_spd_shot = 6;
+			var bullet_spd_final = 2.6;
+			var bullet_angle_max = 160;
+			var bullet_angle_plus = 4;
+			var bullet_dist = -4;	
 		break;
 		case 2:
-					
+			var bullet_wait = 13;
+			var bullet_ring = 16;
+			var bullet_spd_shot = 6;
+			var bullet_spd_final = 3;
+			var bullet_angle_max = 160;
+			var bullet_angle_plus = 4;
+			var bullet_dist = -3;	
 		break;
 		case 3:
 			var bullet_wait = 12;
