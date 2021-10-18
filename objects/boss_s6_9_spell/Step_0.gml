@@ -7,111 +7,107 @@ if(global.gp_active) and (spell_wait == 0)
 	{
 		case 0:
 			var bullet_wait = 15;
-			var bullet_ring = 18;
-			var bullet_spd_shot = 7;
-			var bullet_spd_final = 3.2;
+			var bullet_ring = 15;
+			var bullet_spd_shot = 5;
+			var bullet_spd_final = 3;
 			var bullet_accel = 0.06;
 			var bullet_lenght = 40;
 			var bullet_wave = 130;
-			var bullet_angle_max = 260;
+			var bullet_angle_max = 70;
 			var bullet_angle_plus = 3;
-			var bullet_offset = 0;
 					
-			var bubble_wait = 66;
-			var bubble_nbr = 10;
-			var bubble_spd = 2.3;
-			var bubble_angle_max = 120;
+			var bubble_wait = 60;
+			var bubble_nbr = 8;
+			var bubble_spd = 2.4;
+			var bubble_angle_max = 100;
 			var bubble_angle_plus = 2.5;
 					
-			var mentos_nbr = 20;
+			var mentos_nbr = 15;
 			var mentos_spd = 2;
-			var mentos_wait = 46;
+			var mentos_wait = 50;
 			
 			var anchor_nbr = 6;
 			var anchor_spd_max = 10;
-			var anchor_accel = 0.04;
-			var anchor_wait = 155;
+			var anchor_accel = 0.05;
+			var anchor_wait = 150;
 		break;
 		case 1:
 			var bullet_wait = 15;
-			var bullet_ring = 20;
-			var bullet_spd_shot = 7;
-			var bullet_spd_final = 3.2;
+			var bullet_ring = 17;
+			var bullet_spd_shot = 6;
+			var bullet_spd_final = 3;
 			var bullet_accel = 0.06;
 			var bullet_lenght = 40;
 			var bullet_wave = 120;
-			var bullet_angle_max = 260;
+			var bullet_angle_max = 80;
 			var bullet_angle_plus = 3;
-			var bullet_offset = 0;
 					
-			var bubble_wait = 58;
-			var bubble_nbr = 11;
-			var bubble_spd = 2.3;
-			var bubble_angle_max = 130;
+			var bubble_wait = 54;
+			var bubble_nbr = 10;
+			var bubble_spd = 2.5;
+			var bubble_angle_max = 125;
 			var bubble_angle_plus = 2.5;
 					
-			var mentos_nbr = 23;
+			var mentos_nbr = 17;
 			var mentos_spd = 2;
-			var mentos_wait = 40;
+			var mentos_wait = 46;
 			
 			var anchor_nbr = 8;
 			var anchor_spd_max = 10;
 			var anchor_accel = 0.05;
-			var anchor_wait = 140;
+			var anchor_wait = 130;
 		break;
 		case 2:
 			var bullet_wait = 15;
-			var bullet_ring = 23;
-			var bullet_spd_shot = 7;
-			var bullet_spd_final = 3.2;
+			var bullet_ring = 19;
+			var bullet_spd_shot = 6.5;
+			var bullet_spd_final = 3.1;
 			var bullet_accel = 0.06;
 			var bullet_lenght = 40;
-			var bullet_wave = 110;
-			var bullet_angle_max = 260;
+			var bullet_wave = 112;
+			var bullet_angle_max = 100;
 			var bullet_angle_plus = 3;
-			var bullet_offset = 0;
 					
-			var bubble_wait = 52;
+			var bubble_wait = 50;
 			var bubble_nbr = 12;
 			var bubble_spd = 2.5;
-			var bubble_angle_max = 130;
+			var bubble_angle_max = 125;
 			var bubble_angle_plus = 2.5;
 					
-			var mentos_nbr = 25;
+			var mentos_nbr = 20;
 			var mentos_spd = 2;
-			var mentos_wait = 38;
+			var mentos_wait = 42;
 			
 			var anchor_nbr = 10;
 			var anchor_spd_max = 10;
 			var anchor_accel = 0.06;
-			var anchor_wait = 126;
+			var anchor_wait = 120;
 		break;
 		case 3: 
 			var bullet_wait = 15;
-			var bullet_ring = 25;
-			var bullet_spd_shot = 7;
+			var bullet_ring = 21;
+			var bullet_spd_shot = 6.5;
 			var bullet_spd_final = 3.2;
 			var bullet_accel = 0.06;
 			var bullet_lenght = 40;
 			var bullet_wave = 95;
-			var bullet_angle_max = 260;
+			var bullet_angle_max = 100;
 			var bullet_angle_plus = 3;
-			var bullet_offset = 0;
 					
-			var bubble_wait = 44;
+			var bubble_wait = 43;
 			var bubble_nbr = 14;
 			var bubble_spd = 2.5;
-			var bubble_angle_max = 130;
+			var bubble_angle_max = 125;
 			var bubble_angle_plus = 2.5;
 					
-			var mentos_nbr = 25;
+			var mentos_nbr = 24;
 			var mentos_spd = 2;
-			var mentos_wait = 35;
+			var mentos_wait = 36;
 			
-			var anchor_nbr = 14;
+			var anchor_nbr = 13;
 			var anchor_spd_max = 10;
 			var anchor_accel = 0.07;
-			var anchor_wait = 100;
+			var anchor_wait = 110;
 		break;
 	}
 	
@@ -157,12 +153,10 @@ if(global.gp_active) and (spell_wait == 0)
 				for(var i = 0; i < 360; i += 360 / bubble_nbr)
 				{
 					var inst = shoot(DAN_BUBBLE,1,obj_boss.x,obj_boss.y,aim + i,bubble_spd,sfx_redirect1,5);
-					inst.angle_to = inst.angle + bubble_angle_max;
-					inst.is_cancelable = false;
-					var inst = shoot(DAN_BUBBLE,1,obj_boss.x,obj_boss.y,aim + i,bubble_spd,sfx_redirect1,5);
-					inst.angle_to = inst.angle - bubble_angle_max;
+					inst.angle_to = inst.angle + bubble_angle_max * bubble_dir;
 					inst.is_cancelable = false;
 				}
+				bubble_dir *= -1;
 			}
 		//NO BREAK
 		case 0:
@@ -171,7 +165,6 @@ if(global.gp_active) and (spell_wait == 0)
 			{
 				bullet_time = bullet_lenght;
 				bullet_aim = rng(360,false,4);
-				bullet_off = 0;
 			}
 	
 			if(bullet_time > 0)
@@ -180,19 +173,13 @@ if(global.gp_active) and (spell_wait == 0)
 				{
 					for(var i = 0; i < 360; i += 360 / bullet_ring)
 					{
-						var inst = shoot(DAN_HEART,1,obj_boss.x,obj_boss.y,bullet_aim + bullet_off + i,bullet_spd_shot,sfx_shot2,3);
+						var inst = shoot(DAN_HEART,1,obj_boss.x,obj_boss.y,bullet_aim + i,bullet_spd_shot,sfx_shot2,3);
 						inst.angle_to = inst.angle + bullet_angle_max;
-						inst.x_offscreen = 200;
-						inst.y_offscreen = 200;
 						inst.is_cancelable = false;
-						var inst = shoot(DAN_HEART,1,obj_boss.x,obj_boss.y,bullet_aim - bullet_off + i,bullet_spd_shot,sfx_shot2,3);
+						var inst = shoot(DAN_HEART,1,obj_boss.x,obj_boss.y,bullet_aim + i,bullet_spd_shot,sfx_shot2,3);
 						inst.angle_to = inst.angle - bullet_angle_max;
-						inst.x_offscreen = 200;
-						inst.y_offscreen = 200;
 						inst.is_cancelable = false;
 					}	
-			
-					bullet_off += bullet_offset;
 				}
 		
 				bullet_time -= 1;
@@ -209,11 +196,9 @@ if(global.gp_active) and (spell_wait == 0)
 			case 0:
 				spd = goto_value(spd,bullet_spd_final,bullet_accel);
 				angle = goto_value(angle,angle_to,bullet_angle_plus);
-				if(state_time == 100)
+				if(state_time == 80)
 				{
 					state = 1;
-					x_offscreen = 20;
-					y_offscreen = 20;
 				}
 			break;
 		}
@@ -229,7 +214,10 @@ if(global.gp_active) and (spell_wait == 0)
 		spd = goto_value(spd,anchor_spd_max,anchor_accel);
 	}
 	
-	
+	if(keyboard_check_pressed(vk_control))
+	{
+		life_left -= 500;
+	}
 	switch(phase)
 	{
 		case 0:

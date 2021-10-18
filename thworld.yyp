@@ -73,6 +73,7 @@
     {"id":{"name":"boss_s2_5_spell","path":"objects/boss_s2_5_spell/boss_s2_5_spell.yy",},"order":5,},
     {"id":{"name":"dialogue_s2_post","path":"objects/dialogue_s2_post/dialogue_s2_post.yy",},"order":17,},
     {"id":{"name":"parent_enemy","path":"objects/parent_enemy/parent_enemy.yy",},"order":2,},
+    {"id":{"name":"boss_s6_1_non","path":"objects/boss_s6_1_non/boss_s6_1_non.yy",},"order":10,},
     {"id":{"name":"act_s3_2","path":"objects/act_s3_2/act_s3_2.yy",},"order":15,},
     {"id":{"name":"shoot_row","path":"scripts/shoot_row/shoot_row.yy",},"order":1,},
     {"id":{"name":"spr_agra","path":"sprites/spr_agra/spr_agra.yy",},"order":1,},

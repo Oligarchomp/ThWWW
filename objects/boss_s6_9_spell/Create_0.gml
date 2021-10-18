@@ -16,7 +16,8 @@ phase = 0;
 
 bullet_time = 0;
 bullet_aim = 0;
-bullet_off = 0;
+
+bubble_dir = 1;
 
 timeout_time = 1200;
 

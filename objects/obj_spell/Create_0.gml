@@ -73,7 +73,7 @@ life = 1000;
 life_left = life;
 
 
-life_almost = 200; //when the damage sfx changes
+life_almost = 220; //when the damage sfx changes
 
 is_timeout = false;
 

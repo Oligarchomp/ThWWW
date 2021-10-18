@@ -175,7 +175,7 @@ if(global.gp_active) and (spell_wait == 0)
 					obj_boss.alpha = 0.4;
 					
 					var inst = instance_create_depth(obj_boss.x,obj_boss.y,obj_boss.depth - 1, obj_shield_nua);
-					inst.scale_spd = 0.01;
+					inst.scale_spd = 0.02;
 				break;
 				case 65:
 					switch(wave_id)
