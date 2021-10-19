@@ -7,7 +7,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 0:
 			var sword_size = 5;
 			
-			var rice_open = 25;
+			var rice_open = 22;
 			var rice_spd_shoot = 4.5;
 			var rice_spd_git = 2;
 			var rice_spd_div = 2;
@@ -30,7 +30,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 1:
 			var sword_size = 5;
 			
-			var rice_open = 25;
+			var rice_open = 22;
 			var rice_spd_shoot = 4.5;
 			var rice_spd_git = 2;
 			var rice_spd_div = 2;
@@ -53,7 +53,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 2:
 			var sword_size = 5;
 			
-			var rice_open = 25;
+			var rice_open = 24;
 			var rice_spd_shoot = 4.5;
 			var rice_spd_git = 2;
 			var rice_spd_div = 2;
@@ -76,7 +76,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 3:
 			var sword_size = 5;
 			
-			var rice_open = 25;
+			var rice_open = 22;
 			var rice_spd_shoot = 4;
 			var rice_spd_git = 2;
 			var rice_spd_div = 2;

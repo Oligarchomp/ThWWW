@@ -14,7 +14,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var spam_bubble_nbr = 3;
 			var spam_ball_nbr = 14;
 			var spam_rice_nbr = 20;
-			var spam_open = 24;
+			var spam_open = 14;
 			
 			var tree_dan = DAN_BALL;
 			var tree_nbr = 16;
@@ -38,7 +38,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var spam_bubble_nbr = 5;
 			var spam_ball_nbr = 24;
 			var spam_rice_nbr = 32;
-			var spam_open = 26;
+			var spam_open = 18;
 			
 			var tree_dan = DAN_MENTOS;
 			var tree_nbr = 20;
@@ -62,7 +62,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var spam_bubble_nbr = 6;
 			var spam_ball_nbr = 26;
 			var spam_rice_nbr = 35;
-			var spam_open = 28;
+			var spam_open = 20;
 			
 			var tree_dan = DAN_BUBBLE;
 			var tree_nbr = 20;
@@ -86,7 +86,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var spam_bubble_nbr = 8;
 			var spam_ball_nbr = 30;
 			var spam_rice_nbr = 40;
-			var spam_open = 28;
+			var spam_open = 22;
 			
 			var tree_dan = DAN_BUBBLE;
 			var tree_nbr = 23;
