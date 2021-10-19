@@ -53,6 +53,12 @@ switch(en_type)
 		alpha = 0;
 		scale = 0;
 	break;
+	case EN_DOVE:
+		idle_spr = spr_dove_idle;
+		move_spr = spr_dove_idle;
+		move_type = 1;
+		idle_spd = 0.1;
+	break;
 }
 
 sprite_index = idle_spr;

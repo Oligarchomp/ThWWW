@@ -44,6 +44,10 @@ if (global.gp_active)
 		case 1:
 			sprite_index = idle_spr;
 			image_index = state_time * idle_spd;
+			if(en_type == EN_DOVE)
+			{
+				spr_dir = sign(hsp);
+			}
 		break;
 	}
 	
