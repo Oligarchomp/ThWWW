@@ -113,6 +113,10 @@ switch(danmaku_id)
 		sprite_danmaku = spr_rock;
 		rot_type = ROT_SPIN;
 	break;
+	case DAN_BIRD:
+		sprite_danmaku = spr_bird;
+		image_nbr = 4;
+	break;
 }
 
 

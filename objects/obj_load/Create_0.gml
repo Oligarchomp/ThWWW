@@ -78,6 +78,7 @@ global.difficulty = 3;
 #macro DAN_STARSMALL 19
 #macro DAN_CRAB 20
 #macro DAN_ROCK 21
+#macro DAN_BIRD 22
 
 //define rot_type
 #macro ROT_FOLLOW 0
