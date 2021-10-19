@@ -5,14 +5,58 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
+			var bird_wait = 4;
+			var bird_accel = 0.05;
+			var bird_spd_min = 1.7;
+			var bird_spd_git = 0.2;
+			var bird_angle = 80;
+			var bird_open = 5;
 			
+			var wave_lenght = 240;
+			var wave_wait = 320;
 			
+			var arc_wait = 60;
+			var arc_nbr = 3;
+			var arc_dist = 20;
+			var arc_spd = 1.6;
+			var arc_spd_div = 1;
+			var arc_aim_open = 20;
 		break;
 		case 1:
+			var bird_wait = 2;
+			var bird_accel = 0.05;
+			var bird_spd_min = 2;
+			var bird_spd_git = 0.3;
+			var bird_angle = 80;
+			var bird_open = 7;
 			
+			var wave_lenght = 240;
+			var wave_wait = 320;
+			
+			var arc_wait = 46;
+			var arc_nbr = 6;
+			var arc_dist = 15;
+			var arc_spd = 1.6;
+			var arc_spd_div = 1;
+			var arc_aim_open = 20;
 		break;
 		case 2:
+			var bird_wait = 0;//custom
+			var bird_accel = 0.05;
+			var bird_spd_min = 2.2;
+			var bird_spd_git = 0.4;
+			var bird_angle = 80;
+			var bird_open = 7;
 			
+			var wave_lenght = 240;
+			var wave_wait = 320;
+			
+			var arc_wait = 42;
+			var arc_nbr = 8;
+			var arc_dist = 12;
+			var arc_spd = 1.6;
+			var arc_spd_div = 1;
+			var arc_aim_open = 20;
 		break;
 		case 3:
 			var bird_wait = 1;
@@ -25,19 +69,12 @@ if(global.gp_active) and (spell_wait == 0)
 			var wave_lenght = 240;
 			var wave_wait = 320;
 			
-			var arrow_wait = 28;
-			var arrow_ring = 22;
-			var arrow_size = 2;
-			var arrow_spd_final = 5;
-			var arrow_accel = 0.02;
-			
 			var arc_wait = 40;
-			var arc_nbr = 9;
-			var arc_dist = 11;
+			var arc_nbr = 10;
+			var arc_dist = 10;
 			var arc_spd = 1.6;
 			var arc_spd_div = 1;
 			var arc_aim_open = 20;
-			
 		break;
 	}
 	
@@ -56,6 +93,7 @@ if(global.gp_active) and (spell_wait == 0)
 			{
 				if(state_time > 30) and (state_time < wave_wait - 100)
 				{
+					
 					if(state_time % arc_wait == 0)
 					{
 						var ang = find_angle(obj_boss.x,obj_boss.y,200 - 200 * act_dir,170) + arc_aim_open - rng(arc_aim_open * 2,false,3);
@@ -74,18 +112,28 @@ if(global.gp_active) and (spell_wait == 0)
 	
 	if(wave_time > 0 )
 	{
-		if(step % bird_wait == 0)
+		var need_dove = false;
+		if(global.difficulty == 2)
+		{
+			if(state_time % 3 != 0)
+			{
+				need_dove = true;			
+			}			
+		}
+		else
+		{
+			if(step % bird_wait == 0)
+			{
+				need_dove = true;
+			}
+		}
+		
+		if(need_dove)
 		{
 			var ang = -90 + bird_angle * act_dir - bird_open + rng(bird_open * 2,false,2);
 			var inst = shoot(DAN_BIRD,6,200 - 220 * act_dir,rng(room_height + bird_off,false,6) - bird_off,ang,0,noone,4);
-			inst.spd_to = bird_spd_min + rng(bird_spd_git,false,9);
+			inst.spd_to = bird_spd_min + rng(bird_spd_git,false,9);	
 		}
-		
-		if(wave_time ==  floor(wave_lenght / 2))
-		{
-		//	create_enemy(EN_DOVE,200 - 230 * act_dir,105,99999,5,4,-90 + bird_angle * act_dir);
-		}
-		
 		
 		wave_time -= 1;
 	}
@@ -96,25 +144,7 @@ if(global.gp_active) and (spell_wait == 0)
 		spd = goto_value(spd,spd_to,bird_accel);
 	}
 	
-	with(obj_enemy5)
-	{
-		if(step % arrow_wait == arrow_wait - 1)
-		{
-			var aim = find_angle(x,y,obj_player.x,obj_player.y);
-			for(var i = 0; i < 360; i += 360 / arrow_ring)
-			{
-				var inst = shoot(DAN_ARROW,3,x,y,aim + i,0,sfx_shot1,5);
-				inst.image_xscale = arrow_size;
-				inst.image_yscale = arrow_size;
-			}
-		}
-	}
-	
-	with(obj_danmaku5)
-	{
-		spd = goto_value(spd,arrow_spd_final,arrow_accel);
-	}
-	
+	//bubble
 	with(obj_danmaku7)
 	{
 		switch(state)

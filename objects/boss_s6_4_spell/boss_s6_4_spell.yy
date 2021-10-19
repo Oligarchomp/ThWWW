@@ -32,7 +32,7 @@
     "path": "folders/Objects/STAGES/Stage6.yy",
   },
   "resourceVersion": "1.0",
-  "name": "boss_s6_8_spell",
+  "name": "boss_s6_4_spell",
   "tags": [],
   "resourceType": "GMObject",
 }

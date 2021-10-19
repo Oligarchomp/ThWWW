@@ -169,7 +169,7 @@
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},"order":1,},
     {"id":{"name":"obj_spell_bg_text","path":"objects/obj_spell_bg_text/obj_spell_bg_text.yy",},"order":1,},
     {"id":{"name":"add_stage_event","path":"scripts/add_stage_event/add_stage_event.yy",},"order":0,},
-    {"id":{"name":"boss_s6_8_spell","path":"objects/boss_s6_8_spell/boss_s6_8_spell.yy",},"order":12,},
+    {"id":{"name":"boss_s6_4_spell","path":"objects/boss_s6_4_spell/boss_s6_4_spell.yy",},"order":12,},
     {"id":{"name":"check_damage","path":"scripts/check_damage/check_damage.yy",},"order":2,},
     {"id":{"name":"mus_stage1","path":"sounds/mus_stage1/mus_stage1.yy",},"order":0,},
     {"id":{"name":"obj_bosstitle","path":"objects/obj_bosstitle/obj_bosstitle.yy",},"order":2,},
