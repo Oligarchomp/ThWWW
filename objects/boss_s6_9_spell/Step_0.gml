@@ -81,7 +81,7 @@ if(global.gp_active)
 					var water_open = 0;
 				break;
 				case 3:
-					var aim_ring = 42;
+					var aim_ring = 44;
 					var aim_row = 5;
 					var aim_spd_min = 2.5;
 					var aim_spd_max = 6;

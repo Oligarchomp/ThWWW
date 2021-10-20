@@ -27,8 +27,15 @@ if(global.gp_active)
 		
 	}
 	
-	x = obj_boss.x;
-	y = obj_boss.y;
+	if(instance_exists(obj_boss))
+	{
+		x = obj_boss.x;
+		y = obj_boss.y;
+	}
+	else
+	{
+		instance_destroy();
+	}
 	
 	step += 1;
 }

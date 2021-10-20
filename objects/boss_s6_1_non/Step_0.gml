@@ -52,7 +52,7 @@ if(global.gp_active) and (spell_wait == 0)
 			{
 				var dan = DAN_BUBBLE;
 				var col1 = 1;
-				var col2 = 0;
+				var col2 = 2;
 			}
 			else
 			{

@@ -181,10 +181,10 @@ if(global.gp_active) and (spell_wait == 0)
 					switch(wave_id)
 					{
 						case 0:
-							state = 1;
+							state = 2;
 						break;
 						case 1:
-							state = 2;
+							state = 1;
 						break;
 						case 2:
 							wall_open = 0;

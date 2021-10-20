@@ -201,6 +201,7 @@
     {"id":{"name":"spr_raindrop","path":"sprites/spr_raindrop/spr_raindrop.yy",},"order":14,},
     {"id":{"name":"spr_hud","path":"sprites/spr_hud/spr_hud.yy",},"order":0,},
     {"id":{"name":"spr_helm","path":"sprites/spr_helm/spr_helm.yy",},"order":8,},
+    {"id":{"name":"act_s6_7","path":"objects/act_s6_7/act_s6_7.yy",},"order":14,},
     {"id":{"name":"obj_bgm","path":"objects/obj_bgm/obj_bgm.yy",},"order":7,},
     {"id":{"name":"obj_enemy1","path":"objects/obj_enemy1/obj_enemy1.yy",},"order":5,},
     {"id":{"name":"spr_reimu_idle","path":"sprites/spr_reimu_idle/spr_reimu_idle.yy",},"order":0,},
