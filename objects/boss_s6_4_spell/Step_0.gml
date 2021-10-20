@@ -78,7 +78,7 @@ if(global.gp_active) and (spell_wait == 0)
 		break;
 	}
 	
-	var bird_off = 80;
+	var bird_off = 30;
 	
 	
 	switch(state)

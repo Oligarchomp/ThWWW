@@ -12,4 +12,3 @@ spell_set_time(42,false,95);
 boss_movement_goto(room_width / 2, 100,7);
 
 wave_off = 0;
-
