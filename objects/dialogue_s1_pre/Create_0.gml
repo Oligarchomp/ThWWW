@@ -52,8 +52,8 @@ switch(global.player_chosen)
 		set_dialogue(spr_sanae_art,3,true,spr_apple_art,1,false,get_text("diag_s1_s5"),-1);
 		set_dialogue(spr_sanae_art,2,true,spr_apple_art,1,false,get_text("diag_s1_s6"),-1);
 		set_dialogue(spr_sanae_art,2,false,spr_apple_art,0,true,get_text("diag_s1_s7"),-1);
-		set_dialogue(spr_sanae_art,3,true,spr_apple_art,0,false,get_text("diag_s1_s8"),-1);
-		set_dialogue(spr_sanae_art,3,false,spr_apple_art,2,true,get_text("diag_s1_s9"),-1);
+		set_dialogue(spr_sanae_art,1,true,spr_apple_art,0,false,get_text("diag_s1_s8"),-1);
+		set_dialogue(spr_sanae_art,1,false,spr_apple_art,2,true,get_text("diag_s1_s9"),-1);
 		set_dialogue(spr_sanae_art,1,true,spr_apple_art,2,false,get_text("diag_s1_s10"),-1);
 	break;
 }

@@ -102,7 +102,7 @@ if(global.gp_active)
 						var ring_start = 200;
 						var ring_plus = 25;
 						var ring_nbr = 9;
-						var open_geyser = 26;
+						var open_geyser = 24;
 				
 						var bubble_every = 1;
 						var wait_geyser = 70;

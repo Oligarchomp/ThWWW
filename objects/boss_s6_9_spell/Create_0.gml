@@ -5,7 +5,7 @@
 event_inherited();
 
 spell_set_spell("s6_5",BOSS_NUA,34575000)
-spell_set_name("spell_s6_5a","spell_s6_5a","spell_s6_5b","spell_s6_5c")
+spell_set_name("spell_s6_5a","spell_s6_5a","spell_s6_5b","spell_s6_5b")
 spell_set_life(3800,250);
 spell_set_time(70,false,150);
 
