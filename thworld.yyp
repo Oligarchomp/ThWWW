@@ -81,6 +81,7 @@
     {"id":{"name":"boss_s6_1_non","path":"objects/boss_s6_1_non/boss_s6_1_non.yy",},"order":10,},
     {"id":{"name":"act_s3_2","path":"objects/act_s3_2/act_s3_2.yy",},"order":15,},
     {"id":{"name":"shoot_row","path":"scripts/shoot_row/shoot_row.yy",},"order":1,},
+    {"id":{"name":"boss_s6_8_spell","path":"objects/boss_s6_8_spell/boss_s6_8_spell.yy",},"order":18,},
     {"id":{"name":"spr_agra","path":"sprites/spr_agra/spr_agra.yy",},"order":1,},
     {"id":{"name":"spr_fairy_green_idle","path":"sprites/spr_fairy_green_idle/spr_fairy_green_idle.yy",},"order":0,},
     {"id":{"name":"obj_enemy_defeat","path":"objects/obj_enemy_defeat/obj_enemy_defeat.yy",},"order":0,},

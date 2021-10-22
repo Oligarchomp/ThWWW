@@ -23,7 +23,7 @@ pos_type = POS_ANGLE;
 // when true, follow it hsp and vsp.
 // set it to false when wanting to manually set it position every frame.
 
-
+spawn_type = SPAWN_ALPHA;
 
 angle = global.danmaku_angle;//for directions
 
@@ -38,6 +38,7 @@ switch(danmaku_id)
 	break;
 	case DAN_ANCHOR:
 		sprite_danmaku = spr_anchor;
+		spawn_type = SPAWN_SCALE;
 	break;
 	case DAN_ARROW:
 		sprite_danmaku = spr_arrow;
@@ -137,7 +138,7 @@ switch (rot_type)
 rot_spd = 2;
 
 
-spawn_type = SPAWN_ALPHA;
+
 
 spd = global.danmaku_speed;
 
