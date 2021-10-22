@@ -1,0 +1,14 @@
+/// @description Insert description here
+// You can write your code in this editor
+
+// Inherit the parent event
+event_inherited();
+
+act_set_time(960,960);
+
+
+act_dir = 1;
+
+stagecard_time = 730;
+
+fairy_nbr = 0;
