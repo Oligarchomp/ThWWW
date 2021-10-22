@@ -63,7 +63,7 @@ if(global.gp_active)
 			var wall_ring = 13;
 			var wall_arc = 3;
 			var wall_row = 3;
-			var wall_dist = 5;
+			var wall_dist = 6;
 			var wall_spd_min = 6;
 			var wall_spd_max = 11;
 			var wall_spd_final = 4.5;
@@ -72,8 +72,8 @@ if(global.gp_active)
 			
 			var ring_nbr = 34;
 			var ring_spd_shoot = 7;
-			var ring_spd_final1 = 1.3;
-			var ring_spd_final2 = 1.8;
+			var ring_spd_final1 = 1.5;
+			var ring_spd_final2 = 2;
 			var ring_lenght = 100;
 			var ring_wait = 40;
 		break;
@@ -90,24 +90,26 @@ if(global.gp_active)
 			play_sound(sfx_familiar_spawn,1,false);
 			create_enemy(EN_FAMILIAR,130,110,fam_life,3,0,0);
 			create_enemy(EN_FAMILIAR,270,110,fam_life,3,0,0);
-			ring_less = 4;
+			ring_less = 5;
 		break;
 		case 500:
 			play_sound(sfx_familiar_spawn,1,false);
 			create_enemy(EN_FAMILIAR,room_width / 2,90,fam_life,3,0,0);
 			create_enemy(EN_FAMILIAR,50,200,fam_life,3,0,0);
 			create_enemy(EN_FAMILIAR,350,200,fam_life,3,0,0);
-			ring_less = 10;
+			ring_less = 13;
 			wall_less = 2;
+			wall_in_less = 1;
 		break;
 		case 750:
 			play_sound(sfx_familiar_spawn,1,false);
-			create_enemy(EN_FAMILIAR,100,50,fam_life,3,0,0);
-			create_enemy(EN_FAMILIAR,300,50,fam_life,3,0,0);
-			create_enemy(EN_FAMILIAR,30,200,fam_life,3,0,0);
-			create_enemy(EN_FAMILIAR,370,200,fam_life,3,0,0);
-			ring_less = 14;
+			create_enemy(EN_FAMILIAR,100,60,fam_life,3,0,0);
+			create_enemy(EN_FAMILIAR,300,60,fam_life,3,0,0);
+			create_enemy(EN_FAMILIAR,30,210,fam_life,3,0,0);
+			create_enemy(EN_FAMILIAR,370,210,fam_life,3,0,0);
+			ring_less = 17;
 			wall_less = 2;
+			wall_in_less = 1;
 		break;
 	}
 	
@@ -123,7 +125,7 @@ if(global.gp_active)
 					var aim = find_angle(x,y,obj_player.x,obj_player.y) + 360 / wall_true_nbr / 2 ;
 					for(var i = 0; i < 360; i += 360 / wall_true_nbr)
 					{
-						shoot_arc_row(DAN_BUBBLE,1,wall_arc,wall_row,x,y,aim + i,wall_dist,wall_spd_min,wall_spd_max,sfx_shot1,4);
+						shoot_arc_row(DAN_BUBBLE,1,wall_arc - spell.wall_in_less,wall_row,x,y,aim + i,wall_dist,wall_spd_min,wall_spd_max,sfx_shot1,4);
 					}
 					state = 1;
 					angle_shoot = rng(360,false,7);
@@ -139,7 +141,7 @@ if(global.gp_active)
 						var nbr = ring_nbr - spell.ring_less;
 						shoot_ring(DAN_MENTOS,1,nbr,x,y,angle_shoot,ring_spd_shoot,sfx_shot2,3);
 						shoot_ring(DAN_MENTOS,7,nbr,x,y,angle_shoot + 360 / nbr / 2,ring_spd_shoot,sfx_shot2,3);
-						angle_shoot = rng(360,false,7);
+						angle_shoot += 180 / nbr;
 					}
 				}
 				else

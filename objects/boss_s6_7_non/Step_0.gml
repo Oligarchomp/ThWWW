@@ -18,7 +18,8 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			//wave 2
 			var bubble_wait = 18;
-			var bubble_ring = 11;
+			var bubble_arc = 7;
+			var bubble_dist = 32;
 			var bubble_spd = 5.5;
 			
 			var bullet_wait = 10;
@@ -27,7 +28,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var bullet_dist  = 180 / bullet_ring;
 			
 			//wave 3
-			var tss_arc = 11;
+			var tss_arc = 7;
 			var tss_dist = 10;
 			var tss_spd = 3.8;
 			var tss_wait = 4;
@@ -56,7 +57,8 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			//wave 2
 			var bubble_wait = 14;
-			var bubble_ring = 15;
+			var bubble_arc = 9;
+			var bubble_dist = 24;
 			var bubble_spd = 6.5;
 			
 			var bullet_wait = 8;
@@ -65,7 +67,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var bullet_dist  = 180 / bullet_ring;
 			
 			//wave 3
-			var tss_arc = 13;
+			var tss_arc = 9;
 			var tss_dist = 9;
 			var tss_spd = 4.3;
 			var tss_wait = 3;
@@ -94,7 +96,8 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			//wave 2
 			var bubble_wait = 10;
-			var bubble_ring = 15;
+			var bubble_arc = 9;
+			var bubble_dist = 24;
 			var bubble_spd = 6.5;
 			
 			var bullet_wait = 6;
@@ -103,7 +106,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var bullet_dist  = 180 / bullet_ring;
 			
 			//wave 3
-			var tss_arc = 13;
+			var tss_arc = 9;
 			var tss_dist = 11;
 			var tss_spd = 5.5;
 			var tss_wait = 2;
@@ -131,8 +134,9 @@ if(global.gp_active) and (spell_wait == 0)
 			var around_dist_ref = 50;
 			
 			//wave 2
-			var bubble_wait = 10;
-			var bubble_ring = 18;
+			var bubble_wait = 10;	
+			var bubble_arc = 9;
+			var bubble_dist = 19;
 			var bubble_spd = 7;
 			
 			var bullet_wait = 5;
@@ -141,7 +145,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var bullet_dist  = 180 / bullet_ring;
 			
 			//wave 3
-			var tss_arc = 13;
+			var tss_arc = 9;
 			var tss_dist = 12;
 			var tss_spd = 7;
 			var tss_wait = 2;
@@ -220,7 +224,7 @@ if(global.gp_active) and (spell_wait == 0)
 			{
 				if(state_time % bubble_wait == 0)
 				{
-					shoot_ring(DAN_BUBBLE,1,bubble_ring,obj_boss.x,obj_boss.y,999,bubble_spd,sfx_shot1,3)
+					shoot_arc(DAN_BUBBLE,1,bubble_arc,obj_boss.x,obj_boss.y,999,bubble_dist,bubble_spd,sfx_shot1,3)
 				}
 				if(state_time % bullet_wait == 0)
 				{

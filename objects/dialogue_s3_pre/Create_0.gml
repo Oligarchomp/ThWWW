@@ -68,7 +68,7 @@ switch(global.player_chosen)
 		set_dialogue(spr_sanae_art,2,true,spr_pale_art,0,false,get_text("diag_s3_s10"),-1);
 		set_dialogue(spr_sanae_art,3,true,spr_pale_art,0,false,get_text("diag_s3_s11"),-1);
 		set_dialogue(spr_sanae_art,3,false,spr_pale_art,2,true,get_text("diag_s3_s12"),-1);
-		set_dialogue(spr_sanae_art,1,true,spr_pale_art,1,false,get_text("diag_s3_s13"),-1);
+		set_dialogue(spr_sanae_art,1,true,spr_pale_art,2,false,get_text("diag_s3_s13"),-1);
 		set_dialogue(spr_sanae_art,1,false,spr_pale_art,4,true,get_text("diag_s3_s14"),-1);
 		set_dialogue(spr_sanae_art,1,false,spr_pale_art,4,true,get_text("diag_s3_s15"),-1);
 		set_dialogue(spr_sanae_art,1,true,spr_pale_art,4,false,get_text("diag_s3_s16"),-1);

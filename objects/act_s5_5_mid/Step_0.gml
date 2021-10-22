@@ -40,20 +40,20 @@ if(global.gp_active) and (spell_wait == 0)
 			var aim_dan = DAN_BUBBLE;
 			var aim_wait = 14;
 			var aim_spd = 3.5;
-			var aim_arc = 5;
+			var aim_arc = 3;
 			var aim_dist = 20;
 		break;
 		case 3:
 			var wave_lenght = 70;
 			var ring_wait = 10;
-			var ring_nbr = 69;
+			var ring_nbr = 68;
 			var ring_spd = 4.5;
 			var ring_spd_redirect = 2.8;
 			
 			var aim_dan = DAN_BUBBLE;
 			var aim_wait = 12;
 			var aim_spd = 4;
-			var aim_arc = 5;
+			var aim_arc = 3;
 			var aim_dist = 17;
 		break;
 	}

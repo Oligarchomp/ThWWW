@@ -94,9 +94,9 @@ if(global.gp_active)
 					var bubble_off = 100;
 			
 					var water_ring = 3;
-					var water_spd_shoot_min = 8;
+					var water_spd_shoot_min = 12.5;
 					var water_spd_shoot_git = 0;
-					var water_deccel = 0.2;
+					var water_deccel = 0.5;
 					var water_spd_min = 1.8;
 					var water_spd_git = 0;
 					var water_dist = 2.1;
