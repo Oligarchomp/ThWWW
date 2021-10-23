@@ -27,7 +27,7 @@ function boss_movement_random(argument0,argument1,argument2) {
 	var new_x_pos = round(obj_boss.x_to + x_rand);
 
 
-	var y_referen = obj_boss.y_dis_max - obj_boss.x;
+	var y_referen = obj_boss.y_dis_max - obj_boss.y;
 	var y_rand_sign = sign(rng(obj_boss.y_dis_max,true,4) - obj_boss.y_dis_max / 2 + y_referen);
 	var y_rand = (y_dist  + rng(25,true,3)) * y_rand_sign;
 	var new_y_pos = round(obj_boss.y_to + y_rand);

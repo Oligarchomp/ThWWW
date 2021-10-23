@@ -38,6 +38,9 @@ if (global.gp_active)
 				case BOSS_NUA:
 					instance_create_depth(0,0, global.spell_bg_depth,obj_spell_bg_nua);
 				break;
+				case BOSS_REVERENCE:
+					instance_create_depth(0,0, global.spell_bg_depth,obj_spell_bg_reverence);
+				break;
 			}
 			
 			spell_initialize = true;

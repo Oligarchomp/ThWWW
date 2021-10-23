@@ -78,6 +78,14 @@ switch(boss_id)
 		move_spr = spr_nua_move;
 		x = 500;
 	break;
+	case BOSS_REVERENCE:
+		idle_spr = spr_reverence_idle;
+		move_left_spr = spr_reverence_move_left;
+		move_right_spr = spr_reverence_move_right;
+		movement_type = 2;
+		
+		instance_create_depth(x,y,depth + 1, obj_reverence_indicator);
+	break;
 }
 	
 

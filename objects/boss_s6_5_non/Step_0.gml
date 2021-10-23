@@ -36,7 +36,7 @@ if(global.gp_active)
 					var torpedo_wait = 70;
 					var torpedo_tail_wait = 11;
 					var torpedo_lenght = 60;
-					var torpedo_ring = 21;
+					var torpedo_ring = 20;
 					var torpedo_spd = 2;
 					var torpedo_angle_plus = 1;
 					var torpedo_angle_max = 110;
@@ -47,7 +47,7 @@ if(global.gp_active)
 					var torpedo_wait = 70;
 					var torpedo_tail_wait = 9;
 					var torpedo_lenght = 60;
-					var torpedo_ring = 22;
+					var torpedo_ring = 21;
 					var torpedo_spd = 2.5;
 					var torpedo_angle_plus = 1;
 					var torpedo_angle_max = 110;
