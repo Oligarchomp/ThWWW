@@ -8,5 +8,5 @@ global.stage = 3;
 global.boss = BOSS_REVERENCE;
 
 bg_to_destroy = noone;
-bg_to_create = bg_s3;
+bg_to_create = bg_s7;
 music = noone;

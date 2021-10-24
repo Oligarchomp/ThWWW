@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "StageExtra",
-    "path": "folders/Objects/STAGES/StageExtra.yy",
+    "name": "Stage7",
+    "path": "folders/Objects/STAGES/Stage7.yy",
   },
   "resourceVersion": "1.0",
   "name": "act_s7_0",
