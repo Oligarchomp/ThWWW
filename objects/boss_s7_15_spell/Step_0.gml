@@ -3,8 +3,7 @@
 if(global.gp_active) and (spell_wait == 0)
 {
 	var bubble_wait = 90;
-	var bubble_vnbr = 4;
-	var bubble_hnbr = 3;
+	var bubble_nbr = 14;
 	var bubble_spd_final = 1.5;
 	var bubble_accel = 0.05;
 	
@@ -15,40 +14,11 @@ if(global.gp_active) and (spell_wait == 0)
 		boss_movement_random(2,7,2);
 	}
 	
-	if(step % bubble_wait == 0)
-	{
-		var dist = room_width / bubble_hnbr;
-		for(var i = dist / 2; i < room_width; i += dist)
-		{
-			shoot(DAN_BUBBLE,6,i,-10,999,0,sfx_redirect1,7);
-			shoot(DAN_BUBBLE,6,i,room_height + 10,999,0,sfx_redirect1,7);
-		}
-		
-		var dist = room_height / bubble_vnbr;
-		for(var i = dist / 2; i < room_height; i += dist)
-		{
-			shoot(DAN_BUBBLE,6,-10,i,999,0,sfx_redirect1,7);
-			shoot(DAN_BUBBLE,6,room_width + 10,i,999,0,sfx_redirect1,7);
-		}
-		var aim = rng(360,false,2);
-		var plus = 180 / (bubble_hnbr + bubble_vnbr) ;
-		with(obj_danmaku7)
-		{
-			if(state == 0)
-			{
-				angle_re = aim;
-				aim += plus;
-				
-				state = 1;
-			}
-		}
-	}
-	
 	with(obj_danmaku7)
 	{
 		switch(state)
 		{
-			case 1:
+			case 0:
 				if(state_time == 0)
 				{
 					angle = find_angle(obj_player.x,obj_player.y,x,y);
@@ -75,21 +45,39 @@ if(global.gp_active) and (spell_wait == 0)
 				y = y_to + lengthdir_y(dist_is,angle);
 				
 				
-				if(x = x_to) and (y = y_to)
+				if(x == x_to) and (y == y_to)
 				{
-					state = 2;
+					state = 1;
 					spd = 0;
 					color_id = 1;
-					angle = angle_re
+					angle = angle_re;
+					x_offscreen = 30;
+					y_offscreen = 30;
 				}
 			break;
-			case 2:
+			case 1:
 				spd = goto_value(spd,bubble_spd_final,bubble_accel);
 			break;
 		}
-		
-		
 	}
+	
+	
+	if(step % bubble_wait == 0)
+	{
+		var an = rng(360,false,4);
+		var dist = 340;
+		for(var i = 0; i < 360; i += 360 / bubble_nbr)
+		{
+			var ang = an + i;
+			var inst = shoot(DAN_BUBBLE,6,room_width / 2 + lengthdir_x(dist,ang),room_height / 2 + lengthdir_y(dist,ang),0,0,sfx_redirect1,7);
+			inst.spawn_type = SPAWN_SCALE;
+			inst.x_offscreen = 400;
+			inst.y_offscreen = 400;
+			inst.angle_re = ang;
+		}
+	}
+	
+	
 	
 	
 	if(obj_player.bomb_time != 0)

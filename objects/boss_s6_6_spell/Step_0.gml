@@ -9,6 +9,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var	wine_row = 5; // must be odd
 			var wine_dist = room_width / wine_row;
 			
+			var grape_col = 3;
+			
 			var mentos_nbr = 5;
 			var mentos_spd = 1.6;
 			var mentos_accel = 0.01;
@@ -31,6 +33,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var wine_spd = 1;
 			var	wine_row = 5; // must be odd
 			var wine_dist = room_width / wine_row;
+			
+			var grape_col = 3;
 			
 			var mentos_nbr = 5;
 			var mentos_spd = 1.6;
@@ -55,6 +59,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var	wine_row = 7; // must be odd
 			var wine_dist = room_width / wine_row;
 			
+			var grape_col = 3;
+			
 			var mentos_nbr = 5;
 			var mentos_spd = 1.6;
 			var mentos_accel = 0.01;
@@ -77,6 +83,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var wine_spd = 1;
 			var	wine_row = 7; // must be odd
 			var wine_dist = room_width / wine_row;
+			
+			var grape_col = 0;
 			
 			var mentos_nbr = 6;
 			var mentos_spd = 1.6;
@@ -141,7 +149,7 @@ if(global.gp_active) and (spell_wait == 0)
 						var rand = rng(360,false,floor(i));
 						for(var m = 0 ; m < mentos_nbr; m += 1)
 						{
-							var inst = shoot(DAN_MENTOS,0,x,i,rand + 360 / mentos_nbr * m,0,noone,5);
+							var inst = shoot(DAN_MENTOS,grape_col,x,i,rand + 360 / mentos_nbr * m,0,noone,5);
 							inst.wine_id = wine_nbr;
 							inst.my_pellet = self;
 							inst.y_offscreen = 500;
@@ -169,7 +177,7 @@ if(global.gp_active) and (spell_wait == 0)
 				{
 					case 0:
 						shoot_ring(DAN_BUBBLE,6,misha_nbr,obj_boss.x,obj_boss.y,rng(360,false,7),misha_spd,sfx_redirect1,7);		
-						shoot_row(DAN_BUBBLE,0,bubble_row,obj_boss.x,obj_boss.y,999,bubble_spd_min,bubble_spd_max,noone,8);
+						shoot_row(DAN_BUBBLE,grape_col,bubble_row,obj_boss.x,obj_boss.y,999,bubble_spd_min,bubble_spd_max,noone,8);
 					break;
 					case move:
 						boss_movement_random(2,4,2);
@@ -250,7 +258,7 @@ if(global.gp_active) and (spell_wait == 0)
 					
 					for(var m = 0 ; m < mentos_nbr; m += 1)
 					{
-						var inst = shoot(DAN_MENTOS,0,x,room_height + 30,rand + 360 / mentos_nbr * m,0,noone,5);
+						var inst = shoot(DAN_MENTOS,grape_col,x,room_height + 30,rand + 360 / mentos_nbr * m,0,noone,5);
 						inst.wine_id = wine_nbr;
 						inst.my_pellet = self;
 						inst.y_offscreen = 500;
@@ -301,8 +309,11 @@ if(global.gp_active) and (spell_wait == 0)
 					x_offscreen = 200;
 					is_cancelable = false;
 				}
-				angle = goto_value(angle,angle_to,catch_angle_plus);
-				
+				else
+				{
+					angle = goto_value(angle,angle_to,catch_angle_plus);
+				}
+					
 				
 				if(angle == angle_to)
 				{

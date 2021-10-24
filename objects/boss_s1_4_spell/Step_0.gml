@@ -113,7 +113,7 @@ if(global.gp_active)
 					if (state_time % wait_bubble == 0)
 					{
 						shoot_arc(DAN_BUBBLE,6,bubble_arc ,obj_boss.x,obj_boss.y,angle_arc,arc_dist,bubble_spd,sfx_shot1,3)
-						angle_arc += arc_dif ;
+						angle_arc += arc_dif * dir_act;
 					}
 					
 					if (state_time % wait_arrow == 0)
@@ -140,6 +140,8 @@ if(global.gp_active)
 					break;
 					case 50:
 						state = 0;
+						dir_act *= -1;
+						angle_arc = 90;
 					break;
 				}
 			break;

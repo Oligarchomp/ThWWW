@@ -68,7 +68,7 @@ if(global.gp_active)
 	
 	if(step == 0)
 	{
-		var inst = create_enemy(EN_RED,room_width / 2, -20,110,2,4.5,-90);
+		var inst = create_enemy(EN_RED,room_width / 2, -20,130,2,4.5,-90);
 	}
 	
 	if(step < fairy_lenght)

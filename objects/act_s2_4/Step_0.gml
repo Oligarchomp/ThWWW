@@ -9,7 +9,7 @@ if(global.gp_active)
 		case 0:
 			var aim_spd_shoot = 8;
 			var aim_spd_final = 2.5;
-			var aim_wait = 66;
+			var aim_wait = 72;
 			
 			var tri_spd = 1.5;
 			var tri_dist = 2;
