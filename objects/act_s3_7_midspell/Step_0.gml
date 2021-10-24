@@ -5,46 +5,62 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
+			var bubble_wait = 1;
 			var bubble_nbr = 1;
 			var bubble_spd = 1.5;
 			var bubble_dist = 29;
 			
+			var arrow_dan = DAN_ARROWHEAD;
+			var arrow_wait = 1;
 			var arrow_nbr = 1;
 			var arrow_spd = 2;
 			var arrow_dist = -29
+			var arrow_aim_off = 0;
 			
 			var wait_wave = 20; // more than 10
 		break;
 		case 1:
+			var bubble_wait = 1;
 			var bubble_nbr = 2;
 			var bubble_spd = 1.8;
 			var bubble_dist = 27;
 			
+			var arrow_dan = DAN_ARROWHEAD;
+			var arrow_wait = 1;
 			var arrow_nbr = 3;
 			var arrow_spd = 2;
 			var arrow_dist = -27
+			var arrow_aim_off = 0;
 			
 			var wait_wave = 20; // more than 10
 		break;
 		case 2:
+			var bubble_wait = 1;
 			var bubble_nbr = 2;
 			var bubble_spd = 2;
-			var bubble_dist = 24;
+			var bubble_dist = -360 / 24;
 			
-			var arrow_nbr = 7;
-			var arrow_spd = 2.5;
-			var arrow_dist = -23;
+			var arrow_dan = DAN_MENTOS
+			var arrow_wait = 2;
+			var arrow_nbr = 8;
+			var arrow_spd = 2.6;
+			var arrow_dist = -8;
+			var arrow_aim_off = 12;
 			
-			var wait_wave = 18; // more than 10
+			var wait_wave = 17; // more than 10
 		break;
 		case 3:
+			var bubble_wait = 1;
 			var bubble_nbr = 2;
 			var bubble_spd = 2;
-			var bubble_dist = 16;
+			var bubble_dist = -360 / 24;
 			
+			var arrow_dan = DAN_MENTOS
+			var arrow_wait = 2;
 			var arrow_nbr = 9;
 			var arrow_spd = 3;
-			var arrow_dist = -15;
+			var arrow_dist = -6;
+			var arrow_aim_off = 2;
 			
 			var wait_wave = 11; // more than 10
 		break;
@@ -65,16 +81,25 @@ if(global.gp_active) and (spell_wait == 0)
 				case 30:
 					state = 1;
 					obj_boss.pos_type = POS_MANUAL;
+					
+					angle_shoot = rng(360,false,1);
+					angle_shoot2 = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y) + arrow_aim_off * dir_pale;
 				break;
 			}
 		break;
 		case 1:
 		
-			shoot_ring(DAN_BUBBLE,3,bubble_nbr,obj_boss.x,obj_boss.y,angle_shoot,0,sfx_redirect2,3);
-			angle_shoot += bubble_dist;
+			if(state_time % bubble_wait == 0)
+			{
+				shoot_ring(DAN_BUBBLE,3,bubble_nbr,obj_boss.x,obj_boss.y,angle_shoot,0,sfx_redirect2,3);
+				angle_shoot += bubble_dist * dir_pale;
+			}
 			
-			shoot_ring(DAN_ARROWHEAD,3,arrow_nbr,obj_boss.x,obj_boss.y,angle_shoot2,0,sfx_redirect3,2);
-			angle_shoot2 += arrow_dist;
+			if(state_time % arrow_wait == 0)
+			{
+				shoot_ring(arrow_dan,3,arrow_nbr,obj_boss.x,obj_boss.y,angle_shoot2,0,sfx_shot3,2);
+				angle_shoot2 += arrow_dist * dir_pale;
+			}
 		
 			var dest = 90 + 360 * dir_pale
 			angle_pale = goto_value(angle_pale,dest,spin_spd);
@@ -89,9 +114,6 @@ if(global.gp_active) and (spell_wait == 0)
 				obj_boss.pos_type = POS_SP;
 				
 				dir_pale *= -1;
-				
-				angle_shoot = rng(360,false,1);
-				angle_shoot2 = rng(360,false,1);
 			}
 		break;
 		case 2:

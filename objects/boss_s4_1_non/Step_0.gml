@@ -5,7 +5,9 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			var star_ring = 15;
+			var star_arc = 9;
+			var star_dist = 18;
+			var star_rnd = 15;
 			var star_row = 3;
 			var star_spd_min = 8;
 			var star_spd_max = 16;
@@ -16,7 +18,9 @@ if(global.gp_active) and (spell_wait == 0)
 			var star_frame_stop = 20;
 		break;
 		case 1:
-			var star_ring = 24;
+			var star_arc = 11;
+			var star_dist = 16;
+			var star_rnd = 15;
 			var star_row = 3;
 			var star_spd_min = 6;
 			var star_spd_max = 18;
@@ -27,7 +31,9 @@ if(global.gp_active) and (spell_wait == 0)
 			var star_frame_stop = 20;	
 		break;
 		case 2:
-			var star_ring = 22;
+			var star_arc = 11;
+			var star_dist = 16
+			var star_rnd = 15;
 			var star_row = 4;
 			var star_spd_min = 8;
 			var star_spd_max = 20;
@@ -38,7 +44,9 @@ if(global.gp_active) and (spell_wait == 0)
 			var star_frame_stop = 20;	
 		break;
 		case 3:
-			var star_ring = 25;
+			var star_dist = 13;
+			var star_arc = 15;
+			var star_rnd = 15;
 			var star_row = 4;
 			var star_spd_min = 8;
 			var star_spd_max = 20;
@@ -67,7 +75,8 @@ if(global.gp_active) and (spell_wait == 0)
 		{
 			var col = 2;
 		}
-		shoot_ring_row(DAN_STARBIG,col,star_ring,star_row,obj_boss.x,obj_boss.y,rng(360,false,1),star_spd_min,star_spd_max,sfx_shot1,3);
+		var aim = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y) + 180 - star_rnd + rng(star_rnd * 2,false,5);
+		shoot_arc_row(DAN_STARBIG,col,star_arc,star_row,obj_boss.x,obj_boss.y,aim,star_dist,star_spd_min,star_spd_max,sfx_shot1,3);
 		wave_dir *= -1;
 	}
 	

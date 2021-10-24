@@ -11,4 +11,4 @@ dir_dan = 1;
 
 wave_nbr = 0;
 
-angle_shoot = 0;
+angle_shoot = 1000;

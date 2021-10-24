@@ -13,7 +13,7 @@ if(global.gp_active)
 				case 0:
 					var ring_nbr = 34;
 					var ring_wait = 30;
-					var ring_change_time = 50;
+					var ring_change_time = 30;
 					var ring_spd = 2.5;
 					var ring_spd_mult = 1.1;
 					var ring_accel = 0.2;
@@ -23,7 +23,7 @@ if(global.gp_active)
 				case 1:
 					var ring_nbr = 50;
 					var ring_wait = 20;
-					var ring_change_time = 60;
+					var ring_change_time = 40;
 					var ring_spd = 3;
 					var ring_spd_mult = 1.2;
 					var ring_accel = 0.2;
@@ -33,18 +33,18 @@ if(global.gp_active)
 				case 2:
 					var ring_nbr = 54;
 					var ring_wait = 18;
-					var ring_change_time = 70;
+					var ring_change_time = 45;
 					var ring_spd = 3;
 					var ring_spd_mult = 1.25;
 					var ring_accel = 0.2;
-					var ring_angle_plus = 5;
+					var ring_angle_plus = 6;
 					var ring_fast = 8;
 				break;
 				case 3:
 					var ring_nbr = 56;
 					var ring_wait = 16;
-					var ring_change_time = 80;
-					var ring_spd = 3;
+					var ring_change_time = 30;
+					var ring_spd = 4;
 					var ring_spd_mult = 1.25;
 					var ring_accel = 0.2;
 					var ring_angle_plus = 6;
