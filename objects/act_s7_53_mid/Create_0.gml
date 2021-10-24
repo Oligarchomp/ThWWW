@@ -9,7 +9,7 @@ event_inherited();
 spell_set_spell("s7_mid3",BOSS_PALE,12014080)
 spell_set_name("spell_s7_mid3","spell_s7_mid3","spell_s7_mid3","spell_s7_mid3")
 spell_set_life(250,160);
-spell_set_time(28,false,90);
+spell_set_time(30,false,90);
 
 boss_movement_goto(room_width / 2, 100,7);
 
