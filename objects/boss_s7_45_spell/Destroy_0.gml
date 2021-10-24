@@ -1,12 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+obj_boss.alpha = 1;
+obj_boss.mask_index = spr_boss_hurtbox;
+with(obj_shield_reverence)
+{
+	state = 1;	
+}
 // Inherit the parent event
 event_inherited();
 
-global.stage = 7;
-global.boss = BOSS_REVERENCE;
-
-bg_to_destroy = noone;
-bg_to_create = bg_s7;
-music = noone;

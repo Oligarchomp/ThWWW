@@ -9,20 +9,27 @@ if (!global.gp_active)
 	draw_text(0,0,"PAUSE")
 }
 //draw difficulty
-switch(global.difficulty)
+if(global.stage != 7)
 {
-	case 0:
-		var dif_text = "EASY"
-	break;
-	case 1:
-		var dif_text = "NORMAL"
-	break;
-	case 2:
-		var dif_text = "HARD"
-	break;
-	case 3:
-		var dif_text = "LUNATIC"
-	break;
+	switch(global.difficulty)
+	{
+		case 0:
+			var dif_text = "EASY"
+		break;
+		case 1:
+			var dif_text = "NORMAL"
+		break;
+		case 2:
+			var dif_text = "HARD"
+		break;
+		case 3:
+			var dif_text = "LUNATIC"
+		break;
+	}
+}
+else
+{
+	var dif_text = "EXTRA"
 }
 
 

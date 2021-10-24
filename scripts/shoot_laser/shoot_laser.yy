@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Shooting",
-    "path": "folders/Scripts/Shooting.yy",
+    "name": "Laser",
+    "path": "folders/Scripts/Laser.yy",
   },
   "resourceVersion": "1.0",
-  "name": "shoot_laser_pos",
+  "name": "shoot_laser",
   "tags": [],
   "resourceType": "GMScript",
 }
