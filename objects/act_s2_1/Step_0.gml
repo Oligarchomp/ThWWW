@@ -33,10 +33,10 @@ if(global.gp_active)
 			var ring_spd_max = 4;
 		break;
 		case 3:
-			var arrowhead_nbr = 36;
+			var arrowhead_nbr = 33;
 			var arrowhead_spd = 3;
 			
-			var ring_nbr = 36;
+			var ring_nbr = 33;
 			var ring_row = 3.5;
 			var ring_spd_min = 4;
 			var ring_spd_max = 4.5;

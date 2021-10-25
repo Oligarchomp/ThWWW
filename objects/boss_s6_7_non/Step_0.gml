@@ -18,7 +18,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			//wave 2
 			var bubble_wait = 18;
-			var bubble_arc = 7;
+			var bubble_arc = 5;
 			var bubble_dist = 32;
 			var bubble_spd = 5.5;
 			
@@ -57,7 +57,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			//wave 2
 			var bubble_wait = 14;
-			var bubble_arc = 9;
+			var bubble_arc = 7;
 			var bubble_dist = 24;
 			var bubble_spd = 6.5;
 			
@@ -96,7 +96,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			//wave 2
 			var bubble_wait = 10;
-			var bubble_arc = 9;
+			var bubble_arc = 7;
 			var bubble_dist = 24;
 			var bubble_spd = 6.5;
 			
@@ -135,7 +135,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			//wave 2
 			var bubble_wait = 10;	
-			var bubble_arc = 9;
+			var bubble_arc = 7;
 			var bubble_dist = 19;
 			var bubble_spd = 7;
 			

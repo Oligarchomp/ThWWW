@@ -4,17 +4,16 @@
 // Inherit the parent event
 event_inherited();
 
-spell_set_life(820,180);
+spell_set_life(880,180);
 spell_set_time(26,false,90)
 
 
 dir_act = 1;
 
-spin_time = 0;
+aim_time = 0;
 ring_time = 0;
 close_time = 0;
 
-spin_angle = rng(360,false,4);
 close_angle = 0;
 ring_angle = 0;
 close_x_to = noone;

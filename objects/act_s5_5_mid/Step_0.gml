@@ -5,56 +5,56 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			var wave_lenght = 70;
+			var wave_lenght = 40;
 			var ring_wait = 12;
-			var ring_nbr = 39;
+			var ring_nbr = 22;
 			var ring_spd = 3;
 			var ring_spd_redirect = 2;
 			
-			var aim_dan = DAN_MENTOS;
+			var aim_dan = DAN_ARROW;
 			var aim_wait = 16;
 			var aim_spd = 3.5;
 			var aim_arc = 0;
 			var aim_dist = 23;
 		break;
 		case 1:
-			var wave_lenght = 70;
+			var wave_lenght = 40;
 			var ring_wait = 12;
-			var ring_nbr = 55;
+			var ring_nbr = 45;
 			var ring_spd = 3.6;
 			var ring_spd_redirect = 2.3;
 			
 			var aim_dan = DAN_MENTOS;
-			var aim_wait = 16;
+			var aim_wait = 13;
 			var aim_spd = 3.5;
-			var aim_arc = 3;
-			var aim_dist = 23;
+			var aim_arc = 5;
+			var aim_dist = 22;
 		break;
 		case 2:
-			var wave_lenght = 70;
+			var wave_lenght = 40;
 			var ring_wait = 10;
-			var ring_nbr = 64;
-			var ring_spd = 4;
+			var ring_nbr = 56;
+			var ring_spd = 4.2;
 			var ring_spd_redirect = 2.5;
 			
-			var aim_dan = DAN_BUBBLE;
-			var aim_wait = 14;
-			var aim_spd = 3.5;
-			var aim_arc = 3;
-			var aim_dist = 20;
+			var aim_dan = DAN_MENTOS;
+			var aim_wait = 12;
+			var aim_spd = 3.8;
+			var aim_arc = 7;
+			var aim_dist = 18;
 		break;
 		case 3:
-			var wave_lenght = 70;
+			var wave_lenght = 40;
 			var ring_wait = 10;
-			var ring_nbr = 68;
+			var ring_nbr = 64;
 			var ring_spd = 4.5;
 			var ring_spd_redirect = 2.8;
 			
-			var aim_dan = DAN_BUBBLE;
-			var aim_wait = 12;
-			var aim_spd = 4;
-			var aim_arc = 3;
-			var aim_dist = 17;
+			var aim_dan = DAN_MENTOS;
+			var aim_wait = 10;
+			var aim_spd = 4.4;
+			var aim_arc = 9;
+			var aim_dist = 14;
 		break;
 	}
 	
@@ -94,8 +94,7 @@ if(global.gp_active) and (spell_wait == 0)
 			{
 				if(state_time % aim_wait == 0)
 				{
-					var aim = find_angle(obj_boss.x,obj_boss.y,x_aim,y_aim);
-					shoot_arc(aim_dan,3,aim_arc,obj_boss.x,obj_boss.y,aim,aim_dist,aim_spd,sfx_shot1,6);	
+					shoot_arc(aim_dan,3,aim_arc,obj_boss.x,obj_boss.y,999,aim_dist,aim_spd,sfx_shot1,6);	
 				}
 			}
 			else
@@ -138,6 +137,7 @@ if(global.gp_active) and (spell_wait == 0)
 					state = 1;
 					spd = ring_spd_redirect;
 					color_id = 5;
+					depth += 1;
 				}
 			break;
 		}

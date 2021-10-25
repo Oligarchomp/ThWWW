@@ -8,16 +8,19 @@ if(global.gp_active) and (spell_wait == 0)
 			var wave_time = 80;
 			var wave_lenght = 65;
 			
-			var spin_wait = 3;
-			var spin_ring = 3;
-			var spin_dist = 3;
-			var spin_spd_shoot = 8;
-			var spin_deccel = 0.2;
-			var spin_spd_aim = 6;
+			var aim_wait = 6;
+			var aim_arc = 3;
+			var aim_dist = 40;
+			var aim_spd = 9;
+			var aim_spd_aim = 5;
+			var aim_deccel = 0.2;
 			
 			var ring_wait = 12;
-			var ring_ring = 5;
-			var ring_dist = 26;
+			
+			var ring_big_arc = 3;
+			var ring_big_dist = 70;
+			
+			var ring_dist = 32;
 			var ring_arc = 3;
 			var ring_spd_shoot = 7;
 			var ring_deccel = 0.2;
@@ -34,15 +37,18 @@ if(global.gp_active) and (spell_wait == 0)
 			var wave_time = 80;
 			var wave_lenght = 70;
 			
-			var spin_wait = 2;
-			var spin_ring = 3;
-			var spin_dist = 3;
-			var spin_spd_shoot = 8.5;
-			var spin_deccel = 0.2;
-			var spin_spd_aim = 6.3;
+			var aim_wait = 5;
+			var aim_arc = 5;
+			var aim_dist = 25;
+			var aim_spd = 9;
+			var aim_spd_aim = 5;
+			var aim_deccel = 0.2;
 			
 			var ring_wait = 10;
-			var ring_ring = 6;
+			
+			var ring_big_arc = 4;
+			var ring_big_dist = 50;
+			
 			var ring_dist = 24;
 			var ring_arc = 3;
 			var ring_spd_shoot = 8;
@@ -60,15 +66,18 @@ if(global.gp_active) and (spell_wait == 0)
 			var wave_time = 80;
 			var wave_lenght = 72;
 			
-			var spin_wait = 2;
-			var spin_ring = 4;
-			var spin_dist = 3;
-			var spin_spd_shoot = 9;
-			var spin_deccel = 0.2;
-			var spin_spd_aim = 6.5;
+			var aim_wait = 5;
+			var aim_arc = 7;
+			var aim_dist = 22;
+			var aim_spd = 9;
+			var aim_spd_aim = 6;
+			var aim_deccel = 0.2;
 			
 			var ring_wait = 9;
-			var ring_ring = 7;
+			
+			var ring_big_arc = 5;
+			var ring_big_dist = 50;
+			
 			var ring_dist = 22;
 			var ring_arc = 3;
 			var ring_spd_shoot = 8;
@@ -86,22 +95,25 @@ if(global.gp_active) and (spell_wait == 0)
 			var wave_time = 80;
 			var wave_lenght = 75;
 			
-			var spin_wait = 2;
-			var spin_ring = 4;
-			var spin_dist = 3;
-			var spin_spd_shoot = 10;
-			var spin_deccel = 0.2;
-			var spin_spd_aim = 7;
+			var aim_wait = 4;
+			var aim_arc = 7;
+			var aim_dist = 20;
+			var aim_spd = 9;
+			var aim_spd_aim = 6;
+			var aim_deccel = 0.2;
+			
+			
+			var ring_big_arc = 6;
+			var ring_big_dist = 45;
 			
 			var ring_wait = 8;
-			var ring_ring = 8;
-			var ring_dist = 20;
+			var ring_dist = 18;
 			var ring_arc = 3;
 			var ring_spd_shoot = 9;
 			var ring_deccel = 0.2;
 			var ring_spd_aim = 3;
 			
-			var close_wait = 10;
+			var close_wait = 12;
 			var close_ring = 15;
 			var close_spd_shoot = 11.5;
 			var close_deccel = 0.2;
@@ -121,7 +133,7 @@ if(global.gp_active) and (spell_wait == 0)
 	{
 		case 0:
 			dir_act *= -1;
-			spin_time = wave_lenght;
+			aim_time = wave_lenght;
 		break;
 		case wave_time:
 			ring_x_to = noone;
@@ -138,14 +150,14 @@ if(global.gp_active) and (spell_wait == 0)
 	}
 	
 	//SPIN
-	if(spin_time > 0)
+	if(aim_time > 0)
 	{
-		if(step % spin_wait == 0)
+		if(step % aim_wait == 0)
 		{
-			shoot_ring(DAN_ARROW,7,spin_ring,obj_boss.x,obj_boss.y,spin_angle,spin_spd_shoot,sfx_shot1,5);
+			shoot_arc(DAN_ARROW,7,aim_arc,obj_boss.x,obj_boss.y,999,aim_dist,aim_spd,sfx_shot1,5)
 		}
-		spin_angle += spin_dist * dir_act;
-		spin_time -= 1;
+		
+		aim_time -= 1
 	}
 	
 	with(obj_danmaku5)
@@ -156,12 +168,12 @@ if(global.gp_active) and (spell_wait == 0)
 				x_offscreen = 50;
 				y_offscreen = 110;
 		
-				spd = goto_value(spd,0,spin_deccel);
+				spd = goto_value(spd,0,aim_deccel);
 				if(spd == 0)
 				{
 					state = 1;
-					spd = spin_spd_aim;
-					angle = find_angle(x,y,obj_player.x,obj_player.y);
+					spd = aim_spd_aim;
+					angle = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y);
 				}
 			break;
 			case 1:
@@ -181,7 +193,7 @@ if(global.gp_active) and (spell_wait == 0)
 		{
 			for(var d = 0; d < ring_arc; d += 1)
 			{
-				for(var i = 0; i < 360; i += 360 / ring_ring)
+				for(var i = -(ring_big_arc - 1) * ring_big_dist / 2; i < (ring_big_arc + 1) * ring_big_dist / 2; i += ring_big_dist)
 				{
 					var inst = shoot(DAN_ARROW,3,obj_boss.x,obj_boss.y,ring_angle + i,ring_spd_shoot,sfx_shot2,3);
 					inst.dan_id = d;
@@ -243,8 +255,6 @@ if(global.gp_active) and (spell_wait == 0)
 	{
 		if(step % close_wait == 0)
 		{
-			
-			
 			for(var d = 0; d < close_ring; d += 1)
 			{
 				for(var i = -close_dist; i <= close_dist; i += close_dist)
@@ -274,8 +284,6 @@ if(global.gp_active) and (spell_wait == 0)
 					}
 					var aim = find_angle(x,y,spell.close_x_to,spell.close_y_to);
 					
-					
-					//var aim = find_angle(x,y,obj_player.x,obj_player.y);
 					
 					angle = aim + dan_id * 360 / close_ring;
 					
