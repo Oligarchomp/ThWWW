@@ -5,8 +5,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_spell",
-    "path": "objects/obj_spell/obj_spell.yy",
+    "name": "obj_dialogue",
+    "path": "objects/obj_dialogue/obj_dialogue.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -23,7 +23,6 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -32,7 +31,7 @@
     "path": "folders/Objects/STAGES/Stage7.yy",
   },
   "resourceVersion": "1.0",
-  "name": "act_s7_53_mid",
+  "name": "dialogue_s7_mid",
   "tags": [],
   "resourceType": "GMObject",
 }
