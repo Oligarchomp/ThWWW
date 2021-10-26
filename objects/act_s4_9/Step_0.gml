@@ -12,7 +12,7 @@ if(global.gp_active)
 			var arrow_spd_max_shoot = 20;
 			var arrow_frame_stop = 20;
 			var arrow_spd_div = 5;
-			var arrow_dist = 33;
+			var arrow_dist = 24;
 			
 			var bubble_nbr = 0;
 			var bubble_wait = 40;
@@ -40,7 +40,7 @@ if(global.gp_active)
 			var arrow_spd_max_shoot = 20;
 			var arrow_frame_stop = 20;
 			var arrow_spd_div = 4.5;
-			var arrow_dist = 19;
+			var arrow_dist = 17.5;
 			
 			var bubble_nbr = 0;
 			var bubble_wait = 33;
@@ -50,10 +50,10 @@ if(global.gp_active)
 			var arrow_wait = 6;
 			var arrow_ring = 4;
 			var arrow_row = 3;
-			var arrow_spd_min_shoot = 10;
-			var arrow_spd_max_shoot = 20;
-			var arrow_frame_stop = 20;
-			var arrow_spd_div = 4.5;
+			var arrow_spd_min_shoot = 15;
+			var arrow_spd_max_shoot = 30;
+			var arrow_frame_stop = 13;
+			var arrow_spd_div = 6.7;
 			var arrow_dist = 17;
 			
 			var bubble_nbr = 0;
@@ -95,7 +95,7 @@ if(global.gp_active)
 					if(state_time % arrow_wait == 0)
 					{
 						shoot_ring_row(DAN_ARROW,3,arrow_ring,arrow_row,x,y,angle_shoot,arrow_spd_min_shoot,arrow_spd_max_shoot,sfx_shot1,6);
-						shoot_ring_row(DAN_ARROW,2,arrow_ring,arrow_row,x,y,-angle_shoot,arrow_spd_min_shoot,arrow_spd_max_shoot,sfx_shot1,6);
+						shoot_ring_row(DAN_ARROW,2,arrow_ring,arrow_row,x,y,-angle_shoot - 180 / arrow_ring,arrow_spd_min_shoot,arrow_spd_max_shoot,sfx_shot1,6);
 						angle_shoot += arrow_dist;
 						with(obj_danmaku6)
 						{

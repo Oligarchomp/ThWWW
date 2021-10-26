@@ -240,6 +240,7 @@
     {"id":{"name":"obj_danmaku3","path":"objects/obj_danmaku3/obj_danmaku3.yy",},"order":2,},
     {"id":{"name":"obj_danmaku4","path":"objects/obj_danmaku4/obj_danmaku4.yy",},"order":3,},
     {"id":{"name":"spr_road","path":"sprites/spr_road/spr_road.yy",},"order":1,},
+    {"id":{"name":"boss_s7_55_spell","path":"objects/boss_s7_55_spell/boss_s7_55_spell.yy",},"order":8,},
     {"id":{"name":"act_s3_6","path":"objects/act_s3_6/act_s3_6.yy",},"order":11,},
     {"id":{"name":"sfx_frog","path":"sounds/sfx_frog/sfx_frog.yy",},"order":6,},
     {"id":{"name":"spr_nua_art","path":"sprites/spr_nua_art/spr_nua_art.yy",},"order":9,},
