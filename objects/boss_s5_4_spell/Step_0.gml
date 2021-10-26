@@ -90,7 +90,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var sword_i_div = 80;
 			
 			var stab_phase = true;
-			var stab_ring = 14;
+			var stab_wait = 1;
+			var stab_ring = 11;
 			var stab_row = 3;
 			var stab_spd_min = 2;
 			var stab_spd_max = 4;
@@ -271,8 +272,11 @@ if(global.gp_active) and (spell_wait == 0)
 			case 1:	//staby stab 
 				if(boss_spd >= 16)
 				{
-					var aim = find_angle(x,y,stab_aim_x,stab_aim_y)
-					shoot_ring_row(DAN_ARROW,7,stab_ring,stab_row,x,y,aim,stab_spd_min,stab_spd_max,sfx_shot2,7);
+					if(state_time % stab_wait == 0)
+					{
+						var aim = find_angle(x,y,stab_aim_x,stab_aim_y)
+						shoot_ring_row(DAN_ARROW,7,stab_ring,stab_row,x,y,aim,stab_spd_min,stab_spd_max,sfx_shot2,7);
+					}
 				}
 			break;
 			case 2://spin slash

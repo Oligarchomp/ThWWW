@@ -19,3 +19,5 @@ charge_time = 60;
 active_time = 60;
 
 col = c_white
+
+sound = noone;

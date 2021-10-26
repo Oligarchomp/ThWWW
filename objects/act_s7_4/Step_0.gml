@@ -25,7 +25,7 @@ if(global.gp_active)
 	var aim_spd_max = 5.5;
 	
 		
-	var pale_y_off = 80;
+	var pale_y_off = 200;
 	var pale_x_off = 120;
 	var pale_spd = 7;
 	switch(state)

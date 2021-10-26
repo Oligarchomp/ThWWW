@@ -19,7 +19,7 @@ if(global.gp_active)
 			{
 				state = 1;
 				mask_index = spr_laser_hitbox;
-				play_sound(sfx_laser2,1,false);
+				play_sound(sound,1,false);
 			}
 		break;
 		case 1:

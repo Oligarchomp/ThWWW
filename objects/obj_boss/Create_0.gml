@@ -120,7 +120,7 @@ x_disjoint = 86;
 x_disjoint_ref = x_disjoint;
 y_disjoint = 78;
 y_disjoint_ref = y_disjoint;
-y_dis_max = 125; // from the top of the screen
+y_dis_max = 120; // from the top of the screen
 y_dis_max_ref = y_dis_max;
 // Hitbox
 

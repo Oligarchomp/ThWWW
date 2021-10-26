@@ -173,7 +173,7 @@ if(global.gp_active) and (spell_wait == 0)
 				{
 					state = 1;
 					spd = aim_spd_aim;
-					angle = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y);
+					angle = find_angle(x,y,obj_player.x,obj_player.y);
 				}
 			break;
 			case 1:

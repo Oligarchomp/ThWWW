@@ -17,29 +17,35 @@ if(global.gp_active)
 			
 					var ice_row = 3;
 					var ice_spd = 2;
-					var ice_ring = 5;
+					
+					var ice_arc = 3;
+					var ice_dist = 60;
 			
 					var wave_wait = 48;
 				break;
 				case 1:
-					var sword_spd_max = 16;
-					var sword_size = 7;
-					var sword_wait = 2;
-			
-					var ice_row = 4;
-					var ice_spd = 2;
-					var ice_ring = 7;
-			
-					var wave_wait = 36;
-				break;
-				case 2:
 					var sword_spd_max = 14;
 					var sword_size = 7;
 					var sword_wait = 2;
 			
 					var ice_row = 4;
 					var ice_spd = 2.5;
-					var ice_ring = 7;
+					
+					var ice_arc = 3;
+					var ice_dist = 60;
+			
+					var wave_wait = 28;
+				break;
+				case 2:
+					var sword_spd_max = 18;
+					var sword_size = 7;
+					var sword_wait = 1;
+			
+					var ice_row = 4;
+					var ice_spd = 2.75;
+					
+					var ice_arc = 3;
+					var ice_dist = 60;
 			
 					var wave_wait = 28;
 				break;
@@ -49,11 +55,12 @@ if(global.gp_active)
 					var sword_wait = 1;
 			
 					var ice_row = 4;
-					var ice_spd = 3;
-					var ice_ring = 7;
+					var ice_spd = 3.5;
+					
+					var ice_arc = 3;
+					var ice_dist = 46;
 			
-					var wave_wait = 10;
-					// 4 / 7 is funny
+					var wave_wait = 8;
 				break;
 			}
 	
@@ -129,9 +136,9 @@ if(global.gp_active)
 							{
 								var xx = obj_boss.x + lengthdir_x(i,angle)
 								var yy = obj_boss.y + lengthdir_y(i,angle)
-								for(var j = 0; j < 360; j += 360 / ice_ring)
+								for(var j = -(ice_arc - 1) * ice_dist / 2; j < (ice_arc + 1) * ice_dist / 2; j += ice_dist)
 								{
-									var inst = shoot(DAN_ARROW,3,xx,yy,angle_aim + i * dir_dan + j,0,sfx_shot2,7);
+									var inst = shoot(DAN_ARROW,3,xx,yy,angle_aim  + j,0,sfx_shot2,7);
 								}
 					
 							}
