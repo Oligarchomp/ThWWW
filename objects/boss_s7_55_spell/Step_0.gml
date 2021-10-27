@@ -10,17 +10,12 @@ if(global.gp_active) and (spell_wait == 0)
 	var heart_charge = 40;
 	
 	var ring_nbr = 10;
-	var ring_spd_shoot = 7;
+	var ring_spd_shoot = 6;
 	var ring_spd_final = 3;
 	
-	var bubble_ring = 20;
-	var bubble_row = 3;
-	var bubble_spd_min = 2.5;
-	var bubble_spd_max = 5;
-	
-	var aim_wait = 15;
-	var aim_nbr = 10;
-	var aim_ring = 20;
+	var aim_wait = 14;
+	var aim_nbr = 12;
+	var aim_ring = 12;
 	
 	
 	switch(state)
@@ -43,8 +38,6 @@ if(global.gp_active) and (spell_wait == 0)
 						inst.spd_ref = heart_spd;
 						inst.is_cancelable = false;
 					}
-				
-					//shoot_ring_row(DAN_MENTOS,6,bubble_ring,bubble_row,obj_boss.x,obj_boss.y,999,bubble_spd_min,bubble_spd_max,sfx_redirect1,8);
 				
 					act_dir *= -1;
 				
@@ -111,14 +104,13 @@ if(global.gp_active) and (spell_wait == 0)
 			case 1:
 				if(state_time == heart_charge)
 				{
-					shoot_ring(DAN_BUBBLE,6,ring_nbr,x,y,999,ring_spd_shoot,sfx_boss_release,7);
+					shoot_ring(DAN_BUBBLE,6,ring_nbr,x,y,999,ring_spd_shoot,sfx_shot1,7);
 					
 					cancel_bullet(self);
 				}
 			break;
 		
 		}
-		
 	}
 	
 	//mentos
@@ -147,7 +139,7 @@ if(global.gp_active) and (spell_wait == 0)
 			case 1:
 				if(state_time == heart_charge)
 				{
-					shoot_ring(DAN_BUBBLE,6,aim_nbr,x,y,999,ring_spd_shoot,sfx_boss_release,7);
+					shoot_ring(DAN_BUBBLE,6,aim_ring,x,y,999,ring_spd_shoot,sfx_shot1,7);
 					
 					cancel_bullet(self);
 				}

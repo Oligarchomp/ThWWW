@@ -135,6 +135,19 @@ switch (rot_type)
 		rot = 0;
 	break;
 }
+
+
+switch(rot_type)
+{
+	case ROT_SET:
+		rot = rot_set_rot;
+	break;
+}
+
+
+
+
+
 rot_spd = 2;
 
 
