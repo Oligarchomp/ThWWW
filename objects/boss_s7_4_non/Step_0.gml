@@ -11,7 +11,8 @@ if(global.gp_active)
 			boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);
 		break;
 		case 0:
-			var bubble_nbr = 5;
+			var bubble_wait = 3;
+			var bubble_nbr = 17;
 			var time_change = 30;
 			var bubble_spd = 9;
 			var note_spd1 = 1.3;
@@ -24,32 +25,40 @@ if(global.gp_active)
 				boss_movement_random(2,2,1);	
 			}
 			
-			for(var i = 0; i < bubble_nbr; i += 1)
+			if(step % bubble_wait == 0)
 			{
-				if(act_dir == 1)
-				{
-					var col = 1;
-					var sp = note_spd1;
-				}
-				else
-				{
-					var col = 6
-					var sp = note_spd2;
-				}
-				var aim = rng(360,false,i);
-				var inst = shoot(DAN_BUBBLE,col,obj_boss.x,obj_boss.y,aim + i * 360 / bubble_nbr,bubble_spd,sfx_shot2,7);
-				//var inst = shoot(DAN_BUBBLE,col,obj_boss.x,obj_boss.y,rng(360,false,i),bubble_spd,sfx_shot2,7);
-				inst.spd_to = sp
+				var aim = rng(360,false,7);
 				
+				for(var i = 0; i < 360; i += 360 / bubble_nbr)
+				{
+					if(act_dir == 1)
+					{
+						var col = 1;
+						var sp = note_spd1;
+						var danid = 1;
+					}
+					else
+					{
+						var col = 6
+						var sp = note_spd2;
+						var danid = 2;
+					}
+					var inst = shoot(DAN_BUBBLE,col,obj_boss.x,obj_boss.y,aim + i,bubble_spd,sfx_shot2,7);
+					inst.spd_to = sp
+					inst.dan = danid;
+				
+				}
+				
+				act_dir *= -1;
 			}
-			act_dir *= -1;
+		
 		
 			
 			with(obj_danmaku7)
 			{
 				if(step == time_change)
 				{
-					 shoot(DAN_NOTE,color_id,x,y,angle,spd_to,noone,5);
+					 shoot(DAN_NOTE,color_id,x,y,angle,spd_to,noone,dan);
 					 cancel_bullet(self);
 				}
 				
