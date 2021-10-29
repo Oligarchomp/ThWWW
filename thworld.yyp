@@ -337,6 +337,7 @@
     {"id":{"name":"obj_shot_base_dust","path":"objects/obj_shot_base_dust/obj_shot_base_dust.yy",},"order":0,},
     {"id":{"name":"spr_option_marisa","path":"sprites/spr_option_marisa/spr_option_marisa.yy",},"order":0,},
     {"id":{"name":"shoot_laser","path":"scripts/shoot_laser/shoot_laser.yy",},"order":1,},
+    {"id":{"name":"boss_s7_7_non","path":"objects/boss_s7_7_non/boss_s7_7_non.yy",},"order":15,},
     {"id":{"name":"boss_s2_1_non","path":"objects/boss_s2_1_non/boss_s2_1_non.yy",},"order":3,},
     {"id":{"name":"shoot_laser_center","path":"scripts/shoot_laser_center/shoot_laser_center.yy",},"order":0,},
     {"id":{"name":"boss_charge","path":"scripts/boss_charge/boss_charge.yy",},"order":0,},

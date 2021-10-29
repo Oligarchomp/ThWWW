@@ -4,9 +4,9 @@
 // Inherit the parent event
 event_inherited();
 
-spell_set_life(1200,180);
-spell_set_time(40,false,90)
+spell_set_life(1200,200);
+spell_set_time(38,false,90)
 
-act_dir = 1;
 
-shoot_angle = -90;
+
+shoot_angle = rng(360,false,7);
