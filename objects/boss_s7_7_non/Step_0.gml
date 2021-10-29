@@ -23,6 +23,8 @@ if(global.gp_active)
 			var note_row = 4;
 			var note_spd_min = 1;
 			var note_spd_max = 3;
+			var note_open = 5;
+
 			
 			var boss_wait = 150;
 			
@@ -38,7 +40,8 @@ if(global.gp_active)
 				
 				shoot_angle += bubble_angle_plus;
 			}
-		
+			
+			
 			//blue
 			with(obj_danmaku5)
 			{
@@ -61,7 +64,11 @@ if(global.gp_active)
 								}
 							break;
 							case 40:
-								shoot_ring_row(DAN_NOTE,color_id,laser_nbr,note_row,x,y,angle - bubble_aim_dist,note_spd_min,note_spd_max,sfx_redirect1,3);
+								for(var i = note_spd_min; i < note_spd_max; i += (note_spd_max - note_spd_min) / note_row)
+								{
+									var rand = -note_open + rng(note_open * 2, false,9);
+									shoot(DAN_NOTE,color_id,x,y,angle - bubble_aim_dist + rand,i,sfx_redirect1,3);
+								}
 								state = 2;
 							break;
 						}
@@ -100,7 +107,11 @@ if(global.gp_active)
 								}
 							break;
 							case 40:
-								shoot_ring_row(DAN_NOTE,color_id,laser_nbr,note_row,x,y,angle + bubble_aim_dist,note_spd_min,note_spd_max,sfx_redirect1,3);
+								for(var i = note_spd_min; i < note_spd_max; i += (note_spd_max - note_spd_min) / note_row)
+								{
+									var rand = -note_open + rng(note_open * 2, false,9);
+									shoot(DAN_NOTE,color_id,x,y,angle + bubble_aim_dist + rand,i,sfx_redirect1,3);
+								}
 								state = 2;
 							break;
 						}

@@ -17,6 +17,12 @@ if(global.gp_active)
 			var bubble_arc = 1;
 			var bubble_dist = 30;
 			var bubble_wait = 26;
+			
+			var aim_arc = 0;
+			var aim_row = 3;
+			var aim_dist = 36;
+			var aim_spd_min = 3;
+			var aim_spd_max = 4.5;
 		break;
 		case 1:
 			var ball_ring = 22;
@@ -29,6 +35,12 @@ if(global.gp_active)
 			var bubble_arc = 1;
 			var bubble_dist = 30;
 			var bubble_wait = 26;
+			
+			var aim_arc = 3;
+			var aim_row = 3;
+			var aim_dist = 36;
+			var aim_spd_min = 3;
+			var aim_spd_max = 4.5;
 		break;
 		case 2:
 			var ball_ring = 30;
@@ -41,6 +53,12 @@ if(global.gp_active)
 			var bubble_arc = 3;
 			var bubble_dist = 30;
 			var bubble_wait = 26;
+			
+			var aim_arc = 5;
+			var aim_row = 3;
+			var aim_dist = 28;
+			var aim_spd_min = 3;
+			var aim_spd_max = 4.5;
 		break;
 		case 3:
 			var ball_ring = 36;
@@ -50,14 +68,20 @@ if(global.gp_active)
 			
 			var bubble_spd_shoot = 14.5;
 			var bubble_spd_final = 4;
-			var bubble_arc = 5;
+			var bubble_arc = 3;
 			var bubble_dist = 25;
 			var bubble_wait = 26;
+			
+			var aim_arc = 5;
+			var aim_row = 3;
+			var aim_dist = 20;
+			var aim_spd_min = 3;
+			var aim_spd_max = 4.5;
 		break;
 	}
 	
 	var fairy_wait = 60;
-	var fairy_life = 55;
+	var fairy_life = 42;
 	
 	var aim_y_off = 60;
 	var aim_life = 4;
@@ -126,6 +150,8 @@ if(global.gp_active)
 					shoot_ring(DAN_BALL,7,ball_ring,x,y,ang,ball_spd2 + (ball_spd2 - ball_spd1),sfx_redirect2,7);
 					break;
 				}
+				
+				shoot_arc_row(DAN_BUBBLE,3,aim_arc,aim_row,x,y,999,aim_dist,aim_spd_min,aim_spd_max,sfx_redirect1,8);
 				state = 2;
 			break;
 			case 2:
@@ -152,7 +178,10 @@ if(global.gp_active)
 	
 	with(obj_danmaku8)
 	{
-		spd = goto_value(spd,bubble_spd_final,0.35);
+		if(color_id == 7)
+		{
+			spd = goto_value(spd,bubble_spd_final,0.35);
+		}
 	}
 	
 }
