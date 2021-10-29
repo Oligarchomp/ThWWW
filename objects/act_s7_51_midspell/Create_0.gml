@@ -14,3 +14,4 @@ spell_set_time(28,false,90);
 
 act_dir = 1;
 
+angle_fan = -90;
