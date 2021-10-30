@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-spell_set_life(1200,180);
-spell_set_time(36,false,90)
+spell_set_life(1000,150);
+spell_set_time(40,false,90)
 
 act_dir = 1;

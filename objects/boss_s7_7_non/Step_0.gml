@@ -15,7 +15,7 @@ if(global.gp_active)
 			var bubble_ring = 4;
 			var bubble_spd_shoot = 8;
 			var bubble_deccel = 0.2;
-			var bubble_angle_plus = 9.7;
+			var bubble_angle_plus = 9.8;
 			var bubble_aim_dist = 70;
 			
 			var laser_nbr = 1;

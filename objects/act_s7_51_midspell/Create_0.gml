@@ -14,4 +14,7 @@ spell_set_time(28,false,90);
 
 act_dir = 1;
 
-angle_fan = -90;
+angle_spawn = -90;
+dist_spawn = 0;
+
+ang = 0;

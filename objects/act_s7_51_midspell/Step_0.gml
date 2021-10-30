@@ -11,7 +11,6 @@ if(global.gp_active)
 	{
 		
 		
-		
 	}
 }
 // Inherit the parent event

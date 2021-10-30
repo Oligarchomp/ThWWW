@@ -31,7 +31,7 @@
     "path": "folders/Objects/STAGES/Stage7.yy",
   },
   "resourceVersion": "1.0",
-  "name": "boss_s7_4_non",
+  "name": "boss_s7_3_non",
   "tags": [],
   "resourceType": "GMObject",
 }

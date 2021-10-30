@@ -11,8 +11,8 @@ if(global.gp_active)
 			boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);
 		break;
 		case 0:
-			var bubble_wait = 3;
-			var bubble_nbr = 17;
+			var bubble_wait = 4;
+			var bubble_nbr = 19;
 			var time_change = 30;
 			var bubble_spd = 9;
 			var note_spd1 = 1.3;
