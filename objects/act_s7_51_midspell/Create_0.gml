@@ -8,13 +8,26 @@ event_inherited();
 
 spell_set_spell("s7_mid1",BOSS_PALE,12014080)
 spell_set_name("spell_s7_mid1","spell_s7_mid1","spell_s7_mid1","spell_s7_mid1")
-spell_set_life(1100,160);
-spell_set_time(28,false,90);
+spell_set_life(900,160);
+spell_set_time(27,false,90);
 
 
-act_dir = 1;
 
-angle_spawn = -90;
-dist_spawn = 0;
+angle_pale = 90;
+dist_pale = 120;
+dir = 1;
 
-ang = 0;
+x_ref = room_width / 2;
+y_ref = 210;
+
+
+
+rice_time_list = ds_list_create();
+rice_angle_list = ds_list_create();
+rice_dist_list = ds_list_create();
+rice_dir_list = ds_list_create();
+
+rice_wave_dir = -1;
+
+
+boss_movement_goto(room_width / 2, y_ref + lengthdir_y(dist_pale,90),6);
