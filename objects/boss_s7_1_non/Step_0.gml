@@ -5,9 +5,9 @@ if(global.gp_active)
 	switch(spell_wait)
 	{
 		case 0:
-			var note_wait = 70;
-			var note_ring = 37;
-			var note_row = 6;
+			var note_wait = 60;
+			var note_ring = 30;
+			var note_row = 5;
 			var note_spd_shot = 7;
 			var note_deccel = 0.2;
 			var note_spd_min = 1.7;
@@ -40,7 +40,7 @@ if(global.gp_active)
 							var col = 6;
 						}
 						
-						var inst = shoot(DAN_NOTE,col,obj_boss.x,obj_boss.y,aim + i * act_dir,note_spd_shot,sfx_redirect1,5);
+						var inst = shoot(DAN_MENTOS,col,obj_boss.x,obj_boss.y,aim + i * act_dir,note_spd_shot,sfx_redirect1,5);
 						inst.spd_to = note_spd_min + (note_spd_max - note_spd_min) / note_row * r;
 						inst.angle_plus = note_angle_min + (note_angle_max - note_angle_min) / note_row * r * act_dir;
 					}

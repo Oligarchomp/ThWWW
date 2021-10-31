@@ -6,6 +6,7 @@ global.boss = BOSS_REVERENCE;
 // Inherit the parent event
 event_inherited();
 
+boss_movement_goto(room_width / 2, 90,3);
 
 need_boss_info = true;
 switch(global.player_chosen)

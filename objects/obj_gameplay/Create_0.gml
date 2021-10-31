@@ -58,13 +58,13 @@ wait_list = ds_list_create();
 
 add_stage_event(act_s7_0,0);//keep this one
 
-add_stage_event(act_s7_51_midspell,0);
+
 /*
 
-add_stage_event(act_s7_4,0)
 add_stage_event(act_s7_1,0)
+add_stage_event(act_s7_4,0)
 add_stage_event(dialogue_s7_mid,10);
-
+add_stage_event(act_s7_51_midspell,0);
 add_stage_event(act_s7_53_midspell,0);
 add_stage_event(act_s7_95,0);
 
