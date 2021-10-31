@@ -23,7 +23,7 @@ if(global.gp_active)
 			var note_row = 4;
 			var note_spd_min = 1;
 			var note_spd_max = 3;
-			var note_open = 5;
+			var note_open = 4;
 
 			
 			var boss_wait = 150;

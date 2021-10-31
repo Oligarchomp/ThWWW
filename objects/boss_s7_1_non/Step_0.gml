@@ -6,11 +6,11 @@ if(global.gp_active)
 	{
 		case 0:
 			var note_wait = 70;
-			var note_ring = 36;
+			var note_ring = 37;
 			var note_row = 6;
 			var note_spd_shot = 7;
 			var note_deccel = 0.2;
-			var note_spd_min = 1.5;
+			var note_spd_min = 1.7;
 			var note_spd_max = 5;
 			var note_angle_min = 5;
 			var note_angle_max = 130;
@@ -59,6 +59,8 @@ if(global.gp_active)
 					 {
 						 state = 1;
 						 angle += angle_plus;
+						 
+						 play_sound(sfx_redirect1,1,false);
 					 }
 					break;
 					case 1:

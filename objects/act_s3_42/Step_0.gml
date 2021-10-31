@@ -19,7 +19,7 @@ if(global.gp_active)
 			var bubble_wait = 26;
 			
 			var aim_arc = 0;
-			var aim_row = 3;
+			var aim_row = 1;
 			var aim_dist = 36;
 			var aim_spd_min = 3;
 			var aim_spd_max = 4.5;
@@ -37,7 +37,7 @@ if(global.gp_active)
 			var bubble_wait = 26;
 			
 			var aim_arc = 3;
-			var aim_row = 3;
+			var aim_row = 1;
 			var aim_dist = 36;
 			var aim_spd_min = 3;
 			var aim_spd_max = 4.5;
@@ -55,7 +55,7 @@ if(global.gp_active)
 			var bubble_wait = 26;
 			
 			var aim_arc = 5;
-			var aim_row = 3;
+			var aim_row = 1;
 			var aim_dist = 28;
 			var aim_spd_min = 3;
 			var aim_spd_max = 4.5;
@@ -73,7 +73,7 @@ if(global.gp_active)
 			var bubble_wait = 26;
 			
 			var aim_arc = 5;
-			var aim_row = 3;
+			var aim_row = 1;
 			var aim_dist = 20;
 			var aim_spd_min = 3;
 			var aim_spd_max = 4.5;
