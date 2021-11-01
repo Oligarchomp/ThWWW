@@ -26,13 +26,9 @@ if(global.gp_active)
 			
 					var water_ring = 3;
 					var water_spd_shoot_min = 5.5;
-					var water_spd_shoot_git = 0;
 					var water_deccel = 0.1;
 					var water_spd_min = 1.5;
-					var water_spd_git = 0;
 					var water_dist = 2.1;
-					var water_start = 0;
-					var water_open = 0;
 				break;
 				case 1:
 					var aim_ring = 38;
@@ -49,13 +45,9 @@ if(global.gp_active)
 			
 					var water_ring = 3;
 					var water_spd_shoot_min = 5.5;
-					var water_spd_shoot_git = 0;
 					var water_deccel = 0.1;
 					var water_spd_min = 1.6;
-					var water_spd_git = 0;
 					var water_dist = 2.1;
-					var water_start = 0;
-					var water_open = 0;
 				break;
 				case 2:
 					var aim_ring = 40;
@@ -72,13 +64,9 @@ if(global.gp_active)
 			
 					var water_ring = 3;
 					var water_spd_shoot_min = 5.5;
-					var water_spd_shoot_git = 0;
 					var water_deccel = 0.1;
 					var water_spd_min = 1.7;
-					var water_spd_git = 0;
 					var water_dist = 2.1;
-					var water_start = 0;
-					var water_open = 0;
 				break;
 				case 3:
 					var aim_ring = 44;
@@ -95,13 +83,9 @@ if(global.gp_active)
 			
 					var water_ring = 3;
 					var water_spd_shoot_min = 12.5;
-					var water_spd_shoot_git = 0;
 					var water_deccel = 0.5;
 					var water_spd_min = 1.8;
-					var water_spd_git = 0;
 					var water_dist = 2.1;
-					var water_start = 0;
-					var water_open = 0;
 				break;
 			}
 			
@@ -142,15 +126,14 @@ if(global.gp_active)
 					{
 						for(var i = 0; i < 360; i += 360 / water_ring)
 						{
-							var sp = water_spd_shoot_min + rng(water_spd_shoot_git,false,6);
-							var ang = water_angle + i - water_open + rng(water_open * 2,false,8);
-							var inst = shoot(DAN_BUBBLE,1,obj_boss.x,obj_boss.y,ang,sp,sfx_redirect1,6);
-							inst.spd_to = water_spd_min + rng(water_spd_git,false,7);
+							var ang = water_angle + i;
+							var inst = shoot(DAN_BUBBLE,1,obj_boss.x,obj_boss.y,ang,water_spd_shoot_min,sfx_redirect1,6);
+							inst.spd_to = water_spd_min;
 							inst.ang_plus = bubble_off;
 							inst.is_cancelable = false;
 			
-							var inst = shoot(DAN_BUBBLE,2,obj_boss.x,obj_boss.y,-ang - 360 / water_ring,sp,sfx_redirect1,7);
-							inst.spd_to = water_spd_min + rng(water_spd_git,false,7);
+							var inst = shoot(DAN_BUBBLE,2,obj_boss.x,obj_boss.y,-ang - 360 / water_ring,water_spd_shoot_min,sfx_redirect1,7);
+							inst.spd_to = water_spd_min;
 							inst.ang_plus = -bubble_off;
 							inst.is_cancelable = false;
 						}
@@ -160,15 +143,14 @@ if(global.gp_active)
 					{
 						for(var i = 0; i < 360; i += 360 / water_ring)
 						{
-							var sp = water_spd_shoot_min + rng(water_spd_shoot_git,false,6);
-							var ang = water_angle + i - water_open + rng(water_open * 2,false,8);
-							var inst = shoot(DAN_BALL,1,obj_boss.x,obj_boss.y,ang,sp,sfx_shot2,2);
-							inst.spd_to = water_spd_min + rng(water_spd_git,false,7);
+							var ang = water_angle + i;
+							var inst = shoot(DAN_BALL,1,obj_boss.x,obj_boss.y,ang,water_spd_shoot_min,sfx_shot2,2);
+							inst.spd_to = water_spd_min;
 							inst.ang_plus = ball_off;
 							inst.is_cancelable = false;
 			
-							var inst = shoot(DAN_BALL,2,obj_boss.x,obj_boss.y,-ang - 360 / water_ring,sp,sfx_redirect1,3);
-							inst.spd_to = water_spd_min + rng(water_spd_git,false,7);
+							var inst = shoot(DAN_BALL,2,obj_boss.x,obj_boss.y,-ang - 360 / water_ring,water_spd_shoot_min,sfx_redirect1,3);
+							inst.spd_to = water_spd_min;
 							inst.ang_plus = -ball_off;
 							inst.is_cancelable = false;
 						}
@@ -179,15 +161,14 @@ if(global.gp_active)
 					{
 						for(var i = 0; i < 360; i += 360 / water_ring)
 						{
-							var sp = water_spd_shoot_min + rng(water_spd_shoot_git,false,6);
-							var ang = water_angle + i - water_open + rng(water_open * 2,false,8);
-							var inst = shoot(DAN_MENTOS,1,obj_boss.x,obj_boss.y,ang,sp,sfx_shot2,4);
-							inst.spd_to = water_spd_min + rng(water_spd_git,false,7);
+							var ang = water_angle + i;
+							var inst = shoot(DAN_MENTOS,1,obj_boss.x,obj_boss.y,ang,water_spd_shoot_min,sfx_shot2,4);
+							inst.spd_to = water_spd_min;
 							inst.ang_plus = mentos_off;
 							inst.is_cancelable = false;
 			
-							var inst = shoot(DAN_MENTOS,2,obj_boss.x,obj_boss.y,-ang - 360 / water_ring,sp,sfx_redirect1,5);
-							inst.spd_to = water_spd_min + rng(water_spd_git,false,7);
+							var inst = shoot(DAN_MENTOS,2,obj_boss.x,obj_boss.y,-ang - 360 / water_ring,water_spd_shoot_min,sfx_redirect1,5);
+							inst.spd_to = water_spd_min;
 							inst.ang_plus = -mentos_off;
 							inst.is_cancelable = false;
 						}
@@ -204,12 +185,6 @@ if(global.gp_active)
 						if(spd == 0)
 						{
 							state = 1;
-						}
-					break;
-					case 1:
-						if(state_time == water_start)
-						{
-							state = 2;
 							angle -= ang_plus
 							spd = spd_to;
 						}
@@ -219,8 +194,9 @@ if(global.gp_active)
 					break;
 				}
 			}
-	
-			if(keyboard_check_pressed(vk_control))
+			
+			
+			if(keyboard_check_pressed(vk_control)) and (global.debug)
 			{
 				life_left -= 600;	
 			}

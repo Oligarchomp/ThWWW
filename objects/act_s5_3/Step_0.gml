@@ -54,11 +54,11 @@ if(global.gp_active)
 		break;
 	}
 	
-	var fairy_life = 38;
+	var fairy_life = 36;
 	var fairy_spd = 3;
-	var fam_wait = 26;
+	var fam_wait = 22;
 	
-	var fam_life = 12;
+	var fam_life = 26;
 	var fam_lenght = 100;
 	
 	switch(step)
@@ -114,6 +114,7 @@ if(global.gp_active)
 			
 			play_sound(sfx_familiar_spawn,1,false);
 			var inst = create_enemy(EN_FAMILIAR,x,y,fam_life,1,0,0);
+			inst.can_revenge = false;
 		}
 	}
 	
@@ -150,15 +151,12 @@ if(global.gp_active)
 					angle_aim = find_angle(x,y,obj_player.x,obj_player.y);
 				}
 			break;
-			case 1:
-				
-				
-			break;
 			case 2:
 				if(state_time == 30)
 				{
 					life = 0;
 					item_nbr = 0;
+					can_revenge = true;
 				}
 			break;
 		}

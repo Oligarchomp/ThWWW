@@ -6,9 +6,9 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var ring_nbr = 9;
+			var ring_nbr = 8;
 			var ring_row = 3;
-			var ring_spd_min = 2.5;
+			var ring_spd_min = 3;
 			var ring_spd_max = 4;
 			
 			var arrow_ring = 8;
@@ -18,7 +18,7 @@ if(global.gp_active)
 		case 1:
 			var ring_nbr = 14;
 			var ring_row = 4;
-			var ring_spd_min = 2.8;
+			var ring_spd_min = 3;
 			var ring_spd_max = 4.5;
 			
 			var arrow_ring = 12;
@@ -28,7 +28,7 @@ if(global.gp_active)
 		case 2:
 			var ring_nbr = 17;
 			var ring_row = 4;
-			var ring_spd_min = 3;
+			var ring_spd_min = 3.5;
 			var ring_spd_max = 5;
 			
 			var arrow_ring = 16;
@@ -38,7 +38,7 @@ if(global.gp_active)
 		case 3:
 			var ring_nbr = 20;
 			var ring_row = 4;
-			var ring_spd_min = 3;
+			var ring_spd_min = 3.5;
 			var ring_spd_max = 5;
 			
 			var arrow_ring = 20;

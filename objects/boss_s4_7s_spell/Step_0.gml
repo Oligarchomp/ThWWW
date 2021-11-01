@@ -70,7 +70,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var rock_nbr = 15;
 			var rock_wait = 50;
-			var rock_spd = 2;
+			var rock_spd = 2.5;
 		break;
 	}
 	//RICE

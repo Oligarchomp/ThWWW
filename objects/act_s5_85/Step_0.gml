@@ -150,7 +150,7 @@ if(global.gp_active)
 		break;
 	}
 	
-	var f_life = 54;
+	var f_life = 48;
 	var f_spd = 2.5;
 	
 	var fam_life = 18;
