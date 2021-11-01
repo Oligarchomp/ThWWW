@@ -175,7 +175,7 @@ if(global.gp_active) and (spell_wait == 0)
 			}
 		break;
 		case 5:
-			var charge_wait = 43;
+			var charge_wait = 42;
 			if(state_time < charge_wait * 3)
 			{
 				if(state_time < charge_wait * 2)
@@ -266,16 +266,23 @@ if(global.gp_active) and (spell_wait == 0)
 					}
 				}
 				
-				stab_aim_x = obj_player.x;
-				stab_aim_y = obj_player.y;
+				//stab_aim_x = obj_player.x;
+				//stab_aim_y = obj_player.y;
+				stab_angle = -90;
+				stab_dir = sign(obj_player.x - x);
+				if(stab_dir == 0)
+				{
+					stab_dir = 1;
+				}
 			break;
 			case 1:	//staby stab 
 				if(boss_spd >= 16)
 				{
 					if(state_time % stab_wait == 0)
 					{
-						var aim = find_angle(x,y,stab_aim_x,stab_aim_y)
+						var aim = stab_angle //find_angle(x,y,stab_aim_x,stab_aim_y)
 						shoot_ring_row(DAN_ARROW,7,stab_ring,stab_row,x,y,aim,stab_spd_min,stab_spd_max,sfx_shot2,7);
+						stab_angle += 7.5 * stab_dir;
 					}
 				}
 			break;

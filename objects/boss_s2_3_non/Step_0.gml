@@ -5,7 +5,7 @@ if(global.gp_active)
 {
 	switch(spell_wait)
 	{
-		case 50:
+		case 30:
 			boss_charge(obj_boss.x,obj_boss.y);
 		break;
 		case 0:

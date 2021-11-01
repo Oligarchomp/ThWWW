@@ -48,11 +48,13 @@ if(global.gp_active)
 	if (step == wait_spawn_big) or (step == wait_spawn_big * 3)  or (step == wait_spawn_big * 5)
 	{
 		var inst = create_enemy(EN_RED,room_width + big_x_off,big_y_off,big_life,4,1,-180);
+		inst.item_nbr = 2;
 	}
 	
 	if (step == wait_spawn_big* 2) or (step == wait_spawn_big * 4) or (step == wait_spawn_big * 6) 
 	{
 		var inst = create_enemy(EN_RED,-big_x_off,big_y_off,big_life,4,1,0);
+		inst.item_nbr = 2;
 	}
 	
 	with(obj_enemy4)
@@ -81,6 +83,7 @@ if(global.gp_active)
 		if (step %  wait_spawn_small = wait_spawn_small -1)
 		{
 			var inst = create_enemy(EN_GREEN,x_off + (step * 3) % (room_width - 2 * x_off),-20,30,5,4.5,-90)
+			inst.item_nbr = 2;
 		}
 	}
 	

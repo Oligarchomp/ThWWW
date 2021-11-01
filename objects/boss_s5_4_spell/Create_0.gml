@@ -14,3 +14,4 @@ boss_movement_goto(room_width / 2,60,6);
 dir_act = 1;
 
 
+stab_angle = 0;

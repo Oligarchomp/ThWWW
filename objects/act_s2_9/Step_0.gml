@@ -3,67 +3,45 @@
 
 if(global.gp_active)
 {
-	
 	switch(global.difficulty)
 	{
 		case 0:
-			//arrow
-			var shoot_lenght = 90;
-			var shoot_wait = 15;
-			var shoot_nbr = 8;
-			//green arrowhead
-			var wall_nbr = 1;
-			var wall_ring = shoot_nbr / 2;
-			var wall_spd = 2.5;
-			
-			var wall_plus = 2;
-			
+			var bubble_wait = 28;
+			var bubble_ring = 8;
+			var bubble_spd = 3;
+			var pellet_ring = bubble_ring * 3;
+			var pellet_dist_div = 3;
 		break;
 		case 1:
-			//arrow
-			var shoot_lenght = 90;
-			var shoot_wait = 15;
-			var shoot_nbr = 22;
-			//green arrowhead
-			var wall_nbr = 3;
-			var wall_ring = shoot_nbr / 2;
-			var wall_spd = 2.5;
-			
-			var wall_plus = 2;
-			
+			var bubble_wait = 20;
+			var bubble_ring = 12;
+			var bubble_spd = 3;
+			var pellet_ring = bubble_ring * 3;
+			var pellet_dist_div = 3;
 		break;
 		case 2:
-			//arrow
-			var shoot_lenght = 90;
-			var shoot_wait = 15;
-			var shoot_nbr = 28;
-			//green arrowhead
-			var wall_nbr = 3;
-			var wall_ring = shoot_nbr / 2;
-			var wall_spd = 2.5;
-			
-			var wall_plus = 2;
+			var bubble_wait = 18;
+			var bubble_ring = 14;
+			var bubble_spd = 3;
+			var pellet_ring = bubble_ring * 3;
+			var pellet_dist_div = 3;
 		break;
 		case 3:
-			//arrow
-			var shoot_lenght = 90;
-			var shoot_wait = 15;
-			var shoot_nbr = 40;
-			//green arrowhead
-			var wall_nbr = 3;
-			var wall_ring = shoot_nbr / 2;
-			var wall_spd = 2.5;
-			
-			var wall_plus = 2;
-			
+			var bubble_wait = 16;
+			var bubble_ring = 17;
+			var bubble_spd = 3;
+			var pellet_ring = bubble_ring * 3;
+			var pellet_dist_div = 3;
 		break;
 	}
 	
+	var shoot_lenght = 100;
 	
-	var fairy_life = 150;
+	var fairy_life = 130;
 	switch(step)
 	{
 		case 0:
+		
 			var inst = create_enemy(EN_BLUE,room_width - 60, -10,fairy_life,5,5,-90);
 			inst.side = -1;
 			inst.item_nbr = 6;
@@ -73,10 +51,7 @@ if(global.gp_active)
 			inst.side = 1;
 			inst.item_nbr = 6;
 		break;
-		
 	}
-	
-	
 	
 	with(obj_enemy5)
 	{
@@ -89,21 +64,17 @@ if(global.gp_active)
 					state = 1;
 					
 					angle_shoot = find_angle(x,y,obj_player.x,obj_player.y);
+					aim = find_angle(x,y,obj_player.x,obj_player.y);
 				}
 			break;
 			case 1://shoot
 				if(state_time < shoot_lenght)
 				{
-					if(state_time % shoot_wait == 0)
+					if(state_time % bubble_wait == 0)
 					{
-						shoot_ring(DAN_ARROW,1,shoot_nbr * 2,x,y,angle_shoot - 360 / shoot_nbr / 2,wall_spd + 1,sfx_shot3,8);
-						
-						var ang = angle_shoot;
-						for(var i = ang; i < ang + 360; i += 360 / wall_ring)
-						{
-							shoot_arc(DAN_ARROWHEAD,3,wall_nbr,x,y,i,360 /shoot_nbr / wall_nbr,wall_spd,sfx_shot1,7);
-						}
-						angle_shoot += wall_plus * side;
+						shoot_ring(DAN_BUBBLE,1,bubble_ring,x,y,aim,bubble_spd,sfx_redirect1,5);
+						shoot_ring(DAN_PELLET,7,pellet_ring,x,y,aim,bubble_spd,noone,4);
+						aim += (360 / bubble_ring / pellet_dist_div) * side;
 					}
 				}
 				else
@@ -123,8 +94,6 @@ if(global.gp_active)
 			break;
 		}
 	}
-	
-	
 	
 }
 

@@ -32,7 +32,7 @@ switch(global.stage)
 	break;
 	case 7:
 		name = get_text("boss_reverence");
-		spell_nbr = 10;
+		spell_nbr = 9;
 	break;
 }
 

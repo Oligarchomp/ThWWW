@@ -47,7 +47,7 @@ if(global.gp_active)
 	var crab_lenght = 450;
 	
 	var fairy_wait = 120;
-	var fairy_life = 90;
+	var fairy_life = 85;
 	
 	if (step % fairy_wait == 0)
 	{

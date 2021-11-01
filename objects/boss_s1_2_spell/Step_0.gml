@@ -36,7 +36,7 @@ if(global.gp_active)
 							case 0:
 								boss_charge(obj_boss.x,obj_boss.y);
 							break;
-							case 40:
+							case 30:
 								repeat(shoot_nbr)
 								{
 									var inst = shoot(DAN_BUBBLE,1,obj_boss.x,obj_boss.y,90 - open_max + rng(open_max * 2,false,4),3 + rng(3,false,1),sfx_shot1,3);
