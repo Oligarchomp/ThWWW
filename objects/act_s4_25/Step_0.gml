@@ -6,15 +6,15 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var mentos_ring = 13;
+			var mentos_ring = 10;
 			var mentos_spd = 2;
 			var mentos_wait = 70;
 			
 			var arc_wait = 800;
 			var arc_nbr = 3;
 			var arc_dist = 20;
-			var arc_spd_shot = 3;
-			var arc_grav = 0.08;
+			var arc_spd_shot = 2.6;
+			var arc_grav = 0.04;
 			var arc_grav_max = 8;
 			
 			var arrow_spd_shot = 11;
@@ -30,9 +30,9 @@ if(global.gp_active)
 			
 			var arc_wait = 18;
 			var arc_nbr = 11;
-			var arc_dist = 9;
-			var arc_spd_shot = 4;
-			var arc_grav = 0.08;
+			var arc_dist = 11;
+			var arc_spd_shot = 2.5;
+			var arc_grav = 0.04;
 			var arc_grav_max = 11;
 			
 			var arrow_spd_shot = 11;
@@ -48,9 +48,9 @@ if(global.gp_active)
 			
 			var arc_wait = 15;
 			var arc_nbr = 15;
-			var arc_dist = 7;
-			var arc_spd_shot = 4;
-			var arc_grav = 0.08;
+			var arc_dist = 9;
+			var arc_spd_shot = 2.5;
+			var arc_grav = 0.04;
 			var arc_grav_max = 11;
 			
 			var arrow_spd_shot = 11;
@@ -66,9 +66,9 @@ if(global.gp_active)
 			
 			var arc_wait = 13;
 			var arc_nbr = 17;
-			var arc_dist = 6;
-			var arc_spd_shot = 4;
-			var arc_grav = 0.08;
+			var arc_dist = 7;
+			var arc_spd_shot = 2.5;
+			var arc_grav = 0.04;
 			var arc_grav_max = 11;
 			
 			var arrow_spd_shot = 11;
@@ -157,7 +157,7 @@ if(global.gp_active)
 				
 				if(state_time % arc_wait == 0)
 				{
-					shoot_arc(DAN_BALL,2,arc_nbr,x,y,90,arc_dist,arc_spd_shot,sfx_shot2,7);
+					shoot_arc(DAN_MENTOS,2,arc_nbr,x,y,90,arc_dist,arc_spd_shot,sfx_shot2,8);
 				}
 			break;
 			case 1://shoot aim
@@ -186,7 +186,7 @@ if(global.gp_active)
 		{
 			if(step % mentos_wait == 0)
 			{
-				shoot_ring(DAN_MENTOS,7,mentos_ring,x,y,999,mentos_spd,sfx_redirect1,8);
+				shoot_ring(DAN_MENTOS,7,mentos_ring,x,y,999,mentos_spd,sfx_redirect1,7);
 			}
 		}
 		
@@ -227,7 +227,7 @@ if(global.gp_active)
 		spd = goto_value(spd,arrow_spd_final,0.3);
 	}
 	
-	with(obj_danmaku7)
+	with(obj_danmaku8)
 	{
 		pos_type = POS_SP;
 		y_grav_accel = arc_grav;

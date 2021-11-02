@@ -12,7 +12,7 @@ if(global.gp_active)
 			var ball_arc = 2;
 			var ball_dist = 120;
 			
-			var rev_nbr = 10;
+			var rev_nbr = 8;
 			var rev_spd = 1.5;
 		break;
 		case 1:
@@ -21,7 +21,7 @@ if(global.gp_active)
 			var ball_arc = 2;
 			var ball_dist = 110;
 			
-			var rev_nbr = 24;
+			var rev_nbr = 18;
 			var rev_spd = 1.5;
 		break;
 		case 2:
@@ -30,7 +30,7 @@ if(global.gp_active)
 			var ball_arc = 2;
 			var ball_dist = 100;
 			
-			var rev_nbr = 40;
+			var rev_nbr = 28;
 			var rev_spd = 1.5;
 		break;
 		case 3:
@@ -39,7 +39,7 @@ if(global.gp_active)
 			var ball_arc = 2;
 			var ball_dist = 90;
 			
-			var rev_nbr = 56;
+			var rev_nbr = 32;
 			var rev_spd = 1.5;
 		break;
 	}
@@ -168,7 +168,7 @@ if(global.gp_active)
 	
 	for(var i = 0; i < ds_list_size(x_death_list); i += 1)
 	{
-		shoot_ring(DAN_BALL,1,rev_nbr,x_death_list[|i],y_death_list[|i],rng(360,false,7),rev_spd,sfx_redirect1,6);
+		shoot_ring(DAN_MENTOS,1,rev_nbr,x_death_list[|i],y_death_list[|i],rng(360,false,7),rev_spd,sfx_redirect1,6);
 	}	
 }
 

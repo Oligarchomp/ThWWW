@@ -4,7 +4,11 @@
 // Inherit the parent event
 event_inherited();
 
-spell_set_life(900,150);
-spell_set_time(42,false,90)
+act_set_time(700,720);
 
-act_dir = 1;
+wait_card = 60;
+
+start = 200;
+fairy_end = 600;
+
+dir_spawn = 1;
