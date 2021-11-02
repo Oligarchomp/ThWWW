@@ -11,7 +11,5 @@ spell_set_name("spell_s7_mid2","spell_s7_mid2","spell_s7_mid2","spell_s7_mid2")
 spell_set_life(900,160);
 spell_set_time(30,false,90);
 
-boss_movement_goto(room_width / 2, 100,7);
-
-act_dir = 1;
+boss_movement_goto(room_width / 2,100,7);
 
