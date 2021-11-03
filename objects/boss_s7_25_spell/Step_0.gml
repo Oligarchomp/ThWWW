@@ -3,21 +3,23 @@
 if(global.gp_active) and (spell_wait == 0)
 {
 	
-	var mentos_wait = 14;
+	var mentos_wait = 15;
 	var mentos_start = 10;
 	var mentos_accel  = 0.02;
 	var mentos_spd = 3;
 	var mentos_dist = 80;
 	var mentos_ring = 10;
 	
-	var bubble_ring = 11;
+	var bubble_ring = 18;
 	var bubble_row = 4;
 	var bubble_arc = 3;
 	var bubble_dist = 6;
 	var bubble_spd_min = 2.3;
 	var bubble_spd_max = 5;
 	
-	switch(step % 115)
+	var bubble_angle_plus = 180 / bubble_ring;
+	
+	switch(step % 125)
 	{
 		case 0:
 			boss_charge(obj_boss.x,obj_boss.y);
@@ -33,9 +35,17 @@ if(global.gp_active) and (spell_wait == 0)
 			}
 			
 			var aim = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y);
+			/*
 			for(var i = 0; i < 360; i += 360 / bubble_ring)
 			{
 				shoot_arc_row(DAN_BUBBLE,col,bubble_arc,bubble_row,obj_boss.x,obj_boss.y,aim + i,bubble_dist,bubble_spd_min,bubble_spd_max,sfx_redirect1,7);
+			}
+			*/
+			var aim = rng(360,false,6);
+			for(var i = bubble_spd_min; i < bubble_spd_max; i += (bubble_spd_max - bubble_spd_min) / bubble_row)
+			{
+				shoot_ring(DAN_BUBBLE,col,bubble_ring,obj_boss.x,obj_boss.y,aim,i,sfx_redirect1,7);
+				aim += bubble_angle_plus * act_dir;
 			}
 			act_dir *= -1;
 			
@@ -63,6 +73,7 @@ if(global.gp_active) and (spell_wait == 0)
 			shoot(DAN_MENTOS,1,obj_boss.x + lengthdir_x(mentos_dist,aim),obj_boss.y + lengthdir_y(mentos_dist,aim),aim,0,sfx_shot3,5);
 		
 			shoot(DAN_MENTOS,6,obj_boss.x + lengthdir_x(dist_plr,aim),obj_boss.y + lengthdir_y(dist_plr,aim),aim,0,sfx_shot3,5);
+
 		}
 		
 	}
