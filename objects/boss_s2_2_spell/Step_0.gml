@@ -87,7 +87,7 @@ if(global.gp_active) and (spell_wait == 0)
 		break;
 	}
 	
-	if(step % wait_move == 0)
+	if(step % wait_move == wait_move - 1)
 	{
 		boss_movement_random(3,7,0);
 		

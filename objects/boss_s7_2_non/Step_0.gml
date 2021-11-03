@@ -15,7 +15,7 @@ if(global.gp_active)
 			var bubble_nbr = 13;
 			var bubble_spd = 3;
 			
-			var note_nbr = 10;
+			var note_nbr = 9;
 			var note_angle_spd = 0.5;
 			
 			var boss_wait = 111;

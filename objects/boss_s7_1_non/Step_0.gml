@@ -5,8 +5,8 @@ if(global.gp_active)
 	switch(spell_wait)
 	{
 		case 0:
-			var note_wait = 60;
-			var note_ring = 30;
+			var note_wait = 68;
+			var note_ring = 28;
 			var note_row = 5;
 			var note_spd_shot = 7;
 			var note_deccel = 0.2;

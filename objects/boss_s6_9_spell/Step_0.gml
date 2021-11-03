@@ -59,8 +59,8 @@ if(global.gp_active)
 					var mentos_off = 90;
 					var ball_wait = 5;
 					var ball_off = 30;
-					var bubble_wait = 18;
-					var bubble_off = 100;
+					var bubble_wait = 16;
+					var bubble_off = -60;
 			
 					var water_ring = 3;
 					var water_spd_shoot_min = 5.5;
@@ -79,7 +79,7 @@ if(global.gp_active)
 					var ball_wait = 4;
 					var ball_off = 30;
 					var bubble_wait = 15;
-					var bubble_off = 100;
+					var bubble_off = -60;
 			
 					var water_ring = 3;
 					var water_spd_shoot_min = 12.5;

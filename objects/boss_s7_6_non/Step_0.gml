@@ -37,6 +37,7 @@ if(global.gp_active)
 					var col = 6;
 				}
 				var aim = rng(180,false,4);
+				var ang = rng(360,false,7);
 				for(var i = 0; i < 360; i += 360 / bubble_nbr)
 				{
 					var bubble = shoot(DAN_BUBBLE,col,obj_boss.x,obj_boss.y,aim + i * act_dir,0,sfx_redirect1,5);
@@ -50,7 +51,7 @@ if(global.gp_active)
 					
 					for(var j = 0; j < 360; j += 360 / note_nbr)
 					{
-						var inst = shoot(DAN_MENTOS,col,obj_boss.x,obj_boss.y,aim + j,0,noone,4);
+						var inst = shoot(DAN_MENTOS,col,obj_boss.x,obj_boss.y,ang + j,0,noone,4);
 						inst.my_bubble = bubble;
 						inst.angle_ref = aim + j;
 						inst.dist_ref = 0;
