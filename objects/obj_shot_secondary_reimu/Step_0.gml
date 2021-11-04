@@ -54,7 +54,7 @@ if (global.gp_active)
 		instance_destroy(my_hitbox);
 	}
 	
-	if (y < -offscreen ) 
+	if (y < -offscreen) or (y > room_height + 20)
 	{
 		instance_destroy();
 		instance_destroy(my_hitbox);
