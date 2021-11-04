@@ -178,7 +178,7 @@ if(global.gp_active)
 		case title_step :
 			if(current_step == 0)
 			{
-				instance_create_depth(405,338,depth - 1,obj_bosstitle);
+				instance_create_depth(405,331,depth - 1,obj_bosstitle);
 			}
 		break;
 	}

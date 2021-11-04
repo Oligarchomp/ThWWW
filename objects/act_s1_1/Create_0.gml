@@ -8,6 +8,3 @@ act_set_time(500,500);
 
 stagecard_time = 300;
 wait = 60;
-
-
-

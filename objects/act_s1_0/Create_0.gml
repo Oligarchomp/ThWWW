@@ -7,3 +7,5 @@ set_bgm(mus_stage1,noone);
 
 event_next()
 instance_destroy();
+
+instance_create_depth(0,global.poc,0,obj_borderline);

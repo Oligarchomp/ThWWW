@@ -48,7 +48,7 @@ diag_alpha = 0;
 diag_alpha_max = 0.85
 
 x_diag = middle;
-y_diag = 448;
+y_diag = 443;
 
 text_alpha = 1;
 
