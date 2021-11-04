@@ -168,31 +168,31 @@ if(global.gp_active)
 		
 		}
 		
-		
-	with(obj_danmaku3)
-	{
-		switch(state)
+	
+		with(obj_danmaku3)
 		{
-			case 0:
-				if(state_time == 0)
-				{
-					var dis = sqrt(sqr(x - obj_player.x) + sqr(y - obj_player.y));
-				
-					if(dis < 50)
+			switch(state)
+			{
+				case 0:
+					if(state_time == 0)
 					{
-						instance_destroy();	
+						var dis = sqrt(sqr(x - obj_player.x) + sqr(y - obj_player.y));
+				
+						if(dis < 50)
+						{
+							instance_destroy();	
+						}
+						else
+						{
+							state = 10;	
+						}
 					}
-				}
-			break;
-			case 1:
-				spd = goto_value(spd,rice_spd,rice_accel);
-			break;
+				break;
+				case 1:
+					spd = goto_value(spd,rice_spd,rice_accel);
+				break;
+			}
 		}
-	}
-		
-		
-		
-		
 		
 		
 	}

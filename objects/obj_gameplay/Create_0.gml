@@ -55,21 +55,21 @@ wait_list = ds_list_create();
 //need to remotely inject whatever needed
 
 //S7
-
 add_stage_event(act_s7_0,0);//keep this one
 
-add_stage_event(boss_s7_25_spell,0);
-
-/*
-
-add_stage_event(act_s7_1,0)
-add_stage_event(act_s7_4,0)
 add_stage_event(dialogue_s7_mid,10);
 add_stage_event(act_s7_51_midspell,0);
 add_stage_event(act_s7_52_midspell,50);
 add_stage_event(act_s7_53_midspell,50);
+/*
+
+add_stage_event(act_s7_1,0)
+add_stage_event(act_s7_4,0)
+
 
 add_stage_event(act_s7_95,100);
+
+
 
 
 add_stage_event(dialogue_s7_pre,100);
