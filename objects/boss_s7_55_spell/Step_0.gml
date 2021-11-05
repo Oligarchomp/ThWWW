@@ -4,12 +4,13 @@ if(global.gp_active)
 {
 
 	var shoot_wait = 3;
-	var shoot_angle_plus = 5.1;
-	var knife_spd = 2;
-	var amulet_spd = 1.3;
+	var shoot_angle_plus = -5.2;
+	var amulet_row = 3;
+	var amulet_spd_min = 1.4;
+	var amulet_spd_max = 1.8;
 	var dist_shoot = 280;
 	
-	var aim_nbr = 18;
+	var aim_nbr = 16;
 	var aim_spd = 1.2;
 	
 	switch(spell_wait)
@@ -33,16 +34,16 @@ if(global.gp_active)
 							}
 						break;
 						case 20:
-							var inst = shoot(DAN_PELLET,7,room_width / 2, -200,-135,0,noone,8);
+							var inst = shoot(DAN_PELLET,7,room_width / 2, -200,-45,0,noone,8);
 							inst.is_cancelable = false;
 							inst.y_offscreen = 400;
-							var inst = shoot(DAN_PELLET,7,room_width / 2, room_height + 200,-135,0,noone,8);
+							var inst = shoot(DAN_PELLET,7,room_width / 2, room_height + 200,-45,0,noone,8);
 							inst.is_cancelable = false;
 							inst.y_offscreen = 400;
-							var inst = shoot(DAN_PELLET,7,-200, room_height / 2,45,0,noone,8);
+							var inst = shoot(DAN_PELLET,7,-200, room_height / 2,135,0,noone,8);
 							inst.is_cancelable = false;
 							inst.x_offscreen = 400;
-							var inst = shoot(DAN_PELLET,7,room_width + 200, room_height / 2,45,0,noone,8);
+							var inst = shoot(DAN_PELLET,7,room_width + 200, room_height / 2,135,0,noone,8);
 							inst.is_cancelable = false;
 							inst.x_offscreen = 400;
 						break;
@@ -63,17 +64,17 @@ if(global.gp_active)
 					}
 				break;
 				case 1:
-					switch(state_time % 200)
+					switch(state_time % 118)
 					{
 						case 1:
-							shoot_ring(DAN_MENTOS,3.5 - 2.5 * act_dir,aim_nbr,obj_boss.x,obj_boss.y,999,aim_spd,sfx_redirect1,6);
+							shoot_ring(DAN_MENTOS,3.5 - 2.5 * act_dir,aim_nbr,obj_boss.x,obj_boss.y,rng(360,false,5),aim_spd,sfx_redirect1,6);
 							act_dir *= -1;
 						break;
-						case 100:
+						case 70:
 							boss_movement_random(2,10,2);
 						break;
-						case 170:
-							boss_charge(obj_boss.x,obj_boss.y);
+						case 130:
+							//boss_charge(obj_boss.x,obj_boss.y);
 						break;
 					}
 				break;
@@ -93,8 +94,9 @@ if(global.gp_active)
 						if(state_time % shoot_wait == 0)
 						{
 							angle += shoot_angle_plus;
-							shoot(DAN_KNIFE,6,x + lengthdir_x(dist_shoot,angle),y + lengthdir_y(dist_shoot,angle),angle,knife_spd,sfx_shot2,1);
-							shoot(DAN_AMULET,1,x + lengthdir_x(dist_shoot,angle),y + lengthdir_y(dist_shoot,angle),angle,amulet_spd,sfx_shot2,2);
+							shoot_row(DAN_AMULET,1,amulet_row,x + lengthdir_x(dist_shoot,angle),y + lengthdir_y(dist_shoot,angle),angle,amulet_spd_min,amulet_spd_max,sfx_shot2,2);
+							var sp = amulet_spd_max //+ (amulet_spd_max - amulet_spd_min) / amulet_row
+							shoot(DAN_KNIFE,6,x + lengthdir_x(dist_shoot,angle),y + lengthdir_y(dist_shoot,angle),angle,sp,sfx_shot2,1);
 						}
 					break;
 				}
