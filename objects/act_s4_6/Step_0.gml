@@ -5,34 +5,33 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var shot_spd_min = 1.5;
-			var shot_spd_max = 3.5;
+			var shot_spd_min = 2.8;
+			var shot_spd_max = 3.3;
 			var shot_ring = 12;
 			var shot_row = 1;
 		break;
 		case 1:
-			var shot_spd_min = 1.5;
+			var shot_spd_min = 2.9;
 			var shot_spd_max = 3.8;
 			var shot_ring = 18;
 			var shot_row = 3;
 		break;
 		case 2:
-			var shot_spd_min = 1.5;
+			var shot_spd_min = 3;
 			var shot_spd_max = 4;
 			var shot_ring = 19;
 			var shot_row = 4;
 		break;
 		case 3:
-			var shot_spd_min = 1.5;
+			var shot_spd_min = 3;
 			var shot_spd_max = 4;
 			var shot_ring = 22;
 			var shot_row = 5;
 		break;
 	}
-	var fairy_wait = 40;
+	var fairy_wait = 70;
 	var fairy_life = 30;
 	var fairy_lenght = 1300;
-	var fairy_dist = 101;
 	
 	if(instance_exists(obj_boss))
 	{
@@ -47,16 +46,11 @@ if(global.gp_active)
 	if(step < fairy_lenght)
 	{
 		if (step % fairy_wait == 0)
-		{
-			if(x_spawn + fairy_dist * spawn_dir > room_width) or (x_spawn + fairy_dist * spawn_dir < 0)
-			{
-				spawn_dir *= -1;
-			}
-			x_spawn += fairy_dist * spawn_dir; 
-			
+		{	
 			if(wait_time == 0)
 			{
-				create_enemy(EN_RED,x_spawn,-20,fairy_life,5,6,-90);
+				create_enemy(EN_RED,280,-20,fairy_life,5,6,-90);
+				create_enemy(EN_RED,120,-20,fairy_life,5,6,-90);
 			}
 		}
 	}

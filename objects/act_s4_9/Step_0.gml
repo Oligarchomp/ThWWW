@@ -5,64 +5,67 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var arrow_wait = 8;
-			var arrow_ring = 2;
-			var arrow_row = 2;
-			var arrow_spd_min_shoot = 10;
-			var arrow_spd_max_shoot = 20;
-			var arrow_frame_stop = 20;
-			var arrow_spd_div = 5;
-			var arrow_dist = 24;
+			var ball_wait = 22;
+			var ball_spd = 2;
+			var ball_ring = 20;
 			
-			var bubble_nbr = 0;
-			var bubble_wait = 40;
-			var bubble_spd = 2;
-		break;
-		case 1:
-			var arrow_wait = 6;
-			var arrow_ring = 3;
-			var arrow_row = 2;
-			var arrow_spd_min_shoot = 10;
-			var arrow_spd_max_shoot = 20;
-			var arrow_frame_stop = 20;
-			var arrow_spd_div = 4.5;
-			var arrow_dist = 25;
-			
-			var bubble_nbr = 0;
-			var bubble_wait = 35;
-			var bubble_spd = 2.2;
-		break;
-		case 2:
-			var arrow_wait = 6;
-			var arrow_ring = 4;
-			var arrow_row = 2;
-			var arrow_spd_min_shoot = 10;
-			var arrow_spd_max_shoot = 20;
-			var arrow_frame_stop = 20;
-			var arrow_spd_div = 4.5;
-			var arrow_dist = 17.5;
-			
-			var bubble_nbr = 0;
-			var bubble_wait = 33;
-			var bubble_spd = 2.5;
-		break;
-		case 3:
-			var arrow_wait = 6;
-			var arrow_ring = 4;
-			var arrow_row = 3;
-			var arrow_spd_min_shoot = 15;
-			var arrow_spd_max_shoot = 30;
-			var arrow_frame_stop = 13;
-			var arrow_spd_div = 6.7;
-			var arrow_dist = 17;
-			
-			var bubble_nbr = 0;
 			var bubble_wait = 30;
 			var bubble_spd = 2.5;
+			var bubble_ring = 8;
+			var bubble_angle_plus = 13;
+			
+			var mentos_ring = 12;
+			var mentos_wait = 25;
+			var mentos_spd = 3;
+			var mentos_angle_plus = -6.7;
+		break;
+		case 1:
+			var ball_wait = 12;
+			var ball_spd = 2.7;
+			var ball_ring = 27;
+			
+			var bubble_wait = 20;
+			var bubble_spd = 3.3;
+			var bubble_ring = 10;
+			var bubble_angle_plus = 10.5;
+			
+			var mentos_ring = 18;
+			var mentos_wait = 17;
+			var mentos_spd = 3.7;
+			var mentos_angle_plus = -6.7;
+		break;
+		case 2:
+			var ball_wait = 10;
+			var ball_spd = 3;
+			var ball_ring = 30;
+			
+			var bubble_wait = 20;
+			var bubble_spd = 3.5;
+			var bubble_ring = 12;
+			var bubble_angle_plus = 7.7;
+			
+			var mentos_ring = 20;
+			var mentos_wait = 16;
+			var mentos_spd = 4;
+			var mentos_angle_plus = -5.7;
+		case 3:
+			var ball_wait = 10;
+			var ball_spd = 3;
+			var ball_ring = 32;
+			
+			var bubble_wait = 18;
+			var bubble_spd = 3.5;
+			var bubble_ring = 14;
+			var bubble_angle_plus = 7.2;
+			
+			var mentos_ring = 22;
+			var mentos_wait = 15;
+			var mentos_spd = 4;
+			var mentos_angle_plus = -5.5;
 		break;
 	}
 	var fairy_life = 100000;
-	var fairy_life_killable = 80;
+	var fairy_life_killable = 160;
 	var shoot_lenght = 320;
 	
 	if(step == 0)
@@ -82,7 +85,8 @@ if(global.gp_active)
 				if(spd == 0)
 				{
 					state = 1;
-					angle_shoot = 0;
+					angle_bubble = rng(360,false,5);
+					angle_mentos = rng(360,false,5);
 				}
 			break;
 			case 1://shoot aim
@@ -92,23 +96,22 @@ if(global.gp_active)
 					{
 						life = fairy_life_killable;
 					}
-					if(state_time % arrow_wait == 0)
+					if(state_time % ball_wait == 0)
 					{
-						shoot_ring_row(DAN_ARROW,3,arrow_ring,arrow_row,x,y,angle_shoot,arrow_spd_min_shoot,arrow_spd_max_shoot,sfx_shot1,6);
-						shoot_ring_row(DAN_ARROW,2,arrow_ring,arrow_row,x,y,-angle_shoot - 180 / arrow_ring,arrow_spd_min_shoot,arrow_spd_max_shoot,sfx_shot1,6);
-						angle_shoot += arrow_dist;
-						with(obj_danmaku6)
-						{
-							if(state == 0)
-							{
-								x_offscreen = 200;
-								y_offscreen = 200;
-							}
-						}
+						var ang = -90 + 180 / ball_ring;
+						shoot_ring(DAN_BALL,3,ball_ring,x,y,ang,ball_spd,sfx_shot3,4);
 					}
+					
 					if(state_time % bubble_wait == 0)
 					{
-						shoot_ring(DAN_BUBBLE,6,bubble_nbr,x,y,999,bubble_spd,sfx_redirect1,8);
+						shoot_ring(DAN_BUBBLE,6,bubble_ring,x,y,angle_bubble,bubble_spd,sfx_redirect2,6);
+						angle_bubble += bubble_angle_plus;
+					}
+					
+					if(state_time % mentos_wait == 0)
+					{
+						shoot_ring(DAN_MENTOS,1,mentos_ring,x,y,angle_mentos,mentos_spd,sfx_shot2,5);	
+						angle_mentos += mentos_angle_plus;
 					}
 				}
 				else
@@ -129,46 +132,7 @@ if(global.gp_active)
 		}
 	}
 	
-	with(obj_danmaku6)
-	{
-		switch(state)
-		{
-			case 0:
-				state = 1;
-			break;
-			case 1:
-				if(state_time == 0)
-				{
-					spd_ref = spd;
-					x_ref = x;
-					y_ref = y;
-				}
-				spd = goto_value(spd,0,spd_ref / arrow_frame_stop);
-				if(spd == 0)
-				{
-					state = 2;
-					if(color_id == 2)
-					{
-						var dir_spin = 1;
-					}
-					else
-					{
-						var dir_spin = -1;
-					}
-					angle_max = angle + (sqrt(sqr(x - x_ref) + sqr(y - y_ref))) * dir_spin ;
-				}
-			break;
-			case 2:
-				angle = goto_value(angle_max,angle,0.5);
-				spd = goto_value(spd,spd_ref / arrow_spd_div,0.1)
-				if(state_time == 60)
-				{
-					x_offscreen = 20;
-					y_offscreen = 20;
-				}
-			break;
-		}
-	}
+
 }
 // Inherit the parent event
 event_inherited();
