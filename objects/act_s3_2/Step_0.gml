@@ -33,7 +33,7 @@ if(global.gp_active)
 	}
 	
 	var fairy_wait = 60;
-	var fairy_life = 55;
+	var fairy_life = 48;
 	
 	if (step % fairy_wait == 0)
 	{

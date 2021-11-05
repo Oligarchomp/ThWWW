@@ -92,7 +92,8 @@ spell_wait = 60;
 
 is_capturing = false;
 
-item_nbr = 40;
+item_nbr = 0;
+item_nbr_spell = 40;
 item_dist = 70;
 
 non_only = false;

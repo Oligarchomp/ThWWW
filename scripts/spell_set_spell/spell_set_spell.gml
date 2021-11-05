@@ -8,6 +8,8 @@ function spell_set_spell(argument0,argument1,argument2){
 	is_spell = true;
 	is_capturing = true;
 	
+	item_nbr = item_nbr_spell;
+	
 	bonus = argument2;
 	bonus_max = bonus;
 	user_id = argument1;

@@ -16,6 +16,7 @@ dir_act = 1;
 x_aim = noone;
 y_aim = noone;
 
+item_nbr = 40;
 
 // to sync with the music
 instance_create_depth(0,0,0,act_s5_7);
