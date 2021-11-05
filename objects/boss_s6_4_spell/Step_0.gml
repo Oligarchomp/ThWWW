@@ -96,7 +96,7 @@ if(global.gp_active) and (spell_wait == 0)
 					
 					if(state_time % arc_wait == 0)
 					{
-						var ang = find_angle(obj_boss.x,obj_boss.y,200 - 200 * act_dir,170) + arc_aim_open - rng(arc_aim_open * 2,false,3);
+						var ang = find_angle(obj_boss.x,obj_boss.y,200 - 200 * act_dir,165) + arc_aim_open - rng(arc_aim_open * 2,false,3);
 						shoot_arc(DAN_BUBBLE,1,arc_nbr,obj_boss.x,obj_boss.y,ang,arc_dist,arc_spd,sfx_redirect1,7);
 					}
 				}

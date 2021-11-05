@@ -166,6 +166,7 @@ if(global.gp_active) and (spell_wait == 0)
 			inst.x_offscreen = 100;
 			inst.y_offscreen = 3000;
 			inst.is_cancelable = false;
+			inst.angle = -90 // for the rng patch
 			
 			anchor_id = inst;
 			

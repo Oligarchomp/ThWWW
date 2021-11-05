@@ -103,6 +103,35 @@ if(global.gp_active) and (spell_wait == 0)
 	}
 	
 	
+	//catch hard
+	with(obj_danmaku6)
+	{
+		switch(state)
+		{
+			case 0:
+				if(state_time == 0)
+				{
+					angle_to = angle + 360;
+					y_offscreen = 200;
+					x_offscreen = 200;
+					is_cancelable = false;
+				}
+				else
+				{
+					angle = goto_value(angle,angle_to,catch_angle_plus);
+				}
+					
+				
+				if(angle == angle_to)
+				{
+					state = 1;
+					y_offscreen = 40;
+					x_offscreen = 40;
+				}
+			break;
+		}
+	}
+	
 	
 	switch(state)
 	{
@@ -296,34 +325,7 @@ if(global.gp_active) and (spell_wait == 0)
 		}
 	}
 	
-	//catch hard
-	with(obj_danmaku6)
-	{
-		switch(state)
-		{
-			case 0:
-				if(state_time == 0)
-				{
-					angle_to = angle + 360;
-					y_offscreen = 200;
-					x_offscreen = 200;
-					is_cancelable = false;
-				}
-				else
-				{
-					angle = goto_value(angle,angle_to,catch_angle_plus);
-				}
-					
-				
-				if(angle == angle_to)
-				{
-					state = 1;
-					y_offscreen = 40;
-					x_offscreen = 40;
-				}
-			break;
-		}
-	}
+	
 }
 
 // Inherit the parent event
