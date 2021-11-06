@@ -103,8 +103,6 @@ if(global.gp_active)
 		
 		
 		//RICE
-	
-	
 		for(var i = 0; i < ds_list_size(rice_angle_list); i += 1)
 		{
 			rice_time_list[|i] += 1;

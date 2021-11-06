@@ -67,7 +67,7 @@ if(global.gp_active)
 					switch(state_time % 118)
 					{
 						case 1:
-							shoot_ring(DAN_MENTOS,3.5 - 2.5 * act_dir,aim_nbr,obj_boss.x,obj_boss.y,rng(360,false,5),aim_spd,sfx_redirect1,6);
+							shoot_ring(DAN_MENTOS,3.5 - 2.5 * act_dir,aim_nbr,obj_boss.x,obj_boss.y,999,aim_spd,sfx_redirect1,6);
 							act_dir *= -1;
 						break;
 						case 70:
@@ -87,7 +87,15 @@ if(global.gp_active)
 				switch(state)
 				{
 					case 0:
-						shoot_arc_row(DAN_BUBBLE,3,18,3,x,y,find_angle(x,y,room_width / 2,room_height / 2),5.5,8,13.5,noone,7)
+						if(y > room_height)
+						{
+							var col = 3;
+						}
+						else
+						{
+							var col = 1;	
+						}
+						shoot_arc_row(DAN_BUBBLE,col,18,3,x,y,find_angle(x,y,room_width / 2,room_height / 2),5.5,8,13.5,noone,7)
 						state = 1;
 					break;
 					case 2:
