@@ -116,6 +116,7 @@
     {"id":{"name":"shad_white","path":"shaders/shad_white/shad_white.yy",},"order":1,},
     {"id":{"name":"obj_danmaku_spawn","path":"objects/obj_danmaku_spawn/obj_danmaku_spawn.yy",},"order":1,},
     {"id":{"name":"act_s7_53_midspell","path":"objects/act_s7_53_midspell/act_s7_53_midspell.yy",},"order":3,},
+    {"id":{"name":"zact_s4_2_old","path":"objects/zact_s4_2_old/zact_s4_2_old.yy",},"order":26,},
     {"id":{"name":"draw_score","path":"scripts/draw_score/draw_score.yy",},"order":13,},
     {"id":{"name":"act_s2_3","path":"objects/act_s2_3/act_s2_3.yy",},"order":12,},
     {"id":{"name":"spr_flower","path":"sprites/spr_flower/spr_flower.yy",},"order":1,},
