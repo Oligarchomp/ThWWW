@@ -151,7 +151,6 @@ add_stage_event(boss_s3_6_spell,0);
 add_stage_event(dialogue_s3_post,100);
 
 //S4
-*/
 add_stage_event(act_s4_0,0); // keep this one
 add_stage_event(act_s4_1,0)
 add_stage_event(act_s4_2,0)
@@ -188,7 +187,9 @@ switch(global.player_chosen)
 add_stage_event(dialogue_s4_post,100);
 
 //S5
+*/
 add_stage_event(act_s5_0,0);// keep this one
+/*
 add_stage_event(act_s5_1,0);
 add_stage_event(act_s5_2,0);
 add_stage_event(act_s5_3,60);
@@ -202,6 +203,7 @@ add_stage_event(act_s5_9,0);
 add_stage_event(dialogue_s5_pre,60);
 add_stage_event(boss_s5_1_non,0);
 add_stage_event(boss_s5_2_spell,0);
+*/
 add_stage_event(boss_s5_3_non,40);
 add_stage_event(boss_s5_4_spell,0);
 add_stage_event(boss_s5_5_non,40);

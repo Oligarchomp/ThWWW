@@ -9,7 +9,6 @@ if(global.gp_active)
 			var laser_wait = 86;
 			var laser_nbr = 2;
 			var laser_dist = 50;
-			var laser_spin = 12;
 			
 			var star_wait = 40;
 			var star_nbr = 16;
@@ -23,7 +22,6 @@ if(global.gp_active)
 			var laser_wait = 72;
 			var laser_nbr = 2;
 			var laser_dist = 50;
-			var laser_spin = 7;
 			
 			var star_wait = 25;
 			var star_nbr = 24;
@@ -37,7 +35,6 @@ if(global.gp_active)
 			var laser_wait = 68;
 			var laser_nbr = 2;
 			var laser_dist = 50;
-			var laser_spin = 7;
 			
 			var star_wait = 21;
 			var star_nbr = 28;
@@ -51,7 +48,6 @@ if(global.gp_active)
 			var laser_wait = 65;
 			var laser_nbr = 2;
 			var laser_dist = 50;
-			var laser_spin = 6.5;
 			
 			var star_wait = 20;
 			var star_nbr = 32;
@@ -100,7 +96,7 @@ if(global.gp_active)
 								shoot_laser(x + lengthdir_x(laser_dist,angle_shoot + j),y + lengthdir_y(laser_dist,angle_shoot + j),angle_shoot + j + 90 + i,40,30,c_white,sfx_laser2);
 							}
 						}
-						angle_shoot += laser_spin;
+						angle_shoot = rng(360,false,7);
 					}
 					
 					if(state_time % star_wait == 0)

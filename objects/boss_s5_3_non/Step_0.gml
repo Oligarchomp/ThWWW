@@ -67,9 +67,9 @@ if(global.gp_active)
 			switch(state)
 			{
 				case 0:
-					var x_pos = obj_boss.x - 10 * sword_size * sword_dir;
-					var y_pos = obj_boss.y + 10 * sword_size
-					var angle_sword = find_angle(obj_boss.x,obj_boss.y,x_pos,y_pos);
+					var angle_sword = -90 - 45 * sword_dir - 10 + rng(20,false,7);
+					var x_pos = obj_boss.x + lengthdir_x(100,angle_sword);
+					var y_pos = obj_boss.y + lengthdir_y(100,angle_sword);
 					var inst = shoot(DAN_KNIFE,3,x_pos,y_pos,angle_sword,0,sfx_spawn_light,8);
 					inst.spawn_type = SPAWN_SCALE;
 					inst.image_xscale = sword_size;
@@ -139,6 +139,7 @@ if(global.gp_active)
 								for(var j = -(ice_arc - 1) * ice_dist / 2; j < (ice_arc + 1) * ice_dist / 2; j += ice_dist)
 								{
 									var inst = shoot(DAN_ARROW,3,xx,yy,angle_aim  + j,0,sfx_shot2,7);
+									inst.y_offscreen = 200; 
 								}
 					
 							}
@@ -178,23 +179,15 @@ if(global.gp_active)
 			{
 				switch(state)
 				{
-					case 0:
-						if(y < -20) and (angle % 360 < 180)
-						{
-							cancel_bullet(self);
-						}
-						x_offscreen = 80;
-						y_offscreen = 150;
-					break;
 					case 1:
-					if(spd < ice_spd)
-					{
-						spd += 0.1;
-					}
-						if(state_time == 50)
+						if(spd < ice_spd)
 						{
-							x_offscreen = 20;
-							y_offscreen = 20;
+							spd += 0.1;
+						}
+						
+						if(y > 500)
+						{
+							y_offscreen = 30;
 						}
 					break;
 				}
