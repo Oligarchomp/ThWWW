@@ -5,7 +5,7 @@ if(global.gp_active) and (spell_wait == 0)
 	
 	var spawn_time = 54;
 	var rice_wait = 1;
-	var rice_angle_plus = 12;
+	var rice_angle_plus = 12.5;
 	var rice_dist = 10;
 	var rice_nbr = 6;
 	var wait_move = 65;
@@ -147,6 +147,9 @@ if(global.gp_active) and (spell_wait == 0)
 		{
 			if(rice_time_list[|i] > spawn_time + wait_move)
 			{
+				
+				play_sound(sfx_redirect1,1,false);
+				
 				var spell = self;
 				with(obj_danmaku3)
 				{

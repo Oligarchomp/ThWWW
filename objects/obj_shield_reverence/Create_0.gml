@@ -7,7 +7,9 @@ old_state = -1;
 state_time = 0;
 
 scale_ref = 0;
-
+scale_max = 1;
 scale = 0;
 
 step = 0;
+
+bop_scale = 0.1;

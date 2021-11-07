@@ -25,7 +25,7 @@ if(global.gp_active)
 	switch(state)
 	{
 		case 0:
-			scale_ref = goto_value(scale_ref,1,0.1);
+			scale_ref = goto_value(scale_ref,scale_max,0.1);
 		break;
 		case 1:
 			scale_ref = goto_value(scale_ref,0,0.1);
@@ -36,7 +36,7 @@ if(global.gp_active)
 		break;
 	}
 	
-	scale = scale_ref + (sin(step / 20) * 0.1) * scale_ref;
+	scale = scale_ref + (sin(step / 20) * bop_scale) * scale_ref;
 	
 	step += 1;
 }
