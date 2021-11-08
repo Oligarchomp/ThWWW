@@ -70,7 +70,7 @@ if(global.gp_active)
 	switch(step)
 	{
 		case 0:
-			var inst = create_enemy(EN_BLUE,-20,80,fairy_life,4,2.5,0);
+			var inst = create_enemy(EN_RED,-20,80,fairy_life,4,2.5,0);
 			inst.dir_dan = 1;
 		break;
 		case 50:
@@ -78,7 +78,7 @@ if(global.gp_active)
 			x_fairy = 300;
 		break;
 		case 200:
-			var inst = create_enemy(EN_GREEN,room_width + 20,80,fairy_life,4,2.5,180);
+			var inst = create_enemy(EN_RED,room_width + 20,80,fairy_life,4,2.5,180);
 			inst.dir_dan = -1;
 		break;
 		case 250:
@@ -86,7 +86,7 @@ if(global.gp_active)
 			x_fairy = 100;
 		break;
 		case 400:
-			var inst = create_enemy(EN_GREEN,-20,80,fairy_life,4,2.5,0);
+			var inst = create_enemy(EN_RED,-20,80,fairy_life,4,2.5,0);
 			inst.dir_dan = 1;
 		break;
 		case 450:
@@ -94,7 +94,7 @@ if(global.gp_active)
 			x_fairy = 300;
 		break;
 		case 600:
-			var inst = create_enemy(EN_GREEN,room_width + 20,80,fairy_life,4,2.5,180);
+			var inst = create_enemy(EN_RED,room_width + 20,80,fairy_life,4,2.5,180);
 			inst.dir_dan = -1;
 		break;
 		case 650:
@@ -109,7 +109,7 @@ if(global.gp_active)
 	{
 		if(need_fairy_time % fairy_wait == 0)
 		{
-			create_enemy(EN_BLUE,x_fairy - x_git + rng(2 * x_git,false,3),-20,small_fairy_life,3,4,-90);
+			create_enemy(EN_GREEN,x_fairy - x_git + rng(2 * x_git,false,3),-20,small_fairy_life,3,4,-90);
 		}
 		need_fairy_time -= 1;
 	}

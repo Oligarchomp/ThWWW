@@ -31,7 +31,7 @@ if(global.gp_active)
 			var ev = event_list[|event_step];
 			if(!instance_exists(ev))
 			{
-				instance_create_depth(0,0,0,ev)
+				instance_create_depth(0,0,0,ev);
 			}
 		}
 	}

@@ -44,7 +44,7 @@ if(global.gp_active)
 		break;
 	}
 	
-	var f_life = 90;
+	var f_life = 94;
 	var shoot_lenght = 180;
 	
 	var familiar_nbr = 5;

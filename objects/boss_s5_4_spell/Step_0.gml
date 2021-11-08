@@ -80,7 +80,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var rice_spd_shoot = 4;
 			var rice_spd_git = 2;
 			var rice_spd_div = 2;
-			var rice_nbr = 4;
+			var rice_nbr = 5;
 			
 			var sword_wait = 1;
 			var sword_row = 3;

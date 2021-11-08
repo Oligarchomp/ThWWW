@@ -25,4 +25,6 @@ function shoot_laser(argument0,argument1,argument2,argument3,argument4,argument5
 	inst.col = col;
 	inst.sound = sfx;
 	inst.image_angle = ang;
+	
+	return inst;
 }

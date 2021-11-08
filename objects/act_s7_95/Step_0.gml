@@ -9,7 +9,7 @@ if(global.gp_active)
 	var bubble_spd_min = 1.5;
 	var bubble_spd_max = 6;
 	
-	var mentos_ring = 40;
+	var mentos_ring = 38;
 	var mentos_row = 4;
 	var mentos_spd_min = 1.5;
 	var mentos_spd_max = 5.5;
@@ -29,7 +29,6 @@ if(global.gp_active)
 	}
 	
 	
-	//blue
 	with(obj_enemy)
 	{
 		switch(state)

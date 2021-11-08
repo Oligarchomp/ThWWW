@@ -58,20 +58,19 @@ wait_list = ds_list_create();
 /*
 add_stage_event(act_s7_0,0);//keep this one
 
-
-
-
 add_stage_event(act_s7_1,0)
 
+add_stage_event(act_s7_35,0);
 add_stage_event(act_s7_4,0)
 add_stage_event(dialogue_s7_mid,10);
 add_stage_event(act_s7_51_midspell,0);
 add_stage_event(act_s7_52_midspell,50);
 add_stage_event(act_s7_53_midspell,50);
 
-add_stage_event(act_s7_95,100);
-add_stage_event(dialogue_s7_pre,100);
 
+add_stage_event(act_s7_95,100);
+
+add_stage_event(dialogue_s7_pre,100);
 add_stage_event(boss_s7_1_non,0);
 add_stage_event(boss_s7_15_spell,0);
 add_stage_event(boss_s7_2_non,50);
@@ -86,9 +85,8 @@ add_stage_event(boss_s7_6_non,50);
 add_stage_event(boss_s7_7_non,50);
 add_stage_event(boss_s7_8_non,50);
 add_stage_event(boss_s7_85_spell,0);
+add_stage_event(dialogue_s7_post,100);
 
-add_stage_event(dialogue_s7_post,70);
-*/
 //S1
 /*
 add_stage_event(act_s1_0,0);//keep this one
@@ -151,6 +149,7 @@ add_stage_event(boss_s3_6_spell,0);
 add_stage_event(dialogue_s3_post,100);
 
 //S4
+
 add_stage_event(act_s4_0,0); // keep this one
 add_stage_event(act_s4_1,0)
 add_stage_event(act_s4_2,0)
@@ -202,8 +201,8 @@ add_stage_event(act_s5_85,0);
 add_stage_event(act_s5_9,0);
 add_stage_event(dialogue_s5_pre,60);
 add_stage_event(boss_s5_1_non,0);
-add_stage_event(boss_s5_2_spell,0);
 */
+add_stage_event(boss_s5_2_spell,0);
 add_stage_event(boss_s5_3_non,40);
 add_stage_event(boss_s5_4_spell,0);
 add_stage_event(boss_s5_5_non,40);
