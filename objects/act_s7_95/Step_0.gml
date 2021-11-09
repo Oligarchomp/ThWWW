@@ -18,18 +18,18 @@ if(global.gp_active)
 	
 	if(step == 0)
 	{
-		create_enemy(EN_RED,room_width / 2 - 70,-20,fairy_life,2,6,-90);
-		create_enemy(EN_RED,room_width / 2 + 70,-20,fairy_life,2,6,-90);
+		create_enemy(EN_RED,room_width / 2 - 70,-20,fairy_life,3,6,-90);
+		create_enemy(EN_RED,room_width / 2 + 70,-20,fairy_life,3,6,-90);
 		
-		create_enemy(EN_BLUE,room_width /2,-10,fairy_life,1,6.1,-90)
+		create_enemy(EN_BLUE,room_width /2,-10,fairy_life,3,6.1,-90)
 		
-		create_enemy(EN_BLUE,-20,50,fairy_life,1,6.1,0)
-		create_enemy(EN_BLUE,room_width + 20, 50,fairy_life,1,6.1,180)
+		create_enemy(EN_BLUE,-20,50,fairy_life,3,6.1,0)
+		create_enemy(EN_BLUE,room_width + 20, 50,fairy_life,3,6.1,180)
 		
 	}
 	
 	
-	with(obj_enemy)
+	with(obj_enemy3)
 	{
 		switch(state)
 		{

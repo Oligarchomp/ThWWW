@@ -22,7 +22,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var tree_spd = 1.5;
 			var tree_spd_div = 1.5;
 			
-			var aim_size = 1;
+			var aim_dan = DAN_ARROW;
 			var aim_wait = 12;
 			var aim_spd = 3;
 			var aim_arc = 5;
@@ -46,7 +46,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var tree_spd = 1.5;
 			var tree_spd_div = 1.5;
 			
-			var aim_size = 1;
+			var aim_dan = DAN_ARROW;
 			var aim_wait = 8;
 			var aim_spd = 3;
 			var aim_arc = 7;
@@ -70,7 +70,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var tree_spd = 1.5;
 			var tree_spd_div = 1.5;
 			
-			var aim_size = 2;
+			var aim_dan = DAN_MENTOS;
 			var aim_wait = 6;
 			var aim_spd = 3;
 			var aim_arc = 9;
@@ -94,7 +94,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var tree_spd = 1.5;
 			var tree_spd_div = 1.5;
 			
-			var aim_size = 2;
+			var aim_dan = DAN_MENTOS;
 			var aim_wait = 5;
 			var aim_spd = 3;
 			var aim_arc = 11;
@@ -235,14 +235,7 @@ if(global.gp_active) and (spell_wait == 0)
 			{
 				if(state_time % aim_wait == aim_wait - 1) //and (obj_boss.y > 0)
 				{
-					var aim = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y);
-					for(var i = -(aim_arc - 1) / 2 * aim_dist; i < (aim_arc + 1) / 2 * aim_dist; i += aim_dist)
-					{
-						var inst = shoot(DAN_ARROW,7,obj_boss.x,obj_boss.y,aim + i,aim_spd,sfx_shot1,4);	
-						inst.image_xscale = aim_size;
-						inst.image_yscale = aim_size;
-						inst.spawn_type = SPAWN_SCALE;
-					}
+					shoot_arc(aim_dan,7,aim_arc,obj_boss.x,obj_boss.y,999,aim_dist,aim_spd,sfx_shot1,4);	
 				}
 			}
 			else

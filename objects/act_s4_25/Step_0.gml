@@ -75,7 +75,7 @@ if(global.gp_active)
 			var inst = create_enemy(EN_GREEN,280,-20,big_life,2,7,-90);
 			inst.item_nbr = 6;
 		break;
-		case 70:
+		case 20:
 			need_fairy_time = 80;
 			dir_small = 1;
 		break;
@@ -83,7 +83,7 @@ if(global.gp_active)
 			var inst = create_enemy(EN_GREEN,120,-20,big_life,2,7,-90);
 			inst.item_nbr = 6;
 		break;
-		case 190:
+		case 140:
 			need_fairy_time = 80;
 			dir_small = -1;
 		break;
@@ -91,7 +91,7 @@ if(global.gp_active)
 			var inst = create_enemy(EN_GREEN,280,-20,big_life,2,7,-90);
 			inst.item_nbr = 6;
 		break;
-		case 310:
+		case 260:
 			need_fairy_time = 80;
 			dir_small = 1;
 		break;
@@ -99,7 +99,7 @@ if(global.gp_active)
 			var inst = create_enemy(EN_GREEN,120,-20,big_life,2,7,-90);
 			inst.item_nbr = 6;
 		break;
-		case 430:
+		case 380:
 			need_fairy_time = 80;
 			dir_small = -1;
 		break;
@@ -195,9 +195,12 @@ if(global.gp_active)
 	{
 		if(state <= 1)
 		{
-			if(step % arrow_wait == 0)
+			if(step > 20)
 			{
-				shoot_arc_row(DAN_ARROW,1,arrow_arc,arrow_row,x,y,999,arrow_dist,arrow_spd_min,arrow_spd_max,sfx_shot1,3);
+				if(step % arrow_wait == 0)
+				{
+					shoot_arc_row(DAN_ARROW,1,arrow_arc,arrow_row,x,y,999,arrow_dist,arrow_spd_min,arrow_spd_max,sfx_shot1,3);
+				}
 			}
 		}
 		switch(state)
