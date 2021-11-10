@@ -13,7 +13,7 @@ if(global.gp_active)
 	switch(step)
 	{
 		case 0:
-			var inst = create_enemy(EN_RED,room_width / 2, 20,600,1,4,-90);
+			var inst = create_enemy(EN_RED,room_width / 2, -20,600,1,6,-90);
 			inst.item_nbr = 20;
 		break;
 		case 50:

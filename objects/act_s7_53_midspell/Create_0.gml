@@ -8,7 +8,19 @@ event_inherited();
 
 spell_set_spell("s7_mid3",BOSS_PALE,12014080)
 spell_set_name("spell_s7_mid3","spell_s7_mid3","spell_s7_mid3","spell_s7_mid3")
-spell_set_life(250,160);
+switch(global.player_chosen)
+{
+	case P_REIMU:
+		var life = 250;
+	break;
+	case P_MARISA:
+		var life = 175;
+	break;
+	case P_SANAE:
+		var life = 280;
+	break;
+}
+spell_set_life(life,250);
 spell_set_time(30,false,90);
 
 boss_movement_goto(room_width / 2, 100,7);

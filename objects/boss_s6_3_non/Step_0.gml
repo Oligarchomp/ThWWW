@@ -57,14 +57,14 @@ if(global.gp_active)
 					
 					var bullet_wait = 7;
 					var bullet_spd = 3;
-					var bullet_ring = 13;
+					var bullet_ring = 12;
 					var bullet_dist = 180 / bullet_ring / 4;
 				break;
 			}
 			
 			var boss_wait = 130;
 			
-			if(step % boss_wait == 0)
+			if(step % boss_wait == boss_wait - 1)
 			{
 				boss_movement_random(2,2,1);
 			}

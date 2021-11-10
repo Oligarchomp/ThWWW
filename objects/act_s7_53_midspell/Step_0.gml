@@ -4,7 +4,7 @@ if(global.gp_active) and (spell_wait == 0)
 {
 	spin_spd = -2;
 	
-	var arrow_wait = 7;
+	var arrow_wait = 4;//7
 	var arrow_arc = 3;
 	var arrow_row = 3;
 	var arrow_dist = 50;
@@ -16,8 +16,8 @@ if(global.gp_active) and (spell_wait == 0)
 	var bubble_spd_max = 1.8;
 	var bubble_accel = 0.1;
 	
-	var mentos_ring = 19;
-	var mentos_wait = 30;
+	var mentos_ring = 18;
+	var mentos_wait = 20;
 	var mentos_spd = 2;
 	
 	switch(state)
@@ -42,13 +42,15 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			if(state_time % arrow_wait == 0)
 			{
-				shoot_arc_row(DAN_ARROWHEAD,3,arrow_arc,arrow_row,obj_boss.x,obj_boss.y,999,arrow_dist,arrow_spd_min,arrow_spd_max,sfx_shot2,4);
+				//shoot_arc_row(DAN_ARROWHEAD,3,arrow_arc,arrow_row,obj_boss.x,obj_boss.y,999,arrow_dist,arrow_spd_min,arrow_spd_max,sfx_shot2,4);
+				shoot_arc(DAN_ARROWHEAD,3,5,obj_boss.x,obj_boss.y,angle_pale + 90,9,6,sfx_shot2,4);
 			}
 			
 			if(state_time % bubble_wait == 0)
 			{
 				var ang = angle_pale + 180;
-				shoot(DAN_BUBBLE,7,obj_boss.x,obj_boss.y,ang,0,sfx_redirect1,8);
+				var inst = shoot(DAN_BUBBLE,7,obj_boss.x,obj_boss.y,ang,0,sfx_redirect1,8);
+				inst.is_cancelable = false;
 			}
 			
 			if(state_time % mentos_wait = mentos_wait - 1)
