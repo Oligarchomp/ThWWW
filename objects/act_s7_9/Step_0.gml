@@ -5,9 +5,9 @@ if(global.gp_active)
 	var laser_wave = 7;
 	var laser_wait = 100;
 	
-	var aim_lenght = 260;
-	var aim_wait = 30;
-	var aim_ring = 16;
+	var aim_lenght = 200;
+	var aim_wait = 32;
+	var aim_ring = 12;
 	var aim_spd = 3;
 	
 	switch(step)

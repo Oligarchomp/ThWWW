@@ -197,7 +197,7 @@ if(global.gp_active) and (spell_wait == 0)
 			}
 		break;
 		case 1:
-			boss_movement_goto(obj_player.x,max(obj_player.y - 150,100), 3);
+			boss_movement_goto(obj_player.x,340, 3);
 			if(state_time == 160)
 			{
 				obj_boss.x_to = obj_boss.x;
