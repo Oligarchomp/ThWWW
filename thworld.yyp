@@ -94,6 +94,7 @@
     {"id":{"name":"boss_s6_8_spell","path":"objects/boss_s6_8_spell/boss_s6_8_spell.yy",},"order":18,},
     {"id":{"name":"spr_agra","path":"sprites/spr_agra/spr_agra.yy",},"order":1,},
     {"id":{"name":"spr_fairy_green_idle","path":"sprites/spr_fairy_green_idle/spr_fairy_green_idle.yy",},"order":0,},
+    {"id":{"name":"act_s7_8","path":"objects/act_s7_8/act_s7_8.yy",},"order":29,},
     {"id":{"name":"obj_enemy_defeat","path":"objects/obj_enemy_defeat/obj_enemy_defeat.yy",},"order":0,},
     {"id":{"name":"font_stagecard_small","path":"fonts/font_stagecard_small/font_stagecard_small.yy",},"order":6,},
     {"id":{"name":"obj_boss_explode","path":"objects/obj_boss_explode/obj_boss_explode.yy",},"order":1,},

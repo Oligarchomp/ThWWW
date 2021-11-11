@@ -65,7 +65,7 @@ if(global.gp_active)
 					{
 						for(var i = arrow_spd_min; i < arrow_spd_max; i += (arrow_spd_max - arrow_spd_min) / arrow_row)
 						{
-							shoot_ring(DAN_ARROW,1,arrow_ring,x,y,angle_shoot,i,sfx_redirect1,4);
+							shoot_ring(DAN_ARROW,1,arrow_ring,x,y,angle_shoot,i,sfx_redirect1,1);
 							angle_shoot += 180 / arrow_ring;
 						}
 						angle_shoot += 10 * dan_dir;
@@ -75,7 +75,7 @@ if(global.gp_active)
 				{
 					if(state_time % mentos_wait == 0)
 					{
-						shoot_arc(DAN_MENTOS,6,mentos_arc,x,y,angle_shoot,mentos_dist,mentos_spd,sfx_shot1,5);	
+						shoot_arc(DAN_MENTOS,6,mentos_arc,x,y,angle_shoot,mentos_dist,mentos_spd,sfx_shot1,2);	
 						angle_shoot += mentos_spin * dan_dir;
 					}
 				}

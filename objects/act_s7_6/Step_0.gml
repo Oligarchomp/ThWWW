@@ -17,16 +17,20 @@ if(global.gp_active)
 	switch(step)
 	{
 		case 0:
-			need_fairy_time = 200;
+			need_fairy_time = 150;
 			act_dir = 1;
 		break;
-		case 360:
-			need_fairy_time = 200;
+		case 260:
+			need_fairy_time = 150;
 			act_dir = -1;
 		break;
-		case 720:
-			need_fairy_time = 200;
+		case 520:
+			need_fairy_time = 150;
 			act_dir = 1;
+		break;
+		case 780:
+			need_fairy_time = 150;
+			act_dir = -1;
 		break;
 	}
 	
