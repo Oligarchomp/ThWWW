@@ -31,7 +31,7 @@
     "path": "folders/Objects/STAGES/Stage7.yy",
   },
   "resourceVersion": "1.0",
-  "name": "act_s7_35",
+  "name": "act_s7_2",
   "tags": [],
   "resourceType": "GMObject",
 }
