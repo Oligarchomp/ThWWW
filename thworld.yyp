@@ -441,6 +441,7 @@
     {"id":{"name":"spell_set_name","path":"scripts/spell_set_name/spell_set_name.yy",},"order":3,},
     {"id":{"name":"spr_secondary_marisa","path":"sprites/spr_secondary_marisa/spr_secondary_marisa.yy",},"order":6,},
     {"id":{"name":"boss_movement_random","path":"scripts/boss_movement_random/boss_movement_random.yy",},"order":1,},
+    {"id":{"name":"act_s7_25","path":"objects/act_s7_25/act_s7_25.yy",},"order":31,},
     {"id":{"name":"dialogue_s6_mid","path":"objects/dialogue_s6_mid/dialogue_s6_mid.yy",},"order":2,},
     {"id":{"name":"spr_feza_grid","path":"sprites/spr_feza_grid/spr_feza_grid.yy",},"order":1,},
     {"id":{"name":"sfx_familiar_activate","path":"sounds/sfx_familiar_activate/sfx_familiar_activate.yy",},"order":0,},

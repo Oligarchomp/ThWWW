@@ -39,7 +39,7 @@ if(global.gp_active)
 	{
 		if(need_fairy_time % fairy_wait == 0)
 		{
-			create_enemy(EN_BLUE,room_width / 2 + (170 - rng(50,false,6)) * act_dir,-5 - rng(15,false,9),8,2,4 + rng(1,false,3),-90);
+			create_enemy(EN_BLUE,room_width / 2 + (170 - rng(50,false,6)) * act_dir,-5 - rng(15,false,9),14,2,4 + rng(1,false,3),-90);
 		}
 		need_fairy_time -= 1;	
 	}

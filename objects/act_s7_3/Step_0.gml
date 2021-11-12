@@ -6,7 +6,7 @@ if(global.gp_active)
 	var fairy_lenght = 140;
 	
 	var ball_wait = 30;
-	var ball_ring = 14;
+	var ball_ring = 15;
 	var ball_spd_shoot = 8;
 	var pellet_spd_shoot = 6.5;
 	var spd_div = 3;

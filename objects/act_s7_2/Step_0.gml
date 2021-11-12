@@ -22,7 +22,7 @@ if(global.gp_active)
 	var arrow_ring = 16;
 	var arrow_spd = 5.5;
 	
-	var fairy_life = 160;
+	var fairy_life = 158;
 	
 	switch(step)
 	{
