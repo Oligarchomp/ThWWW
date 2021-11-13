@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if(global.gp_active)
 {
-	var mentos_wait = 75;
+	var mentos_wait = 90;
 	var mentos_ring = 30;
 	var mentos_spd = 2.4;
 	var mentos_accel = 0.05;
@@ -42,7 +42,7 @@ if(global.gp_active)
 	
 	with(obj_enemy7)
 	{
-		if(y < 370)
+		if(y < 340)
 		{
 			if(state_time % mentos_wait == 1)
 			{

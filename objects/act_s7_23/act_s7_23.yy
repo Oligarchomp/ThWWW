@@ -27,11 +27,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Stage2",
-    "path": "folders/Objects/STAGES/Stage2.yy",
+    "name": "Stage7",
+    "path": "folders/Objects/STAGES/Stage7.yy",
   },
   "resourceVersion": "1.0",
-  "name": "zact_s2_1_old",
+  "name": "act_s7_23",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -26,7 +26,7 @@ if(global.gp_active)
 		if(step % fairy_wait == 0)
 		{
 			var x_pos = 50 + rng(300,false,7);
-			var inst = create_enemy(EN_GREEN,x_pos,-110,fairy_life,4,10,-90)
+			var inst = create_enemy(EN_GREEN,x_pos,-110,fairy_life,7,10,-90)
 			inst.item_nbr = 7;
 			inst.offscreen = 20;
 			with(inst)
@@ -35,7 +35,7 @@ if(global.gp_active)
 				var count = 0;
 				for(var i = 0; i < 360; i += 360 / mentos_ring)
 				{
-					var ment = shoot(DAN_MENTOS,3,x,y,aim + i,0,noone,2);
+					var ment = shoot(DAN_MENTOS,3,x,y,aim + i,0,noone,6);
 					ment.dist_ref = 50;
 					ment.my_fairy = inst;
 					ment.y_offscreen = 200;
@@ -48,7 +48,7 @@ if(global.gp_active)
 		}
 	}
 	
-	with(obj_danmaku2)
+	with(obj_danmaku6)
 	{
 		switch(state)
 		{
@@ -72,7 +72,7 @@ if(global.gp_active)
 		}
 	}
 	
-	with(obj_enemy4)
+	with(obj_enemy7)
 	{
 		switch(state)
 		{
