@@ -7,74 +7,82 @@ if(global.gp_active) and (spell_wait == 0)
 		case 0:
 			var spark_nbr = 10;
 			var spark_lenght = 300;
-			var spark_rand_lenght = 100;
+			var spark_rand_lenght = 200;
 			var spark_open_max = 8;
 			var spark_open_spd = 15;
 			var spark_spd_aim = 15;
 			
-			var spark_spd_rand = 3.5;
-			var spark_ring = 8;
-			var spark_rand_wait = 30;
+			var spark_spd_rand = 10;
+			var spark_spd_rand_git = 3;
+			var spark_open_rand = 10;
+			var spark_ring = 4;
+			var spark_rand_wait = 2;
 			
-			var wave_wait = 140;
+			var wave_wait = 130;
 			
-			var star_ring = 18;
+			var star_ring = 19;
 			var star_spd = 3.5;
 			var star_wait = 30;
 		break;
 		case 1:
 			var spark_nbr = 10;
 			var spark_lenght = 300;
-			var spark_rand_lenght = 100;
+			var spark_rand_lenght = 200;
 			var spark_open_max = 8;
 			var spark_open_spd = 15;
 			var spark_spd_aim = 15;
 			
-			var spark_spd_rand = 4;
-			var spark_ring = 14;
-			var spark_rand_wait = 22;
+			var spark_spd_rand = 10;
+			var spark_spd_rand_git = 3;
+			var spark_open_rand = 8;
+			var spark_ring = 6;
+			var spark_rand_wait = 2;
 			
-			var wave_wait = 125;
+			var wave_wait = 110;
 			
-			var star_ring = 26;
-			var star_spd = 4;
-			var star_wait = 22;
+			var star_ring = 30;
+			var star_spd = 4.2;
+			var star_wait = 20;
 		break;
 		case 2:
 			var spark_nbr = 10;
 			var spark_lenght = 300;
-			var spark_rand_lenght = 100;
+			var spark_rand_lenght = 200;
 			var spark_open_max = 8;
 			var spark_open_spd = 15;
 			var spark_spd_aim = 15;
 			
-			var spark_spd_rand = 4.5;
-			var spark_ring = 18;
-			var spark_rand_wait = 20;
+			var spark_spd_rand = 10;
+			var spark_spd_rand_git = 3;
+			var spark_open_rand = 5;
+			var spark_ring = 8;
+			var spark_rand_wait = 2;
 			
-			var wave_wait = 110;
+			var wave_wait = 100;
 			
-			var star_ring = 31;
-			var star_spd = 4.5;
-			var star_wait = 18;
+			var star_ring = 32;
+			var star_spd = 4.8;
+			var star_wait = 17;
 		break;
 		case 3:
 			var spark_nbr = 10;
 			var spark_lenght = 300;
-			var spark_rand_lenght = 100;
+			var spark_rand_lenght = 200;
 			var spark_open_max = 8;
 			var spark_open_spd = 15;
 			var spark_spd_aim = 15;
 			
-			var spark_spd_rand = 5;
-			var spark_ring = 22;
-			var spark_rand_wait = 16;
+			var spark_spd_rand = 10;
+			var spark_spd_rand_git = 3;
+			var spark_open_rand = 5;
+			var spark_ring = 10;
+			var spark_rand_wait = 2;
 			
 			var wave_wait = 90;
 			
 			var star_ring = 36;
-			var star_spd = 5.5;
-			var star_wait = 15;
+			var star_spd = 5.6;
+			var star_wait = 14;
 		break;
 	}
 	var charge_plus = 50;
@@ -126,7 +134,9 @@ if(global.gp_active) and (spell_wait == 0)
 				{
 					if(state_time % spark_rand_wait == 0)
 					{
-						shoot_ring(DAN_BUBBLE,7,spark_ring,x_pos,y_pos,999,spark_spd_rand,sfx_shot2,4);
+						var aim = find_angle(x_pos,y_pos,obj_player.x,obj_player.y) + 180 / spark_ring + spark_open_rand - rng(spark_open_rand * 2,false,9);
+						var sp = spark_spd_rand + rng(spark_spd_rand_git,false,1);
+						shoot_ring(DAN_BUBBLE,7,spark_ring,x_pos,y_pos,aim,sp,sfx_shot3,4);
 					}
 					
 				}

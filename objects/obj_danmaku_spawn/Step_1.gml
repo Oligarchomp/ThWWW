@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-//in step begin so that the bullet can be corectly canceled
+//in step begin so that the bullet can be correctly canceled
 
 if (global.gp_active)
 {

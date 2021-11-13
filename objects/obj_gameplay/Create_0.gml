@@ -59,6 +59,7 @@ wait_list = ds_list_create();
 add_stage_event(act_s7_0,0);//keep this one
 
 
+
 add_stage_event(act_s7_1,0)
 add_stage_event(act_s7_2,0);
 add_stage_event(act_s7_25,0);
@@ -70,10 +71,10 @@ add_stage_event(act_s7_52_midspell,50);
 add_stage_event(act_s7_53_midspell,50);
 add_stage_event(act_s7_6,100);
 add_stage_event(act_s7_65,0);
+add_stage_event(act_s7_7,0);
 add_stage_event(act_s7_8,0);
 add_stage_event(act_s7_9,0);
 add_stage_event(act_s7_95,0);
-
 add_stage_event(dialogue_s7_pre,100);
 add_stage_event(boss_s7_1_non,0);
 add_stage_event(boss_s7_15_spell,0);

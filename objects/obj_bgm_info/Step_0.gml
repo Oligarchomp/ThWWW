@@ -14,7 +14,7 @@ if(global.gp_active)
 	}
 	
 	draw_set_font(font_spell);
-	var x_to = room_width - string_width(bgm_name) - 10;
+	var x_to = room_width - string_width(bgm_name) - 4;
 	switch(state)
 	{
 		case 0:

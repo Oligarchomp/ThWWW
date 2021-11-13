@@ -22,22 +22,22 @@ if(global.gp_active)
 	
 	if(step < 1100)
 	{
-		if(step % 150 == 151)
+		if(step % 150 == 60)
 		{
 			var inst = create_enemy(EN_BLUE,room_width / 2 + blue_dir * 220,130,14,1,4,90 + blue_dir * 90);
 			inst.item_nbr = 6;
 			blue_dir *= -1;
 		}
 		
-		if(step % 160 == 0)
+		if(step % 250 == 0)
 		{
 			need_fairy_time = 8;
 			act_dir *= -1;
 		}
 		
-		if(step % 200 == 0)
+		if(step % 400 == 399)
 		{
-			var inst = create_enemy(EN_RED,room_width / 2,-20,86,3,4,-90);
+			var inst = create_enemy(EN_RED,room_width / 2,-20,100,3,4,-90);
 			inst.fairy_dir = red_dir;
 			inst.item_nbr = 18;
 			red_dir *= -1;
@@ -52,7 +52,7 @@ if(global.gp_active)
 		if(need_fairy_time % fairy_wait == 0)
 		{
 			var x_pos = room_width / 2 + (- need_fairy_time * 20) * act_dir;
-			var inst = create_enemy(EN_GREEN,x_pos,-20,20,2,4,-90);
+			var inst = create_enemy(EN_GREEN,x_pos,-20,28,2,4,-90);
 			inst.item_nbr = 7;
 		}
 		
@@ -139,7 +139,7 @@ if(global.gp_active)
 				{
 					if(state_time % bubble_wait == 0)
 					{
-						shoot_ring(DAN_BUBBLE,6,bubble_ring,x,y,angle_shoot,bubble_spd,sfx_redirect1,8);
+						shoot_ring(DAN_BUBBLE,7,bubble_ring,x,y,angle_shoot,bubble_spd,sfx_redirect1,8);
 						angle_shoot += bubble_spin * fairy_dir;
 					}
 				}

@@ -14,9 +14,9 @@ function goto_value(argument0, argument1, argument2 ) {
 	if (is != to)
 	{
 		var old_sign = sign(is - to)
-		is -= sign(is - to) * spd;
+		is -= old_sign * spd;
 		
-		if (sign(old_sign) != sign(is - to))
+		if (old_sign != sign(is - to))
 		{
 			is = to;
 		}
