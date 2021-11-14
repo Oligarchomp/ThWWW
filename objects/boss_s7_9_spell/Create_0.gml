@@ -16,11 +16,19 @@ item_nbr = 0;
 act_dir = 1;
 
 wave_nbr = 0;
-wave_wait = 51;
+wave_wait = 55;
 
 
 bubble_ray = 162;
 
+x_spd = pi / 340;
+x_spd_ref = abs(x_spd);
+y_spd = pi / 550;
+y_spd_ref = abs(y_spd);
+z_spd = pi / 1100;
+z_spd_ref = abs(z_spd);
+
+/*
 x_spd = pi / 380;
 x_spd_ref = abs(x_spd);
 y_spd = -pi / 1000;

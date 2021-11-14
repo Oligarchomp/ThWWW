@@ -6,7 +6,7 @@ if(global.gp_active) and (spell_wait == 0)
 	
 	var bubble_size = 166;
 	
-	var wave_min = 22;
+	var wave_min = 25;
 	var arrow_dist = 42;
 	
 	var spd_reference = 50;
@@ -15,8 +15,8 @@ if(global.gp_active) and (spell_wait == 0)
 	var dan = DAN_MENTOS;
 	
 	
-	var sphere_ring = 11;
-	var sphere_nbr = 11;
+	var sphere_ring = 10;
+	var sphere_nbr = 10;
 	
 	var laser_charge = 60;
 	var laser_active = 50;
@@ -57,7 +57,7 @@ if(global.gp_active) and (spell_wait == 0)
 			{
 				case 80:
 					play_sound(sfx_shock,1,false);
-					state = 2;
+					state = 4;
 	
 					var inst = shoot(DAN_BALL,7,-10,-10,0,0,noone,8);
 					inst.is_cancelable = false;
@@ -65,59 +65,8 @@ if(global.gp_active) and (spell_wait == 0)
 				break;
 			}
 		break;
-		case 2:
-			if(state_time == wave_wait)
-			{
-				state = 3;
-			}
-		break;
-		case 3:
-			switch(wave_nbr % 4)
-			{
-				case 0://top
-					for(var i = -rng(arrow_dist,false,2); i < room_width + arrow_dist; i += arrow_dist)
-					{
-						var sp = room_height / 2 / spd_reference;
-						shoot(dan,6,i,-20,-90,sp,sfx_redirect1,3);	
-					}
-				break;
-				case 1://right
-					for(var i = -rng(arrow_dist,false,2); i < room_height + arrow_dist; i += arrow_dist)
-					{
-						var sp = room_width / 2 / spd_reference;
-						shoot(dan,6,room_width + 20,i,180,sp,sfx_redirect1,3);	
-					}
-				break;
-				case 2://bottom
-					for(var i = -rng(arrow_dist,false,2); i < room_width + arrow_dist; i += arrow_dist)
-					{
-						var sp = room_height / 2 / spd_reference;
-						shoot(dan,6,i,room_height + 20,90,sp,sfx_redirect1,3);	
-					}
-				break;
-				case 3://left
-					for(var i = -rng(arrow_dist,false,2); i < room_height + arrow_dist; i += arrow_dist)
-					{
-						var sp = room_width / 2 / spd_reference;
-						shoot(dan,6,-20,i,0,sp,sfx_redirect1,3);	
-					}
-				break;
-			}
-			wave_nbr += 1;
-			
-			wave_wait = goto_value(wave_wait,wave_min,1);
-			if(wave_wait != wave_min)
-			{
-				state = 2;
-			}
-			else
-			{
-				state = 4;
-				play_sound(sfx_shock,1,false);
-			}
-		break;
 		case 4:
-			if(state_time == 100)
+			if(state_time == 80)
 			{
 				state = 5;
 			}
@@ -139,7 +88,7 @@ if(global.gp_active) and (spell_wait == 0)
 						
 						for(var j = 0; j < 360; j += 360 / sphere_ring)
 						{
-							var inst = shoot(dan,8,room_width / 2,room_height / 2,j,0,sfx_spawn_water,5);
+							var inst = shoot(dan,8,room_width / 2,room_height / 2,j - i,0,sfx_spawn_water,5);
 							var angle2 = degtorad(j);
 							
 							inst.xx = bubble_ray * sin(angle1) * cos(angle2);
@@ -183,12 +132,138 @@ if(global.gp_active) and (spell_wait == 0)
 			}
 		break;
 		case 7:
-			if(state_time == 180)
+			if(state_time == 120)
 			{
-				state = 10;
+				state = 8;
 			}
 		break;
-		//laser
+		case 8:
+			if(state_time == wave_wait)
+			{
+				state = 9;
+			}
+		break;
+		case 9:
+			switch(wave_nbr % 4)
+			{
+				case 0://top
+					for(var i = -rng(arrow_dist,false,2); i < room_width + arrow_dist; i += arrow_dist)
+					{
+						var sp = room_height / 2 / spd_reference;
+						var inst = shoot(dan,6,i,-20,-90,sp,sfx_redirect1,3);
+						inst.spawn_type = SPAWN_SCALE;
+					}
+				break;
+				case 1://right
+					for(var i = -rng(arrow_dist,false,2); i < room_height + arrow_dist; i += arrow_dist)
+					{
+						var sp = room_width / 2 / spd_reference;
+						inst = shoot(dan,6,room_width + 20,i,180,sp,sfx_redirect1,3);
+						inst.spawn_type = SPAWN_SCALE;
+					}
+				break;
+				case 2://bottom
+					for(var i = -rng(arrow_dist,false,2); i < room_width + arrow_dist; i += arrow_dist)
+					{
+						var sp = room_height / 2 / spd_reference;
+						inst = shoot(dan,6,i,room_height + 20,90,sp,sfx_redirect1,3);
+						inst.spawn_type = SPAWN_SCALE;
+					}
+				break;
+				case 3://left
+					for(var i = -rng(arrow_dist,false,2); i < room_height + arrow_dist; i += arrow_dist)
+					{
+						var sp = room_width / 2 / spd_reference;
+						var inst = shoot(dan,6,-20,i,0,sp,sfx_redirect1,3);
+						inst.spawn_type = SPAWN_SCALE;
+					}
+				break;
+			}
+			wave_nbr += 1;
+			
+			wave_wait = goto_value(wave_wait,wave_min,1);
+			
+			state = 8;
+		break;
+		
+	}
+	
+	//wave 2 Otohime Bubble
+	with(obj_danmaku5)
+	{
+		var percent = (bubble_way / spell.bubble_ray);
+		color = make_color_hsv(185 + (xx / 20) * percent,120 + (xx / 1.5) * percent,220);//150
+		
+		switch(state)
+		{
+			case 0:
+				x_ref = x;
+				y_ref = y;
+				state = 1;
+			break;
+			case 1:
+				bubble_way += min(0.45,recursiv(bubble_way,spell.bubble_ray,30,0.1));
+				
+				var vect = transform_3d(xx,yy,zz,spell.mat_motion);
+				
+				xx = vect[0];
+				yy = vect[1];
+				zz = vect[2];
+		
+				x = x_ref + yy * percent;
+				y = y_ref + zz * percent;
+				depth = global.player_depth + floor(xx / 12);
+			break;
+			case 2:
+				spd = goto_value(spd,2.5,0.01);
+			break;
+		}
+	}
+	
+	
+	
+	//wave 1 Presto
+	with(obj_danmaku3)
+	{
+		switch(state)
+		{
+			case 0:
+				spd_ref = spd;
+				state = 1;
+			break;
+			case 1:
+				spd = goto_value(spd,spd_ref / spd_div,spd_ref / spd_time_deccel);
+			break;
+		}
+	}
+	
+	//no leaving the bubble or else you fucking die thank you
+	with(obj_danmaku8)
+	{
+		sprite_danmaku = spr_nothing;
+		
+		if(get_distance(room_width / 2,room_height / 2,obj_player.x,obj_player.y) > bubble_size)
+		{
+			x = obj_player.x;
+			y = obj_player.y;
+		}
+		else
+		{
+			x = -10;
+			y = -10;
+		}
+
+	}
+	
+	
+	
+	
+}
+
+// Inherit the parent event
+event_inherited();
+/*
+//laser
 		case 10://laser 1
 			switch(state_time)
 			{
@@ -312,81 +387,3 @@ if(global.gp_active) and (spell_wait == 0)
 			}
 		break;
 		
-		
-	}
-	
-	//wave 2 Otohime Bubble
-	with(obj_danmaku5)
-	{
-		var percent = (bubble_way / spell.bubble_ray);
-		color = make_color_hsv(200 + (xx / 20) * percent,120 + (xx / 1.5) * percent,220);//150
-		
-		switch(state)
-		{
-			case 0:
-				x_ref = x;
-				y_ref = y;
-				state = 1;
-			break;
-			case 1:
-				bubble_way += min(0.5,recursiv(bubble_way,spell.bubble_ray,30,0.1));
-				
-				var vect = transform_3d(xx,yy,zz,spell.mat_motion);
-				
-				xx = vect[0];
-				yy = vect[1];
-				zz = vect[2];
-		
-				x = x_ref + yy * percent;
-				y = y_ref + zz * percent;
-				depth = global.player_depth + floor(xx / 12);
-			break;
-			case 2:
-				spd = goto_value(spd,2.5,0.01);
-			break;
-		}
-	}
-	
-	
-	
-	//wave 1 Presto
-	with(obj_danmaku3)
-	{
-		switch(state)
-		{
-			case 0:
-				spd_ref = spd;
-				state = 1;
-			break;
-			case 1:
-				spd = goto_value(spd,spd_ref / spd_div,spd_ref / spd_time_deccel);
-			break;
-		}
-	}
-	
-	//no leaving the bubble or else you fucking die thank you
-	with(obj_danmaku8)
-	{
-		sprite_danmaku = spr_nothing;
-		
-		if(get_distance(room_width / 2,room_height / 2,obj_player.x,obj_player.y) > bubble_size)
-		{
-			x = obj_player.x;
-			y = obj_player.y;
-		}
-		else
-		{
-			x = -10;
-			y = -10;
-		}
-
-	}
-	
-	
-	
-	
-}
-
-// Inherit the parent event
-event_inherited();
-
