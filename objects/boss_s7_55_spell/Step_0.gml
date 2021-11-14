@@ -87,14 +87,8 @@ if(global.gp_active)
 				switch(state)
 				{
 					case 0:
-						if(y > room_height)
-						{
-							var col = 3;
-						}
-						else
-						{
-							var col = 1;	
-						}
+						var col = y > room_height ? 3 : 1;
+					
 						shoot_arc_row(DAN_BUBBLE,col,18,3,x,y,find_angle(x,y,room_width / 2,room_height / 2),5.5,8,13.5,noone,7)
 						state = 1;
 					break;

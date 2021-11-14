@@ -25,7 +25,6 @@ function find_angle(argument0, argument1, argument2, argument3) {
 	{
 		if (yd != 0)
 		{
-		
 			var angle = darctan(xd / yd) + 270 + 180 * (yd < 0)
 		}
 		else

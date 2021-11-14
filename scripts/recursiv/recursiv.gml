@@ -3,12 +3,7 @@
 ///@param to real
 ///@param speed real
 ///@param floor real
-function recursiv(argument0, argument1, argument2, argument3) {
-
-	var is = argument0;
-	var to = argument1;
-	var spd = argument2;
-	var flr = argument3;
+function recursiv(is, to, spd, flr) {
 
 	var is_new = is;
 	is_new += ( to - is) / spd;

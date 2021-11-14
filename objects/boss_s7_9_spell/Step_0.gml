@@ -2,6 +2,8 @@
 // You can write your code in this editor
 if(global.gp_active) and (spell_wait == 0)
 {
+	var spell = self;
+	
 	var bubble_size = 166;
 	
 	var wave_min = 22;
@@ -13,12 +15,18 @@ if(global.gp_active) and (spell_wait == 0)
 	var dan = DAN_MENTOS;
 	
 	
-	var sphere_ring = 8;
-	var sphere_nbr = 8;
+	var sphere_ring = 11;
+	var sphere_nbr = 11;
 	
 	var laser_charge = 60;
 	var laser_active = 50;
 	var laser_wave_wait = 130;
+	
+	
+	repeat(500)
+	{
+		act_dir = goto_value(act_dir,100000,1);	
+	}
 	
 	switch(state)
 	{	
@@ -34,7 +42,7 @@ if(global.gp_active) and (spell_wait == 0)
 					obj_boss.x_to = obj_boss.x;
 					obj_boss.y_to = obj_boss.y;
 					play_sound(sfx_spawn_light,1,false);
-					state = 10;
+					state = 1;
 					
 					instance_create_depth(room_width / 2,room_height / 2, global.boss_depth,obj_bubble_timeout);
 					boss_release(room_width / 2,room_height / 2,sfx_spawn_water);
@@ -67,28 +75,28 @@ if(global.gp_active) and (spell_wait == 0)
 					for(var i = -rng(arrow_dist,false,2); i < room_width + arrow_dist; i += arrow_dist)
 					{
 						var sp = room_height / 2 / spd_reference;
-						shoot(dan,1,i,-20,-90,sp,sfx_redirect1,3);	
+						shoot(dan,6,i,-20,-90,sp,sfx_redirect1,3);	
 					}
 				break;
 				case 1://right
 					for(var i = -rng(arrow_dist,false,2); i < room_height + arrow_dist; i += arrow_dist)
 					{
 						var sp = room_width / 2 / spd_reference;
-						shoot(dan,1,room_width + 20,i,180,sp,sfx_redirect1,3);	
+						shoot(dan,6,room_width + 20,i,180,sp,sfx_redirect1,3);	
 					}
 				break;
 				case 2://bottom
 					for(var i = -rng(arrow_dist,false,2); i < room_width + arrow_dist; i += arrow_dist)
 					{
 						var sp = room_height / 2 / spd_reference;
-						shoot(dan,1,i,room_height + 20,90,sp,sfx_redirect1,3);	
+						shoot(dan,6,i,room_height + 20,90,sp,sfx_redirect1,3);	
 					}
 				break;
 				case 3://left
 					for(var i = -rng(arrow_dist,false,2); i < room_height + arrow_dist; i += arrow_dist)
 					{
 						var sp = room_width / 2 / spd_reference;
-						shoot(dan,1,-20,i,0,sp,sfx_redirect1,3);	
+						shoot(dan,6,-20,i,0,sp,sfx_redirect1,3);	
 					}
 				break;
 			}
@@ -101,10 +109,83 @@ if(global.gp_active) and (spell_wait == 0)
 			}
 			else
 			{
-				state = 43;
+				state = 4;
 				play_sound(sfx_shock,1,false);
 			}
 		break;
+		case 4:
+			if(state_time == 100)
+			{
+				state = 5;
+			}
+		break;
+		//Bubble
+		case 5:
+			switch(state_time)
+			{
+				case 100:	
+					boss_charge(room_width / 2,room_height / 2);
+				break;
+				case 130:
+					mat_motion = create_rotation_matrix(x_spd,y_spd,z_spd);
+					
+					for(var i = 0; i <= 180; i += 180 / sphere_nbr)
+					{
+						var angle1 = degtorad(i);
+						var dan = sin(angle1) == 0? DAN_MENTOS : DAN_BALL;
+						
+						for(var j = 0; j < 360; j += 360 / sphere_ring)
+						{
+							var inst = shoot(dan,1,room_width / 2,room_height / 2,j,0,sfx_spawn_water,5);
+							var angle2 = degtorad(j);
+							
+							inst.xx = bubble_ray * sin(angle1) * cos(angle2);
+							inst.yy = bubble_ray * sin(angle1) * sin(angle2);
+							inst.zz = bubble_ray * cos(angle1);
+							
+							inst.bubble_way = 0;
+							
+							inst.is_cancelable = false;
+						}
+					}
+					
+					state += 1;
+				break;
+			}
+		break;
+		case 6:
+			switch(state_time)
+			{
+				case 1000:
+					play_sound(sfx_photo_charge,1,false);
+				break;
+				case 1100:
+					with(obj_danmaku5)
+					{
+						state = 2;
+					}
+					
+					play_sound(sfx_redirect1,1,false);
+					state = 7;
+				break;
+			}
+			
+			if(state_time > 1000)			
+			{
+				x_spd = goto_value(x_spd,0,x_spd_ref / 100);
+				y_spd = goto_value(y_spd,0,y_spd_ref / 100);
+				z_spd = goto_value(z_spd,0,z_spd_ref / 100);
+				
+				mat_motion = create_rotation_matrix(x_spd,y_spd,z_spd);
+			}
+		break;
+		case 7:
+			if(state_time == 170)
+			{
+				state = 10;
+			}
+		break;
+		//laser
 		case 10://laser 1
 			switch(state_time)
 			{
@@ -130,6 +211,15 @@ if(global.gp_active) and (spell_wait == 0)
 				case 0:
 					play_sound(sfx_shock,1,false);
 					
+					var ang = rng(360,false,9);
+					for(var i = 0; i < 360; i += 360 / 24)
+					{
+						var aim = ang + i;
+						var x_pos = 200 + lengthdir_x(110,aim);
+						var y_pos = 250 + lengthdir_y(110,aim);
+						shoot_laser_center(x_pos,y_pos,aim,laser_charge,laser_active,c_white,sfx_laser2);
+						shoot_laser_center(x_pos,y_pos,aim - 90,laser_charge,laser_active,c_white,sfx_laser2);	
+					}
 				break;
 				case laser_wave_wait:
 					state += 1;
@@ -137,6 +227,51 @@ if(global.gp_active) and (spell_wait == 0)
 			}
 		break;
 		case 12://laser 3
+			switch(state_time)
+			{
+				case 0:
+					play_sound(sfx_shock,1,false);
+					
+					play_sound(sfx_shock,1,false);
+					
+					var ang = rng(360,false,9);
+					for(var i = 0; i < 360; i += 360 / 40)
+					{
+						ang += 360 / 40;
+						var aim = ang + i;
+						var x_pos = 200 + lengthdir_x(40,aim);
+						var y_pos = 250 + lengthdir_y(40,aim);
+						shoot_laser_center(x_pos,y_pos,aim,laser_charge,laser_active,c_white,sfx_laser2);
+						shoot_laser_center(x_pos,y_pos,aim - 45,laser_charge,laser_active,c_white,sfx_laser2);	
+					}
+				break;
+				case laser_wave_wait:
+					state += 1;
+				break;
+			}
+		break;
+		case 13://laser 4
+			switch(state_time)
+			{
+				case 0:
+					play_sound(sfx_shock,1,false);
+					
+					var ang = rng(360,false,9);
+					for(var i = 0; i < 360; i += 360 / 26)
+					{
+						var aim = ang + i;
+						var x_pos = 200 + lengthdir_x(100,aim);
+						var y_pos = 250 + lengthdir_y(100,aim);
+						shoot_laser_center(x_pos,y_pos,aim,laser_charge,laser_active,c_white,sfx_laser2);
+						shoot_laser_center(x_pos,y_pos,aim - 90,laser_charge,laser_active,c_white,sfx_laser2);	
+					}
+				break;
+				case laser_wave_wait:
+					state += 1;
+				break;
+			}
+		break;
+		case 14://laser 5
 			switch(state_time)
 			{
 				case 0:
@@ -158,7 +293,7 @@ if(global.gp_active) and (spell_wait == 0)
 			}
 			
 		break;
-		case 13://laser 4
+		case 15://laser 6
 			switch(state_time)
 			{
 				case 0:
@@ -172,33 +307,12 @@ if(global.gp_active) and (spell_wait == 0)
 					}
 				break;
 			}
-			
 		break;
 		
 		
-		
-		
-		case 100:
-			switch(state_time)
-			{
-				case 100:	
-					boss_charge(room_width / 2,room_height / 2);
-				break;
-				case 130:
-					for(var i = 0; i < 360; i += 360 / sphere_nbr)
-					{
-						for(var j = 0; j < 360; j += 360 / sphere_ring)
-						{
-							var inst = shoot(DAN_MENTOS,1,room_width / 2,room_height / 2,j,0,sfx_spawn_water,5);
-							inst.sphere_off = degtorad(i);
-						}
-					}
-				break;
-			}
-		break;
 	}
 	
-	//wave 2
+	//wave 2 Otohime Bubble
 	with(obj_danmaku5)
 	{
 		switch(state)
@@ -207,19 +321,31 @@ if(global.gp_active) and (spell_wait == 0)
 				x_ref = x;
 				y_ref = y;
 				state = 1;
+				
 			break;
 			case 1:
-				x = x_ref + lengthdir_x(100,angle) * sin(step / 60);
-				y = y_ref + lengthdir_y(100,angle) * cos(step / 60);
-			
-				angle += 1;
+				
+				bubble_way += min(0.8,recursiv(bubble_way,spell.bubble_ray,30,0.1));
+				
+				var vect = transform_3d(xx,yy,zz,spell.mat_motion);
+				
+				xx = vect[0];
+				yy = vect[1];
+				zz = vect[2];
+		
+				x = x_ref + yy * (bubble_way / spell.bubble_ray);
+				y = y_ref + zz * (bubble_way / spell.bubble_ray);
+				depth = xx > 0 ? 1 : 0;
+			break;
+			case 2:
+				spd = goto_value(spd,2.5,0.01);
 			break;
 		}
 	}
 	
 	
 	
-	//wave 1
+	//wave 1 Presto
 	with(obj_danmaku3)
 	{
 		switch(state)
@@ -254,27 +380,6 @@ if(global.gp_active) and (spell_wait == 0)
 	
 	
 	
-	//SHIELD
-	if(obj_player.bomb_time != 0)
-	{
-		if(can_shield)
-		{
-			obj_boss.alpha = 0.4;
-			obj_boss.mask_index = spr_nothing;
-			can_shield = false;
-			instance_create_depth(obj_boss.x,obj_boss.y,obj_boss.depth - 1, obj_shield_reverence);
-		}
-	}
-	else
-	{
-		obj_boss.alpha = 1;
-		obj_boss.mask_index = spr_boss_hurtbox;
-		can_shield = true;
-		with(obj_shield_reverence)
-		{
-			state = 1;	
-		}
-	}
 	
 }
 

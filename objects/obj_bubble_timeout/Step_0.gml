@@ -16,7 +16,6 @@ if(global.gp_active)
 	{
 		case 0:
 			scale += recursiv(scale,scale_max,25,0.001);
-			scale_true = scale + sin(step / 60) * 0.01 * scale;
 		break;
 		case 1:
 			scale = goto_value(scale,0,0.1);
@@ -26,7 +25,7 @@ if(global.gp_active)
 			}
 		break;
 	}
-	
+	scale_true = scale + sin(step / 60) * 0.01 * scale;
 	
 	step += 1;
 	
