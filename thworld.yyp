@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"spr_reimu_art","path":"sprites/spr_reimu_art/spr_reimu_art.yy",},"order":1,},
+    {"id":{"name":"obj_bubble_timeout","path":"objects/obj_bubble_timeout/obj_bubble_timeout.yy",},"order":8,},
     {"id":{"name":"spr_iku_idle","path":"sprites/spr_iku_idle/spr_iku_idle.yy",},"order":0,},
     {"id":{"name":"spr_bomb_masterspark_collision","path":"sprites/spr_bomb_masterspark_collision/spr_bomb_masterspark_collision.yy",},"order":3,},
     {"id":{"name":"spr_apple_attack","path":"sprites/spr_apple_attack/spr_apple_attack.yy",},"order":0,},
@@ -409,6 +410,7 @@
     {"id":{"name":"spr_boat_interior","path":"sprites/spr_boat_interior/spr_boat_interior.yy",},"order":0,},
     {"id":{"name":"act_s3_0","path":"objects/act_s3_0/act_s3_0.yy",},"order":0,},
     {"id":{"name":"sfx_boss_release","path":"sounds/sfx_boss_release/sfx_boss_release.yy",},"order":3,},
+    {"id":{"name":"boss_s7_9_spell","path":"objects/boss_s7_9_spell/boss_s7_9_spell.yy",},"order":34,},
     {"id":{"name":"spr_circle_big","path":"sprites/spr_circle_big/spr_circle_big.yy",},"order":5,},
     {"id":{"name":"act_s3_3","path":"objects/act_s3_3/act_s3_3.yy",},"order":16,},
     {"id":{"name":"sfx_shooting","path":"sounds/sfx_shooting/sfx_shooting.yy",},"order":0,},

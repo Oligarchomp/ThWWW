@@ -58,6 +58,7 @@ wait_list = ds_list_create();
 
 add_stage_event(act_s7_0,0);//keep this one
 
+add_stage_event(boss_s7_9_spell,0);
 /*
 add_stage_event(act_s7_1,0)
 add_stage_event(act_s7_2,0);
