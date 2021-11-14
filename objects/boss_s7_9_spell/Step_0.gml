@@ -37,6 +37,9 @@ if(global.gp_active) and (spell_wait == 0)
 					boss_charge(obj_boss.x,obj_boss.y);
 				break;
 				case 30:
+					
+					shoot_ring(DAN_BUBBLE,1,14,obj_boss.x,obj_boss.y,999,2,sfx_redirect1,7);
+				
 					obj_boss.x = room_width / 2;
 					obj_boss.y = -1000;
 					obj_boss.x_to = obj_boss.x;
@@ -136,7 +139,7 @@ if(global.gp_active) and (spell_wait == 0)
 						
 						for(var j = 0; j < 360; j += 360 / sphere_ring)
 						{
-							var inst = shoot(dan,1,room_width / 2,room_height / 2,j,0,sfx_spawn_water,5);
+							var inst = shoot(dan,8,room_width / 2,room_height / 2,j,0,sfx_spawn_water,5);
 							var angle2 = degtorad(j);
 							
 							inst.xx = bubble_ray * sin(angle1) * cos(angle2);
@@ -180,7 +183,7 @@ if(global.gp_active) and (spell_wait == 0)
 			}
 		break;
 		case 7:
-			if(state_time == 170)
+			if(state_time == 180)
 			{
 				state = 10;
 			}
@@ -315,17 +318,18 @@ if(global.gp_active) and (spell_wait == 0)
 	//wave 2 Otohime Bubble
 	with(obj_danmaku5)
 	{
+		var percent = (bubble_way / spell.bubble_ray);
+		color = make_color_hsv(200 + (xx / 20) * percent,120 + (xx / 1.5) * percent,220);//150
+		
 		switch(state)
 		{
 			case 0:
 				x_ref = x;
 				y_ref = y;
 				state = 1;
-				
 			break;
 			case 1:
-				
-				bubble_way += min(0.8,recursiv(bubble_way,spell.bubble_ray,30,0.1));
+				bubble_way += min(0.5,recursiv(bubble_way,spell.bubble_ray,30,0.1));
 				
 				var vect = transform_3d(xx,yy,zz,spell.mat_motion);
 				
@@ -333,9 +337,9 @@ if(global.gp_active) and (spell_wait == 0)
 				yy = vect[1];
 				zz = vect[2];
 		
-				x = x_ref + yy * (bubble_way / spell.bubble_ray);
-				y = y_ref + zz * (bubble_way / spell.bubble_ray);
-				depth = xx > 0 ? 1 : 0;
+				x = x_ref + yy * percent;
+				y = y_ref + zz * percent;
+				depth = global.player_depth + floor(xx / 12);
 			break;
 			case 2:
 				spd = goto_value(spd,2.5,0.01);

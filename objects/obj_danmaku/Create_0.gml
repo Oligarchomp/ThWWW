@@ -145,13 +145,9 @@ switch(rot_type)
 }
 
 
-
-
-
 rot_spd = 2;
 
-
-
+color = c_white;
 
 spd = global.danmaku_speed;
 

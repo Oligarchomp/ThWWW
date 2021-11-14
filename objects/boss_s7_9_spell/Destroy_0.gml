@@ -1,10 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-with(obj_danmaku8)
-{
-	instance_destroy();	
-}
 
 with(obj_laser)
 {

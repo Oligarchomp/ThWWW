@@ -73,6 +73,7 @@ if(global.gp_active)
 		inst.image_xscale = image_xscale;
 		inst.image_yscale = image_yscale;
 		inst.is_cancelable = is_cancelable;
+		inst.c_color = color;
 		
 		visual_xscale = image_xscale;
 		visual_yscale = image_yscale;
