@@ -9,19 +9,19 @@ spell_set_name("spell_s7_9","spell_s7_9","spell_s7_9","spell_s7_9")
 spell_set_life(1000,200);
 spell_set_time(60,true,90);
 
-
-
 item_nbr = 0;
 
-act_dir = 1;
+
+mentos_wait = 42;
+
 
 wave_nbr = 0;
-wave_wait = 55;
+wave_wait = 48;
 
 
 bubble_ray = 162;
 
-x_spd = pi / 340;
+x_spd = pi / 355;
 x_spd_ref = abs(x_spd);
 y_spd = pi / 550;
 y_spd_ref = abs(y_spd);

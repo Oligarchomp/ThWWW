@@ -4,29 +4,75 @@ if(global.gp_active) and (spell_wait == 0)
 {
 	var spell = self;
 	
+	
 	var bubble_size = 166;
 	
-	var wave_min = 25;
-	var arrow_dist = 42;
+	//wave1
+	var mentos_nbr = 14;
+	var mentos_spd_final = 4;
+	var mentos_accel = 0.25;
+	var mentos_wait_min = 20;
+	
+	//wave 3
+	var wave_min = 15;
+	var arrow_dist = 34;
 	
 	var spd_reference = 50;
 	var spd_div = 4.5;
 	var spd_time_deccel = 60;
-	var dan = DAN_MENTOS;
+	var dan = DAN_NOTE;
 	
-	
+	//wave 2
 	var sphere_ring = 10;
 	var sphere_nbr = 10;
 	
-	var laser_charge = 60;
-	var laser_active = 50;
-	var laser_wave_wait = 130;
 	
 	
-	repeat(500)
+	//wave 1 mentos
+	with(obj_danmaku6)
 	{
-		act_dir = goto_value(act_dir,100000,1);	
+		switch(state)
+		{
+			case 0:
+				if(state_time == 0)
+				{
+					angle = find_angle(obj_player.x,obj_player.y,x,y);
+					dist_ref = sqrt(sqr(x - obj_player.x) + sqr(y - obj_player.y));
+					dist_is = dist_ref;
+					x_to = obj_player.x;
+					y_to = obj_player.y;
+					
+					dist_div = 300;
+				}
+				
+				if(state_time < 100)
+				{
+					dist_div = goto_value(dist_div,160,1)
+				}
+				else
+				{
+					dist_div = goto_value(dist_div,1000,1.5)
+				}
+				
+				dist_is = goto_value(dist_is,0,dist_ref / dist_div);
+				
+				x = x_to + lengthdir_x(dist_is,angle);
+				y = y_to + lengthdir_y(dist_is,angle);
+				
+				
+				if(x == x_to) and (y == y_to)
+				{
+					cancel_bullet(self);
+				}
+			break;
+			case 1:
+				spd = goto_value(spd,mentos_spd_final,mentos_accel);
+			break;
+		}
 	}
+	
+	
+	
 	
 	switch(state)
 	{	
@@ -57,7 +103,7 @@ if(global.gp_active) and (spell_wait == 0)
 			{
 				case 80:
 					play_sound(sfx_shock,1,false);
-					state = 4;
+					state = 2;
 	
 					var inst = shoot(DAN_BALL,7,-10,-10,0,0,noone,8);
 					inst.is_cancelable = false;
@@ -65,10 +111,37 @@ if(global.gp_active) and (spell_wait == 0)
 				break;
 			}
 		break;
-		case 4:
-			if(state_time == 80)
+		case 2:
+			var dist = 340;
+			for(var i = 0; i < 360; i += 360 / mentos_nbr)
 			{
-				state = 5;
+				var ang = i;
+				var inst = shoot(DAN_MENTOS,1,room_width / 2 + lengthdir_x(dist,ang),room_height / 2 + lengthdir_y(dist,ang),0,0,sfx_redirect1,6);
+				inst.spawn_type = SPAWN_SCALE;
+				inst.x_offscreen = 400;
+				inst.y_offscreen = 400;
+				inst.angle_re = ang;
+			}
+			
+			mentos_wait = goto_value(mentos_wait,mentos_wait_min,1);
+			
+			state = mentos_wait != mentos_wait_min ? 3 : 4;
+		break;
+		case 3:
+			if(state_time == mentos_wait)
+			{
+				state = 2;
+			}
+		break;
+		case 4:
+			switch(state_time)
+			{
+				case 0:
+					play_sound(sfx_shock,1,false);
+				break;
+				case 120:
+					state = 5;
+				break;
 			}
 		break;
 		//Bubble
@@ -151,23 +224,20 @@ if(global.gp_active) and (spell_wait == 0)
 					{
 						var sp = room_height / 2 / spd_reference;
 						var inst = shoot(dan,6,i,-20,-90,sp,sfx_redirect1,3);
-						inst.spawn_type = SPAWN_SCALE;
 					}
 				break;
 				case 1://right
 					for(var i = -rng(arrow_dist,false,2); i < room_height + arrow_dist; i += arrow_dist)
 					{
 						var sp = room_width / 2 / spd_reference;
-						inst = shoot(dan,6,room_width + 20,i,180,sp,sfx_redirect1,3);
-						inst.spawn_type = SPAWN_SCALE;
+						var inst = shoot(dan,6,room_width + 20,i,180,sp,sfx_redirect1,3);
 					}
 				break;
 				case 2://bottom
 					for(var i = -rng(arrow_dist,false,2); i < room_width + arrow_dist; i += arrow_dist)
 					{
 						var sp = room_height / 2 / spd_reference;
-						inst = shoot(dan,6,i,room_height + 20,90,sp,sfx_redirect1,3);
-						inst.spawn_type = SPAWN_SCALE;
+						var inst = shoot(dan,6,i,room_height + 20,90,sp,sfx_redirect1,3);
 					}
 				break;
 				case 3://left
@@ -175,10 +245,12 @@ if(global.gp_active) and (spell_wait == 0)
 					{
 						var sp = room_width / 2 / spd_reference;
 						var inst = shoot(dan,6,-20,i,0,sp,sfx_redirect1,3);
-						inst.spawn_type = SPAWN_SCALE;
 					}
 				break;
 			}
+			inst.is_cancelable = false;
+			inst.spawn_type = SPAWN_SCALE;
+			
 			wave_nbr += 1;
 			
 			wave_wait = goto_value(wave_wait,wave_min,1);
@@ -263,6 +335,10 @@ if(global.gp_active) and (spell_wait == 0)
 // Inherit the parent event
 event_inherited();
 /*
+
+var laser_charge = 60;
+	var laser_active = 50;
+	var laser_wave_wait = 130;
 //laser
 		case 10://laser 1
 			switch(state_time)

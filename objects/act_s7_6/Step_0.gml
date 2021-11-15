@@ -10,7 +10,7 @@ if(global.gp_active)
 	var shoot_open = 10;
 	
 	var revenge_ring = 8;
-	var revenge_spd_shoot = 10;
+	var revenge_spd_shoot = 9;
 	var revenge_deccel = 0.2;
 	var revenge_spd_final = 4;
 	

@@ -230,6 +230,10 @@ if (global.gp_active)
 			var inst = instance_create_depth(room_width / 2,150,0,obj_get_spell);
 			inst.bonus = bonus;
 		}
+		else
+		{
+			instance_create_depth(room_width / 2,150,0,obj_bonus_failed);
+		}
 
 		screen_clear(true,true);
 		

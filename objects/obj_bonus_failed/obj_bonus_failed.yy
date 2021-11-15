@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_get_spell",
-    "path": "sprites/spr_get_spell/spr_get_spell.yy",
+    "name": "spr_bonus_failed",
+    "path": "sprites/spr_bonus_failed/spr_bonus_failed.yy",
   },
   "solid": false,
   "visible": true,
@@ -33,7 +33,7 @@
     "path": "folders/Objects/Cards.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_get_spell",
+  "name": "obj_bonus_failed",
   "tags": [],
   "resourceType": "GMObject",
 }
