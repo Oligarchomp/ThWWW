@@ -72,8 +72,7 @@ if(global.gp_active) and (spell_wait == 0)
 	}
 	
 	
-	
-	
+
 	switch(state)
 	{	
 		case 0:

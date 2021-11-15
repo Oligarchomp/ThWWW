@@ -27,14 +27,11 @@ if (global.gp_active)
 		
 		switch(player_id)
 		{
-			case 1:
-			
+			case P_MARISA:
+				scale = 1 + cos(step / 14) * 0.08;
 			break;
-			case 2: //sanae
+			case P_SANAE: //sanae
 				scale = 1 + cos(step / 14) * 0.1;
-			break;
-			case 3: //suika;
-			
 			break;
 			default: //REIMU
 				image_index = step * yy_rot_spd;

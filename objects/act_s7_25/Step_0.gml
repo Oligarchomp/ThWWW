@@ -3,7 +3,7 @@
 if(global.gp_active)
 {
 	var mentos_wait = 90;
-	var mentos_ring = 30;
+	var mentos_ring = 32;
 	var mentos_spd = 2.4;
 	var mentos_accel = 0.05;
 	
