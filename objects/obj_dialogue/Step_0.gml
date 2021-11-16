@@ -15,7 +15,6 @@ if(global.gp_active)
 	
 	switch(state)
 	{
-
 		case 0://normal 
 			diag_alpha = goto_value(diag_alpha,diag_alpha_max,0.1);
 			text_alpha = goto_value(text_alpha,1,0.1);

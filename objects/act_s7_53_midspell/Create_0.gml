@@ -6,7 +6,7 @@ global.boss = BOSS_PALE;
 event_inherited();
 
 
-spell_set_spell("s7_mid3",BOSS_PALE,12014080)
+spell_set_spell("s7_mid3",BOSS_PALE,40000000)
 spell_set_name("spell_s7_mid3","spell_s7_mid3","spell_s7_mid3","spell_s7_mid3")
 switch(global.player_chosen)
 {

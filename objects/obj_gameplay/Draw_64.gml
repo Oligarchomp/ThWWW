@@ -2,7 +2,7 @@
 // You can write your code in this editor
 draw_sprite(spr_hud,0,0,0);
 
-draw_text(50,room_height,fps)
+draw_text(130,room_height,fps)
 
 if (!global.gp_active)
 {
@@ -85,8 +85,8 @@ draw_text(x_info,y_bomb,"BOMB:");
 
 for(var i = 0; i < 7; i += 1)
 {
-	draw_sprite(spr_life_hud,i >= global.life,x_info + 86 + i * 28,y_life + 12);	
-	draw_sprite(spr_bomb_hud,i >= global.bomb,x_info + 86 + i * 28,y_bomb + 12);
+	draw_sprite(spr_life_hud,i >= global.life,x_info + 90 + i * 28,y_life + 12);	
+	draw_sprite(spr_bomb_hud,i >= global.bomb,x_info + 90 + i * 28,y_bomb + 12);
 }
 
 //draw boss indicator

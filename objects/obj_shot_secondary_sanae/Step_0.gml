@@ -23,7 +23,7 @@ if(global.gp_active)
 		instance_create_depth(x,y,depth,obj_shot_frog_dust);
 		
 		
-		create_shot_hitbox(x,y,1,spr_shot_frog_collision,1.1,9,false)
+		create_shot_hitbox(x,y,1,spr_shot_frog_collision,1.05,9,false)
 		play_sound(sfx_redirect2,1,false);
 		instance_destroy();
 	}

@@ -12,7 +12,7 @@ if(global.gp_active)
 			switch(global.difficulty)
 			{
 				case 0:
-					var aim_ring = 36;
+					var aim_ring = 32;
 					var aim_row = 5;
 					var aim_spd_min = 2.5;
 					var aim_spd_max = 6;
@@ -27,7 +27,7 @@ if(global.gp_active)
 					var water_ring = 3;
 					var water_spd_shoot_min = 5.5;
 					var water_deccel = 0.1;
-					var water_spd_min = 1.5;
+					var water_spd_min = 1.3;
 					var water_dist = 2.1;
 				break;
 				case 1:

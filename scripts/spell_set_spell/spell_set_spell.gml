@@ -7,6 +7,7 @@ function spell_set_spell(argument0,argument1,argument2){
 	data_name = argument0;
 	is_spell = true;
 	is_capturing = true;
+	need_cancel_bonus = true;
 	
 	item_nbr = item_nbr_spell;
 	

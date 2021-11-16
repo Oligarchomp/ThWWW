@@ -6,7 +6,7 @@ global.boss = BOSS_PALE;
 event_inherited();
 
 
-spell_set_spell("s7_mid2",BOSS_PALE,12014080)
+spell_set_spell("s7_mid2",BOSS_PALE,40000000)
 spell_set_name("spell_s7_mid2","spell_s7_mid2","spell_s7_mid2","spell_s7_mid2")
 spell_set_life(980,190);
 spell_set_time(30,false,120);

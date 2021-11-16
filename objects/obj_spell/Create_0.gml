@@ -98,6 +98,8 @@ item_dist = 70;
 
 non_only = false;
 
+need_cancel_bonus = false;
+
 //fairy revenge
 x_death_list = ds_list_create();
 y_death_list = ds_list_create();

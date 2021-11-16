@@ -75,6 +75,8 @@ if (global.gp_active)
 
 	if(life <= 0)
 	{
+		add_score(1000);
+		
 		play_sound(sfx_enemy_defeat,1,false);
 		
 		if (can_revenge)

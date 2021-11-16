@@ -15,3 +15,4 @@ x_aim = 0;
 y_aim = 0;
 
 item_nbr = item_nbr_spell;
+need_cancel_bonus = true;

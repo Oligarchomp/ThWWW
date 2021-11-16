@@ -84,7 +84,7 @@ if(global.gp_active)
 			
 				var inst = create_enemy(EN_CRAB,x_pos,i * crab_dist,crab_life,2,0,0)
 				inst.angle = ang;
-				inst.item_nbr = 1;
+				inst.item_nbr = 2;
 			
 			}
 		}

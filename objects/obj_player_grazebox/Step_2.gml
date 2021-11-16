@@ -12,6 +12,7 @@ if (global.gp_active)
 		
 		play_sound(sfx_graze,1,false);
 		global.graze += 1;
+		add_score(1000);
 		
 		if (instance_number(obj_graze) < global.graze_max)
 		{

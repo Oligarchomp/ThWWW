@@ -41,7 +41,7 @@ if(global.gp_active)
 	}
 	
 
-	if(global.item_nbr > item_extend[|0])
+	if(global.item_nbr >= item_extend[|0])
 	{
 		ds_list_delete(item_extend,0);
 		
@@ -52,7 +52,7 @@ if(global.gp_active)
 	
 	global.score -= global.score % 10;//failsafe
 	
-	score_to_draw += floor(recursiv(score_to_draw,global.score,10,10));
+	score_to_draw += round(recursiv(score_to_draw,global.score,10,100));
 	score_to_draw -= score_to_draw % 10;
 	
 }

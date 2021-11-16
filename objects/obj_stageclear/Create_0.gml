@@ -29,6 +29,9 @@ switch(global.stage)
 	case 6:
 		bonus = 35000000;
 	break;
+	case 7:
+		bonus = 60000000;
+	break;
 }
 
 add_score(bonus);

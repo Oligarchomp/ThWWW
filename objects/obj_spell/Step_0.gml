@@ -207,6 +207,10 @@ if (global.gp_active)
 			
 			create_confetti(obj_boss.x,obj_boss.y,30,8);
 			
+		}
+		
+		if(need_cancel_bonus) and (time_left > 0)
+		{
 			//cancel bonus
 			var plus = 2000;
 			with(obj_danmaku)
@@ -218,6 +222,7 @@ if (global.gp_active)
 				add_score(plus);
 			}
 		}
+		
 		
 		repeat(item_nbr)
 		{
@@ -244,8 +249,7 @@ if (global.gp_active)
 		}
 		
 		
-		
-		screen_clear(true,true);
+		screen_clear(time_left > 0,true);
 		
 		repeat(2)//carefull
 		{
