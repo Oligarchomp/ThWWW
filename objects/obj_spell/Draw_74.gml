@@ -75,7 +75,7 @@ if (is_spell)
 	//draw bonus
 	if(is_capturing)
 	{
-		var text = add_zero(bonus,9);
+		var text = add_zero(bonus,8);
 	}
 	else
 	{
@@ -84,7 +84,7 @@ if (is_spell)
 	var x_pos = 440;
 	var x_pos_score = x_pos - string_width(text);
 	var y_pos = spell_info_y;
-	draw_text_outline(x_pos - 110,y_pos,"Bonus:",text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);
+	draw_text_outline(x_pos - 100,y_pos,"Bonus:",text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);
 	draw_text_outline(x_pos_score,y_pos,text,text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);
 
 	draw_text_outline(x_pos + 5,y_pos,"| History:",text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);

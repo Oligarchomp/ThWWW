@@ -206,6 +206,17 @@ if (global.gp_active)
 			}
 			
 			create_confetti(obj_boss.x,obj_boss.y,30,8);
+			
+			//cancel bonus
+			var plus = 2000;
+			with(obj_danmaku)
+			{
+				var inst = instance_create_depth(x,y,0,obj_score);
+				inst.bonus = plus;
+				plus = goto_value(plus,8000,20);
+				
+				add_score(plus);
+			}
 		}
 		
 		repeat(item_nbr)
@@ -231,7 +242,9 @@ if (global.gp_active)
 				instance_create_depth(room_width / 2,150,0,obj_bonus_failed);
 			}
 		}
-
+		
+		
+		
 		screen_clear(true,true);
 		
 		repeat(2)//carefull
@@ -268,7 +281,7 @@ if (global.gp_active)
 		step += 1;
 		if(!is_timeout)
 		{
-			bonus -= floor(bonus_max / (time / 60 * 70))// floor(bonus_max / 5000);//
+			bonus -= floor(bonus_max / (time / 60 * 110))// floor(bonus_max / 5000);//
 			bonus -= bonus % 10;
 		}
 	}

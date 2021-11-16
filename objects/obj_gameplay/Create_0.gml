@@ -18,7 +18,8 @@ global.danmaku_speed = 0;
 
 global.boss = BOSS_APPLE;
 
-global.score = 1000; 
+global.score = 0;
+score_to_draw = 0;
 
 global.life = 2;
 global.bomb = 2;
@@ -115,7 +116,7 @@ add_stage_event(boss_s7_85_spell,0);
 add_stage_event(boss_s7_9_spell,50);
 
 add_stage_event(dialogue_s7_post,100);
-*/
+
 //S1
 add_stage_event(act_s1_0,0);//keep this one
 add_stage_event(act_s1_1,30);
@@ -233,7 +234,7 @@ add_stage_event(boss_s5_5_non,40);
 add_stage_event(boss_s5_6_spell,0);
 add_stage_event(boss_s5_7_spell,60);
 add_stage_event(dialogue_s5_post,70);
-
+*/
 //S6
 add_stage_event(act_s6_0,0);// keep this one
 add_stage_event(act_s6_1,30);

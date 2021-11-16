@@ -258,6 +258,8 @@ if (global.gp_active)
 					{
 						auto_collect = false;
 					}
+					
+					global.bomb = 2;
 				break;
 			}
 		break;

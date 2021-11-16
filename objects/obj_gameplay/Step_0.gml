@@ -50,4 +50,9 @@ if(global.gp_active)
 		play_sound(sfx_extend,1,false);
 	}
 	
+	global.score -= global.score % 10;//failsafe
+	
+	score_to_draw += floor(recursiv(score_to_draw,global.score,10,10));
+	score_to_draw -= score_to_draw % 10;
+	
 }
