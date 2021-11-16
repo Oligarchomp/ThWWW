@@ -8,6 +8,9 @@ var y_pos = obj_player.y;
 switch(item_type)
 {
 	case ITEM_POINT:
+		
+		global.item_nbr += 1;
+		
 		if(y_pos < global.poc) or (max_value)
 		{
 			var scr = global.piv;
@@ -24,11 +27,15 @@ switch(item_type)
 		inst.max_value = scr == global.piv;
 	break;
 	case ITEM_CANCEL:
+		var sc = floor(global.graze / 40) * 10 + 300;
+		add_score(sc);
 	break;
 	case ITEM_LIFE :
+		global.life += 1;
 		play_sound(sfx_extend,1,false);
 	break;
 	case ITEM_BOMB:
+		global.bomb += 1;
 	break;
 	case ITEM_LIFEPIECE:
 	break;

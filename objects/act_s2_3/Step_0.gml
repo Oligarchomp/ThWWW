@@ -76,10 +76,10 @@ if(global.gp_active)
 		if(step % fairy_wait == 0)
 		{
 			var inst = create_enemy(EN_BLUE,-10,fairy_y_off + rng(50,false,3),fairy_life,1,8 + rng(2,false,2),0);
-			inst.item_nbr = 2;
+			inst.item_nbr = 1;
 			
 			var inst = create_enemy(EN_BLUE,room_width + 10,fairy_y_off + rng(50,false,3),fairy_life,1,8 + rng(2,false,2),180);
-			inst.item_nbr = 2;
+			inst.item_nbr = 1;
 		}
 		
 	}

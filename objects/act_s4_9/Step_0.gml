@@ -71,7 +71,7 @@ if(global.gp_active)
 	if(step == 0)
 	{
 		var inst = create_enemy(EN_RED,room_width / 2,-20,fairy_life,1,7,-90);
-		inst.item_nbr = 15;
+		inst.item_nbr = 12;
 		inst.dir_dan = 1;
 		
 	}

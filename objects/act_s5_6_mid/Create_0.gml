@@ -14,4 +14,4 @@ dir_act = 1;
 x_aim = 0;
 y_aim = 0;
 
-item_nbr = 40;
+item_nbr = item_nbr_spell;

@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-spell_set_spell("s1_mid",1,2210000)
+spell_set_spell("s1_mid",1,10000000)
 spell_set_name("spell_s1_mida","spell_s1_mida","spell_s1_midb","spell_s1_midb")
 spell_set_life(600,120);
 spell_set_time(15,false,95);

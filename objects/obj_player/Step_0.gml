@@ -221,30 +221,44 @@ if (global.gp_active)
 				auto_collect = false;
 			}
 		break;
-		case 2:
+		case 2://fucking dead
 			var death_spd = 0.05;
 			scale = goto_value(scale,2,death_spd);
 			alpha = goto_value(alpha,0,death_spd)
 			
-			if (state_time == 60)
+			switch(state_time)
 			{
-				alpha = 1;
-				scale = 1;
+				case 0:
+					with(obj_spell)
+					{
+						is_capturing = false;	
+					}
+				break;
+				case 59:
+					if(global.life > 0)
+					{
+						global.life -= 1;
+					}
+				break;
+				case 60:
+					alpha = 1;
+					scale = 1;
 				
-				x = x_origin;
-				y = y_origin;
+					x = x_origin;
+					y = y_origin;
 				
-				state = 0;
+					state = 0;
 				
-				screen_clean(false,false);
-				create_shot_hitbox(0,0,1,spr_fullscreen_collision,2,10,false);
+					screen_clean(false,false);
+					create_shot_hitbox(0,0,1,spr_fullscreen_collision,2,10,false);
 				
-				invincibility = invincibility_death;
+					invincibility = invincibility_death;
 				
-				with(obj_item_auto)
-				{
-					auto_collect = false;
-				}
+					with(obj_item_auto)
+					{
+						auto_collect = false;
+					}
+				break;
 			}
 		break;
 	}
@@ -252,8 +266,10 @@ if (global.gp_active)
 	
 	if(bomb_time == 0) 
 	{
-		if(global.bomb_pressed) and (state != 2) and (!in_dialogue)
+		if(global.bomb_pressed) and (state != 2) and (!in_dialogue) and (global.bomb > 0)
 		{
+			global.bomb -= 1;
+			
 			instance_create_depth(0,0,0,obj_bomb);
 			state = 0;
 			with(obj_spell)

@@ -56,12 +56,6 @@ if (global.gp_active)
 	
 	life_uncover = goto_value(life_uncover,global.game_x_offset + life_bar_size,5);
 	
-	//mission failed
-	if (obj_player.state == 2)
-	{
-		is_capturing = false;
-	}
-	
 	if (invincibility > 0)
 	{
 		invincibility -= 1;
@@ -232,7 +226,10 @@ if (global.gp_active)
 		}
 		else
 		{
-			instance_create_depth(room_width / 2,150,0,obj_bonus_failed);
+			if(is_spell)
+			{
+				instance_create_depth(room_width / 2,150,0,obj_bonus_failed);
+			}
 		}
 
 		screen_clear(true,true);
@@ -271,7 +268,7 @@ if (global.gp_active)
 		step += 1;
 		if(!is_timeout)
 		{
-			bonus -= floor(bonus_max / 5000);
+			bonus -= floor(bonus_max / (time / 60 * 70))// floor(bonus_max / 5000);//
 			bonus -= bonus % 10;
 		}
 	}

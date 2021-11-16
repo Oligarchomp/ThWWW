@@ -98,7 +98,8 @@ if(global.gp_active)
 			var x_pos = room_width / 2 + 220 * yy_side;
 			var y_pos = 150;
 			var ang = find_angle(x_pos,y_pos,room_width/2,y_pos);
-			create_enemy(EN_BLUE,x_pos,y_pos,yy_life,1,yy_spd,ang);
+			var inst = create_enemy(EN_BLUE,x_pos,y_pos,yy_life,1,yy_spd,ang);
+			inst.item_nbr = 2;
 		}
 	}
 	

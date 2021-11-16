@@ -68,22 +68,22 @@ if(global.gp_active)
 	{
 		case 0:
 			var inst = create_enemy(EN_RED,150, -20,fairy_life,1,7,-90);
-			inst.item_nbr = 8;
+			inst.item_nbr = 6;
 			inst.dir_dan = 1;
 		break;
 		case 260:
 			var inst = create_enemy(EN_RED,250, -20,fairy_life,1,7,-90);
-			inst.item_nbr = 8;
+			inst.item_nbr = 6;
 			inst.dir_dan = -1;
 		break;
 		case 520:
 			var inst = create_enemy(EN_RED,100, -20,fairy_life,1,7,-90);
-			inst.item_nbr = 8;
+			inst.item_nbr = 6;
 			inst.dir_dan = 1;
 		break;
 		case 780:
 			var inst = create_enemy(EN_RED,300, -20,fairy_life,1,7,-90);
-			inst.item_nbr = 8;
+			inst.item_nbr = 6;
 			inst.dir_dan = -1;
 		break;
 	}

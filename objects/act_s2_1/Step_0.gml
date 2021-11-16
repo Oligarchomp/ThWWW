@@ -56,13 +56,13 @@ if(global.gp_active)
 		case 0:
 		case 250:
 			var inst = create_enemy(EN_BLUE,50,-20,fairy_life,1,4,-90)
-			inst.item_nbr = 4;
+			inst.item_nbr = 2;
 			var inst = create_enemy(EN_BLUE,150,-20,fairy_life,1,4,-90)
-			inst.item_nbr = 4;
+			inst.item_nbr = 2;
 			var inst = create_enemy(EN_BLUE,250,-20,fairy_life,1,4,-90)
-			inst.item_nbr = 4;
+			inst.item_nbr = 2;
 			var inst = create_enemy(EN_BLUE,350,-20,fairy_life,1,4,-90)
-			inst.item_nbr = 4;
+			inst.item_nbr = 2;
 		break;
 		case wait_card:
 			instance_create_depth(0,0,0,obj_stagecard);

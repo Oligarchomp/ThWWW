@@ -60,9 +60,9 @@ if(global.gp_active)
 		if(step % fairy_wait == 0)
 		{
 			var inst = create_enemy(EN_BLUE,-20,fairy_y_off + rng(100,false,3),fairy_life,5,3,-20)
-			inst.item_nbr = 2;
+			inst.item_nbr = 1;
 			var inst = create_enemy(EN_BLUE,room_width + 20,fairy_y_off + rng(100,false,3),fairy_life,5,3,200)
-			inst.item_nbr = 2;
+			inst.item_nbr = 1;
 		}
 		
 		if(step % fairy_wait_big == 0)

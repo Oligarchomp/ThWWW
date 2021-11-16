@@ -62,10 +62,10 @@ if(global.gp_active)
 		case 0:
 			var inst = create_enemy(EN_GREEN,100,-20,fairy_life,1,5,-90);
 			inst.dir_shoot = 1;
-			inst.item_nbr = 10;
+			inst.item_nbr = 5;
 			var inst = create_enemy(EN_GREEN,300,-20,fairy_life,1,5,-90);
 			inst.dir_shoot = -1;
-			inst.item_nbr = 10;
+			inst.item_nbr = 5;
 		break;
 		case stagecard_time:
 			instance_create_depth(0,0,0,obj_stagecard);

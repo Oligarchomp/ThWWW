@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-spell_set_spell("s4_2",BOSS_YUUTO,15407260)
+spell_set_spell("s4_2",BOSS_YUUTO,24000000)
 spell_set_name("spell_s4_2a","spell_s4_2a","spell_s4_2b","spell_s4_2c")
 spell_set_life(960,180);
 spell_set_time(35,false,95);

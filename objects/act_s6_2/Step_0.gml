@@ -65,21 +65,21 @@ if(global.gp_active)
 			
 			play_sound(sfx_familiar_spawn,1,false);
 			var inst = create_enemy(EN_BLUE,x_pos,-120,fairy_life,2,8,-90);
-			inst.item_nbr = 12;
+			inst.item_nbr = 10;
 		//no break
 		case 350:
 			var x_pos = x_dist + f_dist * rng(4,true,1);
 			
 			play_sound(sfx_familiar_spawn,1,false);
 			var inst = create_enemy(EN_BLUE,x_pos,-70,fairy_life,2,8,-90);
-			inst.item_nbr = 12;
+			inst.item_nbr = 10;
 		//no break;
 		case 0:
 			var x_pos = x_dist + f_dist * rng(4,true,6);
 			
 			play_sound(sfx_familiar_spawn,1,false);
 			var inst = create_enemy(EN_BLUE,x_pos,-20,fairy_life,2,8,-90);
-			inst.item_nbr = 12;
+			inst.item_nbr = 10;
 		break;
 	}
 	
@@ -96,7 +96,7 @@ if(global.gp_active)
 						var inst = create_enemy(EN_FAMILIAR,i,y,fam_life,3,0,-90);
 						inst.my_fairy = self;
 						inst.pos_type = POS_MANUAL;
-						inst.item_nbr = 12;
+						inst.item_nbr = 8;
 					}
 					
 					for(var i = x - x_dist ; i > x_dist; i -= f_dist)
@@ -104,7 +104,7 @@ if(global.gp_active)
 						var inst = create_enemy(EN_FAMILIAR,i,y,fam_life,3,0,-90);
 						inst.my_fairy = self;
 						inst.pos_type = POS_MANUAL;
-						inst.item_nbr = 12;
+						inst.item_nbr = 8;
 					}
 				}
 				spd = goto_value(spd,0,0.2);

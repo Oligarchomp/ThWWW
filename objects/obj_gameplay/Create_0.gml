@@ -20,6 +20,9 @@ global.boss = BOSS_APPLE;
 
 global.score = 1000; 
 
+global.life = 2;
+global.bomb = 2;
+
 global.item = 0;//
 global.poc = 0;
 
@@ -30,10 +33,28 @@ global.enemy_type = 0;
 global.bullet_cap = 700;
 global.graze_max = 100;
 
-global.graze = 9;
-global.piv = 5000;
+global.item_nbr = 0 // how many point item collected
+global.graze = 0;
+switch(global.difficulty)
+{
+	case 0:
+		global.piv = 60000;
+	break;
+	case 1:
+		global.piv = 100000;
+	break;
+	case 2:
+		global.piv = 200000;
+	break;
+	case 3:
+		global.piv = 300000;
+	break;
+}
 global.piv_max = 5000000;
 global.stage = 1;
+
+item_extend = ds_list_create();
+ds_list_add(item_extend,250,600,1000,1500,2100,9999);
 
 instance_create_depth(room_width / 2,430,global.player_depth,obj_player);
 
@@ -55,7 +76,7 @@ wait_list = ds_list_create();
 //need to remotely inject whatever needed
 
 //S7
-
+/*
 add_stage_event(act_s7_0,0);//keep this one
 
 
@@ -94,7 +115,7 @@ add_stage_event(boss_s7_85_spell,0);
 add_stage_event(boss_s7_9_spell,50);
 
 add_stage_event(dialogue_s7_post,100);
-/*
+*/
 //S1
 add_stage_event(act_s1_0,0);//keep this one
 add_stage_event(act_s1_1,30);
@@ -155,6 +176,7 @@ add_stage_event(boss_s3_6_spell,0);
 add_stage_event(dialogue_s3_post,100);
 
 //S4
+
 add_stage_event(act_s4_0,0); // keep this one
 add_stage_event(act_s4_1,0)
 add_stage_event(act_s4_2,0)

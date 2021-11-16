@@ -44,12 +44,12 @@ if(global.gp_active)
 		
 			var inst = create_enemy(EN_BLUE,room_width - 60, -10,fairy_life,5,5,-90);
 			inst.side = -1;
-			inst.item_nbr = 6;
+			inst.item_nbr = 4;
 		break;
 		case 200:
 			var inst = create_enemy(EN_BLUE,60, -10,fairy_life,5,5,-90);
 			inst.side = 1;
-			inst.item_nbr = 6;
+			inst.item_nbr = 4;
 		break;
 	}
 	

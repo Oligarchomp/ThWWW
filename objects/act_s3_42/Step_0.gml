@@ -96,7 +96,7 @@ if(global.gp_active)
 				if (state_time % fairy_wait == 0)
 				{
 					var inst = create_enemy(EN_GREEN,x_fairy[|state_time/fairy_wait],-20,fairy_life,4,4,-90)
-					inst.item_nbr = 4;
+					inst.item_nbr = 3;
 				}
 			}
 			else

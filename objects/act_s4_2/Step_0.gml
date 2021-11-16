@@ -65,7 +65,7 @@ if(global.gp_active)
 	{
 		case 0:
 			var inst = create_enemy(EN_RED,200,-20,fairy_life,2,5,-90);
-			inst.item_nbr = 18;
+			inst.item_nbr = 10;
 		break;
 	}
 
@@ -80,7 +80,7 @@ if(global.gp_active)
 				if(spd == 0)
 				{
 					state = 1;
-					angle_shoot = rng(360,false,7);
+					angle_shoot = -90;
 				}
 			break;
 			case 1://shoot aim
@@ -96,7 +96,7 @@ if(global.gp_active)
 								shoot_laser(x + lengthdir_x(laser_dist,angle_shoot + j),y + lengthdir_y(laser_dist,angle_shoot + j),angle_shoot + j + 90 + i,40,30,c_white,sfx_laser2);
 							}
 						}
-						angle_shoot = rng(360,false,7);
+						angle_shoot += 180 / laser_ring;
 					}
 					
 					if(state_time % star_wait == 0)

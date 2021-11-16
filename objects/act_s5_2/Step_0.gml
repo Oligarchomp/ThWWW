@@ -91,7 +91,7 @@ if(global.gp_active)
 		if(step/fairy_wait < ds_list_size(x_list))
 		{
 			var inst = create_enemy(EN_BLUE,x_list[|step/fairy_wait],-20,fairy_life,5,fairy_spd,-90);
-			inst.item_nbr = 10;
+			inst.item_nbr = 9;
 		}
 	}
 	

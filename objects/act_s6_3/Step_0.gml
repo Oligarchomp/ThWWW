@@ -58,9 +58,9 @@ if(global.gp_active)
 		case 0:
 		case 260:
 			var inst = create_enemy(EN_BLUE,-20,110,f_life,1,4,0);
-			inst.item_nbr = 20;
+			inst.item_nbr = 15;
 			var inst = create_enemy(EN_BLUE,room_width + 20,110,f_life,1,4,180);
-			inst.item_nbr = 20;
+			inst.item_nbr = 15;
 		break;
 	}
 	

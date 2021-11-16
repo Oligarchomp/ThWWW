@@ -40,4 +40,14 @@ if(global.gp_active)
 		wait_time += 1;
 	}
 	
+
+	if(global.item_nbr > item_extend[|0])
+	{
+		ds_list_delete(item_extend,0);
+		
+		global.life += 1;
+		
+		play_sound(sfx_extend,1,false);
+	}
+	
 }

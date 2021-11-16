@@ -60,7 +60,7 @@ if(global.gp_active)
 		create_enemy(EN_GREEN,room_width / 2 - x_off2,-20,fairy_life,1,5,-90);
 		with(obj_enemy1)
 		{
-			item_nbr = 6;
+			item_nbr = 5;
 		}
 	}
 	

@@ -15,50 +15,77 @@ if(global.stage != 7)
 	{
 		case 0:
 			var dif_text = "EASY"
+			var col = $58d063;
 		break;
 		case 1:
 			var dif_text = "NORMAL"
+			var col = $e39365;
 		break;
 		case 2:
 			var dif_text = "HARD"
+			var col = $5656e8;
 		break;
 		case 3:
 			var dif_text = "LUNATIC"
+			var col = $e567cf;
 		break;
 	}
 }
 else
 {
 	var dif_text = "EXTRA"
+	var col = $bf80e1;
 }
 
-
 draw_set_font(font_game_info)
-draw_text(700,20,dif_text)//temp
+draw_text_color(700,20,dif_text,col,col,col,col,1)
 
 
 //draw score
 
 global.score -= global.score % 10;//failsafe
 
-var score_draw = add_zero(global.score,16);
-draw_score(score_draw,900,108,spr_score,1,1);
+draw_text(610,64,"HISCORE:");
+draw_text(629,103,"SCORE:");
+var score_draw = add_zero(global.score,12);
+draw_score(score_draw,865,108,spr_score,1,1);
 
 
 //draw score info
 var x_info = 610;
+var y_item = 285;
 var y_value = 325;
 var y_graze = 365;
 var x_score = 790;
 
 
+draw_text(x_info,y_item, "ITEM:")
 draw_text(x_info,y_value, "VALUE:")
 draw_text(x_info,y_graze, "GRAZE:")
 
+var pos = x_score - sprite_get_width(spr_score) * string_length(string(item_extend[|0]));
+
+draw_score(global.item_nbr,pos - 15,y_item + 5,spr_score,1,1);
+draw_text(pos,y_item,"/");
+draw_score(item_extend[|0],x_score,y_item + 5,spr_score,1,1);
 
 draw_score(global.piv,x_score,y_value + 5,spr_score,1,1);
 draw_score(global.graze,x_score,y_graze + 5,spr_score,1,1);
 
+
+//draw ressources
+
+var y_life = 170;
+var y_bomb = 210;
+
+draw_text(x_info,y_life,"LIFE:");
+draw_text(x_info,y_bomb,"BOMB:");
+
+for(var i = 0; i < 7; i += 1)
+{
+	draw_sprite(spr_life_hud,i >= global.life,x_info + 84 + i * 28,y_life + 12);	
+	draw_sprite(spr_bomb_hud,i >= global.bomb,x_info + 84 + i * 28,y_bomb + 12);
+}
 
 //draw boss indicator
 with(obj_boss)

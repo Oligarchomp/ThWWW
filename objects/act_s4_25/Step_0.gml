@@ -73,7 +73,7 @@ if(global.gp_active)
 	{
 		case 0:
 			var inst = create_enemy(EN_GREEN,280,-20,big_life,2,7,-90);
-			inst.item_nbr = 6;
+			inst.item_nbr = 5;
 		break;
 		case 20:
 			need_fairy_time = 80;
@@ -81,7 +81,7 @@ if(global.gp_active)
 		break;
 		case 120:
 			var inst = create_enemy(EN_GREEN,120,-20,big_life,2,7,-90);
-			inst.item_nbr = 6;
+			inst.item_nbr = 5;
 		break;
 		case 140:
 			need_fairy_time = 80;
@@ -89,7 +89,7 @@ if(global.gp_active)
 		break;
 		case 240:
 			var inst = create_enemy(EN_GREEN,280,-20,big_life,2,7,-90);
-			inst.item_nbr = 6;
+			inst.item_nbr = 5;
 		break;
 		case 260:
 			need_fairy_time = 80;
@@ -97,7 +97,7 @@ if(global.gp_active)
 		break;
 		case 360:
 			var inst = create_enemy(EN_GREEN,120,-20,big_life,2,7,-90);
-			inst.item_nbr = 6;
+			inst.item_nbr = 5;
 		break;
 		case 380:
 			need_fairy_time = 80;
@@ -105,7 +105,7 @@ if(global.gp_active)
 		break;
 		case 480:
 			var inst = create_enemy(EN_GREEN,280,-20,big_life,2,7,-90);
-			inst.item_nbr = 6;
+			inst.item_nbr = 5;
 		break;
 	}
 	
@@ -123,6 +123,7 @@ if(global.gp_active)
 			}
 			var inst = create_enemy(EN_BLUE,x_pos,-20,small_life,1,3,-90);
 			inst.dir_move = dir_small;
+			inst.item_nbr = 2;
 		}
 		need_fairy_time -= 1;	
 	}

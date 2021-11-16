@@ -65,12 +65,13 @@ if(global.gp_active)
 			
 			if(fairy_nbr % fairy_green_nbr != fairy_green_nbr - 1)
 			{
-				create_enemy(EN_BLUE,200 - 230 * act_dir + rng(5,false,3),y_pos,fairy_life,3,fairy_spd,90 - 90 * act_dir)
+				var inst = create_enemy(EN_BLUE,200 - 230 * act_dir + rng(5,false,3),y_pos,fairy_life,3,fairy_spd,90 - 90 * act_dir)
 			}
 			else
 			{
-				create_enemy(EN_GREEN,200 - 230 * act_dir + rng(5,false,3),y_pos,fairy_life,2,fairy_spd,90 - 90 * act_dir)
+				var inst = create_enemy(EN_GREEN,200 - 230 * act_dir + rng(5,false,3),y_pos,fairy_life,2,fairy_spd,90 - 90 * act_dir)
 			}
+			inst.item_nbr = 2;
 			act_dir *= -1;
 			fairy_nbr += 1;
 		}

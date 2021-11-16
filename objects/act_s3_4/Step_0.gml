@@ -65,7 +65,8 @@ if(global.gp_active)
 	{
 		if(step/wall_wait < ds_list_size(x_wall))
 		{
-			create_enemy(EN_BLUE,x_wall[|step/wall_wait],-20,wall_life,2,4.5,-90)
+			var inst = create_enemy(EN_BLUE,x_wall[|step/wall_wait],-20,wall_life,2,4.5,-90);
+			inst.item_nbr = 2;
 		}
 	}
 	
@@ -76,7 +77,8 @@ if(global.gp_active)
 	{
 		if(step/dan_wait < ds_list_size(x_dan))
 		{
-			create_enemy(EN_GREEN,x_dan[|step/dan_wait],-20,dan_life,1,5,-90)
+			var inst = create_enemy(EN_GREEN,x_dan[|step/dan_wait],-20,dan_life,1,5,-90);
+			inst.item_nbr = 2;
 		}
 	}
 	

@@ -174,7 +174,7 @@ if(global.gp_active)
 		var y_pos = y_route
 			
 		var fairy = create_enemy(EN_BLUE,x_pos,y_pos,f_life,1,f_spd,ang);
-		fairy.item_nbr = 16;
+		fairy.item_nbr = 14;
 		fairy.route = fairy_route_need;
 		fairy.x_ref = x_pos
 		fairy.y_ref = y_pos
@@ -214,6 +214,7 @@ if(global.gp_active)
 			if(familiar_need > 0)
 			{
 				var inst = create_enemy(EN_FAMILIAR,x_ref,y_ref,fam_life,2,f_spd,angle_ref);
+				inst.item_nbr = 2;
 				inst.route = route;
 				inst.dir_act = dir_act;
 				inst.my_fairy = self;

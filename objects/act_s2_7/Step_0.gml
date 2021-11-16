@@ -35,7 +35,17 @@ if(global.gp_active)
 	var fairy_life = 8;
 	
 	
-	if(!instance_exists(obj_spell))
+	if(instance_exists(obj_spell))
+	{
+		time_wait = 90;
+	}
+	
+	if(time_wait > 0)
+	{
+		time_wait -= 1;
+	}
+	
+	if(time_wait == 0)
 	{
 		if(step < fairy_lenght)
 		{
