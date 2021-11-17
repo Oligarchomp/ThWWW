@@ -7,76 +7,78 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var draw_angle_dist = 15;
-			var draw_wait = 8;
-			var draw_nbr = 5;
-			var draw_start = 40;
-			var draw_spd = 3.5;
-			
-			var bubble_ring = 9;
-			var bubble_row = 2;
-			var bubble_spd_min = 3;
-			var bubble_spd_max = 3.5;
+			var bubble_wait = 12;
+			var bubble_ring = 10;
+			var bubble_open = 6;
+			var bubble_spd_min = 4;
+			var bubble_spd_git = 0.8;
 		break;
 		case 1:
-			var draw_angle_dist = 15;
-			var draw_wait = 6;
-			var draw_nbr = 7;
-			var draw_start = 40;
-			var draw_spd = 3.5;
-			
-			var bubble_ring = 13;
-			var bubble_row = 3;
-			var bubble_spd_min = 3;
-			var bubble_spd_max = 4;
+			var bubble_wait = 10;
+			var bubble_ring = 12;
+			var bubble_open = 7;
+			var bubble_spd_min = 4.2;
+			var bubble_spd_git = 1.1;
 		break;
 		case 2:
-			var draw_angle_dist = 15;
-			var draw_wait = 5;
-			var draw_nbr = 10;
-			var draw_start = 40;
-			var draw_spd = 3.5;
-			
+			var bubble_wait = 8;
 			var bubble_ring = 13;
-			var bubble_row = 5;
-			var bubble_spd_min = 3;
-			var bubble_spd_max = 5;
+			var bubble_open = 8;
+			var bubble_spd_min = 4.4;
+			var bubble_spd_git = 1.2;
 		break;
 		case 3:
-			var draw_angle_dist = 15;
-			var draw_wait = 4;
-			var draw_nbr = 12;
-			var draw_start = 40;
-			var draw_spd = 3.5;
-			
-			var bubble_ring = 16;
-			var bubble_row = 5;
-			var bubble_spd_min = 3;
-			var bubble_spd_max = 5;
+			var bubble_wait = 6;
+			var bubble_ring = 15;
+			var bubble_open = 8;
+			var bubble_spd_min = 4.6;
+			var bubble_spd_git = 1.4;
 		break;
 	}
 	
+	var fairy_lenght = 90;
 	var fairy_y_off = 60;
-	var fairy_life = 34;
-	var fairy_lenght = 780;
+	var fairy_life = 40;
 	
-	var fairy_wait = 80;
-	if(step < fairy_lenght)
+	
+	switch(step)
 	{
-		if(step % fairy_wait == 0)
+		case 0:
+			need_fairy_time = 120;
+			act_dir = -1;
+		break;
+		case 140:
+			need_fairy_time = 120;
+			act_dir = 1;
+		break;
+		case 280:
+			need_fairy_time = 120;
+			act_dir = -1;
+		break;
+		case 420:
+			need_fairy_time = 120;
+			act_dir = 1;
+		break;
+		case 560:
+			need_fairy_time = 120;
+			act_dir = -1;
+		break;
+		case 700:
+			need_fairy_time = 120;
+			act_dir = 1;
+		break;
+	}
+	
+	var fairy_wait = 40;
+	if(need_fairy_time > 0)
+	{
+		if(need_fairy_time % fairy_wait == 0)
 		{
-			if((step / fairy_wait) % 2 == 0)
-			{
-				var inst = create_enemy(EN_RED,-20,fairy_y_off, fairy_life,1,10.5,20);
-				inst.dir_dan = 1;
-			}
-			else
-			{
-				var inst = create_enemy(EN_RED,room_width + 20,fairy_y_off, fairy_life,1,10.5,-200);
-				inst.dir_dan = -1;
-			}
-			inst.angle_shoot = rng(360,false,3);
+			var inst = create_enemy(EN_GREEN,room_width / 2 + (170 + need_fairy_time / 1.5) * act_dir,fairy_y_off, fairy_life,1,10.5,-90 - 110 * act_dir);
+			inst.dir_dan = act_dir;
+			inst.angle_shoot = 0;
 		}
+		need_fairy_time -= 1;
 	}
 	
 	with(obj_enemy1)
@@ -84,12 +86,7 @@ if(global.gp_active)
 		switch(state)
 		{
 			case 0:
-				if(state_time % draw_wait == 0)
-				{
-					shoot_ring(DAN_BALL,3,draw_nbr,x,y,angle_shoot,0,sfx_shot3,2);
-					angle_shoot += draw_angle_dist * dir_dan;
-				}
-			
+				
 				spd = goto_value(spd,0,0.15);
 				angle = goto_value(angle,-90,1);
 				if(spd == 0)
@@ -99,11 +96,22 @@ if(global.gp_active)
 			break;
 			case 1://shoot
 				
-				shoot_ring_row(DAN_BUBBLE,6,bubble_ring,bubble_row,x,y,999,bubble_spd_min,bubble_spd_max,sfx_redirect1,3);
-				state = 2;
+				if(state_time < fairy_lenght)
+				{
+					if(state_time % bubble_wait == 0)
+					{
+						var ang = find_angle(x,y,obj_player.x,obj_player.y) + bubble_open - rng(bubble_open * 2,false,8);
+						var sp = bubble_spd_min + rng(bubble_spd_git,false,5);
+						shoot_ring(DAN_MENTOS,3,bubble_ring,x,y,ang,sp,sfx_shot1,8)
+					}
+				}
+				else
+				{
+					state = 2;
+				}
 			break;
 			case 2:
-				if(state_time == 60)
+				if(state_time == 50)
 				{
 					state = 3;
 					angle = find_angle(x,y,room_width / 2,y) + 180;
@@ -115,14 +123,6 @@ if(global.gp_active)
 		}
 	}
 	
-	with(obj_danmaku2)
-	{
-		if(step >  draw_start)
-		{
-			spd = goto_value(spd,draw_spd,0.1);
-		}
-		
-	}
 }
 	
 // Inherit the parent event

@@ -5,3 +5,5 @@
 event_inherited();
 
 act_set_time(900,900);
+
+need_fairy_time = 0;

@@ -10,14 +10,15 @@ if(global.gp_active) and (spell_wait == 0)
 			var bubble_spd = 1.5;
 			var bubble_dist = 29;
 			
-			var arrow_dan = DAN_ARROWHEAD;
+			
+			var arrow_case = 0;
 			var arrow_wait = 1;
 			var arrow_nbr = 1;
 			var arrow_spd = 2;
 			var arrow_dist = -29
 			var arrow_aim_off = 0;
 			
-			var wait_wave = 20; // more than 10
+			var wait_wave = 26; // more than 10
 		break;
 		case 1:
 			var bubble_wait = 1;
@@ -25,14 +26,14 @@ if(global.gp_active) and (spell_wait == 0)
 			var bubble_spd = 1.8;
 			var bubble_dist = 27;
 			
-			var arrow_dan = DAN_ARROWHEAD;
+			var arrow_case = 0;
 			var arrow_wait = 1;
 			var arrow_nbr = 3;
 			var arrow_spd = 2;
 			var arrow_dist = -27
 			var arrow_aim_off = 0;
 			
-			var wait_wave = 20; // more than 10
+			var wait_wave = 22; // more than 10
 		break;
 		case 2:
 			var bubble_wait = 1;
@@ -40,27 +41,33 @@ if(global.gp_active) and (spell_wait == 0)
 			var bubble_spd = 2;
 			var bubble_dist = -360 / 24;
 			
-			var arrow_dan = DAN_MENTOS
+			var arrow_case = 1;
 			var arrow_wait = 2;
-			var arrow_nbr = 8;
-			var arrow_spd = 2.6;
-			var arrow_dist = -8;
-			var arrow_aim_off = 12;
+			var arrow_arc = 5;
+			var arrow_row = 2;
+			var arrow_spd_min = 3;
+			var arrow_spd_max = 5.5;
+			var arrow_dist = 35;
 			
-			var wait_wave = 17; // more than 10
+			var arrow_aim_off = 0;
+			
+			var wait_wave = 13; // more than 10
 		break;
 		case 3:
 			var bubble_wait = 1;
 			var bubble_nbr = 2;
-			var bubble_spd = 2;
+			var bubble_spd = 2.5;
 			var bubble_dist = -360 / 24;
 			
-			var arrow_dan = DAN_MENTOS
+			var arrow_case = 1;
 			var arrow_wait = 2;
-			var arrow_nbr = 9;
-			var arrow_spd = 3;
-			var arrow_dist = -6;
-			var arrow_aim_off = 2;
+			var arrow_arc = 5;
+			var arrow_row = 3;
+			var arrow_spd_min = 2.5;
+			var arrow_spd_max = 6;
+			var arrow_dist = 30;
+			
+			var arrow_aim_off = 0;
 			
 			var wait_wave = 11; // more than 10
 		break;
@@ -84,6 +91,8 @@ if(global.gp_active) and (spell_wait == 0)
 					
 					angle_shoot = rng(360,false,1);
 					angle_shoot2 = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y) + arrow_aim_off * dir_pale;
+					x_aim = obj_player.x;
+					y_aim = obj_player.y;
 				break;
 			}
 		break;
@@ -91,14 +100,22 @@ if(global.gp_active) and (spell_wait == 0)
 		
 			if(state_time % bubble_wait == 0)
 			{
-				shoot_ring(DAN_BUBBLE,3,bubble_nbr,obj_boss.x,obj_boss.y,angle_shoot,0,sfx_redirect2,3);
+				shoot_ring(DAN_BUBBLE,4,bubble_nbr,obj_boss.x,obj_boss.y,angle_shoot,0,sfx_redirect2,3);
 				angle_shoot += bubble_dist * dir_pale;
 			}
 			
 			if(state_time % arrow_wait == 0)
 			{
-				shoot_ring(arrow_dan,3,arrow_nbr,obj_boss.x,obj_boss.y,angle_shoot2,0,sfx_shot3,2);
-				angle_shoot2 += arrow_dist * dir_pale;
+				if(arrow_case == 0)
+				{
+					shoot_ring(DAN_ARROWHEAD,3,arrow_nbr,obj_boss.x,obj_boss.y,angle_shoot2,0,sfx_shot3,2);
+					angle_shoot2 += arrow_dist * dir_pale;
+				}
+				else
+				{
+					var aim = find_angle(obj_boss.x,obj_boss.y,x_aim,y_aim);
+					shoot_arc_row(DAN_ARROWHEAD,3,arrow_arc,arrow_row,obj_boss.x,obj_boss.y,aim,arrow_dist,arrow_spd_min,arrow_spd_max,sfx_shot2,1);
+				}
 			}
 		
 			var dest = 90 + 360 * dir_pale

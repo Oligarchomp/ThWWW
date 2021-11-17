@@ -154,14 +154,16 @@ add_stage_event(boss_s2_5_spell,60);
 add_stage_event(dialogue_s2_post,70);
 
 //S3
+*/
 add_stage_event(act_s3_0,0);//keep this one
+/*
 add_stage_event(act_s3_1,0);
 add_stage_event(act_s3_2,0);
 add_stage_event(act_s3_3,0);
 add_stage_event(act_s3_4,0);
 add_stage_event(act_s3_42,0);
 add_stage_event(act_s3_43,0);
-add_stage_event(act_s3_5,0);
+add_stage_event(act_s3_5,0);*/
 add_stage_event(act_s3_6,90);
 add_stage_event(act_s3_7_midspell,0);
 add_stage_event(act_s3_8,0);

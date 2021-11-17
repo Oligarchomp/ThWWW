@@ -9,76 +9,82 @@ if(global.gp_active)
 			var wall_in = 3;
 			var wall_dist = 2;
 			var wall_spd = 1.8;
+			var wall_wait = 80;
 			
 			var arrow_wait = 6;
-			var arrow_nbr = 5;
-			var arrow_spd = 4.3;
-			var arrow_dist1 = 0;
-			var arrow_dist2 = 30;
-			var arrow_dist_lenght = 2;
+			var arrow_arc = 3;
+			var arrow_spd = 2.5;
+			var arrow_dist = 36;
+			var arrow_spin = 38;
 		break;
 		case 1:
 			var wall_nbr = 10;
 			var wall_in = 3;
 			var wall_dist = 2;
 			var wall_spd = 2;
+			var wall_wait = 75;
 			
 			var arrow_wait = 4;
-			var arrow_nbr = 8;
-			var arrow_spd = 4.3;
-			var arrow_dist1 = 0;
-			var arrow_dist2 = 20;
-			var arrow_dist_lenght = 3;
+			var arrow_arc = 4;
+			var arrow_spd = 2.8;
+			var arrow_dist = 32;
+			var arrow_spin = 34;
 		break;
 		case 2:
 			var wall_nbr = 13;
-			var wall_in = 4;
-			var wall_dist = 2;
+			var wall_in = 3;
+			var wall_dist = 2.5;
 			var wall_spd = 2;
+			var wall_wait = 72;
 			
 			var arrow_wait = 3;
-			var arrow_nbr = 10;
-			var arrow_spd = 4.3;
-			var arrow_dist1 = 0;
-			var arrow_dist2 = 12;
-			var arrow_dist_lenght = 6;
+			var arrow_arc = 5;
+			var arrow_spd = 3;
+			var arrow_dist = 28;
+			var arrow_spin = 30;
 		break;
 		case 3:
 			var wall_nbr = 16;
-			var wall_in = 4;
-			var wall_dist = 2;
+			var wall_in = 3;
+			var wall_dist = 2.5;
 			var wall_spd = 2;
+			var wall_wait = 70;
 			
 			var arrow_wait = 3;
-			var arrow_nbr = 12;
-			var arrow_spd = 4.5;
-			var arrow_dist1 = 0;
-			var arrow_dist2 = 10;
-			var arrow_dist_lenght = 6;
+			var arrow_arc = 6;
+			var arrow_spd = 3;
+			var arrow_dist = 28;
+			var arrow_spin = 30;
 		break;
 	}
 	
-	var wall_wait = 50;
-	var wall_life = 50;
 	
-	if (step % wall_wait == 0)
+	var wall_lenght = 180;
+	var wall_fairy_wait = 210;
+	var wall_life = 40;
+	if(step < wall_fairy_wait * 4)
 	{
-		if(step/wall_wait < ds_list_size(x_wall))
+		if (step % wall_fairy_wait == 0)
 		{
-			var inst = create_enemy(EN_BLUE,x_wall[|step/wall_wait],-20,wall_life,2,4.5,-90);
-			inst.item_nbr = 2;
+			var inst = create_enemy(EN_BLUE,room_width / 2 - 84,-20,wall_life,2,4.5,-90);
+			inst.item_nbr = 5;
+			var inst = create_enemy(EN_BLUE,room_width / 2 + 84,-20,wall_life,2,4.5,-90);
+			inst.item_nbr = 5;
 		}
 	}
 	
 	var dan_wait = 200;
-	var dan_life = 40;
+	var dan_life = 30;
 	
-	if (step % dan_wait == 0)
+	if(step < dan_wait * 4)
 	{
-		if(step/dan_wait < ds_list_size(x_dan))
+		if (step % dan_wait == 0)
 		{
-			var inst = create_enemy(EN_GREEN,x_dan[|step/dan_wait],-20,dan_life,1,5,-90);
+			var inst = create_enemy(EN_GREEN,room_width / 2 + 150 * act_dir,-20,dan_life,1,5,-90);
+			inst.fairy_dir = act_dir;
 			inst.item_nbr = 2;
+		
+			act_dir *= -1;
 		}
 	}
 	
@@ -95,21 +101,27 @@ if(global.gp_active)
 				}
 			break;
 			case 1://shoot
-				var ang = find_angle(x,y,obj_player.x,obj_player.y);//rng(360,false,3);
-				for(var i = ang; i < ang + 360; i += 360 / wall_nbr)
+				if(state_time < wall_lenght)
 				{
-					shoot_arc(DAN_MENTOS,7,wall_in,x,y,i,wall_dist,wall_spd,sfx_shot1,5);
-					shoot_arc(DAN_MENTOS,7,wall_in,x,y,i + 360 / wall_nbr / 2,-wall_dist,wall_spd + 0.5,sfx_shot1,5);
+					if(state_time % wall_wait == 0)
+					{
+						var ang = find_angle(x,y,obj_player.x,obj_player.y);//rng(360,false,3);
+						for(var i = ang; i < ang + 360; i += 360 / wall_nbr)
+						{
+							shoot_arc(DAN_MENTOS,7,wall_in,x,y,i,wall_dist,wall_spd,sfx_shot1,5);
+							shoot_arc(DAN_MENTOS,7,wall_in,x,y,i + 360 / wall_nbr / 2,-wall_dist,wall_spd + 0.5,sfx_shot1,5);
+						}
+					}
 				}
-				
-				state = 2;
-		
+				else
+				{
+					state = 2;
+				}
 			break;
 			case 2:
-				if(state_time == 60)
+				if(state_time == 10)
 				{
 					state = 3;
-					angle = 90;
 				}
 			break;
 			case 3:
@@ -136,15 +148,9 @@ if(global.gp_active)
 				spd = goto_value(spd,2.5,0.1);
 				if(state_time % arrow_wait == 0)
 				{
-					shoot_ring(DAN_ARROWHEAD,3,arrow_nbr,x,y,angle_shoot,arrow_spd,sfx_shot3,4);
-					if((state_time / arrow_wait) % arrow_dist_lenght == arrow_dist_lenght - 1)
-					{
-						angle_shoot += arrow_dist2;
-					}
-					else
-					{
-						angle_shoot += arrow_dist1;
-					}
+					shoot_arc(DAN_ARROWHEAD,3,arrow_arc,x,y,angle_shoot,arrow_dist,arrow_spd,noone,4);
+					shoot_arc(DAN_ARROWHEAD,3,arrow_arc,x,y,angle_shoot + 180,arrow_dist,arrow_spd,sfx_shot3,4);
+					angle_shoot += arrow_spin * fairy_dir;
 				}
 			break;
 		}
