@@ -71,7 +71,7 @@ if(global.gp_active)
 							var x_pos = obj_boss.x + lengthdir_x(i,angle_shoot);
 							var y_pos = obj_boss.y + lengthdir_y(i,angle_shoot);
 							shoot_arc_row(DAN_KNIFE,1,knife_nbr_arc,knife_nbr_row,x_pos,y_pos,angle_shoot + 90,knife_dist ,knife_spd_min,knife_spd_max,sfx_shot2,3);
-							shoot_arc_row(DAN_KNIFE,6,knife_nbr_arc,knife_nbr_row,x_pos,y_pos,angle_shoot - 90,knife_dist ,knife_spd_min,knife_spd_max,sfx_shot2,3);
+							shoot_arc_row(DAN_KNIFE,7,knife_nbr_arc,knife_nbr_row,x_pos,y_pos,angle_shoot - 90,knife_dist ,knife_spd_min,knife_spd_max,sfx_shot2,3);
 						}
 				
 						angle_shoot += angle_shoot_plus ;
@@ -80,7 +80,6 @@ if(global.gp_active)
 					if(state_time % wait_move == 0)
 					{
 						boss_movement_random(1,2,0);
-				
 					}
 				break;		
 			}

@@ -38,14 +38,14 @@ if(global.gp_active)
 		break;
 	}
 	
-	var fairy_lenght = 112;
+	var fairy_lenght = 110;
 	
-	var wave_wait = 200;
+	var wave_wait = 180;
 	
 	
 	if(instance_exists(obj_spell))
 	{
-		wait_time = 90;
+		wait_time = 72;
 	}
 	
 	wait_time = goto_value(wait_time,0,1);

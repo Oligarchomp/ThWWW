@@ -1,76 +1,51 @@
 /// @description Insert description here
 // You can write your code in this editor
-
 if(global.gp_active)
 {
-	
 	switch(global.difficulty)
 	{
 		case 0:
-			var bubble_wait = 12;
-			var bubble_ring = 10;
-			var bubble_open = 6;
-			var bubble_spd_min = 4;
-			var bubble_spd_git = 0.8;
+			var mentos_wait = 12;
+			var mentos_ring = 10;
+			var mentos_open = 6;
+			var mentos_spd_min = 4;
+			var mentos_spd_git = 0.8;
 		break;
 		case 1:
-			var bubble_wait = 10;
-			var bubble_ring = 12;
-			var bubble_open = 7;
-			var bubble_spd_min = 4.2;
-			var bubble_spd_git = 1.1;
+			var mentos_wait = 10;
+			var mentos_ring = 12;
+			var mentos_open = 7;
+			var mentos_spd_min = 4.2;
+			var mentos_spd_git = 1.1;
 		break;
 		case 2:
-			var bubble_wait = 8;
-			var bubble_ring = 13;
-			var bubble_open = 8;
-			var bubble_spd_min = 4.4;
-			var bubble_spd_git = 1.2;
+			var mentos_wait = 8;
+			var mentos_ring = 13;
+			var mentos_open = 8;
+			var mentos_spd_min = 4.4;
+			var mentos_spd_git = 1.2;
 		break;
 		case 3:
-			var bubble_wait = 6;
-			var bubble_ring = 15;
-			var bubble_open = 8;
-			var bubble_spd_min = 4.6;
-			var bubble_spd_git = 1.4;
+			var mentos_wait = 6;
+			var mentos_ring = 15;
+			var mentos_open = 8;
+			var mentos_spd_min = 5;
+			var mentos_spd_git = 1.4;
 		break;
 	}
 	
-	var fairy_lenght = 90;
-	var fairy_y_off = 60;
-	var fairy_life = 40;
+	var f_life = 30;
+	var shoot_lenght = 160;
 	
-	
-	switch(step)
+	switch(state_time)
 	{
 		case 0:
-			need_fairy_time = 120;
-			act_dir = 1;
+		case 260:
+			var inst = create_enemy(EN_GREEN,-20,105,f_life,1,4,0);
+			inst.item_nbr = 4;
+			var inst = create_enemy(EN_GREEN,room_width + 20,105,f_life,1,4,180);
+			inst.item_nbr = 4;
 		break;
-		case 140:
-			need_fairy_time = 120;
-			act_dir = -1;
-		break;
-		case 280:
-			need_fairy_time = 120;
-			act_dir = 1;
-		break;
-		case 420:
-			need_fairy_time = 120;
-			act_dir = -1;
-		break;
-	}
-	
-	var fairy_wait = 40;
-	if(need_fairy_time > 0)
-	{
-		if(need_fairy_time % fairy_wait == 0)
-		{
-			var inst = create_enemy(EN_GREEN,room_width / 2 + (170 + need_fairy_time / 1.5) * act_dir,fairy_y_off, fairy_life,1,10.5,-90 - 110 * act_dir);
-			inst.dir_dan = act_dir;
-			inst.angle_shoot = 0;
-		}
-		need_fairy_time -= 1;
 	}
 	
 	with(obj_enemy1)
@@ -78,24 +53,20 @@ if(global.gp_active)
 		switch(state)
 		{
 			case 0:
-				spd = goto_value(spd,0,0.15);
-				angle = goto_value(angle,-90,1);
+				spd = goto_value(spd,0,0.1);
 				if(spd == 0)
 				{
-					state = 1;	
-					can_revenge = false;
+					state = 1;
 				}
 			break;
-			case 1://shoot
-				
-				if(state_time < fairy_lenght)
+			case 1://shoot aim
+				if(state_time < shoot_lenght)
 				{
-					 
-					if(state_time % bubble_wait == 0)
+					if(state_time % mentos_wait == 0)
 					{
-						var ang = find_angle(x,y,obj_player.x,obj_player.y) + bubble_open - rng(bubble_open * 2,false,8);
-						var sp = bubble_spd_min + rng(bubble_spd_git,false,5);
-						shoot_ring(DAN_MENTOS,3,bubble_ring,x,y,ang,sp,sfx_shot1,7)
+						var sp = mentos_spd_min + rng(mentos_spd_git,false,9);
+						var ang = find_angle(x,y,obj_player.x,obj_player.y) + mentos_open - rng(mentos_open * 2,false,7);
+						shoot_ring(DAN_MENTOS,3,mentos_ring,x,y,ang,sp,sfx_shot1,7);
 					}
 				}
 				else
@@ -104,10 +75,10 @@ if(global.gp_active)
 				}
 			break;
 			case 2:
-				if(state_time == 50)
+				if(state_time == 30)
 				{
 					state = 3;
-					angle = find_angle(x,y,room_width / 2,y) + 180;
+					angle = angle + 180;
 				}
 			break;
 			case 3:
@@ -115,9 +86,9 @@ if(global.gp_active)
 			break;
 		}
 	}
+
 	
 }
-	
 // Inherit the parent event
 event_inherited();
 

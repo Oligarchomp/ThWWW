@@ -6,53 +6,56 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
+			var crab_boost = false;
 			var crab_dist = 40;
 			var crab_row = 2;
-			var crab_far = (room_width + 2 * crab_x_off) / 1;
+			var crab_far = (room_width + 2 * crab_x_off) / 2;
 			var crab_spd = 2.5;
 			var crab_accel = 0.05;
-			var crab_wait = 55;
-			var crab_angle = -70;
+			var crab_wait = 69;
+			var crab_angle = -55;
 			var crab_height = -25;
 			
-			var wait_murder = 110;
-			var fire_ring = 10;
+			var wait_murder = 80;
+			var fire_ring = 12;
 			var fire_row = 2;
 			var fire_spd_min = 3;
 			var fire_spd_max = 5;
-			var murder_lenght = 30;
+			var murder_lenght = 40;
 			var fire_wait = 15;
 		break;
 		case 1:
+			var crab_boost = true;
 			var crab_dist = 40;
 			var crab_row = 2;
-			var crab_far = (room_width + 2 * crab_x_off) / 2;
-			var crab_spd = 3.3;
-			var crab_accel = 0.08;
-			var crab_wait = 55;
-			var crab_angle = -60;
+			var crab_far = (room_width + 2 * crab_x_off) / 3;
+			var crab_spd = 3.1;
+			var crab_accel = 0.1;
+			var crab_wait = 69;
+			var crab_angle = -50;
 			var crab_height = -25;
 			
-			var wait_murder = 90;
-			var fire_ring = 15;
+			var wait_murder = 50;
+			var fire_ring = 20;
 			var fire_row = 3;
 			var fire_spd_min = 3.5;
 			var fire_spd_max = 5.5;
-			var murder_lenght = 60;
+			var murder_lenght = 80;
 			var fire_wait = 13;
 		break;
 		case 2:
+			var crab_boost = true;
 			var crab_dist = 40;
+			var crab_far = (room_width + 2 * crab_x_off) / 3;
 			var crab_row = 3;
-			var crab_far = (room_width + 2 * crab_x_off) / 2;
-			var crab_spd = 3.7;
+			var crab_spd = 3.1;
 			var crab_accel = 0.1;
-			var crab_wait = 55;
+			var crab_wait = 69;
 			var crab_angle = -45;
 			var crab_height = -25;
 			
-			var wait_murder = 60;
-			var fire_ring = 20;
+			var wait_murder = 45;
+			var fire_ring = 23;
 			var fire_row = 3;
 			var fire_spd_min = 4;
 			var fire_spd_max = 6;
@@ -60,6 +63,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var fire_wait = 12;
 		break;
 		case 3:
+			var crab_boost = false;
 			var crab_dist = 40;
 			var crab_far = (room_width + 2 * crab_x_off) / 3;
 			var crab_row = 3;
@@ -135,13 +139,15 @@ if(global.gp_active) and (spell_wait == 0)
 	{
 		case 0:
 		// going to the right
-			for(var i = -crab_x_off ; i < room_width + crab_x_off ; i += crab_far)
+			var off = rng(150,false,6);
+			for(var i = -crab_x_off - off; i < room_width + crab_x_off - off; i += crab_far)
 			{
 				for(var c = 0; c < crab_row; c += 1)
 				{
 					var inst = shoot(DAN_CRAB,6,i + c * crab_dist,crab_height,crab_angle,0,noone,4);
 					inst.is_cancelable = false;
 					inst.y_offscreen = 90;
+					inst.first_wave = crab_boost * 0.9 + 1;
 					play_sound(sfx_redirect1,1,false);
 				}
 			}
@@ -163,6 +169,7 @@ if(global.gp_active) and (spell_wait == 0)
 					var inst = shoot(DAN_CRAB,6,i + c * crab_dist + rand,crab_height,180 - crab_angle,0,noone,4);
 					inst.y_offscreen = 90;
 					inst.is_cancelable = false;
+					inst.first_wave = crab_boost * 0.9 + 1;
 					play_sound(sfx_redirect1,1,false);
 				}
 			}
@@ -191,10 +198,11 @@ if(global.gp_active) and (spell_wait == 0)
 		switch(state)
 		{
 			case 0:
-				spd = goto_value(spd,crab_spd,crab_accel);
-				if(spd == crab_spd)
+				spd = goto_value(spd,crab_spd * first_wave ,crab_accel);
+				if(spd == crab_spd * first_wave)
 				{
 					state = 1;
+					first_wave = 1;
 				}
 			break;
 			case 1:
