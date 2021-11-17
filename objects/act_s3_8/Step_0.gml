@@ -5,40 +5,43 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var wait_shoot = 20;
-			var shoot_nbr = 4;
-			var shoot_dist = 16;
-			var shoot_start = 30; //when start moving
-			var shoot_spd = 2;
+			var bubble_wait = 15;
+			var bubble_arc = 1;
+			var bubble_dist = 45;
+			var bubble_open = 4;
+			var bubble_spd_min = 4;
+			var bubble_spd_git = 1;
 		break;
 		case 1:
-			var wait_shoot = 10;
-			var shoot_nbr = 6;
-			var shoot_dist = 15;
-			var shoot_start = 30; //when start moving
-			var shoot_spd = 2.5;
+			var bubble_wait = 8;
+			var bubble_arc = 3;
+			var bubble_dist = 45;
+			var bubble_open = 4;
+			var bubble_spd_min = 4.8;
+			var bubble_spd_git = 1.3;
 		break;
 		case 2:
-			var wait_shoot = 7;
-			var shoot_nbr = 6;
-			var shoot_dist = 14;
-			var shoot_start = 30; //when start moving
-			var shoot_spd = 3;
+			var bubble_wait = 6;
+			var bubble_arc = 3;
+			var bubble_dist = 40;
+			var bubble_open = 4;
+			var bubble_spd_min = 5.2;
+			var bubble_spd_git = 1.5;
 		break;
 		case 3:
-			var wait_shoot = 5;
-			var shoot_nbr = 6;
-			var shoot_dist = 9;
-			var shoot_start = 30; //when start moving
-			var shoot_spd = 3;
+			var bubble_wait = 6;
+			var bubble_arc = 5;
+			var bubble_dist = 36;
+			var bubble_open = 4;
+			var bubble_spd_min = 5.2;
+			var bubble_spd_git = 1.5;
 		break;
 	}
 	
-	var fairy_spd = 5;
-	var fairy_wait = 25;
-	var fairy_y_off = 60;
-	var fairy_y_git = 50;
-	var fairy_life = 7;
+	var fairy_lenght = 112;
+	
+	var wave_wait = 200;
+	
 	
 	if(instance_exists(obj_spell))
 	{
@@ -49,54 +52,57 @@ if(global.gp_active)
 	
 	if(wait_time == 0)
 	{
-		if(step % fairy_wait == 0) and (step < time_active)
+		if(step <= 1020)
 		{
-			if((step / fairy_wait) % 2 == 0)
+			if(step % wave_wait == 0)
 			{
-				var x_pos = -20;
-			}
-			else
-			{
-				var x_pos = room_width + 20;
-			}
-			var y_pos =  fairy_y_off + rng(fairy_y_git,false,7)
-			var angle = find_angle(x_pos,y_pos,room_width / 2,y_pos - 20);
-			create_enemy(EN_GREEN,x_pos,y_pos,fairy_life,5,fairy_spd,angle);
-			
-		}
-		
-		
-		with(obj_enemy5)
-		{
-			if(step == 0)
-			{
-				angle_shoot = rng(360,false,4);
-				dir_dan = (x > room_width / 2) * 2 - 1;
-			}
-			if (step % wait_shoot == 0)
-			{
-				shoot_ring(DAN_ARROWHEAD,7,shoot_nbr,x,y,angle_shoot,0,sfx_shot2,8);
-				angle_shoot += shoot_dist * dir_dan;
+				for(var i = 50; i <= 350; i += 50)
+				{
+					var inst = create_enemy(EN_GREEN,i,-20,14,7,4,-90);
+					inst.item_nbr = 1;
+				}
 			}
 		}
-		
-		with(obj_danmaku8)
+	}
+	
+	with(obj_enemy7)
+	{
+		switch(state)
 		{
-			switch(state)
-			{
-				case 0:
-					if(state_time > shoot_start)
+			case 0:
+				spd = goto_value(spd,0,0.1);
+				if(spd == 0)
+				{
+					state = 1;
+					angle_shot = 0;
+				}
+			break;
+			case 1://shoot
+				if(state_time < fairy_lenght)
+				{
+					if(state_time % bubble_wait == 0)
 					{
-						state = 1;
+						var sp = bubble_spd_min + rng(bubble_spd_git,false,6);
+						var ang = find_angle(x,y,obj_player.x,obj_player.y) + bubble_open - rng(bubble_open * 2,false,7);
+						shoot_arc(DAN_MENTOS,7,bubble_arc,x,y,ang,bubble_dist,sp,sfx_shot1,8);	
 					}
-				break;
-				case 1:
-					spd = goto_value(spd,shoot_spd,0.1);
-				break;
-			}
-			
+				}
+				else
+				{
+					state = 2;	
+				}
+			break;
+			case 2:
+				if(state_time == 30)
+				{
+					state = 3;
+					angle = 90;
+				}
+			break;
+			case 3:
+				spd = goto_value(spd,2,0.05);
+			break;
 		}
-		
 	}
 	
 }

@@ -82,18 +82,20 @@ if(global.gp_active)
 				angle = goto_value(angle,-90,1);
 				if(spd == 0)
 				{
-					state = 1;					
+					state = 1;	
+					can_revenge = false;
 				}
 			break;
 			case 1://shoot
 				
 				if(state_time < fairy_lenght)
 				{
+					 
 					if(state_time % bubble_wait == 0)
 					{
 						var ang = find_angle(x,y,obj_player.x,obj_player.y) + bubble_open - rng(bubble_open * 2,false,8);
 						var sp = bubble_spd_min + rng(bubble_spd_git,false,5);
-						shoot_ring(DAN_MENTOS,3,bubble_ring,x,y,ang,sp,sfx_shot1,8)
+						shoot_ring(DAN_MENTOS,3,bubble_ring,x,y,ang,sp,sfx_shot1,7)
 					}
 				}
 				else
@@ -113,6 +115,7 @@ if(global.gp_active)
 			break;
 		}
 	}
+	
 }
 	
 // Inherit the parent event

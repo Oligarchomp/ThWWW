@@ -7,18 +7,18 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var aim_spd_shoot = 8;
+			var aim_spd_shoot = 5;
 			var aim_spd_final = 2.5;
-			var aim_wait = 72;
+			var aim_wait = 60;
 			
 			var tri_spd = 1.5;
 			var tri_dist = 2;
 			var tri_div = 20;
 		break;
 		case 1:
-			var aim_spd_shoot = 8.5;
+			var aim_spd_shoot = 6;
 			var aim_spd_final = 2.5;
-			var aim_wait = 34;
+			var aim_wait = 22;
 
 			
 			var tri_spd = 2;
@@ -26,9 +26,9 @@ if(global.gp_active)
 			var tri_div = 6;
 		break;
 		case 2:
-			var aim_spd_shoot = 9;
+			var aim_spd_shoot = 7;
 			var aim_spd_final = 3
-			var aim_wait = 25;
+			var aim_wait = 16;
 
 			
 			var tri_spd = 2;
@@ -36,9 +36,9 @@ if(global.gp_active)
 			var tri_div = 4;
 		break;
 		case 3:
-			var aim_spd_shoot = 10;
-			var aim_spd_final = 3
-			var aim_wait = 18;
+			var aim_spd_shoot = 8;
+			var aim_spd_final = 3.5;
+			var aim_wait = 10;
 			
 			var tri_spd = 2;
 			var tri_dist = 2;
@@ -57,6 +57,7 @@ if(global.gp_active)
 	
 	if(step < fairy_lenght)
 	{
+		
 		if(step % fairy_wait == 0)
 		{
 			var inst = create_enemy(EN_BLUE,-20,fairy_y_off + rng(100,false,3),fairy_life,5,3,-20)
@@ -76,36 +77,12 @@ if(global.gp_active)
 	with(obj_enemy5)
 	{
 		angle = goto_value(angle,90,0.4);
-		if(step % aim_wait == 0)
+		
+		if(step % aim_wait == aim_wait - 1)
 		{
 			shoot(DAN_BALL,1,x,y,999,aim_spd_shoot,sfx_shot3,3);
 		}
-		/*
-		switch(state)
-		{
-			case 0:
-				spd = goto_value(spd,0,0.1);
-				if(spd == 0)
-				{
-					state = 1;
-				}
-			break;
-			case 1://shoot
-					shoot_ring(DAN_ARROWHEAD,1,aim_ring,x,y,rng(360,false,4),aim_spd,sfx_shot3,3);
-					state = 2;
-			break;
-			case 2:
-				if(state_time == 30)
-				{
-					state = 3;
-					angle = find_angle(x,y,room_width / 2, y - 50);
-				}
-			break;
-			case 3:
-				spd = goto_value(spd,2,0.05);
-			break;
-		}
-		*/
+		
 	}
 	
 	with(obj_danmaku3)

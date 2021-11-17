@@ -16,10 +16,9 @@ if(global.gp_active)
 			var wall_spd = 2.5;
 			
 			//aim
-			var ring_nbr = 3;
-			var ring_row = 1;
-			var ring_spd_min = 3;
-			var ring_spd_max = 3.2;
+			var mentos_wait = 35;
+			var mentos_spd = 2.8;
+			var aim_lenght = 80;
 		break;
 		case 1:
 			//arrow
@@ -32,10 +31,9 @@ if(global.gp_active)
 			var wall_spd = 2.5;
 			
 			//aim
-			var ring_nbr = 6;
-			var ring_row = 2;
-			var ring_spd_min = 3.5;
-			var ring_spd_max = 3.8;
+			var mentos_wait = 22;
+			var mentos_spd = 3;
+			var aim_lenght = 100;
 		break;
 		case 2:
 			//arrow
@@ -48,10 +46,9 @@ if(global.gp_active)
 			var wall_spd = 2.5;
 			
 			//aim
-			var ring_nbr = 12;
-			var ring_row = 2;
-			var ring_spd_min = 4;
-			var ring_spd_max = 4.2;
+			var mentos_wait = 18;
+			var mentos_spd = 3.4;
+			var aim_lenght = 100;
 		break;
 		case 3:
 			//arrow
@@ -64,14 +61,15 @@ if(global.gp_active)
 			var wall_spd = 2.5;
 			
 			//aim
-			var ring_nbr = 18;
-			var ring_row = 2;
-			var ring_spd_min = 5;
-			var ring_spd_max = 5.2;
+			var mentos_wait = 15;
+			var mentos_spd = 3.5;
+			var aim_lenght = 100;
 		break;
 	}
 	
-	var fairy_life = 165;
+	
+	
+	var fairy_life = 150;
 	var small_fairy_life = 6;
 	
 	var fairy_lenght = 120;
@@ -81,7 +79,7 @@ if(global.gp_active)
 	switch(step)
 	{
 		case 0:
-			var inst = create_enemy(EN_BLUE,room_width - 50, -10,fairy_life,5,5,-90);
+			var inst = create_enemy(EN_GREEN,room_width - 50, -10,fairy_life,5,5,-90);
 		break;
 		case 50:
 			need_fairy_time = fairy_lenght;
@@ -89,7 +87,7 @@ if(global.gp_active)
 			step_ref = step;
 		break;
 		case 200:
-			var inst = create_enemy(EN_BLUE,50, -10,fairy_life,5,5,-90);
+			var inst = create_enemy(EN_GREEN,50, -10,fairy_life,5,5,-90);
 		break;
 		case 250:
 			need_fairy_time = fairy_lenght;
@@ -97,7 +95,7 @@ if(global.gp_active)
 			step_ref = step;
 		break;
 		case 400:
-			var inst = create_enemy(EN_BLUE,room_width - 100, -10,fairy_life,5,5,-90);
+			var inst = create_enemy(EN_GREEN,room_width - 100, -10,fairy_life,5,5,-90);
 		break;
 		case 450:
 			need_fairy_time = fairy_lenght;
@@ -105,7 +103,7 @@ if(global.gp_active)
 			step_ref = step;
 		break;
 		case 600:
-			var inst = create_enemy(EN_BLUE,100, -10,fairy_life,5,5,-90);
+			var inst = create_enemy(EN_GREEN,100, -10,fairy_life,5,5,-90);
 		break;
 		case 650:
 			need_fairy_time = fairy_lenght;
@@ -126,7 +124,7 @@ if(global.gp_active)
 			{
 				var x_pos = room_width - fairy_off - ((step - step_ref) * 45) % (room_width - fairy_off * 3);
 			}
-			var inst = create_enemy(EN_GREEN,x_pos,-20,small_fairy_life,4,5,-90);
+			var inst = create_enemy(EN_BLUE,x_pos,-20,small_fairy_life,4,5,-90);
 			inst.item_nbr = 1;
 		}
 		need_fairy_time -= 1;
@@ -178,6 +176,7 @@ if(global.gp_active)
 		}
 	}
 	
+	//smol
 	with(obj_enemy4)
 	{
 		switch(state)
@@ -187,14 +186,20 @@ if(global.gp_active)
 				if(spd == 0)
 				{
 					state = 1;
+					angle = find_angle(x,y,obj_player.x,obj_player.y);
 				}
 			break;
 			case 1://shoot
-				shoot_ring_row(DAN_ARROWHEAD,1,ring_nbr,ring_row,x,y,999,ring_spd_min,ring_spd_max,sfx_shot2,7);
-					state = 2;
-			break;
-			case 2:
-				spd = goto_value(spd,2,0.1);
+				spd = goto_value(spd,2.5,0.02);
+				
+				
+				if(state_time < aim_lenght)
+				{
+					if(state_time % mentos_wait == 0)
+					{
+						shoot(DAN_MENTOS,2,x,y,999,mentos_spd,sfx_shot2,8);	
+					}
+				}
 			break;
 		}
 	}

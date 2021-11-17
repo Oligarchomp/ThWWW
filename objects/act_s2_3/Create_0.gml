@@ -4,5 +4,5 @@
 // Inherit the parent event
 event_inherited();
 
-act_set_time(400,450);
+act_set_time(460,460);
 
