@@ -55,7 +55,7 @@ global.piv_max = 5000000;
 global.stage = 1;
 
 item_extend = ds_list_create();
-ds_list_add(item_extend,250,600,1000,1500,2100,9999);
+ds_list_add(item_extend,250,600,1000,1500,2200,9999);
 
 instance_create_depth(room_width / 2,430,global.player_depth,obj_player);
 
@@ -114,7 +114,7 @@ add_stage_event(boss_s7_85_spell,0);
 add_stage_event(boss_s7_9_spell,50);
 
 add_stage_event(dialogue_s7_post,100);
-
+*/
 //S1
 add_stage_event(act_s1_0,0);//keep this one
 add_stage_event(act_s1_1,30);
@@ -212,11 +212,8 @@ switch(global.player_chosen)
 add_stage_event(dialogue_s4_post,100);
 
 //S5
-*/
 add_stage_event(act_s5_0,0);// keep this one
-/*
 add_stage_event(act_s5_1,0);
-*/
 add_stage_event(act_s5_2,0);
 add_stage_event(act_s5_3,60);
 add_stage_event(act_s5_4,0);

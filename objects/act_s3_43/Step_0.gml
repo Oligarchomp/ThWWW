@@ -102,7 +102,7 @@ if(global.gp_active)
 					{
 						var ang = find_angle(x,y,obj_player.x,obj_player.y) + bubble_open - rng(bubble_open * 2,false,8);
 						var sp = bubble_spd_min + rng(bubble_spd_git,false,5);
-						shoot_ring(DAN_MENTOS,6,bubble_ring,x,y,ang,sp,sfx_shot1,8)
+						shoot_ring(DAN_MENTOS,3,bubble_ring,x,y,ang,sp,sfx_shot1,8)
 					}
 				}
 				else
