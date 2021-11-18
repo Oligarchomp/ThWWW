@@ -10,6 +10,10 @@ if(global.gp_active)
 	var aim_ring = 12;
 	var aim_spd = 3;
 	
+	var mentos_row = 3;
+	var mentos_spd_min = 5;
+	var mentos_spd_max = 7;
+	
 	switch(step)
 	{
 		case 0:
@@ -65,7 +69,7 @@ if(global.gp_active)
 					state = 10;
 					laser_ang = find_angle(x,y,obj_player.x,obj_player.y);
 					laser_plus = 0;
-					laser_acc = 0;
+				//	laser_acc = 0;
 					boss_charge(x,y);
 				}
 				else
@@ -74,14 +78,14 @@ if(global.gp_active)
 				}
 			break;
 			case 10:
-				if(laser_plus < 180)
+				if(laser_plus < 10)
 				{
 					if(state_time % 2 == 0 )
 					{
 						shoot_laser(x,y,laser_ang + laser_plus,45,30,c_white,sfx_laser2);
 						shoot_laser(x,y,laser_ang - laser_plus,45,30,c_white,sfx_laser2);
-						laser_acc += 2;
-						laser_plus += laser_acc;
+						//laser_acc += 2;
+						laser_plus += 2//laser_acc;
 					}
 				}
 				else
@@ -90,9 +94,14 @@ if(global.gp_active)
 				}
 			break;
 			case 11:
-				if(state_time == laser_wait)
+				switch(state_time)
 				{
-					state = 1;	
+					case 50:
+						shoot_ring(DAN_BUBBLE,6,20,x,y,999,3,sfx_redirect1,8);
+					break;
+					case laser_wait:
+						state = 1;
+					break;
 				}
 			break;
 			case 2://wait
@@ -146,6 +155,8 @@ if(global.gp_active)
 			break;
 		}
 	}
+	
+	
 	
 	for(var i = 0; i < ds_list_size(x_death_list); i += 1)
 	{

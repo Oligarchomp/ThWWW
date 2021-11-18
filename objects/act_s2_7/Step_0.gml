@@ -13,7 +13,7 @@ if(global.gp_active)
 			var mentos_deccel = 0.1;
 		break;
 		case 1:
-			var fairy_wait_shoot = 28;
+			var fairy_wait_shoot = 26;
 			var mentos_arc = 5;
 			var mentos_dist = 18;
 			var mentos_spd_shoot = 7.5;
@@ -21,7 +21,7 @@ if(global.gp_active)
 			var mentos_deccel = 0.1;
 		break;
 		case 2:
-			var fairy_wait_shoot = 24;
+			var fairy_wait_shoot = 22;
 			var mentos_arc = 7;
 			var mentos_dist = 15;
 			var mentos_spd_shoot = 8;
@@ -29,7 +29,7 @@ if(global.gp_active)
 			var mentos_deccel = 0.1;
 		break;
 		case 3:
-			var fairy_wait_shoot = 22;
+			var fairy_wait_shoot = 18;
 			var mentos_arc = 7;
 			var mentos_dist = 12;
 			var mentos_spd_shoot = 8;

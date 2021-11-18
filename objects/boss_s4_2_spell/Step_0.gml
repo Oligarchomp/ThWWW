@@ -118,6 +118,7 @@ if(global.gp_active) and (spell_wait == 0)
 			{
 				var inst = shoot(DAN_ROCK,im,obj_boss.x,obj_boss.y,i,5.3,noone,5);
 				inst.rot = rng(360,false,3);
+				inst.is_cancelable = false;
 			}
 			
 			boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);

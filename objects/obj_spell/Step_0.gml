@@ -213,14 +213,20 @@ if (global.gp_active)
 		{
 			//cancel bonus
 			var plus = 2000;
+			var total = 0;
 			with(obj_danmaku)
 			{
 				var inst = instance_create_depth(x,y,0,obj_score);
 				inst.bonus = plus;
-				plus = goto_value(plus,8000,20);
 				
-				add_score(plus);
+				total += plus;
+				plus = goto_value(plus,8000,20);
 			}
+			
+			var inst = instance_create_depth(room_width / 2, 50,0,obj_bonus_cancel);
+			inst.bonus = total;
+			
+			add_score(total);
 		}
 		
 		

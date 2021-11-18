@@ -44,7 +44,7 @@ if(global.gp_active)
 			var star_spd_final2 = 2;
 		break;
 		case 3:
-			var laser_ring = 26;
+			var laser_ring = 28;
 			var laser_wait = 65;
 			var laser_nbr = 2;
 			var laser_dist = 50;

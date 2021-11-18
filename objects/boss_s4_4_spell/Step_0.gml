@@ -85,6 +85,7 @@ if(global.gp_active) and (spell_wait == 0)
 				inst.dist = 0;
 				inst.angle_final = i + rock_side_off * wave_dir + rock_angle_dist_side / 2;
 				inst.rot = rng(360,false,2);
+				inst.is_cancelable = false;
 			}
 			state = 1;
 			wave_dir *= -1;
@@ -123,6 +124,7 @@ if(global.gp_active) and (spell_wait == 0)
 					inst.dist = 0;
 					inst.angle_final = i + 180 * wave_dir + pos_off;
 					inst.rot = rng(360,false,2);
+					inst.is_cancelable = false;
 				}
 			}
 			state = 3;
