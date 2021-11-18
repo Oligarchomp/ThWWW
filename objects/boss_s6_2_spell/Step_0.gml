@@ -7,34 +7,25 @@ if(global.gp_active) and (spell_wait == 0)
 		case 0:
 			var anchor_size = 2;
 			var anchor_spd = 25;
-			var anchor_stay = 110;
+			var anchor_stay = 100;
 			var anchor_accel = 0.05;
 			
-			var impact_ring = 0;
-			var impact_row = 3;
-			var impact_spd_min = 1;
-			var impact_spd_max = 3;
+			var impact_ring = 12;
+			var impact_row = 6;
+			var impact_spd_min = 0.7;
+			var impact_spd_max = 1.8;
 			
-			var debris_spd_max = 6;
-			var debris_spd_less = 0.25;
-			var debris_spd_git = 2;
-			var debris_grav = 0.05;
-			var debris_dist_plus = 5;
-			var debris_dist_git = 4;
-			var debris_open = 16;
+			var need_ball = true;
+			var impact_ball_mult = 1.1;
 			
-			var spam_nbr = 80;
-			var spam_spd_min = 4;
-			var spam_spd_git = 4;
-			var spam_grav = 0.05;
-			var spam_open = 30;
+			var tray_wait = 3;
+			var tray_row = 4;
+			var tray_spin = 30;
+			var tray_spd_min = 2;
+			var tray_spd_max = 4;
+			var tray_frame_accel = 90;
 			
-			var wave_wait = 70;
-			
-			var bullet_ring = 20;
-			var bullet_spd = 2;
-			var bullet_wait = 120;
-			var bullet_dist = 180 / bullet_ring;
+			var wave_wait = 60;
 		break;
 		case 1:
 			var anchor_size = 2;
@@ -42,63 +33,45 @@ if(global.gp_active) and (spell_wait == 0)
 			var anchor_stay = 90;
 			var anchor_accel = 0.05;
 			
-			var impact_ring = 9;
-			var impact_row = 3;
-			var impact_spd_min = 1;
-			var impact_spd_max = 3;
+			var impact_ring = 18;
+			var impact_row = 7;
+			var impact_spd_min = 0.7;
+			var impact_spd_max = 1.8;
 			
-			var debris_spd_max = 6;
-			var debris_spd_less = 0.2;
-			var debris_spd_git = 2;
-			var debris_grav = 0.05;
-			var debris_dist_plus = 4;
-			var debris_dist_git = 3;
-			var debris_open = 16;
+			var need_ball = true;
+			var impact_ball_mult = 1.1;
 			
-			var spam_nbr = 92;
-			var spam_spd_min = 4;
-			var spam_spd_git = 4;
-			var spam_grav = 0.05;
-			var spam_open = 30;
+			var tray_wait = 2;
+			var tray_row = 4;
+			var tray_spin = 25;
+			var tray_spd_min = 2;
+			var tray_spd_max = 4;
+			var tray_frame_accel = 90;
 			
-			var wave_wait = 60;
-			
-			var bullet_ring = 36;
-			var bullet_spd = 2.3;
-			var bullet_wait = 90;
-			var bullet_dist = 180 / bullet_ring;
+			var wave_wait = 50;
 		break;
 		case 2:
 			var anchor_size = 2;
 			var anchor_spd = 26;
-			var anchor_stay = 70;
+			var anchor_stay = 50;
 			var anchor_accel = 0.05;
 			
-			var impact_ring = 13;
-			var impact_row = 4;
-			var impact_spd_min = 1;
-			var impact_spd_max = 3;
+			var impact_ring = 20;
+			var impact_row = 7;
+			var impact_spd_min = 0.7;
+			var impact_spd_max = 1.8;
 			
-			var debris_spd_max = 6;
-			var debris_spd_less = 0.15;
-			var debris_spd_git = 2;
-			var debris_grav = 0.05;
-			var debris_dist_plus = 3;
-			var debris_dist_git = 2.5;
-			var debris_open = 16;
+			var need_ball = true;
+			var impact_ball_mult = 1.1;
 			
-			var spam_nbr = 128;
-			var spam_spd_min = 4;
-			var spam_spd_git = 4;
-			var spam_grav = 0.05;
-			var spam_open = 30;
+			var tray_wait = 1;
+			var tray_row = 5;
+			var tray_spin = 18;
+			var tray_spd_min = 2;
+			var tray_spd_max = 4;
+			var tray_frame_accel = 90;
 			
 			var wave_wait = 40;
-			
-			var bullet_ring = 42;
-			var bullet_spd = 2.5;
-			var bullet_wait = 80;
-			var bullet_dist = 180 / bullet_ring;
 		break;
 		case 3:
 			var anchor_size = 2;
@@ -106,44 +79,25 @@ if(global.gp_active) and (spell_wait == 0)
 			var anchor_stay = 50;
 			var anchor_accel = 0.05;
 			
-			var impact_ring = 16;
-			var impact_row = 4;
-			var impact_spd_min = 1;
-			var impact_spd_max = 3;
+			var impact_ring = 25;
+			var impact_row = 13;
+			var impact_spd_min = 0.7;
+			var impact_spd_max = 2.5;
 			
-			var debris_spd_max = 6;
-			var debris_spd_less = 0.1;
-			var debris_spd_git = 2;
-			var debris_grav = 0.05;
-			var debris_dist_plus = 2;
-			var debris_dist_git = 2;
-			var debris_open = 16;
+			var need_ball = false;
+			var impact_ball_mult = 1;
 			
-			var spam_nbr = 170;
-			var spam_spd_min = 4;
-			var spam_spd_git = 4;
-			var spam_grav = 0.05;
-			var spam_open = 30;
+			var tray_wait = 1;
+			var tray_row = 5;
+			var tray_spin = 14;
+			var tray_spd_min = 2;
+			var tray_spd_max = 4;
+			var tray_frame_accel = 90;
 			
 			var wave_wait = 40;
-			
-			var bullet_ring = 52;
-			var bullet_spd = 2.5;
-			var bullet_wait = 70;
-			var bullet_dist = 180 / bullet_ring;
 		break;
 	}
-	var boss_wait = 115;
-	var boss_start_shoot = 160;
-	
-	if(step > boss_start_shoot)
-	{
-		if(step % bullet_wait == 0)
-		{
-			shoot_ring(DAN_BULLET,7,bullet_ring,obj_boss.x,obj_boss.y,bullet_angle,bullet_spd,sfx_shot1,2);
-			bullet_angle += bullet_dist;
-		}
-	}
+	var boss_wait = 145;
 	
 	if(step % boss_wait == boss_wait - 1)
 	{
@@ -210,6 +164,28 @@ if(global.gp_active) and (spell_wait == 0)
 		switch(state)
 		{
 			case 0:
+				if(state_time = 0)
+				{
+					angle_dist = 90;	
+				}
+				if(y > 0)
+				{
+					if(state_time % tray_wait == 0)
+					{
+						angle_dist += tray_spin;
+					
+						for(var i = tray_spd_min; i < tray_spd_max; i += (tray_spd_max - tray_spd_min) / tray_row)
+						{
+							for(var j = -(angle_dist - 1) / 2; j <= (angle_dist + 1) / 2; j += angle_dist)
+							{
+								var inst = shoot(DAN_BUBBLE,7,x,y,90 + j,0,sfx_redirect1,7);
+								inst.spd_to = i;
+							}
+						}
+					}
+			
+				}
+				
 				if(y > room_height)
 				{
 					state = 1;
@@ -217,51 +193,16 @@ if(global.gp_active) and (spell_wait == 0)
 					screen_shake(20,0);
 					spd = 0;
 					
-					shoot_ring_row(DAN_BUBBLE,1,impact_ring,impact_row,x,y,90,impact_spd_min,impact_spd_max,noone,4);
-				
-					for(var i = 0; i < spam_nbr; i += 1)
+					var aim = rng(360,false,5);
+					for(var i = impact_spd_min; i < impact_spd_max; i += (impact_spd_max - impact_spd_min) / impact_row)
 					{
-						var ang = 90 - spam_open + rng(spam_open * 2, false,i);
-						var sp = spam_spd_min + rng(spam_spd_git,false,i + 1);
-						var inst = shoot(DAN_BALL,7,x,y,ang,sp,noone,3);
-						inst.pos_type = POS_SP;
-						inst.y_grav_accel = spam_grav;
-						inst.y_grav_max = 8;
-						inst.y_offscreen = 200;
+						shoot_ring(DAN_MENTOS,1,impact_ring,x,room_height,aim,i,noone,4);
+						if(need_ball)
+						{
+							shoot_ring(DAN_BALL,1,impact_ring,x,room_height,aim,i * impact_ball_mult,noone,3);
+						}
+						aim += 180 / impact_ring;
 					}
-					
-					var x_pos = x;
-					var sp = debris_spd_max;
-					while(x_pos < room_width) and (sp >= 0)
-					{
-						var ang = 90 - debris_open + rng(debris_open * 2,false,x_pos + 1);
-						var sp_shot = sp + rng(debris_spd_git,false,x_pos);
-						var inst = shoot(DAN_BALL,2,x_pos,room_height,ang,sp_shot,noone,3);
-						inst.pos_type = POS_SP;
-						inst.y_grav_accel = debris_grav;
-						inst.y_grav_max = 8;
-						inst.y_offscreen = 200;
-						
-						x_pos += debris_dist_plus + rng(debris_dist_git,true,sp);
-						sp -= debris_spd_less;
-					}
-					
-					var x_pos = x;
-					var sp = debris_spd_max;
-					while(x_pos > 0) and (sp >= 0)
-					{
-						var ang = 90 - debris_open + rng(debris_open * 2,false,x_pos + 1);
-						var sp_shot = sp + rng(debris_spd_git,false,x_pos);
-						var inst = shoot(DAN_BALL,2,x_pos,room_height,ang,sp_shot,noone,3);
-						inst.pos_type = POS_SP;
-						inst.y_grav_accel = debris_grav;
-						inst.y_grav_max = 8;	
-						inst.y_offscreen = 200;
-						
-						x_pos -= debris_dist_plus + rng(debris_dist_git,true,sp);
-						sp -= debris_spd_less;
-					}
-				
 				}
 			break;
 			case 1:
@@ -290,19 +231,21 @@ if(global.gp_active) and (spell_wait == 0)
 			break;
 		}
 	}
+	//tray
+	with(obj_danmaku7)
+	{
+		switch(state)
+		{
+			case 0:
+				spd = goto_value(spd,spd_to,spd_to / tray_frame_accel);
+			break;
+		}
+	}
 	
 	//chain
 	with(obj_danmaku6)
 	{
 		y = spell.anchor_id.y - dist;
-	}
-	
-	with(obj_danmaku3)
-	{
-		if (y > 530)
-		{
-			y_offscreen = 30;	
-		}
 	}
 }
 

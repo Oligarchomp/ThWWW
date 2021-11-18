@@ -77,9 +77,9 @@ wait_list = ds_list_create();
 //need to remotely inject whatever needed
 
 //S7
-
-add_stage_event(act_s7_0,0);//keep this one
 /*
+add_stage_event(act_s7_0,0);//keep this one
+
 add_stage_event(act_s7_1,0)
 add_stage_event(act_s7_2,0);
 add_stage_event(act_s7_23,0);
@@ -93,7 +93,6 @@ add_stage_event(act_s7_53_midspell,50);
 add_stage_event(act_s7_6,100);
 add_stage_event(act_s7_7,0);
 add_stage_event(act_s7_8,0);
-*/
 add_stage_event(act_s7_9,0);
 add_stage_event(act_s7_95,0);
 
@@ -234,7 +233,9 @@ add_stage_event(boss_s5_6_spell,0);
 add_stage_event(boss_s5_7_spell,60);
 add_stage_event(dialogue_s5_post,70);
 //S6
+*/
 add_stage_event(act_s6_0,0);// keep this one
+/*
 add_stage_event(act_s6_1,30);
 add_stage_event(act_s6_2,0);
 add_stage_event(act_s6_3,30);
@@ -242,6 +243,7 @@ add_stage_event(act_s6_4,0);
 add_stage_event(dialogue_s6_mid,50)
 add_stage_event(act_s6_5_spell,0);
 add_stage_event(dialogue_s6_pre,300);
+*/
 add_stage_event(boss_s6_1_non,0);
 add_stage_event(boss_s6_2_spell,0);
 add_stage_event(boss_s6_3_non,50);
