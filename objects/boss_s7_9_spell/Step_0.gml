@@ -14,7 +14,7 @@ if(global.gp_active) and (spell_wait == 0)
 	var mentos_wait_min = 20;
 	
 	//wave 3
-	var wave_min = 15;
+	var wave_min = 2;
 	var arrow_dist = 34;
 	
 	var spd_reference = 50;
@@ -120,6 +120,7 @@ if(global.gp_active) and (spell_wait == 0)
 				inst.x_offscreen = 400;
 				inst.y_offscreen = 400;
 				inst.angle_re = ang;
+				inst.is_cancelable = false;
 			}
 			
 			mentos_wait = goto_value(mentos_wait,mentos_wait_min,1);
@@ -207,6 +208,7 @@ if(global.gp_active) and (spell_wait == 0)
 			if(state_time == 120)
 			{
 				state = 8;
+				play_sound(sfx_shock,1,false);
 			}
 		break;
 		case 8:

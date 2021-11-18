@@ -23,7 +23,7 @@ if (global.gp_active)
 	with(obj_danmaku)
 	{
 		var hitb = false;
-		sprite_index = spr_nothing;
+		image_index = image_number - 1;
 		var dist = sqrt(sqr(p.x - x) + sqr(p.y - y));
 		
 		if(p.bomb_time == 0)
@@ -43,7 +43,6 @@ if (global.gp_active)
 		
 		if(hitb)
 		{
-			sprite_index = spr_danmaku_hitbox;
 			image_index = danmaku_id;
 			hit_nbr += 1;
 		}
