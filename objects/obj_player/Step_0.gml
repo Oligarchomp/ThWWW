@@ -17,6 +17,7 @@ if (global.gp_active)
 		state_time += 1;
 	}
 
+/*
 	//NOT THE BEST PLACE
 	var hit_nbr = 0;
 	var p = self;
@@ -48,6 +49,7 @@ if (global.gp_active)
 		}
 	}
 	///
+	*/
 	
 	switch(state)
 	{

@@ -11,6 +11,8 @@ if(global.gp_active)
 			var bubble_spd = 3;
 			var pellet_ring = bubble_ring * 3;
 			var pellet_dist_div = 3;
+			
+			var dist_off = 3;
 		break;
 		case 1:
 			var bubble_wait = 20;
@@ -18,6 +20,8 @@ if(global.gp_active)
 			var bubble_spd = 3;
 			var pellet_ring = bubble_ring * 3;
 			var pellet_dist_div = 3;
+			
+			var dist_off = 3;
 		break;
 		case 2:
 			var bubble_wait = 18;
@@ -25,6 +29,8 @@ if(global.gp_active)
 			var bubble_spd = 3;
 			var pellet_ring = bubble_ring * 3;
 			var pellet_dist_div = 3;
+			
+			var dist_off = 3;
 		break;
 		case 3:
 			var bubble_wait = 16;
@@ -32,6 +38,8 @@ if(global.gp_active)
 			var bubble_spd = 3;
 			var pellet_ring = bubble_ring * 3;
 			var pellet_dist_div = 3;
+			
+			var dist_off = 3;
 		break;
 	}
 	
@@ -74,7 +82,7 @@ if(global.gp_active)
 					{
 						shoot_ring(DAN_BUBBLE,1,bubble_ring,x,y,aim,bubble_spd,sfx_redirect1,5);
 						shoot_ring(DAN_PELLET,7,pellet_ring,x,y,aim,bubble_spd,noone,4);
-						aim += (360 / bubble_ring / pellet_dist_div) * side;
+						aim += (360 / bubble_ring / pellet_dist_div - dist_off) * side;
 					}
 				}
 				else

@@ -54,8 +54,8 @@ switch(global.player_chosen)
 		set_dialogue(spr_marisa_art,0,true,spr_reverence_art,0,false,get_text("diag_s7_m9"),-1);
 		set_dialogue(spr_marisa_art,0,false,spr_reverence_art,1,true,get_text("diag_s7_m10"),-1);
 		set_dialogue(spr_marisa_art,0,true,spr_reverence_art,1,false,get_text("diag_s7_m11"),-1);
-		set_dialogue(spr_marisa_art,0,false,spr_reverence_art,4,true,get_text("diag_s7_m12"),-1);
-		set_dialogue(spr_marisa_art,0,true,spr_reverence_art,4,false,get_text("diag_s7_m13"),-1);
+		set_dialogue(spr_marisa_art,0,false,spr_reverence_art,2,true,get_text("diag_s7_m12"),-1);
+		set_dialogue(spr_marisa_art,0,true,spr_reverence_art,2,false,get_text("diag_s7_m13"),-1);
 		set_dialogue(spr_marisa_art,0,false,spr_reverence_art,0,true,get_text("diag_s7_m14"),-1);
 		set_dialogue(spr_marisa_art,1,true,spr_reverence_art,0,false,get_text("diag_s7_m15"),-1);
 		set_dialogue(spr_marisa_art,1,false,spr_reverence_art,4,true,get_text("diag_s7_m16"),-1);
