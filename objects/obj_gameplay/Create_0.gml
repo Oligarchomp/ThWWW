@@ -24,7 +24,7 @@ score_to_draw = 0;
 global.life = 2;
 global.bomb = 2;
 
-global.continues = 3;
+global.continues = 2;
 
 global.item = 0;//
 global.poc = 0;

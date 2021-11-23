@@ -17,12 +17,6 @@ for(var i = 0; i < 4; i += 1)
 {
 	draw_text_color(x_ref,y_ref - text_y_dist * 3 + text_y_dist * i,line_list[|i],color_list[|i],color_list[|i],color_list[|i],color_list[|i],1);
 }
-/*
-draw_text_color(x_ref,y_ref - text_y_dist * 3,line1,line1_col,line1_col,line1_col,line1_col,1);
-draw_text_color(x_ref,y_ref - text_y_dist * 2,line2,line2_col,line2_col,line2_col,line2_col,1);
-draw_text_color(x_ref,y_ref - text_y_dist,line3,line3_col,line3_col,line3_col,line3_col,1);
-draw_text_color(x_ref,y_ref,line4,line4_col,line4_col,line4_col,line4_col,1);
-*/
 //hide text
 draw_sprite_pos(spr_black,0,0,y_ref + text_y_dist - text_hide_plus,room_width,y_ref + text_y_dist - text_hide_plus,room_width,room_height,0,room_height,1);
 
