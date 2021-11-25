@@ -27,4 +27,4 @@ angle_shoot = 0;
 angle_shoot2 = -90;
 
 // to sync with the music
-instance_create_depth(0,0,0,act_s3_8);
+//instance_create_depth(0,0,0,act_s3_8);

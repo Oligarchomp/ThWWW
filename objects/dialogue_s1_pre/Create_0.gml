@@ -15,7 +15,7 @@ switch(global.player_chosen)
 		set_dialogue(spr_reimu_art,1,true,spr_nothing,1,false,get_text("diag_s1_r2"),-1);
 		set_dialogue(spr_reimu_art,1,true,spr_nothing,1,false,get_text("diag_s1_r3"),-1);
 		set_dialogue(spr_reimu_art,1,false,spr_nothing,1,false,get_text("diag_s1_r4"),-1);
-		set_dialogue(spr_reimu_art,0,false,spr_apple_art,1,true,get_text("diag_s1_r5"),-1);
+		set_dialogue(spr_reimu_art,1,false,spr_apple_art,1,true,get_text("diag_s1_r5"),-1);
 		set_dialogue(spr_reimu_art,4,true,spr_apple_art,1,false,get_text("diag_s1_r6"),-1);
 		set_dialogue(spr_reimu_art,4,false,spr_apple_art,2,true,get_text("diag_s1_r7"),-1);
 		set_dialogue(spr_reimu_art,5,true,spr_apple_art,2,false,get_text("diag_s1_r8"),-1);

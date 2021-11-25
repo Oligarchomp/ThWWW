@@ -7,8 +7,8 @@ function find_angle(argument0, argument1, argument2, argument3) {
 
 
 
-	xd = argument2 - argument0;
-	yd = argument3 - argument1;
+	var xd = argument2 - argument0;
+	var yd = argument3 - argument1;
 	if (sign(xd) == sign(yd))
 	{
 		if (yd != 0)

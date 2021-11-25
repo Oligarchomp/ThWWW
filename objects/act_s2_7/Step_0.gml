@@ -5,7 +5,7 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var fairy_wait_shoot = 40;
+			var fairy_wait_shoot = 38;
 			var mentos_arc = 3;
 			var mentos_dist = 25;
 			var mentos_spd_shoot = 6;
@@ -13,7 +13,7 @@ if(global.gp_active)
 			var mentos_deccel = 0.1;
 		break;
 		case 1:
-			var fairy_wait_shoot = 26;
+			var fairy_wait_shoot = 24;
 			var mentos_arc = 5;
 			var mentos_dist = 18;
 			var mentos_spd_shoot = 7.5;
@@ -21,7 +21,7 @@ if(global.gp_active)
 			var mentos_deccel = 0.1;
 		break;
 		case 2:
-			var fairy_wait_shoot = 22;
+			var fairy_wait_shoot = 20;
 			var mentos_arc = 7;
 			var mentos_dist = 15;
 			var mentos_spd_shoot = 8;
@@ -29,7 +29,7 @@ if(global.gp_active)
 			var mentos_deccel = 0.1;
 		break;
 		case 3:
-			var fairy_wait_shoot = 18;
+			var fairy_wait_shoot = 16;
 			var mentos_arc = 7;
 			var mentos_dist = 12;
 			var mentos_spd_shoot = 8;
@@ -45,7 +45,7 @@ if(global.gp_active)
 	
 	if(instance_exists(obj_spell))
 	{
-		time_wait = 90;
+		time_wait = 110;
 	}
 	
 	if(time_wait > 0)

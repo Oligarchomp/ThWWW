@@ -25,19 +25,6 @@ function screen_clean(argument0,argument1){
 				create_item(ITEM_CANCEL,x,y,);
 			}
 		}
-		/*
-		else
-		{
-			if(cancel_uncancelable)
-			{
-				cancel_bullet(self);
-				if(star_item)
-				{
-					create_item(ITEM_CANCEL,x,y,);
-				}
-			}
-		}
-		*/
 	}
 	
 }

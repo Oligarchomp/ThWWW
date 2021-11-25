@@ -4,8 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
-time_active = (18 + 1) * 60; // at least greater than midspell
-act_set_time(time_active,time_active + 300);
+
+act_set_time(420,420);
 
 
 wait_time = 0;

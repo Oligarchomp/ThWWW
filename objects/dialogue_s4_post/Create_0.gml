@@ -13,8 +13,8 @@ switch(global.player_chosen)
 		set_dialogue(spr_reimu_art,1,false,spr_yuuto_art,6,true,get_text("diag_s4_r24"),-1);
 		set_dialogue(spr_reimu_art,5,true,spr_yuuto_art,6,false,get_text("diag_s4_r25"),-1);
 		set_dialogue(spr_reimu_art,5,false,spr_yuuto_art,6,true,get_text("diag_s4_r26"),-1);
-		set_dialogue(spr_reimu_art,3,true,spr_yuuto_art,6,false,get_text("diag_s4_r27"),-1);
-		set_dialogue(spr_reimu_art,3,false,spr_yuuto_art,6,true,get_text("diag_s4_r28"),-1);
+		set_dialogue(spr_reimu_art,2,true,spr_yuuto_art,6,false,get_text("diag_s4_r27"),-1);
+		set_dialogue(spr_reimu_art,2,false,spr_yuuto_art,6,true,get_text("diag_s4_r28"),-1);
 		set_dialogue(spr_reimu_art,3,true,spr_yuuto_art,6,false,get_text("diag_s4_r29"),-1);
 		set_dialogue(spr_reimu_art,3,false,spr_yuuto_art,6,true,get_text("diag_s4_r30"),-1);
 		set_dialogue(spr_reimu_art,3,true,spr_yuuto_art,6,false,get_text("diag_s4_r31"),-1);
