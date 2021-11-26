@@ -1,14 +1,19 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-draw_set_font(font_dialogue);
 
+draw_sprite(spr_main,level != 0,0,0);
+
+draw_set_font(font_main);
 switch(level)
 {
 	case 0://main menu
 		for(var i = 0; i < array_length(menu); i += 1)
 		{
-			draw_text_color(620 + (cursor[level] == i) * 30,80 + i * 50,menu[i].title,c_white,c_white,c_white,c_white,1);
+			var is_active = (cursor[0] == i);
+			menu[i].active_offset = goto_value(menu[i].active_offset,over_offset * is_active,6);
+			
+			draw_text_color(590 + menu[i].active_offset + i * 5,90 + i * 50,menu[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
 		}
 	break;
 	case 1:

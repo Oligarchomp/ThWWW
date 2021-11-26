@@ -3,7 +3,7 @@
 
 draw_set_font(font_info);
 
-if (global.debug)
+if (global.debug) and (room == room_gp)
 {
 	draw_text(0,40,"Objects:")
 	draw_text(92,40,instance_number(all));

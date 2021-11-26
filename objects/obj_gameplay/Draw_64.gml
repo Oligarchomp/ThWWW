@@ -119,7 +119,7 @@ draw_sprite(spr_arrow,0,global.game_x_offset - 3,global.game_y_offset + global.p
 draw_set_font(font_pause);
 if(pause_state >= 1)
 {
-	draw_sprite_pos(spr_black,0,0,0,960,0,960,540,0,540,pause_alpha / 2);
+	draw_sprite_pos(spr_black,0,0,0,960,0,960,540,0,540,pause_alpha / 1.7);
 	
 	for(var i = 0; i < array_length(pause); i += 1)
 	{

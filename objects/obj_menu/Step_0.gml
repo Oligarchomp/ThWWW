@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if(step % 30 == 0)
+{
+	instance_create_depth(80 - 100 + rng(200,false,6),440 - rng(60,false,3),depth + 1,obj_bubble_main);
+}
+
 if(cursor_lockout == 0)
 {
 	switch(level)
@@ -21,15 +26,20 @@ if(cursor_lockout == 0)
 
 	if(abs(global.down_pressed - global.up_pressed))
 	{
-		play_sound(sfx_menu_move,1,false);
 	
+		var pos_then = cursor[level];
+		
 		//moving cursor
 		var lenght = array_length(array_check);
 		
 		cursor[level] += global.down_pressed - global.up_pressed;
 		cursor[level] %= lenght;
 		cursor[level] += cursor[level] < 0 ? lenght : 0;
-	
+		
+		if(pos_then != cursor[level])
+		{
+			play_sound(sfx_menu_move,1,false);
+		}
 	
 		switch(level)
 		{
@@ -37,11 +47,12 @@ if(cursor_lockout == 0)
 				switch(cursor[0])//difficulty
 				{
 					case 0:
-					case 1:
 					case 2:
 						global.difficulty += global.down_pressed - global.up_pressed;
 						global.difficulty %= 4;
 						global.difficulty += global.difficulty < 0 ? 4 : 0;
+						
+						play_sound(sfx_menu_move,1,false);
 					break;
 				}
 			break;
@@ -134,5 +145,5 @@ else
 }
 
 
-
+step += 1;
 

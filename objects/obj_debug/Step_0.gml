@@ -11,10 +11,12 @@ if (global.debug)
 		room_speed = 60;
 	}
 	
-	
-	if(global.time % 60 == 0)
+	if(room = room_gp)
 	{
-		global.dps_draw = global.dps;
-		global.dps = 0;
+		if(global.time % 60 == 0)
+		{
+			global.dps_draw = global.dps;
+			global.dps = 0;
+		}
 	}
 }
