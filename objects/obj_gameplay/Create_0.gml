@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-depth = 100;
+depth = 0;
 
 global.game_x_offset =  156;
 global.game_y_offset =  20;
@@ -61,11 +61,6 @@ ds_list_add(item_extend,250,600,1000,1500,2200,9999);
 instance_create_depth(room_width / 2,430,global.player_depth,obj_player);
 
 
-if(!instance_exists(obj_bgm))
-{
-	instance_create_depth(0,0,0,obj_bgm);
-}
-
 event_step = 0; // current event step
 last_event_step = -1;
 event_time = 0; //since how long the current event as been going on
@@ -73,6 +68,73 @@ wait_time = 0;
 
 
 
+add_stage(1);
+add_stage(2)
 
 
+pause_type = PAUSE_MANUAL;
+pause_state = 0;
+//0 = not paused
+//1 = paused
+//2 = leaving pause
 
+text_offset_max = -45;
+text_offset = text_offset_max;
+pause_alpha = 0;
+
+pause_spd = 18;
+
+menu_offset = 16;
+
+cursor_lockout = 0;
+cursor = [0,0];
+level = 0;
+
+pause = 
+[
+	{
+		title : get_text("pause_resume"),
+		active_offset : 0,
+		action : MENU_BACK
+	},
+	{
+		title : get_text("pause_title"),
+		active_offset : 0,
+		action : MENU_MENU,
+		param :
+		[
+			{
+				title : get_text("pause_yes"),
+				active_offset : 0,
+				action : MENU_TITLE
+			},
+			{
+				title : get_text("pause_no"),
+				active_offset : menu_offset,
+				action : MENU_BACK
+			}
+		]
+	},
+	{
+		title : get_text("pause_replay_title"),
+		active_offset : 0,
+	},
+	{
+		title : get_text("pause_retry"),
+		active_offset : 0,
+		action : MENU_MENU,
+		param :
+		[
+			{
+				title : get_text("pause_yes"),
+				active_offset : 0,
+				action : MENU_RESTART
+			},
+			{
+				title : get_text("pause_no"),
+				active_offset : 0,
+				action : MENU_BACK
+			}
+		]
+	}	
+]

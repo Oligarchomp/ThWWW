@@ -38,3 +38,5 @@ obj_camera_3d.y = y_cam_ref;
 obj_camera_3d.depth = -800;
 
 step = 0;
+
+gpu_set_ztestenable(false);

@@ -79,12 +79,14 @@ if(cursor_lockout == 0)
 		{
 			case MENU_MENU:
 				level += 1;
-				cursor_lockout = array_check[cursor[level]].lockout;
+				cursor_lockout = 10;
 			break;
 			case MENU_START_GAME:
 				room_transition(room_gp);
 				add_fullgame();
 				cursor_lockout = 100000;
+				
+				play_sound(sfx_spawn_light,1,false);
 			break;
 			case MENU_START_STAGE:
 				room_transition(room_gp);
@@ -93,6 +95,8 @@ if(cursor_lockout == 0)
 				add_stage(param);
 				
 				cursor_lockout = 100000;
+				
+				play_sound(sfx_spawn_light,1,false);
 			break;
 			case MENU_QUIT:
 				game_end();
@@ -103,14 +107,25 @@ if(cursor_lockout == 0)
 
 	if(global.bomb_pressed)
 	{
-		var start_level = level;
-		level = goto_value(level,0,1);
-	
-		if(start_level != level)
+		if(level > 0)
 		{
-			play_sound(sfx_menu_back,1,false);
+			level -= 1;
 			cursor_lockout = 10;
 		}
+		else
+		{
+			if(cursor[0] != 7)
+			{
+				cursor[0] = 7;
+			}
+			else
+			{
+				game_end();	
+			}
+		}
+	
+		play_sound(sfx_menu_back,1,false);
+		
 	}
 }
 else

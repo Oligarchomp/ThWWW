@@ -3,6 +3,8 @@
 
 window_set_cursor(cr_none);
 
+instance_create_depth(0,0,0,obj_bgm);
+
 room_goto(room_main);
 //room_goto(room_gp);
 
@@ -30,6 +32,7 @@ global.difficulty = 3;
 // to know what will be played
 global.event_list = ds_list_create();
 global.wait_list = ds_list_create();
+
 
 
 
@@ -114,4 +117,13 @@ global.wait_list = ds_list_create();
 #macro MENU_MENU 0
 #macro MENU_START_GAME 1
 #macro MENU_START_STAGE 2
+#macro MENU_RESTART 3
+#macro MENU_TITLE 4
+#macro MENU_BACK 5
 #macro MENU_QUIT 9
+
+
+//define pause type
+#macro PAUSE_MANUAL 0
+#macro PAUSE_GAMEOVER 1
+#macro PAUSE_END 2

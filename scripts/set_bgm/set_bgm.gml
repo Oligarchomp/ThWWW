@@ -6,22 +6,25 @@ function set_bgm(argument0,argument1){
 	obj_bgm.bgm = argument0;
 	obj_bgm.bgm_intro = argument1;
 	
-	switch(argument0)
+	if(room = room_gp)
 	{
-		case mus_stage1:
-			var name = get_text("mus_stage1");
-		break;
-		case mus_boss1:
-			var name = get_text("mus_boss1");
-		break;
-		case mus_boss2:
-			var name = get_text("mus_boss2");
-		break;
-		default:
-			var name = "No music yet";
-		break;
-	}
+		switch(argument0)
+		{
+			case mus_stage1:
+				var name = get_text("mus_stage1");
+			break;
+			case mus_boss1:
+				var name = get_text("mus_boss1");
+			break;
+			case mus_boss2:
+				var name = get_text("mus_boss2");
+			break;
+			default:
+				var name = "No music yet";
+			break;
+		}
 	
-	var inst = instance_create_depth(0,0,0,obj_bgm_info);
-	inst.bgm_name = string_insert(name,"BGM : ",7);
+		var inst = instance_create_depth(0,0,0,obj_bgm_info);
+		inst.bgm_name = string_insert(name,"BGM : ",7);
+	}
 }

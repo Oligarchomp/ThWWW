@@ -38,3 +38,5 @@ obj_camera_3d.y = y_cam_ref;
 obj_camera_3d.depth = global.bg_depth - 400;
 
 obj_camera_3d.FOV = 60;
+
+gpu_set_ztestenable(false);

@@ -56,3 +56,75 @@ if(global.gp_active)
 	score_to_draw -= score_to_draw % 10;
 	
 }
+
+//PAUSE
+
+switch(level)
+{
+	case 0:
+		var array_check = pause;
+	break;
+	case 1:
+		var array_check = pause[cursor[0]].param;
+	break;
+}
+		
+		
+if(pause_state == 1) and (cursor_lockout == 0)
+{
+	if(abs(global.down_pressed - global.up_pressed))
+	{
+		
+		play_sound(sfx_menu_move,1,false);
+	
+		//moving cursor
+		var lenght = array_length(array_check);
+		
+		cursor[level] += global.down_pressed - global.up_pressed;
+		cursor[level] %= lenght;
+		cursor[level] += cursor[level] < 0 ? lenght : 0;
+	}
+
+
+	if(global.shot_pressed)
+	{
+		play_sound(sfx_menu_valid,1,false);
+	
+		var act = array_check[cursor[level]].action;
+	
+		switch(act)
+		{
+			case MENU_MENU:
+				level += 1;
+				cursor[level] = 1;
+				pause[cursor[0]].param[0].active_offset = 0; //:/
+				pause[cursor[0]].param[1].active_offset = menu_offset;
+			break;
+			case MENU_BACK:
+				level -= 1;
+			break;
+			case MENU_RESTART:
+				room_transition(room_reload);
+				cursor_lockout = 1000;
+			break;
+			case MENU_TITLE:
+				room_transition(room_main);
+				cursor_lockout = 1000;
+			break;
+		}
+	}
+	
+	if(global.bomb_pressed)
+	{
+		level -= 1;
+	
+		play_sound(sfx_menu_back,1,false);
+	}
+
+	if(level < 0)
+	{
+		level = 0;
+		pause_state = 2;
+	}
+}
+

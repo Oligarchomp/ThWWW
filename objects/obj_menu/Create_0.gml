@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+ds_list_clear(global.event_list);
+ds_list_clear(global.wait_list);
+
 cursor = [0,0,0,0];
 level = 0;
 
@@ -9,12 +12,10 @@ menu =
 	{
 		title : "START",
 		action : MENU_MENU,
-		lockout : 10,
 		param :
 		[
 			{//difficulty
 			action : MENU_MENU,
-			lockout : 10,
 			param :
 			[
 				{//player
@@ -27,12 +28,10 @@ menu =
 	{
 		title : "EXTRA START",
 		action : MENU_MENU,
-		lockout : 10,
 		param :
 		[
 			{//difficulty
 			action : MENU_MENU,
-			lockout : 10,
 			param :
 			[
 				{//player
@@ -46,17 +45,14 @@ menu =
 	{
 		title : "PRACTICE",
 		action : MENU_MENU,
-		lockout : 10,
 		param :
 		[
 			{//difficulty
 			action : MENU_MENU,
-			lockout : 10,
 			param :
 			[
 				{//player
 				action : MENU_MENU,
-				lockout : 10,
 				param : 
 				[
 					{
