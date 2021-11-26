@@ -9,26 +9,91 @@ menu =
 	{
 		title : "START",
 		action : MENU_MENU,
+		lockout : 10,
 		param :
 		[
-			{
-			title : "difficulty(dummy)",
+			{//difficulty
 			action : MENU_MENU,
+			lockout : 10,
 			param :
 			[
-				{
-				title : "player(dummy)",
-				action : MENU_START,
+				{//player
+				action : MENU_START_GAME,
 				}
 			]
 			}
 		]
 	},
 	{
-		title : "EXTRA START"
+		title : "EXTRA START",
+		action : MENU_MENU,
+		lockout : 10,
+		param :
+		[
+			{//difficulty
+			action : MENU_MENU,
+			lockout : 10,
+			param :
+			[
+				{//player
+				action : MENU_START_STAGE,
+				param : 7
+				}
+			]
+			}
+		]
 	},
 	{
-		title : "PRACTICE"
+		title : "PRACTICE",
+		action : MENU_MENU,
+		lockout : 10,
+		param :
+		[
+			{//difficulty
+			action : MENU_MENU,
+			lockout : 10,
+			param :
+			[
+				{//player
+				action : MENU_MENU,
+				lockout : 10,
+				param : 
+				[
+					{
+						title : "STAGE 1",
+						action : MENU_START_STAGE,
+						param : 1
+					},
+					{
+						title : "STAGE 2",
+						action : MENU_START_STAGE,
+						param : 2
+					},
+					{
+						title : "STAGE 3",
+						action : MENU_START_STAGE,
+						param : 3
+					},
+					{
+						title : "STAGE 4",
+						action : MENU_START_STAGE,
+						param : 4
+					},
+					{
+						title : "STAGE 5",
+						action : MENU_START_STAGE,
+						param : 5
+					},
+					{
+						title : "STAGE 6",
+						action : MENU_START_STAGE,
+						param : 6
+					}
+				]
+				}
+			]
+			}
+		]
 	},
 	{
 		title : "SPELL PRACTICE"
@@ -47,3 +112,6 @@ menu =
 		action : MENU_QUIT
 	}
 ]
+
+
+cursor_lockout = 0;

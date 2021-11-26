@@ -12,7 +12,7 @@ if(global.gp_active)
 		state_time += 1;
 	}
 	
-	if(instance_exists(bg_to_destroy)) or (transition)
+	if(obj_gameplay.event_step != 0) // if not the first transition
 	{
 		transition = true;
 		switch(state)
@@ -49,10 +49,17 @@ if(global.gp_active)
 	}
 	else
 	{
-		instance_create_depth(0,0,0,bg_to_create);
-		set_bgm(music,noone);
-		event_next()
-		instance_destroy();
+		switch(state_time)
+		{
+			case 0:
+				instance_create_depth(0,0,0,bg_to_create);
+			break;
+			case 120:
+				set_bgm(music,noone);
+				event_next()
+				instance_destroy();
+			break;
+		}
 	}
 	
 	

@@ -5,9 +5,9 @@
 if(global.gp_active)
 {
 	
-	var wait = wait_list[|event_step]
+	var wait = global.wait_list[|event_step]
 	
-	if (event_step < ds_list_size(event_list))
+	if (event_step < ds_list_size(global.event_list))
 	{
 		if (event_step != last_event_step)
 		{
@@ -28,7 +28,7 @@ if(global.gp_active)
 		
 		if (event_time == 0)
 		{
-			var ev = event_list[|event_step];
+			var ev = global.event_list[|event_step];
 			if(!instance_exists(ev))
 			{
 				instance_create_depth(0,0,0,ev);

@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Shooting",
-    "path": "folders/Scripts/Shooting.yy",
+    "name": "Event",
+    "path": "folders/Scripts/Event.yy",
   },
   "resourceVersion": "1.0",
-  "name": "create_shot_hitbox",
+  "name": "add_fullgame",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -15,9 +15,11 @@ switch(level)
 		switch(cursor[0])//difficulty
 		{
 			case 0:
-			case 1:
 			case 2:
 				draw_sprite(spr_difficulty,global.difficulty,600,200);
+			break;
+			case 1:
+				draw_sprite(spr_difficulty,4,600,200);
 			break;
 		}
 	break;
@@ -39,7 +41,19 @@ switch(level)
 						var art = spr_sanae_art;
 					break;
 				}
-				draw_sprite(art,0,600,300);
+				draw_sprite(art,0,600,200);
+			break;
+		}
+	break;
+	case 3:
+		switch(cursor[0])
+		{
+			case 2:
+				var check = menu[cursor[0]].param[cursor[1]].param[cursor[2]].param;
+				for(var i = 0; i < array_length(check); i += 1)
+				{
+					draw_text_color(620 + (cursor[level] == i) * 30,80 + i * 50,check[i].title,c_white,c_white,c_white,c_white,1);
+				}
 			break;
 		}
 	break;

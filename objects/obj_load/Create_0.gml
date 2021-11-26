@@ -15,6 +15,7 @@ global.player_shot_depth = 35;
 global.boss_depth = 40;
 global.spell_bg_depth = 50;
 
+global.gp_active = true;
 
 global.spell_file = "SpellData.ini"
 
@@ -25,6 +26,10 @@ global.difficulty = 3;
 // 2 = hard;
 // 3 = lunatic;
 
+
+// to know what will be played
+global.event_list = ds_list_create();
+global.wait_list = ds_list_create();
 
 
 
@@ -107,5 +112,6 @@ global.difficulty = 3;
 
 //define menu action
 #macro MENU_MENU 0
-#macro MENU_START 1
+#macro MENU_START_GAME 1
+#macro MENU_START_STAGE 2
 #macro MENU_QUIT 9
