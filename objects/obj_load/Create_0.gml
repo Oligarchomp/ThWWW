@@ -3,7 +3,8 @@
 
 window_set_cursor(cr_none);
 
-room_goto(room_gp);
+room_goto(room_main);
+//room_goto(room_gp);
 
 global.bg_depth = -170;
 global.player_hitbox_depth = 0;
@@ -103,3 +104,8 @@ global.difficulty = 3;
 //define spawn_type
 #macro SPAWN_ALPHA 0
 #macro SPAWN_SCALE 1
+
+//define menu action
+#macro MENU_MENU 0
+#macro MENU_START 1
+#macro MENU_QUIT 9

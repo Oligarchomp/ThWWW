@@ -154,6 +154,7 @@
     {"id":{"name":"obj_beam","path":"objects/obj_beam/obj_beam.yy",},"order":2,},
     {"id":{"name":"bg_s1","path":"objects/bg_s1/bg_s1.yy",},"order":0,},
     {"id":{"name":"shoot_arc","path":"scripts/shoot_arc/shoot_arc.yy",},"order":2,},
+    {"id":{"name":"spr_difficulty","path":"sprites/spr_difficulty/spr_difficulty.yy",},"order":7,},
     {"id":{"name":"font_spell_bg","path":"fonts/font_spell_bg/font_spell_bg.yy",},"order":1,},
     {"id":{"name":"play_sound","path":"scripts/play_sound/play_sound.yy",},"order":1,},
     {"id":{"name":"sfx_redirect2","path":"sounds/sfx_redirect2/sfx_redirect2.yy",},"order":3,},
@@ -196,6 +197,7 @@
     {"id":{"name":"spr_sanae_right","path":"sprites/spr_sanae_right/spr_sanae_right.yy",},"order":2,},
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},"order":1,},
     {"id":{"name":"spr_reverence_indicator","path":"sprites/spr_reverence_indicator/spr_reverence_indicator.yy",},"order":10,},
+    {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},"order":0,},
     {"id":{"name":"obj_spell_bg_text","path":"objects/obj_spell_bg_text/obj_spell_bg_text.yy",},"order":1,},
     {"id":{"name":"add_stage_event","path":"scripts/add_stage_event/add_stage_event.yy",},"order":0,},
     {"id":{"name":"boss_s6_4_spell","path":"objects/boss_s6_4_spell/boss_s6_4_spell.yy",},"order":11,},
@@ -374,6 +376,7 @@
     {"id":{"name":"boss_s6_3_non","path":"objects/boss_s6_3_non/boss_s6_3_non.yy",},"order":8,},
     {"id":{"name":"spr_roof_top","path":"sprites/spr_roof_top/spr_roof_top.yy",},"order":0,},
     {"id":{"name":"spr_endings","path":"sprites/spr_endings/spr_endings.yy",},"order":16,},
+    {"id":{"name":"room_main","path":"rooms/room_main/room_main.yy",},"order":4,},
     {"id":{"name":"spr_kunai","path":"sprites/spr_kunai/spr_kunai.yy",},"order":10,},
     {"id":{"name":"act_s7_7","path":"objects/act_s7_7/act_s7_7.yy",},"order":32,},
     {"id":{"name":"spr_base_marisa","path":"sprites/spr_base_marisa/spr_base_marisa.yy",},"order":0,},
@@ -587,6 +590,7 @@
     {"roomId":{"name":"room_gp","path":"rooms/room_gp/room_gp.yy",},},
     {"roomId":{"name":"room_reload","path":"rooms/room_reload/room_reload.yy",},},
     {"roomId":{"name":"room_end","path":"rooms/room_end/room_end.yy",},},
+    {"roomId":{"name":"room_main","path":"rooms/room_main/room_main.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":13,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
@@ -708,6 +712,7 @@
     {"folderPath":"folders/Sprites/Background/Spell/Reverence.yy","order":9,"resourceVersion":"1.0","name":"Reverence","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/BACKGROUND/S7.yy","order":12,"resourceVersion":"1.0","name":"S7","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Background/S7.yy","order":12,"resourceVersion":"1.0","name":"S7","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/MAIN MENU.yy","order":14,"resourceVersion":"1.0","name":"MAIN MENU","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
@@ -721,7 +726,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.6.595",
+    "IDEVersion": "2.3.7.603",
   },
   "resourceVersion": "1.4",
   "name": "thworld",
