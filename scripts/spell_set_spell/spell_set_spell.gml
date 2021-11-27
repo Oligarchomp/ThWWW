@@ -16,8 +16,8 @@ function spell_set_spell(argument0,argument1,argument2){
 	user_id = argument1;
 	
 	
-	var cap = get_difficulty_key(0);
-	var attempt = get_difficulty_key(1);
+	var cap = get_difficulty_key(0,global.difficulty);
+	var attempt = get_difficulty_key(1,global.difficulty);
 
 	cap_history = data_read(global.spell_file,data_name,cap);
 	try_history = data_read(global.spell_file,data_name,attempt);

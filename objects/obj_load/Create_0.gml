@@ -20,6 +20,7 @@ global.spell_bg_depth = 50;
 global.gp_active = true;
 
 global.spell_file = "SpellData.ini"
+//SpellDataPractice.ini
 
 global.player_chosen = P_REIMU;
 global.difficulty = 3;

@@ -81,14 +81,18 @@ switch(level)
 					
 					check[i].active_offset = goto_value(check[i].active_offset, is_active * 10,3);
 					
-					draw_text_color(490 + check[i].active_offset,60 + (i - i_start) * 20,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
+					draw_text_color(220 + check[i].active_offset,60 + (i - i_start) * 20,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
+					
+					//attempts
+					var str = "Game: " + string(min(999,add_zero(check[i].cap_game,3))) + " / " + string(min(999,add_zero(check[i].try_game,3))) + "  Prac.:" + string(min(999,add_zero(check[i].cap_prac,3))) + " / " + string(min(999,add_zero(check[i].try_prac,3)))
+					draw_text_color(680 + check[i].active_offset,60 + (i - i_start) * 20,str,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
 				}
 				
 				if(array_length(check) > max_spell)
 				{
 					var y_sc = i_start == max_spell ? -1 : 1;
 					
-					draw_sprite_ext(spr_morespell,0,680,260 + y_sc * 220,1,y_sc,0,c_white,1);	
+					draw_sprite_ext(spr_morespell,0,580,260 + y_sc * 220,1,y_sc,0,c_white,1);	
 				}
 			break;
 		}

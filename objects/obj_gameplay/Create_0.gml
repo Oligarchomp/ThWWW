@@ -2,6 +2,18 @@
 // You can write your code in this editor
 depth = 50;
 
+
+switch(global.game_type)
+{
+	case GAME_FULL:
+		global.spell_file = "SpellData.ini"
+	break;
+	default:
+		global.spell_file = "SpellDataPractice.ini"
+	break;
+}
+
+
 global.game_x_offset =  156;
 global.game_y_offset =  20;
 

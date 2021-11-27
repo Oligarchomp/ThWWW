@@ -108,85 +108,73 @@ menu =
 				[
 					{
 						title : get_text("spell_s1_mida"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s1_mid",
 						param : act_s1_6_midspell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s1_mida"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s1_mid",
 						param : act_s1_6_midspell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s1_midb"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s1_mid",
 						param : act_s1_6_midspell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s1_midb"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s1_mid",
 						param : act_s1_6_midspell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s1_1a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s1_1",
 						param : boss_s1_2_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s1_1a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s1_1",
 						param : boss_s1_2_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s1_1b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s1_1",
 						param : boss_s1_2_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s1_1c"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s1_1",
 						param : boss_s1_2_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s1_2a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s1_2",
 						param : boss_s1_4_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s1_2a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s1_2",
 						param : boss_s1_4_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s1_2b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s1_2",
 						param : boss_s1_4_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s1_2b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s1_2",
 						param : boss_s1_4_spell,
 						diff : 3
 					}
@@ -200,113 +188,97 @@ menu =
 				[
 					{
 						title : get_text("spell_s2_mida"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s2_mid",
 						param : act_s2_6_midspell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s2_mida"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s2_mid",
 						param : act_s2_6_midspell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s2_midb"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s2_mid",
 						param : act_s2_6_midspell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s2_midb"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s2_mid",
 						param : act_s2_6_midspell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s2_1a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s2_1",
 						param : boss_s2_2_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s2_1a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s2_1",
 						param : boss_s2_2_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s2_1b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s2_1",
 						param : boss_s2_2_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s2_1b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s2_1",
 						param : boss_s2_2_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s2_2a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s2_2",
 						param : boss_s2_4_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s2_2a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s2_2",
 						param : boss_s2_4_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s2_2b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s2_2",
 						param : boss_s2_4_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s2_2b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s2_2",
 						param : boss_s2_4_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s2_3a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s2_3",
 						param : boss_s2_5_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s2_3a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s2_3",
 						param : boss_s2_5_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s2_3a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s2_3",
 						param : boss_s2_5_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s2_3b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s2_3",
 						param : boss_s2_5_spell,
 						diff : 3
 					}
@@ -320,113 +292,97 @@ menu =
 				[
 					{
 						title : get_text("spell_s3_mida"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s3_mid",
 						param : act_s3_7_midspell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s3_mida"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s3_mid",
 						param : act_s3_7_midspell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s3_midb"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s3_mid",
 						param : act_s3_7_midspell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s3_midb"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s3_mid",
 						param : act_s3_7_midspell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s3_1a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s3_1",
 						param : boss_s3_2_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s3_1a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s3_1",
 						param : boss_s3_2_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s3_1b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s3_1",
 						param : boss_s3_2_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s3_1b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s3_1",
 						param : boss_s3_2_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s3_2a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s3_2",
 						param : boss_s3_4_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s3_2a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s3_2",
 						param : boss_s3_4_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s3_2b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s3_2",
 						param : boss_s3_4_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s3_2c"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s3_2",
 						param : boss_s3_4_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s3_3a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s3_3",
 						param : boss_s3_6_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s3_3a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s3_3",
 						param : boss_s3_6_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s3_3b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s3_3",
 						param : boss_s3_6_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s3_3b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s3_3",
 						param : boss_s3_6_spell,
 						diff : 3
 					},
@@ -440,197 +396,169 @@ menu =
 				[
 					{
 						title : get_text("spell_s4_mida"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_mid",
 						param : act_s4_5_midspell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s4_mida"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_mid",
 						param : act_s4_5_midspell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s4_midb"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_mid",
 						param : act_s4_5_midspell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s4_midb"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_mid",
 						param : act_s4_5_midspell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s4_1a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_1",
 						param : boss_s4_2_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s4_1a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_1",
 						param : boss_s4_2_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s4_1b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_1",
 						param : boss_s4_2_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s4_1b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_1",
 						param : boss_s4_2_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s4_2a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_2",
 						param : boss_s4_4_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s4_2a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_2",
 						param : boss_s4_4_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s4_2b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_2",
 						param : boss_s4_4_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s4_2c"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_2",
 						param : boss_s4_4_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s4_3a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_3",
 						param : boss_s4_6_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s4_3a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_3",
 						param : boss_s4_6_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s4_3b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_3",
 						param : boss_s4_6_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s4_3b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_3",
 						param : boss_s4_6_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s4_4r"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_4r",
 						param : boss_s4_7r_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s4_4r"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_4r",
 						param : boss_s4_7r_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s4_4r"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_4r",
 						param : boss_s4_7r_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s4_4r"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_4r",
 						param : boss_s4_7r_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s4_4m"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_4m",
 						param : boss_s4_7m_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s4_4m"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_4m",
 						param : boss_s4_7m_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s4_4m"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_4m",
 						param : boss_s4_7m_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s4_4m"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_4m",
 						param : boss_s4_7m_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s4_4s"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_4s",
 						param : boss_s4_7s_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s4_4s"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_4s",
 						param : boss_s4_7s_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s4_4s"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_4s",
 						param : boss_s4_7s_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s4_4s"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s4_4s",
 						param : boss_s4_7s_spell,
 						diff : 3
 					},
@@ -644,113 +572,97 @@ menu =
 				[
 					{
 						title : get_text("spell_s5_1a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s5_1",
 						param : boss_s5_2_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s5_1a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s5_1",
 						param : boss_s5_2_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s5_1b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s5_1",
 						param : boss_s5_2_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s5_1c"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s5_1",
 						param : boss_s5_2_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s5_2a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s5_2",
 						param : boss_s5_4_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s5_2a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s5_2",
 						param : boss_s5_4_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s5_2b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s5_2",
 						param : boss_s5_4_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s5_2c"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s5_2",
 						param : boss_s5_4_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s5_3a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s5_3",
 						param : boss_s5_6_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s5_3a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s5_3",
 						param : boss_s5_6_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s5_3b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s5_3",
 						param : boss_s5_6_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s5_3b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s5_3",
 						param : boss_s5_6_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s5_4a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s5_4",
 						param : boss_s5_7_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s5_4a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s5_4",
 						param : boss_s5_7_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s5_4b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s5_4",
 						param : boss_s5_7_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s5_4b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s5_4",
 						param : boss_s5_7_spell,
 						diff : 3
 					},
@@ -764,169 +676,145 @@ menu =
 				[
 					{
 						title : get_text("spell_s6_mid"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_mid",
 						param : act_s6_5_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s6_mid"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_mid",
 						param : act_s6_5_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s6_mid"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_mid",
 						param : act_s6_5_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s6_mid"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_mid",
 						param : act_s6_5_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s6_1a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_1",
 						param : boss_s6_2_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s6_1a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_1",
 						param : boss_s6_2_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s6_1b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_1",
 						param : boss_s6_2_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s6_1b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_1",
 						param : boss_s6_2_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s6_2a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_2",
 						param : boss_s6_4_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s6_2a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_2",
 						param : boss_s6_4_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s6_2b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_2",
 						param : boss_s6_4_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s6_2c"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_2",
 						param : boss_s6_4_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s6_3a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_3",
 						param : boss_s6_6_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s6_3a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_3",
 						param : boss_s6_6_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s6_3b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_3",
 						param : boss_s6_6_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s6_3c"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_3",
 						param : boss_s6_6_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s6_4a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_4",
 						param : boss_s6_8_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s6_4a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_4",
 						param : boss_s6_8_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s6_4b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_4",
 						param : boss_s6_8_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s6_4b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_4",
 						param : boss_s6_8_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s6_5a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_5",
 						param : boss_s6_9_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s6_5a"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_5",
 						param : boss_s6_9_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s6_5b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_5",
 						param : boss_s6_9_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s6_5b"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s6_5",
 						param : boss_s6_9_spell,
 						diff : 3
 					},
@@ -940,92 +828,79 @@ menu =
 				[
 					{
 						title : get_text("spell_s7_mid1"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s7_mid1",
 						param : act_s7_51_midspell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s7_mid2"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s7_mid2",
 						param : act_s7_52_midspell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s7_mid3"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s7_mid3",
 						param : act_s7_53_midspell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s7_1"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s7_1",
 						param : boss_s7_15_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s7_2"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s7_2",
 						param : boss_s7_25_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s7_3"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s7_3",
 						param : boss_s7_35_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s7_4"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s7_4",
 						param : boss_s7_45_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s7_5"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s7_5",
 						param : boss_s7_55_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s7_6"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s7_6",
 						param : boss_s7_65_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s7_7"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s7_7",
 						param : boss_s7_75_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s7_8"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s7_8",
 						param : boss_s7_85_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s7_9"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s7_9",
 						param : boss_s7_9_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s7_10"),
-						active_offset : 0,
-						action : MENU_SPELL,
+						data_name : "s7_10",
 						param : boss_s7_95_spell,
 						diff : 1
 					},
@@ -1134,8 +1009,18 @@ player =
 		x_to : 700
 	}
 ]
-
-
+for(var i = 0; i < array_length(menu[3].param); i += 1)//stage 
+{
+	for(var j = 0; j < array_length(menu[3].param[i].param); j += 1)//spell
+	{
+		variable_struct_set(menu[3].param[i].param[j],"action",MENU_SPELL);
+		variable_struct_set(menu[3].param[i].param[j],"active_offset",0);
+		variable_struct_set(menu[3].param[i].param[j],"cap_game",data_read("SpellData.ini",menu[3].param[i].param[j].data_name,get_difficulty_key(0,menu[3].param[i].param[j].diff)));
+		variable_struct_set(menu[3].param[i].param[j],"try_game",data_read("SpellData.ini",menu[3].param[i].param[j].data_name,get_difficulty_key(1,menu[3].param[i].param[j].diff)));
+		variable_struct_set(menu[3].param[i].param[j],"cap_prac",data_read("SpellDataPractice.ini",menu[3].param[i].param[j].data_name,get_difficulty_key(0,menu[3].param[i].param[j].diff)));
+		variable_struct_set(menu[3].param[i].param[j],"try_prac",data_read("SpellDataPractice.ini",menu[3].param[i].param[j].data_name,get_difficulty_key(1,menu[3].param[i].param[j].diff)));
+	}
+}
 
 //create bubble
 

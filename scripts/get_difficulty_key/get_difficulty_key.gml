@@ -1,9 +1,10 @@
-/// @function get_difficulty_key(need_type)
+/// @function get_difficulty_key(need_type,difficulty)
 ///@param need_type 
+///@param difficulty real
 // 0 = capture
 // 1 = attempt
-function get_difficulty_key(argument0){
-	switch(global.difficulty)
+function get_difficulty_key(argument0,diff){
+	switch(diff)
 	{
 		case 0:
 			var cap = "ecap";
