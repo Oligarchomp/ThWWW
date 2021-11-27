@@ -933,59 +933,19 @@ over_offset = 26;
 
 
 
-difficuly =
-[
-	{
-		x_is : 0,
-		x_to : 0,
-		y_is : 0,
-		y_to : 0,
-		scale : 1,
-		scale_to : 1,
-		alpha : 1,
-		alpha_to : 1 
-	},
-	{
-		x_is : 0,
-		x_to : 0,
-		y_is : 0,
-		y_to : 0,
-		scale : 1,
-		scale_to : 1,
-		alpha : 1,
-		alpha_to : 1 
-	},
-	{
-		x_is : 0,
-		x_to : 0,
-		y_is : 0,
-		y_to : 0,
-		scale : 1,
-		scale_to : 1,
-		alpha : 1,
-		alpha_to : 1 
-	},
-	{
-		x_is : 0,
-		x_to : 0,
-		y_is : 0,
-		y_to : 0,
-		scale : 1,
-		scale_to : 1,
-		alpha : 1,
-		alpha_to : 1 
-	},
-	{
-		x_is : 0,
-		x_to : 0,
-		y_is : 0,
-		y_to : 0,
-		scale : 1,
-		scale_to : 1,
-		alpha : 1,
-		alpha_to : 1 
-	}
-]
+difficuly = [{},{},{},{},{}]
+
+for(var i = 0; i < 5; i += 1)
+{
+	variable_struct_set(difficuly[i],"x_is",0);
+	variable_struct_set(difficuly[i],"x_to",0);
+	variable_struct_set(difficuly[i],"y_is",0);
+	variable_struct_set(difficuly[i],"y_to",0);
+	variable_struct_set(difficuly[i],"scale",0);
+	variable_struct_set(difficuly[i],"scale_to",0);
+	variable_struct_set(difficuly[i],"alpha",0);
+	variable_struct_set(difficuly[i],"alpha_to",0);
+}
 
 
 player =
@@ -1009,6 +969,8 @@ player =
 		x_to : 700
 	}
 ]
+
+//settings things for spell practice
 for(var i = 0; i < array_length(menu[3].param); i += 1)//stage 
 {
 	for(var j = 0; j < array_length(menu[3].param[i].param); j += 1)//spell

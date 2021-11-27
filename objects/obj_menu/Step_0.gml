@@ -68,7 +68,6 @@ if(cursor_lockout == 0)
 				case 0:
 				case 1:
 				case 2:
-					var old_player = global.player_chosen;
 				
 					global.player_chosen += global.right_pressed - global.left_pressed;
 					global.player_chosen %= 3;

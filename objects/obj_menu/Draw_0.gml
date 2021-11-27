@@ -81,13 +81,33 @@ switch(level)
 					
 					check[i].active_offset = goto_value(check[i].active_offset, is_active * 10,3);
 					
-					draw_text_color(220 + check[i].active_offset,60 + (i - i_start) * 20,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
+					draw_text_color(210 + check[i].active_offset,60 + (i - i_start) * 20,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
 					
 					//attempts
+					switch(check[i].diff)
+					{
+						case 0:
+							var diff_letter = "E";
+						break;
+						case 1:
+							var diff_letter = cursor[1] != 6 ? "N" : "Ex";
+						break;
+						case 2:
+							var diff_letter = "H";
+						break;
+						case 3:
+							var diff_letter = "L";
+						break;
+					}
+					
+					draw_text_color(660 + check[i].active_offset,60 + (i - i_start) * 20,diff_letter,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
+					
+					//ignore this error
 					var str = "Game: " + string(min(999,add_zero(check[i].cap_game,3))) + " / " + string(min(999,add_zero(check[i].try_game,3))) + "  Prac.:" + string(min(999,add_zero(check[i].cap_prac,3))) + " / " + string(min(999,add_zero(check[i].try_prac,3)))
 					draw_text_color(680 + check[i].active_offset,60 + (i - i_start) * 20,str,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
 				}
 				
+				//little arrow when 2 pages
 				if(array_length(check) > max_spell)
 				{
 					var y_sc = i_start == max_spell ? -1 : 1;

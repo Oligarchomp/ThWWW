@@ -8,7 +8,7 @@ if (global.pause_pressed)
 		pause_state = 1;
 		play_sound(sfx_pause,1,false);
 	}
-	else if(pause_alpha == 1)
+	else if(pause_alpha == 1) and (pause_type == PAUSE_MANUAL)
 	{
 		pause_state = 2;
 		level = 0;

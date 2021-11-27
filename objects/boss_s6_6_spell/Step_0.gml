@@ -11,11 +11,11 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var grape_col = 3;
 			
-			var mentos_nbr = 5;
+			var mentos_nbr = 3;
 			var mentos_spd = 1.6;
 			var mentos_accel = 0.01;
 			
-			var misha_nbr = 20;
+			var misha_nbr = 16;
 			var misha_spd = 2;
 			
 			var bubble_row = 1;
@@ -36,7 +36,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var grape_col = 3;
 			
-			var mentos_nbr = 5;
+			var mentos_nbr = 4;
 			var mentos_spd = 1.6;
 			var mentos_accel = 0.01;
 			
@@ -47,7 +47,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var bubble_spd_min = 3;
 			var bubble_spd_max = 4.2;
 			
-			var catch_nbr = 8;
+			var catch_nbr = 7;
 			var catch_spd_shot = 5;
 			var catch_angle_plus = 4;
 			
@@ -61,7 +61,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var grape_col = 3;
 			
-			var mentos_nbr = 5;
+			var mentos_nbr = 3;
 			var mentos_spd = 1.6;
 			var mentos_accel = 0.01;
 			
@@ -72,7 +72,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var bubble_spd_min = 2.5;
 			var bubble_spd_max = 4.5;
 			
-			var catch_nbr = 9;
+			var catch_nbr = 8;
 			var catch_spd_shot = 5;
 			var catch_angle_plus = 4;
 			
@@ -265,7 +265,7 @@ if(global.gp_active) and (spell_wait == 0)
 				case 50:
 					shoot_ring(DAN_BUBBLE,1,catch_nbr,obj_boss.x,obj_boss.y,-90 + 180 / catch_nbr,catch_spd_shot,sfx_shot1,6);
 				break;
-				case 230:
+				case 260:
 					state = 3;
 				break;
 			}
