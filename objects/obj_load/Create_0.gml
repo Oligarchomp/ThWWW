@@ -128,3 +128,12 @@ global.wait_list = ds_list_create();
 #macro PAUSE_MANUAL 0
 #macro PAUSE_GAMEOVER 1
 #macro PAUSE_END 2
+
+//define game type
+
+#macro GAME_FULL 0
+#macro GAME_STAGE 1
+#macro GAME_EXTRA 2
+#macro GAME_SPELL 3
+
+global.game_type = GAME_FULL

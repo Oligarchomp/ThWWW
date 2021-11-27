@@ -20,7 +20,7 @@ if(global.gp_active)
 			{
 				instance_create_depth(0,0,0,bg_to_create);
 				
-				if(ds_list_size(global.event_list) == 2) // if spell practice
+				if(global.game_type == GAME_SPELL) // if spell practice
 				{
 					state = 2;	
 				}

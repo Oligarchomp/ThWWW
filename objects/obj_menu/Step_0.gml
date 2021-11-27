@@ -93,12 +93,15 @@ if(cursor_lockout == 0)
 		{
 			case MENU_MENU:
 				level += 1;
+				cursor[level] = 0;
 				cursor_lockout = 10;
 			break;
 			case MENU_START_GAME:
 				room_transition(room_gp);
 				add_fullgame();
 				cursor_lockout = 100000;
+				
+				global.game_type = GAME_FULL;
 				
 				play_sound(sfx_spawn_light,1,false);
 			break;
@@ -109,7 +112,12 @@ if(cursor_lockout == 0)
 				
 				if(param == 7)
 				{
-					global.difficulty = 1;	
+					global.difficulty = 1;
+					global.game_type = GAME_EXTRA;
+				}
+				else
+				{
+					global.game_type = GAME_STAGE;	
 				}
 				
 				add_stage(param);
@@ -120,6 +128,8 @@ if(cursor_lockout == 0)
 			break;
 			case MENU_SPELL:
 				room_transition(room_gp);
+				
+				global.game_type = GAME_SPELL;
 				
 				var param = array_check[cursor[level]].param;
 				

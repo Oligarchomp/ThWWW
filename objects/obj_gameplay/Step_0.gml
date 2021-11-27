@@ -130,9 +130,12 @@ if(pause_state == 1) and (cursor_lockout == 0)
 	
 	if(global.bomb_pressed)
 	{
-		level -= 1;
+		if(pause_type == PAUSE_MANUAL)
+		{
+			level -= 1;
 	
-		play_sound(sfx_menu_back,1,false);
+			play_sound(sfx_menu_back,1,false);
+		}
 	}
 
 	if(level < 0)

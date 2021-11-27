@@ -21,7 +21,7 @@ switch(global.player_chosen)
 	break;
 }
 spell_set_life(life,100);
-spell_set_time(16,false,95);
+spell_set_time(18,false,95);
 
 item_nbr = 0;
 
