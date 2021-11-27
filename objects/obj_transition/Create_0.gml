@@ -7,7 +7,7 @@ state_time = 0;
 
 scale_max = 1.1;
 scale = scale_max;
-spd = 0.04;
+spd = 0.05;
 
 room_to = noone;
 

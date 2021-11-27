@@ -122,9 +122,66 @@ cursor_lockout = 0;
 over_offset = 26;
 
 
+difficuly =
+[
+	{
+		x_is : 0,
+		x_to : 0,
+		y_is : 0,
+		y_to : 0,
+		scale : 1,
+		scale_to : 1,
+		alpha : 1,
+		alpha_to : 1 
+	},
+	{
+		x_is : 0,
+		x_to : 0,
+		y_is : 0,
+		y_to : 0,
+		scale : 1,
+		scale_to : 1,
+		alpha : 1,
+		alpha_to : 1 
+	},
+	{
+		x_is : 0,
+		x_to : 0,
+		y_is : 0,
+		y_to : 0,
+		scale : 1,
+		scale_to : 1,
+		alpha : 1,
+		alpha_to : 1 
+	},
+	{
+		x_is : 0,
+		x_to : 0,
+		y_is : 0,
+		y_to : 0,
+		scale : 1,
+		scale_to : 1,
+		alpha : 1,
+		alpha_to : 1 
+	},
+	{
+		x_is : 0,
+		x_to : 0,
+		y_is : 0,
+		y_to : 0,
+		scale : 1,
+		scale_to : 1,
+		alpha : 1,
+		alpha_to : 1 
+	}
+]
+
+
+
+
 //create bubble
 
-for(var y_bubble = 300; y_bubble > 0; y_bubble -= 30)
+for(var y_bubble = 300; y_bubble > 0; y_bubble -= 50)
 {
 	instance_create_depth(80 - 100 + rng(200,false,6),y_bubble - rng(60,false,3),depth + 1,obj_bubble_main);
 }

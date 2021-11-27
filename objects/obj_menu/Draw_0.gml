@@ -21,10 +21,13 @@ switch(level)
 		{
 			case 0:
 			case 2:
-				draw_sprite(spr_difficulty,global.difficulty,600,200);
+				for(var i = 0; i < 4; i += 1)
+				{
+					draw_sprite_ext(spr_difficulty,i,difficuly[i].x_is,difficuly[i].y_is,difficuly[i].scale,difficuly[i].scale,0,c_white,difficuly[i].alpha);
+				}
 			break;
 			case 1:
-				draw_sprite(spr_difficulty,4,600,200);
+				draw_sprite(spr_difficulty,4,difficuly[4].x_is,difficuly[4].y_is);
 			break;
 		}
 	break;
@@ -46,12 +49,16 @@ switch(level)
 						var art = spr_sanae_art;
 					break;
 				}
-				draw_sprite(art,0,600,200);
+				draw_sprite(art,0,700,260);
+				
+				var dif = cursor[0] != 1 ? global.difficulty : 4;
+			
+				draw_sprite_ext(spr_difficulty,dif,difficuly[dif].x_is,difficuly[dif].y_is,difficuly[dif].scale,difficuly[dif].scale,0,c_white,difficuly[dif].alpha);
 			break;
 		}
 	break;
 	case 3:
-		switch(cursor[0])
+		switch(cursor[0])//stage select
 		{
 			case 2:
 				var check = menu[cursor[0]].param[cursor[1]].param[cursor[2]].param;

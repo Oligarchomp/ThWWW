@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-depth = 0;
+depth = 50;
 
 global.game_x_offset =  156;
 global.game_y_offset =  20;
@@ -55,8 +55,6 @@ switch(global.difficulty)
 global.piv_max = 5000000;
 global.stage = 1;
 
-item_extend = ds_list_create();
-ds_list_add(item_extend,250,600,1000,1500,2200,9999);
 
 instance_create_depth(room_width / 2,430,global.player_depth,obj_player);
 
@@ -67,9 +65,16 @@ event_time = 0; //since how long the current event as been going on
 wait_time = 0;
 
 
+item_extend = ds_list_create();
+if(get_current_event() != act_s7_0)
+{
+	ds_list_add(item_extend,250,600,1000,1500,2200,9999);
+}
+else
+{
+	ds_list_add(item_extend,600,1400,9999);
+}
 
-add_stage(1);
-add_stage(2)
 
 
 pause_type = PAUSE_MANUAL;

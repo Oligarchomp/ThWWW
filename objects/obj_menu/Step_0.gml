@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if(step % 30 == 0)
+if(step % 50 == 0)
 {
 	instance_create_depth(80 - 100 + rng(200,false,6),440 - rng(60,false,3),depth + 1,obj_bubble_main);
 }
@@ -143,6 +143,47 @@ else
 {
 	cursor_lockout -= 1;
 }
+
+
+//difficulty position
+
+for(var i = 0; i < 5; i += 1)
+{
+	if(level < 2)
+	{
+		if(i < 4)
+		{
+			difficuly[i].x_to = 650 - abs(global.difficulty - i) * 30;
+			difficuly[i].y_to = 250 - (global.difficulty - i) * 280;
+	
+			difficuly[i].alpha_to = 1 - abs(global.difficulty - i) * 0.2;
+			difficuly[i].scale_to = 1 - abs(global.difficulty - i) * 0.2;
+		}
+		else
+		{
+			difficuly[i].x_to = 650;
+			difficuly[i].y_to = 260;
+	
+			difficuly[i].alpha_to = 1;
+			difficuly[i].scale_to = 1;
+		}
+	}
+	else
+	{
+		if(global.difficulty == i) or (i == 4)
+		{
+			difficuly[i].x_to = 200;
+			difficuly[i].y_to = 200;
+		}
+	}
+	
+	difficuly[i].y_is += recursiv(difficuly[i].y_is,difficuly[i].y_to,5,0.1);
+	difficuly[i].x_is += recursiv(difficuly[i].x_is,difficuly[i].x_to,5,0.1);
+	difficuly[i].scale += recursiv(difficuly[i].scale,difficuly[i].scale_to,5,0.1);
+	difficuly[i].alpha += recursiv(difficuly[i].alpha,difficuly[i].alpha_to,5,0.1);
+}
+
+
 
 
 step += 1;
