@@ -537,6 +537,7 @@
     {"id":{"name":"boss_s7_85_spell","path":"objects/boss_s7_85_spell/boss_s7_85_spell.yy",},"order":23,},
     {"id":{"name":"obj_spell_bg_reverence","path":"objects/obj_spell_bg_reverence/obj_spell_bg_reverence.yy",},"order":8,},
     {"id":{"name":"mus_boss2","path":"sounds/mus_boss2/mus_boss2.yy",},"order":3,},
+    {"id":{"name":"font_spellpractice","path":"fonts/font_spellpractice/font_spellpractice.yy",},"order":8,},
     {"id":{"name":"dialogue_s3_pre","path":"objects/dialogue_s3_pre/dialogue_s3_pre.yy",},"order":1,},
     {"id":{"name":"sfx_boss_charge","path":"sounds/sfx_boss_charge/sfx_boss_charge.yy",},"order":0,},
     {"id":{"name":"boss_s7_6_non","path":"objects/boss_s7_6_non/boss_s7_6_non.yy",},"order":19,},

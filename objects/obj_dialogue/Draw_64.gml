@@ -3,7 +3,7 @@
 
 //draw white outline player
 
-var alpha_pow = 3.5;
+var alpha_pow = 8;
 
 var xx = x_plr - sprite_get_xoffset(plr_spr);
 var yy = y_plr - sprite_get_yoffset(plr_spr);

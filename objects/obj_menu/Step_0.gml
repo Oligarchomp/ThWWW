@@ -68,11 +68,14 @@ if(cursor_lockout == 0)
 				case 0:
 				case 1:
 				case 2:
+					var old_player = global.player_chosen;
+				
 					global.player_chosen += global.right_pressed - global.left_pressed;
 					global.player_chosen %= 3;
 					global.player_chosen += global.player_chosen < 0 ? 3 : 0;
 				
 					play_sound(sfx_menu_move,1,false);
+					
 				break;
 			}
 		}
@@ -103,11 +106,27 @@ if(cursor_lockout == 0)
 				room_transition(room_gp);
 
 				var param = array_check[cursor[level]].param;
+				
+				if(param == 7)
+				{
+					global.difficulty = 1;	
+				}
+				
 				add_stage(param);
 				
 				cursor_lockout = 100000;
 				
 				play_sound(sfx_spawn_light,1,false);
+			break;
+			case MENU_SPELL:
+				room_transition(room_gp);
+				
+				var param = array_check[cursor[level]].param;
+				
+				global.difficulty = array_check[cursor[level]].diff;
+				
+				add_stage_event(menu[cursor[0]].param[cursor[1]].bg,0); // maybe do that better?
+				add_stage_event(param,30);
 			break;
 			case MENU_QUIT:
 				game_end();
@@ -173,7 +192,7 @@ for(var i = 0; i < 5; i += 1)
 		if(global.difficulty == i) or (i == 4)
 		{
 			difficuly[i].x_to = 200;
-			difficuly[i].y_to = 200;
+			difficuly[i].y_to = 164;
 		}
 	}
 	
@@ -183,7 +202,21 @@ for(var i = 0; i < 5; i += 1)
 	difficuly[i].alpha += recursiv(difficuly[i].alpha,difficuly[i].alpha_to,5,0.1);
 }
 
-
+for(var i = 0; i < 3; i += 1)
+{
+	if(global.player_chosen == i)
+	{
+		player[i].alpha_to = 1;
+		player[i].x_to = 700;
+	}
+	else
+	{
+		player[i].alpha_to = 0;
+	}
+	
+	player[i].x_is = goto_value(player[i].x_is,player[i].x_to,8);
+	player[i].alpha = goto_value(player[i].alpha,player[i].alpha_to,0.05);
+}
 
 
 step += 1;

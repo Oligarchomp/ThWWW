@@ -64,6 +64,8 @@ last_event_step = -1;
 event_time = 0; //since how long the current event as been going on
 wait_time = 0;
 
+end_wait = 0;
+
 
 item_extend = ds_list_create();
 if(get_current_event() != act_s7_0)
@@ -121,10 +123,6 @@ pause =
 		]
 	},
 	{
-		title : get_text("pause_replay_title"),
-		active_offset : 0,
-	},
-	{
 		title : get_text("pause_retry"),
 		active_offset : 0,
 		action : MENU_MENU,
@@ -143,3 +141,23 @@ pause =
 		]
 	}	
 ]
+
+
+done =
+[
+	{
+		title : get_text("pause_retry"),
+		active_offset : 0,
+		action : MENU_RESTART
+	},
+	{
+		title : get_text("pause_replay"),
+		active_offset : 0,
+	},
+	{
+		title : get_text("pause_title"),
+		active_offset : 0,
+		action : MENU_TITLE
+	}
+]
+

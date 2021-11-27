@@ -97,6 +97,346 @@ menu =
 	{
 		title : "SPELL PRACTICE",
 		active_offset : 0,
+		action: MENU_MENU,
+		param : 
+		[
+			{
+				title : "Stage 1",
+				action : MENU_MENU,
+				bg : act_s1_0,
+				param : 
+				[
+					{
+						title : get_text("spell_s1_mida"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : act_s1_6_midspell,
+						diff : 0
+					},
+					{
+						title : get_text("spell_s1_mida"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : act_s1_6_midspell,
+						diff : 1
+					},
+					{
+						title : get_text("spell_s1_midb"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : act_s1_6_midspell,
+						diff : 2
+					},
+					{
+						title : get_text("spell_s1_midb"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : act_s1_6_midspell,
+						diff : 3
+					},
+					{
+						title : get_text("spell_s1_1a"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s1_2_spell,
+						diff : 0
+					},
+					{
+						title : get_text("spell_s1_1a"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s1_2_spell,
+						diff : 1
+					},
+					{
+						title : get_text("spell_s1_1b"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s1_2_spell,
+						diff : 2
+					},
+					{
+						title : get_text("spell_s1_1c"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s1_2_spell,
+						diff : 3
+					},
+					{
+						title : get_text("spell_s1_2a"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s1_4_spell,
+						diff : 0
+					},
+					{
+						title : get_text("spell_s1_2a"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s1_4_spell,
+						diff : 1
+					},
+					{
+						title : get_text("spell_s1_2b"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s1_4_spell,
+						diff : 2
+					},
+					{
+						title : get_text("spell_s1_2b"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s1_4_spell,
+						diff : 3
+					}
+				]
+			},
+			{
+				title : "Stage 2",
+				action : MENU_MENU,
+				bg : act_s2_0,
+				param : 
+				[
+					{
+						title : get_text("spell_s2_mida"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : act_s2_6_midspell,
+						diff : 0
+					},
+					{
+						title : get_text("spell_s2_mida"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : act_s2_6_midspell,
+						diff : 1
+					},
+					{
+						title : get_text("spell_s2_midb"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : act_s2_6_midspell,
+						diff : 2
+					},
+					{
+						title : get_text("spell_s2_midb"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : act_s2_6_midspell,
+						diff : 3
+					},
+					{
+						title : get_text("spell_s2_1a"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s2_2_spell,
+						diff : 0
+					},
+					{
+						title : get_text("spell_s2_1a"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s2_2_spell,
+						diff : 1
+					},
+					{
+						title : get_text("spell_s2_1b"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s2_2_spell,
+						diff : 2
+					},
+					{
+						title : get_text("spell_s2_1b"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s2_2_spell,
+						diff : 3
+					},
+					{
+						title : get_text("spell_s2_2a"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s2_4_spell,
+						diff : 0
+					},
+					{
+						title : get_text("spell_s2_2a"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s2_4_spell,
+						diff : 1
+					},
+					{
+						title : get_text("spell_s2_2b"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s2_4_spell,
+						diff : 2
+					},
+					{
+						title : get_text("spell_s2_2b"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s2_4_spell,
+						diff : 3
+					},
+					{
+						title : get_text("spell_s2_3a"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s2_5_spell,
+						diff : 0
+					},
+					{
+						title : get_text("spell_s2_3a"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s2_5_spell,
+						diff : 1
+					},
+					{
+						title : get_text("spell_s2_3a"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s2_5_spell,
+						diff : 2
+					},
+					{
+						title : get_text("spell_s2_3b"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s2_5_spell,
+						diff : 3
+					}
+				]
+			},
+			{
+				title : "Stage 3",
+				action : MENU_MENU,
+				bg : act_s3_0,
+				param : 
+				[
+					{
+						title : get_text("spell_s3_mida"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : act_s3_7_midspell,
+						diff : 0
+					},
+					{
+						title : get_text("spell_s3_mida"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : act_s3_7_midspell,
+						diff : 1
+					},
+					{
+						title : get_text("spell_s3_midb"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : act_s3_7_midspell,
+						diff : 2
+					},
+					{
+						title : get_text("spell_s3_midb"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : act_s3_7_midspell,
+						diff : 3
+					},
+					{
+						title : get_text("spell_s3_1a"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s3_2_spell,
+						diff : 0
+					},
+					{
+						title : get_text("spell_s3_1a"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s3_2_spell,
+						diff : 1
+					},
+					{
+						title : get_text("spell_s3_1b"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s3_2_spell,
+						diff : 2
+					},
+					{
+						title : get_text("spell_s3_1b"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s3_2_spell,
+						diff : 3
+					},
+					{
+						title : get_text("spell_s3_2a"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s3_4_spell,
+						diff : 0
+					},
+					{
+						title : get_text("spell_s3_2a"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s3_4_spell,
+						diff : 1
+					},
+					{
+						title : get_text("spell_s3_2b"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s3_4_spell,
+						diff : 2
+					},
+					{
+						title : get_text("spell_s3_2c"),
+						active_offset : 0,
+						action : MENU_SPELL,
+						param : boss_s3_4_spell,
+						diff : 3
+					},
+				]
+			},
+			{
+				title : "Stage 4",
+				action : MENU_MENU,
+				param : 
+				[
+				
+				]
+			},
+			{
+				title : "Stage 5",
+				action : MENU_MENU,
+				param : 
+				[
+				
+				]
+			},
+			{
+				title : "Stage 6",
+				action : MENU_MENU,
+				param : 
+				[
+				
+				]
+			},
+			{
+				title : "Extra Stage",
+				action : MENU_MENU,
+				param : 
+				[
+				
+				]
+			},
+		]
 	},
 	{
 		title : "PLAYER DATA",
@@ -120,6 +460,7 @@ menu =
 cursor_lockout = 0;
 
 over_offset = 26;
+
 
 
 difficuly =
@@ -176,6 +517,28 @@ difficuly =
 	}
 ]
 
+
+player =
+[
+	{
+		alpha : 1,
+		alpha_to : 1,
+		x_is : 700,
+		x_to : 700
+	},
+	{
+		alpha : 1,
+		alpha_to : 1,
+		x_is : 700,
+		x_to : 700
+	},
+	{
+		alpha : 1,
+		alpha_to : 1,
+		x_is : 700,
+		x_to : 700
+	}
+]
 
 
 

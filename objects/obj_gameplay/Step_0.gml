@@ -17,23 +17,27 @@ if(global.gp_active)
 			wait_time = 0;
 		}
 	}
-	else if (wait_time == wait)
+	else
 	{
-		event_time += 1;
-			
+		end_wait = goto_value(end_wait,110,1);
+		if(end_wait == 110)
+		{
+			pause_state = 1;
+		
+			pause_type = PAUSE_END;
+			play_sound(sfx_pause,1,false);
+		}
 	}
 	
 	if(wait_time == wait)
 	{
 		
-		if (event_time == 0)
+		var ev = global.event_list[|event_step];
+		if(!instance_exists(ev))
 		{
-			var ev = global.event_list[|event_step];
-			if(!instance_exists(ev))
-			{
-				instance_create_depth(0,0,0,ev);
-			}
+			instance_create_depth(0,0,0,ev);
 		}
+		
 	}
 	else
 	{
@@ -59,13 +63,23 @@ if(global.gp_active)
 
 //PAUSE
 
+switch(pause_type)
+{
+	case PAUSE_MANUAL:
+		var menu = pause;
+	break;
+	case PAUSE_END:
+		var menu = done;
+	break;
+}
+
 switch(level)
 {
 	case 0:
-		var array_check = pause;
+		var array_check = menu;
 	break;
 	case 1:
-		var array_check = pause[cursor[0]].param;
+		var array_check = menu[cursor[0]].param;
 	break;
 }
 		

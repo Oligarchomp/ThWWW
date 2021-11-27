@@ -11,9 +11,6 @@ if(global.gp_active)
 	{
 		state_time += 1;
 	}
-	
-	 // if not the first transition
-	
 
 
 	switch(state)
@@ -22,6 +19,11 @@ if(global.gp_active)
 			if(state_time == 0) and (obj_gameplay.event_step == 0)
 			{
 				instance_create_depth(0,0,0,bg_to_create);
+				
+				if(ds_list_size(global.event_list) == 2) // if spell practice
+				{
+					state = 2;	
+				}
 			}
 			
 			alpha = goto_value(alpha,1,0.05);
