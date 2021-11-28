@@ -6,6 +6,9 @@ if(step % 50 == 0)
 	instance_create_depth(80 - 100 + rng(200,false,6),440 - rng(60,false,3),depth + 1,obj_bubble_main);
 }
 
+
+menu_description_alpha = goto_value(menu_description_alpha,1,0.1);
+
 if(cursor_lockout == 0)
 {
 	switch(level)
@@ -24,9 +27,27 @@ if(cursor_lockout == 0)
 		break;
 	}
 
+	//holding
+	if(abs(global.down_down - global.up_down))
+	{
+		hold_direction_time += 1;
+		
+		if(hold_direction_time > 30)
+		{
+			if(hold_direction_time % 6 == 0)
+			{
+				global.down_pressed = global.down_down;
+				global.up_pressed = global.up_down;
+			}
+		}
+	}
+	else
+	{
+		hold_direction_time = 0;
+	}
+
 	if(abs(global.down_pressed - global.up_pressed))
 	{
-	
 		var pos_then = cursor[level];
 		
 		//moving cursor
@@ -39,6 +60,8 @@ if(cursor_lockout == 0)
 		if(pos_then != cursor[level])
 		{
 			play_sound(sfx_menu_move,1,false);
+			
+			menu_description_alpha = 0;
 		}
 	
 		switch(level)
@@ -136,6 +159,11 @@ if(cursor_lockout == 0)
 				
 				add_stage_event(menu[cursor[0]].param[cursor[1]].bg,0); // maybe do that better?
 				add_stage_event(param,30);
+				
+				global.menu_level = level;
+				global.menu_cursor = cursor;
+				
+				cursor_lockout = 100000;
 			break;
 			case MENU_QUIT:
 				game_end();

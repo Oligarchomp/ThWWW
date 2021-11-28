@@ -165,6 +165,7 @@ if(global.gp_active) and (spell_wait == 0)
 				sprite_danmaku = color_id == 1 ? spr_bubble_farewell : spr_bubble;
 				sprite_index = color_id == 1 ? spr_nothing : spr_danmaku_hitbox;
 			}
+			image_index = danmaku_id;
 		}
 	}
 	else
@@ -181,6 +182,7 @@ if(global.gp_active) and (spell_wait == 0)
 				sprite_danmaku = color_id == 6 ? spr_bubble_farewell : spr_bubble;
 				sprite_index = color_id == 6 ? spr_nothing : spr_danmaku_hitbox;
 			}
+			image_index = danmaku_id;
 		}
 	}
 	

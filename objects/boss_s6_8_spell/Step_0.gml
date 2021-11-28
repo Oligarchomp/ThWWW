@@ -9,19 +9,18 @@ if(global.gp_active) and (spell_wait == 0)
 			var anchor_spd = 6;
 			
 			var mentos_wait = 7;
-			var mentos_spd_final = 2;
-			var mentos_accel = 0.02;
+			var mentos_spd_final = 1.8;
+			var mentos_accel = 0.015;
 			var mentos_angle_plus = 30;
 			
 			var bubble_ring = 21;
 			var bubble_spd = 1.8;
 			var bubble_wait = 60;
 			
-			var arc_nbr = 3;
-			var arc_row = 3;
-			var arc_spd_min = 2;
-			var arc_spd_max = 3.2;
-			var arc_dist = 15;
+			var arc_nbr = 7;
+			var arc_row = 2;
+			var arc_spd_min = 0.7;
+			var arc_spd_max = 1.7;
 			
 			var wave_wait = 200;
 		break;
@@ -38,11 +37,10 @@ if(global.gp_active) and (spell_wait == 0)
 			var bubble_spd = 1.8;
 			var bubble_wait = 54;
 			
-			var arc_nbr = 5;
-			var arc_row = 3;
-			var arc_spd_min = 2;
-			var arc_spd_max = 3.2;
-			var arc_dist = 11;
+			var arc_nbr = 9;
+			var arc_row = 2;
+			var arc_spd_min = 0.9;
+			var arc_spd_max = 1.8;
 			
 			var wave_wait = 180;
 		break;
@@ -59,11 +57,10 @@ if(global.gp_active) and (spell_wait == 0)
 			var bubble_spd = 1.8;
 			var bubble_wait = 50;
 			
-			var arc_nbr = 5;
-			var arc_row = 4;
-			var arc_spd_min = 2;
-			var arc_spd_max = 3.6;
-			var arc_dist = 10;
+			var arc_nbr = 11;
+			var arc_row = 2;
+			var arc_spd_min = 1;
+			var arc_spd_max = 1.9;
 			
 			var wave_wait = 160;
 		break;
@@ -80,11 +77,10 @@ if(global.gp_active) and (spell_wait == 0)
 			var bubble_spd = 1.8;
 			var bubble_wait = 50;
 			
-			var arc_nbr = 6;
-			var arc_row = 4;
-			var arc_spd_min = 2;
-			var arc_spd_max = 3.6;
-			var arc_dist = 9;
+			var arc_nbr = 12;
+			var arc_row = 2;
+			var arc_spd_min = 1;
+			var arc_spd_max = 2;
 			
 			var wave_wait = 150;
 		break;
@@ -120,7 +116,7 @@ if(global.gp_active) and (spell_wait == 0)
 			{
 				if(state_time % bubble_wait == 0)
 				{
-					shoot_ring(DAN_BUBBLE,1,bubble_ring,obj_boss.x,obj_boss.y,999,bubble_spd,sfx_redirect1,7);
+					//shoot_ring(DAN_BUBBLE,1,bubble_ring,obj_boss.x,obj_boss.y,999,bubble_spd,sfx_redirect1,7);
 				}
 			}
 			else
@@ -189,7 +185,7 @@ if(global.gp_active) and (spell_wait == 0)
 					var n = 0;
 					for(var i = arc_spd_min; i < arc_spd_max; i += (arc_spd_max - arc_spd_min) / arc_row)
 					{
-						shoot_arc(DAN_KNIFE,1,arc_nbr - n,x,y,angle + 180,arc_dist,i,noone,2)
+						shoot_ring(DAN_MENTOS,1,arc_nbr,x,y,angle + n * 180 / arc_nbr,i,noone,2)
 						n += 1;
 						n %= 2;
 					}

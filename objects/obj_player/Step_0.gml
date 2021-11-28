@@ -296,6 +296,9 @@ if (global.gp_active)
 		{
 			with(obj_danmaku)
 			{
+				
+				image_index = danmaku_id;
+				
 				if(!is_spawning)
 				{
 					image_xscale = visual_xscale;
@@ -307,6 +310,11 @@ if (global.gp_active)
 		{
 			with(obj_danmaku)
 			{
+				if(!is_cancelable)
+				{
+					image_index = image_number - 1;
+				}
+			
 				if(!is_spawning)
 				{
 					image_xscale = 1;

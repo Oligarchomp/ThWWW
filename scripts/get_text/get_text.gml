@@ -23,7 +23,11 @@ function get_text(argument0) {
 	// for editing the string   
 	final_string = string_replace(final_string,string_name,"")
 	final_string = string_replace(final_string," = ","")
-
+	
+	while(string_pos("*",final_string))
+	{
+		final_string = string_replace(final_string,"*","\n")//this makes no freaking sense! Why does it only works like this ?
+	}
 
 	file_text_close(file);
 		

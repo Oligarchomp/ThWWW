@@ -9,7 +9,10 @@ function spell_set_spell(argument0,argument1,argument2){
 	is_capturing = true;
 	need_cancel_bonus = true;
 	
-	item_nbr = item_nbr_spell;
+	if(global.game_type != GAME_SPELL)
+	{
+		item_nbr = item_nbr_spell;
+	}
 	
 	bonus = argument2;
 	bonus_max = bonus;

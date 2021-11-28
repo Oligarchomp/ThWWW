@@ -4,13 +4,28 @@
 ds_list_clear(global.event_list);
 ds_list_clear(global.wait_list);
 
-cursor = [0,0,0,0];
-level = 0;
+
+hold_direction_time = 0;
+
+
+if(!variable_global_exists("menu_level"))
+{
+	global.menu_cursor = [0,0,0,0];
+	global.menu_level = 0;
+}
+
+cursor = global.menu_cursor;
+level = global.menu_level;
+
+global.menu_cursor = [0,0,0,0];
+global.menu_level = 0;
+
 
 menu = 
 [
 	{
 		title : "START",
+		description : get_text("menu_start"),
 		active_offset : 0,
 		action : MENU_MENU,
 		param :
@@ -28,6 +43,7 @@ menu =
 	},
 	{
 		title : "EXTRA START",
+		description : get_text("menu_extra"),
 		active_offset : 0,
 		action : MENU_MENU,
 		param :
@@ -46,6 +62,7 @@ menu =
 	},
 	{
 		title : "PRACTICE",
+		description : get_text("menu_practice"),
 		active_offset : 0,
 		action : MENU_MENU,
 		param :
@@ -96,6 +113,7 @@ menu =
 	},
 	{
 		title : "SPELL PRACTICE",
+		description : get_text("menu_spell"),
 		active_offset : 0,
 		action: MENU_MENU,
 		param : 
@@ -109,35 +127,41 @@ menu =
 					{
 						title : get_text("spell_s1_mida"),
 						data_name : "s1_mid",
+						comment : get_text("com_s1_mide"),
 						param : act_s1_6_midspell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s1_mida"),
 						data_name : "s1_mid",
+						comment : get_text("com_s1_midn"),
 						param : act_s1_6_midspell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s1_midb"),
 						data_name : "s1_mid",
+						comment : get_text("com_s1_midh"),
 						param : act_s1_6_midspell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s1_midb"),
 						data_name : "s1_mid",
+						comment : get_text("com_s1_midl"),
 						param : act_s1_6_midspell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s1_1a"),
 						data_name : "s1_1",
+						comment : get_text("com_s1_1e"),
 						param : boss_s1_2_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s1_1a"),
+						comment : get_text("com_s1_1n"),
 						data_name : "s1_1",
 						param : boss_s1_2_spell,
 						diff : 1
@@ -145,35 +169,41 @@ menu =
 					{
 						title : get_text("spell_s1_1b"),
 						data_name : "s1_1",
+						comment : get_text("com_s1_1h"),
 						param : boss_s1_2_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s1_1c"),
 						data_name : "s1_1",
+						comment : get_text("com_s1_1l"),
 						param : boss_s1_2_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s1_2a"),
+						comment : get_text("com_s1_2e"),
 						data_name : "s1_2",
 						param : boss_s1_4_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s1_2a"),
+						comment : get_text("com_s1_2n"),
 						data_name : "s1_2",
 						param : boss_s1_4_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s1_2b"),
+						comment : get_text("com_s1_2h"),
 						data_name : "s1_2",
 						param : boss_s1_4_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s1_2b"),
+						comment : get_text("com_s1_2l"),
 						data_name : "s1_2",
 						param : boss_s1_4_spell,
 						diff : 3
@@ -841,12 +871,14 @@ menu =
 					{
 						title : get_text("spell_s7_mid3"),
 						data_name : "s7_mid3",
+						comment : get_text("com_s7_mid3"),
 						param : act_s7_53_midspell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s7_1"),
 						data_name : "s7_1",
+						comment : get_text("com_s7_1"),
 						param : boss_s7_15_spell,
 						diff : 1
 					},
@@ -895,12 +927,14 @@ menu =
 					{
 						title : get_text("spell_s7_9"),
 						data_name : "s7_9",
+						comment : get_text("com_s7_9"),
 						param : boss_s7_9_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s7_10"),
 						data_name : "s7_10",
+						comment : get_text("com_s7_10"),
 						param : boss_s7_95_spell,
 						diff : 1
 					},
@@ -910,22 +944,28 @@ menu =
 	},
 	{
 		title : "PLAYER DATA",
+		description : get_text("menu_player"),
 		active_offset : 0,
 	},
 	{
 		title : "REPLAY",
+		description : get_text("menu_replay"),
 		active_offset : 0,
 	},
 	{
 		title : "OPTION",
+		description : get_text("menu_option"),
 		active_offset : 0,
 	},
 	{
 		title : "QUIT",
+		description : get_text("menu_quit"),
 		active_offset : 0,
 		action : MENU_QUIT
 	}
 ]
+
+menu_description_alpha = 0;
 
 cursor_lockout = 0;
 
@@ -975,12 +1015,18 @@ for(var i = 0; i < array_length(menu[3].param); i += 1)//stage
 {
 	for(var j = 0; j < array_length(menu[3].param[i].param); j += 1)//spell
 	{
-		variable_struct_set(menu[3].param[i].param[j],"action",MENU_SPELL);
-		variable_struct_set(menu[3].param[i].param[j],"active_offset",0);
-		variable_struct_set(menu[3].param[i].param[j],"cap_game",data_read("SpellData.ini",menu[3].param[i].param[j].data_name,get_difficulty_key(0,menu[3].param[i].param[j].diff)));
-		variable_struct_set(menu[3].param[i].param[j],"try_game",data_read("SpellData.ini",menu[3].param[i].param[j].data_name,get_difficulty_key(1,menu[3].param[i].param[j].diff)));
-		variable_struct_set(menu[3].param[i].param[j],"cap_prac",data_read("SpellDataPractice.ini",menu[3].param[i].param[j].data_name,get_difficulty_key(0,menu[3].param[i].param[j].diff)));
-		variable_struct_set(menu[3].param[i].param[j],"try_prac",data_read("SpellDataPractice.ini",menu[3].param[i].param[j].data_name,get_difficulty_key(1,menu[3].param[i].param[j].diff)));
+		var check = menu[3].param[i].param[j];
+		variable_struct_set(check,"action",MENU_SPELL);
+		variable_struct_set(check,"active_offset",0);
+		variable_struct_set(check,"cap_game",data_read("SpellData.ini",check.data_name,get_difficulty_key(0,check.diff)));
+		variable_struct_set(check,"try_game",data_read("SpellData.ini",check.data_name,get_difficulty_key(1,check.diff)));
+		variable_struct_set(check,"cap_prac",data_read("SpellDataPractice.ini",check.data_name,get_difficulty_key(0,check.diff)));
+		variable_struct_set(check,"try_prac",data_read("SpellDataPractice.ini",check.data_name,get_difficulty_key(1,check.diff)));
+		
+		if(!variable_struct_exists(check,"comment"))
+		{
+			variable_struct_set(check,"comment","No comment");
+		}
 	}
 }
 

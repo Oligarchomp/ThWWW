@@ -6,9 +6,11 @@ depth = 50;
 switch(global.game_type)
 {
 	case GAME_FULL:
+	case GAME_EXTRA:
+	case GAME_STAGE:
 		global.spell_file = "SpellData.ini"
 	break;
-	default:
+	case GAME_SPELL:
 		global.spell_file = "SpellDataPractice.ini"
 	break;
 }

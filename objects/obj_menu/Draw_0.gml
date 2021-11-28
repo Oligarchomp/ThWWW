@@ -14,6 +14,13 @@ switch(level)
 			menu[i].active_offset = goto_value(menu[i].active_offset,over_offset * is_active,6);
 			
 			draw_text_color(590 + menu[i].active_offset + i * 5,90 + i * 50,menu[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
+	
+			if(is_active)
+			{
+				draw_set_font(font_spellpractice);
+				draw_text_color(600 + menu[i].active_offset + i * 5,120 + i * 50,menu[i].description,c_white,c_white,c_white,c_white,menu_description_alpha);
+				draw_set_font(font_main);
+			}
 		}
 	break;
 	case 1:
@@ -71,7 +78,7 @@ switch(level)
 				
 				draw_set_font(font_spellpractice);
 				
-				var max_spell = 20;
+				var max_spell = 16;
 				
 				var i_start = (cursor[level] >= max_spell) * max_spell;
 				
@@ -105,6 +112,15 @@ switch(level)
 					//ignore this error
 					var str = "Game: " + string(min(999,add_zero(check[i].cap_game,3))) + " / " + string(min(999,add_zero(check[i].try_game,3))) + "  Prac.:" + string(min(999,add_zero(check[i].cap_prac,3))) + " / " + string(min(999,add_zero(check[i].try_prac,3)))
 					draw_text_color(680 + check[i].active_offset,60 + (i - i_start) * 20,str,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
+				
+					//spell comment
+					if(is_active)
+					{
+						draw_text_color(100,410,get_text("spell_comment"),c_white,c_white,c_white,c_white,menu_description_alpha);
+						draw_text_color(100,426,"------------------------------------------------------",c_white,c_white,c_white,c_white,menu_description_alpha);
+						draw_text_ext_color(100,448,check[i].comment,20,750,c_white,c_white,c_white,c_white,menu_description_alpha);
+					}
+				
 				}
 				
 				//little arrow when 2 pages
@@ -114,6 +130,7 @@ switch(level)
 					
 					draw_sprite_ext(spr_morespell,0,580,260 + y_sc * 220,1,y_sc,0,c_white,1);	
 				}
+				
 			break;
 		}
 	break;
