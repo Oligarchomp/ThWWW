@@ -122,6 +122,7 @@ global.wait_list = ds_list_create();
 #macro MENU_TITLE 4
 #macro MENU_BACK 5
 #macro MENU_SPELL 6
+#macro MENU_MUSIC 7
 #macro MENU_QUIT 9
 
 

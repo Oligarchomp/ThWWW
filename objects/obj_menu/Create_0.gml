@@ -26,7 +26,6 @@ menu =
 	{
 		title : "START",
 		description : get_text("menu_start"),
-		active_offset : 0,
 		action : MENU_MENU,
 		param :
 		[
@@ -44,7 +43,6 @@ menu =
 	{
 		title : "EXTRA START",
 		description : get_text("menu_extra"),
-		active_offset : 0,
 		action : MENU_MENU,
 		param :
 		[
@@ -63,7 +61,6 @@ menu =
 	{
 		title : "PRACTICE",
 		description : get_text("menu_practice"),
-		active_offset : 0,
 		action : MENU_MENU,
 		param :
 		[
@@ -87,6 +84,7 @@ menu =
 					},
 					{
 						title : "Stage 3",
+						active_offset : 0,
 						action : MENU_START_STAGE,
 						param : 3
 					},
@@ -114,7 +112,6 @@ menu =
 	{
 		title : "SPELL PRACTICE",
 		description : get_text("menu_spell"),
-		active_offset : 0,
 		action: MENU_MENU,
 		param : 
 		[
@@ -219,96 +216,112 @@ menu =
 					{
 						title : get_text("spell_s2_mida"),
 						data_name : "s2_mid",
+						comment : get_text("com_s2_mide"),
 						param : act_s2_6_midspell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s2_mida"),
 						data_name : "s2_mid",
+						comment : get_text("com_s2_midn"),
 						param : act_s2_6_midspell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s2_midb"),
 						data_name : "s2_mid",
+						comment : get_text("com_s2_midh"),
 						param : act_s2_6_midspell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s2_midb"),
 						data_name : "s2_mid",
+						comment : get_text("com_s2_midl"),
 						param : act_s2_6_midspell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s2_1a"),
 						data_name : "s2_1",
+						comment : get_text("com_s2_1e"),
 						param : boss_s2_2_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s2_1a"),
 						data_name : "s2_1",
+						comment : get_text("com_s2_1n"),
 						param : boss_s2_2_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s2_1b"),
 						data_name : "s2_1",
+						comment : get_text("com_s2_1h"),
 						param : boss_s2_2_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s2_1b"),
 						data_name : "s2_1",
+						comment : get_text("com_s2_1l"),
 						param : boss_s2_2_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s2_2a"),
 						data_name : "s2_2",
+						comment : get_text("com_s2_2e"),
 						param : boss_s2_4_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s2_2a"),
 						data_name : "s2_2",
+						comment : get_text("com_s2_2n"),
 						param : boss_s2_4_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s2_2b"),
 						data_name : "s2_2",
+						comment : get_text("com_s2_2h"),
 						param : boss_s2_4_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s2_2b"),
 						data_name : "s2_2",
+						comment : get_text("com_s2_2l"),
 						param : boss_s2_4_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s2_3a"),
 						data_name : "s2_3",
+						comment : get_text("com_s2_3e"),
 						param : boss_s2_5_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s2_3a"),
 						data_name : "s2_3",
+						comment : get_text("com_s2_3n"),
 						param : boss_s2_5_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s2_3a"),
 						data_name : "s2_3",
+						comment : get_text("com_s2_3h"),
 						param : boss_s2_5_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s2_3b"),
 						data_name : "s2_3",
+						comment : get_text("com_s2_3l"),
 						param : boss_s2_5_spell,
 						diff : 3
 					}
@@ -945,22 +958,152 @@ menu =
 	{
 		title : "PLAYER DATA",
 		description : get_text("menu_player"),
-		active_offset : 0,
 	},
 	{
 		title : "REPLAY",
 		description : get_text("menu_replay"),
-		active_offset : 0,
 	},
 	{
 		title : "OPTION",
 		description : get_text("menu_option"),
-		active_offset : 0,
+	},
+	{
+		title : "MUSIC ROOM",
+		description : get_text("menu_music"),
+		action : MENU_MENU,
+		param :
+		[
+			{
+				title : get_text("mus_room_title"),
+				comment : get_text("mus_com_title"),
+				action : MENU_MUSIC,
+				music : noone,
+				intro : noone
+			},
+			{
+				title : get_text("mus_room_s1"),
+				comment : get_text("mus_com_s1"),
+				action : MENU_MUSIC,
+				music : mus_stage1,
+				intro : noone
+			},
+			{
+				title : get_text("mus_room_b1"),
+				comment : get_text("mus_com_b1"),
+				action : MENU_MUSIC,
+				music : mus_boss1,
+				intro : mus_boss1_intro
+			},
+			{
+				title : get_text("mus_room_s2"),
+				comment : get_text("mus_com_s2"),
+				action : MENU_MUSIC,
+				music : noone,
+				intro : noone
+			},
+			{
+				title : get_text("mus_room_b2"),
+				comment : get_text("mus_com_b2"),
+				action : MENU_MUSIC,
+				music : mus_boss2,
+				intro : mus_boss2_intro
+			},
+			{
+				title : get_text("mus_room_s3"),
+				comment : get_text("mus_com_s3"),
+				action : MENU_MUSIC,
+				music : noone,
+				intro : noone
+			},
+			{
+				title : get_text("mus_room_b3"),
+				comment : get_text("mus_com_b3"),
+				action : MENU_MUSIC,
+				music : noone,
+				intro : noone
+			},
+			{
+				title : get_text("mus_room_s4"),
+				comment : get_text("mus_com_s4"),
+				action : MENU_MUSIC,
+				music : noone,
+				intro : noone
+			},
+			{
+				title : get_text("mus_room_b4"),
+				comment : get_text("mus_com_b4"),
+				action : MENU_MUSIC,
+				music : noone,
+				intro : noone
+			},
+			{
+				title : get_text("mus_room_s5"),
+				comment : get_text("mus_com_s5"),
+				action : MENU_MUSIC,
+				music : noone,
+				intro : noone
+			},
+			{
+				title : get_text("mus_room_b5"),
+				comment : get_text("mus_com_b5"),
+				action : MENU_MUSIC,
+				music : noone,
+				intro : noone
+			},
+			{
+				title : get_text("mus_room_s6"),
+				comment : get_text("mus_com_s6"),
+				action : MENU_MUSIC,
+				music : noone,
+				intro : noone
+			},
+			{
+				title : get_text("mus_room_b6"),
+				comment : get_text("mus_com_b6"),
+				action : MENU_MUSIC,
+				music : noone,
+				intro : noone
+			},
+			{
+				title : get_text("mus_room_s3"),
+				comment : get_text("mus_com_s3"),
+				action : MENU_MUSIC,
+				music : noone,
+				intro : noone
+			},
+			{
+				title : get_text("mus_room_b7"),
+				comment : get_text("mus_com_b7"),
+				action : MENU_MUSIC,
+				music : noone,
+				intro : noone
+			},
+			{
+				title : get_text("mus_room_end"),
+				comment : get_text("mus_com_end"),
+				action : MENU_MUSIC,
+				music : noone,
+				intro : noone
+			},
+			{
+				title : get_text("mus_room_credit"),
+				comment : get_text("mus_com_credit"),
+				action : MENU_MUSIC,
+				music : noone,
+				intro : noone
+			},
+			{
+				title : get_text("mus_room_score"),
+				comment : get_text("mus_com_score"),
+				action : MENU_MUSIC,
+				music : noone,
+				intro : noone
+			},
+		]
 	},
 	{
 		title : "QUIT",
 		description : get_text("menu_quit"),
-		active_offset : 0,
 		action : MENU_QUIT
 	}
 ]
@@ -1010,6 +1153,31 @@ player =
 	}
 ]
 
+
+//setting active_offset for everything
+for(var i = 0; i < array_length(menu); i += 1)
+{
+	variable_struct_set(menu[i],"active_offset",0);
+	
+	if(variable_struct_get(menu[i],"action") == MENU_MENU)
+	{
+		for(var j = 0; j < array_length(menu[i].param); j+= 1)
+		{
+			variable_struct_set(menu[i].param[j],"active_offset",0);
+			
+			if(variable_struct_get(menu[i].param[j],"action") == MENU_MENU)
+			{
+				for(var k = 0; k < array_length(menu[i].param[j].param); k+= 1)
+				{
+					variable_struct_set(menu[i].param[j].param[k],"active_offset",0);
+				}
+			}
+		}
+	}
+	
+	
+}
+
 //settings things for spell practice
 for(var i = 0; i < array_length(menu[3].param); i += 1)//stage 
 {
@@ -1017,7 +1185,6 @@ for(var i = 0; i < array_length(menu[3].param); i += 1)//stage
 	{
 		var check = menu[3].param[i].param[j];
 		variable_struct_set(check,"action",MENU_SPELL);
-		variable_struct_set(check,"active_offset",0);
 		variable_struct_set(check,"cap_game",data_read("SpellData.ini",check.data_name,get_difficulty_key(0,check.diff)));
 		variable_struct_set(check,"try_game",data_read("SpellData.ini",check.data_name,get_difficulty_key(1,check.diff)));
 		variable_struct_set(check,"cap_prac",data_read("SpellDataPractice.ini",check.data_name,get_difficulty_key(0,check.diff)));

@@ -114,6 +114,12 @@ if(cursor_lockout == 0)
 		switch(act)
 		{
 			case MENU_MENU:
+				//settign all active offset to 0
+				for(var i = 0; i < array_length(array_check[cursor[level]].param); i += 1)
+				{
+					array_check[cursor[level]].param[i].active_offset = 0;
+				}
+			
 				level += 1;
 				cursor[level] = 0;
 				cursor_lockout = 10;
@@ -165,6 +171,9 @@ if(cursor_lockout == 0)
 				
 				cursor_lockout = 100000;
 			break;
+			case MENU_MUSIC:
+				set_bgm(array_check[cursor[level]].music,array_check[cursor[level]].intro)
+			break;
 			case MENU_QUIT:
 				game_end();
 			break;
@@ -199,6 +208,7 @@ else
 {
 	cursor_lockout -= 1;
 }
+
 
 
 //difficulty position

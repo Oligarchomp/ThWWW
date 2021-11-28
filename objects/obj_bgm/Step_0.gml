@@ -7,6 +7,8 @@ if(bgm_intro == noone)
 	if(old_bgm != bgm)
 	{
 		audio_stop_sound(old_bgm);
+		audio_stop_sound(old_bgm_intro);
+	
 		audio_play_sound_on(bgm_emit,bgm,true,1);
 		
 		old_bgm = bgm;
@@ -14,6 +16,15 @@ if(bgm_intro == noone)
 }
 else
 {
+	
+	if(old_bgm_intro != bgm_intro)
+	{
+		old_bgm_intro = bgm_intro;
+		
+		bgm_intro_wait = 0;
+	}
+	
+	
 	if (bgm_intro_wait == 0)
 	{
 		audio_stop_sound(old_bgm);

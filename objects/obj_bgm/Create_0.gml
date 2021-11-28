@@ -5,7 +5,7 @@ bgm = noone;
 old_bgm = bgm;
 
 bgm_intro = noone;
-
+old_bgm_intro = bgm_intro;
 
 bgm_intro_wait = 0;
 

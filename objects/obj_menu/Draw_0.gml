@@ -13,12 +13,12 @@ switch(level)
 			var is_active = (cursor[0] == i);
 			menu[i].active_offset = goto_value(menu[i].active_offset,over_offset * is_active,6);
 			
-			draw_text_color(590 + menu[i].active_offset + i * 5,90 + i * 50,menu[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
+			draw_text_color(590 + menu[i].active_offset + i * 5,70 + i * 48,menu[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
 	
 			if(is_active)
 			{
 				draw_set_font(font_spellpractice);
-				draw_text_color(600 + menu[i].active_offset + i * 5,120 + i * 50,menu[i].description,c_white,c_white,c_white,c_white,menu_description_alpha);
+				draw_text_color(600 + menu[i].active_offset + i * 5,97 + i * 48,menu[i].description,c_white,c_white,c_white,c_white,menu_description_alpha);
 				draw_set_font(font_main);
 			}
 		}
@@ -40,7 +40,32 @@ switch(level)
 				var check = menu[cursor[0]].param;
 				for(var i = 0; i < array_length(check); i += 1)
 				{
-					draw_text_color(620 + (cursor[level] == i) * 30,80 + i * 50,check[i].title,c_white,c_white,c_white,c_white,1);
+					var is_active = (cursor[level] == i);
+					
+					check[i].active_offset = goto_value(check[i].active_offset,over_offset * is_active,6);
+					
+					draw_text_color(620 + check[i].active_offset,80 + i * 50,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
+				}
+			break;
+			case 7://music room
+				var check = menu[cursor[0]].param;
+				
+				draw_set_font(font_spellpractice);
+				for(var i = 0; i < array_length(check) ; i += 1)
+				{
+					var is_active = (cursor[level] == i);
+					
+					check[i].active_offset = goto_value(check[i].active_offset, is_active * 10,3);
+					
+					draw_text_color(580 + check[i].active_offset,50 + i * 20,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
+				
+					//spell comment
+					if(is_active)
+					{
+						draw_text_color(100,410,get_text("music_comment"),c_white,c_white,c_white,c_white,menu_description_alpha);
+						draw_text_color(100,426,"------------------------------------------------------",c_white,c_white,c_white,c_white,menu_description_alpha);
+						draw_text_ext_color(100,448,check[i].comment,20,750,c_white,c_white,c_white,c_white,menu_description_alpha);
+					}
 				}
 			break;
 		}
@@ -128,7 +153,7 @@ switch(level)
 				{
 					var y_sc = i_start == max_spell ? -1 : 1;
 					
-					draw_sprite_ext(spr_morespell,0,580,260 + y_sc * 220,1,y_sc,0,c_white,1);	
+					draw_sprite_ext(spr_morespell,0,580,220 + y_sc * 180,1,y_sc,0,c_white,1);	
 				}
 				
 			break;
@@ -141,7 +166,11 @@ switch(level)
 				var check = menu[cursor[0]].param[cursor[1]].param[cursor[2]].param;
 				for(var i = 0; i < array_length(check); i += 1)
 				{
-					draw_text_color(620 + (cursor[level] == i) * 30,80 + i * 50,check[i].title,c_white,c_white,c_white,c_white,1);
+					var is_active = (cursor[level] == i);
+					
+					check[i].active_offset = goto_value(check[i].active_offset,over_offset * is_active,6);
+					
+					draw_text_color(620 + check[i].active_offset,80 + i * 50,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
 				}
 			break;
 		}
