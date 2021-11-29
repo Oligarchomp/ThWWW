@@ -37,8 +37,36 @@ score_to_draw = 0;
 global.starting_life = 2;
 global.starting_bomb = 2;
 
-global.life = global.starting_life;
-global.bomb = global.starting_bomb;
+
+item_extend = ds_list_create();
+
+switch(global.game_type)
+{
+	case GAME_FULL:
+		global.life = global.starting_life;
+		global.bomb = global.starting_bomb;
+		
+		ds_list_add(item_extend,250,600,1000,1500,2200,9999);
+	break;
+	case GAME_EXTRA:
+		global.life = global.starting_life;
+		global.bomb = global.starting_bomb;
+		
+		ds_list_add(item_extend,600,1400,9999);
+	break;
+	case GAME_SPELL:
+		global.life = 0;
+		global.bomb = 0;
+		
+		ds_list_add(item_extend,9999);
+	break;
+	case GAME_STAGE:
+		global.life = 7;
+		global.bomb = global.starting_bomb;
+		
+		ds_list_add(item_extend,9999);
+	break;
+}
 
 
 global.continues_max = 3;
@@ -86,15 +114,6 @@ wait_time = 0;
 end_wait = 0;
 
 
-item_extend = ds_list_create();
-if(get_current_event() != act_s7_0)
-{
-	ds_list_add(item_extend,250,600,1000,1500,2200,9999);
-}
-else
-{
-	ds_list_add(item_extend,600,1400,9999);
-}
 
 
 
@@ -212,4 +231,3 @@ gameover =
 		]
 	}
 ]
-

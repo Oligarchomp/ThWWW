@@ -8,7 +8,7 @@ spell_set_spell("s4_mid",BOSS_IKU,24000000)
 spell_set_name("spell_s4_mida","spell_s4_mida","spell_s4_midb","spell_s4_midb")
 spell_set_life(800,230);
 
-var wait = global.game_type == GAME_FULL ? 160 : 90; //spell practice
+var wait = global.game_type == GAME_SPELL ? 90 : 160; //spell practice
 
 spell_set_time(24,false,wait);
 

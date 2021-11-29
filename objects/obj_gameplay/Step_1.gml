@@ -18,8 +18,16 @@ if (global.pause_pressed)
 
 if(global.life < 0)
 {
-	pause_state = 1;
-	pause_type = PAUSE_GAMEOVER;
+	if(global.game_type == GAME_FULL)
+	{
+		pause_state = 1;
+		pause_type = PAUSE_GAMEOVER;
+	}
+	else
+	{
+		pause_state = 1;
+		pause_type = PAUSE_END;
+	}
 }
 
 

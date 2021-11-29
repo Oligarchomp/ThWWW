@@ -6,17 +6,11 @@ if(global.gp_active)
 	var fairy_lenght = 140;
 	
 	var ball_wait = 30;
-	var ball_ring = 15;
+	var ball_ring = 18;
 	var ball_spd_shoot = 8;
 	var pellet_spd_shoot = 6.5;
 	var spd_div = 3;
 	var deccel_time = 15;
-	
-	var bubble_arc = 5;
-	var bubble_spd_shoot = 7;
-	var bubble_dist = 48;
-	var bubble_spd_final = 2.5;
-	var bubble_deccel = 0.2;
 	
 	switch(step)
 	{
@@ -97,17 +91,6 @@ if(global.gp_active)
 				spd = goto_value(spd,spd_ref / spd_div,spd_ref / deccel_time);
 			break;
 		}
-	}
-	//bubble
-	with(obj_danmaku8)
-	{
-		spd = goto_value(spd,bubble_spd_final,bubble_deccel);
-	}
-	
-	
-	for(var i = 0; i < ds_list_size(x_death_list); i += 1)
-	{
-		shoot_arc(DAN_BUBBLE,6,bubble_arc,x_death_list[|i],y_death_list[|i],999,bubble_dist,bubble_spd_shoot,sfx_shot1,8);
 	}
 }
 // Inherit the parent event

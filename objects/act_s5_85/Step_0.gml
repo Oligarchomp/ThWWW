@@ -20,6 +20,8 @@ if(global.gp_active)
 			
 			var aim_wait = 70;
 			var aim_spd = 2;
+			
+			var open = 0;
 		break;
 		case 1:
 			var fam_nbr = 4;
@@ -36,6 +38,8 @@ if(global.gp_active)
 			
 			var aim_wait = 60;
 			var aim_spd = 2;
+			
+			var open = 3;
 		break;
 		case 2:
 			var fam_nbr = 5;
@@ -52,6 +56,8 @@ if(global.gp_active)
 			
 			var aim_wait = 50;
 			var aim_spd = 2;
+			
+			var open = 5;
 		break;
 		case 3:
 			var fam_nbr = 5;
@@ -68,6 +74,8 @@ if(global.gp_active)
 			
 			var aim_wait = 38;
 			var aim_spd = 2;
+			
+			var open = 6;
 		break;
 	}
 	
@@ -150,7 +158,7 @@ if(global.gp_active)
 		break;
 	}
 	
-	var f_life = 48;
+	var f_life = 42;
 	var f_spd = 2.5;
 	
 	var fam_life = 18;
@@ -225,7 +233,8 @@ if(global.gp_active)
 		
 		if(step % mentos_wait == mentos_wait - 1)
 		{
-			shoot_arc(DAN_MENTOS,7,mentos_arc,x,y,999,mentos_dist,mentos_spd,sfx_shot2,5);	
+			var aim = find_angle(x,y,obj_player.x,obj_player.y) - open + rng(open* 2,false,7);
+			shoot_arc(DAN_MENTOS,7,mentos_arc,x,y,aim,mentos_dist,mentos_spd,sfx_shot2,5);	
 		}
 		
 		if(x < 0) or (x > room_width) or (y < 0) or (y > room_height)
@@ -245,7 +254,8 @@ if(global.gp_active)
 	{
 		if(step % aim_wait == 0)
 		{
-			shoot(DAN_MENTOS,1,x,y,999,aim_spd,sfx_shot3,6);	
+			var aim = find_angle(x,y,obj_player.x,obj_player.y) - open + rng(open* 2,false,1);
+			shoot(DAN_MENTOS,1,x,y,aim,aim_spd,sfx_shot3,6);	
 		}
 		can_revenge = false;
 		if(!instance_exists(my_fairy)) and (!free)

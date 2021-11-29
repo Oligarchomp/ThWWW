@@ -25,6 +25,11 @@ if(global.gp_active)
 		
 			pause_type = PAUSE_END;
 			play_sound(sfx_pause,1,false);
+			
+			if(global.game_type == GAME_SPELL)
+			{
+				cursor[0] = array_length(cursor);	
+			}
 		}
 	}
 	

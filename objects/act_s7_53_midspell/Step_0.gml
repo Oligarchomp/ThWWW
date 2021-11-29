@@ -5,11 +5,6 @@ if(global.gp_active) and (spell_wait == 0)
 	spin_spd = -2;
 	
 	var arrow_wait = 4;//7
-	var arrow_arc = 3;
-	var arrow_row = 3;
-	var arrow_dist = 50;
-	var arrow_spd_min = 3;
-	var arrow_spd_max = 5;
 	
 	var bubble_wait = 5;
 	var bubble_start = 140;

@@ -4,7 +4,6 @@
 if(global.gp_active)
 {
 	
-	
 	//intro aimed 
 	var x_off_spawn = 30;
 	var y_off_spawn = 20;

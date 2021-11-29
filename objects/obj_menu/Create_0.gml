@@ -400,7 +400,7 @@ menu =
 						diff : 2
 					},
 					{
-						title : get_text("spell_s3_2c"),
+						title : get_text("spell_s3_2b"),
 						data_name : "s3_2",
 						param : boss_s3_4_spell,
 						diff : 3

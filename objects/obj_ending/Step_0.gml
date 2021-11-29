@@ -81,6 +81,10 @@ switch(state)
 	break;
 	case 100: //end of ending
 		black_alpha = goto_value(black_alpha,1,0.005);
+		if(black_alpha == 1)
+		{
+			room_goto(room_score);	
+		}
 	break;
 }
 

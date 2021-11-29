@@ -16,7 +16,7 @@ if(global.gp_active)
 			var ring_spd_max = 5.5;
 			var ring_spd_div = 2;
 			
-			var rice_wait = 20;
+			var rice_wait = 40;
 			var rice_spd_shoot = 7;
 			var rice_start = 10;
 			var rice_spd_final = 2.5;
@@ -33,7 +33,7 @@ if(global.gp_active)
 			var ring_spd_max = 6;
 			var ring_spd_div = 2;
 			
-			var rice_wait = 13;
+			var rice_wait = 26;
 			var rice_spd_shoot = 7;
 			var rice_start = 10;
 			var rice_spd_final = 3;
@@ -50,7 +50,7 @@ if(global.gp_active)
 			var ring_spd_max = 6;
 			var ring_spd_div = 2;
 			
-			var rice_wait = 10;
+			var rice_wait = 20;
 			var rice_spd_shoot = 7;
 			var rice_start = 10;
 			var rice_spd_final = 3;
@@ -67,7 +67,7 @@ if(global.gp_active)
 			var ring_spd_max = 6;
 			var ring_spd_div = 2;
 			
-			var rice_wait = 8;
+			var rice_wait = 16;
 			var rice_spd_shoot = 7;
 			var rice_start = 10;
 			var rice_spd_final = 3;
@@ -116,7 +116,10 @@ if(global.gp_active)
 	{
 		if(need_fairy_time % fairy_wait == 0)
 		{
-			var inst = create_enemy(EN_BLUE,200 - 220 * fairy_dir,fairy_y,fairy_life,3,fairy_spd,90 - 90 * fairy_dir)
+			var inst = create_enemy(EN_BLUE,-20,fairy_y,fairy_life,3,fairy_spd,0)
+			inst.item_nbr = 2;
+			
+			var inst = create_enemy(EN_BLUE,420,fairy_y,fairy_life,3,fairy_spd,180)
 			inst.item_nbr = 2;
 		}
 		
@@ -165,7 +168,10 @@ if(global.gp_active)
 	{
 		if(step % rice_wait == 0)
 		{
-			shoot(DAN_RICE,7,x,y,rng(360,false,5),rice_spd_shoot,sfx_shot3,3);
+			if(x > 0) and (x < room_width)
+			{
+				shoot(DAN_ARROW,7,x,y,rng(360,false,5),rice_spd_shoot,sfx_shot3,3);
+			}
 		}
 	}
 	

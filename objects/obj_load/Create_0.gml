@@ -5,6 +5,7 @@ window_set_cursor(cr_none);
 
 instance_create_depth(0,0,0,obj_bgm);
 
+//room_goto(room_score);
 room_goto(room_main);
 //room_goto(room_gp);
 
@@ -18,6 +19,8 @@ global.boss_depth = 40;
 global.spell_bg_depth = 50;
 
 global.gp_active = true;
+
+global.hiscore = 0;
 
 global.spell_file = "SpellData.ini"
 //SpellDataPractice.ini
@@ -33,6 +36,7 @@ global.difficulty = 3;
 // to know what will be played
 global.event_list = ds_list_create();
 global.wait_list = ds_list_create();
+
 
 
 global.score_name = ["er","nr","hr","lr","exr","em","nm","hm","lm","exm","es","ns","hs","ls","exs"]

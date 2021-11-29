@@ -33,8 +33,12 @@ if(global.gp_active)
 			inst.angle_shoot = 90;
 		break;
 		case 150:
-			need_fairy_time = 100;
-			act_dir = 1;
+		case 550:
+			for(var i = 50; i < room_width; i += 50)
+			{
+				var inst = create_enemy(EN_BLUE,i,-20,10,1,4,-90);
+				inst.item_nbr = 2;
+			}
 		break;
 		case 400:
 			var inst = create_enemy(EN_RED,room_width + 20,160,fairy_life,6,1.8,150);
@@ -42,22 +46,8 @@ if(global.gp_active)
 			inst.fairy_dir = -1;
 			inst.angle_shoot = 90;
 		break;
-		case 550:
-			need_fairy_time = 100;
-			act_dir = -1;
-		break;
 	}
 	
-	var fairy_wait = 20;
-	if(need_fairy_time > 0)
-	{
-		if(need_fairy_time % fairy_wait == 0)
-		{
-			create_enemy(EN_BLUE,200 - (30 + rng(80,false,1)) * act_dir,-20,10,1,4,-90);	
-		}
-		
-		need_fairy_time -= 1;
-	}
 	
 	with(obj_enemy6)
 	{

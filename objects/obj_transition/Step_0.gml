@@ -15,15 +15,16 @@ else
 switch(state)
 {
 	case 0:
-		scale = goto_value(scale,0,spd);
 		if(scale == 0)
 		{
 			state = 1;
 			room_goto(room_to);
 		}
+		
+		scale = goto_value(scale,0,spd);
 	break;
 	case 1:
-		if(state_time == 20)
+		if(state_time == 2)
 		{
 			state = 2;
 		}

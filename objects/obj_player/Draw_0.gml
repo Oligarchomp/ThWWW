@@ -2,8 +2,8 @@
 // You can write your code in this editor
 
 // focus effect
-draw_sprite_ext(spr_focus,0,x,y,focus_scale,focus_scale,focus_angle,c_white,focus_alpha)
-draw_sprite_ext(spr_focus,0,x,y,focus_scale,focus_scale,-focus_angle + 45,c_white,focus_alpha)
+draw_sprite_ext(spr_focus,0,x,y,focus_scale,focus_scale,focus_angle,c_white,focus_alpha * alpha)
+draw_sprite_ext(spr_focus,0,x,y,focus_scale,focus_scale,-focus_angle + 45,c_white,focus_alpha * alpha)
 
 //player
 draw_sprite_ext(sprite_index,image_index,x,y,scale,scale,0,c_white,alpha);

@@ -59,23 +59,6 @@ if(global.gp_active)
 		}
 	}
 	
-	//rice
-	with(obj_danmaku1)
-	{
-		switch(state)
-		{
-			case 0:
-				var sq = 5;
-				if(collision_rectangle(x - sq,y - sq + vsp,x + sq,y + sq + vsp,obj_wall,false,true))
-				{
-					state = 1;
-					angle *= -1;
-					spd /= rice_spd_div;
-				}
-			break;
-		}
-	}
-	
 	//familiar
 	with(obj_enemy1)
 	{

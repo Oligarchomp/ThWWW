@@ -160,6 +160,12 @@ if(cursor_lockout == 0)
 				global.game_type = GAME_FULL;
 				
 				play_sound(sfx_spawn_light,1,false);
+				
+				var dif = ["e","n","h","l"];
+				var plr = ["r","m","s"];
+				var index = dif[global.difficulty] + plr[global.player_chosen];
+				
+				global.hiscore = variable_struct_get(menu[4].param[0],index)
 			break;
 			case MENU_START_STAGE:
 				room_transition(room_gp);
@@ -170,6 +176,10 @@ if(cursor_lockout == 0)
 				{
 					global.difficulty = 1;
 					global.game_type = GAME_EXTRA;
+					
+					var plr = ["r","m","s"];
+					var index = "ex" + plr[global.player_chosen];
+					global.hiscore = variable_struct_get(menu[4].param[0],index)
 				}
 				else
 				{

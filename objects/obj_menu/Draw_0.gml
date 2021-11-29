@@ -85,8 +85,8 @@ switch(level)
 						var txt_plr = "Sanae";
 					break;
 				}
-				draw_text_color(480 - string_width(txt),30,txt ,c_white,c_white,c_white,c_white,1);
-				draw_text_color(480,30,"/ " + txt_plr,c_white,c_white,c_white,c_white,1);
+				draw_text_color(475 - string_width(txt),30,txt ,c_white,c_white,c_white,c_white,1);
+				draw_text_color(475,30,"/ " + txt_plr,c_white,c_white,c_white,c_white,1);
 				
 				
 				for(var i = 0; i < array_length(check) ; i += 1)
@@ -94,12 +94,12 @@ switch(level)
 					var score_name = variable_struct_get(check[i],index + "_name");
 					
 					draw_set_font(font_scorename);
-					draw_text_color(322,88 + i * 40,score_name,c_white,c_white,c_white,c_white,1);
+					draw_text_color(332,88 + i * 40,score_name,c_white,c_white,c_white,c_white,1);
 					
-					draw_text_color(430,88 + i * 40,"/",c_white,c_white,c_white,c_white,1);
+					draw_text_color(440,88 + i * 40,"/",c_white,c_white,c_white,c_white,1);
 					
-					draw_score(variable_struct_get(check[i],index),627,90 + i * 40,spr_score,1,1);
-			}
+					draw_score(variable_struct_get(check[i],index),637,90 + i * 40,spr_score,1,1);
+				}
 			break;
 			case 7://music room
 				var check = menu[cursor[0]].param;

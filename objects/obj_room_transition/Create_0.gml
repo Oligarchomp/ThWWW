@@ -18,6 +18,3 @@ bg_to_create = noone;
 
 bgm_name = "No name"
 
-transition = false;
-
-

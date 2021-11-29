@@ -10,9 +10,6 @@ if(global.gp_active)
 	var aim_ring = 12;
 	var aim_spd = 3;
 	
-	var mentos_row = 3;
-	var mentos_spd_min = 5;
-	var mentos_spd_max = 7;
 	
 	switch(step)
 	{

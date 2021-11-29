@@ -153,15 +153,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 3:
 			if(obj_boss.in_position)
 			{
-				if(stab_phase)
-				{
-					state = 4;
-				}
-				else
-				{
-					state = 8;
-					
-				}
+				state = stab_phase ? 4 : 8;
 			}
 		break;
 		case 4://start stab
@@ -216,7 +208,7 @@ if(global.gp_active) and (spell_wait == 0)
 			}
 		break;
 		case 8: // slash spin
-			if(state_time < 60)
+			if(state_time < 80)
 			{
 				boss_movement_goto(obj_player.x, 90, 8);
 			}
@@ -266,8 +258,6 @@ if(global.gp_active) and (spell_wait == 0)
 					}
 				}
 				
-				//stab_aim_x = obj_player.x;
-				//stab_aim_y = obj_player.y;
 				stab_angle = -90;
 				stab_dir = sign(obj_player.x - x);
 				if(stab_dir == 0)
