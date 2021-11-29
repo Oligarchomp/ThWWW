@@ -136,6 +136,7 @@
     {"id":{"name":"boss_s7_3_non","path":"objects/boss_s7_3_non/boss_s7_3_non.yy",},"order":10,},
     {"id":{"name":"boss_s4_5_non","path":"objects/boss_s4_5_non/boss_s4_5_non.yy",},"order":8,},
     {"id":{"name":"spr_sanae_art","path":"sprites/spr_sanae_art/spr_sanae_art.yy",},"order":3,},
+    {"id":{"name":"data_read_string","path":"scripts/data_read_string/data_read_string.yy",},"order":3,},
     {"id":{"name":"obj_shot_base","path":"objects/obj_shot_base/obj_shot_base.yy",},"order":3,},
     {"id":{"name":"spr_base_suika","path":"sprites/spr_base_suika/spr_base_suika.yy",},"order":3,},
     {"id":{"name":"spr_bosstitle","path":"sprites/spr_bosstitle/spr_bosstitle.yy",},"order":1,},

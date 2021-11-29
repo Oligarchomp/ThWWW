@@ -54,19 +54,51 @@ switch(level)
 				var plr = ["r","m","s"];
 				var index = dif[score_difficulty] + plr[global.player_chosen];
 				
-				draw_text(30,30,index)//debug
+				switch(score_difficulty)
+				{
+					case 0:
+						var txt = "Easy ";
+					break;
+					case 1:
+						var txt = "Normal ";
+					break;
+					case 2:
+						var txt = "Hard ";
+					break;
+					case 3:
+						var txt = "Lunatic ";
+					break;
+					case 4:
+						var txt = "Extra ";
+					break;
+				}
+				
+				switch(global.player_chosen)
+				{
+					case P_REIMU:
+						var txt_plr = "Reimu";
+					break;
+					case P_MARISA:
+						var txt_plr = "Marisa";
+					break;
+					case P_SANAE:
+						var txt_plr = "Sanae";
+					break;
+				}
+				draw_text_color(480 - string_width(txt),30,txt ,c_white,c_white,c_white,c_white,1);
+				draw_text_color(480,30,"/ " + txt_plr,c_white,c_white,c_white,c_white,1);
+				
 				
 				for(var i = 0; i < array_length(check) ; i += 1)
 				{
 					var score_name = variable_struct_get(check[i],index + "_name");
-					score_name = score_name == "0" ? "NO NAME" : score_name;
-					score_name += " :"
-					
 					
 					draw_set_font(font_scorename);
-					draw_text_outline(280,40 + i * 40,score_name,c_white,c_white,c_white,c_white,1,c_black);
+					draw_text_color(322,88 + i * 40,score_name,c_white,c_white,c_white,c_white,1);
 					
-					draw_score(variable_struct_get(check[i],index),650,40 + i * 40,spr_score,1,1);
+					draw_text_color(430,88 + i * 40,"/",c_white,c_white,c_white,c_white,1);
+					
+					draw_score(variable_struct_get(check[i],index),627,90 + i * 40,spr_score,1,1);
 			}
 			break;
 			case 7://music room

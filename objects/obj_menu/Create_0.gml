@@ -1129,7 +1129,10 @@ for ( var i = 0 ; i < 10; i += 1) // score nbr
 	for ( var j = 0; j < array_length(global.score_name); j += 1)
 	{
 		variable_struct_set(menu[4].param[i],global.score_name[j],add_zero(data_read("Data.ini",global.score_name[j],i),12));
-		variable_struct_set(menu[4].param[i],global.score_name[j] + "_name",data_read("Data.ini",global.score_name[j] + "_name",i));
+		
+		var txt = string(data_read_string("Data.ini",global.score_name[j] + "_name",i));
+		txt = txt == "0" ? "NO NAME" : txt;
+		variable_struct_set(menu[4].param[i],global.score_name[j] + "_name",txt);
 	}
 }
 
