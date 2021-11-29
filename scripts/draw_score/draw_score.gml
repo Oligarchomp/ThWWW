@@ -14,7 +14,7 @@ function draw_score(argument0,argument1,argument2,argument3,argument4,argument5)
 	var char_dist = sprite_get_width(spr_score) * scl;
 	var alph = argument5;
 	
-	var dot_dist = 6;
+	var dot_dist = 6 * scl;
 	
 	var text_lenght = string_length(text);
 	for(var i = 0; i < text_lenght; i += 1)

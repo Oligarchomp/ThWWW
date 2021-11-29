@@ -47,6 +47,28 @@ switch(level)
 					draw_text_color(620 + check[i].active_offset,80 + i * 50,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
 				}
 			break;
+			case 4://Score room
+				var check = menu[cursor[0]].param;
+				
+				var dif = ["e","n","h","l","ex"];
+				var plr = ["r","m","s"];
+				var index = dif[score_difficulty] + plr[global.player_chosen];
+				
+				draw_text(30,30,index)//debug
+				
+				for(var i = 0; i < array_length(check) ; i += 1)
+				{
+					var score_name = variable_struct_get(check[i],index + "_name");
+					score_name = score_name == "0" ? "NO NAME" : score_name;
+					score_name += " :"
+					
+					
+					draw_set_font(font_scorename);
+					draw_text_outline(280,40 + i * 40,score_name,c_white,c_white,c_white,c_white,1,c_black);
+					
+					draw_score(variable_struct_get(check[i],index),650,40 + i * 40,spr_score,1,1);
+			}
+			break;
 			case 7://music room
 				var check = menu[cursor[0]].param;
 				

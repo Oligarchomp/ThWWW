@@ -10,7 +10,7 @@ spell_set_spell("s7_mid1",BOSS_PALE,40000000)
 spell_set_name("spell_s7_mid1","spell_s7_mid1","spell_s7_mid1","spell_s7_mid1")
 spell_set_life(900,250);
 
-var wait = global.game_type == GAME_FULL ? 160 : 90; //spell practice
+var wait = global.game_type == GAME_EXTRA ? 160 : 90; //spell practice
 
 spell_set_time(28,false,wait);
 

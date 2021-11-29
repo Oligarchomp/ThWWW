@@ -15,6 +15,14 @@ if (global.pause_pressed)
 	}
 }
 
+
+if(global.life < 0)
+{
+	pause_state = 1;
+	pause_type = PAUSE_GAMEOVER;
+}
+
+
 //pause
 switch(pause_state)
 {

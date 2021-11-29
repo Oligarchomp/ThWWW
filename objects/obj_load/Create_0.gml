@@ -35,7 +35,7 @@ global.event_list = ds_list_create();
 global.wait_list = ds_list_create();
 
 
-
+global.score_name = ["er","nr","hr","lr","exr","em","nm","hm","lm","exm","es","ns","hs","ls","exs"]
 
 //define player_id
 #macro P_REIMU 0
@@ -123,7 +123,11 @@ global.wait_list = ds_list_create();
 #macro MENU_BACK 5
 #macro MENU_SPELL 6
 #macro MENU_MUSIC 7
+#macro MENU_CONTINUE 8
 #macro MENU_QUIT 9
+#macro MENU_INVALID 10
+#macro MENU_REPLAY 11
+#macro MENU_NOTHING 12
 
 
 //define pause type

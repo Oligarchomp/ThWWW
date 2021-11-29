@@ -4,7 +4,7 @@
 function get_text(argument0) {
 
 	var string_name = argument0;
-	var final_string = argument0; // just so it exist
+	var final_string = argument0;
 
 	var file = file_text_open_read(working_directory + "\GameText_eng.txt");
 	
@@ -24,9 +24,10 @@ function get_text(argument0) {
 	final_string = string_replace(final_string,string_name,"")
 	final_string = string_replace(final_string," = ","")
 	
-	while(string_pos("*",final_string))
+	
+	while(string_pos("$",final_string))
 	{
-		final_string = string_replace(final_string,"*","\n")//this makes no freaking sense! Why does it only works like this ?
+		final_string = string_replace(final_string,"$","\n")//this makes no sense! Why does it only works like this ?
 	}
 
 	file_text_close(file);

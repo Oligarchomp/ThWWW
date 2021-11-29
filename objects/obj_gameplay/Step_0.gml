@@ -3,8 +3,7 @@
 
 //event action
 if(global.gp_active)
-{
-	
+{	
 	var wait = global.wait_list[|event_step]
 	
 	if (event_step < ds_list_size(global.event_list))
@@ -71,6 +70,9 @@ switch(pause_type)
 	case PAUSE_END:
 		var menu = done;
 	break;
+	case PAUSE_GAMEOVER:
+		var menu = gameover;
+	break;
 }
 
 switch(level)
@@ -102,7 +104,7 @@ if(pause_state == 1) and (cursor_lockout == 0)
 
 	if(global.shot_pressed)
 	{
-		play_sound(sfx_menu_valid,1,false);
+		
 	
 		var act = array_check[cursor[level]].action;
 	
@@ -125,8 +127,34 @@ if(pause_state == 1) and (cursor_lockout == 0)
 				room_transition(room_main);
 				cursor_lockout = 1000;
 			break;
+			case MENU_CONTINUE:
+				level -= 1;
+				global.continues -= 1;
+				
+				global.life = global.starting_life;
+				global.bomb = global.starting_bomb;
+				
+				play_sound(sfx_extend,1,false);
+				
+				if(global.continues == 0)
+				{
+					gameover[0].action = MENU_INVALID;
+				}
+			break;
+		}
+		
+		switch(act)
+		{
+			case MENU_INVALID:
+				play_sound(sfx_menu_invalid,1,false);
+			break;
+			default:
+				play_sound(sfx_menu_valid,1,false);
+			break;
 		}
 	}
+	
+	
 	
 	if(global.bomb_pressed)
 	{

@@ -99,6 +99,7 @@
     {"id":{"name":"act_s7_8","path":"objects/act_s7_8/act_s7_8.yy",},"order":29,},
     {"id":{"name":"obj_enemy_defeat","path":"objects/obj_enemy_defeat/obj_enemy_defeat.yy",},"order":0,},
     {"id":{"name":"font_pause","path":"fonts/font_pause/font_pause.yy",},"order":6,},
+    {"id":{"name":"font_scorename","path":"fonts/font_scorename/font_scorename.yy",},"order":9,},
     {"id":{"name":"obj_boss_explode","path":"objects/obj_boss_explode/obj_boss_explode.yy",},"order":1,},
     {"id":{"name":"spr_tree","path":"sprites/spr_tree/spr_tree.yy",},"order":2,},
     {"id":{"name":"act_s7_51_midspell","path":"objects/act_s7_51_midspell/act_s7_51_midspell.yy",},"order":7,},

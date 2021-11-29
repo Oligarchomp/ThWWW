@@ -36,7 +36,7 @@ text_y_dist = 30;
 text_hide_plus = text_y_dist * 4;
 text_hide_plus_to = 0;
 
-if(global.continues == 3) //good endings
+if(global.continues == global.continues_max) //good endings
 {
 	switch(global.player_chosen)
 	{

@@ -34,10 +34,15 @@ global.boss = BOSS_APPLE;
 global.score = 0;
 score_to_draw = 0;
 
-global.life = 2;
-global.bomb = 2;
+global.starting_life = 2;
+global.starting_bomb = 2;
 
-global.continues = 3;
+global.life = global.starting_life;
+global.bomb = global.starting_bomb;
+
+
+global.continues_max = 3;
+global.continues = global.continues_max;
 
 global.item = 0;//
 global.poc = 0;
@@ -167,11 +172,44 @@ done =
 	{
 		title : get_text("pause_replay"),
 		active_offset : 0,
+		action : MENU_REPLAY
 	},
 	{
 		title : get_text("pause_title"),
 		active_offset : 0,
 		action : MENU_TITLE
+	}
+]
+
+gameover =
+[
+	{
+		title : get_text("pause_continue"),
+		active_offset : 0,
+		action : MENU_CONTINUE
+	},
+	{
+		title : get_text("pause_replay"),
+		active_offset : 0,
+		action : MENU_REPLAY
+	},
+	{
+		title : get_text("pause_title"),
+		active_offset : 0,
+		action : MENU_MENU,
+		param :
+		[
+			{
+				title : get_text("pause_yes"),
+				active_offset : 0,
+				action : MENU_TITLE
+			},
+			{
+				title : get_text("pause_no"),
+				active_offset : 0,
+				action : MENU_BACK
+			}
+		]
 	}
 ]
 

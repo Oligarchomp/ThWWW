@@ -235,11 +235,8 @@ if (global.gp_active)
 						is_capturing = false;	
 					}
 				break;
-				case 59:
-					if(global.life > 0)
-					{
-						global.life -= 1;
-					}
+				case 59:	
+					global.life -= 1;
 				break;
 				case 60:
 					alpha = 1;
@@ -260,7 +257,7 @@ if (global.gp_active)
 						auto_collect = false;
 					}
 					
-					global.bomb = 2;
+					global.bomb = global.starting_bomb;
 				break;
 			}
 		break;

@@ -77,39 +77,67 @@ if(cursor_lockout == 0)
 						
 						play_sound(sfx_menu_move,1,false);
 					break;
+					case 4:
+						score_difficulty += global.down_pressed - global.up_pressed;
+						score_difficulty %= 5;
+						score_difficulty += score_difficulty < 0 ? 5 : 0;
+						
+						play_sound(sfx_menu_move,1,false);
+					break;
 				}
 			break;
 		}
 	}
 
-	if(level == 2)
+	if(abs(global.right_pressed - global.left_pressed))
 	{
-		if(abs(global.right_pressed - global.left_pressed))
+		var need_move = false;
+		switch(cursor[0])//player
 		{
-			switch(cursor[0])//player
-			{
-				case 0:
-				case 1:
-				case 2:
-				
-					global.player_chosen += global.right_pressed - global.left_pressed;
-					global.player_chosen %= 3;
-					global.player_chosen += global.player_chosen < 0 ? 3 : 0;
-				
-					play_sound(sfx_menu_move,1,false);
-					
-				break;
-			}
+			case 0:
+			case 1:
+			case 2:
+				if(level == 2)
+				{
+					var need_move = true;
+				}
+			break;
+			case 4:
+				if(level == 1)
+				{
+					var need_move = true;
+				}
+			break;
 		}
+		
+		if(need_move)
+		{
+			global.player_chosen += global.right_pressed - global.left_pressed;
+			global.player_chosen %= 3;
+			global.player_chosen += global.player_chosen < 0 ? 3 : 0;
+				
+			play_sound(sfx_menu_move,1,false);
+		}
+		
 	}
 
 
 	if(global.shot_pressed)
 	{
-		play_sound(sfx_menu_valid,1,false);
-	
-	
 		var act = array_check[cursor[level]].action;
+	
+		switch(act)
+		{
+			case MENU_NOTHING:
+			break;
+			case MENU_INVALID:
+				play_sound(sfx_menu_invalid,1,false);
+			break;
+			default:
+				play_sound(sfx_menu_valid,1,false);
+			break;
+		}
+	
 	
 		switch(act)
 		{
@@ -177,7 +205,6 @@ if(cursor_lockout == 0)
 			case MENU_QUIT:
 				game_end();
 			break;
-		
 		}
 	}
 
@@ -190,9 +217,9 @@ if(cursor_lockout == 0)
 		}
 		else
 		{
-			if(cursor[0] != 7)
+			if(cursor[0] != 8)
 			{
-				cursor[0] = 7;
+				cursor[0] = 8;
 			}
 			else
 			{

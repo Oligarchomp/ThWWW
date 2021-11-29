@@ -898,24 +898,28 @@ menu =
 					{
 						title : get_text("spell_s7_2"),
 						data_name : "s7_2",
+						comment : get_text("com_s7_2"),
 						param : boss_s7_25_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s7_3"),
 						data_name : "s7_3",
+						comment : get_text("com_s7_3"),
 						param : boss_s7_35_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s7_4"),
 						data_name : "s7_4",
+						comment : get_text("com_s7_4"),
 						param : boss_s7_45_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s7_5"),
 						data_name : "s7_5",
+						comment : get_text("com_s7_5"),
 						param : boss_s7_55_spell,
 						diff : 1
 					},
@@ -934,6 +938,7 @@ menu =
 					{
 						title : get_text("spell_s7_8"),
 						data_name : "s7_8",
+						comment : get_text("com_s7_8"),
 						param : boss_s7_85_spell,
 						diff : 1
 					},
@@ -958,6 +963,12 @@ menu =
 	{
 		title : "PLAYER DATA",
 		description : get_text("menu_player"),
+		action : MENU_MENU,
+		param : 
+		[
+			{},{},{},{},{},{},{},{},{},{}
+		]
+		//set below
 	},
 	{
 		title : "REPLAY",
@@ -1108,12 +1119,27 @@ menu =
 	}
 ]
 
+
+
+//high scores
+for ( var i = 0 ; i < 10; i += 1) // score nbr
+{
+	variable_struct_set(menu[4].param[i],"action",MENU_NOTHING);
+	
+	for ( var j = 0; j < array_length(global.score_name); j += 1)
+	{
+		variable_struct_set(menu[4].param[i],global.score_name[j],add_zero(data_read("Data.ini",global.score_name[j],i),12));
+		variable_struct_set(menu[4].param[i],global.score_name[j] + "_name",data_read("Data.ini",global.score_name[j] + "_name",i));
+	}
+}
+
+score_difficulty = 0;
+
 menu_description_alpha = 0;
 
 cursor_lockout = 0;
 
 over_offset = 26;
-
 
 
 difficuly = [{},{},{},{},{}]
@@ -1152,6 +1178,8 @@ player =
 		x_to : 700
 	}
 ]
+
+
 
 
 //setting active_offset for everything
@@ -1197,8 +1225,11 @@ for(var i = 0; i < array_length(menu[3].param); i += 1)//stage
 	}
 }
 
-//create bubble
 
+
+
+
+//create bubbles
 for(var y_bubble = 300; y_bubble > 0; y_bubble -= 50)
 {
 	instance_create_depth(80 - 100 + rng(200,false,6),y_bubble - rng(60,false,3),depth + 1,obj_bubble_main);
