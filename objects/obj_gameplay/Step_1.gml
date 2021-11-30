@@ -1,6 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
+if(keyboard_check(vk_space))
+{
+	x = 0;	
+}
+
 if (global.pause_pressed)
 {
 	if(global.gp_active)
@@ -42,6 +48,8 @@ else
 }
 
 
+
+
 //pause
 switch(pause_state)
 {
@@ -69,7 +77,6 @@ switch(pause_state)
 				mem_left_down = global.left_down;
 				mem_down_down = global.down_down;
 				mem_up_down = global.up_down;
-				
 			}
 		}
 		

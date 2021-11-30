@@ -18,7 +18,6 @@ bomb_btn = gp_face2;
 bomb_vk = ord("X");
 
 
-
 global.pause_pressed = (gamepad_button_check_pressed(0,pause_btn)) or (keyboard_check_pressed(pause_vk))
 
 var pause = false;

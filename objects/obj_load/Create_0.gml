@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 
+
 window_set_cursor(cr_none);
 
 instance_create_depth(0,0,0,obj_bgm);
