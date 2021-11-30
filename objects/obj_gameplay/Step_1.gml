@@ -59,20 +59,20 @@ switch(pause_state)
 				mem_down_down = global.down_down;
 				mem_up_down = global.up_down;
 			}
-		}
-		else
-		{
-			/*
-			mem_shot_down = global.shot_down;
-			mem_focused_down = global.focused_down;
-			mem_bomb_down = global.bomb_down;
+			else
+			{
+				mem_shot_down = global.shot_down;
+				mem_focused_down = global.focused_down;
+				mem_bomb_down = global.bomb_down;
 
-			mem_right_down = global.right_down;
-			mem_left_down = global.left_down;
-			mem_down_down = global.down_down;
-			mem_up_down = global.up_down;
-			*/
+				mem_right_down = global.right_down;
+				mem_left_down = global.left_down;
+				mem_down_down = global.down_down;
+				mem_up_down = global.up_down;
+				
+			}
 		}
+		
 		
 		text_offset = goto_value(text_offset,0,-text_offset_max / pause_spd );
 		pause_alpha = goto_value(pause_alpha,1,1 / pause_spd);
@@ -98,15 +98,14 @@ switch(pause_state)
 			}
 			else
 			{
-				/*
 				global.shot_changed = mem_shot_down != global.shot_down;
 				global.focused_changed = mem_focused_down != global.focused_down;
-				global.left_changed = mem_left_down != global.left_down;
 				global.bomb_changed = mem_bomb_down != global.bomb_down;
+				
+				global.left_changed = mem_left_down != global.left_down;
 				global.right_changed = mem_right_down != global.right_down;
 				global.up_changed = mem_up_down != global.up_down;
 				global.down_changed = mem_down_down != global.down_down;
-				*/
 			}
 
 		}

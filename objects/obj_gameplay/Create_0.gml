@@ -110,7 +110,7 @@ reset_controle();
 
 if(global.play_type == PLAY_MANUAL)
 {
-	randomize();
+	randomise();
 	var seed = random_get_seed();
 	
 	var ev_str = "ev = "

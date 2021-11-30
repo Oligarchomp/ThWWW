@@ -30,11 +30,11 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_228B6419","path":"rooms/room_gp/room_gp.yy",},
     {"name":"inst_89D8FF8","path":"rooms/room_gp/room_gp.yy",},
     {"name":"inst_20FB6943","path":"rooms/room_gp/room_gp.yy",},
     {"name":"inst_3242912B","path":"rooms/room_gp/room_gp.yy",},
     {"name":"inst_5301C58D","path":"rooms/room_gp/room_gp.yy",},
+    {"name":"inst_228B6419","path":"rooms/room_gp/room_gp.yy",},
     {"name":"inst_32B6489D","path":"rooms/room_gp/room_gp.yy",},
     {"name":"inst_236B2187","path":"rooms/room_gp/room_gp.yy",},
   ],

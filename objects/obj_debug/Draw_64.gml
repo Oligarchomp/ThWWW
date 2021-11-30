@@ -10,3 +10,7 @@ if (global.debug) and (room == room_gp)
 	
 	draw_text(600,20,global.dps_draw);
 }
+
+
+draw_text(100,100,obj_controle)
+draw_text(100,150,obj_gameplay)

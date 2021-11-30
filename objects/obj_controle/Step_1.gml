@@ -3,7 +3,7 @@
 // Begin step makes all the difference
 // It's crazy how A SINGLE frame latence can be so detrimental to gameplay (looking at you undertale)
 
-depth = -20;
+
 
 shot_btn = gp_face1;
 shot_vk = ord("A")
@@ -16,6 +16,7 @@ pause_vk = vk_enter;
 
 bomb_btn = gp_face2;
 bomb_vk = ord("X");
+
 
 
 global.pause_pressed = (gamepad_button_check_pressed(0,pause_btn)) or (keyboard_check_pressed(pause_vk))
@@ -76,20 +77,12 @@ if(old_shot_down != global.shot_down)
 	global.shot_changed = true;
 	old_shot_down = global.shot_down;
 }
-else
-{
-	global.shot_pressed = false;
-}
 
 
 if(old_focused_down != global.focused_down)
 {
 	old_focused_down = global.focused_down;
 	global.focused_changed = true;
-}
-else
-{
-	global.focused_pressed = false;
 }
 	
 
@@ -98,10 +91,6 @@ if(old_bomb_down != global.bomb_down)
 	old_bomb_down = global.bomb_down;
 	global.bomb_changed = true;
 }
-else
-{
-	global.bomb_pressed = false;
-}
 
 
 if(old_left_down != global.left_down)
@@ -109,19 +98,11 @@ if(old_left_down != global.left_down)
 	old_left_down = global.left_down;
 	global.left_changed = true;
 }
-else
-{
-	global.left_pressed = false;
-}
 
 if(old_right_down != global.right_down)
 {
 	old_right_down = global.right_down;
 	global.right_changed = true;
-}
-else
-{
-	global.right_pressed = false;
 }
 
 if(old_down_down != global.down_down)
@@ -129,18 +110,10 @@ if(old_down_down != global.down_down)
 	old_down_down = global.down_down;
 	global.down_changed = true;
 }
-else
-{
-	global.down_pressed = false;
-}
 
 if(old_up_down != global.up_down)
 {
 	old_up_down = global.up_down;
 	global.up_changed = true;
-}
-else
-{
-	global.up_pressed = false;
 }
 
