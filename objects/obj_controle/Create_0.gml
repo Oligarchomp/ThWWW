@@ -39,7 +39,6 @@ global.bomb_changed = false;
 global.right_changed = false;
 global.up_changed = false;
 global.down_changed = false;
-global.bomb_changed = false;
 // True is the controller stick is already tilted, used for directional pressed
 stick_left = false;
 stick_right = false;

@@ -56,7 +56,7 @@ switch(global.game_type)
 	break;
 	case GAME_SPELL:
 		global.life = 0;
-		global.bomb = 0;
+		global.bomb = 2;
 		
 		ds_list_add(item_extend,9999);
 	break;
@@ -157,6 +157,8 @@ end_wait = 0;
 
 pause_type = PAUSE_MANUAL;
 pause_state = 0;
+old_pause_state = 0;
+pause_state_time = -1;
 //0 = not paused
 //1 = paused
 //2 = leaving pause
