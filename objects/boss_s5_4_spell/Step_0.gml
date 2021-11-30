@@ -7,11 +7,11 @@ if(global.gp_active) and (spell_wait == 0)
 		case 0:
 			var sword_size = 5;
 			
-			var rice_open = 22;
-			var rice_spd_shoot = 4.5;
-			var rice_spd_git = 2;
+			var rice_open = 30;
+			var rice_spd_shoot = 4;
+			var rice_spd_git = 1.5;
 			var rice_spd_div = 2;
-			var rice_nbr = 0;
+			var rice_nbr = 1;
 			
 			var sword_wait = 2;
 			var sword_row = 1;

@@ -101,6 +101,44 @@ switch(global.difficulty)
 }
 global.piv_max = 5000000;
 global.stage = 1;
+old_stage = 1;
+
+replay = [];
+next_input_time_index = 0;
+
+reset_controle();
+
+if(global.play_type == PLAY_MANUAL)
+{
+	randomize();
+	var seed = random_get_seed();
+	
+	var ev_str = "ev = "
+	var wait_str = "wait = "
+	for(var i = 0; i < ds_list_size(global.event_list); i += 1)
+	{
+		ev_str += string(global.event_list[|i]) + ",";
+		wait_str += string(global.wait_list[|i]) + ",";
+	}
+
+	var file = file_text_open_write(working_directory + "Replay.txt");
+	file_text_write_string(file,ev_str);
+	file_text_writeln(file);
+	file_text_write_string(file,wait_str);
+	file_text_writeln(file);
+	file_text_write_string(file,"game_type = " + string(global.game_type));
+	file_text_writeln(file);
+	file_text_write_string(file,"player = " + string(global.player_chosen));
+	file_text_writeln(file);
+	file_text_write_string(file,"difficulty = " + string(global.difficulty));
+	file_text_writeln(file);
+	file_text_write_string(file,"seed = " + string(seed));
+	file_text_close(file);
+}
+else
+{
+	random_set_seed(global.replay_seed[0]);
+}
 
 
 instance_create_depth(room_width / 2,430,global.player_depth,obj_player);

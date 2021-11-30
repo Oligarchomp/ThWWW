@@ -966,13 +966,14 @@ menu =
 		action : MENU_MENU,
 		param : 
 		[
-			{},{},{},{},{},{},{},{},{},{}
+			//{},{},{},{},{},{},{},{},{},{}
 		]
 		//set below
 	},
 	{
 		title : "REPLAY",
 		description : get_text("menu_replay"),
+		action : MENU_PLAY_REPLAY
 	},
 	{
 		title : "OPTION",
@@ -1124,6 +1125,7 @@ menu =
 //high scores
 for ( var i = 0 ; i < 10; i += 1) // score nbr
 {
+	menu[4].param[i] = {};
 	variable_struct_set(menu[4].param[i],"action",MENU_NOTHING);
 	
 	for ( var j = 0; j < array_length(global.score_name); j += 1)

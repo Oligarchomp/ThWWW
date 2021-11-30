@@ -51,8 +51,97 @@ switch(pause_state)
 global.gp_active = pause_state == 0;
 
 
-
 if(global.gp_active)
 {
 	global.time += 1;
+	
+	if(global.play_type == PLAY_MANUAL)
+	{
+		//replay
+		var rep = ""
+		if(global.shot_changed)
+		{
+			rep += "a";	
+		}
+		if(global.bomb_changed)
+		{
+			rep += "b";	
+		}
+		if(global.focused_changed)
+		{
+			rep += "x";	
+		}
+		if(global.left_changed)
+		{
+			rep += "l";	
+		}
+		if(global.right_changed)
+		{
+			rep += "r";	
+		}
+		if(global.up_changed)
+		{
+			rep += "u";	
+		}
+		if(global.down_changed)
+		{
+			rep += "d";	
+		}
+	
+
+		if(rep != "")
+		{
+			replay[global.time]	= rep;
+		}
+		
+	}
+	else
+	{
+		
+		if (next_input_time_index < array_length(global.replay_input_time)) and (global.replay_input_time[next_input_time_index] == global.time)
+		{
+			var input = global.replay_input[next_input_time_index];
+			
+			if(string_count("a",input) == 1)
+			{
+				global.shot_down = !global.shot_down;
+			}
+			
+			if(string_count("b",input) == 1)
+			{
+				global.bomb_down = !global.bomb_down;
+			}
+			
+			if(string_count("x",input)== 1)
+			{
+				global.focused_down = !global.focused_down;	
+			}
+			
+			if(string_count("u",input)== 1)
+			{
+				global.up_down = !global.up_down;	
+			}
+			
+			if(string_count("d",input)== 1)
+			{
+				global.down_down = !global.down_down;	
+			}
+			
+			if(string_count("l",input)== 1)
+			{
+				global.left_down = !global.left_down;	
+			}
+			
+			if(string_count("r",input)== 1)
+			{
+				global.right_down = !global.right_down;	
+			}
+			
+			next_input_time_index += 1;
+		}
+		
+	}
+
 }
+
+

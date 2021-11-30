@@ -17,33 +17,135 @@ pause_vk = vk_enter;
 bomb_btn = gp_face2;
 bomb_vk = ord("X");
 
-/// INPUT
-global.shot_down = (gamepad_button_check(0,shot_btn)) or (keyboard_check(shot_vk))
-global.shot_pressed = (gamepad_button_check_pressed(0,shot_btn)) or (keyboard_check_pressed(shot_vk))
-
-global.focused_down = (gamepad_button_check(0,focused_btn)) or (keyboard_check(focused_vk)) 
-global.focused_pressed = (gamepad_button_check_pressed(0,focused_btn)) or (keyboard_check_pressed(focused_vk)) 
 
 global.pause_pressed = (gamepad_button_check_pressed(0,pause_btn)) or (keyboard_check_pressed(pause_vk))
 
+var pause = false;
+with(obj_gameplay)
+{
+	if(pause_state == 1)
+	{
+		pause = true;	
+	}
+}
+
+if !((global.play_type == PLAY_REPLAY) and (room == room_gp)) or (pause)
+{
+	global.shot_down = (gamepad_button_check(0,shot_btn)) or (keyboard_check(shot_vk))
+
+	global.focused_down = (gamepad_button_check(0,focused_btn)) or (keyboard_check(focused_vk)) 
+	
+	global.bomb_down = (gamepad_button_check(0,bomb_btn)) or (keyboard_check(bomb_vk)) 
+	
+	
+	var axis_value = 0.5;
+
+	global.right_down = (gamepad_button_check(0,gp_padr)) or (keyboard_check(vk_right)) or ( gamepad_axis_value(0, gp_axislh) > axis_value);
+	global.left_down = (gamepad_button_check(0,gp_padl)) or (keyboard_check(vk_left)) or ( gamepad_axis_value(0, gp_axislh) < -axis_value);
+	global.down_down = (gamepad_button_check(0,gp_padd)) or (keyboard_check(vk_down)) or (gamepad_axis_value(0, gp_axislv) > axis_value);
+	global.up_down = (gamepad_button_check(0,gp_padu)) or (keyboard_check(vk_up)) or (gamepad_axis_value(0, gp_axislv) < -axis_value)
+
+	// used for directional press ( not down)
+	stick_left = gamepad_axis_value(0, gp_axislh) < -axis_value;
+	stick_right = gamepad_axis_value(0, gp_axislh) > axis_value;
+	stick_up = gamepad_axis_value(0, gp_axislv) < -axis_value;
+	stick_down = gamepad_axis_value(0, gp_axislv) > axis_value;
+}
+
+
+global.shot_changed = false;
+global.focused_changed = false;
+global.bomb_changed = false;
+global.left_changed = false;
+global.right_changed = false;
+global.up_changed = false;
+global.down_changed = false;
+	
+
+/// INPUT
+
+if(old_shot_down != global.shot_down)
+{
+	global.shot_changed = true;
+	old_shot_down = global.shot_down;
+	global.shot_pressed = global.shot_down;//(gamepad_button_check_pressed(0,shot_btn)) or (keyboard_check_pressed(shot_vk))
+}
+else
+{
+	global.shot_pressed = false;
+}
+
+
+if(old_focused_down != global.focused_down)
+{
+	old_focused_down = global.focused_down;
+	global.focused_changed = true;
+	global.focused_pressed = global.focused_down//(gamepad_button_check_pressed(0,focused_btn)) or (keyboard_check_pressed(focused_vk)) 
+}
+else
+{
+	global.focused_pressed = false;
+}
+	
+
+if(old_bomb_down != global.bomb_down)
+{
+	old_bomb_down = global.bomb_down;
+	global.bomb_changed = true;
+	global.bomb_pressed = global.bomb_down//(gamepad_button_check_pressed(0,focused_btn)) or (keyboard_check_pressed(focused_vk)) 
+}
+else
+{
+	global.bomb_pressed = false;
+}
+
+/*
 global.bomb_pressed = (gamepad_button_check_pressed(0,bomb_btn)) or (keyboard_check_pressed(bomb_vk))
-
-var axis_value = 0.5;
-
-global.left_pressed = ( gamepad_axis_value(0, gp_axislh) < -axis_value) and (!stick_left) or (gamepad_button_check_pressed(0,gp_padl)) or (keyboard_check_pressed(vk_left));
-global.right_pressed =  ( gamepad_axis_value(0, gp_axislh) > axis_value) and (!stick_right) or (gamepad_button_check_pressed(0,gp_padr)) or (keyboard_check_pressed(vk_right));
-global.down_pressed = (gamepad_axis_value(0, gp_axislv) > axis_value) and (!stick_down) or (gamepad_button_check_pressed(0,gp_padd)) or (keyboard_check_pressed(vk_down));
-global.up_pressed = (gamepad_axis_value(0, gp_axislv) < -axis_value) and (!stick_up) or (gamepad_button_check_pressed(0,gp_padu)) or (keyboard_check_pressed(vk_up));
-// used for directional press ( not down)
-stick_left = gamepad_axis_value(0, gp_axislh) < -axis_value;
-stick_right = gamepad_axis_value(0, gp_axislh) > axis_value;
-stick_up = gamepad_axis_value(0, gp_axislv) < -axis_value;
-stick_down = gamepad_axis_value(0, gp_axislv) > axis_value;
-
-global.right_down = (gamepad_button_check(0,gp_padr)) or (keyboard_check(vk_right)) or ( gamepad_axis_value(0, gp_axislh) > axis_value);
-global.left_down = (gamepad_button_check(0,gp_padl)) or (keyboard_check(vk_left)) or ( gamepad_axis_value(0, gp_axislh) < -axis_value);
-global.down_down = (gamepad_button_check(0,gp_padd)) or (keyboard_check(vk_down)) or (gamepad_axis_value(0, gp_axislv) > axis_value);
-global.up_down = (gamepad_button_check(0,gp_padu)) or (keyboard_check(vk_up)) or (gamepad_axis_value(0, gp_axislv) < -axis_value)
+global.bomb_changed = global.bomb_pressed;
+*/
 
 
+if(old_left_down != global.left_down)
+{
+	old_left_down = global.left_down;
+	global.left_changed = true;
+	global.left_pressed = global.left_down;//( gamepad_axis_value(0, gp_axislh) < -axis_value) and (!stick_left) or (gamepad_button_check_pressed(0,gp_padl)) or (keyboard_check_pressed(vk_left));
+}
+else
+{
+	global.left_pressed = false;
+}
+
+if(old_right_down != global.right_down)
+{
+	old_right_down = global.right_down;
+	global.right_changed = true;
+	global.right_pressed = global.right_down;// ( gamepad_axis_value(0, gp_axislh) > axis_value) and (!stick_right) or (gamepad_button_check_pressed(0,gp_padr)) or (keyboard_check_pressed(vk_right));
+}
+else
+{
+	global.right_pressed = false;
+}
+
+if(old_down_down != global.down_down)
+{
+	old_down_down = global.down_down;
+	global.down_changed = true;
+	global.down_pressed = global.down_down;// (gamepad_axis_value(0, gp_axislv) > axis_value) and (!stick_down) or (gamepad_button_check_pressed(0,gp_padd)) or (keyboard_check_pressed(vk_down));
+}
+else
+{
+	global.down_pressed = false;
+}
+
+if(old_up_down != global.up_down)
+{
+	old_up_down = global.up_down;
+	global.up_changed = true;
+	global.up_pressed = global.up_down;// (gamepad_axis_value(0, gp_axislv) < -axis_value) and (!stick_up) or (gamepad_button_check_pressed(0,gp_padu)) or (keyboard_check_pressed(vk_up));
+}
+else
+{
+	global.up_pressed = false;
+}
 

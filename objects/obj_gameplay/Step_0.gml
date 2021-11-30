@@ -30,6 +30,27 @@ if(global.gp_active)
 			{
 				cursor[0] = array_length(cursor);	
 			}
+			
+			//saving input
+			if(global.play_type == PLAY_MANUAL)
+			{
+				var input = "input = ";
+				var input_time = "input_time = ";
+				for(var i = 0; i < array_length(replay); i += 1)
+				{
+					if (string(replay[i]) != 0)
+					{
+						input += replay[i] + ",";
+						input_time += string(i) + ",";
+					}
+				}
+				var file = file_text_open_append(working_directory + "Replay.txt");
+				file_text_writeln(file);
+				file_text_write_string(file,input);
+				file_text_writeln(file);
+				file_text_write_string(file,input_time);
+				file_text_close(file);
+			}
 		}
 	}
 	

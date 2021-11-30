@@ -37,9 +37,11 @@ global.difficulty = 3;
 global.event_list = ds_list_create();
 global.wait_list = ds_list_create();
 
-
-
 global.score_name = ["er","nr","hr","lr","exr","em","nm","hm","lm","exm","es","ns","hs","ls","exs"]
+
+global.replay_input = [];
+global.replay_input_time = [];
+global.replay_seed = [];
 
 //define player_id
 #macro P_REIMU 0
@@ -132,6 +134,7 @@ global.score_name = ["er","nr","hr","lr","exr","em","nm","hm","lm","exm","es","n
 #macro MENU_INVALID 10
 #macro MENU_REPLAY 11
 #macro MENU_NOTHING 12
+#macro MENU_PLAY_REPLAY 13
 
 
 //define pause type
@@ -140,10 +143,25 @@ global.score_name = ["er","nr","hr","lr","exr","em","nm","hm","lm","exm","es","n
 #macro PAUSE_END 2
 
 //define game type
-
 #macro GAME_FULL 0
 #macro GAME_STAGE 1
 #macro GAME_EXTRA 2
 #macro GAME_SPELL 3
 
-global.game_type = GAME_FULL
+global.game_type = GAME_FULL;
+
+//define play type
+#macro PLAY_MANUAL 0
+#macro PLAY_REPLAY 1
+
+global.play_type = PLAY_MANUAL;
+
+//define replay parameter
+#macro REPLAY_INPUT 0
+#macro REPLAY_EVENT 1
+#macro REPLAY_WAIT 2 
+#macro REPLAY_GAMETYPE 3
+#macro REPLAY_SEED 4
+#macro REPLAY_INPUT_TIME 5
+#macro REPLAY_PLAYER 6
+#macro REPLAY_DIFFICULTY 7

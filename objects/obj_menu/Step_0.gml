@@ -158,6 +158,7 @@ if(cursor_lockout == 0)
 				cursor_lockout = 100000;
 				
 				global.game_type = GAME_FULL;
+				global.play_type = PLAY_MANUAL;
 				
 				play_sound(sfx_spawn_light,1,false);
 				
@@ -186,6 +187,8 @@ if(cursor_lockout == 0)
 					global.game_type = GAME_STAGE;	
 				}
 				
+				global.play_type = PLAY_MANUAL;
+				
 				add_stage(param);
 				
 				cursor_lockout = 100000;
@@ -196,6 +199,7 @@ if(cursor_lockout == 0)
 				room_transition(room_gp);
 				
 				global.game_type = GAME_SPELL;
+				global.play_type = PLAY_MANUAL;
 				
 				var param = array_check[cursor[level]].param;
 				
@@ -211,6 +215,27 @@ if(cursor_lockout == 0)
 			break;
 			case MENU_MUSIC:
 				set_bgm(array_check[cursor[level]].music,array_check[cursor[level]].intro)
+			break;
+			case MENU_PLAY_REPLAY:
+				room_transition(room_gp);
+				global.play_type = PLAY_REPLAY;
+				
+				var ev = get_replay(REPLAY_EVENT,"Replay.txt");
+				var wait = get_replay(REPLAY_WAIT,"Replay.txt");
+				
+				for (var i = 0; i < array_length(ev); i += 1)
+				{
+					add_stage_event(asset_get_index(object_get_name(ev[i])),wait[i]);
+				}
+				
+				global.game_type = get_replay(REPLAY_GAMETYPE,"Replay.txt");
+				global.player_chosen = get_replay(REPLAY_PLAYER,"Replay.txt");
+				global.difficulty = get_replay(REPLAY_DIFFICULTY,"Replay.txt");
+				
+				global.replay_input = get_replay(REPLAY_INPUT,"Replay.txt");
+				global.replay_input_time = get_replay(REPLAY_INPUT_TIME,"Replay.txt");
+				
+				global.replay_seed = get_replay(REPLAY_SEED,"Replay.txt");
 			break;
 			case MENU_QUIT:
 				game_end();

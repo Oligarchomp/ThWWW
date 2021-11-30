@@ -201,11 +201,6 @@ if(global.gp_active) and (spell_wait == 0)
 			shoot_ring_row(DAN_KNIFE,1,aim_nbr_ring,aim_nbr_row,obj_boss.x,obj_boss.y,998,aim_spd_min,aim_spd_max,sfx_redirect1,2);
 		}
 		
-		if(step % 4 == 0)
-		{
-			play_sound(sfx_redirect3,1,false);
-		}
-		
 		//rain
 		if(step % 2 == 0)
 		{

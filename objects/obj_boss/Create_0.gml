@@ -30,7 +30,7 @@ movement_type = 0;
 boss_id = global.boss;
 // 0 = Wakasagihime
 // 1 = Apple
-// 2 = Serinu
+// 2 = Serene
 //etc
 
 switch(boss_id)

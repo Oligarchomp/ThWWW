@@ -1,12 +1,12 @@
-/// @function get_text(string)
+/// @function get_text_file(string,file)
 /// @description Get the correct string in the external text file
 /// @param {string} string the name of the string to look at for
-function get_text(argument0) {
+function get_text_file(argument0,filename) {
 
 	var string_name = argument0;
 	var final_string = argument0;
 
-	var file = file_text_open_read(working_directory + "\GameText_eng.txt");
+	var file = file_text_open_read(working_directory + filename);
 	
 	do 
 	{
