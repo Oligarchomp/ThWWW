@@ -130,48 +130,18 @@ if(global.gp_active)
 	{
 		//replay
 		var rep = ""
-		if(global.shot_changed)
-		{
-			rep += "a";	
-		}
-		if(global.shot_pressed)
-		{
-			rep += "A";	
-		}
-		if(global.bomb_changed)
-		{
-			rep += "b";	
-		}
-		if(global.bomb_pressed)
-		{
-			rep += "B";	
-		}
-		if(global.focused_changed)
-		{
-			rep += "x";	
-		}
-		if(global.focused_pressed)
-		{
-			rep += "X";	
-		}
-		if(global.left_changed)
-		{
-			rep += "l";	
-		}
-		if(global.right_changed)
-		{
-			rep += "r";	
-		}
-		if(global.up_changed)
-		{
-			rep += "u";	
-		}
-		if(global.down_changed)
-		{
-			rep += "d";	
-		}
+		
+		rep += global.shot_changed ? "a" : "";
+		rep += global.shot_pressed ? "A" : "";
+		rep += global.bomb_changed ? "b" : "";
+		rep += global.bomb_pressed ? "B" : "";
+		rep += global.focused_changed ? "x" : "";
+		rep += global.focused_pressed ? "X" : "";
+		rep += global.left_changed ? "l" : "";
+		rep += global.right_changed ? "r" : "";
+		rep += global.up_changed ? "u" : "";
+		rep += global.down_changed ? "d" : "";
 	
-
 		if(rep != "")
 		{
 			replay[global.time]	= rep;
@@ -181,62 +151,23 @@ if(global.gp_active)
 	else
 	{
 		global.shot_pressed = false;
+		global.focused_pressed = false;
 		global.bomb_pressed = false;
-		global.focused_pressed = false;	
 		
 		if (next_input_time_index < array_length(global.replay_input_time)) and (global.replay_input_time[next_input_time_index] == global.time)
 		{
 			var input = global.replay_input[next_input_time_index];
 			
-			if(string_count("a",input) == 1)
-			{
-				global.shot_down = !global.shot_down;
-			}
-			
-			if(string_count("A",input) == 1)
-			{
-				global.shot_pressed = true;
-			}
-			
-			if(string_count("b",input) == 1)
-			{
-				global.bomb_down = !global.bomb_down;
-			}
-			
-			if(string_count("B",input) == 1)
-			{
-				global.bomb_pressed = true;
-			}
-			
-			if(string_count("x",input)== 1)
-			{
-				global.focused_down = !global.focused_down;	
-			}
-			
-			if(string_count("X",input)== 1)
-			{
-				global.focused_pressed = true;	
-			}
-			
-			if(string_count("u",input)== 1)
-			{
-				global.up_down = !global.up_down;	
-			}
-			
-			if(string_count("d",input)== 1)
-			{
-				global.down_down = !global.down_down;	
-			}
-			
-			if(string_count("l",input)== 1)
-			{
-				global.left_down = !global.left_down;	
-			}
-			
-			if(string_count("r",input)== 1)
-			{
-				global.right_down = !global.right_down;	
-			}
+			global.shot_down = string_count("a",input) == 1 ? !global.shot_down : global.shot_down;
+			global.shot_pressed = string_count("A",input) == 1;
+			global.bomb_down = string_count("b",input) == 1 ? !global.bomb_down : global.bomb_down;
+			global.bomb_pressed = string_count("B",input) == 1;
+			global.focused_down = string_count("x",input) == 1 ? !global.focused_down : global.focused_down;
+			global.focused_pressed = string_count("X",input) == 1;
+			global.up_down = string_count("u",input) == 1 ? !global.up_down : global.up_down;
+			global.down_down = string_count("d",input) == 1 ? !global.down_down : global.down_down;
+			global.left_down = string_count("l",input) == 1 ? !global.left_down : global.left_down;
+			global.right_down = string_count("r",input) == 1 ? !global.right_down : global.right_down;
 			
 			next_input_time_index += 1;
 		}
