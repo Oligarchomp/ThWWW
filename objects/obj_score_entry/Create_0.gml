@@ -10,7 +10,7 @@ global.name_entry = "";
 var dif = ["e","n","h","l","ex"];
 var plr = ["r","m","s"];
 
-var true_dif = global.game_type = GAME_FULL ? global.difficulty : 5;
+var true_dif = global.game_type = GAME_FULL ? global.difficulty : 4;
 
 index = dif[true_dif] + plr[global.player_chosen];
 

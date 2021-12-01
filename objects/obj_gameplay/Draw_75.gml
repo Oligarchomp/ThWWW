@@ -7,10 +7,24 @@
 switch(pause_type)
 {
 	case PAUSE_MANUAL:
-		var menu = pause;
+		if(global.play_type == PLAY_MANUAL)
+		{
+			var menu = pause;
+		}
+		else
+		{
+			var menu = replay_menu;
+		}
 	break;
 	case PAUSE_END:
-		var menu = done;
+		if(global.play_type == PLAY_MANUAL)
+		{
+			var menu = done;
+		}
+		else
+		{
+			var menu = replay_menu;
+		}
 	break;
 	case PAUSE_GAMEOVER:
 		var menu = gameover;

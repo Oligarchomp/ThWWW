@@ -26,9 +26,16 @@ if(global.gp_active)
 			pause_type = PAUSE_END;
 			play_sound(sfx_pause,1,false);
 			
-			if(global.game_type == GAME_SPELL)
+			if(global.play_type == PLAY_MANUAL)
 			{
-				cursor[0] = array_length(cursor);	
+				if(global.game_type == GAME_SPELL)
+				{
+					cursor[0] = array_length(cursor);	
+				}
+			}
+			else
+			{
+				cursor[0] = 1;
 			}
 			
 			//saving input
@@ -91,10 +98,24 @@ if(global.gp_active)
 switch(pause_type)
 {
 	case PAUSE_MANUAL:
-		var menu = pause;
+		if(global.play_type == PLAY_MANUAL)
+		{
+			var menu = pause;
+		}
+		else
+		{
+			var menu = replay_menu;
+		}
 	break;
 	case PAUSE_END:
-		var menu = done;
+		if(global.play_type == PLAY_MANUAL)
+		{
+			var menu = done;
+		}
+		else
+		{
+			var menu = replay_menu;
+		}
 	break;
 	case PAUSE_GAMEOVER:
 		var menu = gameover;

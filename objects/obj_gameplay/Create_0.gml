@@ -56,7 +56,7 @@ switch(global.game_type)
 	break;
 	case GAME_SPELL:
 		global.life = 0;
-		global.bomb = 2;
+		global.bomb = 0;
 		
 		ds_list_add(item_extend,9999);
 	break;
@@ -117,8 +117,12 @@ if(global.play_type == PLAY_MANUAL)
 	var wait_str = "wait = "
 	for(var i = 0; i < ds_list_size(global.event_list); i += 1)
 	{
-		ev_str += string(global.event_list[|i]) + ",";
-		wait_str += string(global.wait_list[|i]) + ",";
+		var ev = global.event_list[|i];
+		if(ev != act_end) and (ev != act_end_extra)
+		{
+			ev_str += string(ev) + ",";
+			wait_str += string(global.wait_list[|i]) + ",";
+		}
 	}
 
 	var file = file_text_open_write(working_directory + "Replay.txt");
@@ -269,5 +273,20 @@ gameover =
 				action : MENU_BACK
 			}
 		]
+	}
+]
+
+
+replay_menu =
+[
+	{
+		title : get_text("pause_restart_replay"),
+		active_offset : 0,
+		action : MENU_RESTART
+	},
+	{
+		title : get_text("pause_title"),
+		active_offset : 0,
+		action : MENU_TITLE
 	}
 ]

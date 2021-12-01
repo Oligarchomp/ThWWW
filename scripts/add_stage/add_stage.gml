@@ -170,12 +170,15 @@ function add_stage(stage){
 			add_stage_event(boss_s7_5_non,50);
 			add_stage_event(boss_s7_55_spell,0);
 			add_stage_event(boss_s7_6_non,50);
+			add_stage_event(boss_s7_65_spell,0);
 			add_stage_event(boss_s7_7_non,50);
+			add_stage_event(boss_s7_75_spell,0);
 			add_stage_event(boss_s7_8_non,50);
 			add_stage_event(boss_s7_85_spell,0);
 			add_stage_event(boss_s7_9_spell,50);
 			add_stage_event(boss_s7_95_spell,70);
 			add_stage_event(dialogue_s7_post,110);
+			add_stage_event(act_end_extra,130);
 		break;
 	}
 
