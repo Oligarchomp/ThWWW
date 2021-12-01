@@ -23,6 +23,7 @@ global.spell_bg_depth = 50;
 global.gp_active = true;
 
 global.hiscore = 0;
+global.score_lenght = 12;
 
 global.spell_file = "SpellData.ini"
 //SpellDataPractice.ini

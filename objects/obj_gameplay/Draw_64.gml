@@ -47,10 +47,10 @@ draw_text(595,64,"HISCORE:");
 draw_text(614,103,"SCORE:");
 
 var hiscore = global.game_type == GAME_FULL or global.game_type == GAME_EXTRA ? max(global.hiscore,score_to_draw) : 0;
-var hiscore_draw = add_zero(hiscore,12);
+var hiscore_draw = add_zero(hiscore,global.score_lenght);
 draw_score(hiscore_draw,865,69,spr_score,1,1);
 
-var score_draw = add_zero(score_to_draw,12);
+var score_draw = add_zero(score_to_draw,global.score_lenght);
 draw_score(score_draw,865,108,spr_score,1,1);
 
 
