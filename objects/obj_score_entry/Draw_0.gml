@@ -22,14 +22,16 @@ switch(state)
 	case 1:
 		draw_set_font(font_pause)
 		
-		draw_text_color(280,180,get_text("score_replay"),c_white,c_white,c_white,c_white,menu_alpha);
-		draw_text_color(280,190,"____________________________________",c_white,c_white,c_white,c_white,menu_alpha);
+		var txt = get_text("score_replay");
+		draw_text_color(480 - string_width(txt) / 2,180,txt,c_white,c_white,c_white,c_white,menu_alpha);
+		var txt = "_______________________________"
+		draw_text_color(480 - string_width(txt) / 2 ,190,txt,c_white,c_white,c_white,c_white,menu_alpha);
 		
 		for (var i = 0; i < array_length(menu); i += 1)
 		{
 			var is_active = cursor == i;
 			
-			draw_text_color(460,250 + i * 60,menu[i].title,c_white,c_white,c_white,c_white,menu_alpha * (1 - !is_active * 0.7));
+			draw_text_color(480 - string_width(menu[i].title) / 2,250 + i * 60,menu[i].title,c_white,c_white,c_white,c_white,menu_alpha * (1 - !is_active * 0.7));
 		}
 	break;
 }

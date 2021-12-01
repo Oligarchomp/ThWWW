@@ -76,7 +76,7 @@ pause_no = No
 pause_continue = Continue
 pause_restart_replay = Restart replay
 
-score_replay = Do you want to leave a mark in this World?
+score_replay = Do you want to save a replay?
 
 spell_s1_mida = Apple Sign - [Apfelkuchen]
 spell_s1_midb = Heaven Sign - [Adam and Eve Falling From Heaven]

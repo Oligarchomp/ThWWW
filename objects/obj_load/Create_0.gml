@@ -11,6 +11,8 @@ instance_create_depth(0,0,0,obj_bgm);
 room_goto(room_main);
 //room_goto(room_gp);
 
+
+
 global.bg_depth = -170;
 global.player_hitbox_depth = 0;
 global.danmaku_depth = 1;
@@ -168,3 +170,7 @@ global.play_type = PLAY_MANUAL;
 #macro REPLAY_INPUT_TIME 5
 #macro REPLAY_PLAYER 6
 #macro REPLAY_DIFFICULTY 7
+
+/*
+add_stage_event(act_s7_0,0)
+add_stage_event(boss_s7_75_spell,0);
