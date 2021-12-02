@@ -66,6 +66,8 @@ menu_option = Change The World
 menu_music = Listen to BGM
 menu_quit = End Fantasy
 
+menu_look_replay = Look at all those awesome replays!
+
 pause_resume = Resume
 pause_title = Go back to title
 pause_replay = Save replay

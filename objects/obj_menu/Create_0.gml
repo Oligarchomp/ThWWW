@@ -964,16 +964,17 @@ menu =
 		title : "PLAYER DATA",
 		description : get_text("menu_player"),
 		action : MENU_MENU,
-		param : 
-		[
-
-		]
+		param : []
 		//set below
 	},
 	{
 		title : "REPLAY",
 		description : get_text("menu_replay"),
-		action : MENU_PLAY_REPLAY
+		action : MENU_MENU,
+		param :
+		[
+			
+		]
 	},
 	{
 		title : "OPTION",
@@ -1137,6 +1138,91 @@ for ( var i = 0 ; i < 10; i += 1) // score nbr
 		variable_struct_set(menu[4].param[i],global.score_name[j] + "_name",txt);
 	}
 }
+
+// replay
+var rep = 5;
+for(var i = 0; i < 20; i += 1)
+{
+	var replay_check = "Replay" + string(i) +".txt";
+
+	menu[rep].param[i] = {}
+
+	if(file_exists(replay_check))
+	{
+		menu[rep].param[i].nom = get_text_file("name",replay_check);
+		menu[rep].param[i].date = get_text_file("date",replay_check);
+		menu[rep].param[i].hour = get_text_file("hour",replay_check);
+		switch(get_text_file("player",replay_check))
+		{
+			case P_REIMU:
+				var plr = "Reimu ";
+			break;
+			case P_MARISA:
+				var plr = "Marisa";
+			break;
+			case P_SANAE:
+				var plr = "Sanae ";
+			break;
+		}
+		menu[rep].param[i].player = plr;
+	
+		var is_extra = false;
+		
+		switch(get_text_file("game_type",replay_check))
+		{
+			case GAME_EXTRA:	
+				var is_extra = true;
+			case GAME_FULL:
+				var type = "All";
+			break;
+			case GAME_STAGE:	
+				var type = "Stg";
+			break;
+			case GAME_SPELL:	
+				var type = "Spl";
+			break;
+		}
+		menu[rep].param[i].game_type = type;
+		
+		switch(get_text_file("difficulty",replay_check))
+		{
+			case "0":
+				var diff = "Easy   ";
+			break;
+			case "1":
+				if(!is_extra)
+				{
+					var diff = "Normal  ";
+				}
+				else
+				{
+					var diff = "Extra  ";
+				}
+			break;
+			case "2":
+				var diff = "Hard   ";
+			break;
+			case "3":
+				var diff = "Lunatic";
+			break;
+		}
+		menu[rep].param[i].difficulty = plr;
+		menu[rep].param[i].action = MENU_PLAY_REPLAY;
+	}
+	else
+	{
+		menu[rep].param[i].nom = "-------";
+		menu[rep].param[i].date = "00/00/00";
+		menu[rep].param[i].hour = "00:00";
+		menu[rep].param[i].player = "------";
+		menu[rep].param[i].difficulty = "-------"
+		menu[rep].param[i].game_type = "---";
+		menu[rep].param[i].action = MENU_NOTHING;
+	}
+}
+
+
+
 
 score_difficulty = 0;
 

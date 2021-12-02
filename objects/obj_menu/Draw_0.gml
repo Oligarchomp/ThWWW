@@ -1,7 +1,23 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+switch(level)
+{
+	case 0:
+		var check = menu;
+	break;
+	case 1:
+		var check = menu[cursor[0]].param;
+	break;
+	case 2:
+		var check = menu[cursor[0]].param[cursor[1]].param;
+	break;
+	case 3:
+		var check = menu[cursor[0]].param[cursor[1]].param[cursor[2]].param;
+	break;
+}
+	
+	
 draw_sprite(spr_main,level != 0,0,0);
 
 draw_set_font(font_main);
@@ -37,7 +53,6 @@ switch(level)
 				draw_sprite(spr_difficulty,4,difficuly[4].x_is,difficuly[4].y_is);
 			break;
 			case 3://spell practice stage
-				var check = menu[cursor[0]].param;
 				for(var i = 0; i < array_length(check); i += 1)
 				{
 					var is_active = (cursor[level] == i);
@@ -48,7 +63,6 @@ switch(level)
 				}
 			break;
 			case 4://Score room
-				var check = menu[cursor[0]].param;
 				
 				var dif = ["e","n","h","l","ex"];
 				var plr = ["r","m","s"];
@@ -101,8 +115,31 @@ switch(level)
 					draw_score(variable_struct_get(check[i],index),637,90 + i * 40,spr_score,1,1);
 				}
 			break;
+			case 5: //replay
+				draw_set_font(font_spellpractice);
+				
+				draw_text(200,50,get_text("menu_look_replay"));
+				var xx = 200;
+				var yy = 70;
+				
+				for(var i = 0; i < array_length(check); i += 1)
+				{
+					is_active = (cursor[level] == i)
+					
+					//relplay number
+					draw_text_color(xx - 125,yy + i * 20,"ReplayN°" + string(add_zero(i + 1,2)) + " //",c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
+					//name
+					draw_text_color(xx,yy + i * 20,check[i].nom,c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
+					//date
+					draw_text_color(xx + 60,yy + i * 20,"/ " + check[i].date,c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
+					// hour
+					draw_text_color(xx + 150,yy + i * 20,"/ " + check[i].hour ,c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
+					// hour
+					draw_text_color(xx + 150,yy + i * 20,"/ " + check[i].hour ,c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
+					
+				}
+			break;
 			case 7://music room
-				var check = menu[cursor[0]].param;
 				
 				draw_set_font(font_spellpractice);
 				for(var i = 0; i < array_length(check) ; i += 1)
@@ -153,7 +190,6 @@ switch(level)
 				draw_sprite_ext(spr_difficulty,dif,difficuly[dif].x_is,difficuly[dif].y_is,difficuly[dif].scale,difficuly[dif].scale,0,c_white,difficuly[dif].alpha);
 			break;
 			case 3://spell practice spell select
-				var check = menu[cursor[0]].param[cursor[1]].param;
 				
 				draw_set_font(font_spellpractice);
 				
@@ -217,7 +253,6 @@ switch(level)
 		switch(cursor[0])//stage select
 		{
 			case 2:
-				var check = menu[cursor[0]].param[cursor[1]].param[cursor[2]].param;
 				for(var i = 0; i < array_length(check); i += 1)
 				{
 					var is_active = (cursor[level] == i);

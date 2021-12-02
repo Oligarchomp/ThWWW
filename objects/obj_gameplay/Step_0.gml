@@ -51,7 +51,7 @@ if(global.gp_active)
 						input_time += string(i) + ",";
 					}
 				}
-				var file = file_text_open_append(working_directory + "Replay.txt");
+				var file = file_text_open_append(working_directory + "Replay_Write.txt");
 				file_text_writeln(file);
 				file_text_write_string(file,input);
 				file_text_writeln(file);

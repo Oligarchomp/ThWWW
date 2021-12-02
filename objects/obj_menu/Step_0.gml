@@ -220,22 +220,22 @@ if(cursor_lockout == 0)
 				room_transition(room_gp);
 				global.play_type = PLAY_REPLAY;
 				
-				var ev = get_replay(REPLAY_EVENT,"Replay.txt");
-				var wait = get_replay(REPLAY_WAIT,"Replay.txt");
+				var ev = get_replay(REPLAY_EVENT,"Replay_Write.txt");
+				var wait = get_replay(REPLAY_WAIT,"Replay_Write.txt");
 				
 				for (var i = 0; i < array_length(ev); i += 1)
 				{
 					add_stage_event(asset_get_index(object_get_name(ev[i])),wait[i]);
 				}
 				
-				global.game_type = get_replay(REPLAY_GAMETYPE,"Replay.txt");
-				global.player_chosen = get_replay(REPLAY_PLAYER,"Replay.txt");
-				global.difficulty = get_replay(REPLAY_DIFFICULTY,"Replay.txt");
+				global.game_type = get_replay(REPLAY_GAMETYPE,"Replay_Write.txt");
+				global.player_chosen = get_replay(REPLAY_PLAYER,"Replay_Write.txt");
+				global.difficulty = get_replay(REPLAY_DIFFICULTY,"Replay_Write.txt");
 				
-				global.replay_input = get_replay(REPLAY_INPUT,"Replay.txt");
-				global.replay_input_time = get_replay(REPLAY_INPUT_TIME,"Replay.txt");
+				global.replay_input = get_replay(REPLAY_INPUT,"Replay_Write.txt");
+				global.replay_input_time = get_replay(REPLAY_INPUT_TIME,"Replay_Write.txt");
 				
-				global.replay_seed = get_replay(REPLAY_SEED,"Replay.txt");
+				global.replay_seed = get_replay(REPLAY_SEED,"Replay_Write.txt");
 			break;
 			case MENU_QUIT:
 				game_end();
