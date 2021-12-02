@@ -1,7 +1,8 @@
-///get_replay(param,name)
+///get_replay(param,name,index)
 ///@param param real
 ///@param name string
-function get_replay(param,replay){
+///@param index real
+function get_replay(param,replay,index){
 
 	var file = file_text_open_read(working_directory + replay)
 	var result = []
@@ -52,7 +53,7 @@ function get_replay(param,replay){
 			return res;
 		break;
 		case REPLAY_INPUT:
-			var str = get_text_file("input",replay);
+			var str = get_text_file("input" + string(index),replay);
 			
 			var s = ""
 			for(var i = 1; i < string_length(str) + 1; i += 1)
@@ -70,7 +71,7 @@ function get_replay(param,replay){
 			}
 		break;
 		case REPLAY_INPUT_TIME:
-			var str = get_text_file("input_time",replay);
+			var str = get_text_file("input_time" + string(index),replay);
 			
 			var s = ""
 			for(var i = 1; i < string_length(str) + 1; i += 1)
@@ -102,7 +103,18 @@ function get_replay(param,replay){
 			return res;
 		break;
 		case REPLAY_SEED:
-			result[0] = real(get_text_file("seed",replay));
+			var res = real(get_text_file("seed" + string(index),replay));
+			
+			file_text_close(file);
+			
+			return res;
+		break;
+		case REPLAY_STAGE_NBR:
+			var res = real(get_text_file("stage_nbr",replay));
+			
+			file_text_close(file);
+			
+			return res;
 		break;
 	}
 	

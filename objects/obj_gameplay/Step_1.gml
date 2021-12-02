@@ -1,11 +1,81 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-
-if(keyboard_check(vk_space))
+var need_stage_replay = false;
+var final_stage_replay = false;
+if(global.gp_active)
 {
-	x = 0;	
-}
+	var wait = global.wait_list[|event_step]
+	
+	if (event_step < ds_list_size(global.event_list))
+	{
+		if (event_step != last_event_step)
+		{
+			last_event_step = event_step;
+		
+			event_time = 0;
+			wait_time = 0;
+		}
+	}
+	else
+	{
+		end_wait = goto_value(end_wait,110,1);
+		if(end_wait == 110)
+		{
+			pause_state = 1;
+		
+			pause_type = PAUSE_END;
+			play_sound(sfx_pause,1,false);
+			
+			if(global.play_type == PLAY_MANUAL)
+			{
+				if(global.game_type == GAME_SPELL)
+				{
+					cursor[0] = array_length(cursor);	
+				}
+			}
+			else
+			{
+				cursor[0] = 1;
+			}
+		}
+	}
+
+	if(wait_time == wait)
+	{
+		var ev = global.event_list[|event_step];
+		if(!instance_exists(ev))
+		{
+			instance_create_depth(0,0,0,ev);
+			
+			if(object_get_parent(ev) == obj_room_transition)
+			{
+				need_stage_replay = true;
+			}
+
+		}
+	}
+	else
+	{
+		wait_time += 1;
+	}
+	
+
+	if(global.item_nbr >= item_extend[|0])
+	{
+		ds_list_delete(item_extend,0);
+		
+		global.life += 1;
+		
+		play_sound(sfx_extend,1,false);
+	}
+	
+	global.score -= global.score % 10;//failsafe
+	
+	score_to_draw += round(recursiv(score_to_draw,global.score,10,100));
+	score_to_draw -= score_to_draw % 10 
+	score_to_draw += global.continues_max - global.continues;
+}	
+
 
 if (global.pause_pressed)
 {
@@ -48,18 +118,6 @@ else
 }
 
 
-if(object_get_parent(get_current_event()) == obj_room_transition)
-{
-	if(global.stage_number > 0)
-	{
-	
-	}
-	
-	global.stage_number += 1;
-}
-
-
-
 
 //pause
 switch(pause_state)
@@ -94,26 +152,8 @@ switch(pause_state)
 				//saving input
 				if(pause_type == PAUSE_END) or (pause_type == PAUSE_GAMEOVER)
 				{
-					//saving input
-					if(global.play_type == PLAY_MANUAL)
-					{
-						var input = "input = ";
-						var input_time = "input_time = ";
-						for(var i = 0; i < array_length(replay); i += 1)
-						{
-							if (string(replay[i]) != 0)
-							{
-								input += replay[i] + ",";
-								input_time += string(i) + ",";
-							}
-						}
-						var file = file_text_open_append(working_directory + "Replay_Write.txt");
-						file_text_writeln(file);
-						file_text_write_string(file,input);
-						file_text_writeln(file);
-						file_text_write_string(file,input_time);
-						file_text_close(file);
-					}
+					need_stage_replay = true;
+					final_stage_replay = true;
 				}
 			}
 		}
@@ -156,6 +196,62 @@ switch(pause_state)
 	break;
 }
 
+if(need_stage_replay)
+{
+	reset_controle();
+	
+	global.stage_number += 1
+	
+	if(global.play_type = PLAY_MANUAL)
+	{
+		if(global.stage_number > 0)
+		{
+			var seed = random_get_seed();
+						
+			var file = file_text_open_append(working_directory + "Replay_Write.txt");
+						
+			var input = "input" + string(global.stage_number) + " = ";
+			var input_time = "input_time" + string(global.stage_number) + " = ";
+			for(var i = 0; i < array_length(replay); i += 1)
+			{
+				if (string(replay[i]) != 0)
+				{
+					input += replay[i] + ",";
+					input_time += string(i) + ",";
+				}
+			}
+			replay = [];
+				
+			file_text_writeln(file);
+			file_text_write_string(file,"seed" + string(global.stage_number) + " = " + string(seed));
+			file_text_writeln(file);
+			file_text_write_string(file,input);
+			file_text_writeln(file);
+			file_text_write_string(file,input_time);
+			if(final_stage_replay)
+			{
+				file_text_writeln(file);
+				file_text_write_string(file,"stage_nbr = " + string(global.stage_number));
+			}
+			file_text_close(file);
+		}
+		
+		randomise();
+		global.time = 0;
+	}
+	else
+	{
+		random_set_seed(global.replay_seed[global.stage_number]);
+		
+		next_input_time_index = 0;
+		global.time = 0;
+	}
+
+}
+
+
+
+
 global.gp_active = pause_state == 0;
 
 
@@ -191,9 +287,9 @@ if(global.gp_active)
 		global.focused_pressed = false;
 		global.bomb_pressed = false;
 		
-		if (next_input_time_index < array_length(global.replay_input_time)) and (global.replay_input_time[next_input_time_index] == global.time)
+		if (next_input_time_index < array_length(global.replay_input_time[global.stage_number])) and (global.replay_input_time[global.stage_number][next_input_time_index] == global.time)
 		{
-			var input = global.replay_input[next_input_time_index];
+			var input = global.replay_input[global.stage_number][next_input_time_index];
 			
 			global.shot_down = string_count("a",input) == 1 ? !global.shot_down : global.shot_down;
 			global.shot_pressed = string_count("A",input) == 1;

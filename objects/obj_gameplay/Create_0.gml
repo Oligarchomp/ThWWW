@@ -23,7 +23,7 @@ global.gp_active = true;
 
 global.time = 0;
 
-global.stage_number = 0; //how much stage since the start (used for replay)
+global.stage_number = -1; //how much stage since the start (used for replay)
 
 global.danmaku_id = 0; //the id of the next danmaku_id to spawn (or the last one spawn if not using it)
 global.danmaku_color = 0;
@@ -107,13 +107,10 @@ old_stage = 1;
 replay = [];
 next_input_time_index = 0;
 
-reset_controle();
+
 
 if(global.play_type == PLAY_MANUAL)
 {
-	randomise();
-	var seed = random_get_seed();
-	
 	var ev_str = "ev = "
 	var wait_str = "wait = "
 	for(var i = 0; i < ds_list_size(global.event_list); i += 1)
@@ -136,15 +133,9 @@ if(global.play_type == PLAY_MANUAL)
 	file_text_write_string(file,"player = " + string(global.player_chosen));
 	file_text_writeln(file);
 	file_text_write_string(file,"difficulty = " + string(global.difficulty));
-	file_text_writeln(file);
-	file_text_write_string(file,"seed = " + string(seed));
+	
 	file_text_close(file);
 }
-else
-{
-	random_set_seed(global.replay_seed[0]);
-}
-
 
 instance_create_depth(room_width / 2,430,global.player_depth,obj_player);
 

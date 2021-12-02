@@ -222,22 +222,27 @@ if(cursor_lockout == 0)
 				room_transition(room_gp);
 				global.play_type = PLAY_REPLAY;
 				
-				var ev = get_replay(REPLAY_EVENT,rep);
-				var wait = get_replay(REPLAY_WAIT,rep);
+				var ev = get_replay(REPLAY_EVENT,rep,0);
+				var wait = get_replay(REPLAY_WAIT,rep,0);
 				
 				for (var i = 0; i < array_length(ev); i += 1)
 				{
 					add_stage_event(asset_get_index(object_get_name(ev[i])),wait[i]);
 				}
 				
-				global.game_type = get_replay(REPLAY_GAMETYPE,rep);
-				global.player_chosen = get_replay(REPLAY_PLAYER,rep);
-				global.difficulty = get_replay(REPLAY_DIFFICULTY,rep);
+				global.game_type = get_replay(REPLAY_GAMETYPE,rep,0);
+				global.player_chosen = get_replay(REPLAY_PLAYER,rep,0);
+				global.difficulty = get_replay(REPLAY_DIFFICULTY,rep,0);
 				
-				global.replay_input = get_replay(REPLAY_INPUT,rep);
-				global.replay_input_time = get_replay(REPLAY_INPUT_TIME,rep);
+				var stage_nbr = get_replay(REPLAY_STAGE_NBR,rep,0);
 				
-				global.replay_seed = get_replay(REPLAY_SEED,rep);
+				for(var i = 0; i < stage_nbr; i += 1)
+				{
+					global.replay_input[i] = get_replay(REPLAY_INPUT,rep,i + 1);
+					global.replay_input_time[i] = get_replay(REPLAY_INPUT_TIME,rep,i + 1);
+				
+					global.replay_seed[i] = get_replay(REPLAY_SEED,rep,i + 1);
+				}
 				
 				global.menu_level = level;
 				global.menu_cursor = cursor;
