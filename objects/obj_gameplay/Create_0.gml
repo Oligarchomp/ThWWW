@@ -31,7 +31,7 @@ global.danmaku_speed = 0;
 
 global.boss = BOSS_APPLE;
 
-global.score = 0;
+
 score_to_draw = 0;
 
 global.starting_life = 2;
@@ -125,13 +125,6 @@ if(global.play_type == PLAY_MANUAL)
 		}
 	}
 	
-	var date = string(add_zero(date_get_day(date_current_datetime()),2)) + "/";
-	date += string(add_zero(date_get_month(date_current_datetime()),2)) + "/";
-	date += string(date_get_year(date_current_datetime()) % 1000);
-	
-	var hour = string(add_zero(date_get_hour(date_current_datetime()),2)) + ":";
-	hour += string(add_zero(date_get_minute(date_current_datetime()),2))
-	
 	var file = file_text_open_write(working_directory + "Replay_Write.txt");
 	file_text_write_string(file,ev_str);
 	file_text_writeln(file);
@@ -144,10 +137,6 @@ if(global.play_type == PLAY_MANUAL)
 	file_text_write_string(file,"difficulty = " + string(global.difficulty));
 	file_text_writeln(file);
 	file_text_write_string(file,"seed = " + string(seed));
-	file_text_writeln(file);
-	file_text_write_string(file,"date = " + date);
-	file_text_writeln(file);
-	file_text_write_string(file,"hour = " + hour);
 	file_text_close(file);
 }
 else

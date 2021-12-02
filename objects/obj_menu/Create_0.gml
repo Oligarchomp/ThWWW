@@ -1155,13 +1155,13 @@ for(var i = 0; i < 20; i += 1)
 		switch(get_text_file("player",replay_check))
 		{
 			case P_REIMU:
-				var plr = "Reimu ";
+				var plr = "Reimu";
 			break;
 			case P_MARISA:
 				var plr = "Marisa";
 			break;
 			case P_SANAE:
-				var plr = "Sanae ";
+				var plr = "Sanae";
 			break;
 		}
 		menu[rep].param[i].player = plr;
@@ -1176,37 +1176,37 @@ for(var i = 0; i < 20; i += 1)
 				var type = "All";
 			break;
 			case GAME_STAGE:	
-				var type = "Stg";
+				var type = "Stage Practice";
 			break;
 			case GAME_SPELL:	
-				var type = "Spl";
+				var type = "Spell Practice";
 			break;
 		}
 		menu[rep].param[i].game_type = type;
 		
 		switch(get_text_file("difficulty",replay_check))
 		{
-			case "0":
-				var diff = "Easy   ";
+			case 0:
+				var diff = "Easy";
 			break;
-			case "1":
+			case 1:
 				if(!is_extra)
 				{
-					var diff = "Normal  ";
+					var diff = "Normal";
 				}
 				else
 				{
-					var diff = "Extra  ";
+					var diff = "Extra";
 				}
 			break;
-			case "2":
-				var diff = "Hard   ";
+			case 2:
+				var diff = "Hard";
 			break;
-			case "3":
+			case 3:
 				var diff = "Lunatic";
 			break;
 		}
-		menu[rep].param[i].difficulty = plr;
+		menu[rep].param[i].difficulty = diff;
 		menu[rep].param[i].action = MENU_PLAY_REPLAY;
 	}
 	else
@@ -1216,7 +1216,7 @@ for(var i = 0; i < 20; i += 1)
 		menu[rep].param[i].hour = "00:00";
 		menu[rep].param[i].player = "------";
 		menu[rep].param[i].difficulty = "-------"
-		menu[rep].param[i].game_type = "---";
+		menu[rep].param[i].game_type = "------------";
 		menu[rep].param[i].action = MENU_NOTHING;
 	}
 }

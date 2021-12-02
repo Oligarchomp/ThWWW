@@ -92,6 +92,11 @@ if(global.shot_pressed)
 
 if(global.bomb_pressed)
 {
+	if(global.name_entry == "") and (instance_exists(obj_replay))
+	{
+		instance_destroy();
+	}
+	
 	global.name_entry = string_delete(global.name_entry,string_length(global.name_entry),1);
 	play_sound(sfx_menu_back,1,false);
 }

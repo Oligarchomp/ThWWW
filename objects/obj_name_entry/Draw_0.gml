@@ -1,8 +1,24 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
 var char_dist = 25;
+
+
+if(instance_exists(obj_replay))
+{
+	var x1 = x - 20;
+	var y1 = y - 20;
+	var width = 365;
+	var height = 160;
+	draw_sprite_part(spr_main,1,x1,y1,width,height,x1,y1);
+	var wid = 4;
+	draw_line_width(x1,y1,x1 + width,y1,wid);
+	draw_line_width(x1 + width,y1,x1 + width,y1 + height,wid);
+	draw_line_width(x1,y1 + height,x1 + width,y1 + height,wid);
+	draw_line_width(x1,y1,x1,y1 + height,wid);
+}
+
+
 for(var i = 0; i < array_length(character); i += 1)
 {
 	draw_set_font(font_scorename);

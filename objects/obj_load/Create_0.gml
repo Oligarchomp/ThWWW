@@ -7,8 +7,8 @@ window_set_cursor(cr_none);
 
 instance_create_depth(0,0,0,obj_bgm);
 
-//room_goto(room_score);
-room_goto(room_main);
+room_goto(room_score);
+//room_goto(room_main);
 //room_goto(room_gp);
 
 
@@ -24,6 +24,7 @@ global.spell_bg_depth = 50;
 
 global.gp_active = true;
 
+global.score = 0;
 global.hiscore = 0;
 global.score_lenght = 12;
 
@@ -140,6 +141,8 @@ global.replay_seed = [];
 #macro MENU_REPLAY 11
 #macro MENU_NOTHING 12
 #macro MENU_PLAY_REPLAY 13
+#macro MENU_REPLAY_SAVE 14
+#macro MENU_NAME 15
 
 
 //define pause type

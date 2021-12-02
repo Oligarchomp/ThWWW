@@ -22,35 +22,53 @@ switch(state)
 	break;
 	case 1:
 		
-		menu_alpha = goto_value(menu_alpha,1,0.03);
-		
-		if(cursor_lockout == 0)
+		if(!instance_exists(obj_replay))
 		{
-			if(abs(global.up_pressed - global.down_pressed))
+			menu_alpha = goto_value(menu_alpha,1,0.03);
+		
+			if(cursor_lockout == 0)
 			{
-				cursor += global.up_pressed - global.down_pressed;
-				cursor %= array_length(menu);
-				cursor += cursor < 0 ? array_length(menu) : 0;
-	
-				play_sound(sfx_menu_move,1,false);
-			}
-
-			if(global.shot_pressed)
-			{
-				play_sound(sfx_menu_valid,1,false);
-				
-				switch(menu[cursor].action)
+				if(abs(global.up_pressed - global.down_pressed))
 				{
-					case MENU_TITLE:
-						room_transition(room_main);
-						cursor_lockout = 100000;
-					break;
+					cursor += global.up_pressed - global.down_pressed;
+					cursor %= array_length(menu);
+					cursor += cursor < 0 ? array_length(menu) : 0;
+	
+					play_sound(sfx_menu_move,1,false);
 				}
+
+				if(global.shot_pressed)
+				{
+					play_sound(sfx_menu_valid,1,false);
+				
+					switch(menu[cursor].action)
+					{
+						case MENU_TITLE:
+							room_transition(room_main);
+							cursor_lockout = 100000;
+						break;
+						case MENU_REPLAY:
+							instance_create_depth(0,0,depth - 1, obj_replay);
+							cursor_lockout = 10;
+						break;
+					}
+				}
+				
+				if(global.bomb_pressed)
+				{
+					play_sound(sfx_menu_back,1,false);
+					cursor_lockout = 10000;
+					room_transition(room_main);
+				}
+			}
+			else
+			{
+				cursor_lockout -= 1;
 			}
 		}
 		else
 		{
-			cursor_lockout -= 1;
+			cursor_lockout = 10;
 		}
 	break;
 }

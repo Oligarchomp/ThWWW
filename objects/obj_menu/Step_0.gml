@@ -217,25 +217,30 @@ if(cursor_lockout == 0)
 				set_bgm(array_check[cursor[level]].music,array_check[cursor[level]].intro)
 			break;
 			case MENU_PLAY_REPLAY:
+				var rep = "Replay" + string(cursor[level]) + ".txt";
+				
 				room_transition(room_gp);
 				global.play_type = PLAY_REPLAY;
 				
-				var ev = get_replay(REPLAY_EVENT,"Replay_Write.txt");
-				var wait = get_replay(REPLAY_WAIT,"Replay_Write.txt");
+				var ev = get_replay(REPLAY_EVENT,rep);
+				var wait = get_replay(REPLAY_WAIT,rep);
 				
 				for (var i = 0; i < array_length(ev); i += 1)
 				{
 					add_stage_event(asset_get_index(object_get_name(ev[i])),wait[i]);
 				}
 				
-				global.game_type = get_replay(REPLAY_GAMETYPE,"Replay_Write.txt");
-				global.player_chosen = get_replay(REPLAY_PLAYER,"Replay_Write.txt");
-				global.difficulty = get_replay(REPLAY_DIFFICULTY,"Replay_Write.txt");
+				global.game_type = get_replay(REPLAY_GAMETYPE,rep);
+				global.player_chosen = get_replay(REPLAY_PLAYER,rep);
+				global.difficulty = get_replay(REPLAY_DIFFICULTY,rep);
 				
-				global.replay_input = get_replay(REPLAY_INPUT,"Replay_Write.txt");
-				global.replay_input_time = get_replay(REPLAY_INPUT_TIME,"Replay_Write.txt");
+				global.replay_input = get_replay(REPLAY_INPUT,rep);
+				global.replay_input_time = get_replay(REPLAY_INPUT_TIME,rep);
 				
-				global.replay_seed = get_replay(REPLAY_SEED,"Replay_Write.txt");
+				global.replay_seed = get_replay(REPLAY_SEED,rep);
+				
+				global.menu_level = level;
+				global.menu_cursor = cursor;
 			break;
 			case MENU_QUIT:
 				game_end();
