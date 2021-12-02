@@ -1,9 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
 instance_create_depth(0,0,0,obj_score_fadein);
 
 state = 0;
+old_state = -1;
+state_time = 0;
 
 global.name_entry = "";
 
@@ -29,7 +32,7 @@ while (score_pos < array_length(scores)) and (scores[score_pos] > global.score)
 	score_pos += 1;
 }
 
-if(score_pos < 10)
+if(score_pos < 10) 
 {
 	for(var j = array_length(scores) - 1; j > score_pos; j -= 1)
 	{
@@ -47,6 +50,10 @@ else
 	state = 1;
 }
 
+if (global.continues != global.continues_max)
+{
+	state = 2;	
+}
 
 menu_alpha = 0;
 cursor = 1;

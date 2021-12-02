@@ -1,6 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if (old_state != state)
+{
+	old_state = state;
+	state_time = 0;
+}
+else
+{
+	state_time += 1;
+}
 
 switch(state)
 {
@@ -21,7 +30,6 @@ switch(state)
 		}
 	break;
 	case 1:
-		
 		if(!instance_exists(obj_replay))
 		{
 			menu_alpha = goto_value(menu_alpha,1,0.03);
@@ -69,6 +77,19 @@ switch(state)
 		else
 		{
 			cursor_lockout = 10;
+		}
+	break;
+	case 2:
+		menu_alpha = goto_value(menu_alpha,1,0.03)
+		if(menu_alpha == 1)
+		{
+			state += 1;	
+		}
+	break;
+	case 3:
+		if(state_time == 160)
+		{
+			room_transition(room_main);
 		}
 	break;
 }

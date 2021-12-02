@@ -10,7 +10,14 @@ if(instance_exists(obj_replay))
 	var y1 = y - 20;
 	var width = 365;
 	var height = 160;
-	draw_sprite_part(spr_main,1,x1,y1,width,height,x1,y1);
+	if(!instance_exists(obj_gameplay))
+	{
+		draw_sprite_part(spr_main,1,x1,y1,width,height,x1,y1);
+	}
+	else
+	{
+		draw_sprite_pos(spr_black,0,x1,y1,x1 + width,y1,x1 + width,y1 + height,x1,y1 + height,1)
+	}
 	var wid = 4;
 	draw_line_width(x1,y1,x1 + width,y1,wid);
 	draw_line_width(x1 + width,y1,x1 + width,y1 + height,wid);

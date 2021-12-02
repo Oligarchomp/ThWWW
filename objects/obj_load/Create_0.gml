@@ -7,8 +7,8 @@ window_set_cursor(cr_none);
 
 instance_create_depth(0,0,0,obj_bgm);
 
-room_goto(room_score);
-//room_goto(room_main);
+//room_goto(room_score);
+room_goto(room_main);
 //room_goto(room_gp);
 
 
@@ -38,6 +38,8 @@ global.difficulty = 3;
 // 2 = hard;
 // 3 = lunatic;
 
+global.continues_max = 3;
+global.continues = global.continues_max;
 
 // to know what will be played
 global.event_list = ds_list_create();
@@ -48,6 +50,8 @@ global.score_name = ["er","nr","hr","lr","exr","em","nm","hm","lm","exm","es","n
 global.replay_input = [];
 global.replay_input_time = [];
 global.replay_seed = [];
+
+global.name_entry = "";
 
 //define player_id
 #macro P_REIMU 0

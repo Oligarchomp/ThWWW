@@ -24,14 +24,14 @@ if (global.pause_pressed)
 
 if(global.life < 0)
 {
-	if(global.game_type == GAME_FULL)
+	pause_state = 1;
+	
+	if(global.play_type == PLAY_MANUAL)
 	{
-		pause_state = 1;
-		pause_type = PAUSE_GAMEOVER;
+		pause_type = global.game_type == GAME_FULL ? PAUSE_GAMEOVER : PAUSE_END ;
 	}
 	else
 	{
-		pause_state = 1;
 		pause_type = PAUSE_END;
 	}
 }
@@ -48,6 +48,17 @@ else
 }
 
 
+if(object_get_parent(get_current_event()) == obj_room_transition)
+{
+	if(global.stage_number > 0)
+	{
+	
+	}
+	
+	global.stage_number += 1;
+}
+
+
 
 
 //pause
@@ -56,6 +67,8 @@ switch(pause_state)
 	case 1: //paused
 		if(pause_state_time == 0)
 		{
+			
+			// replay sync
 			if(global.play_type == PLAY_REPLAY)
 			{
 				mem_shot_down = global.shot_down;
@@ -77,9 +90,33 @@ switch(pause_state)
 				mem_left_down = global.left_down;
 				mem_down_down = global.down_down;
 				mem_up_down = global.up_down;
+				
+				//saving input
+				if(pause_type == PAUSE_END) or (pause_type == PAUSE_GAMEOVER)
+				{
+					//saving input
+					if(global.play_type == PLAY_MANUAL)
+					{
+						var input = "input = ";
+						var input_time = "input_time = ";
+						for(var i = 0; i < array_length(replay); i += 1)
+						{
+							if (string(replay[i]) != 0)
+							{
+								input += replay[i] + ",";
+								input_time += string(i) + ",";
+							}
+						}
+						var file = file_text_open_append(working_directory + "Replay_Write.txt");
+						file_text_writeln(file);
+						file_text_write_string(file,input);
+						file_text_writeln(file);
+						file_text_write_string(file,input_time);
+						file_text_close(file);
+					}
+				}
 			}
 		}
-		
 		
 		text_offset = goto_value(text_offset,0,-text_offset_max / pause_spd );
 		pause_alpha = goto_value(pause_alpha,1,1 / pause_spd);

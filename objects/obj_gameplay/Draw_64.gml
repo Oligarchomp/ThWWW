@@ -46,7 +46,10 @@ draw_text_color(700,20,dif_text,col,col,col,col,1)
 draw_text(595,64,"HISCORE:");
 draw_text(614,103,"SCORE:");
 
+
 var hiscore = global.game_type == GAME_FULL or global.game_type == GAME_EXTRA ? max(global.hiscore,score_to_draw) : 0;
+hiscore = global.continues_max - global.continues == 0 ? hiscore : global.hiscore;
+
 var hiscore_draw = add_zero(hiscore,global.score_lenght);
 draw_score(hiscore_draw,865,69,spr_score,1,1);
 

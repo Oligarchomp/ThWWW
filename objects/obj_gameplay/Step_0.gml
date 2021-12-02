@@ -37,39 +37,16 @@ if(global.gp_active)
 			{
 				cursor[0] = 1;
 			}
-			
-			//saving input
-			if(global.play_type == PLAY_MANUAL)
-			{
-				var input = "input = ";
-				var input_time = "input_time = ";
-				for(var i = 0; i < array_length(replay); i += 1)
-				{
-					if (string(replay[i]) != 0)
-					{
-						input += replay[i] + ",";
-						input_time += string(i) + ",";
-					}
-				}
-				var file = file_text_open_append(working_directory + "Replay_Write.txt");
-				file_text_writeln(file);
-				file_text_write_string(file,input);
-				file_text_writeln(file);
-				file_text_write_string(file,input_time);
-				file_text_close(file);
-			}
 		}
 	}
-	
+
 	if(wait_time == wait)
 	{
-		
 		var ev = global.event_list[|event_step];
 		if(!instance_exists(ev))
 		{
 			instance_create_depth(0,0,0,ev);
 		}
-		
 	}
 	else
 	{
@@ -89,12 +66,20 @@ if(global.gp_active)
 	global.score -= global.score % 10;//failsafe
 	
 	score_to_draw += round(recursiv(score_to_draw,global.score,10,100));
-	score_to_draw -= score_to_draw % 10;
+	score_to_draw -= score_to_draw % 10 
+	score_to_draw += global.continues_max - global.continues;
+
 	
 }
 
-//PAUSE
+if(instance_exists(obj_replay))
+{
+	cursor_lockout = 10;
+}
 
+
+
+//PAUSE
 switch(pause_type)
 {
 	case PAUSE_MANUAL:
@@ -133,90 +118,106 @@ switch(level)
 }
 		
 		
-if(pause_state == 1) and (cursor_lockout == 0)
+if(pause_state == 1) 
 {
-	if(abs(global.down_pressed - global.up_pressed))
+	if (cursor_lockout == 0)
 	{
-		
-		play_sound(sfx_menu_move,1,false);
-	
-		//moving cursor
-		var lenght = array_length(array_check);
-		
-		cursor[level] += global.down_pressed - global.up_pressed;
-		cursor[level] %= lenght;
-		cursor[level] += cursor[level] < 0 ? lenght : 0;
-	}
-
-
-	if(global.shot_pressed)
-	{
-		
-	
-		var act = array_check[cursor[level]].action;
-	
-		switch(act)
+		if(abs(global.down_pressed - global.up_pressed))
 		{
-			case MENU_MENU:
-				level += 1;
-				cursor[level] = 1;
-				pause[cursor[0]].param[0].active_offset = 0; //:/
-				pause[cursor[0]].param[1].active_offset = menu_offset;
-			break;
-			case MENU_BACK:
+		
+			play_sound(sfx_menu_move,1,false);
+	
+			//moving cursor
+			var lenght = array_length(array_check);
+		
+			cursor[level] += global.down_pressed - global.up_pressed;
+			cursor[level] %= lenght;
+			cursor[level] += cursor[level] < 0 ? lenght : 0;
+		}
+
+
+		if(global.shot_pressed)
+		{
+			var act = array_check[cursor[level]].action;
+	
+			switch(act)
+			{
+				case MENU_MENU:
+					level += 1;
+					cursor[level] = 1;
+					pause[cursor[0]].param[0].active_offset = 0; //:/
+					pause[cursor[0]].param[1].active_offset = menu_offset;
+				break;
+				case MENU_BACK:
+					level -= 1;
+				break;
+				case MENU_RESTART:
+					room_transition(room_reload);
+					cursor_lockout = 1000;
+				break;
+				case MENU_TITLE:
+					room_transition(room_main);
+					cursor_lockout = 1000;
+				break;
+				case MENU_CONTINUE:
+					level -= 1;
+				
+					global.continues -= 1;
+					
+					global.score = 0;
+					score_to_draw = 0;
+				
+					global.life = global.starting_life;
+					global.bomb = global.starting_bomb;
+				
+					play_sound(sfx_extend,1,false);
+				
+					switch(global.continues)
+					{
+						case 0:
+							gameover[0].action = MENU_INVALID;
+						break;
+					}
+					
+					gameover[1].action = MENU_INVALID;
+				break;
+				case MENU_REPLAY:
+					instance_create_depth(200,200,depth - 1,obj_replay);
+				break;
+			}
+		
+			switch(act)
+			{
+				case MENU_INVALID:
+					play_sound(sfx_menu_invalid,1,false);
+				break;
+				default:
+					play_sound(sfx_menu_valid,1,false);
+				break;
+			}
+		}
+	
+	
+	
+		if(global.bomb_pressed)
+		{
+			if(pause_type == PAUSE_MANUAL)
+			{
 				level -= 1;
-			break;
-			case MENU_RESTART:
-				room_transition(room_reload);
-				cursor_lockout = 1000;
-			break;
-			case MENU_TITLE:
-				room_transition(room_main);
-				cursor_lockout = 1000;
-			break;
-			case MENU_CONTINUE:
-				level -= 1;
-				global.continues -= 1;
-				
-				global.life = global.starting_life;
-				global.bomb = global.starting_bomb;
-				
-				play_sound(sfx_extend,1,false);
-				
-				if(global.continues == 0)
-				{
-					gameover[0].action = MENU_INVALID;
-				}
-			break;
+	
+				play_sound(sfx_menu_back,1,false);
+			}
 		}
-		
-		switch(act)
-		{
-			case MENU_INVALID:
-				play_sound(sfx_menu_invalid,1,false);
-			break;
-			default:
-				play_sound(sfx_menu_valid,1,false);
-			break;
-		}
-	}
-	
-	
-	
-	if(global.bomb_pressed)
-	{
-		if(pause_type == PAUSE_MANUAL)
-		{
-			level -= 1;
-	
-			play_sound(sfx_menu_back,1,false);
-		}
-	}
 
-	if(level < 0)
+		if(level < 0)
+		{
+			level = 0;
+			pause_state = 2;
+		}
+	}
+	else
 	{
-		level = 0;
-		pause_state = 2;
+		cursor_lockout -= 1;	
 	}
 }
 

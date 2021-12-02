@@ -23,6 +23,7 @@ global.gp_active = true;
 
 global.time = 0;
 
+global.stage_number = 0; //how much stage since the start (used for replay)
 
 global.danmaku_id = 0; //the id of the next danmaku_id to spawn (or the last one spawn if not using it)
 global.danmaku_color = 0;
@@ -31,7 +32,7 @@ global.danmaku_speed = 0;
 
 global.boss = BOSS_APPLE;
 
-
+global.score = 0;
 score_to_draw = 0;
 
 global.starting_life = 2;
@@ -68,8 +69,6 @@ switch(global.game_type)
 	break;
 }
 
-
-global.continues_max = 3;
 global.continues = global.continues_max;
 
 global.item = 0;//
@@ -99,6 +98,8 @@ switch(global.difficulty)
 		global.piv = 300000;
 	break;
 }
+global.piv = global.game_type == GAME_EXTRA ? 300000 : global.piv;
+
 global.piv_max = 5000000;
 global.stage = 1;
 old_stage = 1;

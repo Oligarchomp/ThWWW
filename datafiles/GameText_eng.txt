@@ -65,7 +65,6 @@ menu_player = Observe Your Scores
 menu_option = Change The World
 menu_music = Listen to BGM
 menu_quit = End Fantasy
-
 menu_look_replay = Look at all those awesome replays!
 
 pause_resume = Resume
@@ -77,9 +76,8 @@ pause_yes = Yes
 pause_no = No
 pause_continue = Continue
 pause_restart_replay = Restart replay
-
 score_replay = Do you want to save a replay?
-score_overwrite = Overwriting saved replay?
+score_no_replay = No replay can be saved, as a continue as been used
 
 spell_s1_mida = Apple Sign - [Apfelkuchen]
 spell_s1_midb = Heaven Sign - [Adam and Eve Falling From Heaven]
@@ -915,7 +913,7 @@ com_s1_midl = In that case, the Adam's apple's name can be changed to whatever f
 com_s1_1e = One day, while roaming around, an apple fell right on Apple head. She realized that day how much Danmaku potential apples really have.
 com_s1_1n = Newton's third law is the law of Action and Reaction. It's can easily be explained like so:$Action: the Boss shoots Danmaku.$Reaction: You try to not die (and fail).
 com_s1_1h = The Mt. Fuji and the apples from the Fuji variety share their names.$Honestly, anyone would immediately rejoice after hearing such a cool fact.
-com_s1_1l = Apple is not the Magician from Mt. Fuji (Altough this is also a very important part of japanese folklore.).$Also there is no power system in this game.$And also Reimu doesn't mention diabetes.
+com_s1_1l = Apple isn't a Wizard from Mt. Fuji (Altough this is also a very important part of japanese folklore.).$Also there is no power system in this game.$And also Reimu doesn't mention diabetes.
 com_s1_2e = Comm
 com_s1_2n = comm
 com_s1_2h = comm

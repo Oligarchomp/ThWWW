@@ -85,7 +85,7 @@ if(global.gp_active)
 				{
 					case 2:
 						var wait_ring = 70 
-						var ring_start = 170;
+						var ring_start = 190;
 						var ring_plus = 25;
 						var ring_nbr = 7;
 						var wait_geyser = 85;
@@ -99,7 +99,7 @@ if(global.gp_active)
 					break;
 					case 3:
 						var wait_ring = 60 
-						var ring_start = 160;
+						var ring_start = 180;
 						var ring_plus = 25;
 						var ring_nbr = 9;
 						var open_geyser = 24;

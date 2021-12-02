@@ -37,4 +37,11 @@ switch(state)
 			}
 		}
 	break;
+	case 2:
+	case 3:
+		draw_set_font(font_pause)
+	
+		var txt = get_text("score_no_replay");
+		draw_text_color(480 - string_width(txt) / 2,250,txt,c_white,c_white,c_white,c_white,menu_alpha);
+	break;
 }

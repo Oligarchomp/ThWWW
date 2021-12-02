@@ -78,7 +78,7 @@ if(global.gp_active)
 					var mentos_off = 90;
 					var ball_wait = 4;
 					var ball_off = 30;
-					var bubble_wait = 15;
+					var bubble_wait = 13;
 					var bubble_off = -60;
 			
 					var water_ring = 3;
