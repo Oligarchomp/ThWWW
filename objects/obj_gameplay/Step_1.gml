@@ -44,9 +44,6 @@ if(global.gp_active)
 		{
 			case end_time:
 		
-				need_stage_replay = true;
-				final_stage_replay = true;
-				
 				pause_state = 1;
 		
 				pause_type = PAUSE_END;
@@ -162,7 +159,14 @@ switch(pause_state)
 				mem_down_down = global.down_down;
 				mem_up_down = global.up_down;
 				
+				if(pause_type == PAUSE_GAMEOVER) or (pause_type == PAUSE_END)
+				{
+					need_stage_replay = true;
+					final_stage_replay = true;
+				}
 			}
+			
+			
 		}
 		
 		text_offset = goto_value(text_offset,0,-text_offset_max / pause_spd );

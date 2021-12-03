@@ -6,4 +6,6 @@ event_inherited();
 
 act_set_time(960,960);
 
+act_dir = 1;
+
 

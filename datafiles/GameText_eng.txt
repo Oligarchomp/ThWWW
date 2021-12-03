@@ -37,8 +37,8 @@ mus_room_score = nothing
 music_comment = Music Comment
 
 mus_com_title = comment
-mus_com_s1 = Compositon: Toby Fox // Arrangement: Sozoro Namino
-mus_com_b1 = Compositon: Toby Fox // Arrangement: Princess Sylvysprit
+mus_com_s1 = Composition: Toby Fox // Arrangement: Sozoro Namino
+mus_com_b1 = Composition: Toby Fox // Arrangement: Princess Sylvysprit
 mus_com_s2 = comment
 mus_com_b2 = Composition: Jani
 mus_com_s3 = comment

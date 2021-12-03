@@ -8,7 +8,7 @@ if(instance_exists(obj_replay))
 {
 	var x1 = x - 20;
 	var y1 = y - 20;
-	var width = 365;
+	var width = 355;
 	var height = 185;
 	if(!instance_exists(obj_gameplay))
 	{
