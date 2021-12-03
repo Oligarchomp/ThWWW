@@ -199,6 +199,8 @@ switch(pause_state)
 if(need_stage_replay)
 {
 	reset_controle();
+	obj_player.x = round(obj_player.x);
+	obj_player.y = round(obj_player.y);
 	
 	global.stage_number += 1
 	
