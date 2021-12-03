@@ -222,8 +222,11 @@ if(need_stage_replay)
 			}
 			replay = [];
 				
+			var nbr = string(global.stage_number);
+			var nbr1 = string(global.stage_number + 1)
+				
 			file_text_writeln(file);
-			file_text_write_string(file,"seed" + string(global.stage_number) + " = " + string(seed));
+			file_text_write_string(file,"seed" + nbr + " = " + string(seed));
 			file_text_writeln(file);
 			file_text_write_string(file,input);
 			file_text_writeln(file);
@@ -233,6 +236,26 @@ if(need_stage_replay)
 				file_text_writeln(file);
 				file_text_write_string(file,"stage_nbr = " + string(global.stage_number));
 			}
+			else
+			{
+				file_text_writeln(file);
+				file_text_write_string(file,"event_step" + nbr1 + " = " + string(event_step));
+				file_text_writeln(file);
+				file_text_write_string(file,"x" + nbr1 + " = " + string(obj_player.x));
+				file_text_writeln(file);
+				file_text_write_string(file,"y" + nbr1 + " = " + string(obj_player.y));
+				file_text_writeln(file);
+				file_text_write_string(file,"life" + nbr1 + " = " + string(global.life));
+				file_text_writeln(file);
+				file_text_write_string(file,"bomb" + nbr1 + " = " + string(global.bomb));
+				file_text_writeln(file);
+				file_text_write_string(file,"item" + nbr1 + " = " + string(global.item_nbr));
+				file_text_writeln(file);
+				file_text_write_string(file,"score" + nbr1 + " = " + string(global.score));
+				file_text_writeln(file);
+				file_text_write_string(file,"graze" + nbr1 + " = " + string(global.graze));
+			}
+			
 			file_text_close(file);
 		}
 		
@@ -246,10 +269,10 @@ if(need_stage_replay)
 		next_input_time_index = 0;
 		global.time = 0;
 	}
+	
+	
 
 }
-
-
 
 
 global.gp_active = pause_state == 0;

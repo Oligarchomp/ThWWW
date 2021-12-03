@@ -11,6 +11,8 @@ instance_create_depth(0,0,0,obj_bgm);
 room_goto(room_main);
 //room_goto(room_gp);
 
+global.game_x_offset =  156;
+global.game_y_offset =  20;
 
 
 global.bg_depth = -170;
@@ -40,6 +42,11 @@ global.difficulty = 3;
 
 global.continues_max = 3;
 global.continues = global.continues_max;
+
+global.starting_life = 2;
+global.starting_bomb = 2;
+
+global.poc = 0;
 
 // to know what will be played
 global.event_list = ds_list_create();

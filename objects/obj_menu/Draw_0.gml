@@ -16,8 +16,9 @@ switch(level)
 		var check = menu[cursor[0]].param[cursor[1]].param[cursor[2]].param;
 	break;
 }
-	
-	
+var  draw_replay = false;
+
+
 draw_sprite(spr_main,level != 0,0,0);
 
 draw_set_font(font_main);
@@ -116,33 +117,9 @@ switch(level)
 				}
 			break;
 			case 5: //replay
-				draw_set_font(font_replay);
+			
+				draw_replay = true;
 				
-				draw_text(170,32,get_text("menu_look_replay"));
-				var xx = 255;
-				var yy = 70;
-				var dist = 22;
-				
-				for(var i = 0; i < array_length(check); i += 1)
-				{
-					is_active = (cursor[level] == i)
-					
-					//relplay number
-					draw_text_color(xx - 130,yy + i * dist,"ReplayN" + string(add_zero(i + 1,2)) + " //",c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
-					//name
-					draw_text_color(xx,yy + i * dist,check[i].nom,c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
-					//date
-					draw_text_color(xx + 80,yy + i * dist,"/ " + check[i].date,c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
-					// hour
-					draw_text_color(xx + 190,yy + i * dist,"/ " + check[i].hour ,c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
-					// player
-					draw_text_color(xx + 270,yy + i * dist,"/ " + check[i].player,c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
-					// difficulty
-					draw_text_color(xx + 360,yy + i * dist,"/ " + check[i].difficulty,c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
-					// game_type
-					draw_text_color(xx + 460,yy + i * dist,"/ " + check[i].game_type,c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
-					
-				}
 			break;
 			case 7://music room
 				
@@ -252,6 +229,9 @@ switch(level)
 				}
 				
 			break;
+			case 5:
+				draw_replay = true;
+			break;
 		}
 	break;
 	case 3:
@@ -269,4 +249,66 @@ switch(level)
 			break;
 		}
 	break;
+}
+
+
+if(draw_replay)
+{
+	var check = menu[cursor[0]].param;
+	
+	draw_set_font(font_replay);
+				
+	draw_text(170,32,get_text("menu_look_replay"));
+	var xx = 255;
+	var yy = 70;
+	var dist = 22;
+				
+	for(var i = 0; i < array_length(check); i += 1)
+	{
+		is_active = (cursor[1] == i)
+					
+		//relplay number
+		draw_text_color(xx - 130,yy + i * dist,"ReplayN" + string(add_zero(i + 1,2)) + " //",c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
+		//name
+		draw_text_color(xx,yy + i * dist,check[i].nom,c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
+		//date
+		draw_text_color(xx + 80,yy + i * dist,"/ " + check[i].date,c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
+		// hour
+		draw_text_color(xx + 190,yy + i * dist,"/ " + check[i].hour ,c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
+		// player
+		draw_text_color(xx + 270,yy + i * dist,"/ " + check[i].player,c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
+		// difficulty
+		draw_text_color(xx + 360,yy + i * dist,"/ " + check[i].difficulty,c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
+		// game_type
+		draw_text_color(xx + 460,yy + i * dist,"/ " + check[i].game_type,c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
+					
+	}
+	
+	
+	if(level == 2)
+	{		
+		var check = menu[cursor[0]].param[cursor[1]].param;
+		
+		var x1 = 400;
+		var y1 = 180;
+		var width = 110;
+		var height = 160;
+		draw_sprite_part(spr_main,1,x1,y1,width,height,x1,y1);
+		var wid = 4;
+		draw_line_width(x1,y1,x1 + width,y1,wid);
+		draw_line_width(x1 + width,y1,x1 + width,y1 + height,wid);
+		draw_line_width(x1,y1 + height,x1 + width,y1 + height,wid);
+		draw_line_width(x1,y1,x1,y1 + height,wid);
+				
+		draw_set_font(font_replay);
+				
+		for(var i = 0; i < array_length(check); i += 1)
+		{
+			var is_active = (cursor[level] == i);
+			var col = check[i].action == MENU_PLAY_REPLAY ? c_white : $5a5a5a;
+					
+			draw_text_color(x1 + 20 + 5 * is_active, y1 + 20 + i * 20,check[i].title,col,col,col,col,1 - !is_active * 0.6)
+					
+		}
+	}
 }

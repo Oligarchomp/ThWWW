@@ -1207,7 +1207,37 @@ for(var i = 0; i < 20; i += 1)
 			break;
 		}
 		menu[rep].param[i].difficulty = diff;
-		menu[rep].param[i].action = MENU_PLAY_REPLAY;
+		
+		var stage = get_replay(REPLAY_STAGE_NBR,replay_check,0);
+		
+		if(stage == 1)
+		{
+			menu[rep].param[i].action = MENU_PLAY_REPLAY;
+		}
+		else
+		{
+			menu[rep].param[i].action = MENU_MENU;
+			menu[rep].param[i].param = [];
+			for(var j = 0; j < 6; j += 1)
+			{
+				if(j + 1 <= stage)
+				{
+					menu[rep].param[i].param[j] = 
+					{
+						title : "Stage " + string(j + 1),
+						action : MENU_PLAY_REPLAY
+					};
+				}
+				else
+				{
+					menu[rep].param[i].param[j] = 
+					{
+						title : "Stage " + string(j + 1),
+						action : MENU_INVALID
+					};
+				}
+			}
+		}
 	}
 	else
 	{

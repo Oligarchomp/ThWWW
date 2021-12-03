@@ -217,7 +217,35 @@ if(cursor_lockout == 0)
 				set_bgm(array_check[cursor[level]].music,array_check[cursor[level]].intro)
 			break;
 			case MENU_PLAY_REPLAY:
-				var rep = "Replay" + string(cursor[level]) + ".txt";
+				var rep = "Replay" + string(cursor[1]) + ".txt";
+				
+				if(level == 1)
+				{
+					global.replay_stage_nbr = 1;
+				}
+				else
+				{
+					var start = cursor[level] + 1;
+					
+					global.replay_stage_nbr = start;
+					
+					if(start > 1)
+					{
+						global.replay_event_step = real(get_text_file("event_step" + string(start),rep));
+						global.replay_x = real(get_text_file("x" + string(start),rep));
+						global.replay_y = real(get_text_file("y" + string(start),rep));
+						global.replay_life = real(get_text_file("life" + string(start),rep));
+						global.replay_bomb = real(get_text_file("bomb" + string(start),rep));
+						global.replay_item = real(get_text_file("item" + string(start),rep));
+						global.replay_score = real(get_text_file("score" + string(start),rep));
+						global.replay_graze = real(get_text_file("graze" + string(start),rep));
+					}
+					
+					
+				}
+				
+				
+				
 				
 				room_transition(room_gp);
 				global.play_type = PLAY_REPLAY;
@@ -246,6 +274,8 @@ if(cursor_lockout == 0)
 				
 				global.menu_level = level;
 				global.menu_cursor = cursor;
+				
+				cursor_lockout = 100000;
 			break;
 			case MENU_QUIT:
 				game_end();

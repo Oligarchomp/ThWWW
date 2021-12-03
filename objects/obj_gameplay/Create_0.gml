@@ -2,6 +2,7 @@
 // You can write your code in this editor
 depth = 50;
 
+instance_create_depth(room_width / 2,430,global.player_depth,obj_player);
 
 switch(global.game_type)
 {
@@ -15,15 +16,77 @@ switch(global.game_type)
 	break;
 }
 
-
-global.game_x_offset =  156;
-global.game_y_offset =  20;
-
 global.gp_active = true;
 
 global.time = 0;
 
-global.stage_number = -1; //how much stage since the start (used for replay)
+
+item_extend = ds_list_create();
+
+extend_full = ds_list_create();
+ds_list_add(extend_full,250,600,1000,1500,2200,9999);
+extend_extra = ds_list_create();
+ds_list_add(extend_extra,600,1400,9999);
+
+
+if(global.play_type == PLAY_MANUAL) or (global.replay_stage_nbr == 1)
+{
+	global.stage_number = -1; //how much stage since the start (used for replay)
+	global.score = 0;
+	event_step = 0; // current event step
+	
+	switch(global.game_type)
+	{
+		case GAME_FULL:
+			global.life = global.starting_life;
+			global.bomb = global.starting_bomb;
+		
+			item_extend = extend_full;
+		break;
+		case GAME_EXTRA:
+			global.life = global.starting_life;
+			global.bomb = global.starting_bomb;
+		
+			item_extend = extend_extra;
+		break;
+		case GAME_SPELL:
+			global.life = 0;
+			global.bomb = 0;
+		
+			ds_list_add(item_extend,9999);
+		break;
+		case GAME_STAGE:
+			global.life = 7;
+			global.bomb = global.starting_bomb;
+		
+			ds_list_add(item_extend,9999);
+		break;
+	}
+	
+	global.item_nbr = 0 // how many point item collected
+	global.graze = 0;
+}
+else
+{
+	global.stage_number = global.replay_stage_nbr - 2;
+	global.score = global.replay_score;
+	event_step = global.replay_event_step; // current event step
+	obj_player.x = global.replay_x;
+	obj_player.y = global.replay_y;
+	
+	global.life = global.replay_life;
+	global.bomb = global.replay_bomb;
+	global.item_nbr = global.replay_item;
+	
+	item_extend = extend_full;
+	while(item_extend[|0] < global.item_nbr)
+	{
+		ds_list_delete(item_extend,0);	
+	}
+	
+	global.graze = global.replay_graze;
+}
+
 
 global.danmaku_id = 0; //the id of the next danmaku_id to spawn (or the last one spawn if not using it)
 global.danmaku_color = 0;
@@ -32,47 +95,14 @@ global.danmaku_speed = 0;
 
 global.boss = BOSS_APPLE;
 
-global.score = 0;
+
 score_to_draw = 0;
 
-global.starting_life = 2;
-global.starting_bomb = 2;
-
-
-item_extend = ds_list_create();
-
-switch(global.game_type)
-{
-	case GAME_FULL:
-		global.life = global.starting_life;
-		global.bomb = global.starting_bomb;
-		
-		ds_list_add(item_extend,250,600,1000,1500,2200,9999);
-	break;
-	case GAME_EXTRA:
-		global.life = global.starting_life;
-		global.bomb = global.starting_bomb;
-		
-		ds_list_add(item_extend,600,1400,9999);
-	break;
-	case GAME_SPELL:
-		global.life = 0;
-		global.bomb = 0;
-		
-		ds_list_add(item_extend,9999);
-	break;
-	case GAME_STAGE:
-		global.life = 7;
-		global.bomb = global.starting_bomb;
-		
-		ds_list_add(item_extend,9999);
-	break;
-}
 
 global.continues = global.continues_max;
 
 global.item = 0;//
-global.poc = 0;
+
 
 global.spell_life = 1; //use for sharing heath bar between nons and spells
 
@@ -81,8 +111,8 @@ global.enemy_type = 0;
 global.bullet_cap = 700;
 global.graze_max = 100;
 
-global.item_nbr = 0 // how many point item collected
-global.graze = 0;
+
+
 switch(global.difficulty)
 {
 	case 0:
@@ -137,17 +167,12 @@ if(global.play_type == PLAY_MANUAL)
 	file_text_close(file);
 }
 
-instance_create_depth(room_width / 2,430,global.player_depth,obj_player);
 
-
-event_step = 0; // current event step
 last_event_step = -1;
 event_time = 0; //since how long the current event as been going on
 wait_time = 0;
 
 end_wait = 0;
-
-
 
 
 
