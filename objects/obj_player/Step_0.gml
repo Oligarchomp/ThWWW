@@ -4,7 +4,7 @@ if (global.gp_active)
 {
 	var ev = get_current_event();
 	var par = object_get_parent(ev);
-	in_dialogue = (par == obj_dialogue);
+	in_dialogue = (par == obj_dialogue) or (ev == act_end_stage);
 
 	
 	if (old_state != state)
@@ -116,30 +116,27 @@ if (global.gp_active)
 			}
 			
 		
-			if(!in_dialogue)
-			{
-				// SHOOTING
-				if (global.shot_pressed)
-				{
-					shot_time = 0;
-				}
 			
-				if (global.shot_down)
+			if (global.shot_down) and (!in_dialogue)
+			{
+				shot_time += 1;
+				if (shot_time % shot_wait > 0)
 				{
-					shot_time += 1;
-					if (shot_time % shot_wait > 0)
-					{
-						var off = (shot_time % shot_wait) * base_shot_spd / 2;
+					var off = (shot_time % shot_wait) * base_shot_spd / 2;
 					
-						for (var i = -1; i < 2; i += 2)
-						{
-							var inst = instance_create_depth(x + base_shot_x_offset * i ,y - base_shot_y_offset + off,0,obj_shot_base);
-							inst.alpha = 0.75 + (sin(shot_time/8) * 0.25)
-							play_sound(sfx_shooting,1,false)
-						}
+					for (var i = -1; i < 2; i += 2)
+					{
+						var inst = instance_create_depth(x + base_shot_x_offset * i ,y - base_shot_y_offset + off,0,obj_shot_base);
+						inst.alpha = 0.75 + (sin(shot_time/8) * 0.25)
+						play_sound(sfx_shooting,1,false)
 					}
 				}
 			}
+			else
+			{
+				shot_time = 0;
+			}
+			
 			
 			//invincibility
 			if (invincibility) 

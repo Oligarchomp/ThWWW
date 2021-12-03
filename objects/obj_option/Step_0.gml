@@ -35,8 +35,6 @@ if (global.gp_active)
 			break;
 			default: //REIMU
 				image_index = step * yy_rot_spd;
-				
-				
 			break;
 		}
 		
@@ -51,9 +49,6 @@ if (global.gp_active)
 						var inst = instance_create_depth(x + x_pos[i],y + y_pos[i],depth + 1, secondary_shot);
 						switch(player_id)
 						{
-							case P_MARISA:
-								
-							break;
 							case P_SANAE:
 								var angle_dif = 10;
 								inst.angle = 90 + (1.5 * angle_dif) - angle_dif * (i- 1);
@@ -64,8 +59,6 @@ if (global.gp_active)
 				}
 			}
 		}
-		
-		
 		
 		step += 1;
 	}
