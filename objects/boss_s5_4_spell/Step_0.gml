@@ -258,7 +258,7 @@ if(global.gp_active) and (spell_wait == 0)
 					}
 				}
 				
-				stab_angle = -90;
+				stab_angle = rng(360,false,4);
 				stab_dir = sign(obj_player.x - x);
 				if(stab_dir == 0)
 				{

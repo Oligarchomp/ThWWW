@@ -15,49 +15,62 @@ if(global.gp_active)
 			event_time = 0;
 			wait_time = 0;
 		}
-	}
-	else
-	{
-		end_wait = goto_value(end_wait,110,1);
-		if(end_wait == 110)
-		{
-			pause_state = 1;
 		
-			pause_type = PAUSE_END;
-			play_sound(sfx_pause,1,false);
-			
-			if(global.play_type == PLAY_MANUAL)
-			{
-				if(global.game_type == GAME_SPELL)
-				{
-					cursor[0] = array_length(cursor);	
-				}
-			}
-			else
-			{
-				cursor[0] = 1;
-			}
-		}
-	}
-
-	if(wait_time == wait)
-	{
-		var ev = global.event_list[|event_step];
-		if(!instance_exists(ev))
+		if(wait_time == wait)
 		{
-			instance_create_depth(0,0,0,ev);
-			
-			if(object_get_parent(ev) == obj_room_transition)
+			var ev = global.event_list[|event_step];
+			if(!instance_exists(ev))
 			{
-				need_stage_replay = true;
-			}
+				instance_create_depth(0,0,0,ev);
+			
+				if(object_get_parent(ev) == obj_room_transition)
+				{
+					need_stage_replay = true;
+					final_stage_replay = ev == act_end;
+				}
 
+			}
 		}
+		else
+		{
+			wait_time += 1;
+		}
+		
 	}
 	else
 	{
-		wait_time += 1;
+		var end_time = 110 + (global.game_type == GAME_EXTRA) * 60;
+		switch(end_wait)
+		{
+			case end_time:
+		
+				need_stage_replay = true;
+				final_stage_replay = true;
+				
+				pause_state = 1;
+		
+				pause_type = PAUSE_END;
+				play_sound(sfx_pause,1,false);
+			
+				if(global.play_type == PLAY_MANUAL)
+				{
+					if(global.game_type == GAME_SPELL)
+					{
+						cursor[0] = array_length(cursor);	
+					}
+				}
+				else
+				{
+					cursor[0] = 1;
+				}
+			break;
+		}
+		
+		end_wait = goto_value(end_wait,end_time,1);
+		
 	}
+
+	
 	
 
 	if(global.item_nbr >= item_extend[|0])
@@ -71,7 +84,7 @@ if(global.gp_active)
 	
 	global.score -= global.score % 10;//failsafe
 	
-	score_to_draw += round(recursiv(score_to_draw,global.score,10,100));
+	score_to_draw += round(recursiv(score_to_draw,global.score,9,100));
 	score_to_draw -= score_to_draw % 10 
 	score_to_draw += global.continues_max - global.continues;
 }	
@@ -149,12 +162,6 @@ switch(pause_state)
 				mem_down_down = global.down_down;
 				mem_up_down = global.up_down;
 				
-				//saving input
-				if(pause_type == PAUSE_END) or (pause_type == PAUSE_GAMEOVER)
-				{
-					need_stage_replay = true;
-					final_stage_replay = true;
-				}
 			}
 		}
 		

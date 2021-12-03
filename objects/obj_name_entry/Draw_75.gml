@@ -9,7 +9,7 @@ if(instance_exists(obj_replay))
 	var x1 = x - 20;
 	var y1 = y - 20;
 	var width = 365;
-	var height = 160;
+	var height = 185;
 	if(!instance_exists(obj_gameplay))
 	{
 		draw_sprite_part(spr_main,1,x1,y1,width,height,x1,y1);

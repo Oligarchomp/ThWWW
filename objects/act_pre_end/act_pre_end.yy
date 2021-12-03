@@ -23,16 +23,15 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":75,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Stage7",
-    "path": "folders/Objects/STAGES/Stage7.yy",
+    "name": "Stage6",
+    "path": "folders/Objects/STAGES/Stage6.yy",
   },
   "resourceVersion": "1.0",
-  "name": "act_end_extra",
+  "name": "act_pre_end",
   "tags": [],
   "resourceType": "GMObject",
 }

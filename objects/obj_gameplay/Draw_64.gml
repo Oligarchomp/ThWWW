@@ -4,10 +4,6 @@ draw_sprite(spr_hud,0,0,0);
 
 draw_text(130,room_height,fps)
 
-if (!global.gp_active)
-{
-	draw_text(0,0,"PAUSE")
-}
 //draw difficulty
 if(global.stage != 7)
 {

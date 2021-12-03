@@ -133,9 +133,21 @@ if(pause_state == 1)
 			if(pause_type == PAUSE_MANUAL)
 			{
 				level -= 1;
-	
-				play_sound(sfx_menu_back,1,false);
 			}
+			else
+			{
+				var last = array_length(array_check) - 1;
+				if(cursor[0] == last)
+				{
+					room_transition(room_main);
+					cursor_lockout = 1000;
+				}
+				else
+				{
+					cursor[0] = array_length(array_check) - 1;
+				}
+			}
+			play_sound(sfx_menu_back,1,false);
 		}
 
 		if(level < 0)

@@ -146,7 +146,7 @@ if(global.play_type == PLAY_MANUAL)
 	for(var i = 0; i < ds_list_size(global.event_list); i += 1)
 	{
 		var ev = global.event_list[|i];
-		if(ev != act_end) and (ev != act_end_extra)
+		if(ev != act_end)
 		{
 			ev_str += string(ev) + ",";
 			wait_str += string(global.wait_list[|i]) + ",";
@@ -173,7 +173,6 @@ event_time = 0; //since how long the current event as been going on
 wait_time = 0;
 
 end_wait = 0;
-
 
 
 pause_type = PAUSE_MANUAL;

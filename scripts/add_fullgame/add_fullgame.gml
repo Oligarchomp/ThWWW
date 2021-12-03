@@ -4,5 +4,5 @@ function add_fullgame(){
 	{
 		add_stage(i);	
 	}
-	add_stage_event(act_end,240);
+	add_stage_event(act_end,0);
 }

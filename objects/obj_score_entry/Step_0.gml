@@ -27,6 +27,8 @@ switch(state)
 				data_write("Data.ini",index,i,scores[i]);
 				data_write("Data.ini",index + "_name",i,names[i]);
 			}
+			
+			global.name_entry = "";
 		}
 	break;
 	case 1:
