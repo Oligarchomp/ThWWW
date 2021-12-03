@@ -4,7 +4,6 @@ event_inherited();
 global.stage = 1;
 global.boss = BOSS_APPLE;
 
-bg_to_destroy = noone;
 bg_to_create = bg_s1;
 music = mus_stage1;
 

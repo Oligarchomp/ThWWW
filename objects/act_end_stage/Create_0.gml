@@ -3,6 +3,8 @@
 depth = global.boss_depth + 10;
 
 alpha = 0;
+step = 0;
 // Inherit the parent event
 event_inherited();
 
+act_set_time(120,121);

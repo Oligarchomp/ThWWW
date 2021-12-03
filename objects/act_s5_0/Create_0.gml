@@ -7,6 +7,5 @@ event_inherited();
 global.stage = 5;
 global.boss = BOSS_FEZA;
 
-bg_to_destroy = bg_s4;
 bg_to_create = bg_s5;
 music = noone;

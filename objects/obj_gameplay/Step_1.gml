@@ -270,8 +270,6 @@ if(need_stage_replay)
 		global.time = 0;
 	}
 	
-	
-
 }
 
 

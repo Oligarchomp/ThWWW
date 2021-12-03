@@ -16,40 +16,19 @@ if(global.gp_active)
 	switch(state)
 	{
 		case 0:
-			if(state_time == 0) and (obj_gameplay.event_step == 0)
+			if(state_time == 0)
 			{
-				instance_create_depth(0,0,0,bg_to_create);
-				
-				if(global.game_type == GAME_SPELL) // if spell practice
-				{
-					state = 2;	
-				}
-			}
-			
-			alpha = goto_value(alpha,1,0.05);
-			if(alpha == 1)
-			{
-				state = 1;
-			}
-		break;
-		case 1:
-			if (state_time == 60)
-			{
-				state = 2;
-				with(bg_to_destroy)
-				{
-					instance_destroy();
-				}
 				if(!instance_exists(bg_to_create))
 				{
 					instance_create_depth(0,0,0,bg_to_create);
 				}
 			}
-		break;
-		case 2:
-			alpha = goto_value(alpha,0,0.05);
-			if(alpha == 0)
+		
+			alpha = goto_value(alpha,0,0.04);
+			
+			if(alpha == 0) or (global.game_type == GAME_SPELL)
 			{
+				state = 1;
 				set_bgm(music,noone);
 				
 				event_next()
@@ -57,6 +36,5 @@ if(global.gp_active)
 			}
 		break;
 	}
-	
 	
 }
