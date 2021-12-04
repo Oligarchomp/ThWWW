@@ -14,7 +14,7 @@ if(global.gp_active)
 				var bubble_wait = 100;
 				var bubble_nbr = 12;
 				
-				var arrow_row = 2;
+				var arrow_row = 1;
 				var arrow_dist = 20;
 				var arrow_angle = 999;
 				var arrow_spd = 1;
@@ -27,7 +27,7 @@ if(global.gp_active)
 				var bubble_nbr = 14;
 				
 				var arrow_row = 5;
-				var arrow_dist = 15;
+				var arrow_dist = 17;
 				var arrow_angle = 999;
 				var arrow_spd = 4;
 				var arrow_grav = 0;

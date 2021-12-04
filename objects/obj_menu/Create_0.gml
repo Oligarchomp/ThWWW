@@ -1,6 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if(global.need_change_rng)
+{
+	global.rng_patch = !global.rng_patch;
+	global.need_change_rng = false;
+}
+
+
 ds_list_clear(global.event_list);
 ds_list_clear(global.wait_list);
 
@@ -979,6 +986,34 @@ menu =
 	{
 		title : "OPTION",
 		description : get_text("menu_option"),
+		action : MENU_MENU,
+		param :
+		[
+			{
+				title : get_text("menu_fullscreen"),
+				action : MENU_MAKE_SOUND
+			},
+			{
+				title : get_text("menu_sfx_volume"),
+				action : MENU_NOTHING
+			},
+			{
+				title : get_text("menu_bgm_volume"),
+				action : MENU_NOTHING,
+			},
+			{
+				title : get_text("menu_controle"),
+				action : MENU_MENU,
+				param : 
+				[
+				
+				]
+			},
+			{
+				title : get_text("menu_rng"),
+				action : MENU_MAKE_SOUND
+			}
+		]
 	},
 	{
 		title : "MUSIC ROOM",
@@ -1182,6 +1217,9 @@ for(var i = 0; i < 20; i += 1)
 				var type = "Spell Practice";
 			break;
 		}
+		
+		type += get_text_file("rng",replay_check) ? "-RNG" : "";
+		
 		menu[rep].param[i].game_type = type;
 		
 		switch(get_text_file("difficulty",replay_check))
@@ -1246,7 +1284,7 @@ for(var i = 0; i < 20; i += 1)
 		menu[rep].param[i].hour = "00:00";
 		menu[rep].param[i].player = "------";
 		menu[rep].param[i].difficulty = "-------"
-		menu[rep].param[i].game_type = "------------";
+		menu[rep].param[i].game_type = "-----------------";
 		menu[rep].param[i].action = MENU_NOTHING;
 	}
 }

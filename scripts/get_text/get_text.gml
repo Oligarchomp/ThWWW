@@ -12,8 +12,8 @@ function get_text(argument0) {
 	{
 		if(file_text_eof(file))
 		{
-			final_string = "Text not found"
-			exit;
+			final_string = "0"
+			break;
 		}
 		final_string = file_text_readln(file);
 	}

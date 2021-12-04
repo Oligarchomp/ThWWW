@@ -1,7 +1,42 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+window_set_fullscreen(data_read("Data.ini","option","fullscreen"));
+global.rng_patch = data_read("Data.ini","option","rng")
 
+
+global.sound_mult = 1.1;
+
+var sfx = data_read("Data.ini","option","sfx");
+if(sfx == 0)
+{
+	data_write("Data.ini","option","sfx",7);
+	global.sfx_volume = 7;
+}
+else
+{
+	global.sfx_volume = sfx;
+}
+global.sfx_emitter = audio_emitter_create();
+audio_emitter_gain(global.sfx_emitter,(global.sfx_volume - 1) * global.sound_mult / 10);
+
+
+var bgm = data_read("Data.ini","option","bgm");
+if(bgm == 0)
+{
+	data_write("Data.ini","option","bgm",7);
+	global.bgm_volume = 7;
+}
+else
+{
+	global.bgm_volume = bgm;
+}
+
+global.bgm_emitter = audio_emitter_create();
+audio_emitter_gain(global.bgm_emitter,(global.bgm_volume - 1) * global.sound_mult / 10);
+
+
+global.need_change_rng = false;
 
 window_set_cursor(cr_none);
 
@@ -81,9 +116,6 @@ global.name_entry = "";
 #macro EN_RED 0
 #macro EN_BLUE 1
 #macro EN_GREEN 2
-#macro EN_BIG 3
-#macro EN_DEATH 4
-#macro EN_YY 5
 #macro EN_CRAB 6
 #macro EN_FAMILIAR 7
 #macro EN_DOVE 8
@@ -152,8 +184,8 @@ global.name_entry = "";
 #macro MENU_REPLAY 11
 #macro MENU_NOTHING 12
 #macro MENU_PLAY_REPLAY 13
-#macro MENU_REPLAY_SAVE 14
-#macro MENU_NAME 15
+#macro MENU_NAME 14
+#macro MENU_MAKE_SOUND 15
 
 
 //define pause type

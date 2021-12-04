@@ -50,7 +50,7 @@ else
 	state = 1;
 }
 
-if (global.continues != global.continues_max)
+if (global.continues != global.continues_max) or (global.rng_patch)
 {
 	state = 2;	
 }

@@ -241,8 +241,11 @@ if (global.gp_active)
 			play_sound(sfx_spell_capture,1,false);
 			add_score(bonus);
 			
-			var key = get_difficulty_key(0,global.difficulty);
-			data_write(global.spell_file,data_name,key,cap_history + 1);
+			if(global.play_type == PLAY_MANUAL) and (!global.rng_patch)
+			{
+				var key = get_difficulty_key(0,global.difficulty);
+				data_write(global.spell_file,data_name,key,cap_history + 1);
+			}
 			
 			var inst = instance_create_depth(room_width / 2,150,0,obj_get_spell);
 			inst.bonus = bonus;

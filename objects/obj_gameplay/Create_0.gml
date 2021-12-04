@@ -163,6 +163,8 @@ if(global.play_type == PLAY_MANUAL)
 	file_text_write_string(file,"player = " + string(global.player_chosen));
 	file_text_writeln(file);
 	file_text_write_string(file,"difficulty = " + string(global.difficulty));
+	file_text_writeln(file);
+	file_text_write_string(file,"rng = " + string(global.rng_patch));
 	
 	file_text_close(file);
 }

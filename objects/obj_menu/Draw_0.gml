@@ -117,9 +117,61 @@ switch(level)
 				}
 			break;
 			case 5: //replay
-			
 				draw_replay = true;
+			break;
+			case 6: // options
+			
+				var xx = 470;
+				var yy = 118;
+				var xx2 = xx + 50;
 				
+				for(var i = 0; i < array_length(check); i += 1)
+				{
+					var is_active = (cursor[level] == i);
+					
+					check[i].active_offset = goto_value(check[i].active_offset,over_offset * is_active,6);
+					
+					var txt = check[i].title;
+					draw_text_color(xx - string_width(txt),yy + i * 60,txt,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
+				
+					switch(i)
+					{
+						case 0:
+							var fs = data_read("Data.ini","option","fullscreen");
+							txt = fs ? "ON" : "OFF";
+							
+							draw_text_color(xx2,yy,txt,c_white,c_white,c_white,c_white,1);
+						break;
+						case 1:
+							var x1 = xx2;
+							var x2 = x1 + 200;
+							var y1 = yy + i * 60 + 16;
+							draw_line_width_color(x1,y1,x2,y1,4,c_white,c_white);
+							
+							var xc = x1 + (x2 - x1) / 9 * (data_read("Data.ini","option","sfx") - 1);
+							draw_line_width_color(xc,y1 - 10,xc,y1 + 10,4,c_white,c_white);
+							
+						break;
+						case 2:
+							var x1 = xx2;
+							var x2 = x1 + 200;
+							var y1 = yy + i * 60 + 16;
+							draw_line_width_color(x1,y1,x2,y1,4,c_white,c_white);
+							
+							var xc = x1 + (x2 - x1) / 9 * (data_read("Data.ini","option","bgm") - 1);
+							draw_line_width_color(xc,y1 - 10,xc,y1 + 10,4,c_white,c_white);
+							
+						break;
+						case 4:
+							var fs = data_read("Data.ini","option","rng");
+							txt = fs ? "ON" : "OFF";
+							
+							draw_text_color(xx2,yy + i * 60,txt,c_white,c_white,c_white,c_white,1);
+						break;
+						
+					}
+				
+				}
 			break;
 			case 7://music room
 				
@@ -259,7 +311,7 @@ if(draw_replay)
 	draw_set_font(font_replay);
 				
 	draw_text(170,32,get_text("menu_look_replay"));
-	var xx = 255;
+	var xx = 230;
 	var yy = 70;
 	var dist = 22;
 				

@@ -25,7 +25,10 @@ function spell_set_spell(argument0,argument1,argument2){
 	cap_history = data_read(global.spell_file,data_name,cap);
 	try_history = data_read(global.spell_file,data_name,attempt);
 	
-	try_history += 1;
-	data_write(global.spell_file,data_name,attempt,try_history);
+	if(global.play_type == PLAY_MANUAL) and (!global.rng_patch)
+	{
+		try_history += 1;
+		data_write(global.spell_file,data_name,attempt,try_history);
+	}
 	
 }

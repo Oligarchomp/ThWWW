@@ -120,6 +120,72 @@ if(cursor_lockout == 0)
 		}
 		
 	}
+	
+	//OPTIONS
+	if(level == 1) and (cursor[0] == 6)
+	{
+		switch(cursor[1])
+		{
+			case 0://fullscreen
+				if(global.shot_pressed)
+				{
+					var fs = data_read("Data.ini","option","fullscreen");
+					data_write("Data.ini","option","fullscreen",!fs);
+					window_set_fullscreen(!fs);
+				}
+			break;
+			case 1: //sfx volume
+				if(abs(global.right_pressed - global.left_pressed))
+				{
+					var sfx_then = data_read("Data.ini","option","sfx");
+					var sfx = sfx_then + global.right_pressed - global.left_pressed;
+					sfx = sfx > 10 ? 10 : sfx;
+					sfx = sfx < 1 ? 1 : sfx;
+					
+					if (sfx != sfx_then)
+					{
+						play_sound(sfx_menu_move,1,false);	
+					}
+					
+					global.sfx_volume = sfx;
+					
+					audio_emitter_gain(global.sfx_emitter,(global.sfx_volume - 1) * global.sound_mult / 10);
+					
+					data_write("Data.ini","option","sfx",sfx);
+				}
+			break;
+			case 2: //bgm volume
+				if(abs(global.right_pressed - global.left_pressed))
+				{
+					var bgm_then = data_read("Data.ini","option","bgm");
+					var bgm = bgm_then + global.right_pressed - global.left_pressed;
+					bgm = bgm > 10 ? 10 : bgm;
+					bgm = bgm < 1 ? 1 : bgm;
+					
+					if (bgm != bgm_then)
+					{
+						play_sound(sfx_menu_move,1,false);	
+					}
+					
+					global.bgm_volume = bgm;
+					
+					audio_emitter_gain(global.bgm_emitter,(global.bgm_volume - 1) * global.sound_mult / 10);
+					
+					data_write("Data.ini","option","bgm",bgm);
+				}
+			break;
+			case 4://rng patch
+				if(global.shot_pressed)
+				{
+					var rng_patch = data_read("Data.ini","option","rng");
+					data_write("Data.ini","option","rng",!rng_patch);
+					global.rng_patch = !rng_patch;
+				}
+			break;
+		}
+	}
+	
+	
 
 
 	if(global.shot_pressed)
@@ -244,9 +310,6 @@ if(cursor_lockout == 0)
 					
 				}
 				
-				
-				
-				
 				room_transition(room_gp);
 				global.play_type = PLAY_REPLAY;
 				
@@ -261,6 +324,11 @@ if(cursor_lockout == 0)
 				global.game_type = get_replay(REPLAY_GAMETYPE,rep,0);
 				global.player_chosen = get_replay(REPLAY_PLAYER,rep,0);
 				global.difficulty = get_replay(REPLAY_DIFFICULTY,rep,0);
+				
+				var rng_then = global.rng_patch
+				global.rng_patch = get_text_file("rng",rep);
+				
+				global.need_change_rng = rng_then != global.rng_patch;
 				
 				var stage_nbr = get_replay(REPLAY_STAGE_NBR,rep,0);
 				
@@ -303,8 +371,11 @@ if(cursor_lockout == 0)
 		}
 	
 		play_sound(sfx_menu_back,1,false);
-		
 	}
+	
+	
+	
+	
 }
 else
 {

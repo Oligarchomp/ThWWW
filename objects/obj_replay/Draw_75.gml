@@ -11,7 +11,7 @@ var check = menu;
 
 draw_set_font(font_replay);
 				
-var xx = 255;
+var xx = 230;
 var yy = 60;
 var dist = 22;
 				

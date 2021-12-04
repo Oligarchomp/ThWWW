@@ -66,6 +66,12 @@ menu_option = Change The World
 menu_music = Listen to BGM
 menu_quit = End Fantasy
 menu_look_replay = Look at all those awesome replays!
+menu_fullscreen = Fullscreen
+menu_sfx_volume = Sound effects
+menu_bgm_volume = BGM
+menu_controle = Controle
+menu_rng = RNG Patch
+
 
 pause_resume = Resume
 pause_title = Go back to title

@@ -9,9 +9,8 @@ old_bgm_intro = bgm_intro;
 
 bgm_intro_wait = 0;
 
-bgm_emit = audio_emitter_create()
 
 if (!audio_is_playing(bgm))
 {
-	audio_play_sound_on(bgm_emit,bgm,true,1);
+	audio_play_sound_on(global.bgm_emitter,bgm,true,1);
 }

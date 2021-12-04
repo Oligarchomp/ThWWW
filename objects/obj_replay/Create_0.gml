@@ -50,6 +50,9 @@ for(var i = 0; i < 20; i += 1)
 				var type = "Spell Practice";
 			break;
 		}
+		
+		type += get_text_file("rng",replay_check) ? "-RNG" : "";
+		
 		menu[i].game_type = type;
 		
 		switch(get_text_file("difficulty",replay_check))
@@ -84,7 +87,7 @@ for(var i = 0; i < 20; i += 1)
 		menu[i].hour = "00:00";
 		menu[i].player = "------";
 		menu[i].difficulty = "-------"
-		menu[i].game_type = "------------";
+		menu[i].game_type = "-----------------";
 		menu[i].action = MENU_NAME;
 	}
 }

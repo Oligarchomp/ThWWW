@@ -11,8 +11,8 @@ if(global.gp_active)
 			
 			var orb_spin = 360 / orb_ring / 2.5
 			
-			var mentos_wait = 20;
-			var mentos_ring = 5;
+			var mentos_wait = 18;
+			var mentos_ring = 6;
 			var mentos_spd_min = 2;
 			var mentos_spd_git = 0.5;
 		break;
@@ -36,7 +36,7 @@ if(global.gp_active)
 			var orb_spin = 360 / orb_ring / 2.5
 			
 			var mentos_wait = 9;
-			var mentos_ring = 11;
+			var mentos_ring = 12;
 			var mentos_spd_min = 2;
 			var mentos_spd_git = 1;
 		break;
@@ -48,7 +48,7 @@ if(global.gp_active)
 			var orb_spin = 360 / orb_ring / 2.5
 			
 			var mentos_wait = 8;
-			var mentos_ring = 13;
+			var mentos_ring = 14;
 			var mentos_spd_min = 2;
 			var mentos_spd_git = 1;
 		break;
@@ -93,7 +93,7 @@ if(global.gp_active)
 				{
 					if(state_time % orb_wait == 0)
 					{
-						shoot_ring(DAN_BUBBLE,7,orb_ring,x,y,angle_shoot,orb_spd,sfx_redirect1,8);	
+						shoot_ring(DAN_BUBBLE,7,orb_ring,x,y,angle_shoot,orb_spd,sfx_redirect1,7);	
 						angle_shoot += orb_spin * fairy_dir;
 					}
 				}
@@ -134,7 +134,7 @@ if(global.gp_active)
 					if(state_time % mentos_wait == 0)
 					{
 						var sp = mentos_spd_min + rng(mentos_spd_git,false,9);
-						shoot_ring(DAN_MENTOS,3,mentos_ring,x,y,rng(360,false,6),sp,sfx_shot1,7);
+						shoot_ring(DAN_BALL,3,mentos_ring,x,y,rng(360,false,6),sp,sfx_shot1,6);
 					}
 				}
 				else

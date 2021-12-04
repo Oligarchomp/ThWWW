@@ -52,8 +52,7 @@ function shoot(argument0,argument1,argument2,argument3,argument4,argument5,argum
 		angle = find_angle(x_pos,y_pos,obj_player.x,obj_player.y)
 	}
 	
-	//home made rng patch!!
-	//angle = rng(360,false,3);
+	angle = global.rng_patch ? rng(360,false,1) : angle;
 	
 	global.danmaku_id = danmaku;
 	global.danmaku_color = color;
