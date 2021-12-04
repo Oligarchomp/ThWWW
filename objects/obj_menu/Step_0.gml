@@ -48,6 +48,8 @@ if(cursor_lockout == 0)
 
 	if(abs(global.down_pressed - global.up_pressed))
 	{
+		last_controle = !keyboard_check(vk_anykey);
+		
 		var pos_then = cursor[level];
 		
 		//moving cursor
@@ -91,6 +93,8 @@ if(cursor_lockout == 0)
 
 	if(abs(global.right_pressed - global.left_pressed))
 	{
+		last_controle = !keyboard_check(vk_anykey);
+		
 		var need_move = false;
 		switch(cursor[0])//player
 		{
@@ -120,66 +124,214 @@ if(cursor_lockout == 0)
 		}
 		
 	}
-	
+	var checking_input = false;
 	//OPTIONS
-	if(level == 1) and (cursor[0] == 6)
+	if (cursor[0] == 6)
 	{
-		switch(cursor[1])
+		switch(level)
 		{
-			case 0://fullscreen
-				if(global.shot_pressed)
+			case 2:
+				checking_input = true;
+				
+				if(cursor[level] < 4)
 				{
-					var fs = data_read("Data.ini","option","fullscreen");
-					data_write("Data.ini","option","fullscreen",!fs);
-					window_set_fullscreen(!fs);
-				}
-			break;
-			case 1: //sfx volume
-				if(abs(global.right_pressed - global.left_pressed))
-				{
-					var sfx_then = data_read("Data.ini","option","sfx");
-					var sfx = sfx_then + global.right_pressed - global.left_pressed;
-					sfx = sfx > 10 ? 10 : sfx;
-					sfx = sfx < 1 ? 1 : sfx;
-					
-					if (sfx != sfx_then)
+					for(var i = 0; i < array_length(key); i += 1)
 					{
-						play_sound(sfx_menu_move,1,false);	
+						if (key[i] != 0) and (keyboard_check_pressed(i))
+						{
+							play_sound(sfx_menu_valid,1,false);
+							
+							last_controle = 0;
+							
+							var skip_shot = false;
+							var skip_bomb = false;
+							var skip_focused = false;
+							var skip_pause = false;
+							switch(cursor[level])
+							{
+								case 0:
+									var old_vk = global.shot_vk;
+									global.shot_vk = i;
+									skip_shot = true;
+								break;
+								case 1:
+									var old_vk = global.focused_vk;
+									global.focused_vk = i;
+									skip_focused = true;
+								break;
+								case 2:
+									var old_vk = global.bomb_vk;
+									global.bomb_vk = i;
+									skip_bomb = true;
+								break;
+								case 3:
+									var old_vk = global.pause_vk;
+									global.pause_vk = i;
+									skip_pause = true;
+								break;
+							}
+						
+							global.shot_vk = global.shot_vk == i and !skip_shot ? old_vk : global.shot_vk;
+							global.focused_vk = global.focused_vk == i and !skip_focused ? old_vk : global.focused_vk;
+							global.bomb_vk = global.bomb_vk == i and !skip_bomb ? old_vk : global.bomb_vk;
+							global.pause_vk = global.pause_vk == i and !skip_pause ? old_vk : global.pause_vk;
+						
+							
+							data_write("Data.ini","option","shot_vk",global.shot_vk);
+							data_write("Data.ini","option","focused_vk",global.focused_vk);
+							data_write("Data.ini","option","bomb_vk",global.bomb_vk);
+							data_write("Data.ini","option","pause_vk",global.pause_vk);
+						}
 					}
 					
-					global.sfx_volume = sfx;
-					
-					audio_emitter_gain(global.sfx_emitter,(global.sfx_volume - 1) * global.sound_mult / 10);
-					
-					data_write("Data.ini","option","sfx",sfx);
-				}
-			break;
-			case 2: //bgm volume
-				if(abs(global.right_pressed - global.left_pressed))
-				{
-					var bgm_then = data_read("Data.ini","option","bgm");
-					var bgm = bgm_then + global.right_pressed - global.left_pressed;
-					bgm = bgm > 10 ? 10 : bgm;
-					bgm = bgm < 1 ? 1 : bgm;
-					
-					if (bgm != bgm_then)
+					for(var i = gp_face1; i < gp_start; i += 1) //controle
 					{
-						play_sound(sfx_menu_move,1,false);	
+						if(gamepad_button_check_pressed(0,i))
+						{
+							play_sound(sfx_menu_valid,1,false);
+							
+							last_controle = 1;
+							
+							var skip_shot = false;
+							var skip_bomb = false;
+							var skip_focused = false;
+							var skip_pause = false;
+							switch(cursor[level])
+							{
+								case 0:
+									var old_btn = global.shot_btn
+									global.shot_btn = i;
+									skip_shot = true;
+								break;
+								case 1:
+									var old_btn = global.focused_btn
+									global.focused_btn = i;
+									skip_focused = true;
+								break;
+								case 2:
+									var old_btn = global.bomb_btn
+									global.bomb_btn = i;
+									skip_bomb = true;
+								break;
+								case 3:
+									var old_btn = global.pause_btn
+									global.pause_btn = i;
+									skip_pause = true;
+								break;
+							}
+						
+							global.shot_btn = global.shot_btn == i and !skip_shot ? old_btn : global.shot_btn;
+							global.focused_btn = global.focused_btn == i and !skip_focused ? old_btn : global.focused_btn;
+							global.bomb_btn = global.bomb_btn == i and !skip_bomb ? old_btn : global.bomb_btn;
+							global.pause_btn = global.pause_btn == i and !skip_pause ? old_btn : global.pause_btn;
+						
+							
+							data_write("Data.ini","option","shot_btn",global.shot_btn);
+							data_write("Data.ini","option","focused_btn",global.focused_btn);
+							data_write("Data.ini","option","bomb_btn",global.bomb_btn);
+							data_write("Data.ini","option","pause_btn",global.pause_btn);
+						}
 					}
-					
-					global.bgm_volume = bgm;
-					
-					audio_emitter_gain(global.bgm_emitter,(global.bgm_volume - 1) * global.sound_mult / 10);
-					
-					data_write("Data.ini","option","bgm",bgm);
+				}
+				else
+				{
+					if(global.shot_pressed)
+					{
+						
+						play_sound(sfx_menu_back,1,false);
+						
+						if(cursor[level] == 5) //back
+						{
+							level -= 1;
+							cursor_lockout = 8;
+						}
+						else//default
+						{
+							if(last_controle)
+							{
+								global.shot_btn = global.default_shot_btn;
+								data_write("Data.ini","option","shot_btn",global.shot_btn);
+								global.focused_btn = global.default_focused_btn;
+								data_write("Data.ini","option","focused_btn",global.focused_btn);
+								global.bomb_btn = global.default_bomb_btn;
+								data_write("Data.ini","option","bomb_btn",global.bomb_btn);
+								global.pause_btn = global.default_pause_btn;
+								data_write("Data.ini","option","pause_btn",global.pause_btn);
+							}
+							else
+							{
+								global.shot_vk = global.default_shot_vk;
+								data_write("Data.ini","option","shot_vk",global.shot_vk);
+								global.focused_vk = global.default_focused_vk;
+								data_write("Data.ini","option","focused_vk",global.focused_vk);
+								global.bomb_vk = global.default_bomb_vk;
+								data_write("Data.ini","option","bomb_vk",global.bomb_vk);
+								global.pause_vk = global.default_pause_vk;
+								data_write("Data.ini","option","pause_vk",global.pause_vk);
+							}
+						}
+					}
 				}
 			break;
-			case 4://rng patch
-				if(global.shot_pressed)
+			case 1:
+				switch(cursor[1])
 				{
-					var rng_patch = data_read("Data.ini","option","rng");
-					data_write("Data.ini","option","rng",!rng_patch);
-					global.rng_patch = !rng_patch;
+					case 0://fullscreen
+						if(global.shot_pressed)
+						{
+							var fs = data_read("Data.ini","option","fullscreen");
+							data_write("Data.ini","option","fullscreen",!fs);
+							window_set_fullscreen(!fs);
+						}
+					break;
+					case 1: //sfx volume
+						if(abs(global.right_pressed - global.left_pressed))
+						{
+							var sfx_then = data_read("Data.ini","option","sfx");
+							var sfx = sfx_then + global.right_pressed - global.left_pressed;
+							sfx = sfx > 10 ? 10 : sfx;
+							sfx = sfx < 1 ? 1 : sfx;
+					
+							if (sfx != sfx_then)
+							{
+								play_sound(sfx_menu_move,1,false);	
+							}
+					
+							global.sfx_volume = sfx;
+					
+							audio_emitter_gain(global.sfx_emitter,(global.sfx_volume - 1) * global.sound_mult / 10);
+					
+							data_write("Data.ini","option","sfx",sfx);
+						}
+					break;
+					case 2: //bgm volume
+						if(abs(global.right_pressed - global.left_pressed))
+						{
+							var bgm_then = data_read("Data.ini","option","bgm");
+							var bgm = bgm_then + global.right_pressed - global.left_pressed;
+							bgm = bgm > 10 ? 10 : bgm;
+							bgm = bgm < 1 ? 1 : bgm;
+					
+							if (bgm != bgm_then)
+							{
+								play_sound(sfx_menu_move,1,false);	
+							}
+					
+							global.bgm_volume = bgm;
+					
+							audio_emitter_gain(global.bgm_emitter,(global.bgm_volume - 1) * global.sound_mult / 10);
+					
+							data_write("Data.ini","option","bgm",bgm);
+						}
+					break;
+					case 4://rng patch
+						if(global.shot_pressed)
+						{
+							var rng_patch = data_read("Data.ini","option","rng");
+							data_write("Data.ini","option","rng",!rng_patch);
+							global.rng_patch = !rng_patch;
+						}
+					break;
 				}
 			break;
 		}
@@ -187,193 +339,203 @@ if(cursor_lockout == 0)
 	
 	
 
-
-	if(global.shot_pressed)
+	if(!checking_input)
 	{
-		var act = array_check[cursor[level]].action;
+		if(global.shot_pressed)
+		{
+		
+			var act = array_check[cursor[level]].action;
 	
-		switch(act)
-		{
-			case MENU_NOTHING:
-			break;
-			case MENU_INVALID:
-				play_sound(sfx_menu_invalid,1,false);
-			break;
-			default:
-				play_sound(sfx_menu_valid,1,false);
-			break;
-		}
-	
-	
-		switch(act)
-		{
-			case MENU_MENU:
-				//settign all active offset to 0
-				for(var i = 0; i < array_length(array_check[cursor[level]].param); i += 1)
-				{
-					array_check[cursor[level]].param[i].active_offset = 0;
-				}
-			
-				level += 1;
-				cursor[level] = 0;
-				cursor_lockout = 10;
-			break;
-			case MENU_START_GAME:
-				room_transition(room_gp);
-				add_fullgame();
-				cursor_lockout = 100000;
-				
-				global.game_type = GAME_FULL;
-				global.play_type = PLAY_MANUAL;
-				
-				play_sound(sfx_spawn_light,1,false);
-				
-				var dif = ["e","n","h","l"];
-				var plr = ["r","m","s"];
-				var index = dif[global.difficulty] + plr[global.player_chosen];
-				
-				global.hiscore = variable_struct_get(menu[4].param[0],index)
-			break;
-			case MENU_START_STAGE:
-				room_transition(room_gp);
-
-				var param = array_check[cursor[level]].param;
-				
-				if(param == 7)
-				{
-					global.difficulty = 1;
-					global.game_type = GAME_EXTRA;
-					
-					var plr = ["r","m","s"];
-					var index = "ex" + plr[global.player_chosen];
-					global.hiscore = variable_struct_get(menu[4].param[0],index)
-				}
-				else
-				{
-					global.game_type = GAME_STAGE;	
-				}
-				
-				global.play_type = PLAY_MANUAL;
-				
-				add_stage(param);
-				
-				cursor_lockout = 100000;
-				
-				play_sound(sfx_spawn_light,1,false);
-			break;
-			case MENU_SPELL:
-				room_transition(room_gp);
-				
-				global.game_type = GAME_SPELL;
-				global.play_type = PLAY_MANUAL;
-				
-				var param = array_check[cursor[level]].param;
-				
-				global.difficulty = array_check[cursor[level]].diff;
-				
-				add_stage_event(menu[cursor[0]].param[cursor[1]].bg,0); // maybe do that better?
-				add_stage_event(param,30);
-				
-				global.menu_level = level;
-				global.menu_cursor = cursor;
-				
-				cursor_lockout = 100000;
-			break;
-			case MENU_MUSIC:
-				set_bgm(array_check[cursor[level]].music,array_check[cursor[level]].intro)
-			break;
-			case MENU_PLAY_REPLAY:
-				var rep = "Replay" + string(cursor[1]) + ".txt";
-				
-				if(level == 1)
-				{
-					global.replay_stage_nbr = 1;
-				}
-				else
-				{
-					var start = cursor[level] + 1;
-					
-					global.replay_stage_nbr = start;
-					
-					if(start > 1)
-					{
-						global.replay_event_step = real(get_text_file("event_step" + string(start),rep));
-						global.replay_x = real(get_text_file("x" + string(start),rep));
-						global.replay_y = real(get_text_file("y" + string(start),rep));
-						global.replay_life = real(get_text_file("life" + string(start),rep));
-						global.replay_bomb = real(get_text_file("bomb" + string(start),rep));
-						global.replay_item = real(get_text_file("item" + string(start),rep));
-						global.replay_score = real(get_text_file("score" + string(start),rep));
-						global.replay_graze = real(get_text_file("graze" + string(start),rep));
-					}
-					
-					
-				}
-				
-				room_transition(room_gp);
-				global.play_type = PLAY_REPLAY;
-				
-				var ev = get_replay(REPLAY_EVENT,rep,0);
-				var wait = get_replay(REPLAY_WAIT,rep,0);
-				
-				for (var i = 0; i < array_length(ev); i += 1)
-				{
-					add_stage_event(asset_get_index(object_get_name(ev[i])),wait[i]);
-				}
-				
-				global.game_type = get_replay(REPLAY_GAMETYPE,rep,0);
-				global.player_chosen = get_replay(REPLAY_PLAYER,rep,0);
-				global.difficulty = get_replay(REPLAY_DIFFICULTY,rep,0);
-				
-				var rng_then = global.rng_patch
-				global.rng_patch = get_text_file("rng",rep);
-				
-				global.need_change_rng = rng_then != global.rng_patch;
-				
-				var stage_nbr = get_replay(REPLAY_STAGE_NBR,rep,0);
-				
-				for(var i = 0; i < stage_nbr; i += 1)
-				{
-					global.replay_input[i] = get_replay(REPLAY_INPUT,rep,i + 1);
-					global.replay_input_time[i] = get_replay(REPLAY_INPUT_TIME,rep,i + 1);
-				
-					global.replay_seed[i] = get_replay(REPLAY_SEED,rep,i + 1);
-				}
-				
-				global.menu_level = level;
-				global.menu_cursor = cursor;
-				
-				cursor_lockout = 100000;
-			break;
-			case MENU_QUIT:
-				game_end();
-			break;
-		}
-	}
-
-	if(global.bomb_pressed)
-	{
-		if(level > 0)
-		{
-			level -= 1;
-			cursor_lockout = 10;
-		}
-		else
-		{
-			if(cursor[0] != 8)
+			switch(act)
 			{
-				cursor[0] = 8;
+				case MENU_NOTHING:
+				break;
+				case MENU_BACK:
+					play_sound(sfx_menu_back,1,false);
+				break;
+				case MENU_INVALID:
+					play_sound(sfx_menu_invalid,1,false);
+				break;
+				default:
+					play_sound(sfx_menu_valid,1,false);
+				break;
+			}
+	
+	
+			switch(act)
+			{
+				case MENU_MENU:
+					//settign all active offset to 0
+					for(var i = 0; i < array_length(array_check[cursor[level]].param); i += 1)
+					{
+						array_check[cursor[level]].param[i].active_offset = 0;
+					}
+			
+					level += 1;
+					cursor[level] = 0;
+					cursor_lockout = 10;
+				break;
+				case MENU_START_GAME:
+					room_transition(room_gp);
+					add_fullgame();
+					cursor_lockout = 100000;
+				
+					global.game_type = GAME_FULL;
+					global.play_type = PLAY_MANUAL;
+				
+					play_sound(sfx_spawn_light,1,false);
+				
+					var dif = ["e","n","h","l"];
+					var plr = ["r","m","s"];
+					var index = dif[global.difficulty] + plr[global.player_chosen];
+				
+					global.hiscore = variable_struct_get(menu[4].param[0],index)
+				break;
+				case MENU_START_STAGE:
+					room_transition(room_gp);
+
+					var param = array_check[cursor[level]].param;
+				
+					if(param == 7)
+					{
+						global.difficulty = 1;
+						global.game_type = GAME_EXTRA;
+					
+						var plr = ["r","m","s"];
+						var index = "ex" + plr[global.player_chosen];
+						global.hiscore = variable_struct_get(menu[4].param[0],index)
+					}
+					else
+					{
+						global.game_type = GAME_STAGE;	
+					}
+				
+					global.play_type = PLAY_MANUAL;
+				
+					add_stage(param);
+				
+					cursor_lockout = 100000;
+				
+					play_sound(sfx_spawn_light,1,false);
+				break;
+				case MENU_SPELL:
+					room_transition(room_gp);
+				
+					global.game_type = GAME_SPELL;
+					global.play_type = PLAY_MANUAL;
+				
+					var param = array_check[cursor[level]].param;
+				
+					global.difficulty = array_check[cursor[level]].diff;
+				
+					add_stage_event(menu[cursor[0]].param[cursor[1]].bg,0); // maybe do that better?
+					add_stage_event(param,30);
+				
+					global.menu_level = level;
+					global.menu_cursor = cursor;
+				
+					cursor_lockout = 100000;
+				break;
+				case MENU_MUSIC:
+					set_bgm(array_check[cursor[level]].music,array_check[cursor[level]].intro)
+				break;
+				case MENU_PLAY_REPLAY:
+					var rep = "Replay" + string(cursor[1]) + ".txt";
+				
+					if(level == 1)
+					{
+						global.replay_stage_nbr = 1;
+					}
+					else
+					{
+						var start = cursor[level] + 1;
+					
+						global.replay_stage_nbr = start;
+					
+						if(start > 1)
+						{
+							global.replay_event_step = real(get_text_file("event_step" + string(start),rep));
+							global.replay_x = real(get_text_file("x" + string(start),rep));
+							global.replay_y = real(get_text_file("y" + string(start),rep));
+							global.replay_life = real(get_text_file("life" + string(start),rep));
+							global.replay_bomb = real(get_text_file("bomb" + string(start),rep));
+							global.replay_item = real(get_text_file("item" + string(start),rep));
+							global.replay_score = real(get_text_file("score" + string(start),rep));
+							global.replay_graze = real(get_text_file("graze" + string(start),rep));
+						}
+					
+					
+					}
+				
+					room_transition(room_gp);
+					global.play_type = PLAY_REPLAY;
+				
+					var ev = get_replay(REPLAY_EVENT,rep,0);
+					var wait = get_replay(REPLAY_WAIT,rep,0);
+				
+					for (var i = 0; i < array_length(ev); i += 1)
+					{
+						add_stage_event(asset_get_index(object_get_name(ev[i])),wait[i]);
+					}
+				
+					global.game_type = get_replay(REPLAY_GAMETYPE,rep,0);
+					global.player_chosen = get_replay(REPLAY_PLAYER,rep,0);
+					global.difficulty = get_replay(REPLAY_DIFFICULTY,rep,0);
+				
+					var rng_then = global.rng_patch
+					global.rng_patch = get_text_file("rng",rep);
+				
+					global.need_change_rng = rng_then != global.rng_patch;
+				
+					var stage_nbr = get_replay(REPLAY_STAGE_NBR,rep,0);
+				
+					for(var i = 0; i < stage_nbr; i += 1)
+					{
+						global.replay_input[i] = get_replay(REPLAY_INPUT,rep,i + 1);
+						global.replay_input_time[i] = get_replay(REPLAY_INPUT_TIME,rep,i + 1);
+				
+						global.replay_seed[i] = get_replay(REPLAY_SEED,rep,i + 1);
+					}
+				
+					global.menu_level = level;
+					global.menu_cursor = cursor;
+				
+					cursor_lockout = 100000;
+				break;
+				case MENU_BACK:
+					level -= 1;
+					cursor_lockout = 8;
+				break;
+				case MENU_QUIT:
+					game_end();
+				break;
+			}
+		}
+
+		if(global.bomb_pressed)
+		{
+		
+			if(level > 0)
+			{
+				level -= 1;
+				cursor_lockout = 8;
 			}
 			else
 			{
-				game_end();	
+				if(cursor[0] != 9)
+				{
+					cursor[0] = 9;
+				}
+				else
+				{
+					game_end();	
+				}
 			}
+	
+			play_sound(sfx_menu_back,1,false);
 		}
 	
-		play_sound(sfx_menu_back,1,false);
 	}
-	
-	
 	
 	
 }

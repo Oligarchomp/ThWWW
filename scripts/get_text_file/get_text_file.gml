@@ -15,7 +15,8 @@ function get_text_file(argument0,filename) {
 			final_string = "0"
 			break;
 		}
-		final_string = file_text_readln(file);
+		final_string = file_text_read_string(file);
+		file_text_readln(file);
 	}
 	until (string_count(string_name,final_string) = 1)
 

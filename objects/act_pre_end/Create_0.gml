@@ -4,6 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
-act_set_time(260,260);
+act_set_time(200,200);
 
 instance_create_depth(room_width / 2, 100, 0, obj_stageclear);

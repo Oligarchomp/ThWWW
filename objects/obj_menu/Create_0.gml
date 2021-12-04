@@ -14,6 +14,33 @@ ds_list_clear(global.wait_list);
 
 hold_direction_time = 0;
 
+last_controle = 0;
+//0 = keyboard;
+//1 = controller
+
+for(var i = ord("0"); i < ord("Z"); i += 1)
+{
+	key[i] = chr(i);	
+}
+key[vk_enter] = "Enter"
+key[vk_shift] = "Shift"
+key[vk_control] = "Control"
+key[vk_alt] = "Alt"
+key[vk_ralt] = "Alt"
+key[vk_backspace] = get_text("controle_backspace");
+key[vk_space] = get_text("controle_space");
+
+btn[gp_face1] = get_text("controle_button") + " 1";
+btn[gp_face2] = get_text("controle_button") + " 2";
+btn[gp_face3] = get_text("controle_button") + " 3";
+btn[gp_face4] = get_text("controle_button") + " 4";
+btn[gp_shoulderl] = "L " + get_text("controle_shoulder");
+btn[gp_shoulderlb] = "Lb " + get_text("controle_shoulder");
+btn[gp_shoulderr] = "R " + get_text("controle_shoulder");
+btn[gp_shoulderrb] = "Rb " + get_text("controle_shoulder");
+btn[gp_select] = "Select"
+btn[gp_start] = "Start"
+
 
 if(!variable_global_exists("menu_level"))
 {
@@ -1006,7 +1033,30 @@ menu =
 				action : MENU_MENU,
 				param : 
 				[
-				
+					{
+						title : get_text("menu_shoot"),
+						action : MENU_MAKE_SOUND
+					},
+					{
+						title : get_text("menu_focus"),
+						action : MENU_MAKE_SOUND
+					},
+					{
+						title : get_text("menu_bomb"),
+						action : MENU_MAKE_SOUND
+					},
+					{
+						title : get_text("menu_pause"),
+						action : MENU_MAKE_SOUND
+					},
+					{
+						title : get_text("menu_default"),
+						action : MENU_MAKE_SOUND
+					},
+					{
+						title : get_text("menu_back"),
+						action : MENU_BACK
+					}
 				]
 			},
 			{
@@ -1148,6 +1198,10 @@ menu =
 				intro : noone
 			},
 		]
+	},
+	{
+		title : "MANUAL",
+		description : get_text("menu_manual")
 	},
 	{
 		title : "QUIT",

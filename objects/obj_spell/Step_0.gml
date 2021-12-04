@@ -263,7 +263,7 @@ if (global.gp_active)
 		
 		repeat(2)//carefull
 		{
-			audio_play_sound(sfx_shot1,1,false);
+			audio_play_sound_on(global.sfx_emitter,sfx_shot1,false,1);
 		}
 	
 		event_next();

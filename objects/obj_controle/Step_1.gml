@@ -1,24 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 // Begin step makes all the difference
-// It's crazy how A SINGLE frame latence can be so detrimental to gameplay (looking at you undertale)
 
 
 
-shot_btn = gp_face1;
-shot_vk = ord("A")
 
-focused_btn = gp_face3;
-focused_vk = ord("S");
-
-pause_btn = gp_shoulderl;
-pause_vk = vk_enter;
-
-bomb_btn = gp_face2;
-bomb_vk = ord("X");
-
-
-global.pause_pressed = (gamepad_button_check_pressed(0,pause_btn)) or (keyboard_check_pressed(pause_vk))
+global.pause_pressed = (gamepad_button_check_pressed(0,global.pause_btn)) or (keyboard_check_pressed(global.pause_vk))
 
 var pause = false;
 with(obj_gameplay)
@@ -31,14 +18,14 @@ with(obj_gameplay)
 
 if !((global.play_type == PLAY_REPLAY) and (room == room_gp)) or (pause)
 {
-	global.shot_down = (gamepad_button_check(0,shot_btn)) or (keyboard_check(shot_vk));
-	global.shot_pressed = (gamepad_button_check_pressed(0,shot_btn)) or (keyboard_check_pressed(shot_vk));
+	global.shot_down = (gamepad_button_check(0,global.shot_btn)) or (keyboard_check(global.shot_vk));
+	global.shot_pressed = (gamepad_button_check_pressed(0,global.shot_btn)) or (keyboard_check_pressed(global.shot_vk));
 	
-	global.focused_down = (gamepad_button_check(0,focused_btn)) or (keyboard_check(focused_vk));
-	global.focused_pressed = (gamepad_button_check_pressed(0,focused_btn)) or (keyboard_check_pressed(focused_vk));
+	global.focused_down = (gamepad_button_check(0,global.focused_btn)) or (keyboard_check(global.focused_vk));
+	global.focused_pressed = (gamepad_button_check_pressed(0,global.focused_btn)) or (keyboard_check_pressed(global.focused_vk));
 	
-	global.bomb_down = (gamepad_button_check(0,bomb_btn)) or (keyboard_check(bomb_vk)) 
-	global.bomb_pressed = (gamepad_button_check_pressed(0,bomb_btn)) or (keyboard_check_pressed(bomb_vk))
+	global.bomb_down = (gamepad_button_check(0,global.bomb_btn)) or (keyboard_check(global.bomb_vk)) 
+	global.bomb_pressed = (gamepad_button_check_pressed(0,global.bomb_btn)) or (keyboard_check_pressed(global.bomb_vk))
 	
 	var axis_value = 0.5;
 

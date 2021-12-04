@@ -54,7 +54,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var knife_row_spd = 1.8;
 			var knife_row_wait = 40;
 			
-			var crab_lenght = 80;
+			var crab_lenght = 90;
 			var crab_wait = 40;
 			var crab_spd = 6;
 			
@@ -74,7 +74,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var knife_row_spd = 2;
 			var knife_row_wait = 30;
 			
-			var crab_lenght = 80;
+			var crab_lenght = 120;
 			var crab_wait = 40;
 			var crab_spd = 6;
 			

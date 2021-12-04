@@ -36,6 +36,53 @@ global.bgm_emitter = audio_emitter_create();
 audio_emitter_gain(global.bgm_emitter,(global.bgm_volume - 1) * global.sound_mult / 10);
 
 
+global.default_shot_btn = gp_face1;
+global.default_focused_btn = gp_face3;
+global.default_bomb_btn = gp_face2;
+global.default_pause_btn = gp_shoulderl;
+
+global.default_shot_vk = ord("A");
+global.default_focused_vk = ord("S");
+global.default_bomb_vk = ord("X");
+global.default_pause_vk = vk_enter;
+
+
+var shot_btn = data_read("Data.ini","option","shot_btn");
+global.shot_btn = shot_btn == 0 ? global.default_shot_btn : shot_btn;
+data_write("Data.ini","option","shot_btn",global.shot_btn);
+
+var shot_vk = data_read("Data.ini","option","shot_vk");
+global.shot_vk = shot_vk == 0 ? global.default_shot_vk : shot_vk;
+data_write("Data.ini","option","shot_vk",global.shot_vk);
+
+
+var focused_btn = data_read("Data.ini","option","focused_btn");
+global.focused_btn = focused_btn == 0 ? global.default_focused_btn : focused_btn;
+data_write("Data.ini","option","focused_btn",global.focused_btn);
+
+var focused_vk = data_read("Data.ini","option","focused_vk");
+global.focused_vk = focused_vk == 0 ? global.default_focused_vk : focused_vk;
+data_write("Data.ini","option","focused_vk",global.focused_vk);
+
+
+var bomb_btn = data_read("Data.ini","option","bomb_btn");
+global.bomb_btn = bomb_btn == 0 ? global.default_bomb_btn : bomb_btn;
+data_write("Data.ini","option","bomb_btn",global.bomb_btn);
+
+var bomb_vk = data_read("Data.ini","option","bomb_vk");
+global.bomb_vk = bomb_vk == 0 ? global.default_bomb_vk : bomb_vk;
+data_write("Data.ini","option","bomb_vk",global.bomb_vk);
+
+
+var pause_btn = data_read("Data.ini","option","pause_btn");
+global.pause_btn = pause_btn == 0 ? global.default_pause_btn : pause_btn;
+data_write("Data.ini","option","pause_btn",global.pause_btn);
+
+var pause_vk = data_read("Data.ini","option","pause_vk");
+global.pause_vk = pause_vk == 0 ? global.default_pause_vk : pause_vk;
+data_write("Data.ini","option","pause_vk",global.pause_vk);
+
+
 global.need_change_rng = false;
 
 window_set_cursor(cr_none);

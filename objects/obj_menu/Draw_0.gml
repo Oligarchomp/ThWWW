@@ -30,12 +30,12 @@ switch(level)
 			var is_active = (cursor[0] == i);
 			menu[i].active_offset = goto_value(menu[i].active_offset,over_offset * is_active,6);
 			
-			draw_text_color(590 + menu[i].active_offset + i * 5,70 + i * 48,menu[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
+			draw_text_color(570 + menu[i].active_offset + i * 4,120 + i * 32,menu[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
 	
 			if(is_active)
 			{
 				draw_set_font(font_spellpractice);
-				draw_text_color(600 + menu[i].active_offset + i * 5,97 + i * 48,menu[i].description,c_white,c_white,c_white,c_white,menu_description_alpha);
+				draw_text_color(610 + menu[i].active_offset - string_width(menu[i].description) / 2,446,menu[i].description,c_white,c_white,c_white,c_white,menu_description_alpha);
 				draw_set_font(font_main);
 			}
 		}
@@ -120,8 +120,7 @@ switch(level)
 				draw_replay = true;
 			break;
 			case 6: // options
-			
-				var xx = 470;
+				var xx = 460;
 				var yy = 118;
 				var xx2 = xx + 50;
 				
@@ -129,10 +128,8 @@ switch(level)
 				{
 					var is_active = (cursor[level] == i);
 					
-					check[i].active_offset = goto_value(check[i].active_offset,over_offset * is_active,6);
-					
 					var txt = check[i].title;
-					draw_text_color(xx - string_width(txt),yy + i * 60,txt,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
+					draw_text_color(xx - string_width(txt),yy + i * 60,txt,c_white,c_white,c_white,c_white,1 - !is_active * 0.7);
 				
 					switch(i)
 					{
@@ -283,6 +280,67 @@ switch(level)
 			break;
 			case 5:
 				draw_replay = true;
+			break;
+			case 6: //controle
+			
+				var xx = 450;
+				var yy = 120;
+				var xx2 = xx + 50;
+				
+				for(var i = 0; i < array_length(check); i += 1)
+				{
+					var is_active = (cursor[level] == i);
+					
+					var txt = check[i].title;
+					
+					var single = i >= 4;
+					
+					draw_text_color(xx + single * 40 - string_width(txt) / (1 + single),yy + i * 60,txt,c_white,c_white,c_white,c_white,1 - !is_active * 0.7);
+					
+					if(!single)
+					{
+						if(last_controle)
+						{
+							switch(i)
+							{
+								case 0://shot
+									var txt = btn[global.shot_btn];
+								break;
+								case 1://focus
+									var txt = btn[global.focused_btn];
+								break;
+								case 2://bomb
+									var txt = btn[global.bomb_btn];
+								break;
+								case 3://pause
+									var txt = btn[global.pause_btn];
+								break;
+							} 
+						}
+						else
+						{
+							switch(i)
+							{
+								case 0://shot
+									var vk = global.shot_vk;
+								break;
+								case 1://focus
+									var vk = global.focused_vk;
+								break;
+								case 2://bomb
+									var vk = global.bomb_vk;
+								break;
+								case 3://pause
+									var vk = global.pause_vk;
+								break;
+							} 
+						
+							txt = vk < array_length(key) ? key[vk] : "None";
+						}
+					
+						draw_text_color(xx2 ,yy + i * 60,txt,c_white,c_white,c_white,c_white,1 - !is_active * 0.7);
+					}
+				}
 			break;
 		}
 	break;

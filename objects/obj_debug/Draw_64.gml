@@ -10,4 +10,3 @@ if (global.debug) and (room == room_gp)
 	
 	draw_text(600,20,global.dps_draw);
 }
-
