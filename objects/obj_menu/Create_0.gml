@@ -1443,18 +1443,47 @@ for(var i = 0; i < array_length(menu); i += 1)
 //settings things for spell practice
 for(var i = 0; i < array_length(menu[3].param); i += 1)//stage 
 {
-	for(var j = 0; j < array_length(menu[3].param[i].param); j += 1)//spell
+	var cap = 0;
+	for(var j = array_length(menu[3].param[i].param) - 1; j >= 0 ; j -= 1)//spell
 	{
+		var extra_is = (i == 6);
+		
+		if(j % (1 + !extra_is * 3) == !extra_is * 3)
+		{
+			cap = 0;	
+		}
+		
 		var check = menu[3].param[i].param[j];
 		variable_struct_set(check,"action",MENU_SPELL);
-		variable_struct_set(check,"cap_game",data_read("SpellData.ini",check.data_name,get_difficulty_key(0,check.diff)));
+		
+		var capgame = data_read("SpellData.ini",check.data_name,get_difficulty_key(0,check.diff));
+		variable_struct_set(check,"cap_game",capgame);
 		variable_struct_set(check,"try_game",data_read("SpellData.ini",check.data_name,get_difficulty_key(1,check.diff)));
-		variable_struct_set(check,"cap_prac",data_read("SpellDataPractice.ini",check.data_name,get_difficulty_key(0,check.diff)));
+		
+		var capprac = data_read("SpellDataPractice.ini",check.data_name,get_difficulty_key(0,check.diff));
+		variable_struct_set(check,"cap_prac",capprac);
 		variable_struct_set(check,"try_prac",data_read("SpellDataPractice.ini",check.data_name,get_difficulty_key(1,check.diff)));
 		
-		if(!variable_struct_exists(check,"comment"))
+		cap += capgame + capprac;
+		
+		
+		if(cap > 0)
 		{
-			variable_struct_set(check,"comment","No comment");
+			if(!variable_struct_exists(check,"comment"))
+			{
+				variable_struct_set(check,"comment","No comment");
+			}
+		}
+		else
+		{
+			if(extra_is)
+			{
+				variable_struct_set(check,"comment",get_text("menu_lock_comment_extra"));
+			}
+			else
+			{
+				variable_struct_set(check,"comment",get_text("menu_lock_comment"));
+			}
 		}
 	}
 }

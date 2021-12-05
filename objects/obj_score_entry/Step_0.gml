@@ -19,7 +19,6 @@ switch(state)
 		
 		if(!instance_exists(obj_name_entry))
 		{
-			state = 1;
 			
 			//write new scores
 			for(var i = 0; i < array_length(scores); i += 1)
@@ -29,6 +28,15 @@ switch(state)
 			}
 			
 			global.name_entry = "";
+			
+			if(room = room_score)
+			{
+				state = 1;	
+			}
+			else
+			{
+				instance_destroy();
+			}
 		}
 	break;
 	case 1:

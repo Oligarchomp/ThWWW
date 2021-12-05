@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if(instance_exists(obj_replay))
+if(instance_exists(obj_replay)) or (instance_exists(obj_score_entry))
 {
 	cursor_lockout = 10;
 }
