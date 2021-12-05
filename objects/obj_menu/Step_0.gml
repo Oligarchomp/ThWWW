@@ -532,9 +532,9 @@ if(cursor_lockout == 0)
 			}
 			else
 			{
-				if(cursor[0] != 9)
+				if(cursor[0] != 10)
 				{
-					cursor[0] = 9;
+					cursor[0] = 10;
 				}
 				else
 				{

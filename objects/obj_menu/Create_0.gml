@@ -1204,13 +1204,6 @@ menu =
 				intro : noone
 			},
 			{
-				title : get_text("mus_room_credit"),
-				comment : get_text("mus_com_credit"),
-				action : MENU_MUSIC,
-				music : noone,
-				intro : noone
-			},
-			{
 				title : get_text("mus_room_score"),
 				comment : get_text("mus_com_score"),
 				action : MENU_MUSIC,
@@ -1222,6 +1215,11 @@ menu =
 	{
 		title : "MANUAL",
 		description : get_text("menu_manual"),
+		action : MENU_MAKE_SOUND
+	},
+	{
+		title : "CREDIT",
+		description : get_text("menu_credit"),
 		action : MENU_MAKE_SOUND
 	},
 	{

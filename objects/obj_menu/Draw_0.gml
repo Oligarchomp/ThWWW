@@ -32,12 +32,12 @@ switch(level)
 			
 			var col = menu[i].action != MENU_INVALID ? c_white : $5a5a5a;
 			
-			draw_text_color(570 + menu[i].active_offset + i * 4,120 + i * 32,menu[i].title,col,col,col,col,1 - !is_active * 0.6);
+			draw_text_color(560 + menu[i].active_offset + i * 4,100 + i * 32,menu[i].title,col,col,col,col,1 - !is_active * 0.6);
 	
 			if(is_active)
 			{
 				draw_set_font(font_spellpractice);
-				draw_text_color(610 + menu[i].active_offset - string_width(menu[i].description) / 2,446,menu[i].description,c_white,c_white,c_white,c_white,menu_description_alpha);
+				draw_text_color(610 + menu[i].active_offset - string_width(menu[i].description) / 2,455,menu[i].description,c_white,c_white,c_white,c_white,menu_description_alpha);
 				draw_set_font(font_main);
 			}
 		}
