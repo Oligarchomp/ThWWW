@@ -15,3 +15,7 @@ bg_to_create = noone;
 
 bgm_name = "No name"
 
+if(global.play_type == PLAY_MANUAL)
+{
+	unlock_stage(global.stage);
+}

@@ -22,16 +22,4 @@ if (global.gp_active)
 		instance_destroy(meet);
 	}
 	
-	if(place_meeting(x,y,obj_laser))
-	{
-		play_sound(sfx_graze,1,false);
-		global.graze += 1;
-		add_score(1000);
-		
-		if (instance_number(obj_graze) < global.graze_max)
-		{
-			instance_create_depth(other.x,other.y,other.depth + 1,obj_graze);
-		}
-	}
-	
 }

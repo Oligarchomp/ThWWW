@@ -29,6 +29,9 @@ if(global.gp_active)
 				state = 2;
 				mask_index = spr_nothing;
 			}
+			
+			var inst = instance_create_depth(x,y,depth,obj_laser_grazebox);
+			inst.image_angle = image_angle;
 		break;
 		case 2:
 			size = goto_value(size,0,0.5);
@@ -38,6 +41,8 @@ if(global.gp_active)
 			}
 		break;
 	}
+	
+	
 	
 
 

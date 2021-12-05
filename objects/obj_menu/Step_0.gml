@@ -325,11 +325,14 @@ if(cursor_lockout == 0)
 						}
 					break;
 					case 4://rng patch
-						if(global.shot_pressed)
+						if(rng_unlock)
 						{
-							var rng_patch = data_read("Data.ini","option","rng");
-							data_write("Data.ini","option","rng",!rng_patch);
-							global.rng_patch = !rng_patch;
+							if(global.shot_pressed)
+							{
+								var rng_patch = data_read("Data.ini","option","rng");
+								data_write("Data.ini","option","rng",!rng_patch);
+								global.rng_patch = !rng_patch;
+							}
 						}
 					break;
 				}
@@ -392,12 +395,17 @@ if(cursor_lockout == 0)
 					global.hiscore = variable_struct_get(menu[4].param[0],index)
 				break;
 				case MENU_START_STAGE:
-					room_transition(room_gp);
-
 					var param = array_check[cursor[level]].param;
 				
 					if(param == 7)
 					{
+						if(!extra_unlock[global.player_chosen])
+						{
+							audio_stop_sound(sfx_menu_valid);
+							play_sound(sfx_menu_invalid,1,false);
+							break;	
+						}
+						
 						global.difficulty = 1;
 						global.game_type = GAME_EXTRA;
 					
@@ -407,8 +415,10 @@ if(cursor_lockout == 0)
 					}
 					else
 					{
-						global.game_type = GAME_STAGE;	
+						global.game_type = GAME_STAGE;
 					}
+					
+					room_transition(room_gp);
 				
 					global.play_type = PLAY_MANUAL;
 				

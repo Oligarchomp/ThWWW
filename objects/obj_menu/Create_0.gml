@@ -42,6 +42,26 @@ btn[gp_select] = "Select"
 btn[gp_start] = "Start"
 
 
+rng_unlock = data_read("Data.ini","data","rng_unlock");
+stage_unlock = data_read("Data.ini","data","stage_unlock")
+
+extra_unlock[P_REIMU] = data_read("Data.ini","data","reimu_extra");
+extra_unlock[P_MARISA] = data_read("Data.ini","data","marisa_extra");
+extra_unlock[P_SANAE] = data_read("Data.ini","data","sanae_extra");
+var res = 0;
+for(var i = P_REIMU; i < P_SANAE; i += 1)
+{
+	res += extra_unlock[i];
+}
+is_extra_valid = sign(res);
+
+// to avoid having the player stuck on rng patch if they somehow activate it without having it unlock
+if(global.rng_patch)
+{
+	data_write("Data.ini","data","rng_unlock",1); 
+}
+
+
 if(!variable_global_exists("menu_level"))
 {
 	global.menu_cursor = [0,0,0,0];
@@ -77,7 +97,7 @@ menu =
 	{
 		title : "EXTRA START",
 		description : get_text("menu_extra"),
-		action : MENU_MENU,
+		action : is_extra_valid ? MENU_MENU : MENU_INVALID,
 		param :
 		[
 			{//difficulty
@@ -95,7 +115,7 @@ menu =
 	{
 		title : "PRACTICE",
 		description : get_text("menu_practice"),
-		action : MENU_MENU,
+		action : stage_unlock > 0 ? MENU_MENU : MENU_INVALID,
 		param :
 		[
 			{//difficulty
@@ -108,33 +128,33 @@ menu =
 				[
 					{
 						title : "Stage 1",
-						action : MENU_START_STAGE,
+						action : stage_unlock >= 1 ? MENU_START_STAGE : MENU_INVALID,
 						param : 1
 					},
 					{
 						title : "Stage 2",
-						action : MENU_START_STAGE,
+						action : stage_unlock >= 2 ? MENU_START_STAGE : MENU_INVALID,
 						param : 2
 					},
 					{
 						title : "Stage 3",
 						active_offset : 0,
-						action : MENU_START_STAGE,
+						action : stage_unlock >= 3 ? MENU_START_STAGE : MENU_INVALID,
 						param : 3
 					},
 					{
 						title : "Stage 4",
-						action : MENU_START_STAGE,
+						action : stage_unlock >= 4 ? MENU_START_STAGE : MENU_INVALID,
 						param : 4
 					},
 					{
 						title : "Stage 5",
-						action : MENU_START_STAGE,
+						action : stage_unlock >= 5 ? MENU_START_STAGE : MENU_INVALID,
 						param : 5
 					},
 					{
 						title : "Stage 6",
-						action : MENU_START_STAGE,
+						action : stage_unlock >= 6 ? MENU_START_STAGE : MENU_INVALID,
 						param : 6
 					}
 				]
@@ -146,12 +166,12 @@ menu =
 	{
 		title : "SPELL PRACTICE",
 		description : get_text("menu_spell"),
-		action: MENU_MENU,
+		action: stage_unlock > 0 ? MENU_MENU : MENU_INVALID,
 		param : 
 		[
 			{
 				title : "Stage 1",
-				action : MENU_MENU,
+				action : stage_unlock >= 1 ? MENU_MENU : MENU_INVALID,
 				bg : act_s1_0,
 				param : 
 				[
@@ -243,7 +263,7 @@ menu =
 			},
 			{
 				title : "Stage 2",
-				action : MENU_MENU,
+				action : stage_unlock >= 2 ? MENU_MENU : MENU_INVALID,
 				bg : act_s2_0,
 				param : 
 				[
@@ -363,7 +383,7 @@ menu =
 			},
 			{
 				title : "Stage 3",
-				action : MENU_MENU,
+				action : stage_unlock >= 3 ? MENU_MENU : MENU_INVALID,
 				bg : act_s3_0,
 				param : 
 				[
@@ -467,7 +487,7 @@ menu =
 			},
 			{
 				title : "Stage 4",
-				action : MENU_MENU,
+				action : stage_unlock >= 4 ? MENU_MENU : MENU_INVALID,
 				bg : act_s4_0,
 				param : 
 				[
@@ -643,7 +663,7 @@ menu =
 			},
 			{
 				title : "Stage 5",
-				action : MENU_MENU,
+				action : stage_unlock >= 5 ? MENU_MENU : MENU_INVALID,
 				bg : act_s5_0,
 				param : 
 				[
@@ -747,7 +767,7 @@ menu =
 			},
 			{
 				title : "Stage 6",
-				action : MENU_MENU,
+				action : stage_unlock >= 6 ? MENU_MENU : MENU_INVALID,
 				bg : act_s6_0,
 				param : 
 				[
@@ -899,7 +919,7 @@ menu =
 			},
 			{
 				title : "Extra Stage",
-				action : MENU_MENU,
+				action : stage_unlock >= 7 ? MENU_MENU : MENU_INVALID,
 				bg : act_s7_0,
 				param : 
 				[
@@ -1060,8 +1080,8 @@ menu =
 				]
 			},
 			{
-				title : get_text("menu_rng"),
-				action : MENU_MAKE_SOUND
+				title : rng_unlock ? get_text("menu_rng") : get_text("menu_rng_lock"),
+				action : rng_unlock ? MENU_MAKE_SOUND : MENU_INVALID
 			}
 		]
 	},
@@ -1201,7 +1221,8 @@ menu =
 	},
 	{
 		title : "MANUAL",
-		description : get_text("menu_manual")
+		description : get_text("menu_manual"),
+		action : MENU_MAKE_SOUND
 	},
 	{
 		title : "QUIT",

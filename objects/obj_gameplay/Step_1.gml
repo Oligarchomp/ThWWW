@@ -43,7 +43,17 @@ if(global.gp_active)
 		switch(end_wait)
 		{
 			case end_time:
-		
+	
+				if(global.play_type == PLAY_MANUAL)
+				{
+					switch(global.game_type)
+					{
+						case GAME_EXTRA:
+							data_write("Data.ini","data","rng_unlock",1); //unlock rng patch
+						break;
+					}
+				}
+	
 				pause_state = 1;
 		
 				pause_type = PAUSE_END;

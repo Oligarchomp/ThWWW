@@ -1,12 +1,15 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_laser_grazebox",
+    "path": "sprites/spr_laser_grazebox/spr_laser_grazebox.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_spell",
-    "path": "objects/obj_spell/obj_spell.yy",
+    "name": "obj_grazebox",
+    "path": "objects/obj_grazebox/obj_grazebox.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -23,15 +26,16 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Stage6",
-    "path": "folders/Objects/STAGES/Stage6.yy",
+    "name": "DANMAKU",
+    "path": "folders/Objects/DANMAKU.yy",
   },
   "resourceVersion": "1.0",
-  "name": "boss_s6_6_spell",
+  "name": "obj_laser_grazebox",
   "tags": [],
   "resourceType": "GMObject",
 }

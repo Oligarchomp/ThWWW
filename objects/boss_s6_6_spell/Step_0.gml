@@ -153,9 +153,8 @@ if(global.gp_active) and (spell_wait == 0)
 				{
 					for(var i = y; i < room_height + wine_dist * 3; i += wine_dist * 2)
 					{
-						instance_create_depth(x,i,0,obj_wine_laser);
-						var inst = instance_create_depth(x,i,0,obj_wine_laser);
-						inst.image_xscale = -1;
+						shoot_laser_center(x,i,45,60,55,c_white,sfx_laser1)
+						shoot_laser_center(x,i,-45,60,55,c_white,sfx_laser1)
 					}
 				}
 			}

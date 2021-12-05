@@ -78,11 +78,14 @@ menu_focus = Focus
 menu_pause = Pause
 menu_default = Default
 menu_back = Back
+menu_rng_lock = Locked option. (Complete the Extra Stage)
 
 controle_backspace = Backspace
 controle_space = Space
 controle_button = Button
 controle_shoulder = Shoulder
+
+menu_lock_comment = Capture this Spell on this difficulty or higher to unlock this comment.
 
 pause_resume = Resume
 pause_title = Go back to title

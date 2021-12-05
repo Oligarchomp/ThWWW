@@ -1,7 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-event_inherited();
 global.stage = 1;
+
+event_inherited();
+
 global.boss = BOSS_APPLE;
 
 bg_to_create = bg_s1;

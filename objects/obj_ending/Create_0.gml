@@ -1,6 +1,21 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
+switch(global.player_chosen)
+{
+	case P_REIMU:
+		data_write("Data.ini","data","reimu_extra",1);
+	break;
+	case P_MARISA:
+		data_write("Data.ini","data","marisa_extra",1);				
+	break;
+	case P_SANAE:
+		data_write("Data.ini","data","sanae_extra",1);				
+	break;
+}
+
+
 state = 0;
 old_state = -1;
 state_time = 0;

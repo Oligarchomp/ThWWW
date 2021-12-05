@@ -30,7 +30,9 @@ switch(level)
 			var is_active = (cursor[0] == i);
 			menu[i].active_offset = goto_value(menu[i].active_offset,over_offset * is_active,6);
 			
-			draw_text_color(570 + menu[i].active_offset + i * 4,120 + i * 32,menu[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
+			var col = menu[i].action != MENU_INVALID ? c_white : $5a5a5a;
+			
+			draw_text_color(570 + menu[i].active_offset + i * 4,120 + i * 32,menu[i].title,col,col,col,col,1 - !is_active * 0.6);
 	
 			if(is_active)
 			{
@@ -58,9 +60,11 @@ switch(level)
 				{
 					var is_active = (cursor[level] == i);
 					
+					var col = check[i].action != MENU_INVALID ? c_white : $5a5a5a;
+					
 					check[i].active_offset = goto_value(check[i].active_offset,over_offset * is_active,6);
 					
-					draw_text_color(620 + check[i].active_offset,80 + i * 50,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
+					draw_text_color(620 + check[i].active_offset,80 + i * 50,check[i].title,col,col,col,col,1 - !is_active * 0.6);
 				}
 			break;
 			case 4://Score room
@@ -129,7 +133,14 @@ switch(level)
 					var is_active = (cursor[level] == i);
 					
 					var txt = check[i].title;
-					draw_text_color(xx - string_width(txt),yy + i * 60,txt,c_white,c_white,c_white,c_white,1 - !is_active * 0.7);
+					
+					var off = 0;
+					if(i == array_length(check) - 1) and (!rng_unlock)
+					{
+						off = string_width(txt) / 2 + (xx2 - xx) / 2;
+					}
+					
+					draw_text_color(xx - string_width(txt) + off,yy + i * 60,txt,c_white,c_white,c_white,c_white,1 - !is_active * 0.7);
 				
 					switch(i)
 					{
@@ -160,10 +171,13 @@ switch(level)
 							
 						break;
 						case 4:
-							var fs = data_read("Data.ini","option","rng");
-							txt = fs ? "ON" : "OFF";
+							if(rng_unlock)
+							{
+								var fs = data_read("Data.ini","option","rng");
+								txt = fs ? "ON" : "OFF";
 							
-							draw_text_color(xx2,yy + i * 60,txt,c_white,c_white,c_white,c_white,1);
+								draw_text_color(xx2,yy + i * 60,txt,c_white,c_white,c_white,c_white,1);
+							}
 						break;
 						
 					}
@@ -212,8 +226,16 @@ switch(level)
 							var art = spr_sanae_art;
 						break;
 					}
+					if(cursor[0] == 1)//extra
+					{
+						if(!extra_unlock[i])
+						{
+							shader_set(shad_greyscale);
+						}
+					}
 					
 					draw_sprite_ext(art,0,player[i].x_is,260,1,1,0,c_white,player[i].alpha);
+					shader_reset();
 				}
 				
 				var dif = cursor[0] != 1 ? global.difficulty : 4;
@@ -352,9 +374,11 @@ switch(level)
 				{
 					var is_active = (cursor[level] == i);
 					
+					var col = check[i].action != MENU_INVALID ? c_white : $5a5a5a;
+					
 					check[i].active_offset = goto_value(check[i].active_offset,over_offset * is_active,6);
 					
-					draw_text_color(620 + check[i].active_offset,80 + i * 50,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
+					draw_text_color(620 + check[i].active_offset,80 + i * 50,check[i].title,col,col,col,col,1 - !is_active * 0.6);
 				}
 			break;
 		}
