@@ -1454,19 +1454,24 @@ for(var i = 0; i < array_length(menu[3].param); i += 1)//stage
 		}
 		
 		var check = menu[3].param[i].param[j];
-		variable_struct_set(check,"action",MENU_SPELL);
+		
 		
 		var capgame = data_read("SpellData.ini",check.data_name,get_difficulty_key(0,check.diff));
 		variable_struct_set(check,"cap_game",capgame);
-		variable_struct_set(check,"try_game",data_read("SpellData.ini",check.data_name,get_difficulty_key(1,check.diff)));
+		
+		var trygame = data_read("SpellData.ini",check.data_name,get_difficulty_key(1,check.diff));
+		variable_struct_set(check,"try_game",trygame);
 		
 		var capprac = data_read("SpellDataPractice.ini",check.data_name,get_difficulty_key(0,check.diff));
 		variable_struct_set(check,"cap_prac",capprac);
+		
 		variable_struct_set(check,"try_prac",data_read("SpellDataPractice.ini",check.data_name,get_difficulty_key(1,check.diff)));
 		
 		cap += capgame + capprac;
 		
 		
+		variable_struct_set(check,"action",MENU_SPELL);
+			
 		if(cap > 0)
 		{
 			if(!variable_struct_exists(check,"comment"))
@@ -1484,6 +1489,15 @@ for(var i = 0; i < array_length(menu[3].param); i += 1)//stage
 			{
 				variable_struct_set(check,"comment",get_text("menu_lock_comment"));
 			}
+		}
+		
+		
+		if (extra_is) and (trygame == 0)
+		{
+			variable_struct_set(check,"action",MENU_INVALID);
+			
+			variable_struct_set(check,"title","????????????");
+			variable_struct_set(check,"comment","???");
 		}
 	}
 }
