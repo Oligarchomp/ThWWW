@@ -90,8 +90,8 @@ window_set_cursor(cr_none);
 instance_create_depth(0,0,0,obj_bgm);
 
 //room_goto(room_score);
-//room_goto(room_main);
-room_goto(room_gp);
+room_goto(room_main);
+//room_goto(room_gp);
 
 global.game_x_offset =  156;
 global.game_y_offset =  20;
@@ -267,26 +267,4 @@ global.play_type = PLAY_MANUAL;
 #macro REPLAY_STAGE_NBR 8
 
 
-add_stage_event(act_s3_0,0);//keep this one
-/*
-add_stage_event(act_s3_1,0);
-add_stage_event(act_s3_2,0);
-add_stage_event(act_s3_3,0);
-add_stage_event(act_s3_4,0);
-add_stage_event(act_s3_42,0);
-add_stage_event(act_s3_43,0);
-add_stage_event(act_s3_45,0);
-*/
-add_stage_event(act_s3_5,0);
-add_stage_event(act_s3_6,90);
-add_stage_event(act_s3_7_midspell,0);
-add_stage_event(act_s3_8,120);
-add_stage_event(act_s3_9,50);
-add_stage_event(dialogue_s3_pre,100);
-add_stage_event(boss_s3_1_non,0);
-add_stage_event(boss_s3_2_spell,0);
-add_stage_event(boss_s3_3_non,10);
-add_stage_event(boss_s3_4_spell,0);
-add_stage_event(boss_s3_5_non,10);
-add_stage_event(boss_s3_6_spell,0);
-add_stage_event(dialogue_s3_post,100);
+

@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-act_max = 20 * 60;
+act_max = 19 * 60;
 act_set_time(act_max,act_max);
 
 

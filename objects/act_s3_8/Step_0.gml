@@ -52,7 +52,7 @@ if(global.gp_active)
 	
 	if(wait_time == 0)
 	{
-		if(step < act_max - 200)
+		if(step < act_max - 150)
 		{
 			if(step % wave_wait == 0)
 			{

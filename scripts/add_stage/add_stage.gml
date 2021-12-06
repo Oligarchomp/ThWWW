@@ -50,6 +50,7 @@ function add_stage(stage){
 			add_stage_event(act_s3_4,0);
 			add_stage_event(act_s3_42,0);
 			add_stage_event(act_s3_43,0);
+			add_stage_event(act_s3_45,0);
 			add_stage_event(act_s3_5,0);
 			add_stage_event(act_s3_6,90);
 			add_stage_event(act_s3_7_midspell,0);
