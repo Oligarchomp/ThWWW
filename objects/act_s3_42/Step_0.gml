@@ -7,7 +7,7 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var ball_ring = 16;
+			var ball_ring = 9;
 			var ball_spd1 = 1.4;
 			var ball_spd2 = 1.6;
 			var extra_wave = 0;
@@ -25,7 +25,7 @@ if(global.gp_active)
 			var aim_spd_max = 4.5;
 		break;
 		case 1:
-			var ball_ring = 22;
+			var ball_ring = 15;
 			var ball_spd1 = 1.4;
 			var ball_spd2 = 1.6;
 			var extra_wave = 1;
@@ -36,14 +36,14 @@ if(global.gp_active)
 			var bubble_dist = 30;
 			var bubble_wait = 26;
 			
-			var aim_arc = 3;
+			var aim_arc = 1;
 			var aim_row = 1;
 			var aim_dist = 36;
 			var aim_spd_min = 3;
 			var aim_spd_max = 4.5;
 		break;
 		case 2:
-			var ball_ring = 30;
+			var ball_ring = 16;
 			var ball_spd1 = 1;
 			var ball_spd2 = 1.2;
 			var extra_wave = 2;
@@ -54,14 +54,14 @@ if(global.gp_active)
 			var bubble_dist = 30;
 			var bubble_wait = 26;
 			
-			var aim_arc = 5;
+			var aim_arc = 1;
 			var aim_row = 1;
 			var aim_dist = 28;
 			var aim_spd_min = 3;
 			var aim_spd_max = 4.5;
 		break;
 		case 3:
-			var ball_ring = 36;
+			var ball_ring = 20;
 			var ball_spd1 = 1;
 			var ball_spd2 = 1.2;
 			var extra_wave = 2;
@@ -72,7 +72,7 @@ if(global.gp_active)
 			var bubble_dist = 25;
 			var bubble_wait = 26;
 			
-			var aim_arc = 5;
+			var aim_arc = 1;
 			var aim_row = 1;
 			var aim_dist = 20;
 			var aim_spd_min = 3;
@@ -95,7 +95,10 @@ if(global.gp_active)
 			{
 				if (state_time % fairy_wait == 0)
 				{
-					var inst = create_enemy(EN_GREEN,x_fairy[|state_time/fairy_wait],-20,fairy_life,4,4,-90)
+					var inst = create_enemy(EN_WHITE,room_width / 2 + x_fairy[|state_time/fairy_wait],-20,fairy_life,4,4,-90)
+					inst.item_nbr = 3;
+					
+					var inst = create_enemy(EN_WHITE,room_width / 2 - x_fairy[|state_time/fairy_wait],-20,fairy_life,4,4,-90)
 					inst.item_nbr = 3;
 				}
 			}
@@ -140,18 +143,18 @@ if(global.gp_active)
 			case 1://shoot
 				
 				var ang = rng(360,false,4)
-				shoot_ring(DAN_BALL,3,ball_ring,x,y,ang + 360 / ball_ring / 2,ball_spd2,sfx_redirect2,7);
+				shoot_ring(DAN_BALL,7,ball_ring,x,y,ang + 360 / ball_ring / 2,ball_spd2,sfx_redirect2,7);
 				shoot_ring(DAN_BALL,7,ball_ring,x,y,ang,ball_spd1,sfx_redirect2,7);
 				switch(extra_wave)
 				{
 					case 2:
-					shoot_ring(DAN_BALL,3,ball_ring,x,y,ang  + 360 / ball_ring / 2,ball_spd2 + (ball_spd2 - ball_spd1) * 2,sfx_redirect2,7);
+					shoot_ring(DAN_BALL,7,ball_ring,x,y,ang  + 360 / ball_ring / 2,ball_spd2 + (ball_spd2 - ball_spd1) * 2,sfx_redirect2,7);
 					case 1:
 					shoot_ring(DAN_BALL,7,ball_ring,x,y,ang,ball_spd2 + (ball_spd2 - ball_spd1),sfx_redirect2,7);
 					break;
 				}
 				
-				shoot_arc_row(DAN_BUBBLE,3,aim_arc,aim_row,x,y,999,aim_dist,aim_spd_min,aim_spd_max,sfx_redirect1,8);
+				shoot_arc_row(DAN_BUBBLE,7,aim_arc,aim_row,x,y,999,aim_dist,aim_spd_min,aim_spd_max,sfx_redirect1,8);
 				state = 2;
 			break;
 			case 2:

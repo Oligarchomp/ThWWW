@@ -60,14 +60,14 @@ if(global.gp_active)
 	
 	if(step == 0)
 	{
-		create_enemy(EN_BLUE,-20,y_off_blue,fairy_life,2,6,0);
-		create_enemy(EN_BLUE,room_width + 20,y_off_blue,fairy_life,2,6,180);
+		create_enemy(EN_WHITE,-20,y_off_blue,fairy_life,2,6,0);
+		create_enemy(EN_WHITE,room_width + 20,y_off_blue,fairy_life,2,6,180);
 		
-		create_enemy(EN_RED,room_width /2,-20,fairy_life,1,6,-90)
+		create_enemy(EN_WHITE,room_width /2,-20,fairy_life,1,6,-90)
 		
 		var x_off = 50;
-		create_enemy(EN_RED,room_width /2 + x_off,-20,fairy_life,1,6,-90)
-		create_enemy(EN_RED,room_width /2 - x_off,-20,fairy_life,1,6,-90)
+		create_enemy(EN_WHITE,room_width /2 + x_off,-20,fairy_life,1,6,-90)
+		create_enemy(EN_WHITE,room_width /2 - x_off,-20,fairy_life,1,6,-90)
 		
 	}
 	
@@ -85,7 +85,7 @@ if(global.gp_active)
 				}
 			break;
 			case 1://shoot
-				shoot_ring_row(DAN_BUBBLE,3,aim_ring,aim_row,x,y,999,aim_spd_min,aim_spd_max,sfx_redirect1,3);
+				shoot_ring_row(DAN_BUBBLE,7,aim_ring,aim_row,x,y,999,aim_spd_min,aim_spd_max,sfx_redirect1,3);
 				state = 2;
 				life = min(life,10);
 			break;

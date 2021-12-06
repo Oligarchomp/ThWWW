@@ -9,4 +9,5 @@ event_inherited();
 global.boss = BOSS_PALE;
 
 bg_to_create = bg_s3;
-music = noone;
+music = mus_stage3_loop;
+music_intro = mus_stage3_intro;

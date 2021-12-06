@@ -14,13 +14,16 @@ mus_stage1 = Magical Hopalong Cassidy Station [Arr: Sozoro Namino]
 mus_boss1 = AN APPLE DISASTER!! [Arr: Princess Sylvysprit]
 mus_stage2 = 
 mus_boss2 = The Crab's One Way Cycle ~ Sideway Motion [Comp: Jani]
+mus_stage3 = The Colorful Maiden, Through the Colorless World
+
+mus_stage3_comp = [Comp: Aka Kyuketsuki]
 
 mus_room_title = nothing
 mus_room_s1 = Magical Hopalong Cassidy Station
 mus_room_b1 = AN APPLE DISASTER!!
 mus_room_s2 = nothing
 mus_room_b2 = The Crab's One Way Cycle ~ Sideway Motion
-mus_room_s3 = nothing
+mus_room_s3 = The Colorful Maiden, Through the Colorless World
 mus_room_b3 = nothing
 mus_room_s4 = nothing
 mus_room_b4 = nothing
@@ -40,7 +43,7 @@ mus_com_s1 = Composition: Toby Fox // Arrangement: Sozoro Namino
 mus_com_b1 = Composition: Toby Fox // Arrangement: Princess Sylvysprit
 mus_com_s2 = comment
 mus_com_b2 = Composition: Jani
-mus_com_s3 = comment
+mus_com_s3 = Composition: Aka Kyuketsuki
 mus_com_b3 = comment
 mus_com_s4 = comment
 mus_com_b4 = comment
@@ -51,7 +54,7 @@ mus_com_b6 = comment
 mus_com_s7 = comment
 mus_com_b7 = comment
 mus_com_end = comment
-mus_com_score = coment
+mus_com_score = comment
 
 
 menu_start = Start Game
@@ -945,7 +948,7 @@ com_s2_midh = I wonder now...If the Heike were the one being victorious over the
 com_s2_midl = "How come she has Spells with "Enimty" or "Grudge" in it's name while she doesn't bear any grudge herself?" I hear you say. That's because she stubbornly tries to conform to her species mindset.$It doesn't work quite well, as you can see by her presence in Gensokyo.
 com_s2_1e = This Spell is significantly easier than another one with the word "Walk" in it title.$Also, Imagine the knifes in this spell as crabs.
 com_s2_1n = Could you, like, stop being a nuisance and step out of the crabs' way?$What do you mean they are actively aiming for you?$You are being paranoid.
-com_s2_1h = Now, there is also verticales lanes!$When the knifes come from above, it forces YOU to move horizontaly.$How does it feels like to be a crab?
+com_s2_1h = Now, there is also verticales lanes!$When the knifes come from above, it forces YOU to move horizontaly.$How does it feels like to be a crab now?
 com_s2_1l = So many crabs...What a sight! Now, where are they all heading to?$I read "Migration Sign", but is Gensokyo large enough to possibly be migrating somewhere?
 com_s2_2e = This game is a bullet-hell shooting game which is based on Japan's history.$Being based on history, the stages of the game are also based on famous battles which actually took place in ancient Japan.
 com_s2_2n = For exemple, this Stage 2, the player will have to fight against an army of ennemy fairies.$Not only that, but they will find new and interesting ways to defeat ennemies or bosses.

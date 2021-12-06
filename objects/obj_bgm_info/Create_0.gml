@@ -11,3 +11,7 @@ y = 485;
 x = room_width + 200;
 
 bgm_name = "Hey, there is no song dummy"
+
+color = c_white;
+
+off = 0;

@@ -71,7 +71,7 @@ if(global.gp_active)
 	{
 		if(step/fairy_wait < ds_list_size(x_fairy))
 		{
-			var inst = create_enemy(EN_RED,x_fairy[|step/fairy_wait],-20,fairy_life,4,4,-90)
+			var inst = create_enemy(EN_WHITE,x_fairy[|step/fairy_wait],-20,fairy_life,4,4,-90)
 			inst.item_nbr = 3;
 		}
 	}
@@ -96,11 +96,11 @@ if(global.gp_active)
 		{
 			if(aim_dir == 1)
 			{
-				var inst = create_enemy(EN_BLUE,-20,aim_y_off,aim_life,3,6,0)
+				var inst = create_enemy(EN_WHITE,-20,aim_y_off,aim_life,3,6,0)
 			}
 			else
 			{
-				var inst = create_enemy(EN_BLUE,room_width +20,aim_y_off,aim_life,3,6,180)
+				var inst = create_enemy(EN_WHITE,room_width +20,aim_y_off,aim_life,3,6,180)
 			}
 			inst.item_nbr = 1;
 		}
@@ -125,7 +125,7 @@ if(global.gp_active)
 				{
 					if(state_time % ring_wait == 0)
 					{
-						shoot_ring(DAN_MENTOS,3,ring_nbr,x,y,rng(360,false,6),0,sfx_redirect2,2);
+						shoot_ring(DAN_MENTOS,7,ring_nbr,x,y,rng(360,false,6),0,sfx_redirect2,2);
 					}
 				}
 				else

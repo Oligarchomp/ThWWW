@@ -4,9 +4,9 @@
 // Inherit the parent event
 event_inherited();
 
-act_set_time(750,750);
+act_set_time(640,640);
 
 x_fairy = ds_list_create();
-ds_list_add(x_fairy,320,190,110,200,280,230,80);
+ds_list_add(x_fairy,25,50,75,100,125,150);
 
 aim_dir = 1;

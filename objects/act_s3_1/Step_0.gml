@@ -33,7 +33,7 @@ if(global.gp_active)
 	}
 	
 	var fairy_wait = 16;
-	var fairy_lenght = 200;
+	var fairy_lenght = 260;
 	
 	var fairy_x_off = 10;
 	var fairy_x_git = 40;
@@ -49,11 +49,11 @@ if(global.gp_active)
 				{
 					if ((state_time / fairy_wait) % 2 == 0)
 					{
-						var inst = create_enemy(EN_GREEN,fairy_x_off + rng(fairy_x_git,false,8),room_height + 20,fairy_life,1,11,90 - rng(fairy_angle_off,false,1));
+						var inst = create_enemy(EN_WHITE,fairy_x_off + rng(fairy_x_git,false,8),room_height + 20,fairy_life,1,11,90 - rng(fairy_angle_off,false,1));
 					}
 					else
 					{
-						var inst = create_enemy(EN_GREEN,room_width - fairy_x_off - rng(fairy_x_git,false,8),room_height + 20,fairy_life,1,11,90 + rng(fairy_angle_off,false,1));
+						var inst = create_enemy(EN_WHITE,room_width - fairy_x_off - rng(fairy_x_git,false,8),room_height + 20,fairy_life,1,11,90 + rng(fairy_angle_off,false,1));
 					}
 					inst.item_nbr = 2;
 				}
@@ -82,7 +82,7 @@ if(global.gp_active)
 					shoot_ring_row(DAN_BUBBLE,7,bubble_ring,bubble_row,x,y,999,bubble_spd_min,bubble_spd_max,sfx_redirect1,3);
 					shoot_ring_row(DAN_BUBBLE,7,bubble_ring,bubble_row,x,y,998,bubble_spd_min + 1,bubble_spd_max + 1,sfx_redirect1,3);	
 
-					shoot_ring_row(DAN_ARROWHEAD,3,bubble_ring * 3,bubble_row * 2,x,y,999,bubble_spd_min * 1.2,bubble_spd_max * 1.2,sfx_redirect1,2);
+					shoot_ring_row(DAN_ARROWHEAD,7,bubble_ring * 3,bubble_row * 2,x,y,999,bubble_spd_min * 1.2,bubble_spd_max * 1.2,sfx_redirect1,2);
 					state = 2;
 			break;
 			case 2: //waiting

@@ -6,12 +6,23 @@ function set_bgm(argument0,argument1){
 	obj_bgm.bgm = argument0;
 	obj_bgm.bgm_intro = argument1;
 	
+	var col = c_white;
+	
 	if(room = room_gp)
 	{
 		switch(argument0)
 		{
 			case mus_stage1:
 				var name = get_text("mus_stage1");
+			break;
+			case mus_stage3_loop:
+				var name = get_text("mus_stage3");
+				col = $252525;
+				
+				var inst = instance_create_depth(0,0,0,obj_bgm_info);
+				inst.bgm_name = get_text("mus_stage3_comp");
+				inst.color = $252525;
+				inst.off = -18;
 			break;
 			case mus_boss1:
 				var name = get_text("mus_boss1");
@@ -26,5 +37,6 @@ function set_bgm(argument0,argument1){
 	
 		var inst = instance_create_depth(0,0,0,obj_bgm_info);
 		inst.bgm_name = string_insert(name,"BGM : ",7);
+		inst.color = col
 	}
 }

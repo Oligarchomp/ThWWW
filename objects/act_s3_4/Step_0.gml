@@ -49,28 +49,28 @@ if(global.gp_active)
 			
 			var mentos_wait = 8;
 			var mentos_ring = 14;
-			var mentos_spd_min = 2;
-			var mentos_spd_git = 1;
+			var mentos_spd_min = 3;
+			var mentos_spd_git = 0;
 		break;
 	}
 	
-	var orb_lenght = 300;
+	var orb_lenght = 200;
 	
-	var small_life = 80;
+	var small_life = 50;
 	
 	switch(step)
 	{
 		case 0:
-		case 400:
-			var inst = create_enemy(EN_RED,room_width / 2,-20,145,2,4,-90)
+		case 300:
+			var inst = create_enemy(EN_WHITE,room_width / 2,-20,90,2,4,-90)
 			inst.item_nbr = 14;
 			inst.fairy_dir = act_dir;
 			act_dir *= -1;
 			
-			var inst = create_enemy(EN_GREEN,80,-20,small_life,1,4.5,-90)
+			var inst = create_enemy(EN_WHITE,80,-20,small_life,1,4.5,-90)
 			inst.item_nbr = 5;
 			
-			var inst = create_enemy(EN_GREEN,320,-20,small_life,1,4.5,-90)
+			var inst = create_enemy(EN_WHITE,320,-20,small_life,1,4.5,-90)
 			inst.item_nbr = 5;
 		break;
 	}
@@ -134,7 +134,7 @@ if(global.gp_active)
 					if(state_time % mentos_wait == 0)
 					{
 						var sp = mentos_spd_min + rng(mentos_spd_git,false,9);
-						shoot_ring(DAN_BALL,3,mentos_ring,x,y,rng(360,false,6),sp,sfx_shot1,6);
+						shoot_ring(DAN_BALL,7,mentos_ring,x,y,rng(360,false,6),sp,sfx_shot1,6);
 					}
 				}
 				else
