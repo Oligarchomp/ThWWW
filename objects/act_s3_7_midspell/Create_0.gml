@@ -17,4 +17,4 @@ with(obj_boss)
 
 
 // to sync with the music
-//instance_create_depth(0,0,0,act_s3_8);
+instance_create_depth(0,0,0,act_s3_8);

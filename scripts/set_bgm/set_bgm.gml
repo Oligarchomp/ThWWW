@@ -17,11 +17,11 @@ function set_bgm(argument0,argument1){
 			break;
 			case mus_stage3_loop:
 				var name = get_text("mus_stage3");
-				col = $252525;
+				col = $121212;
 				
 				var inst = instance_create_depth(0,0,0,obj_bgm_info);
 				inst.bgm_name = get_text("mus_stage3_comp");
-				inst.color = $252525;
+				inst.color = $121212;
 				inst.off = -18;
 			break;
 			case mus_boss1:

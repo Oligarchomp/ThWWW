@@ -42,7 +42,7 @@ if(global.gp_active)
 	
 	var wave_wait = 180;
 	
-	/*
+	
 	if(instance_exists(obj_spell))
 	{
 		wait_time = 72;
@@ -51,9 +51,8 @@ if(global.gp_active)
 	wait_time = goto_value(wait_time,0,1);
 	
 	if(wait_time == 0)
-	*/
 	{
-		if(step <= 180)
+		if(step < act_max - 200)
 		{
 			if(step % wave_wait == 0)
 			{
@@ -64,6 +63,7 @@ if(global.gp_active)
 				}
 			}
 		}
+		
 	}
 	
 	with(obj_enemy7)
