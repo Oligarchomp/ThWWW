@@ -314,7 +314,6 @@
     {"id":{"name":"sfx_shot3","path":"sounds/sfx_shot3/sfx_shot3.yy",},"order":7,},
     {"id":{"name":"obj_isoterica","path":"objects/obj_isoterica/obj_isoterica.yy",},"order":5,},
     {"id":{"name":"obj_shot_hitbox","path":"objects/obj_shot_hitbox/obj_shot_hitbox.yy",},"order":2,},
-    {"id":{"name":"act_s3_44","path":"objects/act_s3_44/act_s3_44.yy",},"order":23,},
     {"id":{"name":"obj_boss_release","path":"objects/obj_boss_release/obj_boss_release.yy",},"order":3,},
     {"id":{"name":"spr_base_reimu","path":"sprites/spr_base_reimu/spr_base_reimu.yy",},"order":1,},
     {"id":{"name":"spr_cancel","path":"sprites/spr_cancel/spr_cancel.yy",},"order":2,},

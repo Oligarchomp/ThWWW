@@ -81,7 +81,7 @@ if(global.gp_active)
 	}
 	
 	var fairy_wait = 60;
-	var fairy_life = 42;
+	var fairy_life = 34;
 	
 	var aim_y_off = 60;
 	var aim_life = 4;

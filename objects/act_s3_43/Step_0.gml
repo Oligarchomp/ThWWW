@@ -47,23 +47,23 @@ if(global.gp_active)
 			need_fairy_time = 120;
 			act_dir = -1;
 		break;
-		case 140:
+		case 150:
 			need_fairy_time = 120;
 			act_dir = 1;
 		break;
-		case 280:
+		case 300:
 			need_fairy_time = 120;
 			act_dir = -1;
 		break;
-		case 420:
+		case 450:
 			need_fairy_time = 120;
 			act_dir = 1;
 		break;
-		case 560:
+		case 600:
 			need_fairy_time = 120;
 			act_dir = -1;
 		break;
-		case 700:
+		case 750:
 			need_fairy_time = 120;
 			act_dir = 1;
 		break;

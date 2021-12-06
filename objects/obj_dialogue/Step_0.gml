@@ -171,6 +171,9 @@ if(global.gp_active)
 					case 2:
 						set_bgm(mus_boss2,mus_boss2_intro);
 					break;
+					case 3:
+						set_bgm(noone,noone);
+					break;
 				}
 			}
 		break;
