@@ -1130,8 +1130,8 @@ menu =
 				title : get_text("mus_room_s3"),
 				comment : get_text("mus_com_s3"),
 				action : MENU_MUSIC,
-				music : noone,
-				intro : noone
+				music : mus_stage3_loop,
+				intro : mus_stage3_intro
 			},
 			{
 				title : get_text("mus_room_b3"),
@@ -1183,8 +1183,8 @@ menu =
 				intro : noone
 			},
 			{
-				title : get_text("mus_room_s3"),
-				comment : get_text("mus_com_s3"),
+				title : get_text("mus_room_s7"),
+				comment : get_text("mus_com_s7"),
 				action : MENU_MUSIC,
 				music : noone,
 				intro : noone
@@ -1392,13 +1392,13 @@ for(var i = 0; i < 5; i += 1)
 	variable_struct_set(difficuly[i],"x_pos",xpos);
 	variable_struct_set(difficuly[i],"y_pos",ypos);
 	variable_struct_set(difficuly[i],"x_is",xpos);
-	variable_struct_set(difficuly[i],"x_to",ypos);
-	variable_struct_set(difficuly[i],"y_is",xpos);
+	variable_struct_set(difficuly[i],"x_to",xpos);
+	variable_struct_set(difficuly[i],"y_is",ypos);
 	variable_struct_set(difficuly[i],"y_to",ypos);
 }
 
 
-player_center = 620;
+player_center = 650;
 player = []
 
 for(var i = P_REIMU; i <= P_SANAE; i += 1)

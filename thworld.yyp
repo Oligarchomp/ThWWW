@@ -182,6 +182,7 @@
     {"id":{"name":"spr_ball","path":"sprites/spr_ball/spr_ball.yy",},"order":4,},
     {"id":{"name":"sfx_damage_low","path":"sounds/sfx_damage_low/sfx_damage_low.yy",},"order":2,},
     {"id":{"name":"obj_grazebox","path":"objects/obj_grazebox/obj_grazebox.yy",},"order":4,},
+    {"id":{"name":"spr_player_description","path":"sprites/spr_player_description/spr_player_description.yy",},"order":10,},
     {"id":{"name":"spr_rock","path":"sprites/spr_rock/spr_rock.yy",},"order":21,},
     {"id":{"name":"spr_iku_move","path":"sprites/spr_iku_move/spr_iku_move.yy",},"order":1,},
     {"id":{"name":"boss_s5_6_spell","path":"objects/boss_s5_6_spell/boss_s5_6_spell.yy",},"order":12,},

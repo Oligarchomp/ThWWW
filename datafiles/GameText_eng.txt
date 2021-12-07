@@ -36,7 +36,7 @@ mus_room_b7 = nothing
 mus_room_end = nothing
 mus_room_score = nothing
 
-music_comment = Music Comment
+music_comment = Music Comment:
 
 mus_com_title = comment
 mus_com_s1 = Composition: Toby Fox // Arrangement: Sozoro Namino

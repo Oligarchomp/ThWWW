@@ -16,8 +16,9 @@ switch(level)
 		var check = menu[cursor[0]].param[cursor[1]].param[cursor[2]].param;
 	break;
 }
-var  draw_replay = false;
-
+var draw_replay = false;
+var draw_player = false;
+var draw_stage_practice = false;
 
 draw_sprite(spr_main,level != 0,0,0);
 
@@ -57,15 +58,26 @@ switch(level)
 				draw_sprite(spr_difficulty,4,difficuly[4].x_is,difficuly[4].y_is);
 			break;
 			case 3://spell practice stage
+				var xx = 600 - 20;
+				var yy = 120 - 20;
+				var width = 236;
+				var height = 310;
+				var wid = 4;
+	
+				draw_line_width(xx,yy,xx + width,yy,wid);
+				draw_line_width(xx + width,yy,xx + width,yy + height,wid);
+				draw_line_width(xx,yy + height,xx + width,yy + height,wid);
+				draw_line_width(xx,yy,xx,yy + height,wid);
+				
 				for(var i = 0; i < array_length(check); i += 1)
 				{
 					var is_active = (cursor[level] == i);
 					
 					var col = check[i].action != MENU_INVALID ? c_white : $5a5a5a;
 					
-					check[i].active_offset = goto_value(check[i].active_offset,over_offset * is_active,6);
+					check[i].active_offset = goto_value(check[i].active_offset,20 * is_active,6);
 					
-					draw_text_color(620 + check[i].active_offset,80 + i * 50,check[i].title,col,col,col,col,1 - !is_active * 0.6);
+					draw_text_color(600 + check[i].active_offset,120 + i * 40,check[i].title,col,col,col,col,1 - !is_active * 0.6);
 				}
 			break;
 			case 4://Score room
@@ -213,53 +225,7 @@ switch(level)
 			case 0:
 			case 1:
 			case 2:
-				draw_set_font(font_main);
-				var txt = get_text("menu_chose_player");
-				draw_text(480 - string_width(txt) / 2,34,txt);
-				
-				for(var i = 0; i < 3; i += 1)
-				{
-					var col = c_white;
-					switch(i)
-					{
-						case P_REIMU:
-							var art = spr_reimu_art;
-						break;
-						case P_MARISA:
-							var art = spr_marisa_art;
-						break;
-						case P_SANAE:
-							var art = spr_sanae_art;
-						break;
-					}
-					/*
-					shader_set(shad_white)
-					var alp = player[i].alpha == 1;
-					draw_sprite_ext(art,0,player[i].x_is - 1,260,1,1,0,col,alp);
-					draw_sprite_ext(art,0,player[i].x_is + 1,260,1,1,0,col,alp);
-					draw_sprite_ext(art,0,player[i].x_is,259,1,1,0,col,alp);
-					draw_sprite_ext(art,0,player[i].x_is,261,1,1,0,col,alp);
-					shader_reset();
-					*/
-					
-					if(cursor[0] == 1)//extra
-					{
-						if(!extra_unlock[i])
-						{
-							shader_set(shad_greyscale);
-							col = $5a5a5a;
-						}
-					}
-					
-					draw_sprite_ext(art,0,player[i].x_is,260,1,1,0,col,player[i].alpha);
-					shader_reset();
-					
-					
-				}
-				
-				var dif = cursor[0] != 1 ? global.difficulty : 4;
-			
-				draw_sprite_ext(spr_difficulty,dif,difficuly[dif].x_is,difficuly[dif].y_is,1,1,0,c_white,1);
+				draw_player = true;
 			break;
 			case 3://spell practice spell select
 				
@@ -389,20 +355,98 @@ switch(level)
 		switch(cursor[0])//stage select
 		{
 			case 2:
-				for(var i = 0; i < array_length(check); i += 1)
-				{
-					var is_active = (cursor[level] == i);
-					
-					var col = check[i].action != MENU_INVALID ? c_white : $5a5a5a;
-					
-					check[i].active_offset = goto_value(check[i].active_offset,over_offset * is_active,6);
-					
-					draw_text_color(620 + check[i].active_offset,80 + i * 50,check[i].title,col,col,col,col,1 - !is_active * 0.6);
-				}
+				draw_player = true;
+				draw_stage_practice = true;
 			break;
 		}
 	break;
 }
+
+
+if(draw_player)
+{
+	draw_set_font(font_main);
+		var txt = get_text("menu_chose_player");
+		draw_text(480 - string_width(txt) / 2,34,txt);
+				
+		for(var i = 0; i < 3; i += 1)
+		{
+			var col = c_white;
+			switch(i)
+			{
+				case P_REIMU:
+					var art = spr_reimu_art;
+				break;
+				case P_MARISA:
+					var art = spr_marisa_art;
+				break;
+				case P_SANAE:
+					var art = spr_sanae_art;
+				break;
+			}
+			/*
+			shader_set(shad_white)
+			var alp = player[i].alpha == 1;
+			draw_sprite_ext(art,0,player[i].x_is - 1,260,1,1,0,col,alp);
+			draw_sprite_ext(art,0,player[i].x_is + 1,260,1,1,0,col,alp);
+			draw_sprite_ext(art,0,player[i].x_is,259,1,1,0,col,alp);
+			draw_sprite_ext(art,0,player[i].x_is,261,1,1,0,col,alp);
+			shader_reset();
+			*/
+					
+			if(cursor[0] == 1)//extra
+			{
+				if(!extra_unlock[i])
+				{
+					shader_set(shad_greyscale);
+					col = $5a5a5a;
+				}
+			}
+					
+			draw_sprite_ext(art,0,player[i].x_is,260,1,1,0,col,player[i].alpha);
+			shader_reset();
+					
+			//draw description
+			draw_sprite_ext(spr_player_description,global.player_chosen,30,540,1,1,0,c_white,1);
+					
+		}
+				
+		var dif = cursor[0] != 1 ? global.difficulty : 4;
+			
+		draw_sprite_ext(spr_difficulty,dif,difficuly[dif].x_is,difficuly[dif].y_is,1,1,0,c_white,1);
+
+}
+
+
+
+
+if(draw_stage_practice)
+{
+	var xx = 700 - 20;
+	var yy = 130 - 20;
+	var width = 175;
+	var height = 275;
+	var wid = 3;
+	draw_sprite_part(spr_main,1,xx,yy,width,height,xx,yy)
+	
+	draw_line_width(xx,yy,xx + width,yy,wid);
+	draw_line_width(xx + width,yy,xx + width,yy + height,wid);
+	draw_line_width(xx,yy + height,xx + width,yy + height,wid);
+	draw_line_width(xx,yy,xx,yy + height,wid);
+	
+	for(var i = 0; i < array_length(check); i += 1)
+	{
+		var is_active = (cursor[level] == i);
+					
+		var col = check[i].action != MENU_INVALID ? c_white : $5a5a5a;
+					
+		check[i].active_offset = goto_value(check[i].active_offset,13 * is_active,6);
+					
+		draw_text_color(700 + check[i].active_offset,130 + i * 40,check[i].title,col,col,col,col,1 - !is_active * 0.6);
+	}	
+}
+
+
 
 
 if(draw_replay)

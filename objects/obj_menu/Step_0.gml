@@ -583,7 +583,7 @@ for(var i = 0; i < 5; i += 1)
 	{
 		if(global.difficulty == i) or (i == 4)
 		{
-			difficuly[i].x_to = 200;
+			difficuly[i].x_to = 262;
 			difficuly[i].y_to = 164;
 		}
 	}
