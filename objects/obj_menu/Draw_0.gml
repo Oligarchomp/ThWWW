@@ -49,7 +49,8 @@ switch(level)
 			case 2:
 				for(var i = 0; i < 4; i += 1)
 				{
-					draw_sprite_ext(spr_difficulty,i,difficuly[i].x_is,difficuly[i].y_is,difficuly[i].scale,difficuly[i].scale,0,c_white,difficuly[i].alpha);
+					var is_active = i == global.difficulty;
+					draw_sprite_ext(spr_difficulty,i,difficuly[i].x_is,difficuly[i].y_is,1,1,0,c_white,1 - !is_active * 0.7);
 				}
 			break;
 			case 1:
@@ -212,8 +213,13 @@ switch(level)
 			case 0:
 			case 1:
 			case 2:
+				draw_set_font(font_main);
+				var txt = get_text("menu_chose_player");
+				draw_text(480 - string_width(txt) / 2,34,txt);
+				
 				for(var i = 0; i < 3; i += 1)
 				{
+					var col = c_white;
 					switch(i)
 					{
 						case P_REIMU:
@@ -226,21 +232,34 @@ switch(level)
 							var art = spr_sanae_art;
 						break;
 					}
+					/*
+					shader_set(shad_white)
+					var alp = player[i].alpha == 1;
+					draw_sprite_ext(art,0,player[i].x_is - 1,260,1,1,0,col,alp);
+					draw_sprite_ext(art,0,player[i].x_is + 1,260,1,1,0,col,alp);
+					draw_sprite_ext(art,0,player[i].x_is,259,1,1,0,col,alp);
+					draw_sprite_ext(art,0,player[i].x_is,261,1,1,0,col,alp);
+					shader_reset();
+					*/
+					
 					if(cursor[0] == 1)//extra
 					{
 						if(!extra_unlock[i])
 						{
 							shader_set(shad_greyscale);
+							col = $5a5a5a;
 						}
 					}
 					
-					draw_sprite_ext(art,0,player[i].x_is,260,1,1,0,c_white,player[i].alpha);
+					draw_sprite_ext(art,0,player[i].x_is,260,1,1,0,col,player[i].alpha);
 					shader_reset();
+					
+					
 				}
 				
 				var dif = cursor[0] != 1 ? global.difficulty : 4;
 			
-				draw_sprite_ext(spr_difficulty,dif,difficuly[dif].x_is,difficuly[dif].y_is,difficuly[dif].scale,difficuly[dif].scale,0,c_white,difficuly[dif].alpha);
+				draw_sprite_ext(spr_difficulty,dif,difficuly[dif].x_is,difficuly[dif].y_is,1,1,0,c_white,1);
 			break;
 			case 3://spell practice spell select
 				

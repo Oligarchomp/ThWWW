@@ -116,11 +116,25 @@ if(cursor_lockout == 0)
 		
 		if(need_move)
 		{
+			var player_then = global.player_chosen;
+			
 			global.player_chosen += global.right_pressed - global.left_pressed;
 			global.player_chosen %= 3;
 			global.player_chosen += global.player_chosen < 0 ? 3 : 0;
 				
 			play_sound(sfx_menu_move,1,false);
+			
+			var dist = 50;
+			
+			player[player_then].alpha = 1;
+			player[player_then].alpha_to = 0;
+			player[player_then].x_is = player_center;
+			player[player_then].x_to = player_center - (global.right_pressed - global.left_pressed) *dist;
+			
+			player[global.player_chosen].alpha = 0;
+			player[global.player_chosen].alpha_to = 1;
+			player[global.player_chosen].x_is = player_center + (global.right_pressed - global.left_pressed) * dist;
+			player[global.player_chosen].x_to = player_center ;
 		}
 		
 	}
@@ -562,22 +576,8 @@ for(var i = 0; i < 5; i += 1)
 {
 	if(level < 2)
 	{
-		if(i < 4)
-		{
-			difficuly[i].x_to = 650 - abs(global.difficulty - i) * 30;
-			difficuly[i].y_to = 250 - (global.difficulty - i) * 280;
-	
-			difficuly[i].alpha_to = 1 - abs(global.difficulty - i) * 0.2;
-			difficuly[i].scale_to = 1 - abs(global.difficulty - i) * 0.2;
-		}
-		else
-		{
-			difficuly[i].x_to = 650;
-			difficuly[i].y_to = 260;
-	
-			difficuly[i].alpha_to = 1;
-			difficuly[i].scale_to = 1;
-		}
+		difficuly[i].x_to = difficuly[i].x_pos;
+		difficuly[i].y_to = difficuly[i].y_pos;
 	}
 	else
 	{
@@ -590,24 +590,13 @@ for(var i = 0; i < 5; i += 1)
 	
 	difficuly[i].y_is += recursiv(difficuly[i].y_is,difficuly[i].y_to,5,0.1);
 	difficuly[i].x_is += recursiv(difficuly[i].x_is,difficuly[i].x_to,5,0.1);
-	difficuly[i].scale += recursiv(difficuly[i].scale,difficuly[i].scale_to,5,0.1);
-	difficuly[i].alpha += recursiv(difficuly[i].alpha,difficuly[i].alpha_to,5,0.1);
 }
 
 for(var i = 0; i < 3; i += 1)
 {
-	if(global.player_chosen == i)
-	{
-		player[i].alpha_to = 1;
-		player[i].x_to = 700;
-	}
-	else
-	{
-		player[i].alpha_to = 0;
-	}
 	
 	player[i].x_is = goto_value(player[i].x_is,player[i].x_to,8);
-	player[i].alpha = goto_value(player[i].alpha,player[i].alpha_to,0.05);
+	player[i].alpha = goto_value(player[i].alpha,player[i].alpha_to,0.2);
 }
 
 

@@ -16,5 +16,7 @@ with(obj_boss)
 
 
 
+angle_shoot = 0;
+
 // to sync with the music
 instance_create_depth(0,0,0,act_s3_8);

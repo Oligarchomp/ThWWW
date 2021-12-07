@@ -81,6 +81,7 @@ menu_pause = Pause
 menu_default = Default
 menu_back = Back
 menu_rng_lock = Locked option. (Complete the Extra Stage)
+menu_chose_player = Select your character!
 
 controle_backspace = Backspace
 controle_space = Space

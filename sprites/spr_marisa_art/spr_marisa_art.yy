@@ -75,7 +75,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 223,
-    "yorigin": 185,
+    "yorigin": 181,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_marisa_art","path":"sprites/spr_marisa_art/spr_marisa_art.yy",},

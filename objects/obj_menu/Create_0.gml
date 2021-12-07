@@ -1378,38 +1378,37 @@ difficuly = [{},{},{},{},{}]
 
 for(var i = 0; i < 5; i += 1)
 {
-	variable_struct_set(difficuly[i],"x_is",0);
-	variable_struct_set(difficuly[i],"x_to",0);
-	variable_struct_set(difficuly[i],"y_is",0);
-	variable_struct_set(difficuly[i],"y_to",0);
-	variable_struct_set(difficuly[i],"scale",0);
-	variable_struct_set(difficuly[i],"scale_to",0);
-	variable_struct_set(difficuly[i],"alpha",0);
-	variable_struct_set(difficuly[i],"alpha_to",0);
+	if(i < 4)
+	{
+		var xpos = 450 + i * 30;
+		var ypos = 100 + i * 110;
+	}
+	else
+	{
+		var xpos = 480;
+		var ypos = 270;
+	}
+	
+	variable_struct_set(difficuly[i],"x_pos",xpos);
+	variable_struct_set(difficuly[i],"y_pos",ypos);
+	variable_struct_set(difficuly[i],"x_is",xpos);
+	variable_struct_set(difficuly[i],"x_to",ypos);
+	variable_struct_set(difficuly[i],"y_is",xpos);
+	variable_struct_set(difficuly[i],"y_to",ypos);
 }
 
 
-player =
-[
-	{
-		alpha : 1,
-		alpha_to : 1,
-		x_is : 700,
-		x_to : 700
-	},
-	{
-		alpha : 1,
-		alpha_to : 1,
-		x_is : 700,
-		x_to : 700
-	},
-	{
-		alpha : 1,
-		alpha_to : 1,
-		x_is : 700,
-		x_to : 700
-	}
-]
+player_center = 620;
+player = []
+
+for(var i = P_REIMU; i <= P_SANAE; i += 1)
+{
+	player[i] = {};
+	variable_struct_set(player[i],"alpha",i == global.player_chosen);
+	variable_struct_set(player[i],"alpha_to",i == global.player_chosen);
+	variable_struct_set(player[i],"x_is",player_center);
+	variable_struct_set(player[i],"x_to",player_center);
+}
 
 
 

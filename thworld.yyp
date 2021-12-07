@@ -559,6 +559,7 @@
     {"id":{"name":"mus_boss2","path":"sounds/mus_boss2/mus_boss2.yy",},"order":3,},
     {"id":{"name":"font_spellpractice","path":"fonts/font_spellpractice/font_spellpractice.yy",},"order":8,},
     {"id":{"name":"dialogue_s3_pre","path":"objects/dialogue_s3_pre/dialogue_s3_pre.yy",},"order":1,},
+    {"id":{"name":"shad_outline","path":"shaders/shad_outline/shad_outline.yy",},"order":3,},
     {"id":{"name":"sfx_boss_charge","path":"sounds/sfx_boss_charge/sfx_boss_charge.yy",},"order":0,},
     {"id":{"name":"boss_s7_6_non","path":"objects/boss_s7_6_non/boss_s7_6_non.yy",},"order":19,},
     {"id":{"name":"act_s3_42","path":"objects/act_s3_42/act_s3_42.yy",},"order":18,},

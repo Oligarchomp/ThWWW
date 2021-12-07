@@ -17,6 +17,27 @@ if(global.gp_active) and (spell_wait == 0)
 			
 		break;
 	}
+
+	
+	switch(state)
+	{
+		case 0:
+			switch(state_time)
+			{
+				case 0:
+					boss_charge(obj_boss.x,obj_boss.y);
+				break;
+				case 30:
+					boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);
+					state = 1;
+				break;
+			}
+		break;
+		case 1:
+			
+		break;
+	}
+	
 	
 	
 	
