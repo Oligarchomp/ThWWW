@@ -82,14 +82,20 @@ menu_default = Default
 menu_back = Back
 menu_rng_lock = Locked option. (Complete the Extra Stage)
 menu_chose_player = Select your character!
+menu_manual_howtoplay = -How to play
+menu_manual_controle = -Controle
+menu_manual_story = -Story
+menu_manual_item = -Item
+menu_manual_scoring = -Scoring
+
 
 controle_backspace = Backspace
 controle_space = Space
 controle_button = Button
 controle_shoulder = Shoulder
 
-menu_lock_comment = Capture this Spell on this difficulty or higher to unlock it's comment.
-menu_lock_comment_extra = Capture this Spell to unlock it's comment.
+menu_lock_comment = Capture this Spell on this difficulty or higher to unlock its comment.
+menu_lock_comment_extra = Capture this Spell to unlock its comment.
 
 
 pause_resume = Resume
@@ -840,7 +846,7 @@ end_bad_r11_2 =  The sky was shattered, people were afraid of Gensoyko breaking 
 end_bad_r11_3 =  And nobody seemed wanting to remember the forgotten one anymore.
 end_bad_r12_1 =  Reimu took full responsability over the Hakurei Barrier. 
 end_bad_r12_2 =  But she knew that the sky could never go back to it previous unbroken state. 
-end_bad_r13_1 = ----------Bad Ending. Gensokyo has been forgotten by it's creator.------------
+end_bad_r13_1 = ----------Bad Ending. Gensokyo has been forgotten by its creator.------------
 end_bad_r13_2 = --------------Try beating the game without using continues.----------------
 
 end_bad_m1_1 = Forest of Magic, not far from the Human Village.
@@ -933,10 +939,10 @@ spell_comment = Spell Comment:
 
 com_s1_mide = Apple has a lot of existing differents design out there. Now there is one more.$It's more "Minoriko-like" than "literally an apple" since she isn't "a personification of an apple" but a simple apple Youkai here.
 com_s1_midn = Apple will sometimes makes apple pie out of the apple she grew.$They sadly are just as popular as her unprepared apples.$Yeah, and the name is in German because "Apple Pie" is a really boring name for a Spell.
-com_s1_midh = The first two human have been banish from heaven from eating the forbidden fruit.$While that fruit is an apple in most people head, it's true nature is not really clear and is up to interpretation.
+com_s1_midh = The first two human have been banish from heaven from eating the forbidden fruit.$While that fruit is an apple in most people head, its true nature is not really clear and is up to interpretation.
 com_s1_midl = In that case, the Adam's apple's name can be changed to whatever fruit you want it to be.$The Adam's pear? The Adam's fig? The Adam's Pitaya? You name it!
 com_s1_1e = One day, while roaming around, an apple fell right on Apple head. She realized that day how much Danmaku potential apples really have.
-com_s1_1n = Newton's third law is the law of Action and Reaction. It's can easily be explained like so:$Action: the Boss shoots Danmaku.$Reaction: You try to not die (and fail).
+com_s1_1n = Newton's third law is the law of Action and Reaction. It can easily be explained like so:$Action: the Boss shoots Danmaku.$Reaction: You try to not die (and fail).
 com_s1_1h = The Mt. Fuji and the apples from the Fuji variety share their names.$Honestly, anyone would immediately rejoice after hearing such a cool fact.
 com_s1_1l = Apple isn't a Wizard from Mt. Fuji (Although this is also a very important part of japanese folklore.).$Also there is no power system in this game.$And also Reimu doesn't mention diabetes.
 com_s1_2e = Not a lot of people will eat Apple's apple, so she always ends up with baskets full of rotten ones.$At least, she can still throw them at your face. 
@@ -946,7 +952,7 @@ com_s1_2l = Ever on and on, I continue circling with nothing but my hate in a ca
 com_s2_mide = The weapons and armors of the fallen soldiers slowly sink into to bottom of the sea.$What a peaceful sight...if it wasn't for the corpse of said soldiers.
 com_s2_midn = Thanks to all of this equipment, the Heikeganis form a strong society of Samourai-crab living undersea.$The Genji clan is gone since a long time by now, but the Heikeganis will keep bearing grudges over things in order to subsiss.
 com_s2_midh = I wonder now...If the Heike were the one being victorious over the Genji, would the Heikeganis have been named Genjigani instead?
-com_s2_midl = "How come she has Spells with "Enimty" or "Grudge" in it's name while she doesn't bear any grudge herself?" I hear you say. That's because she stubbornly tries to conform to her species mindset.$It doesn't work quite well, as you can see by her presence in Gensokyo.
+com_s2_midl = "How come she has Spells with "Enimty" or "Grudge" in its name while she doesn't bear any grudge herself?" I hear you say. That's because she stubbornly tries to conform to her species mindset.$It doesn't work quite well, as you can see by her presence in Gensokyo.
 com_s2_1e = This Spell is significantly easier than another one with the word "Walk" in it title.$Also, Imagine the knifes in this spell as crabs.
 com_s2_1n = Could you, like, stop being a nuisance and step out of the crabs' way?$What do you mean they are actively aiming for you?$You are being paranoid.
 com_s2_1h = Now, there is also verticales lanes!$When the knifes come from above, it forces YOU to move horizontaly.$How does it feels like to be a crab now?
@@ -954,7 +960,7 @@ com_s2_1l = So many crabs...What a sight! Now, where are they all heading to?$I 
 com_s2_2e = This game is a bullet-hell shooting game which is based on Japan's history.$Being based on history, the stages of the game are also based on famous battles which actually took place in ancient Japan.
 com_s2_2n = For exemple, this Stage 2, the player will have to fight against an army of ennemy fairies.$Not only that, but they will find new and interesting ways to defeat ennemies or bosses.
 com_s2_2h = So here's this giant enemy crab! What I'll do is use Reimu here to flip over this crab on his back.$See if he shows up...Oh here it comes...
-com_s2_2l = I'll switch over to Marisa, hop on it's stomach...$And you attack it weak point...for massive damage!
+com_s2_2l = I'll switch over to Marisa, hop on its stomach...$And you attack it weak point...for massive damage!
 com_s2_3e = The crabs are done with the monkey's mischiefs!$Where is the monkey, you ask?$It's you, obviously. You are the monkey.
 com_s2_3n = Serene tried asking for help to a chestnut, to a cow dung, to a bee and to an usu in order to defeat you.$But then she realized that three quarter of those things aren't even alive.
 com_s2_3h = The monkey doesn't stand a single chance in this war! Crabs literally are the pinnacle of evolution!$Why do you think species naturally tend to evolve into one? Because they are perfect!
@@ -967,8 +973,8 @@ com_s7_3 = Reverence uses a metronome she found for this Spell Card, but it chan
 com_s7_4 = comment
 com_s7_5 = It's called "Flammarion Engraving" but this isn't actually Flammarion's.$Did the author of this engraving knew about Worlds and Reverence, or was it just a lucky close guess?
 com_s7_8 = Did you ever wanted to know how it feels like to be a god? Well today is your chance! $Reverence will gladly forces you into her shoes for you to have a better idea on the subject.
-com_s7_9 = The Universe as a pond, a frog resting in it's middle.$The epitome of a World.$First Creation, then Expension, and finally Destruction.
-com_s7_10 = God is leaving now.$The show is comming to it's end.$Should we call for an encore?
+com_s7_9 = The Universe as a pond, a frog resting in its middle.$The epitome of a World.$First Creation, then Expension, and finally Destruction.
+com_s7_10 = God is leaving now.$The show is comming to its end.$Should we call for an encore?
 
 
 

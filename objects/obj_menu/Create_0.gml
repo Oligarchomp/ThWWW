@@ -1215,7 +1215,30 @@ menu =
 	{
 		title : "MANUAL",
 		description : get_text("menu_manual"),
-		action : MENU_MAKE_SOUND
+		action : MENU_MENU,
+		param :
+		[
+			{
+				title : get_text("menu_manual_howtoplay"),
+				action : MENU_NOTHING
+			},
+			{
+				title : get_text("menu_manual_controle"),
+				action : MENU_NOTHING
+			},
+			{
+				title : get_text("menu_manual_story"),
+				action : MENU_NOTHING
+			},
+			{
+				title : get_text("menu_manual_item"),
+				action : MENU_NOTHING
+			},
+			{
+				title : get_text("menu_manual_scoring"),
+				action : MENU_NOTHING
+			},
+		]
 	},
 	{
 		title : "CREDIT",

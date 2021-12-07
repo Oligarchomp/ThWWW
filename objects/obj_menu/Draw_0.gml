@@ -217,6 +217,15 @@ switch(level)
 					}
 				}
 			break;
+			case 8://manual
+				for(var i = 0; i < array_length(check); i += 1)
+				{
+					var is_active = (cursor[level] == i);
+					draw_text_color(120,90 + i * 40,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.7)
+				}
+				
+				draw_sprite_ext(spr_manual,cursor[level],300,0,1,1,0,c_white,menu_description_alpha)
+			break;
 		}
 	break;
 	case 2:
@@ -365,55 +374,55 @@ switch(level)
 
 if(draw_player)
 {
-	draw_set_font(font_main);
-		var txt = get_text("menu_chose_player");
-		draw_text(480 - string_width(txt) / 2,34,txt);
+	//draw_set_font(font_main);
+	//var txt = get_text("menu_chose_player");
+	//draw_text(480 - string_width(txt) / 2,34,txt);
 				
-		for(var i = 0; i < 3; i += 1)
+	for(var i = 0; i < 3; i += 1)
+	{
+		var col = c_white;
+		switch(i)
 		{
-			var col = c_white;
-			switch(i)
-			{
-				case P_REIMU:
-					var art = spr_reimu_art;
-				break;
-				case P_MARISA:
-					var art = spr_marisa_art;
-				break;
-				case P_SANAE:
-					var art = spr_sanae_art;
-				break;
-			}
-			/*
-			shader_set(shad_white)
-			var alp = player[i].alpha == 1;
-			draw_sprite_ext(art,0,player[i].x_is - 1,260,1,1,0,col,alp);
-			draw_sprite_ext(art,0,player[i].x_is + 1,260,1,1,0,col,alp);
-			draw_sprite_ext(art,0,player[i].x_is,259,1,1,0,col,alp);
-			draw_sprite_ext(art,0,player[i].x_is,261,1,1,0,col,alp);
-			shader_reset();
-			*/
-					
-			if(cursor[0] == 1)//extra
-			{
-				if(!extra_unlock[i])
-				{
-					shader_set(shad_greyscale);
-					col = $5a5a5a;
-				}
-			}
-					
-			draw_sprite_ext(art,0,player[i].x_is,260,1,1,0,col,player[i].alpha);
-			shader_reset();
-					
-			//draw description
-			draw_sprite_ext(spr_player_description,global.player_chosen,30,540,1,1,0,c_white,1);
-					
+			case P_REIMU:
+				var art = spr_reimu_art;
+			break;
+			case P_MARISA:
+				var art = spr_marisa_art;
+			break;
+			case P_SANAE:
+				var art = spr_sanae_art;
+			break;
 		}
-				
-		var dif = cursor[0] != 1 ? global.difficulty : 4;
 			
-		draw_sprite_ext(spr_difficulty,dif,difficuly[dif].x_is,difficuly[dif].y_is,1,1,0,c_white,1);
+		shader_set(shad_white)
+		var alp = player[i].alpha;
+		draw_sprite_ext(art,0,player[i].x_is - 1,230,1,1,0,col,alp);
+		draw_sprite_ext(art,0,player[i].x_is + 1,230,1,1,0,col,alp);
+		draw_sprite_ext(art,0,player[i].x_is,229,1,1,0,col,alp);
+		draw_sprite_ext(art,0,player[i].x_is,231,1,1,0,col,alp);
+		shader_reset();
+			
+					
+		if(cursor[0] == 1)//extra
+		{
+			if(!extra_unlock[i])
+			{
+				shader_set(shad_greyscale);
+				col = $5a5a5a;
+			}
+		}
+					
+		draw_sprite_ext(art,0,player[i].x_is,230,1,1,0,col,player[i].alpha);
+		shader_reset();
+					
+		//draw description
+		draw_sprite_ext(spr_player_description,global.player_chosen,30,510,1,1,0,c_white,1);
+					
+	}
+				
+	var dif = cursor[0] != 1 ? global.difficulty : 4;
+			
+	draw_sprite_ext(spr_difficulty,dif,difficuly[dif].x_is,difficuly[dif].y_is,1,1,0,c_white,1);
 
 }
 

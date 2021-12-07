@@ -75,7 +75,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 200,
-    "yorigin": 162,
+    "yorigin": 165,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_reimu_art","path":"sprites/spr_reimu_art/spr_reimu_art.yy",},

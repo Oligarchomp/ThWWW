@@ -264,6 +264,7 @@
     {"id":{"name":"dialogue_s7_mid","path":"objects/dialogue_s7_mid/dialogue_s7_mid.yy",},"order":6,},
     {"id":{"name":"spr_option_reimu","path":"sprites/spr_option_reimu/spr_option_reimu.yy",},"order":1,},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":0,},
+    {"id":{"name":"spr_manual","path":"sprites/spr_manual/spr_manual.yy",},"order":8,},
     {"id":{"name":"sfx_isoterica","path":"sounds/sfx_isoterica/sfx_isoterica.yy",},"order":4,},
     {"id":{"name":"spr_apple_idle","path":"sprites/spr_apple_idle/spr_apple_idle.yy",},"order":1,},
     {"id":{"name":"act_end","path":"objects/act_end/act_end.yy",},"order":17,},

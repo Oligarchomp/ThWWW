@@ -126,12 +126,12 @@ if(cursor_lockout == 0)
 			
 			var dist = 50;
 			
-			player[player_then].alpha = 1;
+			player[player_then].alpha = 0;
 			player[player_then].alpha_to = 0;
 			player[player_then].x_is = player_center;
 			player[player_then].x_to = player_center - (global.right_pressed - global.left_pressed) *dist;
 			
-			player[global.player_chosen].alpha = 0;
+			player[global.player_chosen].alpha = 1;
 			player[global.player_chosen].alpha_to = 1;
 			player[global.player_chosen].x_is = player_center + (global.right_pressed - global.left_pressed) * dist;
 			player[global.player_chosen].x_to = player_center ;
@@ -584,7 +584,7 @@ for(var i = 0; i < 5; i += 1)
 		if(global.difficulty == i) or (i == 4)
 		{
 			difficuly[i].x_to = 262;
-			difficuly[i].y_to = 164;
+			difficuly[i].y_to = 134;
 		}
 	}
 	
