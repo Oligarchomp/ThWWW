@@ -1421,7 +1421,7 @@ for(var i = 0; i < 5; i += 1)
 }
 
 
-player_center = 650;
+player_center = 310;
 player = []
 
 for(var i = P_REIMU; i <= P_SANAE; i += 1)

@@ -374,9 +374,11 @@ switch(level)
 
 if(draw_player)
 {
-	//draw_set_font(font_main);
-	//var txt = get_text("menu_chose_player");
-	//draw_text(480 - string_width(txt) / 2,34,txt);
+	draw_set_font(font_main);
+	var txt = get_text("menu_chose_player");
+	draw_text(480 - string_width(txt) / 2,34,txt);
+	
+	draw_line_width(480,228,836,228,2);
 				
 	for(var i = 0; i < 3; i += 1)
 	{
@@ -396,10 +398,10 @@ if(draw_player)
 			
 		shader_set(shad_white)
 		var alp = player[i].alpha;
-		draw_sprite_ext(art,0,player[i].x_is - 1,230,1,1,0,col,alp);
-		draw_sprite_ext(art,0,player[i].x_is + 1,230,1,1,0,col,alp);
-		draw_sprite_ext(art,0,player[i].x_is,229,1,1,0,col,alp);
-		draw_sprite_ext(art,0,player[i].x_is,231,1,1,0,col,alp);
+		draw_sprite_ext(art,0,player[i].x_is - 1,260,1,1,0,col,alp);
+		draw_sprite_ext(art,0,player[i].x_is + 1,260,1,1,0,col,alp);
+		draw_sprite_ext(art,0,player[i].x_is,259,1,1,0,col,alp);
+		draw_sprite_ext(art,0,player[i].x_is,261,1,1,0,col,alp);
 		shader_reset();
 			
 					
@@ -412,11 +414,11 @@ if(draw_player)
 			}
 		}
 					
-		draw_sprite_ext(art,0,player[i].x_is,230,1,1,0,col,player[i].alpha);
+		draw_sprite_ext(art,0,player[i].x_is,260,1,1,0,col,player[i].alpha);
 		shader_reset();
 					
 		//draw description
-		draw_sprite_ext(spr_player_description,global.player_chosen,30,510,1,1,0,c_white,1);
+		draw_sprite_ext(spr_player_description,global.player_chosen,700,270,1,1,0,c_white,1);
 					
 	}
 				
@@ -431,8 +433,8 @@ if(draw_player)
 
 if(draw_stage_practice)
 {
-	var xx = 700 - 20;
-	var yy = 130 - 20;
+	var xx = 450 - 20;
+	var yy = 140 - 20;
 	var width = 175;
 	var height = 275;
 	var wid = 3;
@@ -451,7 +453,7 @@ if(draw_stage_practice)
 					
 		check[i].active_offset = goto_value(check[i].active_offset,13 * is_active,6);
 					
-		draw_text_color(700 + check[i].active_offset,130 + i * 40,check[i].title,col,col,col,col,1 - !is_active * 0.6);
+		draw_text_color(450 + check[i].active_offset,140 + i * 40,check[i].title,col,col,col,col,1 - !is_active * 0.6);
 	}	
 }
 
