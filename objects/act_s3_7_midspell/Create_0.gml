@@ -17,11 +17,11 @@ with(obj_boss)
 
 
 angle_pale = 90;
-dist_pale = 12;
+dist_pale = 90;
 dir = 1;
 
 x_ref = room_width / 2;
-y_ref = 200;
+y_ref = 170;
 
 angle_shoot = 0;
 first_wave = true;
