@@ -5,40 +5,16 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			var bubble_wait = 2;
-			var bubble_ring = 5;
-			var bubble_spd = 3;
 			
-			var arrow_wait = 2;
-			var arrow_nbr = 5;
-			var arrow_spd = 1.8;
 		break;
 		case 1:
-			var bubble_wait = 2;
-			var bubble_ring = 7;
-			var bubble_spd = 3.5;
 			
-			var arrow_wait = 2;
-			var arrow_nbr = 7;
-			var arrow_spd = 1.8;
 		break;
 		case 2:
-			var bubble_wait = 2;
-			var bubble_ring = 9;
-			var bubble_spd = 3.8;
 			
-			var arrow_wait = 2;
-			var arrow_nbr = 9;
-			var arrow_spd = 1.8;
 		break;
 		case 3:
-			var bubble_wait = 2;
-			var bubble_ring = 11;
-			var bubble_spd = 4;
 			
-			var arrow_wait = 2;
-			var arrow_nbr = 11;
-			var arrow_spd = 1.8;
 		break;
 	}
 
@@ -80,17 +56,7 @@ if(global.gp_active) and (spell_wait == 0)
 			obj_boss.dir = obj_boss.dir_max;
 			
 			angle_pale = goto_value(angle_pale,450,9);
-			
-			if(state_time % bubble_wait == 0)
-			{
-				shoot_ring(DAN_BUBBLE,4,bubble_ring,obj_boss.x,obj_boss.y,999,bubble_spd,sfx_shot1,7)
-			}
-			
-			if(state_time % arrow_wait == 1)
-			{
-				shoot_ring(DAN_MENTOS,3,arrow_nbr,obj_boss.x,obj_boss.y,999,arrow_spd,sfx_shot2,6)	
-			}
-			
+		
 			if(angle_pale = 450)
 			{
 				angle_pale = 450 + dir * 360;

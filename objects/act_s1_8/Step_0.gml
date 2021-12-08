@@ -27,30 +27,34 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var ring_nbr = 4;
-			var row_nbr = 2;
-			var arrow_spd = 2;
+			var arrow_ring = 8;
+			var arrow_row = 2;
+			var arrow_spd_min = 2;
+			var arrow_spd_max = 2.5;
 			var revenge_arc_nbr = 0;
 			var revenge_row_nbr = 0;
 		break;
 		case 1:
-			var ring_nbr = 6;
-			var row_nbr = 4;
-			var arrow_spd = 2;
+			var arrow_ring = 15;
+			var arrow_row = 2;
+			var arrow_spd_min = 2;
+			var arrow_spd_max = 3;
 			var revenge_arc_nbr = 0;
 			var revenge_row_nbr = 0;
 		break;
 		case 2:
-			var ring_nbr = 4;
-			var row_nbr = 7;
-			var arrow_spd = 2;
+			var arrow_ring = 18;
+			var arrow_row = 2;
+			var arrow_spd_min = 2;
+			var arrow_spd_max = 3.5;
 			var revenge_arc_nbr = 1;
 			var revenge_row_nbr = 3;
 		break;
 		case 3:
-			var ring_nbr = 4;
-			var row_nbr = 9;
-			var arrow_spd = 2;
+			var arrow_ring = 22;
+			var arrow_row = 2;
+			var arrow_spd_min = 2;
+			var arrow_spd_max = 3.5;
 			var revenge_arc_nbr = 3;
 			var revenge_row_nbr = 3;
 		break;
@@ -70,13 +74,10 @@ if(global.gp_active)
 			case 1://shooting to express their anger against the world
 				var ang_shoot = rng(360,false,1);
 				
-				var a_spd = arrow_spd;
-				for(var i = 0; i < row_nbr; i += 1)
+				for(var i = arrow_spd_min; i < arrow_spd_max; i += (arrow_spd_max - arrow_spd_min) / arrow_row )
 				{
-					shoot_ring(DAN_ARROW,3,ring_nbr,x,y,ang_shoot,a_spd ,sfx_shot1,2);
-					
-					a_spd  += 0.3;
-					ang_shoot += (360 / row_nbr / ring_nbr) * dir_go;
+					shoot_ring(DAN_ARROW,3,arrow_ring,x,y,ang_shoot,i,sfx_shot1,2)
+					ang_shoot += 180 / arrow_ring;
 				}
 				
 				state = 2;

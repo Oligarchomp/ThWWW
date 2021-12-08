@@ -115,7 +115,7 @@ if(global.gp_active)
 	{
 		wave = -1;
 		state = 2;
-		boss_movement_goto(room_width / 2, 100,pale_spd);
+		boss_movement_goto(room_width / 2, 81,pale_spd);
 		
 	}
 	
