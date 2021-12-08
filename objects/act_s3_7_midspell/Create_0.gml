@@ -16,7 +16,22 @@ with(obj_boss)
 
 
 
+angle_pale = 90;
+dist_pale = 120;
+dir = 1;
+
+x_ref = room_width / 2;
+y_ref = 200;
+
 angle_shoot = 0;
+first_wave = true;
+
+
+boss_movement_goto(room_width / 2, y_ref + lengthdir_y(dist_pale,90),6);
+
 
 // to sync with the music
-instance_create_depth(0,0,0,act_s3_8);
+if(global.game_type != GAME_SPELL)
+{
+	instance_create_depth(0,0,0,act_s3_8);
+}

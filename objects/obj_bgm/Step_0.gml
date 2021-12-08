@@ -37,7 +37,10 @@ if(global.gp_active)
 		update = false;
 		audio_stop_sound(currently_playing);
 	
-		currently_playing = audio_play_sound_on(global.bgm_emitter,bgm,true,1);
+		if(bgm != noone)
+		{
+			currently_playing = audio_play_sound_on(global.bgm_emitter,bgm,true,1);
+		}
 	}
 }
 else

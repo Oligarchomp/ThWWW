@@ -68,7 +68,7 @@ if(global.gp_active)
 			if(step % bubble_wait == 0)
 			{
 				var ang = rng(360,false,2);
-				shoot_ring(DAN_BUBBLE,7,bubble_nbr,obj_boss.x,obj_boss.y,ang,bubble_spd,sfx_shot1,2);
+				shoot_ring(DAN_BUBBLE,4,bubble_nbr,obj_boss.x,obj_boss.y,ang,bubble_spd,sfx_shot1,2);
 				//shoot_ring(DAN_BUBBLE,7,bubble_nbr,obj_boss.x,obj_boss.y,-angle_shoot,bubble_spd,sfx_shot1,2);
 			
 		

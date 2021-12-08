@@ -1,6 +1,5 @@
-///set_bgm(bgm,intro)
+///set_bgm(bgm)
 ///@param bgm sound
-///@param intro sound
 function set_bgm(argument0){
 
 	obj_bgm.bgm = argument0;
@@ -12,6 +11,9 @@ function set_bgm(argument0){
 	{
 		switch(argument0)
 		{
+			case noone:
+				exit;
+			break;
 			case mus_stage1:
 				var name = get_text("mus_stage1");
 			break;

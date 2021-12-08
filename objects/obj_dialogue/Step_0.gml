@@ -19,14 +19,14 @@ if(global.gp_active)
 			diag_alpha = goto_value(diag_alpha,diag_alpha_max,0.1);
 			text_alpha = goto_value(text_alpha,1,0.1);
 			
-			art_alpha = goto_value(art_alpha,1,0.1);
+			art_alpha = goto_value(art_alpha,1,0.15);
 		break;
 		case 1:// disappearing
 			alpha_min = 0;
 			plr_active_to = 0;
 			boss_active_to = 0;
 			
-			art_alpha = goto_value(art_alpha,0,0.1);
+			art_alpha = goto_value(art_alpha,0,0.15);
 			
 			diag_alpha = goto_value(diag_alpha,0,0.05)
 			text_alpha = diag_alpha;
