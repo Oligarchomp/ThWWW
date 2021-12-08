@@ -2,46 +2,45 @@
 // You can write your code in this editor
 
 
-if(bgm_intro == noone)
+if(global.gp_active)
 {
-	if(old_bgm != bgm)
+	audio_resume_sound(currently_playing);
+
+	switch(bgm)
 	{
-		audio_stop_sound(old_bgm);
-		audio_stop_sound(old_bgm_intro);
+		case mus_boss1:	
+			var intro_length = 7.112;
+			var loop_lenght = 119.998;
+		break;
+		case mus_boss2:	
+			var intro_length = 5.707;
+			var loop_lenght = 67.214;
+		break;
+		case mus_stage3:
+			var intro_length = 13.246;
+			var loop_lenght = 113.256;
+		break;
+		default:
+			var intro_length = 100000;
+			var loop_lenght = 100000;
+		break;
+	}
+
+	var audio_pos = audio_sound_get_track_position(currently_playing)
+	if(audio_pos > intro_length + loop_lenght)
+	{
+		audio_sound_set_track_position(currently_playing,audio_pos - loop_lenght);
+	}
+
+	if(update)
+	{
+		update = false;
+		audio_stop_sound(currently_playing);
 	
-		audio_play_sound_on(global.bgm_emitter,bgm,true,1);
-		
-		old_bgm = bgm;
+		currently_playing = audio_play_sound_on(global.bgm_emitter,bgm,true,1);
 	}
 }
 else
 {
-	
-	if(old_bgm_intro != bgm_intro)
-	{
-		old_bgm_intro = bgm_intro;
-		
-		bgm_intro_wait = 0;
-	}
-	
-	
-	if (bgm_intro_wait == 0)
-	{
-		audio_stop_sound(old_bgm);
-		audio_play_sound_on(global.bgm_emitter,bgm_intro,false,1);
-		bgm_intro_wait = floor(audio_sound_length(bgm_intro) * 60);
-	}
-	else
-	{
-		bgm_intro_wait -= 1
-		
-		if(bgm_intro_wait == 0)//if intro is done playing
-		{
-			bgm_intro = noone;
-				
-			audio_play_sound_on(global.bgm_emitter,bgm,true,1);
-			old_bgm = bgm;
-		}
-	}
+	audio_pause_sound(currently_playing);
 }
-

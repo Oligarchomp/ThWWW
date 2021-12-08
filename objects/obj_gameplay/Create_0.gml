@@ -130,9 +130,8 @@ switch(global.difficulty)
 }
 global.piv = global.game_type == GAME_EXTRA ? 300000 : global.piv;
 
-global.piv_max = 5000000;
 global.stage = 1;
-old_stage = 1;
+
 
 replay = [];
 next_input_time_index = 0;

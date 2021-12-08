@@ -10,7 +10,6 @@ old_state = -1;
 state_time = 0;
 
 music = noone;
-music_intro = noone;
 
 bg_to_create = noone;
 

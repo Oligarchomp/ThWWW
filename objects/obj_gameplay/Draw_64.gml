@@ -2,6 +2,7 @@
 // You can write your code in this editor
 draw_sprite(spr_hud,0,0,0);
 
+draw_set_font(font_spellpractice);
 draw_text(130,room_height,fps)
 
 //draw difficulty
@@ -55,14 +56,12 @@ draw_score(score_draw,865,108,spr_score,1,1);
 
 //draw score info
 var x_info = 595;
-var y_item = 285;
-var y_value = 325;
-var y_graze = 365;
+var y_item = 287;
+var y_graze = 327;
 var x_score = 790;
 
 
 draw_text(x_info,y_item, "ITEM:")
-draw_text(x_info,y_value, "VALUE:")
 draw_text(x_info,y_graze, "GRAZE:")
 
 
@@ -73,7 +72,6 @@ draw_score(global.item_nbr,pos - 15,y_item + 5,spr_score,1,1);
 draw_text(pos,y_item,"/");
 draw_score(item_extend[|0],x_score,y_item + 5,spr_score,1,1);
 
-draw_score(global.piv,x_score,y_value + 5,spr_score,1,1);
 draw_score(global.graze,x_score,y_graze + 5,spr_score,1,1);
 
 

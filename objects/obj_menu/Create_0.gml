@@ -1096,119 +1096,102 @@ menu =
 				comment : get_text("mus_com_title"),
 				action : MENU_MUSIC,
 				music : noone,
-				intro : noone
 			},
 			{
 				title : get_text("mus_room_s1"),
 				comment : get_text("mus_com_s1"),
 				action : MENU_MUSIC,
 				music : mus_stage1,
-				intro : noone
 			},
 			{
 				title : get_text("mus_room_b1"),
 				comment : get_text("mus_com_b1"),
 				action : MENU_MUSIC,
 				music : mus_boss1,
-				intro : mus_boss1_intro
 			},
 			{
 				title : get_text("mus_room_s2"),
 				comment : get_text("mus_com_s2"),
 				action : MENU_MUSIC,
 				music : noone,
-				intro : noone
 			},
 			{
 				title : get_text("mus_room_b2"),
 				comment : get_text("mus_com_b2"),
 				action : MENU_MUSIC,
 				music : mus_boss2,
-				intro : mus_boss2_intro
 			},
 			{
 				title : get_text("mus_room_s3"),
 				comment : get_text("mus_com_s3"),
 				action : MENU_MUSIC,
-				music : mus_stage3_loop,
-				intro : mus_stage3_intro
+				music : mus_stage3,
 			},
 			{
 				title : get_text("mus_room_b3"),
 				comment : get_text("mus_com_b3"),
 				action : MENU_MUSIC,
 				music : noone,
-				intro : noone
 			},
 			{
 				title : get_text("mus_room_s4"),
 				comment : get_text("mus_com_s4"),
 				action : MENU_MUSIC,
 				music : noone,
-				intro : noone
 			},
 			{
 				title : get_text("mus_room_b4"),
 				comment : get_text("mus_com_b4"),
 				action : MENU_MUSIC,
 				music : noone,
-				intro : noone
 			},
 			{
 				title : get_text("mus_room_s5"),
 				comment : get_text("mus_com_s5"),
 				action : MENU_MUSIC,
 				music : noone,
-				intro : noone
 			},
 			{
 				title : get_text("mus_room_b5"),
 				comment : get_text("mus_com_b5"),
 				action : MENU_MUSIC,
 				music : noone,
-				intro : noone
 			},
 			{
 				title : get_text("mus_room_s6"),
 				comment : get_text("mus_com_s6"),
 				action : MENU_MUSIC,
 				music : noone,
-				intro : noone
 			},
 			{
 				title : get_text("mus_room_b6"),
 				comment : get_text("mus_com_b6"),
 				action : MENU_MUSIC,
 				music : noone,
-				intro : noone
 			},
 			{
 				title : get_text("mus_room_s7"),
 				comment : get_text("mus_com_s7"),
 				action : MENU_MUSIC,
 				music : noone,
-				intro : noone
 			},
 			{
 				title : get_text("mus_room_b7"),
 				comment : get_text("mus_com_b7"),
 				action : MENU_MUSIC,
 				music : noone,
-				intro : noone
 			},
 			{
 				title : get_text("mus_room_end"),
 				comment : get_text("mus_com_end"),
 				action : MENU_MUSIC,
 				music : noone,
-				intro : noone
 			},
 			{
 				title : get_text("mus_room_score"),
 				comment : get_text("mus_com_score"),
 				action : MENU_MUSIC,
 				music : noone,
-				intro : noone
 			},
 		]
 	},

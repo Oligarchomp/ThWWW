@@ -18,11 +18,15 @@ if(global.gp_active)
 		case 0://normal 
 			diag_alpha = goto_value(diag_alpha,diag_alpha_max,0.1);
 			text_alpha = goto_value(text_alpha,1,0.1);
+			
+			art_alpha = goto_value(art_alpha,1,0.1);
 		break;
 		case 1:// disappearing
 			alpha_min = 0;
 			plr_active_to = 0;
 			boss_active_to = 0;
+			
+			art_alpha = goto_value(art_alpha,0,0.1);
 			
 			diag_alpha = goto_value(diag_alpha,0,0.05)
 			text_alpha = diag_alpha;
@@ -166,13 +170,13 @@ if(global.gp_active)
 				switch(global.stage)
 				{
 					case 1:
-						set_bgm(mus_boss1,mus_boss1_intro);
+						set_bgm(mus_boss1);
 					break;
 					case 2:
-						set_bgm(mus_boss2,mus_boss2_intro);
+						set_bgm(mus_boss2);
 					break;
 					case 3:
-						set_bgm(noone,noone);
+						set_bgm(noone);
 					break;
 				}
 			}

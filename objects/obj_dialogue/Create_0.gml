@@ -34,10 +34,12 @@ y_plr = y_plr_ref;
 x_boss = x_boss_ref;
 y_boss = y_boss_ref;
 
-alpha_min = 0.5;
+alpha_min = 0.3;
 
 plr_alpha = 1;
 boss_alpha = 1;
+
+art_alpha = 0;
 
 plr_spr = spr_nothing;
 boss_spr = spr_nothing;

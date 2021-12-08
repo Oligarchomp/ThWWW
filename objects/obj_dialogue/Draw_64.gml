@@ -3,7 +3,7 @@
 
 //draw white outline player
 
-var alpha_pow = 8;
+var alpha_pow = 5; 
 
 var xx = x_plr - sprite_get_xoffset(plr_spr);
 var yy = y_plr - sprite_get_yoffset(plr_spr);
@@ -35,8 +35,11 @@ shader_reset();
 
 
 //draw the girls
-draw_sprite_ext(plr_spr,plr_im,x_plr,y_plr,1,1,0,c_white,plr_alpha);
-draw_sprite_ext(boss_spr,boss_im,x_boss,y_boss,1,1,0,c_white,boss_alpha);
+var col = make_color_hsv(0,0,0 + plr_alpha * 255);
+draw_sprite_ext(plr_spr,plr_im,x_plr,y_plr,1,1,0,col,art_alpha);
+
+var col = make_color_hsv(0,0,0 + boss_alpha * 255);
+draw_sprite_ext(boss_spr,boss_im,x_boss,y_boss,1,1,0,col,art_alpha);
 
 
 //draw the dialogue box

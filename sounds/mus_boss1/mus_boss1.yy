@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_boss1.ogg",
-  "duration": 120.00058,
+  "duration": 131.50087,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",

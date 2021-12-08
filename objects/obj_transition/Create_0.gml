@@ -11,4 +11,4 @@ spd = 0.05;
 
 room_to = noone;
 
-set_bgm(noone,noone);
+set_bgm(noone);

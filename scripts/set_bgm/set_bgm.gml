@@ -1,10 +1,10 @@
 ///set_bgm(bgm,intro)
 ///@param bgm sound
 ///@param intro sound
-function set_bgm(argument0,argument1){
+function set_bgm(argument0){
 
 	obj_bgm.bgm = argument0;
-	obj_bgm.bgm_intro = argument1;
+	obj_bgm.update = true;
 	
 	var col = c_white;
 	
@@ -15,7 +15,7 @@ function set_bgm(argument0,argument1){
 			case mus_stage1:
 				var name = get_text("mus_stage1");
 			break;
-			case mus_stage3_loop:
+			case mus_stage3:
 				var name = get_text("mus_stage3");
 				col = $121212;
 				

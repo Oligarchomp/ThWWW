@@ -461,7 +461,7 @@ if(cursor_lockout == 0)
 					cursor_lockout = 100000;
 				break;
 				case MENU_MUSIC:
-					set_bgm(array_check[cursor[level]].music,array_check[cursor[level]].intro)
+					set_bgm(array_check[cursor[level]].music)
 				break;
 				case MENU_PLAY_REPLAY:
 					var rep = "Replay" + string(cursor[1]) + ".txt";
