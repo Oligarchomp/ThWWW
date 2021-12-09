@@ -965,6 +965,23 @@ com_s2_3e = The crabs are done with the monkey's mischiefs!$Where is the monkey,
 com_s2_3n = Serene tried asking for help to a chestnut, to a cow dung, to a bee and to an usu in order to defeat you.$But then she realized that three quarter of those things aren't even alive.
 com_s2_3h = The monkey doesn't stand a single chance in this war! Crabs literally are the pinnacle of evolution!$Why do you think species naturally tend to evolve into one? Because they are perfect!
 com_s2_3l = If a Touhou monkey character were to actually exists, her and Serene would definitely be strong rivals.$Uh? What do you say? Ran? Two Rans? What are you talking about?
+com_s3_mide = 
+com_s3_midn = 
+com_s3_midh = 
+com_s3_midl = 
+com_s3_1e = Which one are you taking about Pale?$There is like 8 Billions japanese tales and legends, so you'll need to be more precise here.
+com_s3_1n = 
+com_s3_1h = 
+com_s3_1l = 
+com_s3_2e = 
+com_s3_2n = 
+com_s3_2h = 
+com_s3_2l = This Spell really stands to its name! I can barely breathe when doing such precise manoeuver!$ Or maybe is it because I'm lacking oxygen this high in the clouds?
+com_s3_3e = Here comes the washing-mach...err I mean the actual fan Spell!$I don't know if you get it by now, but Pale likes spinning.$I hope you do too.
+com_s3_3n = 
+com_s3_3h = (Translator's note: Danmaku means bullet curtain)
+com_s3_3l =  
+
 
 com_s7_mid3 = Who or what is keeping the World spinning around?$Inertia.$It's inertia.
 com_s7_1 = God will accepts anyone in her home.$You may not believe in God in a literal sense, but you can take it as "the Universe".$The Universe is accepting you. Because you already exists.

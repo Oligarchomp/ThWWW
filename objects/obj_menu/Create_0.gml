@@ -390,96 +390,112 @@ menu =
 					{
 						title : get_text("spell_s3_mida"),
 						data_name : "s3_mid",
+						comment : get_text("com_s3_mide"),
 						param : act_s3_7_midspell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s3_mida"),
 						data_name : "s3_mid",
+						comment : get_text("com_s3_midn"),
 						param : act_s3_7_midspell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s3_midb"),
 						data_name : "s3_mid",
+						comment : get_text("com_s3_midh"),
 						param : act_s3_7_midspell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s3_midb"),
 						data_name : "s3_mid",
+						comment : get_text("com_s3_midl"),
 						param : act_s3_7_midspell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s3_1a"),
 						data_name : "s3_1",
+						comment : get_text("com_s3_1e"),
 						param : boss_s3_2_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s3_1a"),
 						data_name : "s3_1",
+						comment : get_text("com_s3_1n"),
 						param : boss_s3_2_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s3_1b"),
 						data_name : "s3_1",
+						comment : get_text("com_s3_1h"),
 						param : boss_s3_2_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s3_1b"),
 						data_name : "s3_1",
+						comment : get_text("com_s3_1l"),
 						param : boss_s3_2_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s3_2a"),
 						data_name : "s3_2",
+						comment : get_text("com_s3_2e"),
 						param : boss_s3_4_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s3_2a"),
 						data_name : "s3_2",
+						comment : get_text("com_s3_2n"),
 						param : boss_s3_4_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s3_2b"),
 						data_name : "s3_2",
+						comment : get_text("com_s3_2h"),
 						param : boss_s3_4_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s3_2b"),
 						data_name : "s3_2",
+						comment : get_text("com_s3_2l"),
 						param : boss_s3_4_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s3_3a"),
 						data_name : "s3_3",
+						comment : get_text("com_s3_3e"),
 						param : boss_s3_6_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s3_3a"),
 						data_name : "s3_3",
+						comment : get_text("com_s3_3n"),
 						param : boss_s3_6_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s3_3b"),
 						data_name : "s3_3",
+						comment : get_text("com_s3_3h"),
 						param : boss_s3_6_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s3_3b"),
 						data_name : "s3_3",
+						comment : get_text("com_s3_3l"),
 						param : boss_s3_6_spell,
 						diff : 3
 					},
