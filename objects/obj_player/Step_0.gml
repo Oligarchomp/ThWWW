@@ -51,6 +51,33 @@ if (global.gp_active)
 	///
 	*/
 	
+	if(state == 0)//before so you can die oon the same frame
+	{
+		if (bomb_time == 0) and (!in_dialogue)
+			{
+				//Checking for hitboxes
+				var plr = self;
+				with(obj_player_hurtbox)
+				{
+					var meet = instance_place(x,y,parent_hitbox)//danmaku is child of hitbox
+					if(meet != noone)
+					{
+						play_sound(sfx_death,1,false);
+						
+						if(plr.invincibility == 0)
+						{
+							plr.state = 1;
+						}
+						
+						if(meet.is_danmaku) and (meet.is_cancelable)
+						{
+							cancel_bullet(meet);
+						}
+					}
+				}
+			}
+	}
+	
 	switch(state)
 	{
 		case 0: // active
@@ -150,27 +177,7 @@ if (global.gp_active)
 				alpha = 1;
 			}
 			
-			if (bomb_time == 0) and (!in_dialogue)
-			{
-				//Checking for hitboxes
-				var plr = self;
-				with(obj_player_hurtbox)
-				{
-					var meet = instance_place(x,y,parent_hitbox)//danmaku is child of hitbox
-					if(meet != noone)
-					{
-						if(plr.invincibility == 0)
-						{
-							plr.state = 1;
-						}
-						
-						if(meet.is_danmaku) and (meet.is_cancelable)
-						{
-							cancel_bullet(meet);
-						}
-					}
-				}
-			}
+			
 			
 			
 			
@@ -202,7 +209,6 @@ if (global.gp_active)
 			switch(state_time)
 			{
 				case 0:
-					play_sound(sfx_death,1,false);
 					create_confetti(x,y,20,7);
 					create_confetti(x,y,20,5);
 					create_confetti(x,y,20,3);

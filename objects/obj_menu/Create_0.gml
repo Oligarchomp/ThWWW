@@ -510,168 +510,196 @@ menu =
 					{
 						title : get_text("spell_s4_mida"),
 						data_name : "s4_mid",
+						comment : get_text("com_s4_mide"),
 						param : act_s4_5_midspell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s4_mida"),
 						data_name : "s4_mid",
+						comment : get_text("com_s4_midn"),
 						param : act_s4_5_midspell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s4_midb"),
 						data_name : "s4_mid",
+						comment : get_text("com_s4_midh"),
 						param : act_s4_5_midspell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s4_midb"),
 						data_name : "s4_mid",
+						comment : get_text("com_s4_midl"),
 						param : act_s4_5_midspell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s4_1a"),
 						data_name : "s4_1",
+						comment : get_text("com_s4_1e"),
 						param : boss_s4_2_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s4_1a"),
 						data_name : "s4_1",
+						comment : get_text("com_s4_1n"),
 						param : boss_s4_2_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s4_1b"),
 						data_name : "s4_1",
+						comment : get_text("com_s4_1h"),
 						param : boss_s4_2_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s4_1b"),
 						data_name : "s4_1",
+						comment : get_text("com_s4_1l"),
 						param : boss_s4_2_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s4_2a"),
 						data_name : "s4_2",
+						comment : get_text("com_s4_2e"),
 						param : boss_s4_4_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s4_2a"),
 						data_name : "s4_2",
+						comment : get_text("com_s4_2n"),
 						param : boss_s4_4_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s4_2b"),
 						data_name : "s4_2",
+						comment : get_text("com_s4_2h"),
 						param : boss_s4_4_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s4_2c"),
 						data_name : "s4_2",
+						comment : get_text("com_s4_2l"),
 						param : boss_s4_4_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s4_3a"),
 						data_name : "s4_3",
+						comment : get_text("com_s4_3e"),
 						param : boss_s4_6_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s4_3a"),
 						data_name : "s4_3",
+						comment : get_text("com_s4_3n"),
 						param : boss_s4_6_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s4_3b"),
 						data_name : "s4_3",
+						comment : get_text("com_s4_3h"),
 						param : boss_s4_6_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s4_3b"),
 						data_name : "s4_3",
+						comment : get_text("com_s4_3l"),
 						param : boss_s4_6_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s4_4r"),
 						data_name : "s4_4r",
+						comment : get_text("com_s4_4re"),
 						param : boss_s4_7r_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s4_4r"),
 						data_name : "s4_4r",
+						comment : get_text("com_s4_4rn"),
 						param : boss_s4_7r_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s4_4r"),
 						data_name : "s4_4r",
+						comment : get_text("com_s4_4rh"),
 						param : boss_s4_7r_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s4_4r"),
 						data_name : "s4_4r",
+						comment : get_text("com_s4_4rl"),
 						param : boss_s4_7r_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s4_4m"),
 						data_name : "s4_4m",
+						comment : get_text("com_s4_4me"),
 						param : boss_s4_7m_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s4_4m"),
 						data_name : "s4_4m",
+						comment : get_text("com_s4_4mn"),
 						param : boss_s4_7m_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s4_4m"),
 						data_name : "s4_4m",
+						comment : get_text("com_s4_4mh"),
 						param : boss_s4_7m_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s4_4m"),
 						data_name : "s4_4m",
+						comment : get_text("com_s4_4ml"),
 						param : boss_s4_7m_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s4_4s"),
 						data_name : "s4_4s",
+						comment : get_text("com_s4_4se"),
 						param : boss_s4_7s_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s4_4s"),
 						data_name : "s4_4s",
+						comment : get_text("com_s4_4sn"),
 						param : boss_s4_7s_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s4_4s"),
 						data_name : "s4_4s",
+						comment : get_text("com_s4_4sh"),
 						param : boss_s4_7s_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s4_4s"),
 						data_name : "s4_4s",
+						comment : get_text("com_s4_4sl"),
 						param : boss_s4_7s_spell,
 						diff : 3
 					},

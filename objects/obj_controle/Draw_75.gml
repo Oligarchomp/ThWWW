@@ -5,3 +5,4 @@ if(global.rng_patch)
 	draw_set_font(font_scorename);
 	draw_text(830,5,"RNG PATCH")	
 }
+
