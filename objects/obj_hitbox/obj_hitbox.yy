@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_danmaku_hitbox",
-    "path": "sprites/spr_danmaku_hitbox/spr_danmaku_hitbox.yy",
+    "name": "spr_boss_hitbox",
+    "path": "sprites/spr_boss_hitbox/spr_boss_hitbox.yy",
   },
   "solid": false,
   "visible": true,

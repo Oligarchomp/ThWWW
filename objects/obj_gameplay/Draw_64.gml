@@ -1,5 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
+with(obj_danmaku)
+{
+	if(global.view_hitbox)
+	{
+		draw_sprite_ext(sprite_index,image_index,x + global.game_x_offset,y + global.game_y_offset,image_xscale,image_yscale,image_angle,c_white,1)
+	}	
+}
+
 draw_sprite(spr_hud,0,0,0);
 
 draw_set_font(font_spellpractice);

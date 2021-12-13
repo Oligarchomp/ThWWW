@@ -10,3 +10,5 @@ spell_set_time(42,false,90)
 act_dir = 1;
 
 shoot_angle = -90;
+
+obj_hitbox.sprite_index = spr_boss_hitbox;
