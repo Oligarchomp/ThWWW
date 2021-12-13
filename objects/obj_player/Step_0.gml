@@ -54,28 +54,27 @@ if (global.gp_active)
 	if(state == 0)//before so you can die oon the same frame
 	{
 		if (bomb_time == 0) and (!in_dialogue)
+		{
+			//Checking for hitboxes
+			var plr = self;
+			with(obj_player_hurtbox)
 			{
-				//Checking for hitboxes
-				var plr = self;
-				with(obj_player_hurtbox)
-				{
-					var meet = instance_place(x,y,parent_hitbox)//danmaku is child of hitbox
-					if(meet != noone)
+				var meet = instance_place(x,y,parent_hitbox)//danmaku is child of hitbox
+				if(meet != noone)
+				{	
+					if(plr.invincibility == 0)
 					{
 						play_sound(sfx_death,1,false);
+						plr.state = 1;
+					}
 						
-						if(plr.invincibility == 0)
-						{
-							plr.state = 1;
-						}
-						
-						if(meet.is_danmaku) and (meet.is_cancelable)
-						{
-							cancel_bullet(meet);
-						}
+					if(meet.is_danmaku) and (meet.is_cancelable)
+					{
+						cancel_bullet(meet);
 					}
 				}
 			}
+		}
 	}
 	
 	switch(state)
@@ -218,7 +217,7 @@ if (global.gp_active)
 					state = 2;
 				break;
 			}
-			invincibility = deathbomb_time - state_time;
+			invincibility = (deathbomb_time - state_time) * 15;
 			
 			with(obj_item_auto)
 			{

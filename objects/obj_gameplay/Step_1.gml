@@ -191,7 +191,7 @@ switch(pause_state)
 		if(pause_alpha == 0)
 		{
 			pause_state = 0;
-			
+			pause_type = PAUSE_MANUAL;
 			
 			if(global.play_type == PLAY_REPLAY)
 			{

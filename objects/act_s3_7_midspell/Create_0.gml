@@ -7,12 +7,14 @@ event_inherited();
 spell_set_spell("s3_mid",BOSS_PALE,20000000)
 spell_set_name("spell_s3_mida","spell_s3_mida","spell_s3_midb","spell_s3_midb")
 spell_set_life(700,170);
-spell_set_time(18.5,false,95);
+spell_set_time(18.5,false,90);
 
 with(obj_boss)
 {
 	instance_create_depth(x,y,depth + 1, obj_boss_indicator);
 }
+
+
 
 
 

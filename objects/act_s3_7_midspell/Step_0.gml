@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(global.gp_active) and (spell_wait == 0)
+if(global.gp_active)
 {
 	switch(global.difficulty)
 	{
@@ -14,14 +14,13 @@ if(global.gp_active) and (spell_wait == 0)
 			
 		break;
 		case 3:
-		
+			
 		break;
 	}
 
 	
-	
-	
-	
+
+
 }
 // Inherit the parent event
 event_inherited();

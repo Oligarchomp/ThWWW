@@ -19,3 +19,6 @@ rice_dist_list = ds_list_create();
 rice_dir_list = ds_list_create();
 
 rice_wave_dir = -1;
+
+laser_dir = 1;
+laser_pos = 999;

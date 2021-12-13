@@ -161,7 +161,7 @@ if(global.gp_active)
 				if(state_time == 60)
 				{
 					state = 3;
-					angle = 90;
+					angle = find_angle(x,y,obj_player.x,obj_player.y);
 				}
 			break;
 			case 3:

@@ -112,7 +112,5 @@ with(obj_boss)
 	var col = $262687
 	draw_text_color(x_pos,boss_indicator_y ,text,col,col,col,col,boss_indicator_alpha);
 }
-//draw Poc// for testing
-draw_sprite(spr_arrow,0,global.game_x_offset - 3,global.game_y_offset + global.poc);
 
 

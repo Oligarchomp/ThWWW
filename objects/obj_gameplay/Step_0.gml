@@ -130,7 +130,7 @@ if(pause_state == 1)
 	
 		if(global.bomb_pressed)
 		{
-			if(pause_type == PAUSE_MANUAL)
+			if(pause_type == PAUSE_MANUAL) or (level > 0)
 			{
 				level -= 1;
 			}
