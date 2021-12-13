@@ -970,12 +970,14 @@ menu =
 					{
 						title : get_text("spell_s7_mid1"),
 						data_name : "s7_mid1",
+						comment : get_text("com_s7_mid1"),
 						param : act_s7_51_midspell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s7_mid2"),
 						data_name : "s7_mid2",
+						comment : get_text("com_s7_mid2"),
 						param : act_s7_52_midspell,
 						diff : 1
 					},
@@ -1024,12 +1026,14 @@ menu =
 					{
 						title : get_text("spell_s7_6"),
 						data_name : "s7_6",
+						comment : get_text("com_s7_6"),
 						param : boss_s7_65_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s7_7"),
 						data_name : "s7_7",
+						comment : get_text("com_s7_7"),
 						param : boss_s7_75_spell,
 						diff : 1
 					},

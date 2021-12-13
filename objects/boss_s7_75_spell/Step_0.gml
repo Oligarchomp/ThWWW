@@ -4,9 +4,9 @@ if(global.gp_active) and (spell_wait == 0)
 {
 	var fam_wait = 11 - need_ball * 2 - need_bubble * 2;
 	var move_dist = 10 + need_ball * 2 + need_bubble * 2;
-	var mentos_spd = 0.8;
-	var ball_spd = 0.95;
-	var bubble_spd = 0.65;
+	var mentos_spd = 0.95;
+	var ball_spd = 0.8;
+	var bubble_spd = 0.5;
 	
 	var dist = 10;
 	var width_max = room_width + dist;
@@ -82,18 +82,18 @@ if(global.gp_active) and (spell_wait == 0)
 	
 	switch(time_left)
 	{
-		case 730:
+		case 910:
 			boss_charge(room_width / 2,0)
 		break;
-		case 690:
+		case 880:
 			boss_release(room_width / 2,0,sfx_boss_release);
 			need_ball = true;
 			shoot_step = 0;
 		break;
-		case 250:
+		case 280:
 			boss_charge(room_width / 2,0)
 		break;
-		case 220:
+		case 250:
 			boss_release(room_width / 2,0,sfx_boss_release);
 			need_bubble = true;
 			shoot_step = 0;
