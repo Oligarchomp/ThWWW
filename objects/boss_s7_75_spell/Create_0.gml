@@ -21,3 +21,6 @@ need_ball = false;
 need_bubble = false;
 
 shoot_step = 0;
+
+resting = false;
+rest_image = 0;

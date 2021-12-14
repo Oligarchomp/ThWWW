@@ -11,3 +11,4 @@ spell_set_time(42,false,90)
 
 shoot_angle = rng(360,false,7);
 
+act_dir = 1;

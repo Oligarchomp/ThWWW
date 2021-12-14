@@ -106,6 +106,7 @@ if(cursor_lockout == 0)
 					var need_move = true;
 				}
 			break;
+			case 3:
 			case 4:
 				if(level == 1)
 				{

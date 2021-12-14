@@ -11,9 +11,9 @@ if(global.gp_active)
 			boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);
 		break;
 		case 0:
-			 var bubble_ring = 18;
+			 var bubble_ring = 17;
 			 var bubble_wait = 9;
-			 var bubble_angle_plus = 4.2;
+			 var bubble_angle_plus = 4.7;
 			 var bubble_spd = 7;//9
 			 
 			 var wait_min = 13;//10

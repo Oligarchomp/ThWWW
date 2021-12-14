@@ -1,8 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
-instance_create_depth(0,0,0,obj_score_fadein);
+if(room == room_score)
+{
+	instance_create_depth(0,0,0,obj_score_fadein);
+}
 
 state = 0;
 old_state = -1;
@@ -47,8 +49,15 @@ if(score_pos < 10)
 }
 else
 {
-	state = 1;
-}
+	if(room == room_score)
+	{
+		state = 1;
+	}
+	else
+	{
+		instance_destroy();
+	}
+}	
 
 if (global.continues != global.continues_max) or (global.rng_patch)
 {
@@ -70,4 +79,6 @@ menu =
 		action : MENU_TITLE
 	}
 ]
+
+alpha_score = 0;
 

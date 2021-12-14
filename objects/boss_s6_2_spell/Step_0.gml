@@ -112,8 +112,18 @@ if(global.gp_active) and (spell_wait == 0)
 			var y_spawn = -1100;
 			play_sound(sfx_boat,1,false);
 			x_anchor = obj_player.x;
+			
 			x_anchor = min(x_anchor,365);
 			x_anchor = max(x_anchor,35);
+			if(x_anchor > room_width / 2)
+			{
+				x_anchor = max(x_anchor,270);
+			}
+			else
+			{
+				x_anchor = min(x_anchor,130);
+			}
+				
 			var inst = shoot(DAN_ANCHOR,1,x_anchor,y_spawn,-90,anchor_spd,sfx_boat,5);
 			inst.image_xscale = anchor_size;
 			inst.image_yscale = anchor_size;

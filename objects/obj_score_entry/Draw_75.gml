@@ -3,7 +3,7 @@
 
 if(room == room_gp)
 {
-	draw_sprite_pos(spr_black,0,0,0,960,0,960,540,0,540,0.85);
+	draw_sprite_pos(spr_black,0,0,0,960,0,960,540,0,540,alpha_score);
 }
 
 switch(state)

@@ -7,6 +7,9 @@ with(obj_shield_reverence)
 {
 	state = 1;	
 }
+
+
+
 // Inherit the parent event
 event_inherited();
 

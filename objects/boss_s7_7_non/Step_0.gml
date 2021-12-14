@@ -20,10 +20,10 @@ if(global.gp_active)
 			
 			var laser_nbr = 1;
 			
-			var note_row = 4;
-			var note_spd_min = 1;
-			var note_spd_max = 3;
-			var note_open = 4;
+			var note_ring = 40;
+			var note_spd_shoot = 7;
+			var note_spd_final = 1.5;
+			var note_deccel = 0.1;
 
 			
 			var boss_wait = 150;
@@ -39,8 +39,15 @@ if(global.gp_active)
 				shoot_ring(DAN_BUBBLE,6,bubble_ring,obj_boss.x,obj_boss.y,-shoot_angle - 180 / bubble_ring,bubble_spd_shoot,sfx_shot1,6);
 				
 				shoot_angle += bubble_angle_plus;
+				
+				shoot_ring(DAN_NOTE,3.5 + act_dir * 2.5,note_ring,obj_boss.x,obj_boss.y,rng(360,false,1),note_spd_shoot,sfx_redirect1,1)
+				act_dir *= -1;
 			}
 			
+			with(obj_danmaku1)
+			{
+				spd = goto_value(spd,note_spd_final,note_deccel);	
+			}
 			
 			//blue
 			with(obj_danmaku5)
@@ -64,11 +71,7 @@ if(global.gp_active)
 								}
 							break;
 							case 40:
-								for(var i = note_spd_min; i < note_spd_max; i += (note_spd_max - note_spd_min) / note_row)
-								{
-									var rand = -note_open + rng(note_open * 2, false,9);
-									shoot(DAN_NOTE,color_id,x,y,angle - bubble_aim_dist + rand,i,sfx_redirect1,3);
-								}
+								//shoot_ring(DAN_NOTE,color_id,note_ring,x,y,rng(360,false,1),note_spd,sfx_redirect1,1)
 								state = 2;
 							break;
 						}
@@ -107,11 +110,7 @@ if(global.gp_active)
 								}
 							break;
 							case 40:
-								for(var i = note_spd_min; i < note_spd_max; i += (note_spd_max - note_spd_min) / note_row)
-								{
-									var rand = -note_open + rng(note_open * 2, false,9);
-									shoot(DAN_NOTE,color_id,x,y,angle + bubble_aim_dist + rand,i,sfx_redirect1,3);
-								}
+								//shoot_ring(DAN_NOTE,color_id,note_ring,x,y,rng(360,false,1),note_spd,sfx_redirect1,1)
 								state = 2;
 							break;
 						}

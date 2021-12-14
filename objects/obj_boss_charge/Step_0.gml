@@ -10,4 +10,11 @@ if(global.gp_active)
 	{
 		instance_destroy(self);
 	}
+	
+	
+	if(instance_exists(owner))
+	{
+		x = owner.x;
+		y = owner.y;
+	}
 }

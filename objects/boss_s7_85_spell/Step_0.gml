@@ -28,7 +28,8 @@ if(global.gp_active) and (spell_wait == 0)
 			{
 				case 0:
 					boss_charge(obj_boss.x,obj_boss.y);
-					boss_charge(obj_player.x,obj_player.y);
+					var inst = boss_charge(obj_player.x,obj_player.y);
+					inst.owner = obj_player;
 				break;
 				case 40:
 					with(obj_danmaku)

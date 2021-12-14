@@ -11,6 +11,8 @@ else
 	state_time += 1;
 }
 
+alpha_score = goto_value(alpha_score,0.85,0.1);
+
 switch(state)
 {
 	case 0:

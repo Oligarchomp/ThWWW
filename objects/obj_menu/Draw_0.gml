@@ -58,7 +58,34 @@ switch(level)
 				draw_sprite(spr_difficulty,4,difficuly[4].x_is,difficuly[4].y_is);
 			break;
 			case 3://spell practice stage
-				var xx = 600 - 20;
+			
+				switch(global.player_chosen)
+				{
+					case P_REIMU:
+						var art = spr_reimu_art;
+					break;
+					case P_MARISA:
+						var art = spr_marisa_art;
+					break;
+					case P_SANAE:
+						var art = spr_sanae_art;
+					break;
+				}
+				
+				var xx = 170 + player[global.player_chosen].x_is / 2;
+				var yy = 250;
+				
+				shader_set(shad_white)
+				draw_sprite_ext(art,0,xx - 1,yy,1,1,0,c_white,1);
+				draw_sprite_ext(art,0,xx + 1,yy,1,1,0,c_white,1);
+				draw_sprite_ext(art,0,xx,yy - 1,1,1,0,c_white,1);
+				draw_sprite_ext(art,0,xx,yy + 1,1,1,0,c_white,1);
+				shader_reset();
+				
+				draw_sprite_ext(art,0,xx,yy,1,1,0,c_white,1);
+			
+			
+				var xx = 520 - 20;
 				var yy = 120 - 20;
 				var width = 236;
 				var height = 310;
@@ -77,7 +104,7 @@ switch(level)
 					
 					check[i].active_offset = goto_value(check[i].active_offset,20 * is_active,6);
 					
-					draw_text_color(600 + check[i].active_offset,120 + i * 40,check[i].title,col,col,col,col,1 - !is_active * 0.6);
+					draw_text_color(520 + check[i].active_offset,120 + i * 40,check[i].title,col,col,col,col,1 - !is_active * 0.6);
 				}
 			break;
 			case 4://Score room
@@ -236,8 +263,9 @@ switch(level)
 			case 2:
 				draw_player = true;
 			break;
-			case 3://spell practice spell select
+			case 3://spell practice player
 				
+				//spell practice spell select
 				draw_set_font(font_spellpractice);
 				
 				var max_spell = 16;

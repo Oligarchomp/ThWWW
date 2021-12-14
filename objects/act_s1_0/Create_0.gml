@@ -9,4 +9,7 @@ global.boss = BOSS_APPLE;
 bg_to_create = bg_s1;
 music = mus_stage1;
 
-instance_create_depth(0,global.poc,0,obj_borderline);
+if(global.game_type != GAME_SPELL)
+{
+	instance_create_depth(0,global.poc,0,obj_borderline);
+}

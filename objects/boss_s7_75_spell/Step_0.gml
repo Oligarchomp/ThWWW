@@ -14,6 +14,8 @@ if(global.gp_active) and (spell_wait == 0)
 	var height_max = room_height + dist;
 	var height_min = - dist;
 	
+	
+	
 	switch(state)
 	{
 		case 0:
@@ -23,7 +25,7 @@ if(global.gp_active) and (spell_wait == 0)
 					boss_charge(x_pos,y_pos)
 				break;
 				case 30:
-					obj_boss.alpha = 0.4;
+					obj_boss.alpha = 0.8;
 					obj_boss.mask_index = spr_nothing;
 					obj_hitbox.sprite_index = spr_nothing;
 					instance_create_depth(obj_boss.x,obj_boss.y,obj_boss.depth - 1, obj_shield_reverence);
@@ -39,6 +41,8 @@ if(global.gp_active) and (spell_wait == 0)
 					
 					play_sound(sfx_familiar_spawn,1,false);
 					state += 1;
+					
+					resting = true;
 				break;
 			}
 		break;
@@ -83,18 +87,24 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(time_left)
 	{
 		case 910:
-			boss_charge(room_width / 2,0)
+			var inst = boss_charge(obj_enemy1.x,obj_enemy1.y);
+			inst.owner = obj_enemy1;
+			
+			var inst = boss_charge(obj_enemy2.x,obj_enemy2.y);
+			inst.owner = obj_enemy2;
 		break;
 		case 880:
-			boss_release(room_width / 2,0,sfx_boss_release);
 			need_ball = true;
 			shoot_step = 0;
 		break;
 		case 280:
-			boss_charge(room_width / 2,0)
+			var inst = boss_charge(obj_enemy1.x,obj_enemy1.y);
+			inst.owner = obj_enemy1;
+			
+			var inst = boss_charge(obj_enemy2.x,obj_enemy2.y);
+			inst.owner = obj_enemy2;
 		break;
 		case 250:
-			boss_release(room_width / 2,0,sfx_boss_release);
 			need_bubble = true;
 			shoot_step = 0;
 		break;
@@ -137,6 +147,18 @@ if(global.gp_active) and (spell_wait == 0)
 	}
 	
 	shoot_step += 1;
+	
+	
+	if(resting)
+	{
+		obj_boss.sprite_index = spr_reverence_rest_start;	
+		rest_image = goto_value(rest_image,obj_boss.image_number - 1,0.1);
+		obj_boss.image_index = rest_image;
+		
+	}
+	
+	
+	
 }
 
 // Inherit the parent event
