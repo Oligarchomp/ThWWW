@@ -58,33 +58,7 @@ switch(level)
 				draw_sprite(spr_difficulty,4,difficuly[4].x_is,difficuly[4].y_is);
 			break;
 			case 3://spell practice stage
-			
-				switch(global.player_chosen)
-				{
-					case P_REIMU:
-						var art = spr_reimu_art;
-					break;
-					case P_MARISA:
-						var art = spr_marisa_art;
-					break;
-					case P_SANAE:
-						var art = spr_sanae_art;
-					break;
-				}
-				
-				var xx = 170 + player[global.player_chosen].x_is / 2;
-				var yy = 250;
-				
-				shader_set(shad_white)
-				draw_sprite_ext(art,0,xx - 1,yy,1,1,0,c_white,1);
-				draw_sprite_ext(art,0,xx + 1,yy,1,1,0,c_white,1);
-				draw_sprite_ext(art,0,xx,yy - 1,1,1,0,c_white,1);
-				draw_sprite_ext(art,0,xx,yy + 1,1,1,0,c_white,1);
-				shader_reset();
-				
-				draw_sprite_ext(art,0,xx,yy,1,1,0,c_white,1);
-			
-			
+		
 				var xx = 520 - 20;
 				var yy = 120 - 20;
 				var width = 236;
@@ -264,7 +238,24 @@ switch(level)
 				draw_player = true;
 			break;
 			case 3://spell practice player
+			
+				switch(global.player_chosen)
+				{
+					case P_REIMU:
+						var txt = "Reimu";
+					break;
+					case P_MARISA:
+						var txt = "Marisa";
+					break;
+					case P_SANAE:
+						var txt = "Sanae";
+					break;
+				}
 				
+				var xx = 310 + player[global.player_chosen].x_is / 2;
+				var yy = 20;
+				
+				draw_text(xx - string_width(txt) / 2,yy,txt);
 				//spell practice spell select
 				draw_set_font(font_spellpractice);
 				

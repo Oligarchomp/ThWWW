@@ -4,7 +4,7 @@ if(global.right_down or global.left_down)
 {
 	hhold += 1;
 	
-	if (hhold > 30) and (hhold % 6 == 0)
+	if (hhold > 20) and (hhold % 6 == 0)
 	{
 		global.right_pressed = global.right_down;
 		global.left_pressed = global.left_down;
@@ -19,7 +19,7 @@ if(global.up_down or global.down_down)
 {
 	vhold += 1;
 	
-	if (vhold > 30) and (vhold % 6 == 0)
+	if (vhold > 20) and (vhold % 6 == 0)
 	{
 		global.up_pressed = global.up_down;
 		global.down_pressed = global.down_down;

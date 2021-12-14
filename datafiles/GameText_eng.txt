@@ -169,7 +169,7 @@ spell_s6_2c = Releasing Dove - [Mass Expedition]
 spell_s6_3a = Farmland - [Grape Farmer Nua]
 spell_s6_3b = Wine Sign - [Curse of Ham]
 spell_s6_3c = Vintner Sign - [Alcoholic Stupor]
-spell_s6_4a = Patriarch - [All-Forgiving Sustainer]
+spell_s6_4a = Patriarch - [Asking The All-Forgiving]
 spell_s6_4b = Patriarch - [Titanic Prophet]
 spell_s6_5a = Name of the game
 spell_s6_5b = [Rise of The Waking World]
@@ -1010,6 +1010,16 @@ com_s4_4sn = I got it now, it's suppose to be Sanae's final spell from Mountain 
 com_s4_4sh = 
 com_s4_4sl = 
 
+
+com_s6_midh = If you time this spell out during a run, it looks like Feza is flying into a wall and that's hilarious.
+com_s6_midl = Let's take two spell known for their extreme RNG and mix them together!$What could possibly go wrong?
+com_s6_1e = Aren't we inside a boat right now? Is Nua berthing...inside her own ship?$How does that make any sense?
+com_s6_2e = This is Nua's myriad of doves. She's using them as living Danmaku!$Do not worry, none were injured during the battle and they all safely went back to the dovecot afterward. 
+com_s6_2n = Nua used to send a lot of doves around in order to find habitable World.$Today, Feza can pretty much handle it by herself.
+com_s6_5e = still no name
+com_s6_5n = still no name
+com_s6_5h = Thanks to Nua, Gensokyo now truly starts to rise!$A little more, and this land shall be cleanse for good!
+com_s6_5l = Waking up means the end of dreams. The end of fantasy. The end of Gensokyo.$What will you do now?$Do you want to wake up? Do you want to keep dreaming?
 com_s7_mid1 = f
 com_s7_mid2 = p
 com_s7_mid3 = Who or what is keeping the World spinning around?$Inertia.$It's inertia.

@@ -132,7 +132,7 @@ if(global.gp_active)
 				{	
 					if(state_time % aim_wait == 0)
 					{
-						shoot_ring(DAN_MENTOS,1,aim_ring,x,y,rng(360,false,4),aim_spd,sfx_shot1,8);
+						shoot_ring(DAN_MENTOS,1,aim_ring,x,y,rng(360,false,4),aim_spd,sfx_shot1,7);
 					}
 				}
 				else

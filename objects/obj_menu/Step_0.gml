@@ -32,7 +32,7 @@ if(cursor_lockout == 0)
 	{
 		hold_direction_time += 1;
 		
-		if(hold_direction_time > 30)
+		if(hold_direction_time > 20)
 		{
 			if(hold_direction_time % 6 == 0)
 			{
@@ -101,12 +101,12 @@ if(cursor_lockout == 0)
 			case 0:
 			case 1:
 			case 2:
+			case 3:
 				if(level == 2)
 				{
 					var need_move = true;
 				}
 			break;
-			case 3:
 			case 4:
 				if(level == 1)
 				{

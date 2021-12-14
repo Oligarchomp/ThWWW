@@ -34,10 +34,10 @@ if(global.gp_active) and (spell_wait == 0)
 					boss_release(x_pos,y_pos,sfx_boss_release);
 					
 					var inst = create_enemy(EN_FAMILIAR,x_pos,y_pos,99999999,1,0,0);
-					inst.item_nbr = 0;
+					inst.item_nbr = global.game_type == GAME_EXTRA ? 25 : 0;
 					
 					var inst = create_enemy(EN_FAMILIAR,x_pos,y_pos,99999999,2,0,0);
-					inst.item_nbr = 0;
+					inst.item_nbr = global.game_type == GAME_EXTRA ? 25 : 0;
 					
 					play_sound(sfx_familiar_spawn,1,false);
 					state += 1;
