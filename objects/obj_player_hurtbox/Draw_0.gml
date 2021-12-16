@@ -4,7 +4,7 @@
 if(instance_exists(obj_player))
 {
 	var p = obj_player;
-	draw_sprite_ext(spr_player_hitbox_visual,0,p.hitbox_x,p.hitbox_y,p.hitbox_scale,p.hitbox_scale,p.hitbox_rot,c_white,p.hitbox_alpha * p.alpha)
+	draw_sprite_ext(spr_player_hitbox_visual,0,p.hitbox_x,p.hitbox_y,p.hitbox_scale,p.hitbox_scale,p.hitbox_rot,c_white,p.hitbox_alpha * p.alpha * p.hb_scale)
 }
 
 if (global.view_hitbox)

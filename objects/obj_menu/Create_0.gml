@@ -1,6 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
+if(global.need_intro) and (!global.debug)
+{
+	instance_create_depth(0,0,0,obj_intro)	
+	global.need_intro = false;
+}
+
+
+
+
 if(global.need_change_rng)
 {
 	global.rng_patch = !global.rng_patch;
@@ -818,144 +828,168 @@ menu =
 					{
 						title : get_text("spell_s6_mid"),
 						data_name : "s6_mid",
+						comment : get_text("com_s6_mide"),
 						param : act_s6_5_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s6_mid"),
 						data_name : "s6_mid",
+						comment : get_text("com_s6_midn"),
 						param : act_s6_5_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s6_mid"),
 						data_name : "s6_mid",
+						comment : get_text("com_s6_midh"),
 						param : act_s6_5_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s6_mid"),
 						data_name : "s6_mid",
+						comment : get_text("com_s6_midl"),
 						param : act_s6_5_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s6_1a"),
 						data_name : "s6_1",
+						comment : get_text("com_s6_1e"),
 						param : boss_s6_2_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s6_1a"),
 						data_name : "s6_1",
+						comment : get_text("com_s6_1n"),
 						param : boss_s6_2_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s6_1b"),
 						data_name : "s6_1",
+						comment : get_text("com_s6_1h"),
 						param : boss_s6_2_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s6_1b"),
 						data_name : "s6_1",
+						comment : get_text("com_s6_1l"),
 						param : boss_s6_2_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s6_2a"),
 						data_name : "s6_2",
+						comment : get_text("com_s6_2e"),
 						param : boss_s6_4_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s6_2a"),
 						data_name : "s6_2",
+						comment : get_text("com_s6_2n"),
 						param : boss_s6_4_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s6_2b"),
 						data_name : "s6_2",
+						comment : get_text("com_s6_2h"),
 						param : boss_s6_4_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s6_2c"),
 						data_name : "s6_2",
+						comment : get_text("com_s6_2l"),
 						param : boss_s6_4_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s6_3a"),
 						data_name : "s6_3",
+						comment : get_text("com_s6_3e"),
 						param : boss_s6_6_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s6_3a"),
 						data_name : "s6_3",
+						comment : get_text("com_s6_3n"),
 						param : boss_s6_6_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s6_3b"),
 						data_name : "s6_3",
+						comment : get_text("com_s6_3h"),
 						param : boss_s6_6_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s6_3c"),
 						data_name : "s6_3",
+						comment : get_text("com_s6_3l"),
 						param : boss_s6_6_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s6_4a"),
 						data_name : "s6_4",
+						comment : get_text("com_s6_4e"),
 						param : boss_s6_8_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s6_4a"),
 						data_name : "s6_4",
+						comment : get_text("com_s6_4n"),
 						param : boss_s6_8_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s6_4b"),
 						data_name : "s6_4",
+						comment : get_text("com_s6_4h"),
 						param : boss_s6_8_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s6_4b"),
 						data_name : "s6_4",
+						comment : get_text("com_s6_4l"),
 						param : boss_s6_8_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s6_5a"),
 						data_name : "s6_5",
+						comment : get_text("com_s6_5e"),
 						param : boss_s6_9_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s6_5a"),
 						data_name : "s6_5",
+						comment : get_text("com_s6_5n"),
 						param : boss_s6_9_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s6_5b"),
 						data_name : "s6_5",
+						comment : get_text("com_s6_5h"),
 						param : boss_s6_9_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s6_5b"),
 						data_name : "s6_5",
+						comment : get_text("com_s6_5l"),
 						param : boss_s6_9_spell,
 						diff : 3
 					},

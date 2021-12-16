@@ -1,6 +1,17 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if(global.focused_pressed)
+{
+	instance_create_depth(0,0,0,obj_intro)	
+}
+
+if(instance_exists(obj_intro))
+{
+	cursor_lockout = 150;
+}
+
+
 if(step % 50 == 0)
 {
 	instance_create_depth(80 - 100 + rng(200,false,6),440 - rng(60,false,3),depth + 1,obj_bubble_main);

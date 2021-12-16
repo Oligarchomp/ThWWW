@@ -9,8 +9,8 @@
 window_width = 960;
 window_height = 540;
 
-x_offset = 156;
-y_offset = 20;
+x_offset = room == room_gp ? 156 : 0;
+y_offset = room == room_gp ? 20 : 0;
 
 camera = camera_create();
 //cam_width= 960 - x_offset;

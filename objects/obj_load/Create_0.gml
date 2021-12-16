@@ -89,6 +89,8 @@ window_set_cursor(cr_none);
 
 instance_create_depth(0,0,0,obj_bgm);
 
+global.need_intro = true;
+
 //room_goto(room_score);
 room_goto(room_main);
 //room_goto(room_gp);
