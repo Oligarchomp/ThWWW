@@ -5,7 +5,7 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			var cross_col = 3;
+			var cross_type = 0;
 			
 			var knife_size = 3;
 			var knife_dist = 50;
@@ -35,7 +35,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var arrow_size = 2;
 		break;
 		case 1:
-			var cross_col = 3;
+			var cross_type = 0;
 			
 			var knife_size = 3;
 			var knife_dist = 50;
@@ -65,7 +65,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var arrow_size = 2;
 		break;
 		case 2:
-			var cross_col = 6;
+			var cross_type = 1;
 			
 			var knife_size = 3;
 			var knife_dist = 60;
@@ -95,7 +95,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var arrow_size = 2;
 		break;
 		case 3:
-			var cross_col = 6;
+			var cross_type = 1;
 		
 			var knife_size = 3;
 			var knife_dist = 60;
@@ -134,7 +134,8 @@ if(global.gp_active) and (spell_wait == 0)
 			for(var i = 0; i < 360; i += 360 / cross_nbr)
 			{
 				var aim = -90;
-				var inst = shoot(DAN_KNIFE,cross_col,obj_boss.x,obj_boss.y,aim + i - 220 * dir_act,0,sfx_spawn_light,6);	
+				var col = cross_type ? (i == 0 ? 6 : 7) : 3;
+				var inst = shoot(DAN_KNIFE,col,obj_boss.x,obj_boss.y,aim + i - 220 * dir_act,0,sfx_spawn_light,6);	
 				inst.spawn_type = SPAWN_SCALE;
 				inst.image_xscale = knife_size;
 				inst.image_yscale = knife_size;
@@ -282,13 +283,13 @@ if(global.gp_active) and (spell_wait == 0)
 				{
 					state = 3;
 					spd = 0;
-					shoot_ring(DAN_MENTOS,cross_col,stab_ring,x,y,rng(360,false,8),stab_spd_shoot,sfx_shot1,5);
+					shoot_ring(DAN_MENTOS,color_id,stab_ring,x,y,rng(360,false,8),stab_spd_shoot,sfx_shot1,5);
 				}
 			break;
 			case 4:
-				if(cross_col == 6)
+				if(cross_type == 1)
 				{
-					var dan = DAN_FIREBALL;
+					var dan = DAN_ARROW;
 				}
 				else
 				{
@@ -301,12 +302,12 @@ if(global.gp_active) and (spell_wait == 0)
 					var y_pos = y - fire_off + rng(fire_off * 2, false,6);
 					var sp = fire_spd + rng(fire_spd_git,false,8);
 					
-					shoot(dan,cross_col,x_pos,y_pos,angle + 180,sp,sfx_shot1,2);
+					shoot(dan,color_id,x_pos,y_pos,angle + 180,sp,sfx_shot1,2);
 				}
 				
 				if(state_time % ring_wait == 0)
 				{
-					shoot_ring(dan,cross_col,ring_nbr,x,y,rng(36,false,9),ring_spd,sfx_redirect2,4);	
+					shoot_ring(dan,color_id,ring_nbr,x,y,rng(36,false,9),ring_spd,sfx_redirect2,4);	
 				}
 			break;
 			case 5:

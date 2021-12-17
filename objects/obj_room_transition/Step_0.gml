@@ -29,7 +29,18 @@ if(global.gp_active)
 			if(alpha == 0) or (global.game_type == GAME_SPELL)
 			{
 				state = 1;
-				set_bgm(music);
+				
+				if(global.game_type != GAME_SPELL)
+				{
+					set_bgm(music);
+				}
+				else
+				{
+					if(!audio_is_playing(music))
+					{
+						set_bgm(music);
+					}
+				}
 				
 				event_next()
 				instance_destroy();

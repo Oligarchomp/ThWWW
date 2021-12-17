@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-if(global.need_intro) and (!global.debug)
+if(global.need_intro) //and (!global.debug)
 {
 	instance_create_depth(0,0,0,obj_intro)	
 	global.need_intro = false;
@@ -1457,7 +1457,7 @@ score_difficulty = 0;
 
 menu_description_alpha = 0;
 
-cursor_lockout = 0;
+cursor_lockout = 2;
 
 over_offset = 26;
 

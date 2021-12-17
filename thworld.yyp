@@ -607,6 +607,7 @@
     {"id":{"name":"sfx_token_bounce","path":"sounds/sfx_token_bounce/sfx_token_bounce.yy",},"order":13,},
     {"id":{"name":"bg_s6","path":"objects/bg_s6/bg_s6.yy",},"order":0,},
     {"id":{"name":"sfx_photo_ready","path":"sounds/sfx_photo_ready/sfx_photo_ready.yy",},"order":9,},
+    {"id":{"name":"get_next_event","path":"scripts/get_next_event/get_next_event.yy",},"order":5,},
     {"id":{"name":"boss_s1_2_spell","path":"objects/boss_s1_2_spell/boss_s1_2_spell.yy",},"order":8,},
     {"id":{"name":"room_load","path":"rooms/room_load/room_load.yy",},"order":0,},
   ],

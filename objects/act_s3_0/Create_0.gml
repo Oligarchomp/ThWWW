@@ -9,4 +9,12 @@ event_inherited();
 global.boss = BOSS_PALE;
 
 bg_to_create = bg_s3;
-music = mus_stage3;
+
+if(global.game_type == GAME_SPELL)
+{
+	music = get_next_event() == act_s3_7_midspell ? mus_stage3 : noone;
+}
+else
+{
+	music = mus_stage3;
+}

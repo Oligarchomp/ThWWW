@@ -4,7 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
-
 spell_set_spell("s2_3",BOSS_SERENE,15000000)
 spell_set_name("spell_s2_3a","spell_s2_3a","spell_s2_3a","spell_s2_3b")
 spell_set_life(1100,310);

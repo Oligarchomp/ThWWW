@@ -144,6 +144,7 @@ global.replay_seed = [];
 
 global.name_entry = "";
 
+
 //define player_id
 #macro P_REIMU 0
 #macro P_MARISA 1

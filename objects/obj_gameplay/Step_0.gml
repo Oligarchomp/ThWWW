@@ -81,11 +81,11 @@ if(pause_state == 1)
 					level -= 1;
 				break;
 				case MENU_RESTART:
-					room_transition(room_reload);
+					room_transition(room_reload,global.game_type != GAME_SPELL);
 					cursor_lockout = 1000;
 				break;
 				case MENU_TITLE:
-					room_transition(room_main);
+					room_transition(room_main,true);
 					cursor_lockout = 1000;
 				break;
 				case MENU_CONTINUE:
@@ -139,7 +139,7 @@ if(pause_state == 1)
 				var last = array_length(array_check) - 1;
 				if(cursor[0] == last)
 				{
-					room_transition(room_main);
+					room_transition(room_main,true);
 					cursor_lockout = 1000;
 				}
 				else

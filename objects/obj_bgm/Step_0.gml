@@ -2,48 +2,51 @@
 // You can write your code in this editor
 
 
+switch(bgm)
+{
+	case mus_boss1:	
+		var intro_length = 7.112;
+		var loop_lenght = 119.998;
+	break;
+	case mus_boss2:	
+		var intro_length = 5.707;
+		var loop_lenght = 67.214;
+	break;
+	case mus_stage3:
+		var intro_length = 13.246;
+		var loop_lenght = 113.256;
+	break;
+	default:
+		var intro_length = 100000;
+		var loop_lenght = 100000;
+	break;
+}
+
+var audio_pos = audio_sound_get_track_position(currently_playing)
+if(audio_pos > intro_length + loop_lenght)
+{
+	audio_sound_set_track_position(currently_playing,audio_pos - loop_lenght);
+}
+
+if(update)
+{
+	update = false;
+	audio_stop_sound(currently_playing);
+	
+	if(bgm != noone)
+	{
+		currently_playing = audio_play_sound_on(global.bgm_emitter,bgm,true,1);
+	}
+}
+	
 if(global.gp_active)
 {
 	audio_resume_sound(currently_playing);
-
-	switch(bgm)
-	{
-		case mus_boss1:	
-			var intro_length = 7.112;
-			var loop_lenght = 119.998;
-		break;
-		case mus_boss2:	
-			var intro_length = 5.707;
-			var loop_lenght = 67.214;
-		break;
-		case mus_stage3:
-			var intro_length = 13.246;
-			var loop_lenght = 113.256;
-		break;
-		default:
-			var intro_length = 100000;
-			var loop_lenght = 100000;
-		break;
-	}
-
-	var audio_pos = audio_sound_get_track_position(currently_playing)
-	if(audio_pos > intro_length + loop_lenght)
-	{
-		audio_sound_set_track_position(currently_playing,audio_pos - loop_lenght);
-	}
-
-	if(update)
-	{
-		update = false;
-		audio_stop_sound(currently_playing);
-	
-		if(bgm != noone)
-		{
-			currently_playing = audio_play_sound_on(global.bgm_emitter,bgm,true,1);
-		}
-	}
 }
 else
 {
-	audio_pause_sound(currently_playing);
+	if(global.game_type != GAME_SPELL)
+	{
+		audio_pause_sound(currently_playing);
+	}
 }

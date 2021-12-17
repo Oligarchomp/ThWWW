@@ -64,7 +64,7 @@ switch(state)
 					switch(menu[cursor].action)
 					{
 						case MENU_TITLE:
-							room_transition(room_main);
+							room_transition(room_main,true);
 							cursor_lockout = 100000;
 						break;
 						case MENU_REPLAY:
@@ -78,7 +78,7 @@ switch(state)
 				{
 					play_sound(sfx_menu_back,1,false);
 					cursor_lockout = 10000;
-					room_transition(room_main);
+					room_transition(room_main,true);
 				}
 			}
 			else
@@ -101,7 +101,7 @@ switch(state)
 	case 3:
 		if(state_time == 160)
 		{
-			room_transition(room_main);
+			room_transition(room_main,true);
 		}
 	break;
 }

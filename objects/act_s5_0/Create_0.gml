@@ -9,4 +9,12 @@ event_inherited();
 global.boss = BOSS_FEZA;
 
 bg_to_create = bg_s5;
-music = noone;
+
+if(global.game_type == GAME_SPELL)
+{
+	music = noone;//only feza
+}
+else
+{
+	music = noone;
+}

@@ -157,7 +157,7 @@ spell_s5_2c = Leaf Sign - [Four Generations Stabs]
 spell_s5_3a = Pole Sign - [Little Dove Always Finds North]
 spell_s5_3b = Magnetic Sign - [Magnetoreception]
 spell_s5_4a = Hope Sign - [Cross Shaped Tree Growing]
-spell_s5_4b = Blasphemy - [Burning Cross]
+spell_s5_4b = Horizon Sign - [Cardinal Compass Rose]
 
 spell_s6_mid = Charming Sign - [Meek Dominance]
 spell_s6_1a = Mooring Sign - [Drop Anchor on a Mountain]
@@ -1009,11 +1009,16 @@ com_s4_4sn = I got it now, it's suppose to be Sanae's final spell from Mountain 
 com_s4_4sh = 
 com_s4_4sl = 
 
+com_s6_2e = 
+com_s6_2n = 
+com_s6_2h = You thought the branch she's holding was just for look? Think again!$Be careful now. This spell has a high critical-hit ratio!
+com_s6_2l = 
+
 com_s6_mide = 
 com_s6_midn = 
 com_s6_midh = If you time this spell out during a run, it looks like Feza is flying into a wall and that's hilarious.
 com_s6_midl = Let's take two spell known for their RNG aspect and mix them together!$What could possibly go wrong?
-com_s6_1e = Aren't we inside a boat right now? Is Nua berthing...inside her own ship?$How does that make any sense?
+com_s6_1e = 
 com_s6_1n = 
 com_s6_1h = 
 com_s6_1l = The Great Ark is a special kind of boat.$It's made in Gopher wood, a type of wood that doesn't exists in the universe we live in.

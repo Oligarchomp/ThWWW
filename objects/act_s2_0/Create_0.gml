@@ -8,4 +8,12 @@ event_inherited();
 global.boss = BOSS_SERENE;
 
 bg_to_create = bg_s2;
-music = noone;
+
+if(global.game_type == GAME_SPELL)
+{
+	music = get_next_event() == act_s2_6_midspell ? noone : mus_boss2;
+}
+else
+{
+	music = noone;
+}

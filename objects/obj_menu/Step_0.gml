@@ -405,7 +405,7 @@ if(cursor_lockout == 0)
 					cursor_lockout = 10;
 				break;
 				case MENU_START_GAME:
-					room_transition(room_gp);
+					room_transition(room_gp,true);
 					add_fullgame();
 					cursor_lockout = 100000;
 				
@@ -444,7 +444,7 @@ if(cursor_lockout == 0)
 						global.game_type = GAME_STAGE;
 					}
 					
-					room_transition(room_gp);
+					room_transition(room_gp,true);
 				
 					global.play_type = PLAY_MANUAL;
 				
@@ -455,7 +455,7 @@ if(cursor_lockout == 0)
 					play_sound(sfx_spawn_light,1,false);
 				break;
 				case MENU_SPELL:
-					room_transition(room_gp);
+					room_transition(room_gp,true);
 				
 					global.game_type = GAME_SPELL;
 					global.play_type = PLAY_MANUAL;
@@ -503,7 +503,7 @@ if(cursor_lockout == 0)
 					
 					}
 				
-					room_transition(room_gp);
+					room_transition(room_gp,true);
 					global.play_type = PLAY_REPLAY;
 				
 					var ev = get_replay(REPLAY_EVENT,rep,0);

@@ -34,22 +34,26 @@ switch(image_index)
 		yy = 460;
 	break;
 	case 7:
-		xx = 340;
-		yy = 370;
+		xx = 350;
+		yy = 410;
 	break;
 	case 8:
+		xx = 500;
+		yy = 510;
+	break;
+	case 9:
 		xx = 170;
 		yy = 340;
 	break;
-	case 9:
+	case 10:
 		xx = 210;
 		yy = 410;
 	break;
-	case 10:
+	case 11:
 		xx = 90;
 		yy = 340;
 	break;
-	case 11:
+	case 12:
 		xx = 60;
 		yy = 510;
 	break;
