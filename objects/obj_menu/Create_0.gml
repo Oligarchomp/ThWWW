@@ -724,96 +724,112 @@ menu =
 					{
 						title : get_text("spell_s5_1a"),
 						data_name : "s5_1",
+						comment : get_text("com_s5_1e"),
 						param : boss_s5_2_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s5_1a"),
 						data_name : "s5_1",
+						comment : get_text("com_s5_1n"),
 						param : boss_s5_2_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s5_1b"),
 						data_name : "s5_1",
+						comment : get_text("com_s5_1h"),
 						param : boss_s5_2_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s5_1c"),
 						data_name : "s5_1",
+						comment : get_text("com_s5_1l"),
 						param : boss_s5_2_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s5_2a"),
 						data_name : "s5_2",
+						comment : get_text("com_s5_2e"),
 						param : boss_s5_4_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s5_2a"),
 						data_name : "s5_2",
+						comment : get_text("com_s5_2n"),
 						param : boss_s5_4_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s5_2b"),
 						data_name : "s5_2",
+						comment : get_text("com_s5_2h"),
 						param : boss_s5_4_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s5_2c"),
 						data_name : "s5_2",
+						comment : get_text("com_s5_2l"),
 						param : boss_s5_4_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s5_3a"),
 						data_name : "s5_3",
+						comment : get_text("com_s5_3e"),
 						param : boss_s5_6_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s5_3a"),
 						data_name : "s5_3",
+						comment : get_text("com_s5_3n"),
 						param : boss_s5_6_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s5_3b"),
 						data_name : "s5_3",
+						comment : get_text("com_s5_3h"),
 						param : boss_s5_6_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s5_3b"),
 						data_name : "s5_3",
+						comment : get_text("com_s5_3l"),
 						param : boss_s5_6_spell,
 						diff : 3
 					},
 					{
 						title : get_text("spell_s5_4a"),
 						data_name : "s5_4",
+						comment : get_text("com_s5_4e"),
 						param : boss_s5_7_spell,
 						diff : 0
 					},
 					{
 						title : get_text("spell_s5_4a"),
 						data_name : "s5_4",
+						comment : get_text("com_s5_4n"),
 						param : boss_s5_7_spell,
 						diff : 1
 					},
 					{
 						title : get_text("spell_s5_4b"),
 						data_name : "s5_4",
+						comment : get_text("com_s5_4h"),
 						param : boss_s5_7_spell,
 						diff : 2
 					},
 					{
 						title : get_text("spell_s5_4b"),
 						data_name : "s5_4",
+						comment : get_text("com_s5_4l"),
 						param : boss_s5_7_spell,
 						diff : 3
 					},
