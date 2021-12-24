@@ -5,7 +5,7 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			var cross_type = 0;
+			var cross_type = 1;
 			
 			var knife_size = 3;
 			var knife_dist = 50;
@@ -35,7 +35,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var arrow_size = 2;
 		break;
 		case 1:
-			var cross_type = 0;
+			var cross_type = 1;
 			
 			var knife_size = 3;
 			var knife_dist = 50;

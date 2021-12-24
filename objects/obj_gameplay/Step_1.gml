@@ -49,7 +49,6 @@ if(global.gp_active)
 					switch(global.game_type)
 					{
 						case GAME_EXTRA:
-							
 							instance_create_depth(280,40,0,obj_score_entry);
 							
 							data_write("Data.ini","data","rng_unlock",1); //unlock rng patch

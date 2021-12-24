@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(global.gp_active)
+if(global.gp_active) and (spell_wait == 0)
 {
 	switch(global.difficulty)
 	{
@@ -17,8 +17,6 @@ if(global.gp_active)
 			
 		break;
 	}
-
-	
 
 
 }

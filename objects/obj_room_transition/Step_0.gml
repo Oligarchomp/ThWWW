@@ -12,7 +12,6 @@ if(global.gp_active)
 		state_time += 1;
 	}
 
-
 	switch(state)
 	{
 		case 0:

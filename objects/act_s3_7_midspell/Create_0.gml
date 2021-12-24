@@ -17,7 +17,6 @@ with(obj_boss)
 
 
 
-
 // to sync with the music
 if(global.game_type != GAME_SPELL)
 {
