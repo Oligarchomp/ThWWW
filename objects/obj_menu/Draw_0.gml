@@ -519,7 +519,7 @@ if(draw_replay)
 		
 		var x1 = 400;
 		var y1 = 180;
-		var width = 110;
+		var width = 320;
 		var height = 160;
 		draw_sprite_part(spr_main,1,x1,y1,width,height,x1,y1);
 		var wid = 4;
@@ -535,8 +535,8 @@ if(draw_replay)
 			var is_active = (cursor[level] == i);
 			var col = check[i].action == MENU_PLAY_REPLAY ? c_white : $5a5a5a;
 					
-			draw_text_color(x1 + 20 + 5 * is_active, y1 + 20 + i * 20,check[i].title,col,col,col,col,1 - !is_active * 0.6)
-					
+			draw_text_color(x1 + 20 + 5 * is_active, y1 + 20 + i * 20,check[i].title + " : ",col,col,col,col,1 - !is_active * 0.6)
+			draw_score(check[i].scr,x1 + 290 + 5 * is_active, y1 + 20 + i * 20,spr_score,1,1 - !is_active * 0.6);	
 		}
 	}
 }

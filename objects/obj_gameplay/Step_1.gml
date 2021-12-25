@@ -276,10 +276,10 @@ if(need_stage_replay)
 				file_text_writeln(file);
 				file_text_write_string(file,"item" + nbr1 + " = " + string(global.item_nbr));
 				file_text_writeln(file);
-				file_text_write_string(file,"score" + nbr1 + " = " + string(global.score));
-				file_text_writeln(file);
 				file_text_write_string(file,"graze" + nbr1 + " = " + string(global.graze));
 			}
+			file_text_writeln(file);
+			file_text_write_string(file,"score" + nbr1 + " = " + string(global.score));
 			
 			file_text_close(file);
 		}

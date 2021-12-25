@@ -405,13 +405,13 @@ if(cursor_lockout == 0)
 					cursor_lockout = 10;
 				break;
 				case MENU_START_GAME:
+					global.game_type = GAME_FULL;
+					global.play_type = PLAY_MANUAL;
+					
 					room_transition(room_gp,true);
 					add_fullgame();
 					cursor_lockout = 100000;
-				
-					global.game_type = GAME_FULL;
-					global.play_type = PLAY_MANUAL;
-				
+			
 					play_sound(sfx_spawn_light,1,false);
 				
 					var dif = ["e","n","h","l"];

@@ -114,6 +114,7 @@ invincible = false; // for debuging
 bomb_time = 0;
 
 in_dialogue = false;
+cant_shoot = false;
 
 // Value
 

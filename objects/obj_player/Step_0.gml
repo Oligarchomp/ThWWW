@@ -4,7 +4,7 @@ if (global.gp_active)
 {
 	var ev = get_current_event();
 	var par = object_get_parent(ev);
-	in_dialogue = (par == obj_dialogue) or (ev == act_end_stage);
+	in_dialogue = (par == obj_dialogue) or (ev == act_end_stage) or (cant_shoot);
 
 	
 	if (old_state != state)

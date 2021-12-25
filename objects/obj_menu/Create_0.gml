@@ -1441,7 +1441,8 @@ for(var i = 0; i < 20; i += 1)
 					menu[rep].param[i].param[j] = 
 					{
 						title : "Stage " + string(j + 1),
-						action : MENU_PLAY_REPLAY
+						action : MENU_PLAY_REPLAY,
+						scr : add_zero(real(get_text_file("score" + string(j + 2),replay_check)),global.score_lenght)
 					};
 				}
 				else
@@ -1449,7 +1450,8 @@ for(var i = 0; i < 20; i += 1)
 					menu[rep].param[i].param[j] = 
 					{
 						title : "Stage " + string(j + 1),
-						action : MENU_INVALID
+						action : MENU_INVALID,
+						scr : add_zero("0",global.score_lenght)
 					};
 				}
 			}

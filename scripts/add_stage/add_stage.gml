@@ -141,7 +141,10 @@ function add_stage(stage){
 			add_stage_event(boss_s6_7_non,50);
 			add_stage_event(boss_s6_8_spell,0);
 			add_stage_event(boss_s6_9_spell,60);
-			add_stage_event(act_pre_end,240);
+			if(global.game_type == GAME_FULL)
+			{
+				add_stage_event(act_pre_end,240);
+			}
 		break;
 		case 7:
 			add_stage_event(act_s7_0,0);//keep this one
