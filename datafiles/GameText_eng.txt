@@ -1029,8 +1029,8 @@ com_s6_midn = If you time this spell out during a run, it looks like Feza is fly
 com_s6_midh = Let's take two spell known for their RNG aspect and mix them together!$What could possibly go wrong?
 com_s6_midl = When it comes to flying speed, Feza really can't complain.$It still pales compare to Tengu's though.
 com_s6_1e = All good captains need to have spells based around anchors!$This one's really big for some reason.
-com_s6_1n = 
-com_s6_1h = The ark landed between two of Bhavaagra's highest peak.$Now it's stuck up there.$But shall Nua's plan be a success, not for long.
+com_s6_1n = The ark landed between two of Bhavaagra's highest peak.$Now it's stuck up there.$But shall Nua's plan be a success, not for long.
+com_s6_1h = The damages done to the ship were only superficials.$Feza was quickly able to fix the hull before you even reached her in stage 5.
 com_s6_1l = The Great Ark is a special kind of boat.$It's made in Gopher wood, a type of wood that doesn't exists in the universe we live in.
 com_s6_2e = This is Nua's myriad of doves. She's using them as living Danmaku!$Do not worry, none were injured during the battle and they all safely went back to the dovecot afterward. 
 com_s6_2n = Nua used to send a lot of doves around in order to find habitable World.$Today, Feza can pretty much handle this job by herself.
@@ -1061,10 +1061,6 @@ com_s7_7 = All of this fight was really tiresome, so Reverence decided to take a
 com_s7_8 = Did you ever wanted to know how it feels like to be a god? Well today is your chance! $Reverence will gladly forces you into her shoes for you to have a better idea on the subject.
 com_s7_9 = The Universe as a pond, a frog resting in its middle.$An epitome of a World.$First Creation, then Expension, and finally Destruction.
 com_s7_10 = God is leaving now.$The show is comming to its end.$Should we call for an encore?
-
-
-
-
 
 
 
