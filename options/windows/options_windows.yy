@@ -1,5 +1,5 @@
 {
-  "option_windows_display_name": "ThWorld",
+  "option_windows_display_name": "東方眠世界 ~ Wonderful Waking World",
   "option_windows_executable_name": "${project_name}.exe",
   "option_windows_version": "1.0.0.0",
   "option_windows_company_info": "YoYo Games Ltd",
