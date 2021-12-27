@@ -119,8 +119,8 @@ switch(level)
 						var txt_plr = "Sanae";
 					break;
 				}
-				draw_text_color(475 - string_width(txt),30,txt ,c_white,c_white,c_white,c_white,1);
-				draw_text_color(475,30,"/ " + txt_plr,c_white,c_white,c_white,c_white,1);
+				draw_text_color(470 - string_width(txt),30,txt ,c_white,c_white,c_white,c_white,1);
+				draw_text_color(470,30,"/ " + txt_plr,c_white,c_white,c_white,c_white,1);
 				
 				
 				for(var i = 0; i < array_length(check) ; i += 1)
@@ -130,9 +130,9 @@ switch(level)
 					draw_set_font(font_scorename);
 					draw_text_color(332,88 + i * 40,score_name,c_white,c_white,c_white,c_white,1);
 					
-					draw_text_color(440,88 + i * 40,"/",c_white,c_white,c_white,c_white,1);
+					draw_text_color(442,88 + i * 40,"/",c_white,c_white,c_white,c_white,1);
 					
-					draw_score(variable_struct_get(check[i],index),637,90 + i * 40,spr_score,1,1);
+					draw_score(variable_struct_get(check[i],index),615,90 + i * 40,spr_score,1,1);
 				}
 			break;
 			case 5: //replay
@@ -519,7 +519,7 @@ if(draw_replay)
 		
 		var x1 = 400;
 		var y1 = 180;
-		var width = 320;
+		var width = 295;
 		var height = 160;
 		draw_sprite_part(spr_main,1,x1,y1,width,height,x1,y1);
 		var wid = 4;
@@ -536,7 +536,7 @@ if(draw_replay)
 			var col = check[i].action == MENU_PLAY_REPLAY ? c_white : $5a5a5a;
 					
 			draw_text_color(x1 + 20 + 5 * is_active, y1 + 20 + i * 20,check[i].title + " : ",col,col,col,col,1 - !is_active * 0.6)
-			draw_score(check[i].scr,x1 + 290 + 5 * is_active, y1 + 20 + i * 20,spr_score,1,1 - !is_active * 0.6);	
+			draw_score(check[i].scr,x1 + 265 + 5 * is_active, y1 + 20 + i * 20,spr_score,1,1 - !is_active * 0.6);	
 		}
 	}
 }

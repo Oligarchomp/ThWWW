@@ -7,7 +7,6 @@ if(instance_exists(obj_replay)) or (instance_exists(obj_score_entry))
 }
 
 
-
 //PAUSE
 switch(pause_type)
 {

@@ -112,7 +112,7 @@ global.gp_active = true;
 
 global.score = 0;
 global.hiscore = 0;
-global.score_lenght = 12;
+global.score_lenght = 10;
 
 global.spell_file = "SpellData.ini"
 //SpellDataPractice.ini

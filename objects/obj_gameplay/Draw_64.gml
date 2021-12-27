@@ -56,10 +56,10 @@ var hiscore = global.game_type == GAME_FULL or global.game_type == GAME_EXTRA ? 
 hiscore = global.continues_max - global.continues == 0 ? hiscore : global.hiscore;
 
 var hiscore_draw = add_zero(hiscore,global.score_lenght);
-draw_score(hiscore_draw,865,69,spr_score,1,1);
+draw_score(hiscore_draw,840,69,spr_score,1,1);
 
 var score_draw = add_zero(score_to_draw,global.score_lenght);
-draw_score(score_draw,865,108,spr_score,1,1);
+draw_score(score_draw,840,108,spr_score,1,1);
 
 
 //draw score info
