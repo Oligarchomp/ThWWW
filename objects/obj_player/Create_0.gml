@@ -12,7 +12,7 @@ player_id = global.player_chosen;
 // 3 = Suika
 
 
-
+miracle = false;
 
 switch(player_id)
 {
@@ -53,6 +53,8 @@ switch(player_id)
 		deathbomb_time = 11;
 		
 		hb_scale = 1;
+		
+		miracle = true;
 	break;
 	case P_SUIKA: 
 		idle_spr = spr_suika_idle;
