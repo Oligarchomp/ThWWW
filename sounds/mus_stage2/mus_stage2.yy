@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_stage2.ogg",
-  "duration": 124.786942,
+  "duration": 158.816956,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",

@@ -1212,7 +1212,7 @@ menu =
 				title : get_text("mus_room_s2"),
 				comment : get_text("mus_com_s2"),
 				action : MENU_MUSIC,
-				music : noone,
+				music : mus_stage2,
 			},
 			{
 				title : get_text("mus_room_b2"),

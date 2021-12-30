@@ -208,7 +208,7 @@ switch(level)
 					
 					check[i].active_offset = goto_value(check[i].active_offset, is_active * 10,3);
 					
-					draw_text_color(580 + check[i].active_offset,50 + i * 20,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
+					draw_text_color(530 + check[i].active_offset,50 + i * 20,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
 				
 					//spell comment
 					if(is_active)

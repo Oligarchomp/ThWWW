@@ -17,6 +17,14 @@ function set_bgm(argument0){
 			case mus_stage1:
 				var name = get_text("mus_stage1");
 			break;
+			case mus_stage2:
+				var name = get_text("mus_stage2");
+				
+				var inst = instance_create_depth(0,0,0,obj_bgm_info);
+				inst.bgm_name = get_text("mus_stage2_comp");
+				inst.color = $fffffff;
+				inst.off = -18;
+			break;
 			case mus_stage3:
 				var name = get_text("mus_stage3");
 				col = $121212;

@@ -77,15 +77,6 @@ if (global.gp_active)
 	{
 		add_score(1000);
 		
-		if(obj_player.miracle) and (global.life == 0)
-		{
-			if(rng(8192,true,0) == 0)
-			{
-				create_item(ITEM_LIFE,x,y);
-				obj_player.miracle = false;
-			}
-		}
-		
 		play_sound(sfx_enemy_defeat,1,false);
 		
 		if (can_revenge)

@@ -236,16 +236,6 @@ if (global.gp_active)
 			create_item(ITEM_POINT,obj_boss.x - item_dist + rng(item_dist * 2 ,true,2),obj_boss.y - item_dist + rng(item_dist * 2,true,2));
 		}
 		
-		//sanae miracle
-		if(obj_player.miracle) and (global.life == 0)
-		{
-			if(rng(8192,true,0) == 0)
-			{
-				create_item(ITEM_LIFE,obj_boss.x,obj_boss.y);
-				obj_player.miracle = false;
-			}
-		}
-		
 		
 		if (is_capturing)
 		{
