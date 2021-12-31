@@ -114,12 +114,22 @@ if (global.pause_pressed)
 }
 
 
-if(global.life < 0)
+if(global.life < 0) and (pause_state == 0)
 {
 	pause_state = 1;
 	
 	if(global.play_type == PLAY_MANUAL)
 	{
+		if(global.continues == global.continues_max) and (global.game_type == GAME_FULL)
+		{
+			instance_create_depth(280,40,0,obj_score_entry);
+			
+			if(global.score > global.hiscore)
+			{
+				global.hiscore = global.score;
+			}
+		}
+		
 		pause_type = global.game_type == GAME_FULL ? PAUSE_GAMEOVER : PAUSE_END ;
 	}
 	else

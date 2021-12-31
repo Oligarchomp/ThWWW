@@ -397,7 +397,7 @@ if(cursor_lockout == 0)
 			
 					level += 1;
 					cursor[level] = 0;
-					cursor_lockout = 10;
+					cursor_lockout = 6;
 				break;
 				case MENU_START_GAME:
 					global.game_type = GAME_FULL;
@@ -535,7 +535,7 @@ if(cursor_lockout == 0)
 				break;
 				case MENU_BACK:
 					level -= 1;
-					cursor_lockout = 8;
+					cursor_lockout = 6;
 				break;
 				case MENU_QUIT:
 					game_end();

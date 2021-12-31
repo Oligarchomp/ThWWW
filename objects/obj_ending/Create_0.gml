@@ -188,5 +188,6 @@ ds_list_clear(line_list);
 ds_list_add(line_list,line1_list[|end_step],line2_list[|end_step],line3_list[|end_step],line4_list[|end_step]);
 				
 
+hold_time = 0;
 
 step = 0;

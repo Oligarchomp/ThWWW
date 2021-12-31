@@ -4,7 +4,7 @@ if (global.debug)
 {
 	if (keyboard_check(vk_space))
 	{
-		room_speed = 500;
+		room_speed = 300;
 	}
 	else
 	{

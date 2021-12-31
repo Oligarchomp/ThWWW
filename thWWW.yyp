@@ -214,6 +214,7 @@
     {"id":{"name":"spr_reverence_indicator","path":"sprites/spr_reverence_indicator/spr_reverence_indicator.yy",},"order":10,},
     {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},"order":0,},
     {"id":{"name":"obj_intro_broken","path":"objects/obj_intro_broken/obj_intro_broken.yy",},"order":2,},
+    {"id":{"name":"spr_reflection","path":"sprites/spr_reflection/spr_reflection.yy",},"order":1,},
     {"id":{"name":"obj_spell_bg_text","path":"objects/obj_spell_bg_text/obj_spell_bg_text.yy",},"order":1,},
     {"id":{"name":"add_stage_event","path":"scripts/add_stage_event/add_stage_event.yy",},"order":0,},
     {"id":{"name":"mus_stage3","path":"sounds/mus_stage3/mus_stage3.yy",},"order":5,},

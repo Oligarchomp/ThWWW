@@ -11,7 +11,8 @@ with(obj_danmaku)
 draw_sprite(spr_hud,0,0,0);
 
 draw_set_font(font_spellpractice);
-draw_text(130,room_height,fps)
+
+draw_text(150 - string_width(string(fps)),room_height,fps)
 
 //draw difficulty
 if(global.stage != 7)

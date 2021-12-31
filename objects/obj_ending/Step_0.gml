@@ -12,6 +12,24 @@ else
 
 alpha_bg = goto_value(alpha_bg,1,0.05);
 
+if(global.shot_down)
+{
+	hold_time += 1;	
+	
+	if(hold_time > 35)
+	{
+		if(hold_time % 8 == 0)
+		{
+			global.shot_pressed = true;
+		}
+	}
+}
+else
+{
+	hold_time = 0;
+}
+
+
 
 switch(state)
 {

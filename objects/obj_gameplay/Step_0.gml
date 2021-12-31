@@ -6,7 +6,6 @@ if(instance_exists(obj_replay)) or (instance_exists(obj_score_entry))
 	cursor_lockout = 10;
 }
 
-
 //PAUSE
 switch(pause_type)
 {
