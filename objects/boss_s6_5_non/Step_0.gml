@@ -16,7 +16,7 @@ if(global.gp_active)
 					var torpedo_lenght = 100;
 					var torpedo_ring = 16;
 					var torpedo_spd = 1.5;
-					var torpedo_angle_plus = 1;
+					var torpedo_angle_plus = 1.7;
 					var torpedo_angle_max = 90;
 			
 					var off_div = 4;
@@ -27,7 +27,7 @@ if(global.gp_active)
 					var torpedo_lenght = 70;
 					var torpedo_ring = 18;
 					var torpedo_spd = 2;
-					var torpedo_angle_plus = 1;
+					var torpedo_angle_plus = 1.7;
 					var torpedo_angle_max = 100;
 			
 					var off_div = 3;
@@ -38,7 +38,7 @@ if(global.gp_active)
 					var torpedo_lenght = 60;
 					var torpedo_ring = 19;
 					var torpedo_spd = 2;
-					var torpedo_angle_plus = 1;
+					var torpedo_angle_plus = 1.7;
 					var torpedo_angle_max = 110;
 			
 					var off_div = 3;
@@ -49,7 +49,7 @@ if(global.gp_active)
 					var torpedo_lenght = 60;
 					var torpedo_ring = 20;
 					var torpedo_spd = 2.5;
-					var torpedo_angle_plus = 1;
+					var torpedo_angle_plus = 1.7;
 					var torpedo_angle_max = 110;
 			
 					var off_div = 3;
