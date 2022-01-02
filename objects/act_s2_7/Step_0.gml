@@ -45,7 +45,7 @@ if(global.gp_active)
 	
 	if(instance_exists(obj_spell))
 	{
-		time_wait = 110;
+		time_wait = 140;
 	}
 	
 	if(time_wait > 0)

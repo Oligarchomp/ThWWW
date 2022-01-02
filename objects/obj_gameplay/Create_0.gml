@@ -274,6 +274,24 @@ gameover =
 		action : MENU_REPLAY
 	},
 	{
+		title : get_text("pause_retry"),
+		active_offset : 0,
+		action : MENU_MENU,
+		param :
+		[
+			{
+				title : get_text("pause_yes"),
+				active_offset : 0,
+				action : MENU_RESTART
+			},
+			{
+				title : get_text("pause_no"),
+				active_offset : 0,
+				action : MENU_BACK
+			}
+		]
+	},
+	{
 		title : get_text("pause_title"),
 		active_offset : 0,
 		action : MENU_MENU,

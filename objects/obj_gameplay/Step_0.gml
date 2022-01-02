@@ -72,8 +72,9 @@ if(pause_state == 1)
 				case MENU_MENU:
 					level += 1;
 					cursor[level] = 1;
-					pause[cursor[0]].param[0].active_offset = 0; //:/
-					pause[cursor[0]].param[1].active_offset = menu_offset;
+					//pause[cursor[0]].param[0].active_offset = 0; //:/
+					//pause[cursor[0]].param[1].active_offset = menu_offset;
+					//doesn't work because it's not always pause
 				break;
 				case MENU_BACK:
 					level -= 1;

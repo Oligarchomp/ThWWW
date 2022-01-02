@@ -58,11 +58,11 @@ if(global.gp_active)
 			
 		break;
 	}
-	var time_before_cirno_freaking_dies = 500;
+	var time_before_cirno_freaking_dies = 515;
 	
 	if (step == 0)
 	{
-		var inst = create_enemy(EN_CIRNO,room_width / 2, -20,540,1,5,-90);
+		var inst = create_enemy(EN_CIRNO,room_width / 2, -20,570,1,5,-90);
 		inst.item_nbr = 9;
 	}
 	

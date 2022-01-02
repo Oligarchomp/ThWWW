@@ -270,7 +270,5 @@ global.play_type = PLAY_MANUAL;
 #macro REPLAY_DIFFICULTY 7
 #macro REPLAY_STAGE_NBR 8
 
-add_stage_event(act_s6_0,0)
-add_stage_event(act_pre_end,0)
-/*
-add_stage_event(act_s3_7_midspell,1)
+
+

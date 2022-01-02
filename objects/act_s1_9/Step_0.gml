@@ -59,10 +59,10 @@ if(global.gp_active)
 	{
 		//big
 		var inst = create_enemy(EN_RED,x_off,-20,big_life,1,5,-90);
-		inst.item_nbr = 3;
+		inst.item_nbr = 5;
 		
 		var inst = create_enemy(EN_RED,room_width - x_off,-20,big_life,1,5,-90);
-		inst.item_nbr = 3;
+		inst.item_nbr = 5;
 	}
 	
 	

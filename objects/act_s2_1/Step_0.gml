@@ -54,7 +54,7 @@ if(global.gp_active)
 	switch(step)
 	{
 		case 0:
-		case 250:
+		//case 250:
 			var inst = create_enemy(EN_BLUE,50,-20,fairy_life,1,4,-90)
 			inst.item_nbr = 2;
 			var inst = create_enemy(EN_BLUE,150,-20,fairy_life,1,4,-90)

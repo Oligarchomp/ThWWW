@@ -6,5 +6,4 @@ if(global.debug)
 	screen_clear(false,true);
 	event_next();
 	
-	
 }

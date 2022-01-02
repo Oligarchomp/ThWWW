@@ -47,9 +47,9 @@ if(global.gp_active)
 		break;
 	}
 	
-	var pretty_lenght = 210;
+	var pretty_lenght = 240;
 	
-	var fairy_lenght = 240;
+	var fairy_lenght = 320;
 	var fairy_y_off = 110;
 	var fairy_wait = 22;
 	var fairy_life = 12;
@@ -58,7 +58,7 @@ if(global.gp_active)
 	
 	if(step == 0)
 	{
-		var inst = create_enemy(EN_RED,room_width / 2, -20,120,2,4.5,-90);
+		var inst = create_enemy(EN_RED,room_width / 2, -20,140,2,4.5,-90);
 	}
 	
 	if(step < fairy_lenght)
