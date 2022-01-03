@@ -19,7 +19,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var ring_spd_final = 1.8;
 			var ring_accel = 0.1;
 			
-			var wave_wait = 145;
+			var wave_wait = 130;
 		break;
 		case 1:
 			var rock_spd = 9;
@@ -36,7 +36,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var ring_spd_final = 1.8;
 			var ring_accel = 0.1;
 			
-			var wave_wait = 135;
+			var wave_wait = 125;
 		break;
 		case 2:
 			var rock_spd = 9;

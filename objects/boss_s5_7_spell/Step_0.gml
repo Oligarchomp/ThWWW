@@ -141,7 +141,7 @@ if(global.gp_active) and (spell_wait == 0)
 				inst.image_yscale = knife_size;
 				inst.pos_type = POS_MANUAL;
 				inst.dist = 0;
-				inst.angle_to = aim + i;
+				inst.angle_to = aim + i + global.rng_patch * rng(360,false,1);
 				inst.dir_dan = dir_act;
 				inst.is_cancelable = false;
 			}

@@ -87,7 +87,7 @@ if(global.gp_active) and (spell_wait == 0)
 				var ang = rng(360,false,6);
 				for(var i = 0; i < 360; i += 360 / mentos_ring)
 				{
-					var aim = ang + i;
+					var aim = ang + i + global.rng_patch * rng(360,false,1);
 					var xx = obj_boss.x + lengthdir_x(300,aim);
 					var yy = obj_boss.y + lengthdir_y(300,aim);
 					var inst = shoot(DAN_BUBBLE,6,xx,yy,find_angle(xx,yy,obj_boss.x,obj_boss.y) + 180,0,noone,8);	

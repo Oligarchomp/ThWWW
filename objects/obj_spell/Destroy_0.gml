@@ -16,7 +16,15 @@ if(global.game_type == GAME_SPELL)
 	{
 		with(obj_boss)
 		{
-			boss_movement_goto(-200,-60,7);
+			switch(boss_id)
+			{
+				case BOSS_SERENE:
+					boss_movement_goto(-200,y,7);
+				break;
+				default:
+					boss_movement_goto(-200,-60,7);
+				break;
+			}
 			state = 1;
 		}
 	}

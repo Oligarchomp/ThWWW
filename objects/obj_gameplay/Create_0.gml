@@ -29,7 +29,7 @@ extend_extra = ds_list_create();
 ds_list_add(extend_extra,600,1400,9999);
 
 
-global.starting_bomb = global.rng_patch ? global.starting_bomb_rng : global.starting_bomb_normal;
+global.starting_bomb = (global.rng_patch and global.game_type == GAME_FULL) ? global.starting_bomb_rng : global.starting_bomb_normal;
 
 if(global.play_type == PLAY_MANUAL) or (global.replay_stage_nbr == 1)
 {
