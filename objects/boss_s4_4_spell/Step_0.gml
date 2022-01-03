@@ -83,7 +83,7 @@ if(global.gp_active) and (spell_wait == 0)
 				var inst = shoot(DAN_ROCK,6,obj_boss.x,obj_boss.y,i,0,sfx_spawn_light,7);
 				inst.pos_type = POS_MANUAL;
 				inst.dist = 0;
-				inst.angle_final = i + rock_side_off * wave_dir + rock_angle_dist_side / 2;
+				inst.angle_final = global.rng_patch ? rng(360,false,1) : i + rock_side_off * wave_dir + rock_angle_dist_side / 2;
 				inst.rot = rng(360,false,2);
 				inst.is_cancelable = false;
 			}
@@ -122,7 +122,7 @@ if(global.gp_active) and (spell_wait == 0)
 					var inst = shoot(DAN_ROCK,6,obj_boss.x,obj_boss.y,i ,0,sfx_spawn_light,7);
 					inst.pos_type = POS_MANUAL;
 					inst.dist = 0;
-					inst.angle_final = i + 180 * wave_dir + pos_off;
+					inst.angle_final = global.rng_patch ? rng(360,false,1) : i + 180 * wave_dir + pos_off;
 					inst.rot = rng(360,false,2);
 					inst.is_cancelable = false;
 				}

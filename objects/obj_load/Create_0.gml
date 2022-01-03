@@ -131,6 +131,9 @@ global.continues = global.continues_max;
 global.starting_life = 2;
 global.starting_bomb = 2;
 
+global.starting_bomb_normal = 2;
+global.starting_bomb_rng = 3;
+
 global.poc = 0;
 
 // to know what will be played

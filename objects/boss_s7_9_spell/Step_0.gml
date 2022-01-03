@@ -114,7 +114,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var dist = 340;
 			for(var i = 0; i < 360; i += 360 / mentos_nbr)
 			{
-				var ang = i;
+				var ang = i + global.rng_patch * rng(360,false,1);
 				var inst = shoot(DAN_MENTOS,1,room_width / 2 + lengthdir_x(dist,ang),room_height / 2 + lengthdir_y(dist,ang),0,0,sfx_redirect1,6);
 				inst.spawn_type = SPAWN_SCALE;
 				inst.x_offscreen = 400;

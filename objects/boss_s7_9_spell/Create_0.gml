@@ -21,11 +21,11 @@ wave_wait = 48;
 
 bubble_ray = 162;
 
-x_spd = pi / 355;
+x_spd = global.rng_patch ? rng(0.02,false,1) - 0.01: pi / 355;
 x_spd_ref = abs(x_spd);
-y_spd = pi / 550;
+y_spd = global.rng_patch ? rng(0.02,false,1) - 0.01 : pi / 550;
 y_spd_ref = abs(y_spd);
-z_spd = pi / 1100;
+z_spd = global.rng_patch ? rng(0.02,false,1) - 0.01 : pi / 1100;
 z_spd_ref = abs(z_spd);
 
 /*

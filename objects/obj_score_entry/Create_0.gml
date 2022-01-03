@@ -34,7 +34,7 @@ while (score_pos < array_length(scores)) and (scores[score_pos] > global.score)
 	score_pos += 1;
 }
 
-if(score_pos < 10) 
+if(score_pos < 10) and (!global.rng_patch)
 {
 	for(var j = array_length(scores) - 1; j > score_pos; j -= 1)
 	{
@@ -59,7 +59,7 @@ else
 	}
 }	
 
-if (global.continues != global.continues_max) or (global.rng_patch)
+if (global.continues != global.continues_max)
 {
 	state = 2;	
 }
