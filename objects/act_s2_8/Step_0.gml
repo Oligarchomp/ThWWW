@@ -53,7 +53,7 @@ if(global.gp_active)
 	{
 		if(step/fairy_wait < ds_list_size(x_fairy))
 		{
-			var inst = create_enemy(EN_GREEN,x_fairy[|step/fairy_wait],-20,fairy_life,4,4,-90)
+			var inst = create_enemy(EN_GREEN,x_fairy[|step/fairy_wait],-20,fairy_life,3,4,-90)
 		}
 	}
 	
@@ -129,7 +129,7 @@ if(global.gp_active)
 	}
 	
 	//big
-	with(obj_enemy4)
+	with(obj_enemy3)
 	{
 		switch(state)
 		{

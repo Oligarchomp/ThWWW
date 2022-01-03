@@ -3,105 +3,116 @@
 
 if(global.gp_active)
 {
+	
 	switch(global.difficulty)
 	{
 		case 0:
-			var bubble_wait = 28;
-			var bubble_ring = 8;
-			var bubble_spd = 3;
-			var pellet_ring = bubble_ring * 3;
-			var pellet_dist_div = 3;
+			var ice_row = 6;
+			var ice_dist = 20;
+			var ice_spd_max = 5.5;
+			var ice_spd_min = 4;
+			var ice_wait = 50;
+			var ice_nbr = 3;//how many wall per shot
 			
-			var dist_off = 3;
+			var ring_wait = 50;
+			var ring_spd = 3;
+			var ring_nbr = 8;
 		break;
 		case 1:
-			var bubble_wait = 20;
-			var bubble_ring = 12;
-			var bubble_spd = 3;
-			var pellet_ring = bubble_ring * 3;
-			var pellet_dist_div = 3;
+			var ice_row = 6;
+			var ice_dist = 20;
+			var ice_spd_max = 6;
+			var ice_spd_min = 4.5;
+			var ice_wait = 34;
+			var ice_nbr = 3;//how many wall per shot
 			
-			var dist_off = 3;
+			var ring_wait = 35;
+			var ring_spd = 3.2;
+			var ring_nbr = 12;
 		break;
 		case 2:
-			var bubble_wait = 18;
-			var bubble_ring = 14;
-			var bubble_spd = 3;
-			var pellet_ring = bubble_ring * 3;
-			var pellet_dist_div = 3;
+			var ice_row = 8;
+			var ice_dist = 14;
+			var ice_spd_max = 7;
+			var ice_spd_min = 4;
+			var ice_wait = 32;
+			var ice_nbr = 3;//how many wall per shot
 			
-			var dist_off = 3;
+			var ring_wait = 27;
+			var ring_spd = 3.5;
+			var ring_nbr = 18;
+			
 		break;
 		case 3:
-			var bubble_wait = 16;
-			var bubble_ring = 17;
-			var bubble_spd = 3;
-			var pellet_ring = bubble_ring * 3;
-			var pellet_dist_div = 3;
+			var ice_row = 10;
+			var ice_dist = 10;
+			var ice_spd_max = 8;
+			var ice_spd_min = 4.5;
+			var ice_wait = 30;
+			var ice_nbr = 3;//how many wall per shot
 			
-			var dist_off = 3;
+			var ring_wait = 20;
+			var ring_spd = 4;
+			var ring_nbr = 24;
+			
+			
 		break;
 	}
+	var time_before_cirno_freaking_dies = act_time_end;
 	
-	var shoot_lenght = 100;
-	
-	var fairy_life = 130;
-	switch(step)
+	if (step == 0)
 	{
-		case 0:
-		
-			var inst = create_enemy(EN_BLUE,room_width - 60, -10,fairy_life,5,5,-90);
-			inst.side = -1;
-			inst.item_nbr = 5;
-		break;
-		case 200:
-			var inst = create_enemy(EN_BLUE,60, -10,fairy_life,5,5,-90);
-			inst.side = 1;
-			inst.item_nbr = 5;
-		break;
+		var inst = create_enemy(EN_CIRNO,room_width / 2, -20,530,1,5,-90);
+		inst.item_nbr = 9;
 	}
 	
-	with(obj_enemy5)
+	
+	var my_step = step;
+	with(obj_enemy1)
 	{
 		switch(state)
 		{
-			case 0:
-				spd = goto_value(spd,0,0.15);
+			case 0://coming
+				spd = goto_value(spd,0,0.1);
 				if(spd == 0)
 				{
 					state = 1;
-					
-					angle_shoot = find_angle(x,y,obj_player.x,obj_player.y);
-					aim = find_angle(x,y,obj_player.x,obj_player.y);
+					ice_angle = 0;
 				}
 			break;
 			case 1://shoot
-				if(state_time < shoot_lenght)
+				if(state_time % ice_wait == 0)
 				{
-					if(state_time % bubble_wait == 0)
+					for (var a = 0; a < 360; a += 360 / ice_nbr)
 					{
-						shoot_ring(DAN_BUBBLE,1,bubble_ring,x,y,aim,bubble_spd,sfx_redirect1,5);
-						shoot_ring(DAN_PELLET,7,pellet_ring,x,y,aim,bubble_spd,noone,4);
-						aim += (360 / bubble_ring / pellet_dist_div - dist_off) * side;
+						var spd_plus = (ice_spd_max - ice_spd_min) / ice_row;
+						for(var i = ice_row; i > 0; i -= 1)
+						{
+							shoot_arc(DAN_RAINDROP,1,i,x,y,ice_angle + a,ice_dist,ice_spd_max - i * spd_plus,sfx_shot2,1);
+						}
 					}
+					ice_angle += ice_dist * 4;
 				}
-				else
+				if(state_time % ring_wait == ring_wait - 1)
 				{
-					state = 2;
+					shoot_ring(DAN_MENTOS,7,ring_nbr,x,y,999,ring_spd,sfx_shot3,2);
+					
 				}
-			break;
-			case 2:
-				if(state_time == 60)
+			
+				if(my_step == time_before_cirno_freaking_dies)
 				{
-					state = 3;
-					angle = find_angle(x,y,room_width / 2,y);
+					life = 0;
+					item_nbr = 0;
 				}
-			break;
-			case 3:
-				spd = goto_value(spd,2,0.1);
+			
 			break;
 		}
+		
+		
 	}
+	
+	
+	
 	
 }
 

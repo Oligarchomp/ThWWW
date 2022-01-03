@@ -93,7 +93,7 @@ if(global.gp_active)
 	
 	global.score -= global.score % 10;//failsafe
 	
-	score_to_draw += round(recursiv(score_to_draw,global.score,9,100));
+	score_to_draw += round(recursiv(score_to_draw,global.score,8,100));
 	score_to_draw -= score_to_draw % 10 
 	score_to_draw += global.continues_max - global.continues;
 }	
