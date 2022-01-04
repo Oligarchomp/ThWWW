@@ -12,6 +12,10 @@ switch(bgm)
 		var intro_length = 5.707;
 		var loop_lenght = 67.214;
 	break;
+	case mus_boss3:	
+		var intro_length = 5.488;
+		var loop_lenght = 79.059;
+	break;
 	case mus_stage2:
 		var intro_length = 15.58;
 		var loop_lenght = 112.21;

@@ -348,6 +348,7 @@
     {"id":{"name":"act_pre_end","path":"objects/act_pre_end/act_pre_end.yy",},"order":19,},
     {"id":{"name":"obj_enemy2","path":"objects/obj_enemy2/obj_enemy2.yy",},"order":1,},
     {"id":{"name":"boss_s6_2_spell","path":"objects/boss_s6_2_spell/boss_s6_2_spell.yy",},"order":4,},
+    {"id":{"name":"mus_boss3","path":"sounds/mus_boss3/mus_boss3.yy",},"order":7,},
     {"id":{"name":"sfx_warning","path":"sounds/sfx_warning/sfx_warning.yy",},"order":5,},
     {"id":{"name":"shoot_ring","path":"scripts/shoot_ring/shoot_ring.yy",},"order":3,},
     {"id":{"name":"obj_room_transition","path":"objects/obj_room_transition/obj_room_transition.yy",},"order":3,},

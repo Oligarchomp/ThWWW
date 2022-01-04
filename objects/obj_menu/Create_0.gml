@@ -10,8 +10,6 @@ if(global.need_intro) //and (!global.debug)
 }
 
 
-
-
 if(global.need_change_rng)
 {
 	global.rng_patch = !global.rng_patch;
@@ -1230,7 +1228,7 @@ menu =
 				title : get_text("mus_room_b3"),
 				comment : get_text("mus_com_b3"),
 				action : MENU_MUSIC,
-				music : noone,
+				music : mus_boss3,
 			},
 			{
 				title : get_text("mus_room_s4"),

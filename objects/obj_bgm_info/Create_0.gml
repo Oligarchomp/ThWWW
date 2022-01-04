@@ -7,7 +7,7 @@ old_state = -1;
 
 state_time = 0;
 
-y = 485;
+y = 484;
 x = room_width + 200;
 
 bgm_name = "Hey, there is no song dummy"

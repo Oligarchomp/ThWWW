@@ -99,7 +99,7 @@ if(global.gp_active) and (spell_wait == 0)
 				boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);
 			}
 			
-			obj_boss.in_position = false; //making pale spin
+			
 			
 			for(var i = 0; i < 360; i += 360 / 3)
 			{
@@ -117,6 +117,11 @@ if(global.gp_active) and (spell_wait == 0)
 			
 		break;
 
+	}
+	
+	if(state > 2)
+	{
+		obj_boss.in_position = false; //making pale spin	
 	}
 	
 	//walls around

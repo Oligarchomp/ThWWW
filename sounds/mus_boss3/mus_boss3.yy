@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "mus_stage3.ogg",
-  "duration": 133.664856,
+  "soundFile": "mus_boss3.ogg",
+  "duration": 91.7759857,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",
   },
   "resourceVersion": "1.0",
-  "name": "mus_stage3",
+  "name": "mus_boss3",
   "tags": [],
   "resourceType": "GMSound",
 }

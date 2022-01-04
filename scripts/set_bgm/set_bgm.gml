@@ -23,22 +23,23 @@ function set_bgm(argument0){
 				var inst = instance_create_depth(0,0,0,obj_bgm_info);
 				inst.bgm_name = get_text("mus_stage2_comp");
 				inst.color = $fffffff;
-				inst.off = -18;
+				inst.off = -20;
 			break;
 			case mus_stage3:
 				var name = get_text("mus_stage3");
-				col = $121212;
 				
 				var inst = instance_create_depth(0,0,0,obj_bgm_info);
 				inst.bgm_name = get_text("mus_stage3_comp");
-				inst.color = $121212;
-				inst.off = -18;
+				inst.off = -20;
 			break;
 			case mus_boss1:
 				var name = get_text("mus_boss1");
 			break;
 			case mus_boss2:
 				var name = get_text("mus_boss2");
+			break;
+			case mus_boss3:
+				var name = get_text("mus_boss3");
 			break;
 			default:
 				var name = "No music yet";
