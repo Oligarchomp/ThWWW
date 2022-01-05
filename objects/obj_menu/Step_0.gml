@@ -70,6 +70,7 @@ if(cursor_lockout == 0)
 			play_sound(sfx_menu_move,1,false);
 			
 			menu_description_alpha = 0;
+			music_lock_listen = 0;
 		}
 	
 		switch(level)
@@ -468,7 +469,14 @@ if(cursor_lockout == 0)
 					cursor_lockout = 100000;
 				break;
 				case MENU_MUSIC:
-					set_bgm(array_check[cursor[level]].music)
+					if(array_check[cursor[level]].title != lock_name) or (music_lock_listen > 0)
+					{
+						set_bgm(array_check[cursor[level]].music)
+					}
+					else
+					{
+						music_lock_listen = 30;
+					}
 				break;
 				case MENU_PLAY_REPLAY:
 					var rep = "Replay" + string(cursor[1]) + ".txt";
@@ -606,6 +614,8 @@ for(var i = 0; i < 3; i += 1)
 	player[i].alpha = goto_value(player[i].alpha,player[i].alpha_to,0.2);
 }
 
+
+music_lock_listen = goto_value(music_lock_listen,0,1);
 
 step += 1;
 

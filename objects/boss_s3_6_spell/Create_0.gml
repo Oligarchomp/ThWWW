@@ -6,7 +6,7 @@ event_inherited();
 
 spell_set_spell("s3_3",BOSS_PALE,20000000)
 spell_set_name("spell_s3_3a","spell_s3_3a","spell_s3_3b","spell_s3_3b")
-spell_set_life(1000,240);
+spell_set_life(970,240);
 spell_set_time(20,true,95);
 
 boss_movement_goto(room_width / 2, 100,7);

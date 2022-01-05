@@ -52,11 +52,11 @@ if(global.gp_active)
 				break;
 			}
 			
-			var boss_wait = 140;
+			var boss_wait = 70;
 			
 			if(step % boss_wait == 0)
 			{
-				boss_movement_random(3,9,3);
+				boss_movement_random(3,15,5);
 			}
 	
 			switch(state)

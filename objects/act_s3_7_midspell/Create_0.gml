@@ -14,7 +14,18 @@ with(obj_boss)
 	instance_create_depth(x,y,depth + 1, obj_boss_indicator);
 }
 
+angle_pale = 90;
+dist_pale = 120;
+dir = 1;
 
+x_ref = room_width / 2;
+y_ref = 200;
+
+angle_shoot = 0;
+first_wave = true;
+
+
+boss_movement_goto(room_width / 2, y_ref + lengthdir_y(dist_pale,90),6);
 
 
 // to sync with the music

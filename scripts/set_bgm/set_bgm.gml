@@ -50,4 +50,9 @@ function set_bgm(argument0){
 		inst.bgm_name = string_insert(name,"BGM : ",7);
 		inst.color = col
 	}
+	
+	if(room != room_main) and (argument0 != noone)
+	{
+		data_write("Data.ini","music",argument0,1)
+	}
 }

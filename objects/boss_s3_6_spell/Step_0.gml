@@ -47,13 +47,14 @@ if(global.gp_active) and (spell_wait == 0)
 			switch(state_time)
 			{
 				case 0:
-					boss_charge(obj_boss.x,obj_boss.y);
+					var inst = boss_charge(obj_boss.x,obj_boss.y);
+					inst.owner = obj_boss;
 					boss_movement_goto(room_width / 2, y_ref + lengthdir_y(dist_pale,angle_pale),6);
 				break;
-				case 40:
+				case 30:
 					boss_charge(obj_boss.x,obj_boss.y);
 				break;
-				case 70:
+				case 60:
 					state = 1;
 					obj_boss.pos_type = POS_MANUAL;
 				break;
@@ -77,7 +78,8 @@ if(global.gp_active) and (spell_wait == 0)
 				angle_pale = 90;
 				obj_boss.pos_type = POS_SP;
 				boss_movement_goto(room_width / 2, room_height / 2,8);
-				boss_charge(obj_boss.x,obj_boss.y);
+				var inst = boss_charge(obj_boss.x,obj_boss.y);
+				inst.owner = obj_boss;
 			}
 		break;
 		case 2:
@@ -88,7 +90,7 @@ if(global.gp_active) and (spell_wait == 0)
 			}
 		break;
 		case 3:
-			if(state_time == 40)
+			if(state_time == 30)
 			{
 				state = 4;
 			}
@@ -98,7 +100,6 @@ if(global.gp_active) and (spell_wait == 0)
 			{
 				boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);
 			}
-			
 			
 			
 			for(var i = 0; i < 360; i += 360 / 3)

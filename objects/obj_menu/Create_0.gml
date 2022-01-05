@@ -1604,9 +1604,18 @@ for(var i = 0; i < array_length(menu[3].param); i += 1)//stage
 	}
 }
 
+// locking musics
+lock_name = "??????????";
+for(var i = 0; i < array_length(menu[7].param) ; i += 1)
+{
+	if(!data_read("Data.ini","music",menu[7].param[i].music))
+	{
+		menu[7].param[i].title = lock_name
+		menu[7].param[i].comment = get_text("menu_music_lock");
+	}
+}
 
-
-
+music_lock_listen = 0;
 
 //create bubbles
 for(var y_bubble = 300; y_bubble > 0; y_bubble -= 50)

@@ -97,7 +97,7 @@ controle_shoulder = Shoulder
 
 menu_lock_comment = Capture this spell on this difficulty or higher to unlock its comment.
 menu_lock_comment_extra = Capture this spell to unlock its comment.
-
+menu_music_lock = You haven't encounter this track in game yet.$But you can still listen to it if you want.$Select it two times in quick succession.
 
 pause_resume = Resume
 pause_title = Go back to title

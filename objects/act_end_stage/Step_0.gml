@@ -3,7 +3,7 @@
 
 if(global.gp_active)
 {
-	bgm_vol = goto_value(bgm_vol,0,0.025);
+	bgm_vol = goto_value(bgm_vol,0,0.01);
 	audio_emitter_gain(global.bgm_emitter,bgm_vol)
 	
 	switch(state)
