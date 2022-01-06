@@ -1323,7 +1323,13 @@ menu =
 	{
 		title : "CREDIT",
 		description : get_text("menu_credit"),
-		action : MENU_MAKE_SOUND
+		action : is_extra_valid ? MENU_MENU : MENU_INVALID,
+		param : 
+		[
+			{
+				action : MENU_NOTHING
+			}
+		]
 	},
 	{
 		title : "QUIT",

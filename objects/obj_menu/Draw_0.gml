@@ -228,6 +228,10 @@ switch(level)
 				
 				draw_sprite_ext(spr_manual,cursor[level],300,0,1,1,0,c_white,menu_description_alpha)
 			break;
+			case 9://credit
+				draw_sprite(spr_credit,0,600,50);
+				draw_sprite(spr_pale_credit,step / 50,170,340);
+			break;
 		}
 	break;
 	case 2:

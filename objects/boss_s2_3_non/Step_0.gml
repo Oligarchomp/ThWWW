@@ -14,12 +14,12 @@ if(global.gp_active)
 				case 0:
 					var wait_move = 120
 		
-					var wait_knife = 25;
+					var wait_knife = 21;
 					var knife_nbr_row = 2;
 					var knife_nbr_arc = 3;
 					var knife_spd_min = 2.5;
 					var knife_spd_max = 2.7;
-					var knife_dist = 37
+					var knife_dist = 35
 			
 					var angle_shoot_plus = -knife_dist * knife_nbr_arc ;
 				break;

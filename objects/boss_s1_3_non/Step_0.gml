@@ -17,8 +17,8 @@ if(global.gp_active)
 			case 0:
 				var move_wait = 150
 				
-				var ring_wait = 90;
-				var ring_nbr = 4;
+				var ring_wait = 80;
+				var ring_nbr = 5;
 				var apple_nbr = 2;
 			break;
 			case 1:

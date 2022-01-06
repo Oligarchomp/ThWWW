@@ -17,7 +17,7 @@ if(global.gp_active)
 			var wall_nbr = 4;
 			var wave = 1;
 			var wait = 20;
-			var arc_num = 1;
+			var arc_num = 3;
 		break;
 		case 1:
 			var big_wait_shoot = 70;

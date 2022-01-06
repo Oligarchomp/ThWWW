@@ -119,7 +119,7 @@ global.spell_file = "SpellData.ini"
 //SpellDataPractice.ini
 
 global.player_chosen = P_REIMU;
-global.difficulty = 3;
+global.difficulty = 1;
 // 0 = easy;
 // 1 = normal;
 // 2 = hard;

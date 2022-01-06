@@ -16,8 +16,8 @@ if(global.gp_active)
 	
 					var bubble_wait = 55;
 			
-					var arrow_nbr = 5;
-					var arrow_spd = 4;
+					var arrow_nbr = 6;
+					var arrow_spd = 3.8;
 			
 					var arrow_wait = 20;
 					var arrow_dist = 10;
@@ -40,11 +40,11 @@ if(global.gp_active)
 	
 					var bubble_wait = 40;
 			
-					var arrow_nbr = 7;
+					var arrow_nbr = 8;
 					var arrow_spd = 5;
 			
 					var arrow_wait = 10;
-					var arrow_dist = 4;
+					var arrow_dist = 180 / arrow_nbr / 4 ;
 				break;
 				case 3:
 					var bubble_nbr = 24;
@@ -78,7 +78,7 @@ if(global.gp_active)
 			if(step % arrow_wait == 0)
 			{
 				shoot_ring(DAN_ARROWHEAD,3,arrow_nbr,obj_boss.x,obj_boss.y,angle_shoot2,arrow_spd,sfx_shot3,1);
-				shoot_ring(DAN_ARROWHEAD,3,arrow_nbr,obj_boss.x,obj_boss.y,-angle_shoot2,arrow_spd,sfx_shot3,1);
+				shoot_ring(DAN_ARROWHEAD,3,arrow_nbr,obj_boss.x,obj_boss.y,-angle_shoot2 - 180 / arrow_nbr,arrow_spd,sfx_shot3,1);
 		
 		
 				angle_shoot2 += arrow_dist;

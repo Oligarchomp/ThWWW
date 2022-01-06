@@ -34,7 +34,7 @@ if(global.gp_active)
 			var bubble_spd_max = 3;
 		break;
 		case 2:
-			var aim_arc_nbr = 2;
+			var aim_arc_nbr = 3;
 			
 			var mentos_nbr = 10;
 			var mentos_plus = 12;

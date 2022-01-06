@@ -27,7 +27,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var knife_spd_max = 3.5;
 			var knife_dist = 15
 			
-			var angle_shoot_plus = knife_dist * knife_nbr_arc;
+			var angle_shoot_plus = knife_dist * knife_nbr_arc + 4;
 		break;
 		case 2:
 			var wait_move = 120

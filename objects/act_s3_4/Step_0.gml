@@ -14,7 +14,6 @@ if(global.gp_active)
 			var mentos_wait = 18;
 			var mentos_ring = 6;
 			var mentos_spd_min = 2;
-			var mentos_spd_git = 0.5;
 		break;
 		case 1:
 			var orb_wait = 26;
@@ -25,8 +24,7 @@ if(global.gp_active)
 			
 			var mentos_wait = 10;
 			var mentos_ring = 10;
-			var mentos_spd_min = 2;
-			var mentos_spd_git = 1;
+			var mentos_spd_min = 2.3;
 		break;
 		case 2:
 			var orb_wait = 22;
@@ -37,8 +35,7 @@ if(global.gp_active)
 			
 			var mentos_wait = 9;
 			var mentos_ring = 12;
-			var mentos_spd_min = 2;
-			var mentos_spd_git = 1;
+			var mentos_spd_min = 2.5;
 		break;
 		case 3:
 			var orb_wait = 20;
@@ -50,7 +47,6 @@ if(global.gp_active)
 			var mentos_wait = 8;
 			var mentos_ring = 14;
 			var mentos_spd_min = 3;
-			var mentos_spd_git = 0;
 		break;
 	}
 	
@@ -133,8 +129,7 @@ if(global.gp_active)
 				{
 					if(state_time % mentos_wait == 0)
 					{
-						var sp = mentos_spd_min + rng(mentos_spd_git,false,9);
-						shoot_ring(DAN_BALL,7,mentos_ring,x,y,rng(360,false,6),sp,sfx_shot1,6);
+						shoot_ring(DAN_BALL,7,mentos_ring,x,y,rng(360,false,6),mentos_spd_min,sfx_shot1,6);
 					}
 				}
 				else

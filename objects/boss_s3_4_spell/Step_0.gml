@@ -8,7 +8,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var spin_spd = 4;
 			
 			var bubble_way = 4;
-			var bubble_spd = 2;
+			var bubble_spd = 1.7;
 			var bubble_time = 1;
 			
 			var head_way = 0;
