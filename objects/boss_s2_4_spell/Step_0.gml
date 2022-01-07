@@ -197,8 +197,8 @@ if(global.gp_active) and (spell_wait == 0)
 		
 		if(step % aim_wait == 0)
 		{
-			shoot_ring_row(DAN_KNIFE,6,aim_nbr_ring,aim_nbr_row,obj_boss.x,obj_boss.y,999,aim_spd_min,aim_spd_max,sfx_redirect1,3);
-			shoot_ring_row(DAN_KNIFE,1,aim_nbr_ring,aim_nbr_row,obj_boss.x,obj_boss.y,998,aim_spd_min,aim_spd_max,sfx_redirect1,2);
+			shoot_ring_row(DAN_KNIFE,6,aim_nbr_ring,aim_nbr_row,obj_boss.x,obj_boss.y,999,aim_spd_min,aim_spd_max,sfx_redirect1,2);
+			shoot_ring_row(DAN_KNIFE,1,aim_nbr_ring,aim_nbr_row,obj_boss.x,obj_boss.y,998,aim_spd_min,aim_spd_max,sfx_redirect1,3);
 		}
 		
 		//rain
@@ -214,7 +214,7 @@ if(global.gp_active) and (spell_wait == 0)
 	}
 	
 	
-	with(obj_danmaku2)
+	with(obj_danmaku3)
 	{
 		spd = goto_value(spd,0,0.02)
 		if(spd==0)

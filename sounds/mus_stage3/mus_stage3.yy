@@ -1,6 +1,6 @@
 {
   "conversionMode": 0,
-  "compression": 1,
+  "compression": 0,
   "volume": 1.0,
   "preload": false,
   "bitRate": 128,
@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "mus_stage3.ogg",
+  "soundFile": "mus_stage3.wav",
   "duration": 133.664856,
   "parent": {
     "name": "Music",

@@ -1,6 +1,6 @@
 {
   "conversionMode": 0,
-  "compression": 1,
+  "compression": 0,
   "volume": 1.0,
   "preload": false,
   "bitRate": 128,
@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "mus_boss1.ogg",
+  "soundFile": "mus_boss1.wav",
   "duration": 131.50087,
   "parent": {
     "name": "Music",

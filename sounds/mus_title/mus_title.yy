@@ -1,6 +1,6 @@
 {
   "conversionMode": 0,
-  "compression": 1,
+  "compression": 0,
   "volume": 1.0,
   "preload": false,
   "bitRate": 128,
@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "mus_title.ogg",
-  "duration": 90.4260559,
+  "soundFile": "mus_title.wav",
+  "duration": 98.42549,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",
