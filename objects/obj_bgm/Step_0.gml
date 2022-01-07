@@ -26,7 +26,7 @@ switch(bgm)
 	break;
 	case mus_stage3:
 		var intro_length = 13.246;
-		var loop_lenght = 113.256;
+		var loop_lenght = 113.255;
 	break;
 	default:
 		var intro_length = 100000;
@@ -34,7 +34,18 @@ switch(bgm)
 	break;
 }
 
+if(keyboard_check_pressed(ord("T")))
+{
+	if(global.debug)
+	{
+		audio_sound_set_track_position(currently_playing,loop_lenght + floor(intro_length / 2));	
+	}	
+}
+
+
 var audio_pos = audio_sound_get_track_position(currently_playing)
+//audio_sound_set_track_position(currently_playing,audio_pos);
+
 if(audio_pos > intro_length + loop_lenght)
 {
 	audio_sound_set_track_position(currently_playing,audio_pos - loop_lenght);

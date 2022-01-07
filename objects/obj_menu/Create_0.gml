@@ -12,6 +12,7 @@ else
 {
 	set_bgm(mus_title);
 }
+need_music_time = -1;
 
 
 if(global.need_change_rng)

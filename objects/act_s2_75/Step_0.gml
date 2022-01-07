@@ -84,8 +84,8 @@ if(global.gp_active)
 	switch(step)
 	{
 		case 0:
-			var inst = create_enemy(EN_BLUE,room_width - 80, -10,fairy_life,5,5,-90);
-			inst.side = -1;
+			var inst = create_enemy(EN_BLUE,80, -10,fairy_life,5,5,-90);
+			inst.side = 1;
 			inst.item_nbr = 5;
 		break;
 		case 20:
@@ -94,8 +94,8 @@ if(global.gp_active)
 			step_ref = step;
 		break;
 		case 250:
-			var inst = create_enemy(EN_BLUE,80, -10,fairy_life,5,5,-90);
-			inst.side = 1;
+			var inst = create_enemy(EN_BLUE,room_width - 80, -10,fairy_life,5,5,-90);
+			inst.side = -1;
 			inst.item_nbr = 5;
 		break;
 		case 270:

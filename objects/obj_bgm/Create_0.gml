@@ -5,3 +5,4 @@ bgm = noone;
 
 currently_playing = noone;
 update = true;
+

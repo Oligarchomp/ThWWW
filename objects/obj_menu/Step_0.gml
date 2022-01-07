@@ -4,7 +4,15 @@
 if(instance_exists(obj_intro))
 {
 	cursor_lockout = 150;
+	need_music_time = 70;
 }
+
+if(need_music_time == 0)
+{
+	set_bgm(mus_title);	
+}
+
+need_music_time = goto_value(need_music_time,-1,1);
 
 
 if(step % 50 == 0)
