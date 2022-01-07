@@ -157,7 +157,6 @@ switch(pause_state)
 	case 1: //paused
 		if(pause_state_time == 0)
 		{
-			
 			// replay sync
 			if(global.play_type == PLAY_REPLAY)
 			{

@@ -8,6 +8,7 @@ global.boss = BOSS_PALE;
 
 instance_create_depth(0,0,0,obj_boss);
 obj_boss.spd = 2;
+need_boss_info = true;
 
 switch(global.player_chosen)
 {

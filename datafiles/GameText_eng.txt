@@ -21,7 +21,7 @@ mus_boss3 = Fantastic Friend [Comp: Jani]
 
 
 
-mus_room_title = nothing
+mus_room_title = Find name
 mus_room_s1 = Magical Hopalong Cassidy Station
 mus_room_b1 = AN APPLE DISASTER!!
 mus_room_s2 = The Broken Sky Reflected by the Lake ~ Crustacean Parade
@@ -37,11 +37,11 @@ mus_room_b6 = nothing
 mus_room_s7 = nothing
 mus_room_b7 = nothing
 mus_room_end = nothing
-mus_room_score = nothing
+mus_room_score = Player's Score
 
 music_comment = Music Comment:
 
-mus_com_title = comment
+mus_com_title = Composition: Kaioshi Kojima
 mus_com_s1 = Composition: Toby Fox$Arrangement: Sozoro Namino
 mus_com_b1 = Composition: Toby Fox$Arrangement: Princess Sylvysprit
 mus_com_s2 = Composition: Armand
@@ -57,7 +57,7 @@ mus_com_b6 = comment
 mus_com_s7 = comment
 mus_com_b7 = comment
 mus_com_end = comment
-mus_com_score = comment
+mus_com_score = Composition: Kaioshi Kojima
 
 
 menu_start = Start Game
@@ -220,7 +220,7 @@ diag_s1_m13 = Saying it like that does sound stupid, but that's what I intend to
 diag_s1_m14 = *Crunch* Peuh, awful and clearly not poisoned. What a shame.
 
 diag_s1_s1 = "Hey Sanae, the sky is broken. Now go and do something about that. And be back for dinner."
-diag_s1_s2 = God, Why are Gods always so indolent?
+diag_s1_s2 = God, why are Gods always so indolent?
 diag_s1_s3 = Hello, young lady.
 diag_s1_s4 = Want to take a bite out of one of them?
 diag_s1_s5 = Uh? Sure. I didn't eat anything this morning.
@@ -289,7 +289,7 @@ diag_s3_r8 = What? No I'm just curious! ^^
 diag_s3_r9 = I'm doing my duty as the Guardian of The Hakurei Barrier, now if you'll excuse me, I'll...
 diag_s3_r10 = Hakurei?
 diag_s3_r11 = Could it be...that you are the Hakurei Shrine Maiden? :?
-diag_s3_r12 = Uhh... Usually when Youkai think of Shrine Maidens, they'll think of me before Sanae.
+diag_s3_r12 = Uhh... Usually when Youkais think of Shrine Maidens, they'll think of me before Sanae.
 diag_s3_r13 = That will not do! The Hakurei are the natural enemy of the Moriya!! Everyone knows that!! 
 diag_s3_r14 = In what time do you think you are living in? 2007?
 diag_s3_r15 = Silence Hakurei! I'll take you down, right here and right now!! >:(
@@ -326,7 +326,7 @@ diag_s3_m23 = Mmmhh...looks like I'm actually going to take a shower after all..
 diag_s3_s1 = I can't really see a thing, but Bhavaagra should be a little higher.
 diag_s3_s2 = Maybe I sould have went straight up instead of going down the mountain to try to reach for Reimu...
 diag_s3_s3 = What a pleasant surprise!
-diag_s3_s4 = Hello, lady Kochiya. It has been a long time, hasn't it? :)
+diag_s3_s4 = Hello, lady Kochiya! It has been a long time, hasn't it? :)
 diag_s3_s5 = Do I...know you?
 diag_s3_s6 = W...what? You don't remember me?? O_o 
 diag_s3_s7 = I usually remember pretty well people with freaky clothing style...

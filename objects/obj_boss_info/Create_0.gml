@@ -31,8 +31,16 @@ switch(global.stage)
 		spell_nbr = 5;
 	break;
 	case 7:
-		name = get_text("boss_reverence");
-		spell_nbr = 10;
+		if(global.boss = BOSS_REVERENCE)
+		{
+			name = get_text("boss_reverence");
+			spell_nbr = 10;
+		}
+		else
+		{
+			name = get_text("boss_pale");
+			spell_nbr = 3;
+		}
 	break;
 }
 

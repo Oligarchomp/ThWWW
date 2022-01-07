@@ -218,6 +218,11 @@ switch(level)
 						draw_text_ext_color(100,448,check[i].comment,20,750,c_white,c_white,c_white,c_white,menu_description_alpha);
 					}
 				}
+				
+				if(rng_unlock)
+				{
+					draw_sprite(spr_rev_music,step / 40,300,220)
+				}
 			break;
 			case 8://manual
 				for(var i = 0; i < array_length(check); i += 1)
@@ -230,7 +235,7 @@ switch(level)
 			break;
 			case 9://credit
 				draw_sprite(spr_credit,0,600,50);
-				draw_sprite(spr_pale_credit,step / 50,170,340);
+				draw_sprite(spr_pale_credit,step / 40,170,340);
 			break;
 		}
 	break;

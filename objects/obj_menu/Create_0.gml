@@ -8,6 +8,10 @@ if(global.need_intro) //and (!global.debug)
 	instance_create_depth(0,0,0,obj_intro)	
 	global.need_intro = false;
 }
+else
+{
+	set_bgm(mus_title);
+}
 
 
 if(global.need_change_rng)
@@ -1192,7 +1196,7 @@ menu =
 				title : get_text("mus_room_title"),
 				comment : get_text("mus_com_title"),
 				action : MENU_MUSIC,
-				music : noone,
+				music : mus_title,
 			},
 			{
 				title : get_text("mus_room_s1"),
@@ -1612,7 +1616,7 @@ for(var i = 0; i < array_length(menu[3].param); i += 1)//stage
 
 // locking musics
 lock_name = "??????????";
-for(var i = 0; i < array_length(menu[7].param) ; i += 1)
+for(var i = 1; i < array_length(menu[7].param) ; i += 1)
 {
 	if(!data_read("Data.ini","music",menu[7].param[i].music))
 	{

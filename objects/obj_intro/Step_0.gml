@@ -23,6 +23,7 @@ if(step == 180) or (global.shot_down)
 	}
 	
 	instance_destroy();
+	set_bgm(mus_title);
 }
 
 
