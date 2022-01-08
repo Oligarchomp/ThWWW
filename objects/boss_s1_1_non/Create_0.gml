@@ -5,7 +5,7 @@
 event_inherited();
 
 
-spell_set_life(540,130);
+spell_set_life(600,130);
 spell_set_time(16,false,100)
 
 shot_dir = 1;

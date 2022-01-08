@@ -53,12 +53,26 @@ if(audio_pos > intro_length + loop_lenght)
 
 if(update)
 {
+	if(bgm == mus_score)
+	{
+		score_music_mem = asset_get_index(audio_get_name(currently_playing))
+		score_time_mem = audio_sound_get_track_position(currently_playing);
+	}
+	
 	update = false;
 	audio_stop_sound(currently_playing);
 	
 	if(bgm != noone)
 	{
-		currently_playing = audio_play_sound_on(global.bgm_emitter,bgm,true,1);
+		if(bgm != -1)
+		{
+			currently_playing = audio_play_sound_on(global.bgm_emitter,bgm,true,1);
+		}
+		else // continuing song after gameover
+		{
+			currently_playing = audio_play_sound_on(global.bgm_emitter,score_music_mem,true,1);
+			audio_sound_set_track_position(currently_playing,score_time_mem);
+		}
 	}
 }
 	
@@ -68,7 +82,7 @@ if(global.gp_active)
 }
 else
 {
-	if(global.game_type != GAME_SPELL)
+	if(global.game_type != GAME_SPELL) and (asset_get_index(audio_get_name(currently_playing)) != mus_score)
 	{
 		audio_pause_sound(currently_playing);
 	}

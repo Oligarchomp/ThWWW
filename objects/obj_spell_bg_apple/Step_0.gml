@@ -8,7 +8,7 @@ if(global.gp_active)
 {
 	
 	y += arrow_spd;
-	y %= height * 2;
+	y %= height;
 	
 	
 	

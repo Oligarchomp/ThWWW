@@ -100,6 +100,8 @@ if(pause_state == 1)
 				
 					play_sound(sfx_extend,1,false);
 				
+					continue_song = true;
+					
 					switch(global.continues)
 					{
 						case 0:

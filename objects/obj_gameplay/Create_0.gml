@@ -198,6 +198,8 @@ cursor_lockout = 0;
 cursor = [0,0];
 level = 0;
 
+continue_song = false;
+
 pause = 
 [
 	{

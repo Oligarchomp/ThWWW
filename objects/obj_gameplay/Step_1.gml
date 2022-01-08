@@ -157,6 +157,11 @@ switch(pause_state)
 	case 1: //paused
 		if(pause_state_time == 0)
 		{
+			if(pause_type = PAUSE_GAMEOVER)
+			{
+				set_bgm(mus_score);
+			}
+			
 			// replay sync
 			if(global.play_type == PLAY_REPLAY)
 			{
@@ -198,6 +203,13 @@ switch(pause_state)
 		pause_alpha = goto_value(pause_alpha,0,1 / pause_spd);
 		if(pause_alpha == 0)
 		{
+			
+			if(continue_song)
+			{
+				continue_song = false;
+				set_bgm(-1);//-1 means restarting remembered song	
+			}
+			
 			pause_state = 0;
 			pause_type = PAUSE_MANUAL;
 			

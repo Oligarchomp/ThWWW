@@ -80,7 +80,7 @@ is_timeout = false;
 time = 10 * 60;
 time_left = time;
 
-time_ticking_low = 15 * 60 // if time above this value, clock starts ticking at 10, else at 5
+time_ticking_low = 16 * 60 // if time above this value, clock starts ticking at 10, else at 5
 
 bonus = 0;
 bonus_max = bonus;
