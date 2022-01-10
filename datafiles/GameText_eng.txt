@@ -21,7 +21,7 @@ mus_boss3 = Fantastic Friend [Comp: Jani]
 
 
 
-mus_room_title = Find name
+mus_room_title = Tale of the not so Eastern Story
 mus_room_s1 = Magical Hopalong Cassidy Station
 mus_room_b1 = AN APPLE DISASTER!!
 mus_room_s2 = The Broken Sky Reflected by the Lake ~ Crustacean Parade
@@ -181,7 +181,7 @@ spell_s7_mid1 = Art Sign - [Personal Interpretation!]
 spell_s7_mid2 = Game Sign - [Admirer For The Likes of You!]
 spell_s7_mid3 = [See? The World is Revolving!]
 spell_s7_1 = World Creation - [Welcome to My Home]
-spell_s7_2 = World of Connections - [Reborned Revelation]
+spell_s7_2 = World of Self - [Reborned Revelation]
 spell_s7_3 = Entropy World - [A Broken Metronome I Picked Up Over There]
 spell_s7_4 = Death World - [Unmoved by the World]
 spell_s7_5 = Imaginary and Real World - [Flammarion Engraving]

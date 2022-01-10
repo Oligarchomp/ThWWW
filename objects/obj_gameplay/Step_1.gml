@@ -51,6 +51,8 @@ if(global.gp_active)
 						case GAME_EXTRA:
 							instance_create_depth(280,40,0,obj_score_entry);
 							
+							set_bgm(mus_score);
+							
 							data_write("Data.ini","data","rng_unlock",1); //unlock rng patch
 						break;
 					}
