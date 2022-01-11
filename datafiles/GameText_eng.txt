@@ -278,7 +278,7 @@ diag_s2_s11 = No way, back off!
 diag_s2_s12 = The enemy Youkai: Exterminated!     My hair condition: Intact!            Clear Bonus: All mine!
 
 
-diag_s3_r1 = It's pretty chilly up there. Why are Shrine Maiden clothes so airy?
+diag_s3_r1 = It's pretty chilly up there. Shrine Maiden clothes really aren't the best in those situations.
 diag_s3_r2 = Did they not take into account the fact that they will fly to Heaven to solve Incidents?
 diag_s3_r3 = I've found a Shrine Maiden!
 diag_s3_r4 = But it's not Lady Kochiya. How sad!

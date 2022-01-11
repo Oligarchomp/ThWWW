@@ -2,15 +2,6 @@
 // You can write your code in this editor
 if (global.debug)
 {
-	if (keyboard_check(vk_space))
-	{
-		room_speed = 300;
-	}
-	else
-	{
-		room_speed = 60;
-	}
-	
 	if(room = room_gp)
 	{
 		if(global.time % 60 == 0)
@@ -20,3 +11,13 @@ if (global.debug)
 		}
 	}
 }
+
+if (keyboard_check(vk_space)) and (global.debug) 
+{
+	room_speed = 300;
+}
+else
+{
+	room_speed = 60;
+}
+	
