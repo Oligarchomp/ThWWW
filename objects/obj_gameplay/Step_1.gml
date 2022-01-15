@@ -81,10 +81,7 @@ if(global.gp_active)
 		
 	}
 
-	
-	
-
-	if(global.item_nbr >= item_extend[|0])
+	if(global.item_nbr >= item_extend[|0]) and (global.item_nbr < 999)
 	{
 		ds_list_delete(item_extend,0);
 		
@@ -126,7 +123,7 @@ if(global.life < 0) and (pause_state == 0)
 		{
 			instance_create_depth(280,40,0,obj_score_entry);
 			
-			if(global.score > global.hiscore)
+			if(global.score > global.hiscore) and (!global.rng_patch)
 			{
 				global.hiscore = global.score;
 			}

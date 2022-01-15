@@ -6,9 +6,9 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var mentos_row = 3;
+			var mentos_row = 1;
 			var mentos_spd_min = 2.3;
-			var mentos_spd_max = 3.6;
+			var mentos_spd_max = 3;
 			
 			var pretty_wait = 16;
 			var pretty_ring = 10;

@@ -65,6 +65,12 @@ if(global.play_type == PLAY_MANUAL) or (global.replay_stage_nbr == 1)
 		break;
 	}
 	
+	item_extend_ref = ds_list_create()
+	for(var i = 0; i < ds_list_size(item_extend); i += 1)
+	{
+		ds_list_add(item_extend_ref,item_extend[|i])	
+	}
+	
 	global.item_nbr = 0 // how many point item collected
 	global.graze = 0;
 }

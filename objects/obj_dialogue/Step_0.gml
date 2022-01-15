@@ -25,6 +25,7 @@ if(global.gp_active)
 			text_alpha = goto_value(text_alpha,1,0.1);
 			
 			art_alpha = goto_value(art_alpha,1,0.15);
+			text_alpha_diag = goto_value(text_alpha_diag,1,0.2);
 		break;
 		case 1:// disappearing
 			alpha_min = 0;
@@ -47,9 +48,6 @@ if(global.gp_active)
 				instance_destroy();
 			}
 		break;
-		
-		
-		
 	}
 	
 	// setting alpha and position
@@ -67,8 +65,6 @@ if(global.gp_active)
 	
 	
 	current_step += 1;
-	
-	
 	
 	
 		
@@ -127,7 +123,7 @@ if(global.gp_active)
 		}
 	}
 	
-	if (go_to_next)
+	if (go_to_next) and (state != 1)
 	{
 		play_sound(sfx_dialogue,1,false);
 		
@@ -137,6 +133,8 @@ if(global.gp_active)
 			current_step = 0;
 			
 			auto_skip = auto_skip_ref;
+			
+			text_alpha_diag = 0;
 		}
 		else
 		{

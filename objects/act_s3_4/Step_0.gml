@@ -59,15 +59,15 @@ if(global.gp_active)
 		case 0:
 		case 300:
 			var inst = create_enemy(EN_WHITE,room_width / 2,-20,90,2,4,-90)
-			inst.item_nbr = 14;
+			inst.item_nbr = 12;
 			inst.fairy_dir = act_dir;
 			act_dir *= -1;
 			
 			var inst = create_enemy(EN_WHITE,80,-20,small_life,1,4.5,-90)
-			inst.item_nbr = 5;
+			inst.item_nbr = 4;
 			
 			var inst = create_enemy(EN_WHITE,320,-20,small_life,1,4.5,-90)
-			inst.item_nbr = 5;
+			inst.item_nbr = 4;
 		break;
 	}
 	

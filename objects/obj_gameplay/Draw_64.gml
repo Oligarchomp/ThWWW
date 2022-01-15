@@ -55,6 +55,7 @@ draw_text(614,103,"SCORE:");
 
 var hiscore = global.game_type == GAME_FULL or global.game_type == GAME_EXTRA ? max(global.hiscore,score_to_draw) : 0;
 hiscore = global.continues_max - global.continues == 0 ? hiscore : global.hiscore;
+hiscore = global.rng_patch ? global.hiscore : hiscore;
 
 var hiscore_draw = add_zero(hiscore,global.score_lenght);
 draw_score(hiscore_draw,840,69,spr_score,1,1);

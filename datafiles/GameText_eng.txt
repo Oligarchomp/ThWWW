@@ -21,7 +21,7 @@ mus_boss3 = Fantastic Friend [Comp: Jani]
 
 
 
-mus_room_title = Tale of the not so Eastern Story
+mus_room_title = Tale of a Broken World ~ Not so Eastern Story
 mus_room_s1 = Magical Hopalong Cassidy Station
 mus_room_b1 = AN APPLE DISASTER!!
 mus_room_s2 = The Broken Sky Reflected by the Lake ~ Crustacean Parade
@@ -75,7 +75,7 @@ menu_look_replay = Look at all those awesome replays!
 menu_fullscreen = Fullscreen (F4)
 menu_sfx_volume = Sound effects
 menu_bgm_volume = BGM
-menu_controle = Controle
+menu_controle = Controls
 menu_rng = RNG Patch
 menu_shoot = Shot
 menu_bomb = Bomb
@@ -706,7 +706,7 @@ diag_s7_s27 = A Danse Macabre with your truly.
 diag_s7_s28 = That sounds like a lot of fun.
 diag_s7_s29 = Glad you like your prize! And if you are ready to go...
 diag_s7_s30 = Alors on danse!
-diag_s7_s31 = Wonderful! I'm speechless! Never did I had such an intense battle before!
+diag_s7_s31 = Mama mia! I'm speechless! Never did I had such an intense battle before!
 diag_s7_s32 = And that's another victory for Super Sanae! Peace as been restored with violence once again!
 diag_s7_s33 = Is everyone in "Gensokyo" as extravagant as you? This place looks like a ton of fun!
 diag_s7_s34 = I'm sure Nua would love this place too! Where is she now?

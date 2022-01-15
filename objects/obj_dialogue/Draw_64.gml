@@ -53,4 +53,4 @@ var text_x = x_diag - 175;
 var text_y = y_diag - 46;
 var text_lenght = 350;
 var text_height = string_height(text) * 1;
-draw_text_ext_color(text_x,text_y,text,text_height ,text_lenght,c_white,c_white,c_white,c_white,text_alpha)
+draw_text_ext_color(text_x,text_y,text,text_height ,text_lenght,c_white,c_white,c_white,c_white,text_alpha * text_alpha_diag)

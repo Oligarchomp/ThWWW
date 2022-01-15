@@ -102,6 +102,9 @@ if(pause_state == 1)
 				
 					continue_song = true;
 					
+					item_extend = item_extend_ref;
+					global.item_nbr = 0;
+					
 					switch(global.continues)
 					{
 						case 0:

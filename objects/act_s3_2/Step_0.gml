@@ -5,7 +5,7 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var mentos_wait = 16;
+			var mentos_wait = 18;
 			var mentos_ring = 10;
 			var mentos_open = 6;
 			var mentos_spd_min = 3;

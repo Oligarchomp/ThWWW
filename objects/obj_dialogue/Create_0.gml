@@ -54,6 +54,7 @@ x_diag = middle;
 y_diag = 443;
 
 text_alpha = 1;
+text_alpha_diag = 0;
 
 current_nbr = 0;
 current_step = 0;
