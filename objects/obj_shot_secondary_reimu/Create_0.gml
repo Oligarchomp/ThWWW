@@ -7,13 +7,28 @@ max_spd = 8;
 
 acc = 0.5;
 
-angle = -90;
+
+if (!instance_exists(parent_enemy))
+{
+	angle = -90;
+
+	hsp = 0;
+	vsp = -max_spd;
+}
+else
+{
+	var target = instance_nearest(x,y,parent_enemy);
+	angle = find_angle(x,y,target.x,target.y);
+	angle = target.mask_index == spr_nothing ? 90 : angle;
+	
+	hsp = lengthdir_x(max_spd,angle);
+	vsp = lengthdir_y(max_spd,angle);
+}
 
 rot = 0;
 alpha = 0.3;
 
-hsp = 0;
-vsp = -max_spd;
+
 
 homming_time = 100;
 

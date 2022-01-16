@@ -8,7 +8,8 @@ if (global.gp_active)
 		if (instance_exists(parent_enemy))
 		{
 			var target = instance_nearest(x,y,parent_enemy);
-			angle = floor(find_angle(x,y,target.x,target.y));
+			angle = find_angle(x,y,target.x,target.y);
+			angle = target.mask_index == spr_nothing ? 90 : angle;
 		}
 		else
 		{
@@ -22,18 +23,12 @@ if (global.gp_active)
 		angle = 90;
 	}
 	
-	hsp += lengthdir_x(acc,angle)
-	if(abs(hsp) > max_spd)
-	{
-		hsp = sign(hsp) * max_spd
-	}
+	var dis = lengthdir_x(max_spd,angle);
+	hsp = goto_value(hsp,dis,acc)
 		
 		
-	vsp += lengthdir_y(acc,angle)
-	if(abs(vsp) > max_spd)
-	{
-		vsp = sign(vsp) * max_spd
-	}
+	var dis = lengthdir_y(max_spd,angle);
+	vsp = goto_value(vsp,dis,acc)
 		
 	x += hsp;
 	y += vsp;
