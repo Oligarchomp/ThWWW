@@ -104,5 +104,4 @@ need_cancel_bonus = false;
 x_death_list = ds_list_create();
 y_death_list = ds_list_create();
 
-
 step = 0;

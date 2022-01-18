@@ -3,10 +3,7 @@
 if(global.gp_active)
 {
 	
-	if(global.play_type == PLAY_REPLAY)
-	{
-		room_speed = 120;
-	}
+	
 	
 	if (old_state != state)
 	{

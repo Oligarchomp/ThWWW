@@ -113,7 +113,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var fire_wait = 2;
 			var fire_lenght = 180;
 			
-			var ring_nbr = 24;
+			var ring_nbr = 26;
 			var ring_spd = 2;
 			var ring_wait = 42;
 			

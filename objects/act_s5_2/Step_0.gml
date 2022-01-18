@@ -93,7 +93,7 @@ if(global.gp_active)
 					{
 						for( var i = 0; i < 360; i += 360 / mentos_ring)
 						{
-							var inst = shoot(DAN_ARROW,1,x,y,angle_shoot + i,0,sfx_shot1,3);	
+							var inst = shoot(DAN_MENTOS,1,x,y,angle_shoot + i,0,sfx_shot1,3);	
 							inst.start = dan_wait;
 						}
 						dan_wait -= mentos_wait;
@@ -113,7 +113,7 @@ if(global.gp_active)
 				}
 			break;
 			case 2://shoot aim
-				shoot_ring(DAN_MENTOS,1,ring_nbr,x,y,rng(360,false,4),ring_spd,sfx_redirect1,8);
+				shoot_ring(DAN_BUBBLE,1,ring_nbr,x,y,rng(360,false,4),ring_spd,sfx_redirect1,8);
 				state = 3;
 				can_revenge = false;
 			break;

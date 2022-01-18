@@ -7,48 +7,60 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var ball_wait = 14;
+			var shoot_wait = 14;
+			
 			var ball_spd = 2;
-			var ball_arc = 2;
-			var ball_dist = 120;
+			var ball_angle = 90;
+			
+			var mentos_spd = 1.5;
+			var mentos_angle = 120;
 			
 			var rev_nbr = 8;
 			var rev_spd = 1.5;
 		break;
 		case 1:
-			var ball_wait = 8;
-			var ball_spd = 2;
-			var ball_arc = 2;
-			var ball_dist = 110;
+			var shoot_wait = 8;
 			
-			var rev_nbr = 18;
+			var ball_spd = 2.5;
+			var ball_angle = 90;
+			
+			var mentos_spd = 2;
+			var mentos_angle = 120;
+			
+			var rev_nbr = 20;
 			var rev_spd = 1.5;
 		break;
 		case 2:
-			var ball_wait = 6;
-			var ball_spd = 2.5;
-			var ball_arc = 2;
-			var ball_dist = 100;
+			var shoot_wait = 6;
 			
-			var rev_nbr = 28;
+			var ball_spd = 2.5;
+			var ball_angle = 90;
+			
+			var mentos_spd = 2;
+			var mentos_angle = 120;
+			
+			var rev_nbr = 26;
 			var rev_spd = 1.5;
 		break;
 		case 3:
-			var ball_wait = 4;
+			var shoot_wait = 5;
+			
 			var ball_spd = 2.5;
-			var ball_arc = 2;
-			var ball_dist = 90;
+			var ball_angle = 90;
+			
+			var mentos_spd = 2;
+			var mentos_angle = 120;
 			
 			var rev_nbr = 32;
 			var rev_spd = 1.5;
 		break;
 	}
 	
-	var f_life = 94;
+	var f_life = 110;
 	var shoot_lenght = 180;
 	
 	var familiar_nbr = 5;
-	var familiar_life = 40;
+	var familiar_life = 60;
 	
 	var familiar_spin_spd = 1.9;
 	
@@ -59,9 +71,10 @@ if(global.gp_active)
 			fairy.can_revenge = false;
 			fairy.item_nbr = 16;
 			
+			var rand = rng(360,false,1);
 			for(var i = 0; i < 360; i += 360 / familiar_nbr)
 			{
-				var inst = create_enemy(EN_FAMILIAR,room_width / 2,50,familiar_life,2,0,i);
+				var inst = create_enemy(EN_FAMILIAR,room_width / 2,50,familiar_life,2,0,rand + i);
 				inst.pos_type = POS_MANUAL;
 				inst.dir_fam = -1;
 				inst.dist = 0;
@@ -70,7 +83,7 @@ if(global.gp_active)
 				inst.my_fairy = fairy;
 				inst.can_really_revenge = true;
 				
-				var inst = create_enemy(EN_FAMILIAR,room_width / 2,50,familiar_life,2,0,i);
+				var inst = create_enemy(EN_FAMILIAR,room_width / 2,50,familiar_life,2,0,rand + i);
 				inst.pos_type = POS_MANUAL;
 				inst.dir_fam = 1;
 				inst.dist = 0;
@@ -138,10 +151,13 @@ if(global.gp_active)
 			case 0:
 			break;
 			case 1:
-				if(state_time % ball_wait == 0)
+				if(state_time % shoot_wait == 0)
 				{
-					var aim = angle + 90 * dir_fam;
-					shoot_arc(DAN_BALL,6,ball_arc,x,y,aim,ball_dist,ball_spd,sfx_shot2,3);
+					var aim = angle + ball_angle;
+					shoot(DAN_ARROW,7,x,y,aim,ball_spd,sfx_shot2,3);
+					
+					var aim = angle + mentos_angle;
+					shoot(DAN_MENTOS,6,x,y,aim,mentos_spd,noone,4);
 				}
 			break;
 		}

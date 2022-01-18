@@ -6,11 +6,11 @@ if(global.gp_active) and (spell_wait == 0)
 	{
 		case 0:
 			var bubble_wait = 2;
-			var bubble_ring = 5;
+			var bubble_ring = 4;
 			var bubble_spd = 3;
 
 			var arrow_wait = 2;
-			var arrow_nbr = 5;
+			var arrow_nbr = 4;
 			var arrow_spd = 1.8;
 		break;
 		case 1:

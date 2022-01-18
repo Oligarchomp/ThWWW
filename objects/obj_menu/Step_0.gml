@@ -530,7 +530,7 @@ if(cursor_lockout == 0)
 					global.difficulty = get_replay(REPLAY_DIFFICULTY,rep,0);
 				
 					var rng_then = global.rng_patch
-					global.rng_patch = get_text_file("rng",rep);
+					global.rng_patch = real(get_text_file("rng",rep));
 				
 					global.need_change_rng = rng_then != global.rng_patch;
 				

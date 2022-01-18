@@ -10,14 +10,16 @@ if (global.debug)
 			global.dps = 0;
 		}
 	}
+	
+	if (keyboard_check(vk_space)) 
+	{
+		room_speed = 300;
+	}
+	
+	if(keyboard_check_released(vk_space))
+	{
+		room_speed = 60;
+	}
+	
 }
 
-if (keyboard_check(vk_space)) and (global.debug) 
-{
-	room_speed = 300;
-}
-else
-{
-	room_speed = 60;
-}
-	

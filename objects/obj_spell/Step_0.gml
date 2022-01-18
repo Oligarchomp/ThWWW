@@ -44,6 +44,11 @@ if (global.gp_active)
 				break;
 			}
 			
+			with(obj_boss_info)
+			{
+				spell_nbr -= 1;
+			}
+			
 			spell_initialize = true;
 		}
 		
@@ -201,10 +206,7 @@ if (global.gp_active)
 		if(is_spell)
 		{
 			global.spell_life = 1;
-			with(obj_boss_info)
-			{
-				spell_nbr -= 1;
-			}
+			
 			
 			create_confetti(obj_boss.x,obj_boss.y,30,8);
 			

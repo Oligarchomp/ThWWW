@@ -5,24 +5,28 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var aim_wait = 60;
+			var aim_wait = 65;
 			var aim_spd = 2.5;
 			var aim_open = 3;
+			var aim_ring = 1;
 		break;
 		case 1:
 			var aim_wait = 28;
 			var aim_spd = 3.2;
 			var aim_open = 5;
+			var aim_ring = 2;
 		break;
 		case 2:
 			var aim_wait = 16;
 			var aim_spd = 3.4;
 			var aim_open = 5;
+			var aim_ring = 2;
 		break;
 		case 3:
 			var aim_wait = 11;
 			var aim_spd = 3.6;
 			var aim_open = 5;
+			var aim_ring = 3;
 		break;
 	}
 	
@@ -70,7 +74,7 @@ if(global.gp_active)
 					if(state_time % aim_wait == 1)
 					{
 						var ang = find_angle(x,y,obj_player.x,obj_player.y) + aim_open - rng(aim_open * 2,false,8);
-						shoot(DAN_MENTOS,1,x,y,ang,aim_spd,sfx_shot1,4);	
+						shoot_ring(DAN_MENTOS,1,aim_ring,x,y,ang,aim_spd,sfx_shot1,4);	
 					}
 				}
 				else

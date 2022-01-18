@@ -9,7 +9,7 @@ switch(item_type)
 {
 	case ITEM_POINT:
 		
-		global.item_nbr = goto_value(global.item_nbr,999,1);
+		global.item_nbr = goto_value(global.item_nbr,9999,1);
 		
 		if(y_pos < global.poc) or (max_value)
 		{

@@ -61,7 +61,8 @@ for(var i = 0; i < 20; i += 1)
 				var diff = "Easy";
 			break;
 			case 1:
-				if(!is_extra)
+				var arr = get_replay(REPLAY_EVENT,replay_check,0);
+				if(arr[0] != act_s7_0)
 				{
 					var diff = "Normal";
 				}

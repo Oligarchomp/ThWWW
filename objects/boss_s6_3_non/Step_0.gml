@@ -72,7 +72,7 @@ if(global.gp_active)
 			if(step % bullet_wait == 0)
 			{
 				shoot_ring(DAN_BULLET,7,bullet_ring,obj_boss.x,obj_boss.y,bullet_angle,bullet_spd,sfx_shot2,3);
-				shoot_ring(DAN_BULLET,7,bullet_ring,obj_boss.x,obj_boss.y,-bullet_angle - 180,bullet_spd,sfx_shot2,3);
+				shoot_ring(DAN_BULLET,7,bullet_ring,obj_boss.x,obj_boss.y,-bullet_angle - 180 / bullet_ring,bullet_spd,sfx_shot2,3);
 				bullet_angle += bullet_dist;
 			}
 			

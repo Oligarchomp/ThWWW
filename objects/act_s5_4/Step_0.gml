@@ -75,7 +75,7 @@ if(global.gp_active)
 		break;
 	}
 	
-	var fam_life = 18;
+	var fam_life = 40;
 	var fam_y = 50;
 	var fam_lenght = 150;
 	var fam_wait = 35;

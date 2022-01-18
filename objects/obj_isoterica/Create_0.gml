@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 image_angle = 0;
+depth = global.danmaku_depth - 1;
 
 spd = 40;
 
