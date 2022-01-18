@@ -1437,7 +1437,22 @@ for(var i = 0; i < 20; i += 1)
 		
 		if(stage == 1)
 		{
-			menu[rep].param[i].action = MENU_PLAY_REPLAY;
+			if(get_text_file("game_type",replay_check) != GAME_EXTRA)
+			{
+				menu[rep].param[i].action = MENU_PLAY_REPLAY;
+			}
+			else
+			{
+				menu[rep].param[i].action = MENU_MENU;
+				menu[rep].param[i].param = 
+				[
+					{
+						title : "StageEx",
+						action : MENU_PLAY_REPLAY,
+						scr : add_zero(real(get_text_file("score2",replay_check)),global.score_lenght)
+					}
+				];
+			}
 		}
 		else
 		{

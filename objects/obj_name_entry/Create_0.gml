@@ -13,3 +13,6 @@ cursor = array_length(character) - 1;
 
 vhold = 0;
 hhold = 0;
+
+var name = data_read_string("Data.ini","data","name");
+global.name_entry = name == "0" ? "" : name;

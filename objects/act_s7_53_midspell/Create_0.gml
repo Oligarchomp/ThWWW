@@ -11,7 +11,7 @@ spell_set_name("spell_s7_mid3","spell_s7_mid3","spell_s7_mid3","spell_s7_mid3")
 switch(global.player_chosen)
 {
 	case P_REIMU:
-		var life = 250;
+		var life = 300;
 	break;
 	case P_MARISA:
 		var life = 175;

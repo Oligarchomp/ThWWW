@@ -279,7 +279,7 @@ switch(level)
 					
 					check[i].active_offset = goto_value(check[i].active_offset, is_active * 10,3);
 					
-					draw_text_color(210 + check[i].active_offset,60 + (i - i_start) * 20,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
+					draw_text_color(200 + check[i].active_offset,60 + (i - i_start) * 20,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
 					
 					//attempts
 					switch(check[i].diff)
@@ -529,7 +529,7 @@ if(draw_replay)
 		var x1 = 400;
 		var y1 = 180;
 		var width = 295;
-		var height = 160;
+		var height = 37 + array_length(check) * 20;
 		draw_sprite_part(spr_main,1,x1,y1,width,height,x1,y1);
 		var wid = 4;
 		draw_line_width(x1,y1,x1 + width,y1,wid);

@@ -357,6 +357,43 @@ if(global.gp_active)
 		{
 			var input = global.replay_input[global.stage_number][next_input_time_index];
 			
+			for (var i = 1; i <= string_length(input); i += 1)
+			{
+				switch(string_char_at(input,i))
+				{
+					case "a" :
+						global.shot_down = !global.shot_down;
+					break;
+					case "A" :
+						global.shot_pressed = true;
+					break;
+					case "b" :
+						global.bomb_down = !global.bomb_down;
+					break;
+					case "B" :
+						global.bomb_pressed = true;
+					break;
+					case "x" :
+						global.focused_down = !global.focused_down;
+					break;
+					case "X" :
+						global.focused_pressed = true;
+					break;
+					case "u" :
+						global.up_down = !global.up_down;
+					break;
+					case "d" :
+						global.down_down = !global.down_down;
+					break;
+					case "l" :
+						global.left_down = !global.left_down;
+					break;
+					case "r" :
+						global.right_down = !global.right_down;
+					break;
+				}
+			}
+			/*
 			global.shot_down = string_count("a",input) == 1 ? !global.shot_down : global.shot_down;
 			global.shot_pressed = string_count("A",input) == 1;
 			global.bomb_down = string_count("b",input) == 1 ? !global.bomb_down : global.bomb_down;
@@ -367,7 +404,7 @@ if(global.gp_active)
 			global.down_down = string_count("d",input) == 1 ? !global.down_down : global.down_down;
 			global.left_down = string_count("l",input) == 1 ? !global.left_down : global.left_down;
 			global.right_down = string_count("r",input) == 1 ? !global.right_down : global.right_down;
-			
+			*/
 			next_input_time_index += 1;
 		}
 		
