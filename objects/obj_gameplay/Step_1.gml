@@ -156,6 +156,9 @@ switch(pause_state)
 	case 1: //paused
 		if(pause_state_time == 0)
 		{
+			
+			yingying_rot_spd = 12;
+			
 			if(pause_type = PAUSE_GAMEOVER)
 			{
 				set_bgm(mus_score);

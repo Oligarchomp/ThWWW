@@ -11,24 +11,29 @@ switch(pause_type)
 		if(global.play_type == PLAY_MANUAL)
 		{
 			var menu = pause;
+			var pause_title = get_text("pause_pause");
 		}
 		else
 		{
 			var menu = replay_menu;
+			var pause_title = get_text("pause_pause");
 		}
 	break;
 	case PAUSE_END:
 		if(global.play_type == PLAY_MANUAL)
 		{
 			var menu = done;
+			var pause_title = "";
 		}
 		else
 		{
 			var menu = replay_menu;
+			var pause_title = get_text("pause_endreplay");
 		}
 	break;
 	case PAUSE_GAMEOVER:
 		var menu = gameover;
+		var pause_title = get_text("pause_gameover");
 	break;
 }
 
@@ -37,14 +42,26 @@ if(pause_state >= 1)
 {
 	if(!instance_exists(obj_score_entry))
 	{
+		
+		draw_sprite_ext(spr_yingyang,0,230,280,1,1,yingying_rot,c_white,pause_alpha);
+		
 		draw_sprite_pos(spr_black,0,0,0,960,0,960,540,0,540,pause_alpha / 1.7);
+		
 	
+		if(level == 0)
+		{
+			draw_sprite_ext(spr_leaf,0,180,300,1,1, sin(step / 50) * 2.5,c_white,pause_alpha);
+		}
+		
+		draw_text_outline(240,180,pause_title,c_white,c_white,c_white,c_white,pause_alpha,c_black);
+		
+		
 		for(var i = 0; i < array_length(menu); i += 1)
 		{
 			var is_active = (cursor[0] == i);
 			var col = menu[i].action != MENU_INVALID ? c_white : $5a5a5a;
 			menu[i].active_offset = goto_value(menu[i].active_offset,is_active * menu_offset,3)
-			draw_text_outline(180 + text_offset + menu[i].active_offset,230 + i * 40,menu[i].title,col,col,col,col,pause_alpha * (1 - !is_active * 0.4 - (level != 0) * 0.4),c_black);
+			draw_text_outline(180 + text_offset + menu[i].active_offset + i * 15,230 + i * 40,menu[i].title,col,col,col,col,pause_alpha * (1 - !is_active * 0.4 - (level != 0) * 0.4),c_black);
 		}
 	
 		if(pause_type == PAUSE_GAMEOVER)
@@ -55,6 +72,8 @@ if(pause_state >= 1)
 	
 		if(level == 1)
 		{
+			draw_sprite_ext(spr_leaf,1,370,250,1,1, sin(step / 50) * 3,c_white,pause_alpha);
+			
 			for(var i = 0; i < array_length(menu[cursor[0]].param); i += 1)
 			{
 				var is_active = (cursor[1] == i);

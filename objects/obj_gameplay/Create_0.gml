@@ -335,3 +335,8 @@ replay_menu =
 		action : MENU_TITLE
 	}
 ]
+
+yingying_rot = 0;
+yingying_rot_spd = 0;
+
+step = 0;

@@ -69,6 +69,17 @@ if(pause_state == 1)
 	
 			switch(act)
 			{
+				case MENU_INVALID:
+					play_sound(sfx_menu_invalid,1,false);
+				break;
+				default:
+					play_sound(sfx_menu_valid,1,false);
+				break;
+			}
+			
+			
+			switch(act)
+			{
 				case MENU_MENU:
 					level += 1;
 					cursor[level] = 1;
@@ -77,7 +88,21 @@ if(pause_state == 1)
 					//doesn't work because it's not always pause
 				break;
 				case MENU_BACK:
-					level -= 1;
+					if(level == 0)
+					{
+						if(pause_alpha == 1)
+						{
+							level -= 1;
+						}
+						else
+						{
+							audio_stop_sound(sfx_menu_valid);
+						}
+					}
+					else
+					{
+						level -= 1;
+					}
 				break;
 				case MENU_RESTART:
 					room_transition(room_reload,global.game_type != GAME_SPELL);
@@ -119,24 +144,25 @@ if(pause_state == 1)
 				break;
 			}
 		
-			switch(act)
-			{
-				case MENU_INVALID:
-					play_sound(sfx_menu_invalid,1,false);
-				break;
-				default:
-					play_sound(sfx_menu_valid,1,false);
-				break;
-			}
+			
 		}
 	
 	
 	
 		if(global.bomb_pressed)
 		{
+			play_sound(sfx_menu_back,1,false);
+			
 			if(pause_type == PAUSE_MANUAL) or (level > 0)
 			{
-				level -= 1;
+				if(pause_alpha == 1)
+				{
+					level -= 1;
+				}
+				else
+				{
+					audio_stop_sound(sfx_menu_back);
+				}
 			}
 			else
 			{
@@ -151,7 +177,6 @@ if(pause_state == 1)
 					cursor[0] = array_length(array_check) - 1;
 				}
 			}
-			play_sound(sfx_menu_back,1,false);
 		}
 
 		if(level < 0)
@@ -166,3 +191,7 @@ if(pause_state == 1)
 	}
 }
 
+yingying_rot -= yingying_rot_spd;
+yingying_rot_spd += recursiv(yingying_rot_spd,0.2,14,0.001);
+
+step += 1;
