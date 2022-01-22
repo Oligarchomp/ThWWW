@@ -156,6 +156,8 @@ switch(pause_state)
 	case 1: //paused
 		if(pause_state_time == 0)
 		{
+			old_fps = room_speed;
+			room_speed = 60;
 			
 			yingying_rot_spd = 12;
 			
@@ -205,7 +207,7 @@ switch(pause_state)
 		pause_alpha = goto_value(pause_alpha,0,1 / pause_spd);
 		if(pause_alpha == 0)
 		{
-			
+			room_speed = old_fps;
 			if(continue_song)
 			{
 				continue_song = false;

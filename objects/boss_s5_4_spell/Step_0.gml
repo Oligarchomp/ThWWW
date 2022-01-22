@@ -339,7 +339,7 @@ if(global.gp_active) and (spell_wait == 0)
 		{
 			case 0:
 			var sq = 5;
-				if(collision_rectangle(x - sq,y - sq + vsp,x + sq,y + sq + vsp,obj_wall,false,true))
+				if(collision_rectangle(x - sq,y - sq + vsp,x + sq,y + sq + vsp,obj_wall,false,true) and (y < 100))
 				{
 					state = 1;
 					angle *= -1;

@@ -41,10 +41,10 @@ global.default_focused_btn = gp_face3;
 global.default_bomb_btn = gp_face2;
 global.default_pause_btn = gp_shoulderl;
 
-global.default_shot_vk = ord("A");
-global.default_focused_vk = ord("S");
+global.default_shot_vk = ord("Z");
+global.default_focused_vk = vk_shift;
 global.default_bomb_vk = ord("X");
-global.default_pause_vk = vk_enter;
+global.default_pause_vk = vk_escape;
 
 
 var shot_btn = data_read("Data.ini","option","shot_btn");
@@ -272,3 +272,5 @@ global.play_type = PLAY_MANUAL;
 #macro REPLAY_PLAYER 6
 #macro REPLAY_DIFFICULTY 7
 #macro REPLAY_STAGE_NBR 8
+
+

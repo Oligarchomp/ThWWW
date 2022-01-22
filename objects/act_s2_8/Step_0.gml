@@ -10,25 +10,19 @@ if(global.gp_active)
 			var tri_spd = 2.5;
 			var tri_dist = 2;
 			var tri_div = 2;
-			
-			var shot_type = 0;
 		break;
 		case 1:
 			
-			var aim_spd = 4;
+			var crab_shoot_nbr = 1;
 			var tri_spd = 3;
 			var tri_dist = 2;
 			var tri_div = 10;
-			
-			var shot_type = 1;
 		break;
 		case 2:
 			var crab_shoot_nbr = 1;
 			var tri_spd = 3;
 			var tri_dist = 2;
 			var tri_div = 6;
-			
-			var shot_type = 0;
 		break;
 		case 3:
 			var crab_shoot_nbr = 2;
@@ -36,10 +30,10 @@ if(global.gp_active)
 			var tri_dist = 2;
 			var tri_div = 5;
 			
-			var shot_type = 0;
 		break;
 	}
 	
+	var spell = self;
 	
 	var crab_wait = 60
 	var crab_life = 45;
@@ -60,13 +54,14 @@ if(global.gp_active)
 	
 	if (step % crab_wait == 0)
 	{
-		
+		global_dir *= -1;
 		
 		with(obj_enemy2)
 		{
 			state = 0;
 			play_sound(sfx_redirect1,1,false);
 		}
+		
 		if(step < crab_lenght)
 		{
 			for(var i = 1; i < 5; i += 1)
@@ -75,14 +70,17 @@ if(global.gp_active)
 				{
 					var x_pos = room_width + 20;
 					var ang = 180
+					var cra_dir = 1;
 				}
 				else
 				{
 					var x_pos = -20
 					var ang = 0
+					var cra_dir = -1;
 				}
 			
 				var inst = create_enemy(EN_CRAB,x_pos,i * crab_dist,crab_life,2,0,0)
+				inst.crab_dir = cra_dir;
 				inst.angle = ang;
 				inst.item_nbr = 2;
 			
@@ -106,7 +104,7 @@ if(global.gp_active)
 				spd = goto_value(spd,0,0.2);
 				if(spd == 0)
 				{
-					if(shot_type == 0)
+					if(global.difficulty != 1) or (crab_dir == spell.global_dir)
 					{
 						for(var i = 0; i < crab_shoot_nbr; i += 1)
 						{
@@ -115,10 +113,6 @@ if(global.gp_active)
 							inst.y_grav_accel = 0.05;
 							inst.y_grav_max = 6;	
 						}
-					}
-					else
-					{
-						var inst = shoot(DAN_BALL,6,x,y,999,aim_spd,sfx_shot3,3);
 					}
 					
 					state = 2;

@@ -5,130 +5,148 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			var boss_wait = 32;
-			var close_off = 200;
-			
-			var ring_nbr = 11;
-			var ring_spd = 2;
-			var ring_spd_div = 1.5;
+			var futo_wait = 5;
+			var futo_size = 2; //:)
+			var futo_ring = 10;
+			var futo_lenght = 60;
+			var futo_spd_shot = 4;
+			var futo_spd_final = 4;
+			var futo_deccel = 0.1;
+			var futo_accel = 0.05;
+			var futo_spin = 1.8;
+			var futo_wave_wait = 60;
+	
+			var arrow_size = 2;
+			var arrow_ring = 15;
+			var arrow_spd = 2;
+			var arrow_wait = 70;
 		break;
 		case 1:
-			var boss_wait = 26;
-			var close_off = 180;
-			
-
-			var ring_nbr = 18;
-			var ring_spd = 2.5;
-			var ring_spd_div = 1.5;
+			var futo_wait = 5;
+			var futo_size = 2; //:)
+			var futo_ring = 15;
+			var futo_lenght = 60;
+			var futo_spd_shot = 5;
+			var futo_spd_final = 7;
+			var futo_deccel = 0.15;
+			var futo_accel = 0.07;
+			var futo_spin = 1.9;
+			var futo_wave_wait = 60;
+	
+			var arrow_size = 2;
+			var arrow_ring = 20;
+			var arrow_spd = 2.8;
+			var arrow_wait = 55;
 		break;
 		case 2:
-			var boss_wait = 22;
-			var close_off = 160;
-			
-			
-			var ring_nbr = 20;
-			var ring_spd = 3;
-			var ring_spd_div = 1.5;
+			var futo_wait = 5;
+			var futo_size = 2; //:)
+			var futo_ring = 20;
+			var futo_lenght = 60;
+			var futo_spd_shot = 7;
+			var futo_spd_final = 8;
+			var futo_deccel = 0.25;
+			var futo_accel = 0.08;
+			var futo_spin = 2;
+			var futo_wave_wait = 42;
+	
+			var arrow_size = 2;
+			var arrow_ring = 26;
+			var arrow_spd = 3;
+			var arrow_wait = 36;
 		break;
 		case 3:
-			var boss_wait = 18;
-			var close_off = 145;
-			
-			
-			var ring_nbr = 30;
-			var ring_spd = 2.8;
-			var ring_spd_div = 1.4;
+			var futo_wait = 5;
+			var futo_size = 2; //:)
+			var futo_ring = 23;
+			var futo_lenght = 60;
+			var futo_spd_shot = 7;
+			var futo_spd_final = 8;
+			var futo_deccel = 0.25;
+			var futo_accel = 0.08;
+			var futo_spin = 2.1;
+			var futo_wave_wait = 40;
+	
+			var arrow_size = 2;
+			var arrow_ring = 32;
+			var arrow_spd = 3;
+			var arrow_wait = 30;
 		break;
 	}
 	
-	var x_off = 100;
-	var y_off1 = 90;
-	var y_off2 = 220;
-	var boss_spd = 6;
+
+
 	
-	var need_ring = false;
-	var need_ring_slow = false;
 	switch(state)
 	{
 		case 0:
-			if(state_time == boss_wait)
+			if(state_time < futo_lenght)
 			{
-				boss_movement_goto(room_width / 2 + x_off,y_off1,boss_spd);
-				state = 1;
-				x_aim = obj_player.x;
-				y_aim = obj_player.y;
+				if(state_time % futo_wait == 0)
+				{
+					for(var i = 0; i < 360; i += 360 / futo_ring)
+					{
+						var inst = shoot(DAN_ARROW,3,obj_boss.x,obj_boss.y,angle_shoot + i,futo_spd_shot,sfx_shot2,4);
+						inst.image_xscale = futo_size;
+						inst.image_yscale = futo_size;
+						inst.x_offscreen *= 2;
+						inst.y_offscreen *= 2;
+					}
+					
+					
+					angle_shoot += futo_spin * dir_act;
+				}
+			}
+			else
+			{
+				state += 1;
+				boss_movement_random(3,40,3);
 			}
 		break;
 		case 1:
-			if(obj_boss.in_position)
-			{
-				state = 2;
-				need_ring = true;
-			}
-		break;
-		case 2:
-			if(state_time == boss_wait)
-			{
-				boss_movement_goto(room_width / 2 - x_off ,y_off2,boss_spd);
-				state = 3;
-				x_aim = obj_player.x;
-				y_aim = obj_player.y;
-			}
-		break;
-		case 3:
-			if(obj_boss.in_position)
-			{
-				state = 4;
-				need_ring = true;
-			}
-		break;
-		case 4:
-			if(state_time == boss_wait)
-			{
-				boss_movement_goto(room_width / 2 + x_off ,y_off2,boss_spd);
-				state = 5;
-				x_aim = obj_player.x;
-				y_aim = obj_player.y;
-			}
-		break;
-		case 5:
-			if(obj_boss.in_position)
-			{
-				state = 6;
-				need_ring = true;
-			}
-		break;
-		case 6:
-			if(state_time == boss_wait)
-			{
-				boss_movement_goto(room_width / 2 - x_off,y_off1,boss_spd);
-				state = 7;
-				x_aim = obj_player.x;
-				y_aim = obj_player.y;
-			}
-		break;
-		case 7:
-			if(obj_boss.in_position)
+			if(state_time == futo_wave_wait)
 			{
 				state = 0;
-				need_ring = true;
+				dir_act *= -1;
+				angle_shoot = rng(360,false,1);
 			}
 		break;
 	}
 	
-	if(need_ring)
+	if(step % arrow_wait == 0)
 	{
-		var rand = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y);//rng(360,false,8);
-		var sp = ring_spd
-		if(need_ring_slow)
+		var rand = rng(360,false,1);
+		for(var i = 0; i < 360; i += 360 / arrow_ring)
 		{
-			sp /= 2;	
+			var inst = shoot(DAN_ARROW,5,obj_boss.x,obj_boss.y,rand + i,arrow_spd,sfx_shot1,3);
+			inst.image_xscale = arrow_size;
+			inst.image_yscale = arrow_size;
+			inst.x_offscreen *= 2;
+			inst.y_offscreen *= 2;
 		}
-		shoot_ring(DAN_MENTOS,7,ring_nbr,obj_boss.x,obj_boss.y,rand,sp,sfx_redirect1,7);
-		shoot_ring(DAN_MENTOS,5,ring_nbr,obj_boss.x,obj_boss.y,rand + 360 / ring_nbr / 2,sp / ring_spd_div,sfx_redirect1,7);	
-	
+		
 	}
-
+	
+	
+	
+	with(obj_danmaku4)
+	{
+		switch(state)
+		{
+			case 0:
+				spd = goto_value(spd,0,futo_deccel);
+				if(spd == 0)
+				{
+					state += 1;	
+					play_sound(sfx_redirect2,1,false);
+				}
+			break;
+			case 1:
+				spd = goto_value(spd,futo_spd_final,futo_accel);
+			break;
+		}
+		
+	}
 	
 }
 // Inherit the parent event

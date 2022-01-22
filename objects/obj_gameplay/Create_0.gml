@@ -340,3 +340,5 @@ yingying_rot = 0;
 yingying_rot_spd = 0;
 
 step = 0;
+
+old_fps = 60;

@@ -8,6 +8,6 @@ spell_set_life(920,200);
 spell_set_time(40,false,130);
 
 
-bullet_angle = 0;
-bubble_angle = 0;
+bullet_angle = rng(360,false,1);
+bubble_angle = rng(360,false,1);
 

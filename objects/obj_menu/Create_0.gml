@@ -32,7 +32,7 @@ last_controle = 0;
 //0 = keyboard;
 //1 = controller
 
-for(var i = ord("0"); i < ord("Z"); i += 1)
+for(var i = ord("0"); i <= ord("Z"); i += 1)
 {
 	key[i] = chr(i);	
 }
@@ -43,6 +43,7 @@ key[vk_alt] = "Alt"
 key[vk_ralt] = "Alt"
 key[vk_backspace] = get_text("controle_backspace");
 key[vk_space] = get_text("controle_space");
+key[vk_escape] = "Esc"
 
 btn[gp_face1] = get_text("controle_button") + " 1";
 btn[gp_face2] = get_text("controle_button") + " 2";
