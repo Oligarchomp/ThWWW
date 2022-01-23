@@ -272,5 +272,6 @@ global.play_type = PLAY_MANUAL;
 #macro REPLAY_PLAYER 6
 #macro REPLAY_DIFFICULTY 7
 #macro REPLAY_STAGE_NBR 8
-
-
+/*
+add_stage_event(act_s5_0,0)
+add_stage_event(act_s5_5_mid,1);

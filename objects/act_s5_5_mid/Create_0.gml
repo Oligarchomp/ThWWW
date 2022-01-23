@@ -13,8 +13,7 @@ boss_movement_goto(room_width / 2, 100,6);
 
 dir_act = 1;
 
-x_aim = noone;
-y_aim = noone;
+angle_shoot = rng(360,false,1);
 
 item_nbr = item_nbr_spell;
 

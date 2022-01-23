@@ -81,7 +81,7 @@ if(global.gp_active)
 		
 	}
 
-	if(global.item_nbr >= item_extend[|0]) and (global.item_nbr < 999)
+	if(global.item_nbr >= item_extend[|0]) and (global.item_nbr < 9999)
 	{
 		ds_list_delete(item_extend,0);
 		

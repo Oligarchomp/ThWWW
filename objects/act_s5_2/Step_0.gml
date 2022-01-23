@@ -113,7 +113,7 @@ if(global.gp_active)
 				}
 			break;
 			case 2://shoot aim
-				shoot_ring(DAN_BUBBLE,1,ring_nbr,x,y,rng(360,false,4),ring_spd,sfx_redirect1,8);
+				shoot_ring(DAN_MENTOS,7,ring_nbr,x,y,rng(360,false,4),ring_spd,sfx_redirect1,8);
 				state = 3;
 				can_revenge = false;
 			break;

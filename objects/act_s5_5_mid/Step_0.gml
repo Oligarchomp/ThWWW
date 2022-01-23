@@ -5,56 +5,44 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			var wave_lenght = 40;
-			var ring_wait = 12;
-			var ring_nbr = 22;
-			var ring_spd = 3;
-			var ring_spd_redirect = 2;
-			
-			var aim_dan = DAN_ARROW;
-			var aim_wait = 16;
-			var aim_spd = 3.5;
-			var aim_arc = 0;
-			var aim_dist = 23;
+			var arrow_wait = 15;
+			var arrow_lenght = 40;
+			var arrow_ring = 15;
+			var arrow_spd = 3;
+			var arrow_spd_redirect = 2.5;
+			var arrow_size = 1;
+			var wave_wait = 60;
+			var arrow_type = DAN_MENTOS;
 		break;
 		case 1:
-			var wave_lenght = 40;
-			var ring_wait = 12;
-			var ring_nbr = 45;
-			var ring_spd = 3.6;
-			var ring_spd_redirect = 2.3;
-			
-			var aim_dan = DAN_MENTOS;
-			var aim_wait = 13;
-			var aim_spd = 3.5;
-			var aim_arc = 5;
-			var aim_dist = 22;
+			var arrow_wait = 11;
+			var arrow_lenght = 45;
+			var arrow_ring = 31;
+			var arrow_spd = 3.5;
+			var arrow_spd_redirect = 2.5;
+			var arrow_size = 1;
+			var wave_wait = 50;
+			var arrow_type = DAN_MENTOS;
 		break;
 		case 2:
-			var wave_lenght = 40;
-			var ring_wait = 10;
-			var ring_nbr = 56;
-			var ring_spd = 4.2;
-			var ring_spd_redirect = 2.5;
-			
-			var aim_dan = DAN_MENTOS;
-			var aim_wait = 12;
-			var aim_spd = 3.8;
-			var aim_arc = 7;
-			var aim_dist = 18;
+			var arrow_wait = 9;
+			var arrow_lenght = 50;
+			var arrow_ring = 38;
+			var arrow_spd = 4.5;
+			var arrow_spd_redirect = 3;
+			var arrow_size = 2;
+			var wave_wait = 40;
+			var arrow_type = DAN_ARROW;
 		break;
 		case 3:
-			var wave_lenght = 40;
-			var ring_wait = 10;
-			var ring_nbr = 64;
-			var ring_spd = 4.5;
-			var ring_spd_redirect = 2.8;
-			
-			var aim_dan = DAN_MENTOS;
-			var aim_wait = 10;
-			var aim_spd = 4.4;
-			var aim_arc = 9;
-			var aim_dist = 14;
+			var arrow_wait = 9;
+			var arrow_lenght = 50;
+			var arrow_ring = 45;
+			var arrow_spd = 4.5;
+			var arrow_spd_redirect = 3;
+			var arrow_size = 2;
+			var wave_wait = 35;
+			var arrow_type = DAN_ARROW;
 		break;
 	}
 	
@@ -62,50 +50,31 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(state)
 	{
 		case 0:
-			if(state_time == 0)
+			if(state_time < arrow_lenght)
 			{
-				x_aim = obj_player.x;
-				y_aim = obj_player.y;
-			}
-			if(state_time < wave_lenght)
-			{
-				if(state_time % ring_wait == 0)
+				if(state_time % arrow_wait == 0)
 				{
-					var aim = find_angle(obj_boss.x,obj_boss.y,x_aim,y_aim);
-					shoot_ring(DAN_ARROW,7,ring_nbr,obj_boss.x,obj_boss.y,aim,ring_spd,sfx_shot2,5);
+					for (var i = 0; i < 360; i += 360 / arrow_ring)
+					{
+						var inst = shoot(arrow_type,3,obj_boss.x,obj_boss.y,angle_shoot + i,arrow_spd,sfx_shot2,5)
+						inst.image_xscale = arrow_size;
+						inst.image_yscale = arrow_size;
+						inst.x_offscreen *= arrow_size;
+						inst.y_offscreen *= arrow_size;
+					}
 				}
 			}
 			else
 			{
-				state = 1;
-				boss_movement_random(10,5,3);
+				state += 1;
+				boss_movement_random(3,20,4);
+				angle_shoot = rng(360,false,1);
 			}
 		break;
 		case 1:
-			if(obj_boss.in_position)
+			if(state_time == wave_wait)
 			{
-				state = 2;
-				x_aim = obj_player.x;
-				y_aim = obj_player.y;
-			}
-		break;
-		case 2:
-			if(state_time < wave_lenght)
-			{
-				if(state_time % aim_wait == 0)
-				{
-					shoot_arc(aim_dan,3,aim_arc,obj_boss.x,obj_boss.y,999,aim_dist,aim_spd,sfx_shot1,6);	
-				}
-			}
-			else
-			{
-				state = 3;
-			}
-		break;
-		case 3:
-			if(state_time == 30)
-			{
-				state = 0;
+				state = 0;	
 			}
 		break;
 	}
@@ -115,29 +84,14 @@ if(global.gp_active) and (spell_wait == 0)
 		switch(state)
 		{
 			case 0:
-				var sq = 5;
-				var found_wall = false;
-				if (y < 480)
-				{
-					if(collision_rectangle(x - sq + hsp,y - sq ,x + sq + hsp,y + sq,obj_wall,false,true))
-					{
-						found_wall = true;
-						angle = -angle + 180;
-					}
-				
-					if (collision_rectangle(x - sq,y - sq + vsp,x + sq,y + sq + vsp,obj_wall,false,true))
-					{
-						found_wall = true;
-						angle *= -1;
-					}
-				}
-				
-				if(found_wall)
+				if(x > room_width) or (x < 0)
 				{
 					state = 1;
-					spd = ring_spd_redirect;
+					spd = arrow_spd_redirect;
 					color_id = 5;
 					depth += 1;
+					
+					angle = -angle + 180;
 				}
 			break;
 		}

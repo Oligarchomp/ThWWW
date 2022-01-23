@@ -14,24 +14,24 @@ if(global.gp_active)
 	{
 		case 0:
 			var ring_nbr = 8;
-			var ring_spd = 4;
+			var ring_spd = 2.5;
 			var arrow_nbr = 1;
 			var arrow_spd = 3;
 		break;
 		case 1:
-			var ring_nbr = 12;
-			var ring_spd = 3.5;
+			var ring_nbr = 15;
+			var ring_spd = 2.5;
 			var arrow_nbr = 3;
 			var arrow_spd = 3.5;
 		break;
 		case 2:
-			var ring_nbr = 16;
-			var ring_spd = 4;
+			var ring_nbr = 22;
+			var ring_spd = 2.5;
 			var arrow_nbr = 5;
 			var arrow_spd = 4;
 		break;
 		case 3:
-			var ring_nbr = 20;
+			var ring_nbr = 32;
 			var ring_spd = 2.5;
 			var arrow_nbr = 5;
 			var arrow_spd = 5;
@@ -59,6 +59,7 @@ if(global.gp_active)
 				var inst = create_enemy(EN_BLUE,x_pos,-20,fairy_life ,1,fairy_spd,-90)
 				inst.dir_to_go = rng(2,true,1) - 1;
 				inst.item_nbr = 1;
+				inst.can_revenge = false;
 			}
 	
 			if(step % wait == wait / 2)
@@ -67,6 +68,7 @@ if(global.gp_active)
 				var inst = create_enemy(EN_RED,x_pos,-20,fairy_life ,1,fairy_spd,-90)
 				inst.dir_to_go = rng(2,true,1) - 1;
 				inst.item_nbr = 1;
+				inst.can_revenge = false;
 			}
 		}
 	

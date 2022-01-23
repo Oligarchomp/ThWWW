@@ -34,5 +34,5 @@ homming_time = 100;
 
 offscreen = 30;
 
-my_hitbox = create_shot_hitbox(x,y,0,spr_shot_base_collision,1.1,1000,false);
+my_hitbox = create_shot_hitbox(x,y,0,spr_shot_base_collision,1,1000,false);
 

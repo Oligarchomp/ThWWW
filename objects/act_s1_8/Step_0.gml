@@ -5,7 +5,7 @@ if(global.gp_active)
 	if(step < act_time - 80)
 	{
 		var wait = 50;
-		var fairy_life = 15;
+		var fairy_life = 20;
 		var fairy_spd = 9;
 		
 		if (step % wait == 0)

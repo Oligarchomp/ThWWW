@@ -60,7 +60,7 @@ if(global.gp_active)
 	var shoot_lenght = 180;
 	
 	var familiar_nbr = 5;
-	var familiar_life = 60;
+	var familiar_life = 55;
 	
 	var familiar_spin_spd = 1.9;
 	

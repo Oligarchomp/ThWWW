@@ -75,7 +75,7 @@ if(global.gp_active)
 				inst.angle = 90 - open + rng(open * 2,false,4);
 			}
 			
-			create_shot_hitbox(obj_player.x,obj_player.y ,1,spr_bomb_masterspark_collision,1.3,2,true);
+			create_shot_hitbox(obj_player.x,obj_player.y ,1,spr_bomb_masterspark_collision,1.4,2,true);
 		break;
 		case P_SANAE:
 			var wait = 6;

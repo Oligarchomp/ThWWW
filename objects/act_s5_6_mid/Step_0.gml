@@ -60,9 +60,9 @@ if(global.gp_active) and (spell_wait == 0)
 			var futo_size = 2; //:)
 			var futo_ring = 23;
 			var futo_lenght = 60;
-			var futo_spd_shot = 7;
+			var futo_spd_shot = 8;
 			var futo_spd_final = 8;
-			var futo_deccel = 0.25;
+			var futo_deccel = 0.275;
 			var futo_accel = 0.08;
 			var futo_spin = 2.1;
 			var futo_wave_wait = 40;
