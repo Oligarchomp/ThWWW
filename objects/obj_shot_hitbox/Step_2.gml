@@ -35,4 +35,8 @@ if(cancel)
 		inst.x = x_list[|i]
 		inst.y = y_list[|i]
 	}
+	
+	ds_list_destroy(x_list);
+	ds_list_destroy(y_list);
+	ds_list_destroy(inst_list);
 }

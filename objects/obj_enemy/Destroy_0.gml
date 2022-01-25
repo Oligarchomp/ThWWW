@@ -4,6 +4,6 @@
 var fam = self;
 with(boss_s4_6_spell)
 {
-	ds_list_add(id_list,fam.familiar_id);
-	ds_list_add(time_list,familiar_wait_death);
+	array_push(id_list,fam.familiar_id);
+	array_push(time_list,familiar_wait_death);
 }

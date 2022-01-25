@@ -12,8 +12,8 @@ spell_set_time(24,false,100);
 
 boss_movement_goto(room_width / 2, 100,7);
 
-x_crab = ds_list_create();
-y_crab = ds_list_create();
-time_crab = ds_list_create()
+x_crab = [];
+y_crab = [];
+time_crab = [];
 
 crab_step = 0;

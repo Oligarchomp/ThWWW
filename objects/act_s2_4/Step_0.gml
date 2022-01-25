@@ -68,7 +68,7 @@ if(global.gp_active)
 		
 		if(step % fairy_wait_big == 0)
 		{
-			var inst = create_enemy(EN_GREEN,big_list[|step/fairy_wait_big],-20,big_life,4,4,-90);
+			var inst = create_enemy(EN_GREEN,big_list[step/fairy_wait_big],-20,big_life,4,4,-90);
 		}
 	
 	}

@@ -15,10 +15,10 @@ can_shield = true;
 
 act_dir = 1;
 
-rice_time_list = ds_list_create();
-rice_angle_list = ds_list_create();
-rice_dist_list = ds_list_create();
-rice_dir_list = ds_list_create();
+rice_time_list = [];
+rice_angle_list = [];
+rice_dist_list = [];
+rice_dir_list = [];
 
 x_spawn = 0;
 y_spawn = 0;

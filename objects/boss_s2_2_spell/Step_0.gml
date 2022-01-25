@@ -104,9 +104,9 @@ if(global.gp_active) and (spell_wait == 0)
 						var y_pos = floor(obj_player.y / knife_row_dist) * knife_row_dist 
 						boss_charge(room_width,y_pos + knife_row_dist / 2);
 					
-						ds_list_add(x_crab, room_width + 30);
-						ds_list_add(y_crab,y_pos);
-						ds_list_add(time_crab, crab_lenght)
+						array_push(x_crab, room_width + 30);
+						array_push(y_crab,y_pos);
+						array_push(time_crab, crab_lenght)
 						crab_step += 1;
 					break;
 					case crab_step_wait:
@@ -129,9 +129,9 @@ if(global.gp_active) and (spell_wait == 0)
 						var y_pos = floor(obj_player.y / knife_row_dist) * knife_row_dist 
 						boss_charge(0,y_pos + knife_row_dist / 2);
 					
-						ds_list_add(x_crab, - 30);
-						ds_list_add(y_crab,y_pos);
-						ds_list_add(time_crab, crab_lenght)
+						array_push(x_crab, - 30);
+						array_push(y_crab,y_pos);
+						array_push(time_crab, crab_lenght)
 						crab_step += 1;
 					
 					break;
@@ -155,9 +155,9 @@ if(global.gp_active) and (spell_wait == 0)
 						var x_pos = floor(obj_player.x / knife_row_dist) * knife_row_dist 
 						boss_charge(x_pos + knife_row_dist / 2, 0);
 					
-						ds_list_add(x_crab, x_pos);
-						ds_list_add(y_crab,-30);
-						ds_list_add(time_crab, crab_lenght)
+						array_push(x_crab, x_pos);
+						array_push(y_crab,-30);
+						array_push(time_crab, crab_lenght)
 						crab_step += 1;
 					break;
 					case crab_step_wait:
@@ -190,25 +190,25 @@ if(global.gp_active) and (spell_wait == 0)
 						var y_pos = floor(obj_player.y / knife_row_dist) * knife_row_dist 
 						boss_charge(room_width,y_pos + knife_row_dist / 2);
 					
-						ds_list_add(x_crab, room_width + 30);
-						ds_list_add(y_crab,y_pos);
-						ds_list_add(time_crab, crab_lenght)
+						array_push(x_crab, room_width + 30);
+						array_push(y_crab,y_pos);
+						array_push(time_crab, crab_lenght)
 					break;
 					case 30:
 						var x_pos = floor(obj_player.x / knife_row_dist) * knife_row_dist 
 						boss_charge(x_pos + knife_row_dist / 2, 0);
 					
-						ds_list_add(x_crab, x_pos);
-						ds_list_add(y_crab,-30);
-						ds_list_add(time_crab, crab_lenght)
+						array_push(x_crab, x_pos);
+						array_push(y_crab,-30);
+						array_push(time_crab, crab_lenght)
 						break;
 					case 40:
 						var y_pos = floor(obj_player.y / knife_row_dist) * knife_row_dist 
 						boss_charge(0,y_pos + knife_row_dist / 2);
 					
-						ds_list_add(x_crab, - 30);
-						ds_list_add(y_crab,y_pos);
-						ds_list_add(time_crab, crab_lenght)
+						array_push(x_crab, - 30);
+						array_push(y_crab,y_pos);
+						array_push(time_crab, crab_lenght)
 					break;
 					case 160:
 						state = 0;
@@ -222,34 +222,34 @@ if(global.gp_active) and (spell_wait == 0)
 		state_time = -1;
 	}
 	
-	for(var i = 0 ; i < ds_list_size(x_crab); i += 1)
+	for(var i = 0 ; i < array_length(x_crab); i += 1)
 	{
-		if(time_crab[|i] > 0)
+		if(time_crab[i] > 0)
 		{
 			
-			time_crab[|i] -= 1;
+			time_crab[i] -= 1;
 			
-			if(time_crab[|i] < crab_lenght - crab_wait)
+			if(time_crab[i] < crab_lenght - crab_wait)
 			{
-				if(y_crab[|i] < 0)
+				if(y_crab[i] < 0)
 				{
-					shoot(DAN_KNIFE,5,x_crab[|i] + rng(knife_row_dist,false,3),y_crab[|i],-90,crab_spd + rng(5,false,1),sfx_redirect1,4);
+					shoot(DAN_KNIFE,5,x_crab[i] + rng(knife_row_dist,false,3),y_crab[i],-90,crab_spd + rng(5,false,1),sfx_redirect1,4);
 				}
-				else if (x_crab[|i] < 0)
+				else if (x_crab[i] < 0)
 				{
-					shoot(DAN_KNIFE,5,x_crab[|i],y_crab[|i] + rng(knife_row_dist,false,3),0,crab_spd + rng(5,false,1),sfx_redirect1,4);
+					shoot(DAN_KNIFE,5,x_crab[i],y_crab[i] + rng(knife_row_dist,false,3),0,crab_spd + rng(5,false,1),sfx_redirect1,4);
 				}
-				else if (x_crab[|i] > room_width)
+				else if (x_crab[i] > room_width)
 				{
-					shoot(DAN_KNIFE,5,x_crab[|i],y_crab[|i] + rng(knife_row_dist,false,3),180,crab_spd + rng(5,false,1),sfx_redirect1,4);
+					shoot(DAN_KNIFE,5,x_crab[i],y_crab[i] + rng(knife_row_dist,false,3),180,crab_spd + rng(5,false,1),sfx_redirect1,4);
 				}
 			}
 		}
 		else
 		{
-			ds_list_delete(time_crab,i)
-			ds_list_delete(x_crab,i)
-			ds_list_delete(y_crab,i)
+			array_delete(time_crab,i,1)
+			array_delete(x_crab,i,1)
+			array_delete(y_crab,i,1)
 		}
 		
 	}

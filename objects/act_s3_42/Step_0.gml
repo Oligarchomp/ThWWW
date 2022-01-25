@@ -91,14 +91,14 @@ if(global.gp_active)
 	switch(state)
 	{
 		case 0:
-			if(state_time/fairy_wait < ds_list_size(x_fairy))
+			if(state_time/fairy_wait < array_length(x_fairy))
 			{
 				if (state_time % fairy_wait == 0)
 				{
-					var inst = create_enemy(EN_WHITE,room_width / 2 + x_fairy[|state_time/fairy_wait],-20,fairy_life,4,4,-90)
+					var inst = create_enemy(EN_WHITE,room_width / 2 + x_fairy[state_time/fairy_wait],-20,fairy_life,4,4,-90)
 					inst.item_nbr = 3;
 					
-					var inst = create_enemy(EN_WHITE,room_width / 2 - x_fairy[|state_time/fairy_wait],-20,fairy_life,4,4,-90)
+					var inst = create_enemy(EN_WHITE,room_width / 2 - x_fairy[state_time/fairy_wait],-20,fairy_life,4,4,-90)
 					inst.item_nbr = 3;
 				}
 			}

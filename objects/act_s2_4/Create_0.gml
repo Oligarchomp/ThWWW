@@ -6,5 +6,4 @@ event_inherited();
 
 act_set_time(670,730);
 
-big_list = ds_list_create();
-ds_list_add(big_list,100,210,150,320,124,200);
+big_list = [100,210,150,320,124,200];

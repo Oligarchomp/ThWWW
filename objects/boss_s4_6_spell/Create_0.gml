@@ -12,8 +12,8 @@ spell_set_time(35,false,95);
 boss_movement_goto(room_width / 2, 100,5);
 
 
-id_list = ds_list_create();
-time_list = ds_list_create();
+id_list = [];
+time_list = [];
 
 
 var time = 12;
@@ -22,12 +22,12 @@ switch(global.difficulty)
 {
 	case 3:
 	case 2:
-		ds_list_add(id_list,6,7);
-		ds_list_add(time_list,5 * time,6 * time);
+		array_push(id_list,6,7);
+		array_push(time_list,5 * time,6 * time);
 	case 1:
 	case 0:
-		ds_list_add(id_list,1,2,3,4);
-		ds_list_add(time_list,time,2* time,3 * time,4 * time);
+		array_push(id_list,1,2,3,4);
+		array_push(time_list,time,2* time,3 * time,4 * time);
 	break;
 }
 

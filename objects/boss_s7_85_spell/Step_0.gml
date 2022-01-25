@@ -65,10 +65,10 @@ if(global.gp_active) and (spell_wait == 0)
 						y = obj_player.y;
 					}
 					
-					ds_list_add(rice_angle_list,rng(360,false,3));
-					ds_list_add(rice_time_list,-1);
-					ds_list_add(rice_dist_list,70);
-					ds_list_add(rice_dir_list,act_dir);
+					array_push(rice_angle_list,rng(360,false,3));
+					array_push(rice_time_list,-1);
+					array_push(rice_dist_list,70);
+					array_push(rice_dir_list,act_dir);
 					
 					var ang = rng(360,false,1);
 					
@@ -105,23 +105,23 @@ if(global.gp_active) and (spell_wait == 0)
 	
 	
 	//RICE
-	for(var i = 0; i < ds_list_size(rice_angle_list); i += 1)
+	for(var i = 0; i < array_length(rice_angle_list); i += 1)
 	{
-		rice_time_list[|i] += 1;
-		if(rice_time_list[|i] < spawn_time)
+		rice_time_list[i] += 1;
+		if(rice_time_list[i] < spawn_time)
 		{
-			while(rice_time_list[|i] < spawn_time)
+			while(rice_time_list[i] < spawn_time)
 			{
-				rice_time_list[|i] += 1;
+				rice_time_list[i] += 1;
 				
-				if (rice_time_list[|i] % rice_wait == 0)
+				if (rice_time_list[i] % rice_wait == 0)
 				{
-					rice_angle_list[|i] += rice_angle_plus * rice_dir_list[|i];
-					rice_dist_list[|i] += rice_dist;
+					rice_angle_list[i] += rice_angle_plus * rice_dir_list[i];
+					rice_dist_list[i] += rice_dist;
 			
 					for(var r = 0; r < 360; r += 360 / rice_nbr)
 					{
-						if(rice_dir_list[|i] == 1)
+						if(rice_dir_list[i] == 1)
 						{
 							var col = 6;
 						}
@@ -129,12 +129,11 @@ if(global.gp_active) and (spell_wait == 0)
 						{
 							var col = 1;
 						}
-						var x_pos = x_spawn + lengthdir_x(rice_dist_list[|i],rice_angle_list[|i] + r);
-						var y_pos = y_spawn + lengthdir_y(rice_dist_list[|i],rice_angle_list[|i] + r);	
+						var x_pos = x_spawn + lengthdir_x(rice_dist_list[i],rice_angle_list[i] + r);
+						var y_pos = y_spawn + lengthdir_y(rice_dist_list[i],rice_angle_list[i] + r);	
 					
-						//var x_aim = x_spawn + lengthdir_x(rice_dist_list[|i] - rice_dist, rice_angle_list[|i] - rice_angle_plus * rice_dir_list[|i] + r);
-						//var y_aim = y_spawn + lengthdir_y(rice_dist_list[|i] - rice_dist, rice_angle_list[|i] - rice_angle_plus * rice_dir_list[|i] + r);
-						var ang = find_angle(x_pos,y_pos,x_spawn,y_spawn) + rice_time_list[|i] * rice_dir_list[|i] //find_angle(x_pos,y_pos,x_aim,y_aim);
+						
+						var ang = find_angle(x_pos,y_pos,x_spawn,y_spawn) + rice_time_list[i] * rice_dir_list[i]
 						var inst = shoot(DAN_NOTE,col,x_pos,y_pos,ang,0,sfx_redirect2,3);
 						inst.x_offscreen = 600;
 						inst.y_offscreen = 600;
@@ -146,7 +145,7 @@ if(global.gp_active) and (spell_wait == 0)
 		}
 		else
 		{
-			if(rice_time_list[|i] > spawn_time + wait_move)
+			if(rice_time_list[i] > spawn_time + wait_move)
 			{
 				
 				play_sound(sfx_redirect1,1,false);
@@ -154,7 +153,7 @@ if(global.gp_active) and (spell_wait == 0)
 				var spell = self;
 				with(obj_danmaku3)
 				{
-					if(spell.rice_dir_list[|i] == 1)
+					if(spell.rice_dir_list[i] == 1)
 					{
 						if(color_id == 6)
 						{
@@ -176,10 +175,10 @@ if(global.gp_active) and (spell_wait == 0)
 				}
 			
 			
-				ds_list_delete(rice_angle_list,i)
-				ds_list_delete(rice_time_list,i)
-				ds_list_delete(rice_dist_list,i)
-				ds_list_delete(rice_dir_list,i)
+				array_delete(rice_angle_list,i,1)
+				array_delete(rice_time_list,i,1)
+				array_delete(rice_dist_list,i,1)
+				array_delete(rice_dir_list,i,1)
 			}
 		}
 		

@@ -25,10 +25,10 @@ y_ref = 210;
 
 
 
-rice_time_list = ds_list_create();
-rice_angle_list = ds_list_create();
-rice_dist_list = ds_list_create();
-rice_dir_list = ds_list_create();
+rice_time_list = [];
+rice_angle_list = [];
+rice_dist_list = [];
+rice_dir_list = [];
 
 rice_wave_dir = -1;
 

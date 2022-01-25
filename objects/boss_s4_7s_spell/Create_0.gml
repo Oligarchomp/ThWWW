@@ -13,12 +13,11 @@ boss_movement_goto(room_width / 2,room_height / 2 - 20,5);
 
 item_nbr = 0;
 
-rice_time_list = ds_list_create();
-rice_angle_list = ds_list_create();
-rice_dist_list = ds_list_create();
-rice_dir_list = ds_list_create();
+rice_time_list = [];
+rice_angle_list = [];
+rice_dist_list = [];
+rice_dir_list = [];
 
 rice_wave_dir = -1;
 
 laser_dir = 1;
-laser_pos = 999;

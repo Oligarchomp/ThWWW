@@ -65,25 +65,25 @@ if(global.gp_active)
 	
 			if(step % torpedo_wait == 0)
 			{
-				ds_list_add(angle_list,angle_torpedo);
-				ds_list_add(time_list,torpedo_lenght);
-				ds_list_add(dir_list,act_dir);
+				array_push(angle_list,angle_torpedo);
+				array_push(time_list,torpedo_lenght);
+				array_push(dir_list,act_dir);
 		
-				ds_list_add(angle_list,angle_torpedo);
-				ds_list_add(time_list,torpedo_lenght);
-				ds_list_add(dir_list,-act_dir);
+				array_push(angle_list,angle_torpedo);
+				array_push(time_list,torpedo_lenght);
+				array_push(dir_list,-act_dir);
 		
 		
 				angle_torpedo = rng(360,false,5);
 			}
 	
-			for(var i = 0; i < ds_list_size(angle_list); i += 1)
+			for(var i = 0; i < array_length(angle_list); i += 1)
 			{
-				if(time_list[|i] > 0)
+				if(time_list[i] > 0)
 				{
-					if((torpedo_lenght - time_list[|i]) % torpedo_tail_wait == 0)
+					if((torpedo_lenght - time_list[i]) % torpedo_tail_wait == 0)
 					{
-						if(time_list[|i] == torpedo_lenght)
+						if(time_list[i] == torpedo_lenght)
 						{
 							var dan = DAN_BUBBLE;
 							var col = 1;
@@ -96,19 +96,25 @@ if(global.gp_active)
 							var num = 4;
 						}
 				
-						var aim =  angle_list[|i] + dir_list[|i] * time_list[|i] / off_div;
+						var aim =  angle_list[i] + dir_list[i] * time_list[i] / off_div;
 						for(var t = 0 ; t < 360; t += 360 / torpedo_ring)
 						{
 							var inst = shoot(dan,col,obj_boss.x,obj_boss.y,aim + t,torpedo_spd,sfx_shot1,num);
 							if(instance_exists(inst))
 							{
-								inst.dir = dir_list[|i];
+								inst.dir = dir_list[i];
 								inst.angle_to = inst.angle + torpedo_angle_max * inst.dir;
 							}
 						}
 					}
 		
-					time_list[|i] -= 1;
+					time_list[i] -= 1;
+				}
+				else
+				{
+					array_delete(angle_list,i,1);
+					array_delete(time_list,i,1);
+					array_delete(dir_list,i,1);
 				}
 			}
 	

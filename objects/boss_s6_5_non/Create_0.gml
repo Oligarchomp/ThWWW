@@ -9,8 +9,8 @@ spell_set_time(40,false,90);
 
 act_dir = 1;
 
-angle_list = ds_list_create();
-time_list = ds_list_create();
-dir_list = ds_list_create();
+angle_list = [];
+time_list = [];
+dir_list = [];
 
 angle_torpedo = rng(360,false,4);

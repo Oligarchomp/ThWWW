@@ -176,15 +176,15 @@ if(global.gp_active) and (spell_wait == 0)
 	
 	var familiar_life = 95;
 	
-	for(var i = 0; i < ds_list_size(id_list); i += 1)
+	for(var i = 0; i < array_length(id_list); i += 1)
 	{
-		time_list[|i] -= 1;
-		if(time_list[|i] == 0)
+		time_list[i] -= 1;
+		if(time_list[i] == 0)
 		{
 			play_sound(sfx_familiar_spawn,1,false);
 			var sp = 0;
 			var ang = 0;
-			switch(id_list[|i])
+			switch(id_list[i])
 			{
 				case 1:
 					var sp = 3;
@@ -211,12 +211,12 @@ if(global.gp_active) and (spell_wait == 0)
 					var ang = -12;
 				break;
 			}
-			var inst = create_enemy(EN_FAMILIAR,obj_boss.x,obj_boss.y,familiar_life,id_list[|i],sp,ang);
+			var inst = create_enemy(EN_FAMILIAR,obj_boss.x,obj_boss.y,familiar_life,id_list[i],sp,ang);
 			inst.item_nbr = 0;
-			inst.familiar_id = id_list[|i];
+			inst.familiar_id = id_list[i];
 			
-			ds_list_delete(time_list,i)
-			ds_list_delete(id_list,i)
+			array_delete(time_list,i,1);
+			array_delete(id_list,i,1);
 		}
 	}
 	
