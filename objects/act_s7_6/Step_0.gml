@@ -68,9 +68,9 @@ if(global.gp_active)
 	}
 	
 	
-	for(var i = 0; i < ds_list_size(x_death_list); i += 1)
+	for(var i = 0; i < ds_list_size(global.x_death_list); i += 1)
 	{
-		shoot_ring(DAN_BUBBLE,6,revenge_ring,x_death_list[|i],y_death_list[|i],rng(360,false,5),revenge_spd_shoot,sfx_redirect1,7);
+		shoot_ring(DAN_BUBBLE,6,revenge_ring,global.x_death_list[|i],global.y_death_list[|i],rng(360,false,5),revenge_spd_shoot,sfx_redirect1,7);
 	}
 }
 // Inherit the parent event

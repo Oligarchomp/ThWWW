@@ -93,10 +93,10 @@ if(global.gp_active)
 	}
 	
 	
-	for(var i = 0; i < ds_list_size(x_death_list); i += 1)
+	for(var i = 0; i < ds_list_size(global.x_death_list); i += 1)
 	{
 		
-		shoot_arc_row(DAN_BALL,6,revenge_arc_nbr,revenge_row_nbr,x_death_list[|i], y_death_list[|i],999,30,7,9,sfx_shot2,1);
+		shoot_arc_row(DAN_BALL,6,revenge_arc_nbr,revenge_row_nbr,global.x_death_list[|i], global.y_death_list[|i],999,30,7,9,sfx_shot2,1);
 		
 	}
 	

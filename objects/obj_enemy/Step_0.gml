@@ -81,15 +81,8 @@ if (global.gp_active)
 		
 		if (can_revenge)
 		{
-		var event = get_current_event()
-			if(instance_exists(event))
-			{
-				if (object_get_parent(event) == obj_act) or (object_get_parent(event) == obj_spell)
-				{
-					ds_list_add(event.x_death_list,x);
-					ds_list_add(event.y_death_list,y);
-				}
-			}
+			ds_list_add(global.x_death_list,x);
+			ds_list_add(global.y_death_list,y);	
 		}
 		
 		//instance_create_depth(x,y,depth,obj_enemy_defeat);

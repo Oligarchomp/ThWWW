@@ -148,6 +148,10 @@ global.replay_seed = [];
 
 global.name_entry = "";
 
+global.x_death_list = ds_list_create();
+global.y_death_list = ds_list_create();
+
+
 
 //define player_id
 #macro P_REIMU 0

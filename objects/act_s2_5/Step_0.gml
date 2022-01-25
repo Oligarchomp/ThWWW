@@ -151,9 +151,9 @@ if(global.gp_active)
 	
 	if(global.difficulty == 0)
 	{
-		for(var i = 0; i < ds_list_size(x_death_list); i += 1)
+		for(var i = 0; i < ds_list_size(global.x_death_list); i += 1)
 		{
-			var inst = shoot(DAN_BALL,6,x_death_list[|i],y_death_list[|i],60 + rng(60,false,i),1 + rng(1,false,i + 1),sfx_shot3,2); 
+			var inst = shoot(DAN_BALL,6,global.x_death_list[|i],global.y_death_list[|i],60 + rng(60,false,i),1 + rng(1,false,i + 1),sfx_shot3,2); 
 			inst.pos_type = POS_SP;
 			inst.y_grav_accel = 0.05;
 			inst.y_grav_max = 6;	

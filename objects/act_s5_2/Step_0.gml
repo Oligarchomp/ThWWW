@@ -147,9 +147,9 @@ if(global.gp_active)
 		}
 	}
 	
-	for(var i = 0; i < ds_list_size(x_death_list); i += 1)
+	for(var i = 0; i < ds_list_size(global.x_death_list); i += 1)
 	{
-		shoot_ring(DAN_MENTOS,6,ring_nbr,x_death_list[|i],y_death_list[|i],rng(360,false,4),ring_spd,sfx_redirect1,8);
+		shoot_ring(DAN_MENTOS,6,ring_nbr,global.x_death_list[|i],global.y_death_list[|i],rng(360,false,4),ring_spd,sfx_redirect1,8);
 	}
 }
 // Inherit the parent event

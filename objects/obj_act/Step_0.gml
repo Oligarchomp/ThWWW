@@ -23,6 +23,10 @@ if(global.gp_active)
 	
 	step += 1;
 	
-	ds_list_clear(x_death_list);//need to be used right away by the act object
-	ds_list_clear(y_death_list);
+	if(!instance_exists(obj_spell))
+	{
+		ds_list_clear(global.x_death_list);//need to be used right away by the act object
+		ds_list_clear(global.y_death_list);
+	}
+	
 }

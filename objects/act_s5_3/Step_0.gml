@@ -92,12 +92,6 @@ if(global.gp_active)
 		}
 	}
 	
-	//revenge
-	for(var i = 0; i < ds_list_size(x_death_list); i += 1)
-	{
-		//shoot_ring(DAN_BUBBLE,6,bubble_ring,x_death_list[|i],y_death_list[|i],rng(360,false,6),bubble_spd,sfx_redirect1,8);
-	}	
-	
 }
 // Inherit the parent event
 event_inherited();
