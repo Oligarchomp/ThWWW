@@ -86,9 +86,9 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(state)
 	{
 		case 0:
-			if(pos_step < ds_list_size(x_list))
+			if(pos_step < array_length(x_list))
 			{
-				boss_movement_goto(room_width / 2 + x_list[|pos_step] * dir_act,y_list[|pos_step],boss_spd);
+				boss_movement_goto(room_width / 2 + x_list[pos_step] * dir_act,y_list[pos_step],boss_spd);
 				pos_step += 1;
 				state = 1;
 				

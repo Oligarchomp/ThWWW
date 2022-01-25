@@ -127,7 +127,12 @@ if(pause_state == 1)
 				
 					continue_song = true;
 					
-					item_extend = item_extend_ref;
+					array_delete(item_extend,0,array_length(item_extend));
+					for(var i = 0; i < array_length(item_extend_ref); i += 1)
+					{
+						array_push(item_extend,item_extend_ref[i])	
+					}
+					
 					global.item_nbr = 0;
 					
 					switch(global.continues)

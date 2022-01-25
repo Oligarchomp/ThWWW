@@ -75,12 +75,12 @@ draw_text(x_info,y_item, "ITEM:")
 draw_text(x_info,y_graze, "GRAZE:")
 
 
-var lenght = string_length(string(item_extend[|0]));
+var lenght = string_length(string(item_extend[0]));
 var pos = x_score - sprite_get_width(spr_score) * lenght - floor((lenght - 1) / 3) * 6;
 
 draw_score(global.item_nbr,pos - 15,y_item + 5,spr_score,1,1);
 draw_text(pos,y_item,"/");
-draw_score(item_extend[|0],x_score,y_item + 5,spr_score,1,1);
+draw_score(item_extend[0],x_score,y_item + 5,spr_score,1,1);
 
 draw_score(global.graze,x_score,y_graze + 5,spr_score,1,1);
 

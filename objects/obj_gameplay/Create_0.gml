@@ -21,12 +21,11 @@ global.gp_active = true;
 global.time = 0;
 
 
-item_extend = ds_list_create();
+item_extend = [];
+item_extend_ref = []
 
-extend_full = ds_list_create();
-ds_list_add(extend_full,250,600,1000,1500,2200,9999);
-extend_extra = ds_list_create();
-ds_list_add(extend_extra,600,1400,9999);
+extend_full = [250,600,1000,1500,2200,9999];
+extend_extra = [600,1400,9999];
 
 
 global.starting_bomb = (global.rng_patch and global.game_type == GAME_FULL) ? global.starting_bomb_rng : global.starting_bomb_normal;
@@ -55,20 +54,20 @@ if(global.play_type == PLAY_MANUAL) or (global.replay_stage_nbr == 1)
 			global.life = 0;
 			global.bomb = 0;
 		
-			ds_list_add(item_extend,9999);
+			array_push(item_extend,9999);
 		break;
 		case GAME_STAGE:
 			global.life = 7;
 			global.bomb = global.starting_bomb;
 		
-			ds_list_add(item_extend,9999);
+			array_push(item_extend,9999);
 		break;
 	}
 	
-	item_extend_ref = ds_list_create()
-	for(var i = 0; i < ds_list_size(item_extend); i += 1)
+	
+	for(var i = 0; i < array_length(item_extend); i += 1)
 	{
-		ds_list_add(item_extend_ref,item_extend[|i])	
+		array_push(item_extend_ref,item_extend[i])	
 	}
 	
 	global.item_nbr = 0 // how many point item collected
@@ -87,9 +86,9 @@ else
 	global.item_nbr = global.replay_item;
 	
 	item_extend = extend_full;
-	while(item_extend[|0] < global.item_nbr)
+	while(item_extend[0] < global.item_nbr)
 	{
-		ds_list_delete(item_extend,0);	
+		array_delete(item_extend,0,1);	
 	}
 	
 	global.graze = global.replay_graze;
