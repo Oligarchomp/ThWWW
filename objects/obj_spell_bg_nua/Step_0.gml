@@ -11,7 +11,7 @@ if(global.gp_active)
 	
 	for(var i = 0; i < tide_row; i += 1)
 	{
-		time_list[|i] += 1;
+		time_list[i] += 1;
 	}
 	
 	x_rain += r_hsp;

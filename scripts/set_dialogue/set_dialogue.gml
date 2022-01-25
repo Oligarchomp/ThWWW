@@ -21,17 +21,17 @@ var text = argument6;
 
 var w = argument7;// -1 = manual
 
-ds_list_add(plr_spr_list,p_spr);
-ds_list_add(plr_im_list,p_im);
-ds_list_add(plr_active_list,p_ac);
+array_push(plr_spr_list,p_spr);
+array_push(plr_im_list,p_im);
+array_push(plr_active_list,p_ac);
 
-ds_list_add(boss_spr_list,b_spr);
-ds_list_add(boss_im_list,b_im);
-ds_list_add(boss_active_list,b_ac);
+array_push(boss_spr_list,b_spr);
+array_push(boss_im_list,b_im);
+array_push(boss_active_list,b_ac);
 
-ds_list_add(text_list, text);
+array_push(text_list, text);
 
-ds_list_add(wait_list, w);
+array_push(wait_list, w);
 
 
 }

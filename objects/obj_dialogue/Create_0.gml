@@ -65,18 +65,18 @@ current_nbr = 0;
 current_step = 0;
 
 // all of these always need to have the same number of info
-plr_spr_list = ds_list_create();
-boss_spr_list = ds_list_create();
+plr_spr_list = [];
+boss_spr_list = [];
 
-plr_im_list = ds_list_create();
-boss_im_list = ds_list_create();
+plr_im_list = [];
+boss_im_list = [];
 
-plr_active_list = ds_list_create();
-boss_active_list = ds_list_create();
+plr_active_list = [];
+boss_active_list = [];
 
-text_list = ds_list_create()
+text_list = [];
 
-wait_list = ds_list_create();
+wait_list = [];
 
 skip_time_ref = 30;
 skip_time = 0;

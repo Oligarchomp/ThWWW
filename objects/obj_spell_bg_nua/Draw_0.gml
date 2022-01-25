@@ -8,7 +8,7 @@ for(var i = 0; i < tide_row; i += 1)
 {
 	for(var j = -1; j < 5; j += 1)
 	{
-		var y_true = y_list[|i] + sin(time_list[|i] / tide_spd) * tide_mult;
+		var y_true = y_list[i] + sin(time_list[i] / tide_spd) * tide_mult;
 		
 		var col = make_color_hsv(150,178, 5 + y_true / 2.3 * bg_alpha )
 		if( i % 2 == 0)

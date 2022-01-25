@@ -31,11 +31,15 @@ tide_spd = 50;
 tide_mult = 30;
 
 tide_row = 16;
-y_list = ds_list_create();
-time_list = ds_list_create();
+
+
+y_list = [];
+time_list = [];
 
 for(var i = 0; i < tide_row; i += 1)
 {
-	ds_list_add(y_list,room_height / (tide_row - 3)  * i); // - so that there is offscreen
-	ds_list_add(time_list,(tide_row - i) * 30);
+	array_push(y_list,room_height / (tide_row - 3)  * i); // - so that there is offscreen
+	array_push(time_list,(tide_row - i) * 30);
 }
+
+

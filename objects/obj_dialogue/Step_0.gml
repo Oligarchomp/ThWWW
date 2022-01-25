@@ -68,7 +68,7 @@ if(global.gp_active)
 	//checking if need to go to next dialogue
 	var go_to_next = false;
 	
-	var wait = wait_list[|current_nbr];
+	var wait = wait_list[current_nbr];
 	
 	if(wait == current_step)
 	{
@@ -124,7 +124,7 @@ if(global.gp_active)
 	{
 		play_sound(sfx_dialogue,1,false);
 		
-		if (current_nbr < ds_list_size(plr_active_list) - 1)
+		if (current_nbr < array_length(plr_active_list) - 1)
 		{
 			current_nbr += 1;
 			current_step = 0;
@@ -141,16 +141,16 @@ if(global.gp_active)
 
 	
 	// setting
-	if (current_nbr < ds_list_size(plr_active_list))
+	if (current_nbr < array_length(plr_active_list))
 	{
-		plr_active_to = plr_active_list[|current_nbr];
-		boss_active_to = boss_active_list[|current_nbr];
+		plr_active_to = plr_active_list[current_nbr];
+		boss_active_to = boss_active_list[current_nbr];
 		
-		plr_spr = plr_spr_list[|current_nbr];
-		boss_spr = boss_spr_list[|current_nbr];
+		plr_spr = plr_spr_list[current_nbr];
+		boss_spr = boss_spr_list[current_nbr];
 		
-		plr_im = plr_im_list[|current_nbr];
-		boss_im = boss_im_list[|current_nbr];
+		plr_im = plr_im_list[current_nbr];
+		boss_im = boss_im_list[current_nbr];
 	}
 	
 	
