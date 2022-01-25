@@ -9,10 +9,14 @@ spell_set_name("spell_s7_9","spell_s7_9","spell_s7_9","spell_s7_9")
 spell_set_life(1000,200);
 spell_set_time(60,true,90);
 
+boss_movement_goto(room_width / 2, 100,7);
+
 item_nbr = 0;
 
 
 mentos_wait = 42;
+
+
 
 
 wave_nbr = 0;

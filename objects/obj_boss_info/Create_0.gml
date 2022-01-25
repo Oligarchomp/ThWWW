@@ -39,7 +39,7 @@ switch(global.stage)
 		else
 		{
 			name = get_text("boss_pale");
-			spell_nbr = 3;
+			spell_nbr = 2; //the first one is casted before this instance is created
 		}
 	break;
 }

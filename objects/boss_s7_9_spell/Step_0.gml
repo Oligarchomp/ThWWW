@@ -83,7 +83,7 @@ if(global.gp_active) and (spell_wait == 0)
 				break;
 				case 30:
 					
-					shoot_ring(DAN_BUBBLE,1,14,obj_boss.x,obj_boss.y,999,2,sfx_redirect1,7);
+					shoot_ring(DAN_BUBBLE,1,18,obj_boss.x,obj_boss.y,999,2,sfx_redirect1,7);
 				
 					obj_boss.x = room_width / 2;
 					obj_boss.y = -1000;
