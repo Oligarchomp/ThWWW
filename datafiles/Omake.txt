@@ -35,7 +35,7 @@ Species: Living God
 Ability: Capable of causing miracles
 
 Shrine Maiden of the Moriya Shrine, she is still actively trying to suppress all form of her common sense.
-When the sky broke, the Central god told her to go do something about it. Sanae will never say no to an occasion to be a Hero.
+When the sky broke, the Central god told her to go do something about it. Sanae will never say no to an occasion to be a hero.
 
 
 //////////////////////////////////////////////////
@@ -47,7 +47,7 @@ When the sky broke, the Central god told her to go do something about it. Sanae 
 Apple Girlington
 
 Species: Youkai (Apple)
-Ability: Capable of making apple grow.
+Ability: Capable of making apple grow
 
 
 There is a lot of different type of Youkai. Flower Youkai, winter Youkai, gap Youkai and of course...apple Youkai.
@@ -60,12 +60,12 @@ Maybe, one day, she will stop making apples for recognition, but for herself.
 If that day ever comes, trust me, I will be the first one to take a bite out of one of them.
 
 
-----Stage 2 Boss: The Crustecean with a Human Face----
+----Stage 2 Boss: The Crustacean with a Human Face----
 
 Serene Heikegani
  
 Species: Heikegani
-Ability: Capable of cutting hair.
+Ability: Capable of cutting hair
 
 
 Back in the twelfth century, a battle oppossing the Heike clan and the Genji clan took place in a narrow strait separating Honshū and Kyūshū.
@@ -83,7 +83,7 @@ Eventually, when no-one seemed to care about her anymore, not even herself, she 
 
 The Misty Lake was obviously the goto place for her to stay.
 In a society of Heikegani, being a hairdresser is extremely common and unremarkable, but in a lake with diversed type of Youkai, it suddenly became 
-her biggest strenght. Youkais in Gensokyo care a lot about looking special and cool, so her skill were extremely appreciated.
+her biggest strenght. Youkai in Gensokyo care a lot about looking special and cool, so her skills were extremely appreciated.
 She became somewhat popular amongst weaker Youkai.
 
 For the first time in her life, she felt like her existence had a purpose.
@@ -94,14 +94,14 @@ For the first time in her life, she felt like her existence had a purpose.
 Pale Fanhead
 
 Species: Tsukumogami (Electric fan)
-Ability: Capable of making objects spin.
+Ability: Capable of making objects spin
 
 
 Native to the Outside World, she came to Gensokyo alongside the Moriyas when they move in. Of course back then, she was but a simple mindless device. 
 She was a very old model, an antique. Because of that, she was eventually sent in a storage room and then forgotten over time.
 
 But one day, during a certain Incident, a great amount of magical power turn her into a Tsukumogami, just like many other tool all over Gensokyo.
-Feeling like she wasn't needed anymore, she left the shrine. While she respected the Moriyas, she never tried to make any contact with them.
+Feeling like she wasn't needed anymore, she left the shrine. While she respected the Moriya, she never tried to make any contact with them.
 Since then, she mostly roams around, playing pranks to humans, while avoiding going around Youkai Mountain.
 
 She's really expressive, curious, silly and protective.
@@ -115,7 +115,7 @@ It is there, high up in the sky, that she met a very impatient human girl...
 Iku Nagae
 
 Species: Youkai (Oarfish)
-Ability: Capable of reading the atmosphere.
+Ability: Capable of reading the atmosphere
 
 Messenger of the Dragon Palace, she is to watch over Gensokyo's atmosphere and weather. 
 
@@ -130,7 +130,7 @@ The rain and the broken sky being caused by one and the same person, her help wa
 Yuuto Ichika
 
 Species: Japanese
-Ability: Capable of using telekinesis and magic.
+Ability: Capable of using telekinesis and magic
 
 
 No, this is not Patchouli. Her name is Yuuto Ichika, a young magician trying to overcome her statue as a bootleg. 
@@ -159,7 +159,7 @@ But while roaming outside in the rain, she did stumble upon someone else...
 Feza
 
 Species: Patriarch (Dove)
-Ability: Capable of finding land.
+Ability: Capable of finding land
 
 
 She was but a simple dove, Nua's first pet.
@@ -194,7 +194,7 @@ After the reparations, on the way back, she founds a hasty human roaming inside 
 Nua Kozui
 
 Species: Patriarch (Human)
-Ability: Capable of causing floods.
+Ability: Capable of causing floods
 
 A long, long time ago, in a different World, existed a planet very similar, yet different to Earth.
 This planet was also populated by humans, had a similar History, had similar religion, but it wasn't the Earth as we know it. 
@@ -247,7 +247,7 @@ But what she didn't expect, was an inhabitant of this World coming to try to sto
 Reverence U'n-Llisardggy
 
 Species: God (Kotoamatsukami)
-Ability: Capable of creating Worlds.
+Ability: Capable of creating Worlds
 
 
 In the beginning, around 13.8 billion years ago, a god created the known universe.

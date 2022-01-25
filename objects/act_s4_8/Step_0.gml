@@ -46,7 +46,7 @@ if(global.gp_active)
 	var lenght = 630;
 	var fairy_wait = 12;
 	
-	var fairy_life = 5;
+	var fairy_life = 10;
 	var	fairy_spd = 4;
 	var fairy_open = 14;
 	

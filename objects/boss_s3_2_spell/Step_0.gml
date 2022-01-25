@@ -122,7 +122,6 @@ if(global.gp_active) and(spell_wait == 0)
 		}
 		
 	}
-	
 }
 
 // Inherit the parent event

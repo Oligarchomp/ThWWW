@@ -22,7 +22,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 1:
 			var claw_final_x_off = 10;
 			var claw_lenght = 11;
-			var claw_spd = 75;
+			var claw_spd = 65;
 		
 			var move_start = 160;
 			var move_wait = 130;
@@ -36,7 +36,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 2:
 			var claw_final_x_off = 10;
 			var claw_lenght = 12;
-			var claw_spd = 60;
+			var claw_spd = 55;
 		
 			var move_start = 160;
 			var move_wait = 130;

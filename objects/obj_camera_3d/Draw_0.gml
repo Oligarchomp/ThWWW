@@ -1,4 +1,3 @@
-var camera = camera_create();
 var x_pos = x + x_shake;
 var y_pos = y + y_shake;
 var x_look = x_lookat + x_shake;

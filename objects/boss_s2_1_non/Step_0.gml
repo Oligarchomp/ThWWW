@@ -20,12 +20,12 @@ if(global.gp_active) and (spell_wait == 0)
 		case 1:
 			var wait_move = 120
 		
-			var wait_knife = 24;
+			var wait_knife = 23;
 			var knife_nbr_row = 3;
 			var knife_nbr_arc = 4;
 			var knife_spd_min = 2;
 			var knife_spd_max = 3.5;
-			var knife_dist = 15
+			var knife_dist = 20
 			
 			var angle_shoot_plus = knife_dist * knife_nbr_arc + 4;
 		break;

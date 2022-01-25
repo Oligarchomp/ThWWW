@@ -26,7 +26,7 @@ if(global.gp_active)
 				case 1:
 					var wait_move = 120
 		
-					var wait_knife = 19;
+					var wait_knife = 16;
 					var knife_nbr_row = 3;
 					var knife_nbr_arc = 5;
 					var knife_spd_min = 3.2;
