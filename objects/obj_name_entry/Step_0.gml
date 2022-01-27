@@ -68,7 +68,10 @@ if(global.shot_pressed)
 			}
 			else
 			{
-				data_write("Data.ini","data","name",global.name_entry)
+				if(!instance_exists(obj_replay))
+				{
+					data_write("Data.ini","data","name",global.name_entry)
+				}
 				play_sound(sfx_extend,1,false);
 				instance_destroy();
 			}

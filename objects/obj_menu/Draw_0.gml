@@ -200,6 +200,13 @@ switch(level)
 			break;
 			case 7://music room
 				
+				var y_minus = 170;
+				if(rng_unlock)
+				{
+					draw_sprite(spr_rev_music,step / 40,300,220)
+					var y_minus = 0;
+				}
+				
 				draw_set_font(font_spellpractice);
 				for(var i = 0; i < array_length(check) ; i += 1)
 				{
@@ -207,21 +214,18 @@ switch(level)
 					
 					check[i].active_offset = goto_value(check[i].active_offset, is_active * 10,3);
 					
-					draw_text_color(530 + check[i].active_offset,50 + i * 20,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
+					draw_text_color(530 + check[i].active_offset,100 + i * 20,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
 				
 					//spell comment
 					if(is_active)
 					{
-						draw_text_color(100,410,get_text("music_comment"),c_white,c_white,c_white,c_white,menu_description_alpha);
-						draw_text_color(100,426,"------------------------------------------------------",c_white,c_white,c_white,c_white,menu_description_alpha);
-						draw_text_ext_color(100,448,check[i].comment,20,750,c_white,c_white,c_white,c_white,menu_description_alpha);
+						draw_text_color(160,410 - y_minus,get_text("music_comment"),c_white,c_white,c_white,c_white,menu_description_alpha);
+						draw_text_color(160,426 - y_minus,"------------------------------------------------------",c_white,c_white,c_white,c_white,menu_description_alpha);
+						draw_text_ext_color(160,448 - y_minus,check[i].comment,20,750,c_white,c_white,c_white,c_white,menu_description_alpha);
 					}
 				}
 				
-				if(rng_unlock)
-				{
-					draw_sprite(spr_rev_music,step / 40,300,220)
-				}
+				
 			break;
 			case 8://manual
 				for(var i = 0; i < array_length(check); i += 1)

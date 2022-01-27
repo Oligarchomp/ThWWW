@@ -136,6 +136,9 @@ global.starting_bomb_rng = 3;
 
 global.poc = 0;
 
+global.bullet_cap = 700;
+global.graze_max = 100;
+
 // to know what will be played
 global.event_list = ds_list_create();
 global.wait_list = ds_list_create();

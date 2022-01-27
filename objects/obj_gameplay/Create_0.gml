@@ -115,8 +115,7 @@ global.spell_life = 1; //use for sharing heath bar between nons and spells
 
 global.enemy_type = 0;
 
-global.bullet_cap = 700;
-global.graze_max = 100;
+
 
 
 

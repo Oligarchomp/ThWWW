@@ -5,7 +5,7 @@ depth = global.bg_depth  ;
 x = 0;
 y = 0;
 
-vsp = 14;
+vsp = 12;
 
 
 height = sprite_get_height(sprite_index);

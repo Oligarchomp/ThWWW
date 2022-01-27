@@ -3,7 +3,7 @@
 
 alpha = goto_value(alpha,0,0.02);
 
-if(step == 180) or (global.shot_down)
+if(step == 180) or ((global.shot_down) and (step > 1))
 {
 	
 	with(obj_loading)
