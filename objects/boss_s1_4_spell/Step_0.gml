@@ -141,7 +141,7 @@ if(global.gp_active)
 					case 50:
 						state = 0;
 						dir_act *= -1;
-						angle_arc = 90;
+						angle_arc = 90 - 20 + rng(40,false,1);
 					break;
 				}
 			break;

@@ -155,15 +155,18 @@ if(global.gp_active) and (spell_wait == 0)
 	{
 		with(obj_danmaku)
 		{
-			if(danmaku_id == DAN_MENTOS)
+			switch(danmaku_id)
 			{
-				sprite_danmaku = color_id == 1 ? spr_mentos_farewell : spr_mentos;
-				sprite_index = color_id == 1 ? spr_nothing : spr_danmaku_hitbox;
-			}
-			if(danmaku_id == DAN_BUBBLE)
-			{
-				sprite_danmaku = color_id == 1 ? spr_bubble_farewell : spr_bubble;
-				sprite_index = color_id == 1 ? spr_nothing : spr_danmaku_hitbox;
+				case DAN_MENTOS:
+					sprite_danmaku = color_id == 1 ? spr_mentos_farewell : spr_mentos;
+					sprite_index = color_id == 1 ? spr_nothing : spr_danmaku_hitbox;
+					depth = color_id == 1 ? global.danmaku_depth + 3: global.danmaku_depth + 2;
+				break;
+				case DAN_BUBBLE:
+					sprite_danmaku = color_id == 1 ? spr_bubble_farewell : spr_bubble;
+					sprite_index = color_id == 1 ? spr_nothing : spr_danmaku_hitbox;
+					depth = color_id == 1 ? global.danmaku_depth + 3: global.danmaku_depth + 2;
+				break;
 			}
 			image_index = danmaku_id;
 		}
@@ -172,15 +175,18 @@ if(global.gp_active) and (spell_wait == 0)
 	{
 		with(obj_danmaku)
 		{
-			if(danmaku_id == DAN_MENTOS)
+			switch(danmaku_id)
 			{
-				sprite_danmaku = color_id == 6 ? spr_mentos_farewell : spr_mentos;
-				sprite_index = color_id == 6 ? spr_nothing : spr_danmaku_hitbox;
-			}
-			if(danmaku_id == DAN_BUBBLE)
-			{
-				sprite_danmaku = color_id == 6 ? spr_bubble_farewell : spr_bubble;
-				sprite_index = color_id == 6 ? spr_nothing : spr_danmaku_hitbox;
+				case DAN_MENTOS:
+					sprite_danmaku = color_id == 6 ? spr_mentos_farewell : spr_mentos;
+					sprite_index = color_id == 6 ? spr_nothing : spr_danmaku_hitbox;
+					depth = color_id == 6 ? global.danmaku_depth + 3: global.danmaku_depth + 2;
+				break;
+				case DAN_BUBBLE:
+					sprite_danmaku = color_id == 6 ? spr_bubble_farewell : spr_bubble;
+					sprite_index = color_id == 6 ? spr_nothing : spr_danmaku_hitbox;
+					depth = color_id == 6 ? global.danmaku_depth + 3: global.danmaku_depth + 2;
+				break;
 			}
 			image_index = danmaku_id;
 		}

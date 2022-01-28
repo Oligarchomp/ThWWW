@@ -15,6 +15,6 @@ item_nbr = 0;
 boss_movement_goto(room_width / 2, 120,6)
 
 
-angle_arc = 90;
+angle_arc = 90 - 20 + rng(40,false,1);
 
 dir_act = 1;

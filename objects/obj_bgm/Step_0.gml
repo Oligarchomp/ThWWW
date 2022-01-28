@@ -72,6 +72,7 @@ if(update)
 		{
 			currently_playing = audio_play_sound_on(global.bgm_emitter,score_music_mem,true,1);
 			audio_sound_set_track_position(currently_playing,score_time_mem);
+			bgm = asset_get_index(audio_get_name(currently_playing));
 		}
 	}
 }

@@ -178,9 +178,6 @@ if (global.gp_active)
 			
 			
 			
-			
-			
-			
 		
 			//item
 			while(place_meeting(x,y,obj_item_auto))
@@ -225,6 +222,12 @@ if (global.gp_active)
 			}
 		break;
 		case 2://fucking dead
+			
+			with(obj_item_auto)
+			{
+				auto_collect = false;
+			}
+		
 			var death_spd = 0.05;
 			scale = goto_value(scale,2,death_spd);
 			alpha = goto_value(alpha,0,death_spd)
