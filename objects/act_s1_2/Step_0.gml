@@ -14,14 +14,14 @@ if(global.gp_active)
 	{
 		case 0:
 			var big_wait_shoot = 180;
-			var wall_nbr = 4;
+			var wall_nbr = 5;
 			var wave = 1;
 			var wait = 20;
 			var arc_num = 3;
 		break;
 		case 1:
 			var big_wait_shoot = 70;
-			var wall_nbr = 4;
+			var wall_nbr = 5;
 			var wave = 2;
 			var wait = 35;
 			var arc_num = 3;

@@ -16,7 +16,7 @@ if(global.gp_active)
 			var wall_spd = 2.5;
 			
 			//aim
-			var mentos_wait = 35;
+			var mentos_wait = 50;
 			var mentos_spd = 2.8;
 			var aim_lenght = 80;
 		break;

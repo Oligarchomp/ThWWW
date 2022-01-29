@@ -15,7 +15,7 @@ if(global.gp_active)
 			var dist_off = 3;
 			
 			//aim
-			var mentos_wait = 35;
+			var mentos_wait = 40;
 			var mentos_spd = 3.5;
 			var mentos_arc = 1;
 			var mentos_dist = 0;

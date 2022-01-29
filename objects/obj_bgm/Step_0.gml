@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-switch(bgm)
+switch(asset_get_index(audio_get_name(currently_playing)))
 {
 	case mus_title:
 		var intro_length = 9.973;
