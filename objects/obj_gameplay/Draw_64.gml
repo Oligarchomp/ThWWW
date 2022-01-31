@@ -44,7 +44,7 @@ else
 }
 
 draw_set_font(font_game_info)
-draw_text_color(700,20,dif_text,col,col,col,col,1)
+draw_text_color(720 - string_width(dif_text) / 2,20,dif_text,col,col,col,col,1)
 
 
 //draw score

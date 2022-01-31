@@ -1295,7 +1295,7 @@ menu =
 				title : get_text("mus_room_score"),
 				comment : get_text("mus_com_score"),
 				action : MENU_MUSIC,
-				music : noone,
+				music : mus_score,
 			},
 		]
 	},
@@ -1532,7 +1532,7 @@ for(var i = 0; i < 5; i += 1)
 }
 
 
-player_center = 310;
+player_center = 285;
 player = []
 
 for(var i = P_REIMU; i <= P_SANAE; i += 1)

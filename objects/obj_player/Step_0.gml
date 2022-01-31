@@ -17,40 +17,7 @@ if (global.gp_active)
 		state_time += 1;
 	}
 
-/*
-	//NOT THE BEST PLACE
-	var hit_nbr = 0;
-	var p = self;
-	with(obj_danmaku)
-	{
-		var hitb = false;
-		image_index = image_number - 1;
-		var dist = sqrt(sqr(p.x - x) + sqr(p.y - y));
-		
-		if(p.bomb_time == 0)
-		{
-			if ((hit_nbr < 50) and (dist < 80)) 
-			{
-				hitb = true;
-			}
-		}
-		else
-		{
-			if(is_cancelable)
-			{
-				hitb = true;
-			}
-		}
-		
-		if(hitb)
-		{
-			image_index = danmaku_id;
-			hit_nbr += 1;
-		}
-	}
-	///
-	*/
-	
+
 	if(state == 0)//before so you can die oon the same frame
 	{
 		if (bomb_time == 0) and (!in_dialogue)

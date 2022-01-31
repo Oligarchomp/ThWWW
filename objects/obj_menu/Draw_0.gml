@@ -149,7 +149,7 @@ switch(level)
 					var txt = check[i].title;
 					
 					var off = 0;
-					if(i == array_length(check) - 1) and (!rng_unlock)
+					if((i == array_length(check) - 1) and (!rng_unlock)) or (i == array_length(check) - 2)
 					{
 						off = string_width(txt) / 2 + (xx2 - xx) / 2;
 					}
@@ -410,7 +410,7 @@ if(draw_player)
 	var txt = get_text("menu_chose_player");
 	draw_text(480 - string_width(txt) / 2,34,txt);
 	
-	draw_line_width(480,228,836,228,2);
+	draw_line_width(465,228,821,228,2);
 				
 	for(var i = 0; i < 3; i += 1)
 	{
@@ -450,7 +450,7 @@ if(draw_player)
 		shader_reset();
 					
 		//draw description
-		draw_sprite_ext(spr_player_description,global.player_chosen,700,270,1,1,0,c_white,1);
+		draw_sprite_ext(spr_player_description,global.player_chosen,685,270,1,1,0,c_white,1);
 					
 	}
 				

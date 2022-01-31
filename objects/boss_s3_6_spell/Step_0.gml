@@ -41,6 +41,8 @@ if(global.gp_active) and (spell_wait == 0)
 	var spin_spd = 6;
 	var fan_bubble_spd = 9;
 	
+	
+	
 	switch(state)
 	{
 		case 0:

@@ -19,8 +19,8 @@ if(global.gp_active)
 						wait_aim = 1000;
 					break;
 					case 1:
-						var shoot_nbr = 17;
-						var open_max = 40;
+						var shoot_nbr = 13;
+						var open_max = 55;
 						var wait_shoot = 65;
 						
 						var wait_aim = 15;
@@ -39,14 +39,14 @@ if(global.gp_active)
 							case 30:
 								repeat(shoot_nbr)
 								{
-									var inst = shoot(DAN_BUBBLE,1,obj_boss.x,obj_boss.y,90 - open_max + rng(open_max * 2,false,4),3 + rng(3,false,1),sfx_shot1,3);
+									var inst = shoot(DAN_BUBBLE,1,obj_boss.x,obj_boss.y,90 - open_max + rng(open_max * 2,false,4),1.5 + rng(1.5,false,1),sfx_shot1,3);
 									inst.pos_type = POS_SP;
-									inst.y_grav_accel = .1;
+									inst.y_grav_accel = .05;
 									inst.y_grav_max = 13 + rng(4,false,6);
 									
-									var inst = shoot(DAN_BALL,1,obj_boss.x,obj_boss.y,90 - open_max + rng(open_max * 2,false,4),3 + rng(3,false,1),sfx_shot1,1);
+									var inst = shoot(DAN_BALL,1,obj_boss.x,obj_boss.y,90 - open_max + rng(open_max * 2,false,4),1.5 + rng(1.5,false,1),sfx_shot1,1);
 									inst.pos_type = POS_SP;
-									inst.y_grav_accel = .1;
+									inst.y_grav_accel = .05;
 									inst.y_grav_max = 13 + rng(4,false,9);
 								}
 								

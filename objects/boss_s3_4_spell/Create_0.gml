@@ -19,3 +19,4 @@ x_ref = room_width / 2;
 y_ref = room_height / 2 + 30;
 
 angle_start = 90;
+

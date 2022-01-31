@@ -9,16 +9,21 @@ if(global.gp_active) and (spell_wait == 0)
 			var aim_spd = 3;
 			var aim_dist = 0;
 			
-			var arrow_size = 2;
-			var arrow_spd = 2;
+			var arrow_size = 4;
+			var arrow_spd = 3;
 			
-			var ring_nbr = 4;
-			var ring_spd_min = 1.2;
-			var ring_spd_max = 1.5;
-			var ring_accel = 0.05;
+			var ring_nbr = 3;
+			var ring_spd_min = 0.8;
+			var ring_spd_max = 1;
+			var ring_accel = 0.03;
+			
+			var ball_nbr = ring_nbr;
+			var ball_spd_min = 1;
+			var ball_spd_max = 1.2;
+			var ball_accel = 0.03;
 			
 			var fill_ring = 8;
-			var fill_spd = 3.5;
+			var fill_spd = 2;
 			var fill_wait = 45;
 			
 			var wave_wait = 150;
@@ -28,16 +33,21 @@ if(global.gp_active) and (spell_wait == 0)
 			var aim_spd = 3.3;
 			var aim_dist = 35;
 			
-			var arrow_size = 2;
-			var arrow_spd = 3;
+			var arrow_size = 4;
+			var arrow_spd = 4;
 			
-			var ring_nbr = 7;
-			var ring_spd_min = 1.2;
-			var ring_spd_max = 1.5;
-			var ring_accel = 0.05;
+			var ring_nbr = 6;
+			var ring_spd_min = 0.9;
+			var ring_spd_max = 1.1;
+			var ring_accel = 0.03;
+			
+			var ball_nbr = ring_nbr;
+			var ball_spd_min = 1.1;
+			var ball_spd_max = 1.3;
+			var ball_accel = 0.03;
 			
 			var fill_ring = 11;
-			var fill_spd = 4;
+			var fill_spd = 2;
 			var fill_wait = 39;
 			
 			var wave_wait = 150;
@@ -47,16 +57,21 @@ if(global.gp_active) and (spell_wait == 0)
 			var aim_spd = 3.6;
 			var aim_dist = 29;
 			
-			var arrow_size = 3;
-			var arrow_spd = 3.5;
+			var arrow_size = 4;
+			var arrow_spd = 5;
 			
 			var ring_nbr = 8;
-			var ring_spd_min = 1.2;
-			var ring_spd_max = 1.5;
-			var ring_accel = 0.05;
+			var ring_spd_min = 1;
+			var ring_spd_max = 1.2;
+			var ring_accel = 0.04;
+			
+			var ball_nbr = ring_nbr;
+			var ball_spd_min = 1.2;
+			var ball_spd_max = 1.4;
+			var ball_accel = 0.04;
 			
 			var fill_ring = 15;
-			var fill_spd = 4;
+			var fill_spd = 2;
 			var fill_wait = 34;
 			
 			var wave_wait = 150;
@@ -67,15 +82,20 @@ if(global.gp_active) and (spell_wait == 0)
 			var aim_dist = 22;
 			
 			var arrow_size = 4;
-			var arrow_spd = 3.5;
+			var arrow_spd = 5;
 			
 			var ring_nbr = 9;
-			var ring_spd_min = 1.2;
-			var ring_spd_max = 1.5;
-			var ring_accel = 0.03;
+			var ring_spd_min = 1;
+			var ring_spd_max = 1.2;
+			var ring_accel = 0.04;
 			
-			var fill_ring = 20;
-			var fill_spd = 4;
+			var ball_nbr = ring_nbr;
+			var ball_spd_min = 1.2;
+			var ball_spd_max = 1.4;
+			var ball_accel = 0.04;
+			
+			var fill_ring = 22;
+			var fill_spd = 2;
 			var fill_wait = 30;
 			
 			var wave_wait = 150;
@@ -100,16 +120,18 @@ if(global.gp_active) and (spell_wait == 0)
 			}
 		break;
 		case 1:
-			if(state_time % 2 == 0)
-			{
-				//shoot(DAN_BALL,1,obj_boss.x,obj_boss.y,0,0,noone,1);	
-			}
 			if(obj_boss.in_position)
 			{
 				state = 0;
-				shoot_arc(DAN_ARROW,7,aim_arc,obj_boss.x,obj_boss.y,999,aim_dist,aim_spd,sfx_redirect2,5);
-				shoot_ring(DAN_MENTOS,3,ring_nbr,obj_boss.x,obj_boss.y,999,0,sfx_shot1,6);
-				shoot_ring(DAN_MENTOS,5,ring_nbr,obj_boss.x,obj_boss.y,998,0,sfx_shot1,6);
+				
+				var rand = rng(360,false,1);
+				shoot_arc(DAN_ARROW,7,aim_arc,obj_boss.x,obj_boss.y,999,aim_dist,aim_spd,sfx_redirect2,4);
+				shoot_ring(DAN_MENTOS,3,ring_nbr,obj_boss.x,obj_boss.y,rand,0,sfx_shot1,6);
+				shoot_ring(DAN_MENTOS,5,ring_nbr,obj_boss.x,obj_boss.y,rand + 180 / ring_nbr,0,sfx_shot1,6);
+				
+			
+				shoot_ring(DAN_BALL,3,ball_nbr,obj_boss.x,obj_boss.y,rand,0,sfx_shot1,5);
+				shoot_ring(DAN_BALL,5,ball_nbr,obj_boss.x,obj_boss.y,rand + 180 / ball_nbr,0,sfx_shot1,5);
 				
 				var inst = shoot(DAN_ARROW,3,obj_boss.x,obj_boss.y,999,0,sfx_spawn_light,3);
 				inst.spawn_type = SPAWN_SCALE;
@@ -131,6 +153,10 @@ if(global.gp_active) and (spell_wait == 0)
 			{
 				boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);
 				with(obj_danmaku6)
+				{
+					state = 1;	
+				}
+				with(obj_danmaku5)
 				{
 					state = 1;	
 				}
@@ -190,16 +216,32 @@ if(global.gp_active) and (spell_wait == 0)
 			case 1:
 				if(color_id == 3)
 				{
-					spd = goto_value(spd,ring_spd_min,0.05);
+					spd = goto_value(spd,ring_spd_min,ring_accel);
 				}
 				else
 				{
-					spd = goto_value(spd,ring_spd_max,0.05);
+					spd = goto_value(spd,ring_spd_max,ring_accel);
 				}
 			break;
 		}
 	}
 	
+	with(obj_danmaku5)
+	{
+		switch(state)
+		{
+			case 1:
+				if(color_id == 3)
+				{
+					spd = goto_value(spd,ball_spd_min,ball_accel);
+				}
+				else
+				{
+					spd = goto_value(spd,ball_spd_max,ball_accel);
+				}
+			break;
+		}
+	}
 	
 }
 // Inherit the parent event

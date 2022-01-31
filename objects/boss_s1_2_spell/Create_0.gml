@@ -20,3 +20,5 @@ gey_first = true;
 gey_rice_angle = 90;
 
 ring_angle = rng(360,true,3);
+
+obj_boss.y_dis_max = 80;
