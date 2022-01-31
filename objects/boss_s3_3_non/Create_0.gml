@@ -5,7 +5,7 @@
 event_inherited();
 
 spell_set_life(750,170);
-spell_set_time(23,false,90)
+spell_set_time(35,false,90)
 
 
 angle_pale = 90;

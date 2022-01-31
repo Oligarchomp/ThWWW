@@ -5,7 +5,7 @@
 event_inherited();
 
 spell_set_life(820,160);
-spell_set_time(26,false,130)
+spell_set_time(35,false,130)
 
 
 angle_shoot = 0;

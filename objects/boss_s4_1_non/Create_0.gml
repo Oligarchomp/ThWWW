@@ -5,7 +5,7 @@
 event_inherited();
 
 spell_set_life(850,180);
-spell_set_time(23,false,90)
+spell_set_time(40,false,90)
 
 
 wave_dir = 1;

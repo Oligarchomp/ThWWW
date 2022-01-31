@@ -7,7 +7,7 @@ event_inherited();
 spell_set_spell("s7_10",BOSS_REVERENCE,45000000)
 spell_set_name("spell_s7_10","spell_s7_10","spell_s7_10","spell_s7_10")
 spell_set_life(4100,250);
-spell_set_time(80,false,60);
+spell_set_time(90,false,60);
 
 boss_movement_goto(room_width / 2, 130,7);
 

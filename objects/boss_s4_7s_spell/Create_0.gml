@@ -7,7 +7,7 @@ event_inherited();
 spell_set_spell("s4_4s",BOSS_YUUTO,24000000)
 spell_set_name("spell_s4_4s","spell_s4_4s","spell_s4_4s","spell_s4_4s")
 spell_set_life(1200,300);
-spell_set_time(39,false,110);
+spell_set_time(45,false,110);
 
 boss_movement_goto(room_width / 2,room_height / 2 - 20,5);
 

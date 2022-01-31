@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+gpu_set_ztestenable(true);
 
 for(var i = -height * 6; i < room_width; i += height)
 {
@@ -9,6 +10,6 @@ for(var i = -height * 6; i < room_width; i += height)
 	
 	draw_sprite(sprite_index,0,x,y + i);
 	
-	
-	
 }
+
+gpu_set_ztestenable(false);

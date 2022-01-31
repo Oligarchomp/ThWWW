@@ -5,7 +5,7 @@
 event_inherited();
 
 spell_set_life(800,180);
-spell_set_time(30,false,90)
+spell_set_time(40,false,90)
 
 
 sword_dir = 1;

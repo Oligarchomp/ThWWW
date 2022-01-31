@@ -5,7 +5,7 @@
 event_inherited();
 
 spell_set_life(900,200);
-spell_set_time(40,false,130);
+spell_set_time(45,false,130);
 
 
 bullet_angle = rng(360,false,1);

@@ -298,7 +298,7 @@ if (global.gp_active)
 		step += 1;
 		if(!is_timeout)
 		{
-			bonus -= floor(bonus_max / (time / 60 * 110))// floor(bonus_max / 5000);//
+			bonus -= floor(bonus_max / (time / 60 * 95))// floor(bonus_max / 5000);//
 			bonus -= bonus % 10;
 		}
 	}

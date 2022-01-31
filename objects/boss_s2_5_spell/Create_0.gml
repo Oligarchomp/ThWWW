@@ -7,7 +7,7 @@ event_inherited();
 spell_set_spell("s2_3",BOSS_SERENE,15000000)
 spell_set_name("spell_s2_3a","spell_s2_3a","spell_s2_3a","spell_s2_3b")
 spell_set_life(1100,310);
-spell_set_time(35,false,95);
+spell_set_time(40,false,95);
 
 boss_movement_goto(room_width / 2, 100,7);
 
