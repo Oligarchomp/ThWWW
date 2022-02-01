@@ -5,16 +5,19 @@ depth = global.bg_depth  ;
 x = 0;
 y = 0;
 
-vsp = 12;
+vsp = 9;
 
 
 height = sprite_get_height(sprite_index);
 width = sprite_get_width(sprite_index);
 
-instance_create_depth(0,0,global.spell_bg_depth + 10,obj_rain);
+var inst = instance_create_depth(0,0,global.spell_bg_depth + 10,obj_rain);
+inst.vsp *= 0.8;
+inst.hsp *= 0.8;
+
 var inst = instance_create_depth(0,0,global.spell_bg_depth + 20,obj_rain);
-inst.vsp *= 0.6;
-inst.hsp *= 0.6;
+inst.vsp *= 0.4;
+inst.hsp *= 0.4;
 
 
 y_flower = -300;
@@ -24,7 +27,7 @@ while(y_flower < room_height + 300)
 	var x_pos = -240 + rng(room_width + 240 * 2,false,1);
 	var inst = instance_create_depth(x_pos,y_flower,depth - 12,obj_agra_flower);
 	inst.vsp = vsp;
-	y_flower += vsp;
+	y_flower += vsp * 2;
 }
 
 

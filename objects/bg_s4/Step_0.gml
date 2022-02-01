@@ -6,7 +6,7 @@ if(global.gp_active)
 	y %= height;
 	
 	
-	if(step % 3 > 0)
+	if(step % 2 == 0)
 	{
 		var x_pos = -240 + rng(room_width + 240 * 2,false,1);
 		var inst = instance_create_depth(x_pos,-420,depth - 12,obj_agra_flower);

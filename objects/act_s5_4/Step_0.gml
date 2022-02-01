@@ -16,11 +16,6 @@ if(global.gp_active)
 			var ring_spd_max = 5.5;
 			var ring_spd_div = 2;
 			
-			var rice_wait = 40;
-			var rice_spd_shoot = 7;
-			var rice_start = 10;
-			var rice_spd_final = 2.5;
-			var rice_around = 8;
 		break;
 		case 1:
 			var bubble_spd = 6;
@@ -32,12 +27,6 @@ if(global.gp_active)
 			var ring_spd_min = 4;
 			var ring_spd_max = 6;
 			var ring_spd_div = 2;
-			
-			var rice_wait = 26;
-			var rice_spd_shoot = 7;
-			var rice_start = 10;
-			var rice_spd_final = 3;
-			var rice_around = 20;
 		break;
 		case 2:
 			var bubble_spd = 6.5;
@@ -49,12 +38,6 @@ if(global.gp_active)
 			var ring_spd_min = 4;
 			var ring_spd_max = 6;
 			var ring_spd_div = 2;
-			
-			var rice_wait = 20;
-			var rice_spd_shoot = 7;
-			var rice_start = 10;
-			var rice_spd_final = 3;
-			var rice_around = 25;
 		break;
 		case 3:
 			var bubble_spd = 6.5;
@@ -67,11 +50,6 @@ if(global.gp_active)
 			var ring_spd_max = 6;
 			var ring_spd_div = 2;
 			
-			var rice_wait = 16;
-			var rice_spd_shoot = 7;
-			var rice_start = 10;
-			var rice_spd_final = 3;
-			var rice_around = 30;
 		break;
 	}
 	
@@ -80,10 +58,6 @@ if(global.gp_active)
 	var fam_lenght = 150;
 	var fam_wait = 35;
 	
-	var fairy_life = 2;
-	var fairy_wait = 20;
-	var fairy_y = 178;
-	var fairy_spd = 5;
 	
 	switch(step)
 	{	
@@ -92,13 +66,6 @@ if(global.gp_active)
 		case 400:
 		case 600:
 			need_familiar = true;
-		break;
-		case 60:
-		case 260:
-		case 460:
-		case 660:
-			need_fairy_time = 100;
-			fairy_dir *= -1;
 		break;
 	}
 	
@@ -112,19 +79,6 @@ if(global.gp_active)
 		need_familiar = false;	
 	}
 	
-	if(need_fairy_time > 0)
-	{
-		if(need_fairy_time % fairy_wait == 0)
-		{
-			var inst = create_enemy(EN_BLUE,-20,fairy_y,fairy_life,3,fairy_spd,0)
-			inst.item_nbr = 2;
-			
-			var inst = create_enemy(EN_BLUE,420,fairy_y,fairy_life,3,fairy_spd,180)
-			inst.item_nbr = 2;
-		}
-		
-		need_fairy_time -= 1;
-	}
 	
 	with(obj_enemy4)
 	{
@@ -163,17 +117,7 @@ if(global.gp_active)
 		}
 	}
 	
-	//fairy
-	with(obj_enemy3)
-	{
-		if(step % rice_wait == 0)
-		{
-			if(x > 0) and (x < room_width)
-			{
-				shoot(DAN_ARROW,7,x,y,rng(360,false,5),rice_spd_shoot,sfx_shot3,3);
-			}
-		}
-	}
+	
 	
 	//ball
 	with(obj_danmaku5)
@@ -185,29 +129,7 @@ if(global.gp_active)
 	{
 		spd = goto_value(spd,ring_spd_max / ring_spd_div,0.3);
 	}
-	
-	with(obj_danmaku3)
-	{
-		switch(state)
-		{
-			case 0:
-				spd = goto_value(spd,0,0.2);
-				if(spd == 0)
-				{
-					state = 1;
-				}
-			break;
-			case 1:
-			if(state_time = rice_start)
-			{
-				state = 2;
-				var x_pos = obj_player.x - rice_around + rng(rice_around * 2,false,7);
-				var y_pos = obj_player.y - rice_around + rng(rice_around * 2,false,1);
-				angle = find_angle(x,y,x_pos,y_pos);
-				spd = rice_spd_final;
-			}
-		}
-	}
+
 	
 }
 // Inherit the parent event

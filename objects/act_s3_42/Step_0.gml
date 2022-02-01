@@ -114,11 +114,11 @@ if(global.gp_active)
 				{
 					if(aim_dir == 1)
 					{
-						var inst = create_enemy(EN_BLUE,-20,aim_y_off,aim_life,3,6,0);
+						var inst = create_enemy(EN_WHITE,-20,aim_y_off,aim_life,3,6,0);
 					}
 					else
 					{
-						var inst = create_enemy(EN_BLUE,room_width +20,aim_y_off,aim_life,3,6,180);
+						var inst = create_enemy(EN_WHITE,room_width +20,aim_y_off,aim_life,3,6,180);
 					}
 					inst.item_nbr = 1;
 					aim_dir *= -1;

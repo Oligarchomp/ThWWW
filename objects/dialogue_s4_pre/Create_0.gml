@@ -14,10 +14,10 @@ switch(global.player_chosen)
 		boss_step = 2;
 		bgm_step = 14;
 		title_step = 6;
-		set_dialogue(spr_reimu_art,1,true,spr_nothing,0,false,get_text("diag_s4_r5"),-1);
-		set_dialogue(spr_reimu_art,5,true,spr_nothing,0,false,get_text("diag_s4_r6"),-1);
-		set_dialogue(spr_reimu_art,5,false,spr_nothing,0,false,get_text("diag_s4_r7"),-1);
-		set_dialogue(spr_reimu_art,5,false,spr_yuuto_art,3,true,get_text("diag_s4_r8"),-1);
+		set_dialogue(spr_reimu_art,5,true,spr_nothing,0,false,get_text("diag_s4_r5"),-1);
+		set_dialogue(spr_reimu_art,1,true,spr_nothing,0,false,get_text("diag_s4_r6"),-1);
+		set_dialogue(spr_reimu_art,1,false,spr_nothing,0,false,get_text("diag_s4_r7"),-1);
+		set_dialogue(spr_reimu_art,1,false,spr_yuuto_art,3,true,get_text("diag_s4_r8"),-1);
 		set_dialogue(spr_reimu_art,1,true,spr_yuuto_art,3,false,get_text("diag_s4_r9"),-1);
 		set_dialogue(spr_reimu_art,3,true,spr_yuuto_art,3,false,get_text("diag_s4_r10"),-1);
 		set_dialogue(spr_reimu_art,3,false,spr_yuuto_art,0,true,get_text("diag_s4_r11"),-1);

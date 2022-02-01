@@ -85,7 +85,7 @@ if(global.gp_active) and (spell_wait == 0)
 					
 					instance_create_depth(room_width / 2, room_height / 2,0,obj_staybubble);
 					
-					shoot_ring(DAN_BUBBLE,1,18,obj_boss.x,obj_boss.y,999,2,sfx_redirect1,7);
+					shoot_ring(DAN_BUBBLE,1,15,obj_boss.x,obj_boss.y,999,2,sfx_redirect1,7);
 					
 					play_sound(sfx_spawn_light,1,false);
 					state = 1;

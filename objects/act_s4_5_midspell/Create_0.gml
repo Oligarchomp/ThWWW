@@ -13,5 +13,7 @@ var wait = global.game_type == GAME_SPELL ? 90 : 160; //spell practice
 spell_set_time(24,false,wait);
 
 
+death_time = 0;
+
 // to sync with the music
 instance_create_depth(0,0,0,act_s4_6);
