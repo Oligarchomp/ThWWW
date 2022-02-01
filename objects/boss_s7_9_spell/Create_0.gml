@@ -11,6 +11,8 @@ spell_set_time(60,true,90);
 
 boss_movement_goto(room_width / 2, 100,7);
 
+
+
 item_nbr = 0;
 
 

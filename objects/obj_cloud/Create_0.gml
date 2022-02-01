@@ -9,4 +9,4 @@ vsp = bg_s3.spd + rng(2,false,7);
 
 scale = 1;
 
-color = $cccccc;
+color = $c3c3c3;

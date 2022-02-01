@@ -20,3 +20,5 @@ y_ref = room_height / 2 + 30;
 
 angle_start = 90;
 
+angle_charge = 90;
+

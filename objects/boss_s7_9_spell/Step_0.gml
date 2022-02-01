@@ -83,12 +83,10 @@ if(global.gp_active) and (spell_wait == 0)
 				break;
 				case 30:
 					
+					instance_create_depth(room_width / 2, room_height / 2,0,obj_staybubble);
+					
 					shoot_ring(DAN_BUBBLE,1,18,obj_boss.x,obj_boss.y,999,2,sfx_redirect1,7);
-				
-					obj_boss.x = room_width / 2;
-					obj_boss.y = -1000;
-					obj_boss.x_to = obj_boss.x;
-					obj_boss.y_to = obj_boss.y;
+					
 					play_sound(sfx_spawn_light,1,false);
 					state = 1;
 					
@@ -100,6 +98,12 @@ if(global.gp_active) and (spell_wait == 0)
 		case 1:
 			switch(state_time)
 			{
+				case 10:
+					obj_boss.x = room_width / 2;
+					obj_boss.y = -1000;
+					obj_boss.x_to = obj_boss.x;
+					obj_boss.y_to = obj_boss.y;
+				break;
 				case 80:
 					play_sound(sfx_shock,1,false);
 					state = 2;

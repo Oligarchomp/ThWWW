@@ -17,3 +17,7 @@ y_crab = [];
 time_crab = [];
 
 crab_step = 0;
+
+x_charge = [];
+y_charge = [];
+angle_charge = [];

@@ -56,6 +56,18 @@ if(global.gp_active) and (spell_wait == 0)
 	
 	
 	
+	if(angle_charge < 450)
+	{
+		repeat(3)
+		{
+			angle_charge = goto_value(angle_charge, 450,5);
+		
+			var dist = 180;
+			var inst = instance_create_depth(x_ref + lengthdir_x(dist,angle_charge),y_ref + lengthdir_y(dist,angle_charge),global.boss_depth,obj_spincharge);
+			inst.angle = angle_charge;
+		}
+	}
+	
 	switch(state)
 	{
 		case 0:

@@ -102,7 +102,10 @@ if(global.gp_active) and (spell_wait == 0)
 				{
 					case 0:
 						var y_pos = floor(obj_player.y / knife_row_dist) * knife_row_dist 
-						boss_charge(room_width,y_pos + knife_row_dist / 2);
+						array_push(x_charge,room_width);
+						array_push(y_charge,y_pos + knife_row_dist / 2);
+						array_push(angle_charge,180);
+						play_sound(sfx_boss_charge,1,false);
 					
 						array_push(x_crab, room_width + 30);
 						array_push(y_crab,y_pos);
@@ -127,7 +130,10 @@ if(global.gp_active) and (spell_wait == 0)
 				{
 					case 0:
 						var y_pos = floor(obj_player.y / knife_row_dist) * knife_row_dist 
-						boss_charge(0,y_pos + knife_row_dist / 2);
+						array_push(x_charge,0);
+						array_push(y_charge,y_pos + knife_row_dist / 2);
+						array_push(angle_charge,0);
+						play_sound(sfx_boss_charge,1,false);
 					
 						array_push(x_crab, - 30);
 						array_push(y_crab,y_pos);
@@ -153,7 +159,10 @@ if(global.gp_active) and (spell_wait == 0)
 				{
 					case 0:
 						var x_pos = floor(obj_player.x / knife_row_dist) * knife_row_dist 
-						boss_charge(x_pos + knife_row_dist / 2, 0);
+						array_push(x_charge,x_pos + knife_row_dist / 2);
+						array_push(y_charge,0);
+						array_push(angle_charge,-90);
+						play_sound(sfx_boss_charge,1,false);
 					
 						array_push(x_crab, x_pos);
 						array_push(y_crab,-30);
@@ -188,7 +197,10 @@ if(global.gp_active) and (spell_wait == 0)
 				{
 					case 20:
 						var y_pos = floor(obj_player.y / knife_row_dist) * knife_row_dist 
-						boss_charge(room_width,y_pos + knife_row_dist / 2);
+						array_push(x_charge,room_width);
+						array_push(y_charge,y_pos + knife_row_dist / 2);
+						array_push(angle_charge,180);
+						play_sound(sfx_boss_charge,1,false);
 					
 						array_push(x_crab, room_width + 30);
 						array_push(y_crab,y_pos);
@@ -196,7 +208,10 @@ if(global.gp_active) and (spell_wait == 0)
 					break;
 					case 30:
 						var x_pos = floor(obj_player.x / knife_row_dist) * knife_row_dist 
-						boss_charge(x_pos + knife_row_dist / 2, 0);
+						array_push(x_charge,x_pos + knife_row_dist / 2);
+						array_push(y_charge,0);
+						array_push(angle_charge,-90);
+						play_sound(sfx_boss_charge,1,false);
 					
 						array_push(x_crab, x_pos);
 						array_push(y_crab,-30);
@@ -204,7 +219,10 @@ if(global.gp_active) and (spell_wait == 0)
 						break;
 					case 40:
 						var y_pos = floor(obj_player.y / knife_row_dist) * knife_row_dist 
-						boss_charge(0,y_pos + knife_row_dist / 2);
+						array_push(x_charge,0);
+						array_push(y_charge,y_pos + knife_row_dist / 2);
+						array_push(angle_charge,0);
+						play_sound(sfx_boss_charge,1,false);
 					
 						array_push(x_crab, - 30);
 						array_push(y_crab,y_pos);
@@ -281,6 +299,43 @@ if(global.gp_active) and (spell_wait == 0)
 			}
 		}
 	}
+	
+	
+	for (var i = 0; i < array_length(x_charge); i += 1)
+	{
+		//boss_charge_sfx(x_charge[i],y_charge[i],noone);
+		switch(angle_charge[i])
+		{
+			case -90:
+				var xoff = knife_row_dist / 2;
+				var yoff = 0;
+			break;
+			case 180:
+				var xoff = 0;
+				var yoff = knife_row_dist / 2;
+			break;
+			case 0:
+				var xoff = 0;
+				var yoff = -knife_row_dist / 2;
+			break;
+		}
+		
+		var inst = instance_create_depth(x_charge[i] + xoff,y_charge[i] + yoff,global.boss_depth,obj_crabcharge);
+		inst.angle = angle_charge[i];
+		
+		inst.yscale =  knife_row_dist;
+		
+		x_charge[i] += lengthdir_x(40,angle_charge[i]);
+		y_charge[i] += lengthdir_y(40,angle_charge[i]);
+		
+		if(x_charge[i] < 0) or (x_charge[i] > room_width) or (y_charge[i] > room_height)
+		{
+			array_delete(x_charge,i,1);
+			array_delete(y_charge,i,1);	
+			array_delete(angle_charge,i,1);	
+		}
+	}
+	
 	
 }
 

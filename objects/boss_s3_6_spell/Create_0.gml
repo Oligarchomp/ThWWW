@@ -28,3 +28,5 @@ angle_bubble = 0;
 
 item_nbr = 0;
 
+angle_charge = 90;
+

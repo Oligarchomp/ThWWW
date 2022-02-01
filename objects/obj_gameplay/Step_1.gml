@@ -2,8 +2,24 @@
 // You can write your code in this editor
 var need_stage_replay = false;
 var final_stage_replay = false;
+
+room_speed = 60;
+
 if(global.gp_active)
 {
+	
+	if(global.play_type == PLAY_REPLAY)
+	{
+		if(gamepad_button_check(0,global.shot_btn)) or (keyboard_check(global.shot_vk))
+		{
+			room_speed = 120;
+		}
+		else
+		{
+			room_speed = 60;	
+		}
+	}
+	
 	var wait = global.wait_list[|event_step]
 	
 	if (event_step < ds_list_size(global.event_list))

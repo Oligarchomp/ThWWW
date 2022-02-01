@@ -214,7 +214,7 @@ if(cursor_lockout == 0)
 						}
 					}
 					
-					for(var i = gp_face1; i < gp_start; i += 1) //controle
+					for(var i = gp_face1; i <= gp_start; i += 1) //controle
 					{
 						if(gamepad_button_check_pressed(0,i))
 						{

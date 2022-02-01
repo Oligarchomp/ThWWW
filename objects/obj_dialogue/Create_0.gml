@@ -4,10 +4,7 @@
 
 screen_clear(false,true);
 
-if(global.play_type == PLAY_REPLAY)
-{
-	room_speed = 120;
-}
+
 
 state = 0;
 old_state = -1;

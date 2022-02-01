@@ -4,7 +4,7 @@
 
 global.gp_active = true; //for music, mostly
 
-if(global.need_intro) //and (!global.debug)
+if(global.need_intro) and (!global.debug)
 {
 	instance_create_depth(0,0,0,obj_intro)	
 	global.need_intro = false;
