@@ -79,7 +79,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var anchor_stay = 50;
 			var anchor_accel = 0.05;
 			
-			var impact_ring = 25;
+			var impact_ring = 26;
 			var impact_row = 13;
 			var impact_spd_min = 0.7;
 			var impact_spd_max = 2.5;
@@ -117,11 +117,11 @@ if(global.gp_active) and (spell_wait == 0)
 			x_anchor = max(x_anchor,35);
 			if(x_anchor > room_width / 2)
 			{
-				x_anchor = max(x_anchor,270);
+				x_anchor = max(x_anchor,300);
 			}
 			else
 			{
-				x_anchor = min(x_anchor,130);
+				x_anchor = min(x_anchor,100);
 			}
 				
 			var inst = shoot(DAN_ANCHOR,1,x_anchor,y_spawn,-90,anchor_spd,sfx_boat,5);
@@ -147,7 +147,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 1:
 			if(x_indicator <= room_height)
 			{
-				boss_charge(x_anchor,x_indicator);
+				boss_charge_sfx(x_anchor,x_indicator,noone);
 				x_indicator += indicator_plus;
 			}
 			else

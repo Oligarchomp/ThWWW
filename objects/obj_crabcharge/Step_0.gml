@@ -12,31 +12,30 @@ if(global.gp_active)
 		state_time += 1;
 	}
 	
-	switch(state)
+	x += lengthdir_x(spd,angle);
+	y += lengthdir_y(spd,angle);
+	
+	switch(angle)
 	{
+		case 180:
+			if(x < -size)
+			{
+				instance_destroy();	
+			}
+		break;
 		case 0:
-			alpha = goto_value(alpha,1,0.08);
-			if(alpha == 1)
+			if(x > room_width + size)
 			{
-				state += 1;	
+				instance_destroy();	
 			}
 		break;
-		case 1:
-			if(state_time == 1)
+		case -90:
+			if(y > room_height + size)
 			{
-				state += 1;
-			}
-		break;
-		case 2:
-			alpha = goto_value(alpha,0,0.08);
-			if(alpha == 0)
-			{
-				instance_destroy();
+				instance_destroy();	
 			}
 		break;
 	}
-	
-	
 	
 	
 }

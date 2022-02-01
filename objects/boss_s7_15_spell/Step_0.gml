@@ -3,7 +3,7 @@
 if(global.gp_active) and (spell_wait == 0)
 {
 	var bubble_wait = 90;
-	var bubble_nbr = 14;
+	var bubble_nbr = 13;
 	var bubble_spd_final = 1.5;
 	var bubble_accel = 0.05;
 	

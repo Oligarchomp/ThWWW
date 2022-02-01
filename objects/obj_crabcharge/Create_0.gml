@@ -6,9 +6,13 @@ old_state = -1;
 
 state_time = 0;
 
-alpha = 0;
+alpha = 1;
 
 angle = 0;
 
 xscale = 1;
 yscale = 1;
+
+spd = 32;
+
+size = sprite_get_width(sprite_index);
