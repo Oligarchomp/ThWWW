@@ -16,5 +16,7 @@ obj_boss.y_dis_max = 145;
 
 act_dir = 1;
 
+angle_charge = [];
+
 
 mentos_angle_start = 0

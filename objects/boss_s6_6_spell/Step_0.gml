@@ -140,7 +140,7 @@ if(global.gp_active) and (spell_wait == 0)
 			for(var i = 0; i <wine_row; i += 1)
 			{
 				var x_pos = wine_dist / 2 + i * wine_dist;
-				var inst = shoot(DAN_PELLET,7,x_pos,-wine_dist * 2 - (i % 2 == wave_off) * wine_dist,90,0,noone,1);
+				var inst = shoot(DAN_MENTOS,0,x_pos,-wine_dist * 2 - (i % 2 == wave_off) * wine_dist,90,0,noone,1);
 				inst.is_cancelable = false;
 				inst.y_offscreen = 5000;
 				inst.pellet_id = i;

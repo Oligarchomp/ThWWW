@@ -98,7 +98,7 @@ if(global.gp_active) and (spell_wait == 0)
 					aim_dir = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y);
 				break;
 			}
-			if(state_time % 1 == 0) and (charge_dist < 640)
+			if (charge_dist < 640)
 			{
 				boss_charge(obj_boss.x + lengthdir_x(charge_dist,aim_dir),obj_boss.y + lengthdir_y(charge_dist,aim_dir) )
 				charge_dist += charge_plus;

@@ -15,8 +15,8 @@ if(global.gp_active)
 	switch(state)
 	{
 		case 0:
-			alpha = goto_value(alpha,0.2,0.02);
-			if(alpha == 0.2)
+			alpha = goto_value(alpha,0.12,0.006);
+			if(alpha == 0.12)
 			{
 				state += 1;	
 			}
@@ -28,7 +28,7 @@ if(global.gp_active)
 			}
 		break;
 		case 2:
-			alpha = goto_value(alpha,0,0.02);
+			alpha = goto_value(alpha,0,0.006);
 			if(alpha == 0)
 			{
 				instance_destroy();

@@ -44,9 +44,9 @@ if(global.gp_active) and (spell_wait == 0)
 	
 	if(angle_charge > -270)
 	{
-		repeat(3)
+		repeat(15)
 		{
-			angle_charge = goto_value(angle_charge, -270,5);
+			angle_charge = goto_value(angle_charge, -270,1);
 		
 			var dist = 190;
 			var inst = instance_create_depth(x_ref + lengthdir_x(dist,angle_charge),y_ref + lengthdir_y(dist,angle_charge),global.boss_depth,obj_spincharge);

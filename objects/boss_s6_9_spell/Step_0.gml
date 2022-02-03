@@ -97,7 +97,7 @@ if(global.gp_active)
 			if(step == 0)
 			{
 				boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);
-				shoot_ring_row(DAN_BUBBLE,1,aim_ring,aim_row,obj_boss.x,obj_boss.y,999,aim_spd_min,aim_spd_max,noone,8);
+				shoot_ring_row(DAN_BUBBLE,1,aim_ring,aim_row,obj_boss.x,obj_boss.y,90,aim_spd_min,aim_spd_max,noone,8);
 				with(obj_danmaku8)
 				{
 					state = 999;	

@@ -14,4 +14,3 @@ boss_movement_goto(room_width / 2,100,6);
 item_nbr = 0;
 
 dir_act = 1;
-

@@ -145,9 +145,14 @@ if(global.gp_active) and (spell_wait == 0)
 			state = 1;
 		break;
 		case 1:
+			if(state_time == 0)
+			{
+				boss_charge_row(x_anchor,-45,-90,6,56,10);	
+			}
+			
 			if(x_indicator <= room_height)
 			{
-				boss_charge_sfx(x_anchor,x_indicator,noone);
+				//boss_charge_sfx(x_anchor,x_indicator,noone);
 				x_indicator += indicator_plus;
 			}
 			else

@@ -92,21 +92,36 @@ if(global.gp_active) and (spell_wait == 0)
 			switch(state_time)
 			{
 				case 0:
-					boss_charge(obj_boss.x,obj_boss.y)
+					play_sound(sfx_boss_charge,1,false);
+					
+					var aim = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y);
+					
+					for(var i = 0; i < 360; i += 360 / anchor_nbr)
+					{
+						var ang = !global.rng_patch ? i + aim : rng(360,false,1);
+						
+						boss_charge_row(obj_boss.x,obj_boss.y,ang,9,31,3)
+						array_push(angle_charge,ang);
+					}
+					
 				break;
 				case 30:
 					mentos_angle_start = rng(360,false,4);
 					boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);
 					
-					var aim = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y);
-					for(var i = 0; i < 360; i += 360 / anchor_nbr)
+					for(var i = 0; i < array_length(angle_charge); i += 1)
 					{
-						var inst = shoot(DAN_ANCHOR,1,obj_boss.x,obj_boss.y,aim + i,anchor_spd,sfx_spawn_light,3);
+						var inst = shoot(DAN_ANCHOR,1,obj_boss.x,obj_boss.y,angle_charge[i],anchor_spd,sfx_spawn_light,3);
+						inst.angle = angle_charge[i]; //for rng patch
 						
 						inst.is_cancelable = false;
-						inst.angle_mentos = mentos_angle_start + i;
+						inst.angle_mentos = mentos_angle_start;
+						mentos_angle_start += 360 / anchor_nbr;
 						inst.dan_dir = act_dir;
 					}
+					
+					angle_charge = [];
+					
 					state = 1;
 				break;
 			}
@@ -217,8 +232,6 @@ if(global.gp_active) and (spell_wait == 0)
 			break;
 		}
 	}
-	
-	
 }
 
 // Inherit the parent event

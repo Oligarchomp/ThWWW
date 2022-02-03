@@ -172,7 +172,7 @@ if(global.gp_active) and (spell_wait == 0)
 				case 80:
 					with(obj_danmaku6)
 					{
-						boss_charge(x,y);	
+						boss_charge(x,y);
 					}
 				break;
 				case 120:
