@@ -10,9 +10,9 @@ if(global.gp_active) and (spell_wait == 0)
 			var arrow_ring = 15;
 			var arrow_spd = 3;
 			var arrow_spd_redirect = 2.5;
-			var arrow_size = 1;
+			var arrow_size = 2;
 			var wave_wait = 60;
-			var arrow_type = DAN_MENTOS;
+			var arrow_type = DAN_ARROW;
 		break;
 		case 1:
 			var arrow_wait = 11;
@@ -20,9 +20,9 @@ if(global.gp_active) and (spell_wait == 0)
 			var arrow_ring = 31;
 			var arrow_spd = 3.5;
 			var arrow_spd_redirect = 2.5;
-			var arrow_size = 1;
+			var arrow_size = 2;
 			var wave_wait = 50;
-			var arrow_type = DAN_MENTOS;
+			var arrow_type = DAN_ARROW;
 		break;
 		case 2:
 			var arrow_wait = 9;
@@ -59,8 +59,8 @@ if(global.gp_active) and (spell_wait == 0)
 						var inst = shoot(arrow_type,3,obj_boss.x,obj_boss.y,angle_shoot + i,arrow_spd,sfx_shot2,5)
 						inst.image_xscale = arrow_size;
 						inst.image_yscale = arrow_size;
-						inst.x_offscreen *= arrow_size;
-						inst.y_offscreen *= arrow_size;
+						inst.x_offscreen = arrow_size * inst.x_offscreen + 10;
+						inst.y_offscreen = arrow_size * inst.y_offscreen + 10;
 					}
 				}
 			}
@@ -84,7 +84,7 @@ if(global.gp_active) and (spell_wait == 0)
 		switch(state)
 		{
 			case 0:
-				if(x > room_width) or (x < 0)
+				if(x > room_width + 40) or (x < -40)
 				{
 					state = 1;
 					spd = arrow_spd_redirect;

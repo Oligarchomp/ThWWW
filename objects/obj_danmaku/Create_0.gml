@@ -173,9 +173,9 @@ step = 0;
 is_spawning = true; // not to be used if THIS object is like appearing
 // this object spawns, the first thing it does in step is to not do anything and to create the spawn object
 
-image_index = danmaku_id;
+
 image_danmaku = (color_id * image_nbr ) + (step * image_spd) % image_nbr; // to avoid the thing to turn purple for no reason
 
-sprite_index = spr_danmaku_hitbox;
+sprite_index = spr_nothing;
 
 is_danmaku = true;

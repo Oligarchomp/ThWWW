@@ -11,10 +11,9 @@ if(global.gp_active)
 			switch(global.difficulty)
 			{
 				case 0:
-					var knife_dan = DAN_ARROW;
 					var knife_row = 4;
-					var knife_ring = 16;
-					var knife_size = 1;
+					var knife_ring = 10;
+					var knife_size = 2;
 					var knife_dist = 60;
 					var knife_spd = 3;
 					var knife_spd_div = 1.5;
@@ -24,10 +23,9 @@ if(global.gp_active)
 					var wave_wait = 32;
 				break;
 				case 1:
-					var knife_dan = DAN_KNIFE;
 					var knife_row = 5;
-					var knife_ring = 36;
-					var knife_size = 1;
+					var knife_ring = 18;
+					var knife_size = 2;
 					var knife_dist = 60;
 					var knife_spd = 3.4;
 					var knife_spd_div = 1.5;
@@ -37,7 +35,6 @@ if(global.gp_active)
 					var wave_wait = 17;
 				break;
 				case 2:
-					var knife_dan = DAN_KNIFE;
 					var knife_row = 5;
 					var knife_ring = 24;
 					var knife_size = 2;
@@ -50,7 +47,6 @@ if(global.gp_active)
 					var wave_wait = 13;
 				break;
 				case 3:
-					var knife_dan = DAN_KNIFE;
 					var knife_row = 5;
 					var knife_ring = 28;
 					var knife_size = 2;
@@ -74,7 +70,7 @@ if(global.gp_active)
 					{
 						for(var i = 0; i < 360; i += 360 / knife_ring)
 						{
-							var inst = shoot(knife_dan,3,obj_boss.x,obj_boss.y,aim + i,0,sfx_spawn_light,6);	
+							var inst = shoot(DAN_KNIFE,3,obj_boss.x,obj_boss.y,aim + i,0,sfx_spawn_light,6);	
 							inst.spawn_type = SPAWN_SCALE;
 							inst.image_xscale = knife_size;
 							inst.image_yscale = knife_size;
@@ -152,17 +148,16 @@ if(global.gp_active)
 						}
 					break;
 					case 2:
-						var sq = 5;
 						var found_wall = false;
 						if (y < 480)
 						{
-							if(collision_rectangle(x - sq + hsp,y - sq ,x + sq + hsp,y + sq,obj_wall,false,true))
+							if(x < -10) or (x > room_width + 10)
 							{
 								found_wall = true;
 								angle = -angle + 180;
 							}
 				
-							if (collision_rectangle(x - sq,y - sq + vsp,x + sq,y + sq + vsp,obj_wall,false,true))
+							if(y < -10)
 							{
 								found_wall = true;
 								angle *= -1;

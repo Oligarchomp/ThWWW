@@ -79,6 +79,8 @@ if(global.gp_active)
 		visual_yscale = image_yscale;
 
 		is_spawning = false;
+		sprite_index = spr_danmaku_hitbox;
+		image_index = danmaku_id;
 		instance_deactivate_object(self);
 	}
 }
