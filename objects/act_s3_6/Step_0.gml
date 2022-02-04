@@ -7,7 +7,7 @@ if(global.gp_active)
 		case 0:
 			var angle_ball_spd = -12;
 			var ball_start = 20;
-			var ball_spd = 3;
+			var ball_spd = 2.5;
 			var ball_wait = 6;
 			var ball_ring = 5;
 			
@@ -19,7 +19,7 @@ if(global.gp_active)
 		case 1:
 			var angle_ball_spd = -10;
 			var ball_start = 20;
-			var ball_spd = 3.5;
+			var ball_spd = 3.2;
 			var ball_wait = 4;
 			var ball_ring = 8;
 			

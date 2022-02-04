@@ -18,7 +18,7 @@ if(global.gp_active)
 			//aim
 			var mentos_wait = 50;
 			var mentos_spd = 2.8;
-			var aim_lenght = 80;
+			var aim_lenght = 60;
 		break;
 		case 1:
 			//arrow
@@ -33,7 +33,7 @@ if(global.gp_active)
 			//aim
 			var mentos_wait = 22;
 			var mentos_spd = 3;
-			var aim_lenght = 100;
+			var aim_lenght = 60;
 		break;
 		case 2:
 			//arrow

@@ -12,12 +12,12 @@ if(global.gp_active)
 				var y_grav = 0;
 				var bubble_spd = 1.2;
 				var bubble_wait = 100;
-				var bubble_nbr = 12;
+				var bubble_nbr = 9;
 				
 				var arrow_row = 1;
 				var arrow_dist = 20;
 				var arrow_angle = 999;
-				var arrow_spd = 1;
+				var arrow_spd = 3;
 				var arrow_grav = 0;
 			break;
 			case 1:
@@ -29,7 +29,7 @@ if(global.gp_active)
 				var arrow_row = 5;
 				var arrow_dist = 17;
 				var arrow_angle = 999;
-				var arrow_spd = 4;
+				var arrow_spd = 4.2;
 				var arrow_grav = 0;
 			break;
 			case 2:
@@ -68,7 +68,7 @@ if(global.gp_active)
 		{
 			if (step % 3 == 0)
 			{
-				shoot_arc(DAN_ARROWHEAD,4,arrow_row,obj_boss.x,obj_boss.y,arrow_angle,arrow_dist ,5,sfx_shot2,1);
+				shoot_arc(DAN_ARROWHEAD,4,arrow_row,obj_boss.x,obj_boss.y,arrow_angle,arrow_dist ,arrow_spd,sfx_shot2,1);
 			}
 		}
 	

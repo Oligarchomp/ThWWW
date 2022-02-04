@@ -9,8 +9,8 @@ if(global.gp_active)
 		case 0:
 			var ice_row = 6;
 			var ice_dist = 20;
-			var ice_spd_max = 5.5;
-			var ice_spd_min = 4;
+			var ice_spd_max = 4.5;
+			var ice_spd_min = 3;
 			var ice_wait = 50;
 			var ice_nbr = 3;//how many wall per shot
 			
@@ -21,8 +21,8 @@ if(global.gp_active)
 		case 1:
 			var ice_row = 6;
 			var ice_dist = 20;
-			var ice_spd_max = 6;
-			var ice_spd_min = 4.5;
+			var ice_spd_max = 5.2;
+			var ice_spd_min = 3.7;
 			var ice_wait = 34;
 			var ice_nbr = 3;//how many wall per shot
 			

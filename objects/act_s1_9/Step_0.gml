@@ -21,7 +21,7 @@ if(global.gp_active)
 		break;
 		case 1:
 			var mentos_nbr = 5;
-			var mentos_spd = 3.5
+			var mentos_spd = 3;
 			var mentos_plus = -20;
 			
 			var bubble_ring_nbr = 6;

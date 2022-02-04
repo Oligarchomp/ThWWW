@@ -4,7 +4,7 @@
 if(global.gp_active)
 {
 	
-	var wait = 22;
+	
 	var x_off = 30;
 			
 	var fairy_spd = 6;
@@ -17,24 +17,32 @@ if(global.gp_active)
 			var ring_spd = 2.5;
 			var arrow_nbr = 1;
 			var arrow_spd = 3;
+			
+			var wait = 40;
 		break;
 		case 1:
 			var ring_nbr = 15;
 			var ring_spd = 2.5;
 			var arrow_nbr = 3;
 			var arrow_spd = 3.5;
+			
+			var wait = 30;
 		break;
 		case 2:
 			var ring_nbr = 22;
 			var ring_spd = 2.5;
 			var arrow_nbr = 5;
 			var arrow_spd = 4;
+			
+			var wait = 22;
 		break;
 		case 3:
 			var ring_nbr = 32;
 			var ring_spd = 2.5;
 			var arrow_nbr = 5;
 			var arrow_spd = 5;
+			
+			var wait = 22;
 		break;
 	}
 	

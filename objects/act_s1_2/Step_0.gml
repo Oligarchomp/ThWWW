@@ -10,6 +10,7 @@ if(global.gp_active)
 	var wait_spawn_big = 60;
 	var big_life = 45;
 	
+	
 	switch(global.difficulty)
 	{
 		case 0:
@@ -18,6 +19,10 @@ if(global.gp_active)
 			var wave = 1;
 			var wait = 20;
 			var arc_num = 3;
+			var arrow_spd = 1.8;
+			
+			var bubble_grav_max = 2.5;
+			var bubble_grav_accel = 0.05;
 		break;
 		case 1:
 			var big_wait_shoot = 70;
@@ -25,6 +30,10 @@ if(global.gp_active)
 			var wave = 2;
 			var wait = 35;
 			var arc_num = 3;
+			var arrow_spd = 2.3;
+			
+			var bubble_grav_max = 3.8;
+			var bubble_grav_accel = 0.08;
 		break;
 		case 2:
 			var big_wait_shoot = 60;
@@ -32,6 +41,10 @@ if(global.gp_active)
 			var wave = 2;
 			var wait = 30;
 			var arc_num = 4;
+			var arrow_spd = 3;
+			
+			var bubble_grav_max = 5;
+			var bubble_grav_accel = 0.1;
 		break;
 		case 3:
 			var big_wait_shoot = 50;
@@ -39,6 +52,10 @@ if(global.gp_active)
 			var wave = 3;
 			var wait = 20;
 			var arc_num = 4;
+			var arrow_spd = 3;
+			
+			var bubble_grav_max = 5;
+			var bubble_grav_accel = 0.1;
 		break;
 	}
 	
@@ -68,8 +85,8 @@ if(global.gp_active)
 	with(obj_danmaku7)
 	{
 		pos_type = POS_SP;
-		y_grav_accel = 0.1;
-		y_grav_max = 5;
+		y_grav_accel = bubble_grav_accel;
+		y_grav_max = bubble_grav_max;
 	}
 	
 	// small wall fairy
@@ -109,7 +126,7 @@ if(global.gp_active)
 						
 						for (var i = 0; i < wall_nbr; i += 1)
 						{
-							shoot_arc(DAN_ARROW,3,arc_num,x,y,wall_ang_shoot + i * 360 / wall_nbr,3,3,sfx_shot2,2);
+							shoot_arc(DAN_ARROW,3,arc_num,x,y,wall_ang_shoot + i * 360 / wall_nbr,3,arrow_spd,sfx_shot2,2);
 						}
 					
 						wall_ang_shoot += 15;

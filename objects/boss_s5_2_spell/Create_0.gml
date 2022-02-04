@@ -6,7 +6,7 @@ event_inherited();
 
 spell_set_spell("s5_1",BOSS_FEZA,28000000)
 spell_set_name("spell_s5_1a","spell_s5_1a","spell_s5_1b","spell_s5_1c")
-spell_set_life(1150,170);
+spell_set_life(1200,170);
 spell_set_time(45,false,95);
 
 boss_movement_goto(room_width / 2,-150,6);

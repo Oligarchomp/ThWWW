@@ -15,9 +15,11 @@ if(global.gp_active)
 	{
 		case 0:
 			var aim_arc_nbr = 0;
+			var aim_spd = 0;
 			
 			var mentos_nbr = 3;
 			var mentos_plus = 30;
+			var mentos_spd = 2.5;
 			
 			var bubble_ring_nbr = 4;
 			var bubble_row_nbr = 1;
@@ -25,9 +27,11 @@ if(global.gp_active)
 		break;
 		case 1:
 			var aim_arc_nbr = 1;
+			var aim_spd = 4;
 			
 			var mentos_nbr = 6;
 			var mentos_plus = 20;
+			var mentos_spd = 3;
 			
 			var bubble_ring_nbr = 6;
 			var bubble_row_nbr = 2;
@@ -35,9 +39,11 @@ if(global.gp_active)
 		break;
 		case 2:
 			var aim_arc_nbr = 3;
+			var aim_spd = 5;
 			
 			var mentos_nbr = 10;
 			var mentos_plus = 12;
+			var mentos_spd = 4.5;
 			
 			var bubble_ring_nbr = 8;
 			var bubble_row_nbr = 2;
@@ -45,10 +51,11 @@ if(global.gp_active)
 		break;
 		case 3:
 			var aim_arc_nbr = 4;
-			
+			var aim_spd = 5;
 			
 			var mentos_nbr = 12;
 			var mentos_plus = 12;
+			var mentos_spd = 4.5;
 			
 			var bubble_ring_nbr = 10;
 			var bubble_row_nbr = 3;
@@ -140,7 +147,7 @@ if(global.gp_active)
 				{
 					if (state_time % mentos_wait == 0)
 					{
-						shoot_ring(DAN_MENTOS,7,mentos_nbr,x,y,mentos_angle,4.5,sfx_shot3,3)
+						shoot_ring(DAN_MENTOS,7,mentos_nbr,x,y,mentos_angle,mentos_spd,sfx_shot3,3)
 						mentos_angle += mentos_plus;
 					}
 					

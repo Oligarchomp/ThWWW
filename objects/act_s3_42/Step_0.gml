@@ -36,7 +36,7 @@ if(global.gp_active)
 			var bubble_dist = 30;
 			var bubble_wait = 26;
 			
-			var aim_arc = 1;
+			var aim_arc = 0;
 			var aim_row = 1;
 			var aim_dist = 36;
 			var aim_spd_min = 3;
@@ -57,8 +57,8 @@ if(global.gp_active)
 			var aim_arc = 1;
 			var aim_row = 1;
 			var aim_dist = 28;
-			var aim_spd_min = 3;
-			var aim_spd_max = 4.5;
+			var aim_spd_min = 2.5;
+			var aim_spd_max = 4;
 		break;
 		case 3:
 			var ball_ring = 20;
@@ -72,9 +72,9 @@ if(global.gp_active)
 			var bubble_dist = 25;
 			var bubble_wait = 26;
 			
-			var aim_arc = 1;
+			var aim_arc = 3;
 			var aim_row = 1;
-			var aim_dist = 20;
+			var aim_dist = 40;
 			var aim_spd_min = 3;
 			var aim_spd_max = 4.5;
 		break;
@@ -175,7 +175,10 @@ if(global.gp_active)
 	{
 		if(state_time % bubble_wait == 0)
 		{
-			shoot_arc(DAN_BUBBLE,7,bubble_arc,x,y,999,bubble_dist,bubble_spd_shoot,sfx_shot3,8);
+			if(step < 70)
+			{
+				shoot_arc(DAN_BUBBLE,7,bubble_arc,x,y,999,bubble_dist,bubble_spd_shoot,sfx_shot3,8);
+			}
 		}
 	}
 	

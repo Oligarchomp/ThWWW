@@ -20,6 +20,9 @@ if(global.gp_active)
 				var ring_wait = 80;
 				var ring_nbr = 5;
 				var apple_nbr = 2;
+				
+				var bubble_spd_min = 1.5;
+				var bubble_spd_max = 2;
 			break;
 			case 1:
 				var move_wait = 120
@@ -27,6 +30,9 @@ if(global.gp_active)
 				var ring_wait = 66;
 				var ring_nbr = 7
 				var apple_nbr = 3;
+				
+				var bubble_spd_min = 2;
+				var bubble_spd_max = 3;
 			break;
 			case 2:
 				var move_wait = 115
@@ -34,6 +40,9 @@ if(global.gp_active)
 				var ring_wait = 56;
 				var ring_nbr = 10;
 				var apple_nbr = 6;
+				
+				var bubble_spd_min = 2;
+				var bubble_spd_max = 3;
 			break;
 			case 3:
 				var move_wait = 105
@@ -41,6 +50,9 @@ if(global.gp_active)
 				var ring_wait = 46;
 				var ring_nbr = 11;
 				var apple_nbr = 7;
+				
+				var bubble_spd_min = 2;
+				var bubble_spd_max = 3;
 			break;
 		}
 		
@@ -56,8 +68,8 @@ if(global.gp_active)
 		
 		if (step % ring_wait == ring_wait - 1)
 		{
-			shoot_ring(DAN_BUBBLE,4,ring_nbr,obj_boss.x,obj_boss.y,999,3,sfx_redirect1,3)
-			shoot_ring(DAN_BUBBLE,4,ring_nbr,obj_boss.x,obj_boss.y,998,2,sfx_redirect1,3)
+			shoot_ring(DAN_BUBBLE,4,ring_nbr,obj_boss.x,obj_boss.y,999,bubble_spd_max,sfx_redirect1,3)
+			shoot_ring(DAN_BUBBLE,4,ring_nbr,obj_boss.x,obj_boss.y,998,bubble_spd_min,sfx_redirect1,3)
 		}
 		
 		var bubble_spd = 3;

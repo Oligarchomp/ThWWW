@@ -7,18 +7,18 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var bubble_wait = 16;
+			var bubble_wait = 25;
 			var bubble_ring = 10;
 			var bubble_open = 6;
-			var bubble_spd_min = 3;
+			var bubble_spd_min = 2.5;
 			var bubble_spd_git = 0.8;
 		break;
 		case 1:
-			var bubble_wait = 10;
+			var bubble_wait = 14;
 			var bubble_ring = 12;
 			var bubble_open = 7;
-			var bubble_spd_min = 4.2;
-			var bubble_spd_git = 1.1;
+			var bubble_spd_min = 3.2;
+			var bubble_spd_git = 1;
 		break;
 		case 2:
 			var bubble_wait = 8;

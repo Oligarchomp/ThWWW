@@ -8,16 +8,16 @@ if(global.gp_active)
 			var fairy_wait_shoot = 38;
 			var mentos_arc = 3;
 			var mentos_dist = 25;
-			var mentos_spd_shoot = 6;
-			var mentos_spd_final = 3;
+			var mentos_spd_shoot = 5;
+			var mentos_spd_final = 2.5;
 			var mentos_deccel = 0.1;
 		break;
 		case 1:
 			var fairy_wait_shoot = 24;
 			var mentos_arc = 5;
 			var mentos_dist = 18;
-			var mentos_spd_shoot = 7.5;
-			var mentos_spd_final = 4;
+			var mentos_spd_shoot = 6.5;
+			var mentos_spd_final = 3.8;
 			var mentos_deccel = 0.1;
 		break;
 		case 2:

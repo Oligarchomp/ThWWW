@@ -27,18 +27,18 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var arrow_ring = 8;
+			var arrow_ring = 4;
 			var arrow_row = 2;
-			var arrow_spd_min = 2;
-			var arrow_spd_max = 2.5;
+			var arrow_spd_min = 1.5;
+			var arrow_spd_max = 2;
 			var revenge_arc_nbr = 0;
 			var revenge_row_nbr = 0;
 		break;
 		case 1:
-			var arrow_ring = 15;
+			var arrow_ring = 14;
 			var arrow_row = 2;
-			var arrow_spd_min = 2;
-			var arrow_spd_max = 3;
+			var arrow_spd_min = 1.8;
+			var arrow_spd_max = 2.8;
 			var revenge_arc_nbr = 0;
 			var revenge_row_nbr = 0;
 		break;

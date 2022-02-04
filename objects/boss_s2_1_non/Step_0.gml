@@ -8,7 +8,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 0:
 			var wait_move = 120
 		
-			var wait_knife = 28;
+			var wait_knife = 40;
 			var knife_nbr_row = 2;
 			var knife_nbr_arc = 3;
 			var knife_spd_min = 2;
@@ -20,7 +20,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 1:
 			var wait_move = 120
 		
-			var wait_knife = 23;
+			var wait_knife = 29;
 			var knife_nbr_row = 3;
 			var knife_nbr_arc = 4;
 			var knife_spd_min = 2;

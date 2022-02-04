@@ -15,7 +15,7 @@ if(global.gp_active)
 			var bubble_deccel = 0.35;
 			
 			var ball_row = 3;
-			var ball_ring = 12;
+			var ball_ring = 8;
 			var ball_spd_min = 1.2;
 			var ball_spd_max = 3;
 		break;
@@ -23,12 +23,12 @@ if(global.gp_active)
 			var bubble_wait = 16;
 			var bubble_arc = 3;
 			var bubble_dist = 40;
-			var bubble_spd_shoot = 13;
-			var bubble_spd_final = 3.5;
+			var bubble_spd_shoot = 12;
+			var bubble_spd_final = 3.2;
 			var bubble_deccel = 0.35;
 			
 			var ball_row = 4;
-			var ball_ring = 16;
+			var ball_ring = 13;
 			var ball_spd_min = 1.3;
 			var ball_spd_max = 3.2;
 		break;
@@ -82,7 +82,7 @@ if(global.gp_active)
 				case 202:
 				case 364:
 				case 528:
-				need_fairy_time = 100;
+					need_fairy_time = 100;
 				break;
 			}
 		break;

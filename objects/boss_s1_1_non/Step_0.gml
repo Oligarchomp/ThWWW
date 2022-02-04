@@ -15,17 +15,17 @@ if(global.gp_active)
 		switch(global.difficulty)
 		{
 			case 0:
-				var wait_shoot = 60;
+				var wait_shoot = 80;
 				var shoot_ang_off = 3;
-				var ring_spd = 3;
+				var ring_spd = 2;
 				
 				var bubble_nbr = 19;
 				var angle_dist = 18;
 			break;
 			case 1:
-				var wait_shoot = 40;
+				var wait_shoot = 50;
 				var shoot_ang_off = 5;
-				var ring_spd = 4;
+				var ring_spd = 3.2;
 				
 				var bubble_nbr = 24;
 				var angle_dist = 14.2;

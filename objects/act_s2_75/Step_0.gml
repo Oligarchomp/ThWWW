@@ -7,8 +7,8 @@ if(global.gp_active)
 	{
 		case 0:
 			var bubble_wait = 28;
-			var bubble_ring = 8;
-			var bubble_spd = 3;
+			var bubble_ring = 6;
+			var bubble_spd = 2.4;
 			var pellet_ring = bubble_ring * 3;
 			var pellet_dist_div = 3;
 			
@@ -24,7 +24,7 @@ if(global.gp_active)
 		case 1:
 			var bubble_wait = 20;
 			var bubble_ring = 12;
-			var bubble_spd = 3;
+			var bubble_spd = 2.75;
 			var pellet_ring = bubble_ring * 3;
 			var pellet_dist_div = 3;
 			

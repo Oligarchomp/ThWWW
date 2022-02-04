@@ -17,13 +17,13 @@ if(global.gp_active)
 		break;
 		case 1:
 			var orb_wait = 26;
-			var orb_ring = 14;
+			var orb_ring = 13;
 			var orb_spd = 2.5;
 			
 			var orb_spin = 360 / orb_ring / 2.5
 			
-			var mentos_wait = 10;
-			var mentos_ring = 10;
+			var mentos_wait = 12;
+			var mentos_ring = 8;
 			var mentos_spd_min = 2.3;
 		break;
 		case 2:
