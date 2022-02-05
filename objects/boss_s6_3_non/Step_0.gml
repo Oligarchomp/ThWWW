@@ -15,46 +15,46 @@ if(global.gp_active)
 			{
 				case 0:
 					var bubble_wait = 35;
-					var bubble_ring = 7;
+					var bubble_ring = 6;
 					var bubble_spd = 1.5;
 					var bubble_dist = 360 / bubble_ring / 3.2;
 					
 					var bullet_wait = 14;
 					var bullet_spd = 2.5;
-					var bullet_ring = 14;
+					var bullet_ring = 12;
 					var bullet_dist = 360 / bullet_ring / 4.2;
 				break;
 				case 1:
 					var bubble_wait = 26;
-					var bubble_ring = 11;
+					var bubble_ring = 10;
 					var bubble_spd = 2;
 					var bubble_dist = 360 / bubble_ring / 3.2;
 					
 					var bullet_wait = 10;
 					var bullet_spd = 3;
-					var bullet_ring = 18;
+					var bullet_ring = 16;
 					var bullet_dist = 360 / bullet_ring / 4.2;
 				break;
 				case 2:
 					var bubble_wait = 22;
-					var bubble_ring = 13;
+					var bubble_ring = 12;
 					var bubble_spd = 2.5;
 					var bubble_dist = 360 / bubble_ring / 3.2;
 					
 					var bullet_wait = 8;
 					var bullet_spd = 3.5
-					var bullet_ring = 22;
+					var bullet_ring = 20;
 					var bullet_dist = 360 / bullet_ring / 4.2;
 				break;
 				case 3:
 					var bubble_wait = 20;
-					var bubble_ring = 15;
+					var bubble_ring = 14;
 					var bubble_spd = 2.5;
 					var bubble_dist = 360 / bubble_ring / 3.2;
 					
 					var bullet_wait = 7;
 					var bullet_spd = 3.5;
-					var bullet_ring = 24;
+					var bullet_ring = 22;
 					var bullet_dist = 360 / bullet_ring / 4.2;
 				break;
 			}

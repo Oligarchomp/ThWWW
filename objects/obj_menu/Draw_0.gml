@@ -231,7 +231,7 @@ switch(level)
 				for(var i = 0; i < array_length(check); i += 1)
 				{
 					var is_active = (cursor[level] == i);
-					draw_text_color(120,90 + i * 40,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.7)
+					draw_text_color(80,90 + i * 40,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.7)
 				}
 				
 				draw_sprite_ext(spr_manual,cursor[level],300,0,1,1,0,c_white,menu_description_alpha)

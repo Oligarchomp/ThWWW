@@ -30,10 +30,9 @@ switch(global.player_chosen)
 		set_dialogue(spr_reimu_art,2,false,spr_feza_art,3,true,get_text("diag_s5_r14"),-1);
 		set_dialogue(spr_reimu_art,5,true,spr_feza_art,3,false,get_text("diag_s5_r15"),-1);
 		set_dialogue(spr_reimu_art,5,false,spr_feza_art,2,true,get_text("diag_s5_r16"),-1);
-	//	set_dialogue(spr_reimu_art,5,false,spr_feza_art,5,true,get_text("diag_s5_r17"),-1);
-		set_dialogue(spr_reimu_art,3,true,spr_feza_art,2,false,get_text("diag_s5_r18"),-1);
-		set_dialogue(spr_reimu_art,3,false,spr_feza_art,1,true,get_text("diag_s5_r19"),-1);
-		set_dialogue(spr_reimu_art,4,true,spr_feza_art,1,false,get_text("diag_s5_r20"),-1);
+		set_dialogue(spr_reimu_art,3,true,spr_feza_art,2,false,get_text("diag_s5_r17"),-1);
+		set_dialogue(spr_reimu_art,3,false,spr_feza_art,1,true,get_text("diag_s5_r18"),-1);
+		set_dialogue(spr_reimu_art,1,true,spr_feza_art,1,false,get_text("diag_s5_r19"),-1);
 	break;
 	case P_MARISA:
 		boss_step = 2;

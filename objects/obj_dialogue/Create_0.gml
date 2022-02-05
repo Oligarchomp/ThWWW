@@ -41,7 +41,11 @@ alpha_min = 0.3;
 plr_alpha = 1;
 boss_alpha = 1;
 
-art_alpha = 0;
+art_alpha_plr = 0;
+art_alpha_boss = 0;
+
+art_alpha_plr_to = 0;
+art_alpha_boss_to = 0;
 
 plr_spr = spr_nothing;
 boss_spr = spr_nothing;

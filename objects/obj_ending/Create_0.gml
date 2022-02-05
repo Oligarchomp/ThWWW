@@ -1,10 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
-
-
-
 state = 0;
 old_state = -1;
 state_time = 0;
@@ -61,9 +57,9 @@ if(global.continues == global.continues_max) //good endings
 			add_end(0,get_text("end_good_r1_1"),get_text("end_good_r1_2"),"","");
 			add_end(1,get_text("end_good_r2_1"),get_text("end_good_r2_2"),get_text("end_good_r2_3"),get_text("end_good_r2_4"));
 			add_end(1,get_text("end_good_r3_1"),get_text("end_good_r3_2"),get_text("end_good_r3_3"),get_text("end_good_r3_4"));
-			add_end(2,get_text("end_good_r4_1"),get_text("end_good_r4_2"),"","");
+			add_end(2,get_text("end_good_r4_1"),get_text("end_good_r4_2"),get_text("end_good_r4_3"),"");
 			add_end(2,get_text("end_good_r5_1"),get_text("end_good_r5_2"),get_text("end_good_r5_3"),get_text("end_good_r5_4"));
-			add_end(2,get_text("end_good_r6_1"),get_text("end_good_r6_2"),get_text("end_good_r6_3"),"");
+			add_end(2,get_text("end_good_r6_1"),get_text("end_good_r6_2"),"","");
 			add_end(1,get_text("end_good_r7_1"),get_text("end_good_r7_2"),get_text("end_good_r7_3"),"");
 			add_end(1,get_text("end_good_r8_1"),get_text("end_good_r8_2"),get_text("end_good_r8_3"),get_text("end_good_r8_4"));
 			add_end(1,get_text("end_good_r9_1"),get_text("end_good_r9_2"),get_text("end_good_r9_3"),"");

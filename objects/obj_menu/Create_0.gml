@@ -1305,7 +1305,11 @@ menu =
 		param :
 		[
 			{
-				title : get_text("menu_manual_howtoplay"),
+				title : get_text("menu_manual_howtoplay1"),
+				action : MENU_NOTHING
+			},
+			{
+				title : get_text("menu_manual_howtoplay2"),
 				action : MENU_NOTHING
 			},
 			{

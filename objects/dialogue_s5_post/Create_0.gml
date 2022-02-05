@@ -8,12 +8,12 @@ need_clear_bonus = true;
 switch(global.player_chosen)
 {
 	case P_REIMU:
-		set_dialogue(spr_reimu_art,4,true,spr_feza_art,6,false,get_text("diag_s5_r21"),-1);
-		set_dialogue(spr_reimu_art,4,false,spr_feza_art,6,true,get_text("diag_s5_r22"),-1);
-		set_dialogue(spr_reimu_art,2,true,spr_feza_art,6,false,get_text("diag_s5_r23"),-1);
-		set_dialogue(spr_reimu_art,2,false,spr_feza_art,7,true,get_text("diag_s5_r24"),-1);
-		set_dialogue(spr_reimu_art,2,false,spr_feza_art,8,true,get_text("diag_s5_r25"),-1);
-		set_dialogue(spr_reimu_art,1,true,spr_nothing,0,false,get_text("diag_s5_r26"),-1);
+		set_dialogue(spr_reimu_art,4,true,spr_feza_art,6,false,get_text("diag_s5_r20"),-1);
+		set_dialogue(spr_reimu_art,4,false,spr_feza_art,6,true,get_text("diag_s5_r21"),-1);
+		set_dialogue(spr_reimu_art,2,true,spr_feza_art,6,false,get_text("diag_s5_r22"),-1);
+		set_dialogue(spr_reimu_art,2,false,spr_feza_art,7,true,get_text("diag_s5_r23"),-1);
+		set_dialogue(spr_reimu_art,2,false,spr_feza_art,8,true,get_text("diag_s5_r24"),-1);
+		set_dialogue(spr_reimu_art,1,true,spr_nothing,0,false,get_text("diag_s5_r25"),-1);
 	break;
 	case P_MARISA:
 		set_dialogue(spr_marisa_art,4,true,spr_feza_art,6,false,get_text("diag_s5_m21"),-1);

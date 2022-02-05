@@ -1,8 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
-
 if(global.gp_active)
 {
 	
@@ -22,15 +20,17 @@ if(global.gp_active)
 			diag_alpha = goto_value(diag_alpha,diag_alpha_max,0.1);
 			text_alpha = goto_value(text_alpha,1,0.1);
 			
-			art_alpha = goto_value(art_alpha,1,0.15);
+			//art_alpha = goto_value(art_alpha,1,0.15);
 			text_alpha_diag = goto_value(text_alpha_diag,1,0.2);
 		break;
 		case 1:// disappearing
 			alpha_min = 0;
+			
 			plr_active_to = 0;
 			boss_active_to = 0;
 			
-			art_alpha = goto_value(art_alpha,0,0.15);
+			art_alpha_plr_to = 0;
+			art_alpha_boss_to = 0;
 			
 			diag_alpha = goto_value(diag_alpha,0,0.05)
 			text_alpha = diag_alpha;
@@ -47,6 +47,9 @@ if(global.gp_active)
 			}
 		break;
 	}
+	
+	art_alpha_boss = goto_value(art_alpha_boss,art_alpha_boss_to,0.15);
+	art_alpha_plr = goto_value(art_alpha_plr,art_alpha_plr_to,0.15);
 	
 	// setting alpha and position
 	plr_active += recursiv(plr_active,plr_active_to,6,.01)
@@ -144,16 +147,32 @@ if(global.gp_active)
 	// setting
 	if (current_nbr < array_length(plr_active_list))
 	{
-		plr_active_to = plr_active_list[current_nbr];
-		boss_active_to = boss_active_list[current_nbr];
+		if(plr_spr_list[current_nbr] != spr_nothing)
+		{
+			plr_active_to = plr_active_list[current_nbr];
+			plr_spr = plr_spr_list[current_nbr];
+			plr_im = plr_im_list[current_nbr];
+			art_alpha_plr_to = 1;
+		}
+		else
+		{
+			plr_active_to = 0;
+			art_alpha_plr_to = 0;
+		}
 		
-		plr_spr = plr_spr_list[current_nbr];
-		boss_spr = boss_spr_list[current_nbr];
-		
-		plr_im = plr_im_list[current_nbr];
-		boss_im = boss_im_list[current_nbr];
+		if(boss_spr_list[current_nbr] != spr_nothing)
+		{
+			boss_active_to = boss_active_list[current_nbr];
+			boss_spr = boss_spr_list[current_nbr];
+			boss_im = boss_im_list[current_nbr];
+			art_alpha_boss_to = 1;
+		}
+		else
+		{
+			boss_active_to = 0;
+			art_alpha_boss_to = 0;
+		}
 	}
-	
 	
 	//stuff that happen
 	switch(current_nbr)

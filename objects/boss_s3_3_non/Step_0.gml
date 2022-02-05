@@ -59,7 +59,8 @@ if(global.gp_active) and (spell_wait == 0)
 			{
 				boss_movement_goto(room_width / 2, y_ref + lengthdir_y(dist_pale,90),6);
 				state = 1;
-				boss_charge(obj_boss.x,obj_boss.y);
+				var inst = boss_charge(obj_boss.x,obj_boss.y);
+				inst.owner = obj_boss;
 			}
 		break;
 		case 1:
