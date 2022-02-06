@@ -5,12 +5,7 @@ if(global.gp_active) and (spell_wait == 0)
 	
 	
 	
-	
-	
-	
-	
-	
-	
+
 	
 	//SHIELD
 	if(obj_player.bomb_time != 0)

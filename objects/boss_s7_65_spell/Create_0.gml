@@ -15,3 +15,4 @@ can_shield = true;
 
 act_dir = 1;
 
+
