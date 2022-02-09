@@ -92,8 +92,8 @@ instance_create_depth(0,0,0,obj_bgm);
 global.need_intro = true;
 
 //room_goto(room_score);
-room_goto(room_main);
-//room_goto(room_gp);
+//room_goto(room_main);
+room_goto(room_gp);
 
 global.game_x_offset =  156;
 global.game_y_offset =  20;
@@ -280,6 +280,6 @@ global.play_type = PLAY_MANUAL;
 #macro REPLAY_DIFFICULTY 7
 #macro REPLAY_STAGE_NBR 8
 
-/*
+
 add_stage_event(act_s7_0,0)
 add_stage_event(boss_s7_65_spell,1);

@@ -6,14 +6,14 @@ if(global.gp_active)
 	{
 		case 0:
 			var note_wait = 68;
-			var note_ring = 28;
+			var note_ring = 26;
 			var note_row = 5;
 			var note_spd_shot = 7;
 			var note_deccel = 0.2;
-			var note_spd_min = 1.7;
-			var note_spd_max = 5;
+			var note_spd_min = 1.5;
+			var note_spd_max = 4.5;
 			var note_angle_min = 5;
-			var note_angle_max = 130;
+			var note_angle_max = 140;
 			var note_accel = 0.1;
 			
 			var boss_wait = 133;
