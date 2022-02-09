@@ -9,7 +9,7 @@ spell_set_name("spell_s7_6","spell_s7_6","spell_s7_6","spell_s7_6")
 spell_set_life(1300,300);
 spell_set_time(60,false,90);
 
-boss_movement_goto(room_width / 2, 100,7);
+boss_movement_goto(room_width / 2, 90,7);
 
 can_shield = true;
 
@@ -17,3 +17,5 @@ act_dir = 1;
 
 angle_shoot = 0;
 dist_shoot = 0;
+
+first_wave = true;

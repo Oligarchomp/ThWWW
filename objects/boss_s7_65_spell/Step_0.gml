@@ -5,20 +5,18 @@ if(global.gp_active) and (spell_wait == 0)
 	
 	var bubble_wait = 8;
 	var bubble_ring = 9;
-	var bubble_near = 30;
-	var bubble_far = 230;
-	var bubble_time = 42;
+	var bubble_near = 70;
+	var bubble_far = 440;
 	var bubble_row = 5;
-	var bubble_spin = 13;
-	var bubble_deccel = 0.1;
+	var bubble_spin = 20;
 	var bubble_leave = 0.05;
 	
 	var aim_ring = 3;
 	var aim_spd = 0.8;
 	var aim_accel = 0.01;
 	
-	var note_ring = 7;
-	var note_spd_shot = 1.5;
+	var note_ring = 6;
+	var note_spd_shot = 1.2;
 	var note_spin = 7;
 	var note_spd_final = 1;
 	var note_deccel = 0.1;
@@ -32,31 +30,49 @@ if(global.gp_active) and (spell_wait == 0)
 			{
 				case 0:
 					boss_charge(obj_boss.x,obj_boss.y);
+					angle_shoot = first_wave ? 10 : rng(360,false,1);
+					dist_shoot = bubble_near;
+					
+					first_wave = false;
+					
+					var angle_sht = angle_shoot;
+					var dist_sht = dist_shoot;
+					
+					while(dist_sht < bubble_far)
+					{
+						for(var i = 0; i < 360; i += 360 / bubble_ring)
+						{
+							boss_charge_circle(obj_boss.x + lengthdir_x(dist_sht,angle_sht + i),obj_boss.y + lengthdir_y(dist_sht,angle_sht + i),26);		
+						}
+						
+						angle_sht += act_dir * bubble_spin;
+						dist_sht += (bubble_far - bubble_near) / bubble_row;
+					}
+					
+					with(obj_circlecharge)
+					{
+						state = 3;	
+					}
 				break;
-				case 30:
+				case 40:
 					boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);
 					state += 1;
-					
-					angle_shoot = rng(360,false,1);
-					dist_shoot = bubble_far;
 				break;
 			}
 		break;
 		case 1:
-			if(dist_shoot > bubble_near)
+			if(dist_shoot < bubble_far)
 			{
 				if(state_time % bubble_wait == 0)
 				{
 					for(var i = 0; i < 360; i += 360 / bubble_ring)
 					{
-						var inst = shoot(DAN_BUBBLE,3.5 - act_dir * 2.5,obj_boss.x,obj_boss.y,angle_shoot + i,0,sfx_shot1,5);
-						inst.dist_ref = dist_shoot;
-						inst.dist_is = 0;
+						var inst = shoot(DAN_BUBBLE,3.5 - act_dir * 2.5,obj_boss.x + lengthdir_x(dist_shoot,angle_shoot + i),obj_boss.y + lengthdir_y(dist_shoot,angle_shoot + i),angle_shoot + i,0,sfx_shot1,5);
 						inst.is_cancelable = false;
 					}
 					
 					angle_shoot += act_dir * bubble_spin;
-					dist_shoot -= (bubble_far - bubble_near) / bubble_row;
+					dist_shoot += (bubble_far - bubble_near) / bubble_row;
 				}
 			}
 			else
@@ -67,10 +83,10 @@ if(global.gp_active) and (spell_wait == 0)
 		case 2:
 			switch(state_time)
 			{
-				case 50:
+				case 20:
 					boss_charge(obj_boss.x,obj_boss.y);
 				break;
-				case 80:
+				case 50:
 					play_sound(sfx_redirect1,1,false);
 					
 					with(obj_danmaku5)
@@ -89,10 +105,10 @@ if(global.gp_active) and (spell_wait == 0)
 						sprite_index = spr_nothing;
 					}
 				break;
-				case 90:
+				case 80:
 					boss_movement_random(2,20,1);
 				break;
-				case 170:
+				case 140:
 					state = 0;
 					act_dir *= -1;
 				break;
@@ -105,20 +121,8 @@ if(global.gp_active) and (spell_wait == 0)
 		switch(state)
 		{
 			case 0:
-				if(dist_is != dist_ref)
-				{
-					x = obj_boss.x + lengthdir_x(dist_is,angle);
-					y = obj_boss.y + lengthdir_y(dist_is,angle);
-					dist_is = goto_value(dist_is,dist_ref,dist_ref / bubble_time);
-				}
-				else
-				{
-					state += 1;
-					spd = get_distance(0,0,lengthdir_x(dist_ref / bubble_time,angle),lengthdir_y(dist_ref / bubble_time,angle));
-				}
-			break;
-			case 1:
-				spd = goto_value(spd,0,bubble_deccel);
+				instance_nearest(x,y,obj_circlecharge).state = 5;
+				state += 1;
 			break;
 			case 2:
 				visual_xscale = goto_value(visual_xscale,0,bubble_leave);
@@ -159,6 +163,27 @@ if(global.gp_active) and (spell_wait == 0)
 		}
 	}
 	
+	
+	with(obj_circlecharge)
+	{
+		switch(state)
+		{
+			case 3:
+				alpha = goto_value(alpha,0.6,0.04);
+				if(alpha == 0.6)
+				{
+					state += 1;	
+				}
+			break;
+			case 5:
+				alpha = goto_value(alpha,0,0.04);
+				if(alpha == 0)
+				{
+					instance_destroy();
+				}
+			break;
+		}
+	}
 	
 	//SHIELD
 	if(obj_player.bomb_time != 0)

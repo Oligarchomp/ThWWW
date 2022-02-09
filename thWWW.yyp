@@ -8,6 +8,7 @@
     {"id":{"name":"spr_fairy_green_move","path":"sprites/spr_fairy_green_move/spr_fairy_green_move.yy",},"order":1,},
     {"id":{"name":"spr_suika_idle","path":"sprites/spr_suika_idle/spr_suika_idle.yy",},"order":0,},
     {"id":{"name":"dialogue_s1_post","path":"objects/dialogue_s1_post/dialogue_s1_post.yy",},"order":12,},
+    {"id":{"name":"sfx_tempo","path":"sounds/sfx_tempo/sfx_tempo.yy",},"order":27,},
     {"id":{"name":"obj_item_auto","path":"objects/obj_item_auto/obj_item_auto.yy",},"order":9,},
     {"id":{"name":"sfx_menu_back","path":"sounds/sfx_menu_back/sfx_menu_back.yy",},"order":0,},
     {"id":{"name":"spr_base_sanae","path":"sprites/spr_base_sanae/spr_base_sanae.yy",},"order":2,},
