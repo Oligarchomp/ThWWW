@@ -161,6 +161,7 @@ if(global.gp_active) and (spell_wait == 0)
 					sprite_danmaku = color_id == 1 ? spr_mentos_farewell : spr_mentos;
 					sprite_index = color_id == 1 ? spr_nothing : spr_danmaku_hitbox;
 					depth = color_id == 1 ? global.danmaku_depth + 3: global.danmaku_depth + 2;
+					
 				break;
 				case DAN_BUBBLE:
 					sprite_danmaku = color_id == 1 ? spr_bubble_farewell : spr_bubble;
@@ -189,6 +190,15 @@ if(global.gp_active) and (spell_wait == 0)
 				break;
 			}
 			image_index = danmaku_id;
+		}
+	}
+	
+	with(obj_grazebox)
+	{
+		if(owner.sprite_index == spr_nothing)
+		{
+			x = -200;
+			y = -200;
 		}
 	}
 	

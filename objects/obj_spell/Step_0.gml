@@ -212,7 +212,7 @@ if (global.gp_active)
 			
 		}
 		
-		if(need_cancel_bonus) and (time_left > 0)
+		if(need_cancel_bonus) and ((time_left > 0) or is_timeout)
 		{
 			//cancel bonus
 			var plus = 2000;

@@ -118,14 +118,14 @@ if(global.gp_active)
 				{
 					if(state_time % aim_wait == 0)
 					{
-						shoot_arc_row(DAN_BUBBLE,3,aim_arc,aim_row,x,y,999,aim_dist,aim_spd_min,aim_spd_max,sfx_redirect1,6);
+						shoot_arc_row(DAN_BUBBLE,3,aim_arc,aim_row,x,y,999,aim_dist,aim_spd_min,aim_spd_max,sfx_redirect1,5);
 					
 						var en = self;
 						with(obj_enemy3)
 						{
 							if(my_fairy == en)
 							{
-								shoot_ring(DAN_BUBBLE,1,ring_nbr,x,y,999,ring_spd,sfx_shot1,7);
+								shoot_ring(DAN_BUBBLE,1,ring_nbr,x,y,999,ring_spd,sfx_shot1,6);
 							}
 						}
 					
