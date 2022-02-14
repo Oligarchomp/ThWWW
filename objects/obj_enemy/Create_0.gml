@@ -99,3 +99,5 @@ item_nbr = 3;//how much point item they drop
 item_dist = 36;
 
 step = 0;
+
+mask_index = spr_fairy_hurtbox;

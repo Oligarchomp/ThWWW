@@ -427,6 +427,7 @@
     {"id":{"name":"act_s7_0","path":"objects/act_s7_0/act_s7_0.yy",},"order":0,},
     {"id":{"name":"sfx_pause","path":"sounds/sfx_pause/sfx_pause.yy",},"order":4,},
     {"id":{"name":"spr_stagecard","path":"sprites/spr_stagecard/spr_stagecard.yy",},"order":0,},
+    {"id":{"name":"spr_fairy_indicator","path":"sprites/spr_fairy_indicator/spr_fairy_indicator.yy",},"order":16,},
     {"id":{"name":"obj_backdrop","path":"objects/obj_backdrop/obj_backdrop.yy",},"order":2,},
     {"id":{"name":"spr_option_sanae","path":"sprites/spr_option_sanae/spr_option_sanae.yy",},"order":2,},
     {"id":{"name":"sfx_boom","path":"sounds/sfx_boom/sfx_boom.yy",},"order":12,},
