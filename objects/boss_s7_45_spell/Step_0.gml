@@ -106,13 +106,13 @@ if(global.gp_active) and (spell_wait == 0)
 				if(state_time % 2 == 0)
 				{
 					var ang = 90 * act_dir - 30 + rng(60,false,9);
-					var inst = shoot(DAN_BUBBLE,col,obj_boss.x,room_height / 2 + 290 * act_dir,ang,1.5,noone,8);
+					var inst = shoot(DAN_BUBBLE,col,obj_boss.x,room_height / 2 + 290 * act_dir,ang,1.45,noone,8);
 					inst.pos_type = POS_SP;
 					inst.y_grav_accel = 0.05 * act_dir;
 					inst.y_grav_max = 6;	
 					inst.spawn_type = SPAWN_SCALE;
 				
-					var inst = shoot(DAN_BALL,col,obj_boss.x,room_height / 2 + 262 * act_dir,ang,1.5,noone,2);
+					var inst = shoot(DAN_BALL,col,obj_boss.x,room_height / 2 + 262 * act_dir,ang,1.45,noone,2);
 					inst.pos_type = POS_SP;
 					inst.y_grav_accel = 0.05 * act_dir;
 					inst.y_grav_max = 6;	

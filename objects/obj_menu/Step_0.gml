@@ -606,8 +606,8 @@ for(var i = 0; i < 5; i += 1)
 	{
 		if(global.difficulty == i) or (i == 4)
 		{
-			difficuly[i].x_to = 782;
-			difficuly[i].y_to = 470;
+			difficuly[i].x_to = 647;
+			difficuly[i].y_to = 460;
 		}
 	}
 	

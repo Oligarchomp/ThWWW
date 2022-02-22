@@ -1,3 +1,4 @@
+ver = 0.0.42
 bomb_reimu = Spirit Sign - [Fantasy Seal]
 bomb_marisa = Love Sign - [Master Spark]
 bomb_sanae = Esoterica - [Nine Syllable Stabs]
@@ -708,7 +709,7 @@ diag_s7_s28 = That sounds like a lot of fun!
 diag_s7_s29 = Glad you like your prize! And if you are ready to go...
 diag_s7_s30 = Alors on danse!
 diag_s7_s31 = Mama mia! I'm speechless! Never did I had such an intense battle before!
-diag_s7_s32 = And that's another victory for Super Sanae! Peace as been restored with violence once again!
+diag_s7_s32 = And that's another victory for Super Sanae! Peace has been restored with violence once again!
 diag_s7_s33 = Is everyone in "Gensokyo" as extravagant as you? This place looks like a ton of fun!
 diag_s7_s34 = I'm sure Nua would love this place too! Where is she now?
 diag_s7_s35 = She's at my shrine, drinking saké with Lady Kanako. Yes, they really don't have anything better to do.

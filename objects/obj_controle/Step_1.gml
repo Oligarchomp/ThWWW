@@ -2,7 +2,7 @@
 // You can write your code in this editor
 // Begin step makes all the difference
 
-
+version = get_text("ver");
 
 
 global.pause_pressed = (gamepad_button_check_pressed(0,global.pause_btn)) or (keyboard_check_pressed(global.pause_vk))
