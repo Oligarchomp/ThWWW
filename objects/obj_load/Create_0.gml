@@ -92,8 +92,8 @@ instance_create_depth(0,0,0,obj_bgm);
 global.need_intro = true;
 
 //room_goto(room_score);
-room_goto(room_main);
-//room_goto(room_gp);
+//room_goto(room_main);
+room_goto(room_gp);
 
 global.game_x_offset =  156;
 global.game_y_offset =  20;
@@ -280,6 +280,18 @@ global.play_type = PLAY_MANUAL;
 #macro REPLAY_DIFFICULTY 7
 #macro REPLAY_STAGE_NBR 8
 
+
+add_stage_event(act_s6_0,0)
+add_stage_event(boss_s6_1_non,0);
+		add_stage_event(boss_s6_2_spell,0);
+		add_stage_event(boss_s6_3_non,50);
+		add_stage_event(boss_s6_4_spell,0);
+		add_stage_event(boss_s6_5_non,50);
+		add_stage_event(boss_s6_6_spell,0);
+		add_stage_event(boss_s6_7_non,50);
+		add_stage_event(boss_s6_8_spell,0);
+		add_stage_event(boss_s6_9_spell,60);
+			
 /*
 add_stage_event(act_s7_0,0)
 add_stage_event(boss_s7_65_spell,1);
