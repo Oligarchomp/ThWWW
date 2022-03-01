@@ -62,7 +62,8 @@ else
 
 if (global.continues != global.continues_max)
 {
-	state = 2;	
+	state = 2;
+	instance_destroy(obj_name_entry);
 }
 
 menu_alpha = 0;

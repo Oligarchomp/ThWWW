@@ -33,7 +33,15 @@ if (global.gp_active)
 				inst.scale = rng(1,false,5);
 				
 			}
-			switch(boss_id)
+			
+			var boss_death = boss_id;
+			
+			if(global.game_type = GAME_SPELL) and (boss_death != BOSS_YUUTO)
+			{
+				boss_death = 0;//default to normal death	
+			}
+			
+			switch(boss_death)
 			{
 				case BOSS_NUA:
 				case BOSS_REVERENCE:
