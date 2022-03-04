@@ -25,7 +25,7 @@ if(global.gp_active)
 			}
 		break;
 		case 1:
-			if(state_time == 70)
+			if(state_time == 100)
 			{
 				state = 2;
 			}

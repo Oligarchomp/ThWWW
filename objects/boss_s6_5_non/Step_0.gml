@@ -25,7 +25,7 @@ if(global.gp_active)
 					var torpedo_wait = 86;
 					var torpedo_tail_wait = 15;
 					var torpedo_lenght = 70;
-					var torpedo_ring = 17;
+					var torpedo_ring = 16;
 					var torpedo_spd = 2;
 					var torpedo_angle_plus = 1.7;
 					var torpedo_angle_max = 100;
@@ -34,9 +34,9 @@ if(global.gp_active)
 				break;
 				case 2:
 					var torpedo_wait = 70;
-					var torpedo_tail_wait = 11;
+					var torpedo_tail_wait = 12;
 					var torpedo_lenght = 60;
-					var torpedo_ring = 19;
+					var torpedo_ring = 18;
 					var torpedo_spd = 2;
 					var torpedo_angle_plus = 1.7;
 					var torpedo_angle_max = 110;
@@ -45,10 +45,10 @@ if(global.gp_active)
 				break;
 				case 3:
 					var torpedo_wait = 70;
-					var torpedo_tail_wait = 9;
+					var torpedo_tail_wait = 10;
 					var torpedo_lenght = 60;
 					var torpedo_ring = 20;
-					var torpedo_spd = 2.5;
+					var torpedo_spd = 2.3;
 					var torpedo_angle_plus = 1.7;
 					var torpedo_angle_max = 110;
 			
@@ -60,7 +60,7 @@ if(global.gp_active)
 	
 			if(step % boss_wait == boss_wait -1)
 			{
-				boss_movement_random(1,2,0);
+				boss_movement_random(0.5,2,0);
 			}
 	
 			if(step % torpedo_wait == 0)

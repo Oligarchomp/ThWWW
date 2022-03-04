@@ -147,7 +147,7 @@ if(global.gp_active) and (spell_wait == 0)
 			//wave 3
 			var tss_arc = 9;
 			var tss_dist = 12;
-			var tss_spd = 7;
+			var tss_spd = 6.5;
 			var tss_wait = 2;
 			var tss_change = 6;
 			var tss_dist1 = 1.1;
