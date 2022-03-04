@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_yuuto_art","path":"sprites/spr_yuuto_art/spr_yuuto_art.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_yuuto_art",
     "tags": [],
     "resourceType": "GMSequence",

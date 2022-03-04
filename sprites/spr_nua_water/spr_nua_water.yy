@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_nua_water","path":"sprites/spr_nua_water/spr_nua_water.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_nua_water",
     "tags": [],
     "resourceType": "GMSequence",

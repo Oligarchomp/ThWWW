@@ -99,7 +99,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_reverence_art","path":"sprites/spr_reverence_art/spr_reverence_art.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_reverence_art",
     "tags": [],
     "resourceType": "GMSequence",

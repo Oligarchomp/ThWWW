@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_option_marisa","path":"sprites/spr_option_marisa/spr_option_marisa.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_option_marisa",
     "tags": [],
     "resourceType": "GMSequence",

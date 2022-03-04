@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_grazebox","path":"sprites/spr_grazebox/spr_grazebox.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_grazebox",
     "tags": [],
     "resourceType": "GMSequence",

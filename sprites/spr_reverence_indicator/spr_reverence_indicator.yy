@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_reverence_indicator","path":"sprites/spr_reverence_indicator/spr_reverence_indicator.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_reverence_indicator",
     "tags": [],
     "resourceType": "GMSequence",

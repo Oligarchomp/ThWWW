@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_reverence_bubble","path":"sprites/spr_reverence_bubble/spr_reverence_bubble.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_reverence_bubble",
     "tags": [],
     "resourceType": "GMSequence",

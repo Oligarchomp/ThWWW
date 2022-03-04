@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_yingyang","path":"sprites/spr_yingyang/spr_yingyang.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_yingyang",
     "tags": [],
     "resourceType": "GMSequence",

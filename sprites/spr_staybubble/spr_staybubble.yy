@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_staybubble","path":"sprites/spr_staybubble/spr_staybubble.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_staybubble",
     "tags": [],
     "resourceType": "GMSequence",

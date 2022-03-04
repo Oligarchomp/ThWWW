@@ -107,7 +107,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_intro_broken","path":"sprites/spr_intro_broken/spr_intro_broken.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_intro_broken",
     "tags": [],
     "resourceType": "GMSequence",

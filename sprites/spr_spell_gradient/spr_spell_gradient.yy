@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_spell_gradient","path":"sprites/spr_spell_gradient/spr_spell_gradient.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_spell_gradient",
     "tags": [],
     "resourceType": "GMSequence",

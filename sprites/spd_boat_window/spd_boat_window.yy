@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spd_boat_window","path":"sprites/spd_boat_window/spd_boat_window.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spd_boat_window",
     "tags": [],
     "resourceType": "GMSequence",

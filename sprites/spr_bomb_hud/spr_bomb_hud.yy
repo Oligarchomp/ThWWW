@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_bomb_hud","path":"sprites/spr_bomb_hud/spr_bomb_hud.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_bomb_hud",
     "tags": [],
     "resourceType": "GMSequence",

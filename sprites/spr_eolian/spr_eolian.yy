@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_eolian","path":"sprites/spr_eolian/spr_eolian.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_eolian",
     "tags": [],
     "resourceType": "GMSequence",

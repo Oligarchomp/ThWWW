@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_suika_left","path":"sprites/spr_suika_left/spr_suika_left.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_suika_left",
     "tags": [],
     "resourceType": "GMSequence",

@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_rice","path":"sprites/spr_rice/spr_rice.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_rice",
     "tags": [],
     "resourceType": "GMSequence",

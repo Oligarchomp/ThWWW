@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_fairy_blue_idle","path":"sprites/spr_fairy_blue_idle/spr_fairy_blue_idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_fairy_blue_idle",
     "tags": [],
     "resourceType": "GMSequence",

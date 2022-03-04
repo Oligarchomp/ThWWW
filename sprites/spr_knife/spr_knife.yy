@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_knife","path":"sprites/spr_knife/spr_knife.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_knife",
     "tags": [],
     "resourceType": "GMSequence",

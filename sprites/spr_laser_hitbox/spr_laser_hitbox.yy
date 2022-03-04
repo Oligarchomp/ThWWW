@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_laser_hitbox","path":"sprites/spr_laser_hitbox/spr_laser_hitbox.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_laser_hitbox",
     "tags": [],
     "resourceType": "GMSequence",

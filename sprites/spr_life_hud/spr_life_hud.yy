@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_life_hud","path":"sprites/spr_life_hud/spr_life_hud.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_life_hud",
     "tags": [],
     "resourceType": "GMSequence",

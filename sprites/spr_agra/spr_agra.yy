@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_agra","path":"sprites/spr_agra/spr_agra.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_agra",
     "tags": [],
     "resourceType": "GMSequence",

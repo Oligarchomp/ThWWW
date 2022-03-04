@@ -135,7 +135,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_danmaku_grazbox","path":"sprites/spr_danmaku_grazbox/spr_danmaku_grazbox.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_danmaku_grazbox",
     "tags": [],
     "resourceType": "GMSequence",

@@ -19,7 +19,7 @@ mus_boss2 = The Crab's One Way Cycle ~ Sideway Motion [Comp: Jani]
 mus_stage3 = The Colorful Maiden, Through the Colorless World
 mus_stage3_comp = [Comp: Aka Kyuketsuki]
 mus_boss3 = Fantastic Friend [Comp: Jani]
-
+mus_boss6 = From Beginning to End ~ Drunken Prophet [Comp: sincx]
 
 
 mus_room_title = Tale of a Broken World ~ Not so Eastern Story
@@ -34,7 +34,7 @@ mus_room_b4 = nothing
 mus_room_s5 = nothing
 mus_room_b5 = nothing
 mus_room_s6 = nothing
-mus_room_b6 = nothing
+mus_room_b6 = From Beginning to End ~ Drunken Prophet
 mus_room_s7 = nothing
 mus_room_b7 = nothing
 mus_room_end = nothing
@@ -54,7 +54,7 @@ mus_com_b4 = comment
 mus_com_s5 = comment
 mus_com_b5 = comment
 mus_com_s6 = comment
-mus_com_b6 = comment
+mus_com_b6 = Composition: sincx
 mus_com_s7 = comment
 mus_com_b7 = comment
 mus_com_end = comment

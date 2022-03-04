@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_boss_hurtbox","path":"sprites/spr_boss_hurtbox/spr_boss_hurtbox.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_boss_hurtbox",
     "tags": [],
     "resourceType": "GMSequence",

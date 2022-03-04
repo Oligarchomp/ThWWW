@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_grabbox","path":"sprites/spr_grabbox/spr_grabbox.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_grabbox",
     "tags": [],
     "resourceType": "GMSequence",

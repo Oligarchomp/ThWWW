@@ -39,7 +39,7 @@ switch(global.player_chosen)
 	break;
 	case P_MARISA:
 		boss_step = 2;
-		bgm_step = 20;
+		bgm_step = 18;
 		title_step = 6;
 		set_dialogue(spr_marisa_art,0,true,spr_nothing,0,false,get_text("diag_s6_m3"),-1);
 		set_dialogue(spr_marisa_art,5,true,spr_nothing,0,false,get_text("diag_s6_m4"),-1);
@@ -66,7 +66,7 @@ switch(global.player_chosen)
 	break;
 	case P_SANAE:
 		boss_step = 2;
-		bgm_step = 20;
+		bgm_step = 17;
 		title_step = 8;
 		set_dialogue(spr_sanae_art,4,true,spr_nothing,0,false,get_text("diag_s6_s3"),-1);
 		set_dialogue(spr_sanae_art,3,true,spr_nothing,0,false,get_text("diag_s6_s4"),-1);

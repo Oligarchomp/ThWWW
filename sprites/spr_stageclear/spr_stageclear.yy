@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_stageclear","path":"sprites/spr_stageclear/spr_stageclear.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_stageclear",
     "tags": [],
     "resourceType": "GMSequence",

@@ -6,7 +6,7 @@ event_inherited();
 
 spell_set_spell("s6_1",BOSS_NUA,30000000)
 spell_set_name("spell_s6_1a","spell_s6_1a","spell_s6_1b","spell_s6_1b")
-spell_set_life(940,170);
+spell_set_life(900,170);
 spell_set_time(50,false,95);
 
 boss_movement_goto(room_width / 2, 100,7);

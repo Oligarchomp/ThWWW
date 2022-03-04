@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_feza_art","path":"sprites/spr_feza_art/spr_feza_art.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_feza_art",
     "tags": [],
     "resourceType": "GMSequence",

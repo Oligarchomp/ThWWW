@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_boat_dark","path":"sprites/spr_boat_dark/spr_boat_dark.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_boat_dark",
     "tags": [],
     "resourceType": "GMSequence",

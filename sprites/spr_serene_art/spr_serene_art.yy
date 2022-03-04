@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_serene_art","path":"sprites/spr_serene_art/spr_serene_art.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_serene_art",
     "tags": [],
     "resourceType": "GMSequence",

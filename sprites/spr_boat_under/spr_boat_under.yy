@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_boat_under","path":"sprites/spr_boat_under/spr_boat_under.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_boat_under",
     "tags": [],
     "resourceType": "GMSequence",

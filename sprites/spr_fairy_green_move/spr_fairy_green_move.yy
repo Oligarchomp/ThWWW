@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_fairy_green_move","path":"sprites/spr_fairy_green_move/spr_fairy_green_move.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_fairy_green_move",
     "tags": [],
     "resourceType": "GMSequence",

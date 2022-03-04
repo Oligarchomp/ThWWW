@@ -12,7 +12,7 @@ bg_to_create = bg_s6;
 
 if(global.game_type == GAME_SPELL)
 {
-	music = get_next_event() == act_s6_5_spell ? noone : noone;
+	music = get_next_event() == act_s6_5_spell ? noone : mus_boss6;
 }
 else
 {

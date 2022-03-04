@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_bird","path":"sprites/spr_bird/spr_bird.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_bird",
     "tags": [],
     "resourceType": "GMSequence",

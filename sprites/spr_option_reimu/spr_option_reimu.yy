@@ -103,7 +103,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_option_reimu","path":"sprites/spr_option_reimu/spr_option_reimu.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_option_reimu",
     "tags": [],
     "resourceType": "GMSequence",

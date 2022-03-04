@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_bubble_farewell","path":"sprites/spr_bubble_farewell/spr_bubble_farewell.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_bubble_farewell",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_fullscreen_collision","path":"sprites/spr_fullscreen_collision/spr_fullscreen_collision.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_fullscreen_collision",
     "tags": [],
     "resourceType": "GMSequence",

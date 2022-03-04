@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_apple_art","path":"sprites/spr_apple_art/spr_apple_art.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_apple_art",
     "tags": [],
     "resourceType": "GMSequence",

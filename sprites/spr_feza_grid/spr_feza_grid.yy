@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_feza_grid","path":"sprites/spr_feza_grid/spr_feza_grid.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_feza_grid",
     "tags": [],
     "resourceType": "GMSequence",

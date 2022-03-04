@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_crab","path":"sprites/spr_crab/spr_crab.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_crab",
     "tags": [],
     "resourceType": "GMSequence",

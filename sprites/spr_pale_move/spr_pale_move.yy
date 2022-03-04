@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pale_move","path":"sprites/spr_pale_move/spr_pale_move.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pale_move",
     "tags": [],
     "resourceType": "GMSequence",

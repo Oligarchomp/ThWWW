@@ -83,7 +83,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pale_art","path":"sprites/spr_pale_art/spr_pale_art.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pale_art",
     "tags": [],
     "resourceType": "GMSequence",

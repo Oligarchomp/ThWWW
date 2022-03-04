@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_spell_bg","path":"sprites/spr_spell_bg/spr_spell_bg.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_spell_bg",
     "tags": [],
     "resourceType": "GMSequence",

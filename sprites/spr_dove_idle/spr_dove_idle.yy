@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_dove_idle","path":"sprites/spr_dove_idle/spr_dove_idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_dove_idle",
     "tags": [],
     "resourceType": "GMSequence",

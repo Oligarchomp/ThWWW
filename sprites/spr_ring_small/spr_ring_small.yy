@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_ring_small","path":"sprites/spr_ring_small/spr_ring_small.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_ring_small",
     "tags": [],
     "resourceType": "GMSequence",

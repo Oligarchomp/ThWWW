@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_reimu_idle","path":"sprites/spr_reimu_idle/spr_reimu_idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_reimu_idle",
     "tags": [],
     "resourceType": "GMSequence",

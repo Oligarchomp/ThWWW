@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_anchor","path":"sprites/spr_anchor/spr_anchor.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_anchor",
     "tags": [],
     "resourceType": "GMSequence",

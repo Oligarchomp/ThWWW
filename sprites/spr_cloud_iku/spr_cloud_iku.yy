@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_cloud_iku","path":"sprites/spr_cloud_iku/spr_cloud_iku.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_cloud_iku",
     "tags": [],
     "resourceType": "GMSequence",

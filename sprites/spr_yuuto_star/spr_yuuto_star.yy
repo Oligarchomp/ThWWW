@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_yuuto_star","path":"sprites/spr_yuuto_star/spr_yuuto_star.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_yuuto_star",
     "tags": [],
     "resourceType": "GMSequence",

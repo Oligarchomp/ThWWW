@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_danmakrab","path":"sprites/spr_danmakrab/spr_danmakrab.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_danmakrab",
     "tags": [],
     "resourceType": "GMSequence",

@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_reimu_right","path":"sprites/spr_reimu_right/spr_reimu_right.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_reimu_right",
     "tags": [],
     "resourceType": "GMSequence",

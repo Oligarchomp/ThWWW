@@ -41,6 +41,9 @@ function set_bgm(argument0){
 			case mus_boss3:
 				var name = get_text("mus_boss3");
 			break;
+			case mus_boss6:
+				var name = get_text("mus_boss6");
+			break;
 			default:
 				var name = "No music yet";
 			break;

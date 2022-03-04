@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_secondary_marisa","path":"sprites/spr_secondary_marisa/spr_secondary_marisa.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_secondary_marisa",
     "tags": [],
     "resourceType": "GMSequence",

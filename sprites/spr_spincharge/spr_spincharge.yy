@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_spincharge","path":"sprites/spr_spincharge/spr_spincharge.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_spincharge",
     "tags": [],
     "resourceType": "GMSequence",

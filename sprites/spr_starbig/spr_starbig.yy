@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_starbig","path":"sprites/spr_starbig/spr_starbig.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_starbig",
     "tags": [],
     "resourceType": "GMSequence",

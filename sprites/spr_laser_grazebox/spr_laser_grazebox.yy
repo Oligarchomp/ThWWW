@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_laser_grazebox","path":"sprites/spr_laser_grazebox/spr_laser_grazebox.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_laser_grazebox",
     "tags": [],
     "resourceType": "GMSequence",

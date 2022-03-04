@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_maple","path":"sprites/spr_maple/spr_maple.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_maple",
     "tags": [],
     "resourceType": "GMSequence",

@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_sanae_left","path":"sprites/spr_sanae_left/spr_sanae_left.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_sanae_left",
     "tags": [],
     "resourceType": "GMSequence",

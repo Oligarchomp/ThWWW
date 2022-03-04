@@ -83,7 +83,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_boat_backdrop","path":"sprites/spr_boat_backdrop/spr_boat_backdrop.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_boat_backdrop",
     "tags": [],
     "resourceType": "GMSequence",

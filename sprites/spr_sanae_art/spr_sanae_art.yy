@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_sanae_art","path":"sprites/spr_sanae_art/spr_sanae_art.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_sanae_art",
     "tags": [],
     "resourceType": "GMSequence",

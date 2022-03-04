@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_graze","path":"sprites/spr_graze/spr_graze.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_graze",
     "tags": [],
     "resourceType": "GMSequence",

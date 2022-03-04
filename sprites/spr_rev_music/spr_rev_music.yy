@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_rev_music","path":"sprites/spr_rev_music/spr_rev_music.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_rev_music",
     "tags": [],
     "resourceType": "GMSequence",

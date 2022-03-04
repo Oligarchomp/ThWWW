@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_hawaii","path":"sprites/spr_hawaii/spr_hawaii.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_hawaii",
     "tags": [],
     "resourceType": "GMSequence",

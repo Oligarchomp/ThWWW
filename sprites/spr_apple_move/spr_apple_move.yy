@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_apple_move","path":"sprites/spr_apple_move/spr_apple_move.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_apple_move",
     "tags": [],
     "resourceType": "GMSequence",

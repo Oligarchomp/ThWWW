@@ -1270,7 +1270,7 @@ menu =
 				title : get_text("mus_room_b6"),
 				comment : get_text("mus_com_b6"),
 				action : MENU_MUSIC,
-				music : noone,
+				music : mus_boss6,
 			},
 			{
 				title : get_text("mus_room_s7"),

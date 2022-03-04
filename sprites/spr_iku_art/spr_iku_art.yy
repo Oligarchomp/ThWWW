@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_iku_art","path":"sprites/spr_iku_art/spr_iku_art.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_iku_art",
     "tags": [],
     "resourceType": "GMSequence",

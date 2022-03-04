@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_fairy_white_idle","path":"sprites/spr_fairy_white_idle/spr_fairy_white_idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_fairy_white_idle",
     "tags": [],
     "resourceType": "GMSequence",

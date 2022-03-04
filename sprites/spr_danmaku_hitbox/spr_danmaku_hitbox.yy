@@ -151,7 +151,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_danmaku_hitbox","path":"sprites/spr_danmaku_hitbox/spr_danmaku_hitbox.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_danmaku_hitbox",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_s3_bg","path":"sprites/spr_s3_bg/spr_s3_bg.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_s3_bg",
     "tags": [],
     "resourceType": "GMSequence",

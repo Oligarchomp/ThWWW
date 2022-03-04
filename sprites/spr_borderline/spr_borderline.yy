@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_borderline","path":"sprites/spr_borderline/spr_borderline.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_borderline",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_focus","path":"sprites/spr_focus/spr_focus.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_focus",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_circle_big","path":"sprites/spr_circle_big/spr_circle_big.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_circle_big",
     "tags": [],
     "resourceType": "GMSequence",

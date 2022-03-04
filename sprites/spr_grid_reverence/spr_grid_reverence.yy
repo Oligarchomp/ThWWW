@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_grid_reverence","path":"sprites/spr_grid_reverence/spr_grid_reverence.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_grid_reverence",
     "tags": [],
     "resourceType": "GMSequence",

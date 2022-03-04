@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_marisa_art","path":"sprites/spr_marisa_art/spr_marisa_art.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_marisa_art",
     "tags": [],
     "resourceType": "GMSequence",

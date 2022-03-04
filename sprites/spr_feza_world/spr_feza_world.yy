@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_feza_world","path":"sprites/spr_feza_world/spr_feza_world.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_feza_world",
     "tags": [],
     "resourceType": "GMSequence",

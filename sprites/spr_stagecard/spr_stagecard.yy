@@ -83,7 +83,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_stagecard","path":"sprites/spr_stagecard/spr_stagecard.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_stagecard",
     "tags": [],
     "resourceType": "GMSequence",

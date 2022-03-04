@@ -99,7 +99,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_number","path":"sprites/spr_number/spr_number.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_number",
     "tags": [],
     "resourceType": "GMSequence",

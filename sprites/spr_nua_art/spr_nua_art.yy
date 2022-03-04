@@ -83,7 +83,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_nua_art","path":"sprites/spr_nua_art/spr_nua_art.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_nua_art",
     "tags": [],
     "resourceType": "GMSequence",

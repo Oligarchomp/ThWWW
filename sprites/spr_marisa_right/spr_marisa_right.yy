@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_marisa_right","path":"sprites/spr_marisa_right/spr_marisa_right.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_marisa_right",
     "tags": [],
     "resourceType": "GMSequence",

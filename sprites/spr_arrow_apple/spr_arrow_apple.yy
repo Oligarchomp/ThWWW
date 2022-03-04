@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_arrow_apple","path":"sprites/spr_arrow_apple/spr_arrow_apple.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_arrow_apple",
     "tags": [],
     "resourceType": "GMSequence",

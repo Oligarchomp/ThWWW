@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_isoterica","path":"sprites/spr_isoterica/spr_isoterica.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_isoterica",
     "tags": [],
     "resourceType": "GMSequence",

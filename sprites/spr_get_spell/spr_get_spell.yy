@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_get_spell","path":"sprites/spr_get_spell/spr_get_spell.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_get_spell",
     "tags": [],
     "resourceType": "GMSequence",

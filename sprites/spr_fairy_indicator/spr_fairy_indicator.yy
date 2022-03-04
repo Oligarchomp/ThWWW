@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_fairy_indicator","path":"sprites/spr_fairy_indicator/spr_fairy_indicator.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_fairy_indicator",
     "tags": [],
     "resourceType": "GMSequence",

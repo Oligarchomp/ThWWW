@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_mentos","path":"sprites/spr_mentos/spr_mentos.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_mentos",
     "tags": [],
     "resourceType": "GMSequence",

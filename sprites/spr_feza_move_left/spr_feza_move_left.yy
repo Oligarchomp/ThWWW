@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_feza_move_left","path":"sprites/spr_feza_move_left/spr_feza_move_left.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_feza_move_left",
     "tags": [],
     "resourceType": "GMSequence",

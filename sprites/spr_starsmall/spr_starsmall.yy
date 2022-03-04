@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_starsmall","path":"sprites/spr_starsmall/spr_starsmall.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_starsmall",
     "tags": [],
     "resourceType": "GMSequence",

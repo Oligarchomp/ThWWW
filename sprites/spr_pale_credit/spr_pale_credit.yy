@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pale_credit","path":"sprites/spr_pale_credit/spr_pale_credit.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pale_credit",
     "tags": [],
     "resourceType": "GMSequence",

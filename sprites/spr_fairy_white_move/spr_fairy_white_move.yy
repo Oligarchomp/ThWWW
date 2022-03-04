@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_fairy_white_move","path":"sprites/spr_fairy_white_move/spr_fairy_white_move.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_fairy_white_move",
     "tags": [],
     "resourceType": "GMSequence",

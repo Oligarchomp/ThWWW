@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_boat_wall","path":"sprites/spr_boat_wall/spr_boat_wall.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_boat_wall",
     "tags": [],
     "resourceType": "GMSequence",

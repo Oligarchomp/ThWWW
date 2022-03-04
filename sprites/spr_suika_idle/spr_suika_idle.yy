@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_suika_idle","path":"sprites/spr_suika_idle/spr_suika_idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_suika_idle",
     "tags": [],
     "resourceType": "GMSequence",

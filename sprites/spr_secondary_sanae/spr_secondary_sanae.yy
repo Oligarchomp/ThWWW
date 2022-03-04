@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_secondary_sanae","path":"sprites/spr_secondary_sanae/spr_secondary_sanae.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_secondary_sanae",
     "tags": [],
     "resourceType": "GMSequence",

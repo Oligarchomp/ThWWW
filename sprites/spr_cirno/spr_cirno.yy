@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_cirno","path":"sprites/spr_cirno/spr_cirno.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_cirno",
     "tags": [],
     "resourceType": "GMSequence",

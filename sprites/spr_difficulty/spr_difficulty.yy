@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_difficulty","path":"sprites/spr_difficulty/spr_difficulty.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_difficulty",
     "tags": [],
     "resourceType": "GMSequence",

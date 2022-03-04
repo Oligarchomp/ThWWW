@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_fairy_hurtbox","path":"sprites/spr_fairy_hurtbox/spr_fairy_hurtbox.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_fairy_hurtbox",
     "tags": [],
     "resourceType": "GMSequence",

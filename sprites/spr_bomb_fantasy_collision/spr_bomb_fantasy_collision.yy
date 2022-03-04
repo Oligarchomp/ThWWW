@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_bomb_fantasy_collision","path":"sprites/spr_bomb_fantasy_collision/spr_bomb_fantasy_collision.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_bomb_fantasy_collision",
     "tags": [],
     "resourceType": "GMSequence",

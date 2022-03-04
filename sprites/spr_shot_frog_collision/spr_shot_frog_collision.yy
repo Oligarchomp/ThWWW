@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_shot_frog_collision","path":"sprites/spr_shot_frog_collision/spr_shot_frog_collision.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_shot_frog_collision",
     "tags": [],
     "resourceType": "GMSequence",

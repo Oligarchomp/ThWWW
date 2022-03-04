@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_spell_boss","path":"sprites/spr_spell_boss/spr_spell_boss.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_spell_boss",
     "tags": [],
     "resourceType": "GMSequence",

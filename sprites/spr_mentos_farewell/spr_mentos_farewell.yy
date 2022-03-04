@@ -63,7 +63,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_mentos_farewell","path":"sprites/spr_mentos_farewell/spr_mentos_farewell.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_mentos_farewell",
     "tags": [],
     "resourceType": "GMSequence",

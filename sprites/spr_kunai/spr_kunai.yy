@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_kunai","path":"sprites/spr_kunai/spr_kunai.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_kunai",
     "tags": [],
     "resourceType": "GMSequence",

@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_marisa_idle","path":"sprites/spr_marisa_idle/spr_marisa_idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_marisa_idle",
     "tags": [],
     "resourceType": "GMSequence",

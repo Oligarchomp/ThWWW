@@ -67,7 +67,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_reverence_rest_start","path":"sprites/spr_reverence_rest_start/spr_reverence_rest_start.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_reverence_rest_start",
     "tags": [],
     "resourceType": "GMSequence",

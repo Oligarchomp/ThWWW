@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_player_wall_collision","path":"sprites/spr_player_wall_collision/spr_player_wall_collision.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_player_wall_collision",
     "tags": [],
     "resourceType": "GMSequence",

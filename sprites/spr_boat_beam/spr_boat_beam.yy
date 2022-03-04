@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_boat_beam","path":"sprites/spr_boat_beam/spr_boat_beam.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_boat_beam",
     "tags": [],
     "resourceType": "GMSequence",

@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_amulet","path":"sprites/spr_amulet/spr_amulet.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_amulet",
     "tags": [],
     "resourceType": "GMSequence",

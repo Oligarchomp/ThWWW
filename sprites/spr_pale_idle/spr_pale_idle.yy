@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pale_idle","path":"sprites/spr_pale_idle/spr_pale_idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pale_idle",
     "tags": [],
     "resourceType": "GMSequence",

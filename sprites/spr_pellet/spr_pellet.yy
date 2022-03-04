@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_pellet","path":"sprites/spr_pellet/spr_pellet.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_pellet",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_bhava","path":"sprites/spr_bhava/spr_bhava.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_bhava",
     "tags": [],
     "resourceType": "GMSequence",

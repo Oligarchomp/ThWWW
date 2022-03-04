@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_bg_reverence","path":"sprites/spr_bg_reverence/spr_bg_reverence.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_bg_reverence",
     "tags": [],
     "resourceType": "GMSequence",

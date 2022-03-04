@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_yuuto_idle","path":"sprites/spr_yuuto_idle/spr_yuuto_idle.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_yuuto_idle",
     "tags": [],
     "resourceType": "GMSequence",

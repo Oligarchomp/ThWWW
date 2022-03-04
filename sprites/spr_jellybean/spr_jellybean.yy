@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_jellybean","path":"sprites/spr_jellybean/spr_jellybean.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_jellybean",
     "tags": [],
     "resourceType": "GMSequence",

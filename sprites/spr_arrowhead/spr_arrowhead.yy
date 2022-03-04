@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_arrowhead","path":"sprites/spr_arrowhead/spr_arrowhead.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_arrowhead",
     "tags": [],
     "resourceType": "GMSequence",

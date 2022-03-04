@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_base_reimu","path":"sprites/spr_base_reimu/spr_base_reimu.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_base_reimu",
     "tags": [],
     "resourceType": "GMSequence",

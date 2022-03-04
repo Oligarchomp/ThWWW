@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_boat_interior","path":"sprites/spr_boat_interior/spr_boat_interior.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_boat_interior",
     "tags": [],
     "resourceType": "GMSequence",

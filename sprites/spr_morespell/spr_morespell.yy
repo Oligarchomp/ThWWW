@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_morespell","path":"sprites/spr_morespell/spr_morespell.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_morespell",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_base_suika","path":"sprites/spr_base_suika/spr_base_suika.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_base_suika",
     "tags": [],
     "resourceType": "GMSequence",
