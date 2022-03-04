@@ -5,7 +5,7 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			var bird_wait = 4;
+			var bird_wait = 8;
 			var bird_accel = 0.05;
 			var bird_spd_min = 1.7;
 			var bird_spd_git = 0.2;
@@ -23,10 +23,10 @@ if(global.gp_active) and (spell_wait == 0)
 			var arc_aim_open = 20;
 		break;
 		case 1:
-			var bird_wait = 2;
+			var bird_wait = 4;
 			var bird_accel = 0.05;
-			var bird_spd_min = 2;
-			var bird_spd_git = 0.3;
+			var bird_spd_min = 1.9;
+			var bird_spd_git = 0.25;
 			var bird_angle = 80;
 			var bird_open = 7;
 			
@@ -41,7 +41,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var arc_aim_open = 20;
 		break;
 		case 2:
-			var bird_wait = 0;//custom
+			var bird_wait = 2
 			var bird_accel = 0.05;
 			var bird_spd_min = 2.2;
 			var bird_spd_git = 0.4;
@@ -78,7 +78,7 @@ if(global.gp_active) and (spell_wait == 0)
 		break;
 	}
 	
-	var bird_off = 30;
+	var bird_off = 130;
 	
 	
 	switch(state)
@@ -113,19 +113,10 @@ if(global.gp_active) and (spell_wait == 0)
 	if(wave_time > 0 )
 	{
 		var need_dove = false;
-		if(global.difficulty == 2)
+		
+		if(step % bird_wait == 0)
 		{
-			if(state_time % 3 != 0)
-			{
-				need_dove = true;			
-			}			
-		}
-		else
-		{
-			if(step % bird_wait == 0)
-			{
-				need_dove = true;
-			}
+			need_dove = true;
 		}
 		
 		if(need_dove)

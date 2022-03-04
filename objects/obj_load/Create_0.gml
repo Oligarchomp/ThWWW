@@ -279,7 +279,3 @@ global.play_type = PLAY_MANUAL;
 #macro REPLAY_PLAYER 6
 #macro REPLAY_DIFFICULTY 7
 #macro REPLAY_STAGE_NBR 8
-
-/*
-add_stage_event(act_s7_0,0)
-add_stage_event(boss_s7_65_spell,1);

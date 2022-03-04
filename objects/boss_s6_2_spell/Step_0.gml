@@ -6,7 +6,7 @@ if(global.gp_active) and (spell_wait == 0)
 	{
 		case 0:
 			var anchor_size = 2;
-			var anchor_spd = 25;
+			var anchor_spd = 16;
 			var anchor_stay = 100;
 			var anchor_accel = 0.05;
 			
@@ -29,7 +29,7 @@ if(global.gp_active) and (spell_wait == 0)
 		break;
 		case 1:
 			var anchor_size = 2;
-			var anchor_spd = 25;
+			var anchor_spd = 20;
 			var anchor_stay = 90;
 			var anchor_accel = 0.05;
 			
@@ -52,7 +52,7 @@ if(global.gp_active) and (spell_wait == 0)
 		break;
 		case 2:
 			var anchor_size = 2;
-			var anchor_spd = 26;
+			var anchor_spd = 23;
 			var anchor_stay = 50;
 			var anchor_accel = 0.05;
 			

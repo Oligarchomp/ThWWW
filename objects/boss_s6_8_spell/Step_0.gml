@@ -94,7 +94,17 @@ if(global.gp_active) and (spell_wait == 0)
 				case 0:
 					play_sound(sfx_boss_charge,1,false);
 					
-					var aim = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y);
+					switch(global.difficulty)
+					{
+						case 0:
+						case 1:
+							var aim = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y) + 180 / anchor_nbr;
+						break;
+						case 2:
+						case 3:
+							var aim = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y);
+						break;
+					}
 					
 					for(var i = 0; i < 360; i += 360 / anchor_nbr)
 					{

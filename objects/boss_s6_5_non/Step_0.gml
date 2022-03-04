@@ -12,9 +12,9 @@ if(global.gp_active)
 			{
 				case 0:
 					var torpedo_wait = 120;
-					var torpedo_tail_wait = 18;
+					var torpedo_tail_wait = 25;
 					var torpedo_lenght = 100;
-					var torpedo_ring = 16;
+					var torpedo_ring = 13;
 					var torpedo_spd = 1.5;
 					var torpedo_angle_plus = 1.7;
 					var torpedo_angle_max = 90;
@@ -23,9 +23,9 @@ if(global.gp_active)
 				break;
 				case 1:
 					var torpedo_wait = 86;
-					var torpedo_tail_wait = 13;
+					var torpedo_tail_wait = 15;
 					var torpedo_lenght = 70;
-					var torpedo_ring = 18;
+					var torpedo_ring = 17;
 					var torpedo_spd = 2;
 					var torpedo_angle_plus = 1.7;
 					var torpedo_angle_max = 100;
