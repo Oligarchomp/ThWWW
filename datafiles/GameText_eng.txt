@@ -20,7 +20,7 @@ mus_stage3 = The Colorful Maiden, Through the Colorless World
 mus_stage3_comp = [Comp: Aka Kyuketsuki]
 mus_boss3 = Fantastic Friend [Comp: Jani]
 mus_boss6 = From Beginning to End ~ Drunken Prophet [Comp: sincx]
-
+mus_stage7 = Nameless Discord [Comp: Spectral Nexus]
 
 mus_room_title = Tale of a Broken World ~ Not so Eastern Story
 mus_room_s1 = Magical Hopalong Cassidy Station
@@ -35,7 +35,7 @@ mus_room_s5 = nothing
 mus_room_b5 = nothing
 mus_room_s6 = nothing
 mus_room_b6 = From Beginning to End ~ Drunken Prophet
-mus_room_s7 = nothing
+mus_room_s7 = Nameless Discord
 mus_room_b7 = nothing
 mus_room_end = nothing
 mus_room_score = Player's Score
@@ -55,7 +55,7 @@ mus_com_s5 = comment
 mus_com_b5 = comment
 mus_com_s6 = comment
 mus_com_b6 = Composition: sincx
-mus_com_s7 = comment
+mus_com_s7 = Composition: Spectral Nexus
 mus_com_b7 = comment
 mus_com_end = comment
 mus_com_score = Composition: Kaioshi Kojima
@@ -553,7 +553,7 @@ diag_s6_r24 = Nua: I will not be regretting this world once it's gone!          
 
 diag_s6_m1 = Can you tell me what word you don't understand in "Don't follow me." exactly?
 diag_s6_m2 = Why "Don't" obviously.
-diag_s6_m3 = Now that I think about it. An Incident about rain...
+diag_s6_m3 = Now that I think about it. An Incident about rain and flood...
 diag_s6_m4 = I somehow got the feeling I already saw that before?
 diag_s6_m5 = What am I hearing? Stowaways?
 diag_s6_m6 = Oh. Nevermind, it's just a little girl. Too bad for you, human passengers are forbidden.

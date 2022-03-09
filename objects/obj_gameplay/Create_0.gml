@@ -116,9 +116,6 @@ global.spell_life = 1; //use for sharing heath bar between nons and spells
 global.enemy_type = 0;
 
 
-
-
-
 switch(global.difficulty)
 {
 	case 0:

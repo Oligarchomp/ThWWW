@@ -16,7 +16,7 @@ if(global.game_type != GAME_SPELL)
 {
 	instance_create_depth(0,global.poc,0,obj_borderline);
 	
-	music = noone;
+	music = mus_stage7;
 }
 else
 {
@@ -25,7 +25,7 @@ else
 	
 	if(ev == act_s7_51_midspell) or (ev == act_s7_52_midspell) or (ev == act_s7_53_midspell)
 	{
-		music = noone;
+		music = mus_stage7;
 	}
 	
 }

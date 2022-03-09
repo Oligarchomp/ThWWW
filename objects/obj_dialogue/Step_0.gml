@@ -201,6 +201,9 @@ if(global.gp_active)
 					case 6:
 						set_bgm(mus_boss6);
 					break;
+					case 7:
+						set_bgm(noone);
+					break;
 				}
 			}
 		break;

@@ -14,24 +14,23 @@ if(global.gp_active)
 	var revenge_deccel = 0.2;
 	var revenge_spd_final = 4;
 	
-	switch(step)
+	if(instance_exists(obj_spell))
 	{
-		case 0:
+		time_wait = 90;
+	}
+	
+	if(time_wait > 0)
+	{
+		time_wait -= 1;
+	}
+	
+	if(time_wait == 0) and (step < 3500)
+	{
+		if(step % 260 == 0)
+		{
 			need_fairy_time = 150;
-			act_dir = 1;
-		break;
-		case 260:
-			need_fairy_time = 150;
-			act_dir = -1;
-		break;
-		case 520:
-			need_fairy_time = 150;
-			act_dir = 1;
-		break;
-		case 780:
-			need_fairy_time = 150;
-			act_dir = -1;
-		break;
+			act_dir *= -1;
+		}
 	}
 	
 	var fairy_wait = 8;

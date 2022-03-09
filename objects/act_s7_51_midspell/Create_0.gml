@@ -12,7 +12,7 @@ spell_set_life(900,250);
 
 var wait = global.game_type == GAME_EXTRA ? 160 : 90; //spell practice
 
-spell_set_time(28,false,wait);
+spell_set_time(20,false,wait);
 
 
 
@@ -24,7 +24,6 @@ x_ref = room_width / 2;
 y_ref = 210;
 
 
-
 rice_time_list = [];
 rice_angle_list = [];
 rice_dist_list = [];
@@ -34,3 +33,5 @@ rice_wave_dir = -1;
 
 
 
+// to sync with the music
+instance_create_depth(0,0,0,act_s7_6);

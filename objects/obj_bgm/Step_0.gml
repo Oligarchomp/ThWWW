@@ -36,6 +36,10 @@ switch(asset_get_index(audio_get_name(currently_playing)))
 		var intro_length = 13.246;
 		var loop_lenght = 113.255;
 	break;
+	case mus_stage7:
+		var intro_length = 16.187;
+		var loop_lenght = 217.076;
+	break;
 	default:
 		var intro_length = 100000;
 		var loop_lenght = 100000;
@@ -46,7 +50,7 @@ if(keyboard_check_pressed(ord("T")))
 {
 	if(global.debug)
 	{
-		audio_sound_set_track_position(currently_playing,loop_lenght + floor(intro_length / 2));	
+		audio_sound_set_track_position(currently_playing,loop_lenght + intro_length - 4);	
 	}	
 }
 

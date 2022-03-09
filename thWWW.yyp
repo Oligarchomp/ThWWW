@@ -258,6 +258,7 @@
     {"id":{"name":"obj_item","path":"objects/obj_item/obj_item.yy",},"order":8,},
     {"id":{"name":"spr_raindrop","path":"sprites/spr_raindrop/spr_raindrop.yy",},"order":14,},
     {"id":{"name":"spr_hud","path":"sprites/spr_hud/spr_hud.yy",},"order":0,},
+    {"id":{"name":"mus_stage7","path":"sounds/mus_stage7/mus_stage7.yy",},"order":11,},
     {"id":{"name":"obj_bonus_failed","path":"objects/obj_bonus_failed/obj_bonus_failed.yy",},"order":8,},
     {"id":{"name":"spr_helm","path":"sprites/spr_helm/spr_helm.yy",},"order":8,},
     {"id":{"name":"act_s3_2","path":"objects/act_s3_2/act_s3_2.yy",},"order":21,},
