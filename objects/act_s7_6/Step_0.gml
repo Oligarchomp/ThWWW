@@ -24,14 +24,13 @@ if(global.gp_active)
 		time_wait -= 1;
 	}
 	
-	if(time_wait == 0) and (step < 3500)
+	
+	if(step % 260 == 0)
 	{
-		if(step % 260 == 0)
-		{
-			need_fairy_time = 150;
-			act_dir *= -1;
-		}
+		need_fairy_time = 150;
+		act_dir *= -1;
 	}
+	
 	
 	var fairy_wait = 8;
 	var fairy_spd = 5;
@@ -39,11 +38,14 @@ if(global.gp_active)
 	
 	if(need_fairy_time > 0)
 	{
-		if(need_fairy_time % fairy_wait == 0)
+		if(time_wait == 0) and (step < 3500)
 		{
-			var inst = create_enemy(EN_RED,room_width / 2 - 220 * act_dir,20 + rng(50,false,5),fairy_life,1,fairy_spd,90 - 90 * act_dir);
-			inst.time_off = rng(shoot_wait,true,9);
-			inst.item_nbr = 2;
+			if(need_fairy_time % fairy_wait == 0)
+			{
+				var inst = create_enemy(EN_RED,room_width / 2 - 220 * act_dir,20 + rng(50,false,5),fairy_life,1,fairy_spd,90 - 90 * act_dir);
+				inst.time_off = rng(shoot_wait,true,9);
+				inst.item_nbr = 2;
+			}
 		}
 		
 		need_fairy_time -= 1;

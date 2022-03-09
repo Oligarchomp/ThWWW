@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if(global.gp_active)
 {
-	var laser_wave = 7;
+	var laser_wave = 9;
 	var laser_wait = 100;
 	
 	var aim_lenght = 200;
@@ -14,22 +14,18 @@ if(global.gp_active)
 	switch(step)
 	{
 		case 0:
-			var inst = create_enemy(EN_RED,room_width / 2, -20,666,1,6,-90);
+			var inst = create_enemy(EN_RED,room_width / 2, -20,760,1,6,-90);
 			inst.item_nbr = 20;
 		break;
 		case 50:
+		case 450:
+		case 750:
 			need_fairy_time = 60;
 			act_dir = 1;
 		break;
 		case 250:
-			need_fairy_time = 60;
-			act_dir = -1;
-		break;
-		case 450:
-			need_fairy_time = 60;
-			act_dir = 1;
-		break;
 		case 600:
+		case 900:
 			need_fairy_time = 60;
 			act_dir = -1;
 		break;

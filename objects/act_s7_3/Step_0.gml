@@ -14,7 +14,6 @@ if(global.gp_active)
 	
 	switch(step)
 	{
-		case 560:
 		case 280:
 		case 0:
 			for(var i = 40; i <= 360; i += 80)

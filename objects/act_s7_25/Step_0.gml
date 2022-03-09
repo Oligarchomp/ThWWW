@@ -28,6 +28,7 @@ if(global.gp_active)
 			var inst = create_enemy(EN_RED,room_width / 2 - 80,-15,fairy_life,7,fairy_spd,-90);
 			inst.item_nbr = 12;
 		break;
+		case 840:
 		case 700:
 		case 560:
 		case 420:

@@ -21,7 +21,8 @@ if(global.gp_active) and (spell_wait == 0)
 			switch(state_time)
 			{
 				case 0:
-					boss_charge(obj_boss.x,obj_boss.y);
+					var inst = boss_charge(obj_boss.x,obj_boss.y);
+					inst.owner = obj_boss;
 					boss_movement_goto(room_width / 2, y_ref + lengthdir_y(dist_pale,angle_pale),6);
 				break;
 				case 40:

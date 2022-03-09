@@ -149,7 +149,7 @@ function add_stage(stage){
 		case 7:
 			add_stage_event(act_s7_0,0);//keep this one
 			add_stage_event(act_s7_1,0)
-			add_stage_event(act_s7_2,0);
+			add_stage_event(act_s7_2,20);
 			add_stage_event(act_s7_23,0);
 			add_stage_event(act_s7_25,0);
 			add_stage_event(act_s7_3,0);
@@ -158,7 +158,7 @@ function add_stage(stage){
 			add_stage_event(act_s7_51_midspell,0);
 			add_stage_event(act_s7_52_midspell,50);
 			add_stage_event(act_s7_53_midspell,50);
-			add_stage_event(act_s7_6,100);
+			add_stage_event(act_s7_6,0);
 			add_stage_event(act_s7_7,0);
 			add_stage_event(act_s7_8,0);
 			add_stage_event(act_s7_9,0);
@@ -181,7 +181,7 @@ function add_stage(stage){
 			add_stage_event(boss_s7_79,0);
 			add_stage_event(boss_s7_8_non,1);
 			add_stage_event(boss_s7_85_spell,0);
-			add_stage_event(boss_s7_9_spell,50);
+			add_stage_event(boss_s7_9_spell,80);
 			add_stage_event(boss_s7_95_spell,70);
 			add_stage_event(dialogue_s7_post,135);
 		break;

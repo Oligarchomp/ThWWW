@@ -8,16 +8,8 @@
 ///@param sound sfx
 ///@param id_number real
 
-function shoot(argument0,argument1,argument2,argument3,argument4,argument5,argument6,argument7){
+function shoot(danmaku,color,x_pos,y_pos,angle,spd,snd,id_number){
 
-	var danmaku = argument0;
-	var color = argument1;
-	var x_pos = argument2;
-	var y_pos = argument3;
-	var angle = argument4;
-	var spd = argument5;
-	var snd = argument6;
-	var id_number = argument7;
 	
 	switch(id_number)
 	{

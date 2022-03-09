@@ -7,19 +7,10 @@
 ///@param boss_active boolean
 ///@param text string
 ///@param wait real
-function set_dialogue(argument0,argument1,argument2,argument3,argument4,argument5,argument6,argument7){
+function set_dialogue(p_spr,p_im,p_ac,b_spr,b_im,b_ac,text,w){
 
-var p_spr = argument0;
-var p_im = argument1;
-var p_ac = argument2;
 
-var b_spr = argument3;
-var b_im = argument4;
-var b_ac = argument5;
-
-var text = argument6;
-
-var w = argument7;// -1 = manual
+// w = -1 = manual
 
 array_push(plr_spr_list,p_spr);
 array_push(plr_im_list,p_im);
