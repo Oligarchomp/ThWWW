@@ -12,7 +12,7 @@ spell_set_life(900,250);
 
 var wait = global.game_type == GAME_EXTRA ? 160 : 90; //spell practice
 
-spell_set_time(20,false,wait);
+spell_set_time(19.1,false,wait);
 
 
 

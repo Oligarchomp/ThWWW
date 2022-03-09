@@ -59,29 +59,6 @@ if(global.gp_active)
 		need_fairy_time -= 1;	
 	}
 	
-	//blue
-	with(obj_enemy1)
-	{
-		switch(state)
-		{
-			case 0:
-				spd = goto_value(spd,0,0.1);
-				if(spd == 0)
-				{
-					state = 1;
-				}
-			break;
-			case 1://shoot
-				if(state_time % arrow_wait == 0)
-				{
-					shoot_arc(DAN_ARROW,1,arrow_arc,x,y,999,arrow_dist,arrow_spd,sfx_shot2,2);	
-				}
-				spd = goto_value(spd,6,0.04);
-			break;
-			
-		}
-	}
-	
 	//green
 	with(obj_enemy2)
 	{
