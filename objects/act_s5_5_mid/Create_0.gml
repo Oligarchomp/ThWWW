@@ -7,7 +7,7 @@ event_inherited();
 non_only = true;
 
 spell_set_life(710,120);
-spell_set_time(17,false,90)
+spell_set_time(16,false,90)
 
 boss_movement_goto(room_width / 2, 100,6);
 

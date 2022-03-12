@@ -7,7 +7,7 @@ event_inherited();
 non_only = true;
 
 spell_set_life(720,110);
-spell_set_time(17,false,60)
+spell_set_time(16,false,60)
 
 dir_act = 1;
 

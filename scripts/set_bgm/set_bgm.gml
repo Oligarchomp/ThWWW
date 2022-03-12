@@ -32,6 +32,9 @@ function set_bgm(argument0){
 				inst.bgm_name = get_text("mus_stage3_comp");
 				inst.off = -20;
 			break;
+			case mus_stage5:
+				var name = get_text("mus_stage5");
+			break;
 			case mus_stage7:
 				var name = get_text("mus_stage7");
 			break;

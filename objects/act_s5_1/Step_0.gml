@@ -157,10 +157,10 @@ if(global.gp_active)
 				if(state_time % shoot_wait == 0)
 				{
 					var aim = angle + ball_angle;
-					shoot(DAN_ARROW,7,x,y,aim,ball_spd,sfx_shot2,3);
+					shoot(DAN_ARROW,7,x,y,aim,ball_spd,sfx_shot2,1);
 					
 					var aim = angle + mentos_angle;
-					shoot(DAN_MENTOS,6,x,y,aim,mentos_spd,noone,4);
+					shoot(DAN_MENTOS,6,x,y,aim,mentos_spd,noone,2);
 				}
 			break;
 		}

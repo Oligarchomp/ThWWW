@@ -325,6 +325,7 @@
     {"id":{"name":"spr_nua_water","path":"sprites/spr_nua_water/spr_nua_water.yy",},"order":9,},
     {"id":{"name":"boss_s4_7s_spell","path":"objects/boss_s4_7s_spell/boss_s4_7s_spell.yy",},"order":9,},
     {"id":{"name":"boss_s3_3_non","path":"objects/boss_s3_3_non/boss_s3_3_non.yy",},"order":3,},
+    {"id":{"name":"mus_stage5","path":"sounds/mus_stage5/mus_stage5.yy",},"order":12,},
     {"id":{"name":"obj_tower","path":"objects/obj_tower/obj_tower.yy",},"order":1,},
     {"id":{"name":"act_s7_9","path":"objects/act_s7_9/act_s7_9.yy",},"order":26,},
     {"id":{"name":"spr_dove_idle","path":"sprites/spr_dove_idle/spr_dove_idle.yy",},"order":0,},
@@ -799,7 +800,7 @@
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"Omake.txt","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
-    "IDEVersion": "2022.2.0.614",
+    "IDEVersion": "2022.2.1.618",
   },
   "resourceVersion": "1.5",
   "name": "thWWW",

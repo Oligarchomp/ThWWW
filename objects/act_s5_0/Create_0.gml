@@ -16,5 +16,5 @@ if(global.game_type == GAME_SPELL)
 }
 else
 {
-	music = noone;
+	music = mus_stage5;
 }

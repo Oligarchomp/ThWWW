@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-act_set_time(1400,1400);
+act_set_time(1430,1430);
 
 fairy_route_need = 0;
 dir_act = 1;

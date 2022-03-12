@@ -37,7 +37,7 @@ if(global.gp_active)
 	var fam_life = 15;
 	var fam_lenght = 190;
 	
-	if(step < 900)
+	if(step < 1200)
 	{
 		if(step % 60 == 0)
 		{
