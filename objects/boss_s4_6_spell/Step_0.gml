@@ -5,10 +5,10 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			var wood_wait = 45
+			var wood_wait = 52
 			var wood_nbr = 8;
 			var wood_angle_plus = 25;
-			var wood_spd = 2.5;
+			var wood_spd = 1.8;
 			
 			var water_nbr = 13;
 			var water_y_accel = 0.05;
@@ -32,14 +32,10 @@ if(global.gp_active) and (spell_wait == 0)
 			var earth_dist_in = 1;
 			var earth_spd = 1.5;
 			
-			var fire_wait = 182;
-			var fire_spd_min = 40;
-			var fire_spd_git = 30;
-			var fire_y_git = 70;
-			var fire_spd_shot = 2;
-			var fire_spd_max = 3;
-			var fire_accel = 0.05;
-			var fire_spd_git = 0.4;
+			var fire_wait = 210;
+			var fire_spd = 1;
+			var fire_spd_git = 0.5;
+			var fire_nbr = 20;
 		break;
 		case 1:
 			var wood_wait = 36
@@ -69,14 +65,10 @@ if(global.gp_active) and (spell_wait == 0)
 			var earth_dist_in = 1;
 			var earth_spd = 1.5;
 			
-			var fire_wait = 152;
-			var fire_spd_min = 28;
-			var fire_spd_git = 28;
-			var fire_y_git = 70;
-			var fire_spd_shot = 2;
-			var fire_spd_max = 3;
-			var fire_accel = 0.05;
-			var fire_spd_git = 0.4;
+			var fire_wait = 180;
+			var fire_spd = 1;
+			var fire_spd_git = 0.5;
+			var fire_nbr = 30;
 		break;
 		case 2:
 			var wood_wait = 36
@@ -106,14 +98,10 @@ if(global.gp_active) and (spell_wait == 0)
 			var earth_dist_in = 1;
 			var earth_spd = 1.5;
 			
-			var fire_wait = 152;
-			var fire_spd_min = 28;
-			var fire_spd_git = 28;
-			var fire_y_git = 70;
-			var fire_spd_shot = 2;
-			var fire_spd_max = 3;
-			var fire_accel = 0.05;
-			var fire_spd_git = 0.4;
+			var fire_wait = 150;
+			var fire_spd = 0.9;
+			var fire_spd_git = 1.5;
+			var fire_nbr = 38;
 			
 			var sun_wait = 160;
 			var sun_ring = 12;
@@ -154,13 +142,9 @@ if(global.gp_active) and (spell_wait == 0)
 			var earth_spd = 1.5;
 			
 			var fire_wait = 140;
-			var fire_spd_min = 19;
-			var fire_spd_git = 16;
-			var fire_y_git = 70;
-			var fire_spd_shot = 2;
-			var fire_spd_max = 3;
-			var fire_accel = 0.05;
-			var fire_spd_git = 0.4;
+			var fire_spd = 0.7;
+			var fire_spd_git = 2;
+			var fire_nbr = 45;
 			
 			var sun_wait = 150;
 			var sun_ring = 15;
@@ -330,31 +314,11 @@ if(global.gp_active) and (spell_wait == 0)
 	//FIRE
 	if(step % fire_wait == 0)
 	{
-		x_fire_left = obj_boss.x;
-		y_fire_left = obj_boss.y;
-		x_fire_right = obj_boss.x;
-		y_fire_right = obj_boss.y;
 		play_sound(sfx_redirect1,1,false);
-	}
-	if(x_fire_left > 0)
-	{
-		var inst = shoot(DAN_FIREBALL,6,x_fire_left,y_fire_left,88 + rng(4,false,5),fire_spd_shot,noone,5);
-		inst.git = rng(fire_spd_git,false,8);
-		x_fire_left -= fire_spd_min + rng(fire_spd_git,false,1);
-		y_fire_left += -fire_y_git / 2 + rng(fire_y_git,false,6);
-	}
-	if(x_fire_right < room_width)
-	{
-		var inst = shoot(DAN_FIREBALL,6,x_fire_right,y_fire_right,88 + rng(4,false,5),fire_spd_shot,noone,5);
-		inst.git = rng(fire_spd_git,false,9);
-		x_fire_right += fire_spd_min + rng(fire_spd_git,false,1);
-		y_fire_right += -fire_y_git / 2 + rng(fire_y_git,false,6);
-	}
-	with(obj_danmaku5)
-	{
-		pos_type = POS_SP;
-		y_grav_accel = fire_accel;
-		y_grav_max = fire_spd_max + git;	
+		repeat(fire_nbr)
+		{
+			shoot(DAN_FIREBALL,6,obj_boss.x,obj_boss.y,rng(360,false,1),fire_spd + rng(fire_spd_git,false,1),noone,5);
+		}
 	}
 	//SUN
 	with(obj_enemy6)

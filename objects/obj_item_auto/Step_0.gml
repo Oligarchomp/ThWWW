@@ -25,6 +25,7 @@ if(global.gp_active)
 	}
 	else
 	{
+		global.item = item_type;
 		var inst = instance_create_depth(x,y,depth,obj_item);
 		inst.vsp = 0;
 		inst.auto_collect = false;

@@ -37,14 +37,14 @@ if(global.gp_active) and (spell_wait == 0)
 			var star_row = 4;
 			var star_spd_min = 8;
 			var star_spd_max = 20;
-			var star_spd_redirect_div = 4.3;
+			var star_spd_redirect_div = 4.1;
 			var star_accel = 0.1;
 			var star_wait_move = 0;
-			var star_wait = 36;
+			var star_wait = 33;
 			var star_frame_stop = 20;	
 		break;
 		case 3:
-			var star_dist = 13;
+			var star_dist = 14;
 			var star_arc = 15;
 			var star_rnd = 15;
 			var star_row = 4;
