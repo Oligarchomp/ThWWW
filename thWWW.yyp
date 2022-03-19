@@ -355,6 +355,7 @@
     {"id":{"name":"obj_boom","path":"objects/obj_boom/obj_boom.yy",},"order":16,},
     {"id":{"name":"obj_spell_art","path":"objects/obj_spell_art/obj_spell_art.yy",},"order":0,},
     {"id":{"name":"set_dialogue","path":"scripts/set_dialogue/set_dialogue.yy",},"order":5,},
+    {"id":{"name":"mus_stage6","path":"sounds/mus_stage6/mus_stage6.yy",},"order":13,},
     {"id":{"name":"boss_s5_4_spell","path":"objects/boss_s5_4_spell/boss_s5_4_spell.yy",},"order":2,},
     {"id":{"name":"act_pre_end","path":"objects/act_pre_end/act_pre_end.yy",},"order":19,},
     {"id":{"name":"obj_enemy2","path":"objects/obj_enemy2/obj_enemy2.yy",},"order":1,},

@@ -35,6 +35,9 @@ function set_bgm(argument0){
 			case mus_stage5:
 				var name = get_text("mus_stage5");
 			break;
+			case mus_stage6:
+				var name = get_text("mus_stage6");
+			break;
 			case mus_stage7:
 				var name = get_text("mus_stage7");
 			break;

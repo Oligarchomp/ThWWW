@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_stage5.wav",
-  "duration": 162.049,
+  "duration": 162.0245,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",
