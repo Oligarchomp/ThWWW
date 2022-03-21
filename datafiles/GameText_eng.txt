@@ -944,7 +944,7 @@ end_bad_s16_2 = ---------------Try beating the game without using continues-----
 
 spell_comment = Spell Comment:
 
-com_s1_mide = Apple has a lot of existing differents design out there. Now there is one more.$It's more "Minoriko-like" than "literally an apple" since she isn't a "personification of an apple" but a simple apple Youkai here.
+com_s1_mide = Apple has a lot of different existing designs out there. Now there is one more.$It's more "Minoriko-like" than "literally an apple" since she isn't a "personification of an apple" but a simple apple Youkai here.
 com_s1_midn = Apple will sometimes makes apple pie out of the apple she grew.$They sadly are just as popular as her unprepared apples.$Yeah, and the name is in German because "Apple Pie" is a really boring name for a spell.
 com_s1_midh = The first two human have been banish from heaven from eating the forbidden fruit.$While that fruit is an apple in most people head, its true nature is not really clear and is up to interpretation.
 com_s1_midl = In that case, the Adam's apple's name can be changed to whatever fruit you want it to be.$The Adam's pear? The Adam's fig? The Adam's Pitaya? You name it!

@@ -1,12 +1,8 @@
-function boss_movement_random(argument0,argument1,argument2) {
+function boss_movement_random(spd,x_dist,y_dist) {
 	//random_boss_movement(spd,x_dist_around,y_dist_around)
 	///@param spd real
 	///@param x_dist_around real
 	///@param y_dist_around real
-
-	var spd = argument0;
-	var x_dist = argument1;
-	var y_dist = argument2;
 
 	// The boss has a greater chance to return to the center of the screen
 

@@ -14,6 +14,10 @@ if(global.gp_active)
 		{
 			room_speed = 120;
 		}
+		else if(gamepad_button_check(0,global.bomb_btn)) or (keyboard_check(global.bomb_vk))
+		{
+			room_speed = 30;	
+		}
 		else
 		{
 			room_speed = 60;	

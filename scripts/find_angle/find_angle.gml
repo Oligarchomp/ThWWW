@@ -5,8 +5,6 @@
 ///@param y_to real
 function find_angle(argument0, argument1, argument2, argument3) {
 
-
-
 	var xd = argument2 - argument0;
 	var yd = argument3 - argument1;
 	if (sign(xd) == sign(yd))

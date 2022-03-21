@@ -125,7 +125,7 @@ function add_stage(stage){
 		break;
 		case 6:
 			add_stage_event(act_s6_0,0);// keep this one
-			add_stage_event(act_s6_1,30);
+			add_stage_event(act_s6_1,0);
 			add_stage_event(act_s6_2,0);
 			add_stage_event(act_s6_3,30);
 			add_stage_event(act_s6_4,0);

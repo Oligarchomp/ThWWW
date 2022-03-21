@@ -27,13 +27,12 @@ if(global.gp_active)
 	}
 	
 	var fairy_life = 8;
-	var fairy_lenght = 580;
+	var fairy_lenght = 590;
 	var fairy_wait = 8;
 	var y_min = 10;
 	var y_git = 90;
 	var fairy_spd = 3.5;
-	
-	var fairy_green_nbr = 5;
+
 	
 	if(step == stagecard_time)
 	{

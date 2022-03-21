@@ -141,7 +141,7 @@ if(global.gp_active)
 						var nbr = ring_nbr - spell.ring_less;
 						shoot_ring(DAN_MENTOS,1,nbr,x,y,angle_shoot,ring_spd_shoot,sfx_shot2,3);
 						shoot_ring(DAN_MENTOS,7,nbr,x,y,angle_shoot + 360 / nbr / 2,ring_spd_shoot,sfx_shot2,3);
-						angle_shoot += 180 / nbr;
+						angle_shoot = rng(360,false,7);
 					}
 				}
 				else

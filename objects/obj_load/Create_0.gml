@@ -83,6 +83,7 @@ global.pause_vk = pause_vk == 0 ? global.default_pause_vk : pause_vk;
 data_write("Data.ini","option","pause_vk",global.pause_vk);
 
 
+
 global.need_change_rng = false;
 
 window_set_cursor(cr_none);

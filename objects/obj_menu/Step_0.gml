@@ -446,6 +446,9 @@ if(cursor_lockout == 0)
 					else
 					{
 						global.game_type = GAME_STAGE;
+						
+						global.menu_level = level;
+						global.menu_cursor = cursor;
 					}
 					
 					room_transition(room_gp,true);
@@ -606,8 +609,8 @@ for(var i = 0; i < 5; i += 1)
 	{
 		if(global.difficulty == i) or (i == 4)
 		{
-			difficuly[i].x_to = 647;
-			difficuly[i].y_to = 460;
+			difficuly[i].x_to = diff_x_to;
+			difficuly[i].y_to = diff_y_to;
 		}
 	}
 	

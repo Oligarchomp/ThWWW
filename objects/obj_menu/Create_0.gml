@@ -1513,6 +1513,9 @@ over_offset = 26;
 
 difficuly = [{},{},{},{},{}]
 
+diff_x_to = 647;
+diff_y_to = 460;
+
 for(var i = 0; i < 5; i += 1)
 {
 	if(i < 4)
@@ -1532,6 +1535,15 @@ for(var i = 0; i < 5; i += 1)
 	variable_struct_set(difficuly[i],"x_to",xpos);
 	variable_struct_set(difficuly[i],"y_is",ypos);
 	variable_struct_set(difficuly[i],"y_to",ypos);
+	
+	
+	// returning to menu from stage practice
+	// putting the difficulty in place
+	if(cursor[0] == 2) and (level = 3)
+	{
+		variable_struct_set(difficuly[global.difficulty],"x_is",diff_x_to);
+		variable_struct_set(difficuly[global.difficulty],"y_is",diff_y_to);
+	}
 }
 
 
@@ -1566,12 +1578,18 @@ for(var i = 0; i < array_length(menu); i += 1)
 				for(var k = 0; k < array_length(menu[i].param[j].param); k+= 1)
 				{
 					variable_struct_set(menu[i].param[j].param[k],"active_offset",0);
+					
+					if(variable_struct_get(menu[i].param[j].param[k],"action") == MENU_MENU)
+					{
+						for(var l = 0; l < array_length(menu[i].param[j].param[k].param); l += 1)
+						{
+							variable_struct_set(menu[i].param[j].param[k].param[l],"active_offset",0);
+						}
+					}
 				}
 			}
 		}
 	}
-	
-	
 }
 
 //settings things for spell practice

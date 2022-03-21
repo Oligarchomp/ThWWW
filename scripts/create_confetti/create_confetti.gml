@@ -3,10 +3,10 @@
 ///@param y real
 ///@param number real
 ///@param spd real
-function create_confetti(argument0,argument1,argument2,argument3){
-	repeat(argument2)
+function create_confetti(xx,yy,nbr,spd){
+	repeat(nbr)
 	{	
-		var inst = instance_create_depth(argument0,argument1,global.boss_depth - 1,obj_confetti);
-		inst.spd = argument3 + rng(argument3/ 3,false,2)
+		var inst = instance_create_depth(xx,yy,global.boss_depth - 1,obj_confetti);
+		inst.spd = spd + rng(spd / 3,false,2)
 	}
 }

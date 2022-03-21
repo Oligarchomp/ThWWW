@@ -4,6 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
-act_set_time(1450,1510);
+act_set_time(1445,1545);
 
 act_dir = 1;

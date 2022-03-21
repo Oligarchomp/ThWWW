@@ -3,12 +3,7 @@
 ///@param section string
 ///@param key string
 ///@param value value
-function data_write(argument0,argument1,argument2,argument3){
-
-	var file = argument0;
-	var section = argument1;
-	var key = argument2;
-	var value = argument3;
+function data_write(file,section,key,value){
 	
 	ini_open(file)
 		if(is_string(value))

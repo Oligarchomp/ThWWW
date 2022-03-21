@@ -5,14 +5,9 @@
 ///@param sprite image
 ///@param scale real
 ///@param alpha real
-function draw_score(argument0,argument1,argument2,argument3,argument4,argument5){
+function draw_score(argument0,x_pos,y_pos,spr,scl,alph){
 	var text = string(argument0);
-	var x_pos = argument1;
-	var y_pos = argument2;
-	var spr = argument3;
-	var scl = argument4;
 	var char_dist = sprite_get_width(spr_score) * scl;
-	var alph = argument5;
 	
 	var dot_dist = 6 * scl;
 	

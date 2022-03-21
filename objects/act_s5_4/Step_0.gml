@@ -7,8 +7,10 @@ if(global.gp_active)
 	{
 		case 0:
 			var bubble_spd = 5;
-			var bubble_wait = 26;
+			var bubble_wait = 24;
 			var bubble_ring = 2;
+			
+			var bubble_open = 2;
 			
 			var ring_wait = 44;
 			var ring_nbr = 6;
@@ -19,8 +21,10 @@ if(global.gp_active)
 		break;
 		case 1:
 			var bubble_spd = 6;
-			var bubble_wait = 16;
-			var bubble_ring = 3;
+			var bubble_wait = 14;
+			var bubble_ring = 2;
+			
+			var bubble_open = 3;
 			
 			var ring_wait = 36;
 			var ring_nbr = 12;
@@ -30,8 +34,10 @@ if(global.gp_active)
 		break;
 		case 2:
 			var bubble_spd = 6.5;
-			var bubble_wait = 14;
-			var bubble_ring = 4;
+			var bubble_wait = 11;
+			var bubble_ring = 3;
+			
+			var bubble_open = 4;
 			
 			var ring_wait = 32;
 			var ring_nbr = 15;
@@ -41,8 +47,10 @@ if(global.gp_active)
 		break;
 		case 3:
 			var bubble_spd = 6.5;
-			var bubble_wait = 10;
-			var bubble_ring = 5;
+			var bubble_wait = 8;
+			var bubble_ring = 4;
+			
+			var bubble_open = 5;
 			
 			var ring_wait = 30;
 			var ring_nbr = 20;
@@ -53,18 +61,18 @@ if(global.gp_active)
 		break;
 	}
 	
-	var fam_life = 40;
+	var fam_life = 50;
 	var fam_y = 50;
-	var fam_lenght = 150;
-	var fam_wait = 35;
+	var fam_lenght = 190;
+	var fam_wait = 30;
 	
 	
 	switch(step)
 	{	
 		case 0:
-		case 200:
-		case 400:
-		case 600:
+		case 240:
+		case 480:
+		case 720:
 			need_familiar = true;
 		break;
 	}
@@ -98,7 +106,7 @@ if(global.gp_active)
 			case 1:
 				if(state_time % bubble_wait == 0)
 				{
-					shoot_ring(DAN_BUBBLE,7,bubble_ring,x,y,angle_aim,bubble_spd,sfx_shot2,4);
+					shoot_ring(DAN_BUBBLE,7,bubble_ring,x,y,angle_aim - bubble_open + rng(bubble_open * 2,false,1),bubble_spd,sfx_shot2,4);
 				}
 				if(state_time % ring_wait == 0)
 				{
