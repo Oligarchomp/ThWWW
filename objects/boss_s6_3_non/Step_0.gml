@@ -11,73 +11,152 @@ if(global.gp_active)
 			boss_charge(obj_boss.x,obj_boss.y);
 		break;
 		case 0:
+		
 			switch(global.difficulty)
 			{
 				case 0:
-					var bubble_wait = 35;
-					var bubble_ring = 6;
-					var bubble_spd = 1.5;
-					var bubble_dist = 360 / bubble_ring / 3.2;
+					var mentos_wait = 8;
+					var mentos_ring = 4;
+					var mentos_spd_min = 3.5;
+					var mentos_spd_max = 4.5;
+					var mentos_angle_plus = 360 / mentos_ring / 5;
 					
-					var bullet_wait = 14;
-					var bullet_spd = 2.5;
-					var bullet_ring = 12;
-					var bullet_dist = 360 / bullet_ring / 4.2;
+					var spam_bubble = 10;
+					var spam_mentos = 30;
+					var spam_ball = 55;
+					
+					var spam_spd_min = 3;
+					var spam_spd_git = 5;
+					var spam_div = 2.8;
+					var spam_deccel = 0.2;
+					
+					var wave_length = 150;
 				break;
 				case 1:
-					var bubble_wait = 26;
-					var bubble_ring = 10;
-					var bubble_spd = 2;
-					var bubble_dist = 360 / bubble_ring / 3.2;
+					var mentos_wait = 6;
+					var mentos_ring = 4;
+					var mentos_spd_min = 4;
+					var mentos_spd_max = 5;
+					var mentos_angle_plus = 360 / mentos_ring / 6;
 					
-					var bullet_wait = 10;
-					var bullet_spd = 3;
-					var bullet_ring = 16;
-					var bullet_dist = 360 / bullet_ring / 4.2;
+					var spam_bubble = 30;
+					var spam_mentos = 60;
+					var spam_ball = 115;
+					
+					var spam_spd_min = 3;
+					var spam_spd_git = 6;
+					var spam_div = 2.6;
+					var spam_deccel = 0.2;
+					
+					var wave_length = 150;
 				break;
 				case 2:
-					var bubble_wait = 22;
-					var bubble_ring = 12;
-					var bubble_spd = 2.5;
-					var bubble_dist = 360 / bubble_ring / 3.2;
+					var mentos_wait = 4;
+					var mentos_ring = 4;
+					var mentos_spd_min = 4.5;
+					var mentos_spd_max = 5.5;
+					var mentos_angle_plus = 360 / mentos_ring / 8;
 					
-					var bullet_wait = 8;
-					var bullet_spd = 3.5
-					var bullet_ring = 20;
-					var bullet_dist = 360 / bullet_ring / 4.2;
+					var spam_bubble = 40;
+					var spam_mentos = 80;
+					var spam_ball = 145;
+					
+					var spam_spd_min = 3;
+					var spam_spd_git = 6.2;
+					var spam_div = 2.5;
+					var spam_deccel = 0.2;
+					
+					var wave_length = 150;
 				break;
 				case 3:
-					var bubble_wait = 20;
-					var bubble_ring = 14;
-					var bubble_spd = 2.5;
-					var bubble_dist = 360 / bubble_ring / 3.2;
+					var mentos_wait = 3;
+					var mentos_ring = 4;
+					var mentos_spd_min = 5;
+					var mentos_spd_max = 6;
+					var mentos_angle_plus = 360 / mentos_ring / 10;
 					
-					var bullet_wait = 7;
-					var bullet_spd = 3.5;
-					var bullet_ring = 22;
-					var bullet_dist = 360 / bullet_ring / 4.2;
+					var spam_bubble = 50;
+					var spam_mentos = 100;
+					var spam_ball = 180;
+					
+					var spam_spd_min = 3;
+					var spam_spd_git = 6.6;
+					var spam_div = 2.5;
+					var spam_deccel = 0.2;
+					
+					var wave_length = 150;
 				break;
 			}
-			
-			var boss_wait = 130;
-			
-			if(step % boss_wait == boss_wait - 1)
+		
+		
+			switch(state)
 			{
-				boss_movement_random(0.5,1,1);
+				case 0:
+					if(state_time < wave_length)
+					{
+						
+						if(state_time % mentos_wait == 0)
+						{
+							shoot_ring(DAN_MENTOS,1,mentos_ring,obj_boss.x,obj_boss.y,mentos_angle,mentos_spd_min,sfx_shot1,5);	
+							shoot_ring(DAN_MENTOS,7,mentos_ring,obj_boss.x,obj_boss.y,mentos_angle,mentos_spd_max,noone,6);	
+							mentos_angle += mentos_angle_plus * act_dir;
+						}
+					}
+					else
+					{
+						state += 1;
+						boss_movement_random(2,20,5);
+						act_dir *= -1;
+						
+						bullet_angle = rng(360,false,1);
+						mentos_angle = rng(360,false,1);
+						
+						play_sound(sfx_redirect1,1,false);
+						
+						
+						repeat(spam_ball)
+						{
+							shoot(DAN_RAINDROP,choose(2,1),obj_boss.x,obj_boss.y,rng(360,false,1),spam_spd_min + rng(spam_spd_git,false,1),noone,8);	
+						}
+						
+						repeat(spam_mentos)
+						{
+							shoot(DAN_MENTOS,choose(2,1),obj_boss.x,obj_boss.y,rng(360,false,1),spam_spd_min + rng(spam_spd_git,false,1),noone,8);	
+						}
+						
+						repeat(spam_bubble)
+						{
+							shoot(DAN_BUBBLE,choose(2,1),obj_boss.x,obj_boss.y,rng(360,false,1),spam_spd_min + rng(spam_spd_git,false,1),noone,8);	
+						}
+					}
+				break;
+				case 1:
+					switch(state_time)
+					{
+						case 50:
+							boss_charge(obj_boss.x,obj_boss.y);
+						break;
+						case 80:
+							state = 0;
+						break;
+					}
+				break;
 			}
-			
-			if(step % bullet_wait == 0)
+		
+			with(obj_danmaku8)
 			{
-				shoot_ring(DAN_BULLET,7,bullet_ring,obj_boss.x,obj_boss.y,bullet_angle,bullet_spd,sfx_shot2,3);
-				bullet_angle += bullet_dist;
+				switch(state)
+				{
+					case 0:
+						spd_to = spd / spam_div;
+						state += 1;
+					break;
+					case 1:
+						spd = goto_value(spd,spd_to,spam_deccel);
+					break;
+				}
 			}
-			
-			if(step % bubble_wait == 0)
-			{
-				shoot_ring(DAN_BUBBLE,1,bubble_ring,obj_boss.x,obj_boss.y,-bubble_angle,bubble_spd,sfx_shot1,4);
-				bubble_angle += bubble_dist;
-			}
-			
+		
 		break;
 	}
 }

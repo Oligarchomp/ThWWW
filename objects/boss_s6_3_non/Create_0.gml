@@ -4,10 +4,10 @@
 // Inherit the parent event
 event_inherited();
 
-spell_set_life(900,200);
+spell_set_life(970,230);
 spell_set_time(45,false,130);
 
 
-bullet_angle = rng(360,false,1);
-bubble_angle = rng(360,false,1);
+mentos_angle = rng(360,false,1);
 
+act_dir = 1;
