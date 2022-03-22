@@ -13,7 +13,7 @@ if(global.gp_active)
 	var wave_lenght = 75;
 	var wave_time_dif = 40;
 	
-	var wave1_start = 30
+	var wave1_start = 10
 	var wave1_end = wave1_start + wave_lenght 
 	var wave_wait = 12;
 	var change_time1 = 20;

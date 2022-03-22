@@ -9,18 +9,14 @@ if(global.gp_active) and (spell_wait == 0)
 			var anchor_spd = 6;
 			
 			var mentos_wait = 7;
-			var mentos_spd_final = 1.8;
+			var mentos_spd_final = 1.6;
 			var mentos_accel = 0.015;
 			var mentos_angle_plus = 30;
 			
-			var bubble_ring = 21;
-			var bubble_spd = 1.8;
-			var bubble_wait = 60;
-			
 			var arc_nbr = 7;
 			var arc_row = 2;
-			var arc_spd_min = 0.7;
-			var arc_spd_max = 1.7;
+			var arc_spd_min = 0.6;
+			var arc_spd_max = 1.6;
 			
 			var wave_wait = 200;
 		break;
@@ -29,18 +25,14 @@ if(global.gp_active) and (spell_wait == 0)
 			var anchor_spd = 6;
 			
 			var mentos_wait = 6;
-			var mentos_spd_final = 2;
-			var mentos_accel = 0.02;
+			var mentos_spd_final = 1.8;
+			var mentos_accel = 0.015;
 			var mentos_angle_plus = 20;
-			
-			var bubble_ring = 28;
-			var bubble_spd = 1.8;
-			var bubble_wait = 54;
 			
 			var arc_nbr = 9;
 			var arc_row = 2;
-			var arc_spd_min = 0.9;
-			var arc_spd_max = 1.8;
+			var arc_spd_min = 0.8;
+			var arc_spd_max = 1.7;
 			
 			var wave_wait = 180;
 		break;
@@ -49,18 +41,14 @@ if(global.gp_active) and (spell_wait == 0)
 			var anchor_spd = 6;
 			
 			var mentos_wait = 5;
-			var mentos_spd_final = 2;
-			var mentos_accel = 0.02;
+			var mentos_spd_final = 1.8;
+			var mentos_accel = 0.015;
 			var mentos_angle_plus = 20;
-			
-			var bubble_ring = 32;
-			var bubble_spd = 1.8;
-			var bubble_wait = 50;
 			
 			var arc_nbr = 11;
 			var arc_row = 2;
-			var arc_spd_min = 1;
-			var arc_spd_max = 1.9;
+			var arc_spd_min = 0.9;
+			var arc_spd_max = 1.8;
 			
 			var wave_wait = 160;
 		break;
@@ -69,18 +57,15 @@ if(global.gp_active) and (spell_wait == 0)
 			var anchor_spd = 6;
 			
 			var mentos_wait = 4;
-			var mentos_spd_final = 2;
-			var mentos_accel = 0.02;
+			var mentos_spd_final = 1.8;
+			var mentos_accel = 0.015;
 			var mentos_angle_plus = 20;
-			
-			var bubble_ring = 34;
-			var bubble_spd = 1.8;
-			var bubble_wait = 50;
+		
 			
 			var arc_nbr = 12;
 			var arc_row = 2;
-			var arc_spd_min = 1;
-			var arc_spd_max = 2;
+			var arc_spd_min = 0.9;
+			var arc_spd_max = 1.8;
 			
 			var wave_wait = 150;
 		break;
@@ -137,14 +122,7 @@ if(global.gp_active) and (spell_wait == 0)
 			}
 		break;
 		case 1:
-			if(state_time < 200)
-			{
-				if(state_time % bubble_wait == 0)
-				{
-					//shoot_ring(DAN_BUBBLE,1,bubble_ring,obj_boss.x,obj_boss.y,999,bubble_spd,sfx_redirect1,7);
-				}
-			}
-			else
+			if(state_time == 200)
 			{
 				state = 2;
 			}
@@ -191,13 +169,13 @@ if(global.gp_active) and (spell_wait == 0)
 				if(collision_rectangle(x - sq + hsp,y - sq ,x + sq + hsp,y + sq,obj_wall,false,true))
 				{
 					found_wall = true;
-					screen_shake(floor(spd),0);
+					screen_shake(floor(spd / 1.3),0);
 				}
 				
 				if (collision_rectangle(x - sq,y - sq + vsp,x + sq,y + sq + vsp,obj_wall,false,true))
 				{
 					found_wall = true;
-					screen_shake(0,floor(spd));
+					screen_shake(0,floor(spd / 1.3));
 				}
 				
 				

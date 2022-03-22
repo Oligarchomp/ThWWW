@@ -3,9 +3,9 @@
 if(global.gp_active)
 {
 
-	var bubble_arc = 7;
+	var bubble_arc = 8;
 	var bubble_row = 5;
-	var bubble_dist = 6;
+	var bubble_dist = 8;
 	var bubble_spd_min = 1.5;
 	var bubble_spd_max = 6;
 	
@@ -48,7 +48,7 @@ if(global.gp_active)
 				}
 				else
 				{
-					shoot_ring_row(DAN_MENTOS,7,mentos_ring,mentos_row,x,y,999,mentos_spd_min,mentos_spd_max,sfx_shot1,4);
+					shoot_ring_row(DAN_MENTOS,7,mentos_ring,mentos_row,x,y,998,mentos_spd_min,mentos_spd_max,sfx_shot1,4);
 				}
 				state = 2;
 				life = min(life,10);
