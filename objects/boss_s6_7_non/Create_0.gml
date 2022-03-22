@@ -17,3 +17,5 @@ tss_angle = -90;
 tss_dir = 1;
 
 wall_open = 0;
+
+act_dir = 1;
