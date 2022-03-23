@@ -3,3 +3,8 @@
 obj_boss.pos_type = POS_SP;
 
 event_inherited();
+
+with(obj_spincharge)
+{
+	instance_destroy();	
+}

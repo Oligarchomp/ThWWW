@@ -86,8 +86,8 @@ if(global.gp_active)
 				
 				var inst = shoot(DAN_BUBBLE,6,obj_boss.x,obj_boss.y,ang,bubble_spd + rng(3,false,1),sfx_shot1,2);
 				inst.pos_type = POS_SP;
-				inst.y_grav_accel = 0.1;
-				inst.y_grav_max = 13;
+				inst.y_grav_accel = 0.08;
+				inst.y_grav_max = 10;
 				inst.rot = rng(360,true,3);
 				inst.rot_spd *= rng(2,true,2) - 1;
 				inst.y_offscreen = 70;

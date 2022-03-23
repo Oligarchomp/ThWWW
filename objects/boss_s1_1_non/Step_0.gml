@@ -25,26 +25,26 @@ if(global.gp_active)
 			case 1:
 				var wait_shoot = 50;
 				var shoot_ang_off = 5;
-				var ring_spd = 3.2;
+				var ring_spd = 3.1;
 				
 				var bubble_nbr = 24;
 				var angle_dist = 14.2;
 			break;
 			case 2:
-				var wait_shoot = 35;
+				var wait_shoot = 36;
 				var shoot_ang_off = 6;
-				var ring_spd = 4.6;
+				var ring_spd = 3.8;
 				
 				var bubble_nbr = 28;
 				var angle_dist = 12.5;
 			break;
 			case 3:
-				var wait_shoot = 30;
+				var wait_shoot = 32;
 				var shoot_ang_off = 7;
-				var ring_spd = 5;
+				var ring_spd = 4;
 				
-				var bubble_nbr = 32;
-				var angle_dist = 11;
+				var bubble_nbr = 36;
+				var angle_dist = 9.8;
 			break;
 		}
 		

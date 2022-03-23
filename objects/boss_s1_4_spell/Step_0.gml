@@ -9,7 +9,7 @@ if(global.gp_active)
 		switch(global.difficulty)
 		{
 			case 0:
-				var ring_spd = 3;
+				var ring_spd = 2;
 				var ring_nbr = 8;
 				
 				var bubble_arc = 2;
@@ -18,24 +18,24 @@ if(global.gp_active)
 				var arc_dif = -27;
 				
 				var arrow_ring_nbr = 0;
-				var wait_arrow = 60;
-				var arrow_spd = 3.5;
+				var wait_arrow = 100;
+				var arrow_spd = 0 ;
 			break;
 			case 1:
 				var ring_spd = 2.5;
 				var ring_nbr = 12;
 				
 				var bubble_arc = 3;
-				var bubble_spd = 5;
+				var bubble_spd = 4.5;
 				var arc_dist = 50;
 				var arc_dif = 27;
 				
 				var arrow_ring_nbr = 18;
 				var wait_arrow = 34;
-				var arrow_spd = 5;
+				var arrow_spd = 3.2;
 			break;
 			case 2:
-				var ring_spd = 3;
+				var ring_spd = 2.7;
 				var ring_nbr = 20;
 				
 				var bubble_arc = 6;
@@ -45,10 +45,10 @@ if(global.gp_active)
 				
 				var arrow_ring_nbr = 28;
 				var wait_arrow = 24;
-				var arrow_spd = 5;
+				var arrow_spd = 3.7;
 			break;
 			case 3:
-				var ring_spd = 3.5;
+				var ring_spd = 3;
 				var ring_nbr = 24;
 				
 				var bubble_arc = 8;
@@ -58,7 +58,7 @@ if(global.gp_active)
 				
 				var arrow_ring_nbr = 32;
 				var wait_arrow = 18;
-				var arrow_spd = 5;
+				var arrow_spd = 4.2;
 			break;
 		}
 		

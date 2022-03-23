@@ -176,7 +176,7 @@ if(global.gp_active)
 			{
 				repeat(4)
 				{
-					shoot(DAN_BALL,4,global.x_death_list[|i],global.y_death_list[|i], 90 + rng(60,true,1) - 30,4,sfx_shot3,2); 
+					shoot(DAN_BALL,4,global.x_death_list[|i],global.y_death_list[|i], 90 + rng(60,true,1) - 30,3,sfx_shot3,2); 
 				}
 			}
 		}
@@ -184,8 +184,8 @@ if(global.gp_active)
 		with(obj_danmaku2)
 		{
 			pos_type = POS_SP;
-			y_grav_accel = 0.05;
-			y_grav_max = 6;	
+			y_grav_accel = 0.04;
+			y_grav_max = 4.8;	
 		}
 	
 		if (step = stagecard_time)

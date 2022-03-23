@@ -96,6 +96,8 @@ if(global.gp_active)
 				
 						var rice_open = 20;
 						var rice_time = 10;
+						
+						var grav = 0.08;
 					break;
 					case 3:
 						var wait_ring = 60 
@@ -112,6 +114,7 @@ if(global.gp_active)
 						var rice_open = 17;
 						var rice_time = 8;
 						
+						var grav = 0.08;
 					break;
 				}
 		
@@ -159,12 +162,12 @@ if(global.gp_active)
 					break;
 					case 1://geyser
 			
-					var bubble_spd = 8;
-					var bubble_fall = 13;
+					var bubble_spd = 7;
+					var bubble_fall = 10;
 					var open_bubble = open_geyser;
 			
-					var ball_spd = 8;
-					var ball_fall = 13;
+					var ball_spd = 7;
+					var ball_fall = 10;
 					var open_ball = open_geyser;
 		
 			
@@ -175,25 +178,25 @@ if(global.gp_active)
 								var ang = 90 - open_bubble + rng(open_bubble * 2,false,3);
 								var inst = shoot(DAN_BUBBLE,6,x_gey,y_gey,ang,bubble_spd + rng(3,false,4),sfx_shot2,4)
 								inst.pos_type = POS_SP;
-								inst.y_grav_accel = 0.1;
+								inst.y_grav_accel = grav;
 								inst.y_grav_max = bubble_fall + rng(2,false,6);
 							}
 					
 							var ang = 90 - open_ball + rng(open_ball * 2,false,3);
 							var inst = shoot(DAN_BALL,6,x_gey,y_gey,ang,ball_spd + rng(3,false,4),sfx_shot3,2)
 							inst.pos_type = POS_SP;
-							inst.y_grav_accel = 0.1;
+							inst.y_grav_accel = grav;
 							inst.y_grav_max = ball_fall + rng(2,false,3);
 						
 						
-							var rice_spd = 10;
-							var rice_fall = 13;
+							var rice_spd = 9;
+							var rice_fall = 10;
 					
 							gey_rice_angle = ( 90 + cos(state_time/ rice_time) * rice_open );
 					
 							var inst = shoot(DAN_RICE,4,x_gey,y_gey,gey_rice_angle,rice_spd,noone,1)
 							inst.pos_type = POS_SP;
-							inst.y_grav_accel = 0.1;
+							inst.y_grav_accel = grav;
 							inst.y_grav_max = rice_fall ;
 					
 					

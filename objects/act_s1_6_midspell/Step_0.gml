@@ -27,16 +27,16 @@ if(global.gp_active)
 				var bubble_nbr = 14;
 				
 				var arrow_row = 5;
-				var arrow_dist = 17;
+				var arrow_dist = 19;
 				var arrow_angle = 999;
-				var arrow_spd = 4.2;
+				var arrow_spd = 4;
 				var arrow_grav = 0;
 			break;
 			case 2:
 				var y_grav = 0;
-				var bubble_spd = 6;
+				var bubble_spd = 4;
 				var bubble_wait = 45;
-				var bubble_nbr = 14;
+				var bubble_nbr = 15;
 				
 				var arrow_row = 7;
 				var arrow_dist = 12;
@@ -81,14 +81,14 @@ if(global.gp_active)
 		{
 			pos_type = POS_SP;
 			y_grav_accel = y_grav;
-			y_grav_max = 8;	
+			y_grav_max = 7;	
 		}
 	
 		with(obj_danmaku1)
 		{
 			pos_type = POS_SP;
 			y_grav_accel = arrow_grav;
-			y_grav_max = 8;
+			y_grav_max = 7;
 		}
 	
 	}

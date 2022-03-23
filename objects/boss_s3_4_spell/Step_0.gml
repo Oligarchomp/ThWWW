@@ -15,6 +15,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var head_spd = 3;
 			var head_time = 5;
 			var head_layer = 0;
+			var head_accel = 0.08;
 		break;
 		case 1:
 			var spin_spd = 4;
@@ -24,9 +25,10 @@ if(global.gp_active) and (spell_wait == 0)
 			var bubble_time = 2;
 			
 			var head_way = 10;
-			var head_spd = 3;
+			var head_spd = 2.4;
 			var head_time = 3;
 			var head_layer = 1;
+			var head_accel = 0.08;
 		break;
 		case 2:
 			var spin_spd = 4;
@@ -36,9 +38,10 @@ if(global.gp_active) and (spell_wait == 0)
 			var bubble_time = 2;
 			
 			var head_way = 18;
-			var head_spd = 2.8;
+			var head_spd = 2.5;
 			var head_time = 3;
 			var head_layer = 2;
+			var head_accel = 0.08;
 		break;
 		case 3:
 			var spin_spd = 4;
@@ -48,19 +51,20 @@ if(global.gp_active) and (spell_wait == 0)
 			var bubble_time = 2;
 			
 			var head_way = 20;
-			var head_spd = 3;
+			var head_spd = 2.8;
 			var head_time = 3;
 			var head_layer = 4;
+			var head_accel = 0.08;
 		break;
 	}
 	
 	
 	
-	if(angle_charge < 450)
+	if(angle_charge != angle_charge_to)
 	{
 		repeat(15)
 		{
-			angle_charge = goto_value(angle_charge, 450,1);
+			angle_charge = goto_value(angle_charge, angle_charge_to,1);
 		
 			var dist = 180;
 			var inst = instance_create_depth(x_ref + lengthdir_x(dist,angle_charge),y_ref + lengthdir_y(dist,angle_charge),global.boss_depth,obj_spincharge);
@@ -142,6 +146,8 @@ if(global.gp_active) and (spell_wait == 0)
 				break;
 				case 200:
 					state = 0;
+					angle_charge = 90;
+					angle_charge_to = 90 + dir_pale * 360;
 				break
 			}
 		break;
@@ -170,7 +176,7 @@ if(global.gp_active) and (spell_wait == 0)
 		{
 			if(wait_start == 0)
 			{
-				spd = goto_value(spd,pot_spd,0.1);
+				spd = goto_value(spd,pot_spd,head_accel);
 			}
 			else
 			{

@@ -17,20 +17,19 @@ if(global.gp_active)
 					var bubble_wait = 55;
 			
 					var arrow_nbr = 6;
-					var arrow_spd = 3;
+					var arrow_spd = 2.5;
 			
 					var arrow_wait = 20;
 					var arrow_dist = 10;
 				break;
 				case 1:
 					var bubble_nbr = 15;
-					var bubble_spd = 3;
+					var bubble_spd = 2.7;
 	
 					var bubble_wait = 45;
 			
 					var arrow_nbr = 6;
-					var arrow_spd = 4;
-			
+					var arrow_spd = 3;
 					var arrow_wait = 13;
 					var arrow_dist = 5;
 				break;
@@ -41,9 +40,8 @@ if(global.gp_active)
 					var bubble_wait = 40;
 			
 					var arrow_nbr = 8;
-					var arrow_spd = 5;
-			
-					var arrow_wait = 10;
+					var arrow_spd = 3.4;
+					var arrow_wait = 11;
 					var arrow_dist = 180 / arrow_nbr / 4 ;
 				break;
 				case 3:
@@ -53,9 +51,8 @@ if(global.gp_active)
 					var bubble_wait = 30;
 			
 					var arrow_nbr = 10;
-					var arrow_spd = 5;
-			
-					var arrow_wait = 8;
+					var arrow_spd = 3.8;
+					var arrow_wait = 9;
 					var arrow_dist = 3;
 				break;
 			}
