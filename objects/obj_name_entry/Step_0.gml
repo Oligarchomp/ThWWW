@@ -55,6 +55,12 @@ if(abs(global.down_pressed - global.up_pressed))
 }
 
 
+if(global.pause_pressed)
+{
+	global.shot_pressed = true;
+	cursor = array_length(character) - 1;
+}
+
 if(global.shot_pressed)
 {
 	switch(character[cursor])

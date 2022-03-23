@@ -33,7 +33,7 @@ switch(state)
 			
 			if(room = room_score)
 			{
-				state = 1;	
+				state = 4;	
 			}
 			else
 			{
@@ -102,6 +102,23 @@ switch(state)
 		if(state_time == 160)
 		{
 			room_transition(room_main,true);
+		}
+	break;
+	case 4://results
+		result_alpha = goto_value(result_alpha,1,0.05);
+		
+		if(state_time > 80) and (global.shot_pressed)
+		{
+			play_sound(sfx_menu_valid,1,false);
+			
+			if (global.continues != global.continues_max)
+			{
+				state = 2;
+			}
+			else
+			{
+				state = 1;
+			}
 		}
 	break;
 }

@@ -241,6 +241,9 @@ if (global.gp_active)
 		
 		if (is_capturing)
 		{
+			
+			global.spell_captured += 1;
+			
 			play_sound(sfx_spell_capture,1,false);
 			add_score(bonus);
 			

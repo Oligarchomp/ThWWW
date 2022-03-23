@@ -108,6 +108,10 @@ score_to_draw = 0;
 
 global.continues = global.continues_max;
 
+global.bomb_used = 0;
+global.miss = 0;
+global.spell_captured = 0;
+
 global.item = 0;//
 
 

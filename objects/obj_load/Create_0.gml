@@ -92,8 +92,8 @@ instance_create_depth(0,0,0,obj_bgm);
 
 global.need_intro = true;
 
-//room_goto(room_score);
-room_goto(room_main);
+room_goto(room_score);
+//room_goto(room_main);
 //room_goto(room_gp);
 
 global.game_x_offset =  156;
@@ -134,6 +134,10 @@ global.starting_bomb = 2;
 
 global.starting_bomb_normal = 2;
 global.starting_bomb_rng = 3;
+
+global.bomb_used = 0;
+global.miss = 0;
+global.spell_captured = 0;
 
 global.poc = 0;
 
@@ -280,7 +284,7 @@ global.play_type = PLAY_MANUAL;
 #macro REPLAY_DIFFICULTY 7
 #macro REPLAY_STAGE_NBR 8
 
-
+/*
 room_goto(room_gp)
 
 global.difficulty = 3;

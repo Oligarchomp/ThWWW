@@ -230,6 +230,8 @@ if (global.gp_active)
 					}
 					
 					global.bomb = global.starting_bomb;
+					
+					global.miss += 1;
 				break;
 			}
 		break;
@@ -241,6 +243,8 @@ if (global.gp_active)
 		if(global.bomb_pressed) and (state != 2) and (!in_dialogue) and (global.bomb > 0)
 		{
 			global.bomb -= 1;
+			
+			global.bomb_used += 1;
 			
 			instance_create_depth(0,0,0,obj_bomb);
 			state = 0;

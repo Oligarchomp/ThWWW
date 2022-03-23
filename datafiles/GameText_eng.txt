@@ -120,6 +120,14 @@ pause_restart_replay = Restart replay
 score_replay = Do you want to save a replay?
 score_no_replay = No replay can be saved, as a continue as been used
 
+result_result = RESULTS
+result_score = SCORE :
+result_diff = DIFFICULTY :
+result_continue = CONTINUE USED :
+result_miss = MISS :
+result_bomb = BOMB USED :
+result_spell = SPELL CAPTURED :
+
 spell_s1_mida = Apple Sign "Apfelkuchen"
 spell_s1_midb = Heaven Sign "Adam and Eve Falling From Heaven"
 spell_s1_1a = Physics Sign "Newton's Laws of Motion"

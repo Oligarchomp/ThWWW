@@ -52,7 +52,7 @@ else
 {
 	if(room == room_score)
 	{
-		state = 1;
+		state = 4;
 	}
 	else
 	{
@@ -62,7 +62,7 @@ else
 
 if (global.continues != global.continues_max)
 {
-	state = 2;
+	state = 4;
 	instance_destroy(obj_name_entry);
 }
 
@@ -83,4 +83,5 @@ menu =
 ]
 
 alpha_score = 0;
+result_alpha = 0;
 
