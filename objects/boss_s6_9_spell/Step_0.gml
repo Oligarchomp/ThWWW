@@ -74,17 +74,17 @@ if(global.gp_active)
 					var aim_spd_min = 2;
 					var aim_spd_max = 6;
 				
-					var mentos_wait = 5;
+					var mentos_wait = 4;
 					var mentos_off = 90;
-					var ball_wait = 5;
+					var ball_wait = 4;
 					var ball_off = 33;
-					var bubble_wait = 13;
+					var bubble_wait = 17;
 					var bubble_off = -60;
 			
 					var water_ring = 3;
 					var water_spd_shoot_min = 12.5;
 					var water_deccel = 0.5;
-					var water_spd_min = 1.5;
+					var water_spd_min = 1.45;
 					var water_dist = 2.1;
 				break;
 			}
@@ -206,14 +206,14 @@ if(global.gp_active)
 			switch(state)
 			{
 				case 0:
-					if(life_left < 2600)
+					if(life_left < 2800)
 					{
 						state = 1;
 						boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);
 					}
 				break;
 				case 1:
-					if(life_left < 1400)
+					if(life_left < 1600)
 					{
 						state = 2;
 						boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);

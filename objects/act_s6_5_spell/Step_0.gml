@@ -74,10 +74,12 @@ if(global.gp_active)
 	
 		if(step % arrow_wait == 0)
 		{
+			var aim = rng(360,false,1);
 			for (var i = 0; i < arrow_nbr; i += 1)
 			{
 				var sp = arrow_spd_min + rng(arrow_spd_git,false,i);
-				var inst = shoot(DAN_ARROW,7,obj_boss.x,obj_boss.y,rng(360,false,i + 1),sp,sfx_shot1,7);
+				var inst = shoot(DAN_ARROW,7,obj_boss.x,obj_boss.y,aim,sp,sfx_shot1,7);
+				aim += 360 / arrow_nbr;
 				inst.image_xscale = arrow_size;
 				inst.image_yscale = arrow_size;
 				inst.x_offscreen *= arrow_size;
