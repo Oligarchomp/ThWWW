@@ -83,7 +83,7 @@ for(var i = 0; i < 20; i += 1)
 	}
 	else
 	{
-		menu[i].nom = "-------";
+		menu[i].nom = "--------";
 		menu[i].date = "00/00/00";
 		menu[i].hour = "00:00";
 		menu[i].player = "------";

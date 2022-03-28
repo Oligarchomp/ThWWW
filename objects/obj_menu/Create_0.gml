@@ -10,7 +10,10 @@ if(global.need_intro) and (!global.debug)
 }
 else
 {
-	set_bgm(mus_title);
+	if(!audio_is_playing(mus_title))
+	{
+		set_bgm(mus_title);
+	}
 }
 need_music_time = -1;
 
@@ -1361,7 +1364,7 @@ for ( var i = 0 ; i < 10; i += 1) // score nbr
 		variable_struct_set(menu[4].param[i],global.score_name[j],add_zero(data_read("Data.ini",global.score_name[j],i),global.score_lenght));
 		
 		var txt = string(data_read_string("Data.ini",global.score_name[j] + "_name",i));
-		txt = txt == "0" ? "-------" : txt;
+		txt = txt == "0" ? "--------" : txt;
 		variable_struct_set(menu[4].param[i],global.score_name[j] + "_name",txt);
 	}
 }
@@ -1417,27 +1420,27 @@ for(var i = 0; i < 20; i += 1)
 		switch(get_text_file("difficulty",replay_check))
 		{
 			case 0:
-				var diff = "Easy";
+				var diffi = "Easy";
 			break;
 			case 1:
 				var arr = get_replay(REPLAY_EVENT,replay_check,0);
 				if(arr[0] != act_s7_0)
 				{
-					var diff = "Normal";
+					var diffi = "Normal";
 				}
 				else
 				{
-					var diff = "Extra";
+					var diffi = "Extra";
 				}
 			break;
 			case 2:
-				var diff = "Hard";
+				var diffi = "Hard";
 			break;
 			case 3:
-				var diff = "Lunatic";
+				var diffi = "Lunatic";
 			break;
 		}
-		menu[rep].param[i].difficulty = diff;
+		menu[rep].param[i].difficulty = diffi;
 		
 		var stage = get_replay(REPLAY_STAGE_NBR,replay_check,0);
 		
@@ -1489,7 +1492,7 @@ for(var i = 0; i < 20; i += 1)
 	}
 	else
 	{
-		menu[rep].param[i].nom = "-------";
+		menu[rep].param[i].nom = "--------";
 		menu[rep].param[i].date = "00/00/00";
 		menu[rep].param[i].hour = "00:00";
 		menu[rep].param[i].player = "------";
@@ -1672,6 +1675,5 @@ for(var y_bubble = 300; y_bubble > 0; y_bubble -= 50)
 {
 	instance_create_depth(80 - 100 + rng(200,false,6),y_bubble - rng(60,false,3),depth + 1,obj_bubble_main);
 }
-
 
 step = 0;

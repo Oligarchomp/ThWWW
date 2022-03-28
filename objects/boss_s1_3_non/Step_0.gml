@@ -72,7 +72,7 @@ if(global.gp_active)
 			shoot_ring(DAN_BUBBLE,4,ring_nbr,obj_boss.x,obj_boss.y,998,bubble_spd_min,sfx_redirect1,3)
 		}
 		
-		var bubble_spd = 3;
+		var bubble_spd = 2;
 			
 		var dist_arrow = -20;
 			

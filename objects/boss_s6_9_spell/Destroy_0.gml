@@ -10,6 +10,8 @@ with(obj_rain)
 {
 	instance_destroy();	
 }
+
+clear_charge();
 // Inherit the parent event
 event_inherited();
 

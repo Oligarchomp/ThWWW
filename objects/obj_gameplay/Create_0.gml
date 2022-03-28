@@ -24,7 +24,14 @@ global.time = 0;
 item_extend = [];
 item_extend_ref = []
 
-extend_full = [250,600,1000,1500,2200,9999];
+if(global.difficulty == 0)
+{
+	extend_full = [80,200,500,1000,1500,9999];
+}
+else
+{
+	extend_full = [250,600,1000,1500,2200,9999];
+}
 extend_extra = [600,1400,9999];
 
 

@@ -54,7 +54,7 @@ function set_bgm(argument0){
 				var name = get_text("mus_boss6");
 			break;
 			default:
-				var name = "No music yet";
+				return;
 			break;
 		}
 	

@@ -40,8 +40,8 @@ if(global.gp_active) and (spell_wait == 0)
 		break;
 		case 1:
 			//wave 2
-			var mentos_ring = 30;
-			var mentos_spd = 7.5;
+			var mentos_ring = 29;
+			var mentos_spd = 8;
 			var mentos_wait = 26;
 			
 			
@@ -108,8 +108,8 @@ if(global.gp_active) and (spell_wait == 0)
 		break;
 		case 3:
 			//wave 2
-			var mentos_ring = 38;
-			var mentos_spd = 8.5;
+			var mentos_ring = 37;
+			var mentos_spd = 9.5;
 			var mentos_wait = 20;
 			
 			
@@ -143,6 +143,7 @@ if(global.gp_active) and (spell_wait == 0)
 	}
 	
 	var wave_lenght = 180;
+	
 
 	
 	switch(state)
@@ -196,6 +197,13 @@ if(global.gp_active) and (spell_wait == 0)
 				if(state_time % mentos_wait == 0)
 				{
 					shoot_ring(DAN_BUBBLE,1,mentos_ring,obj_boss.x,obj_boss.y,999,mentos_spd,sfx_redirect2,5);
+				}
+				
+				var open = 160;
+				var aim = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y) + 180;
+				repeat(14)
+				{
+					shoot(DAN_BULLET,7,obj_boss.x,obj_boss.y,aim + open - rng(open * 2,false,1),5 + rng(5,false,1),sfx_shot2,4);
 				}
 			}
 			else
@@ -276,26 +284,6 @@ if(global.gp_active) and (spell_wait == 0)
 				break;
 			}
 		break;
-	}
-	
-	//slowing bullet
-	with(obj_danmaku4)
-	{
-		switch(state)
-		{
-			case 0:
-				if(state_time == 0)
-				{
-					spd_ref = spd;	
-				}
-				
-				spd = goto_value(spd,0,around_deccel);
-				if(spd == 0)
-				{
-					cancel_bullet(self);
-				}
-			break;
-		}
 	}
 	
 }

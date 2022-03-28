@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
+
 switch(level)
 {
 	case 0:
@@ -127,7 +129,7 @@ switch(level)
 					var score_name = variable_struct_get(check[i],index + "_name");
 					
 					draw_set_font(font_scorename);
-					draw_text_color(332,88 + i * 40,score_name,c_white,c_white,c_white,c_white,1);
+					draw_text_color(322,88 + i * 40,score_name,c_white,c_white,c_white,c_white,1);
 					
 					draw_text_color(442,88 + i * 40,"/",c_white,c_white,c_white,c_white,1);
 					
@@ -508,9 +510,9 @@ if(draw_replay)
 		is_active = (cursor[1] == i)
 					
 		//relplay number
-		draw_text_color(xx - 130,yy + i * dist,"ReplayN" + string(add_zero(i + 1,2)) + " //",c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
+		draw_text_color(xx - 140,yy + i * dist,"ReplayN" + string(add_zero(i + 1,2)) + " //",c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
 		//name
-		draw_text_color(xx,yy + i * dist,check[i].nom,c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
+		draw_text_color(xx - 10 ,yy + i * dist,check[i].nom,c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
 		//date
 		draw_text_color(xx + 80,yy + i * dist,"/ " + check[i].date,c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
 		// hour
@@ -552,3 +554,5 @@ if(draw_replay)
 		}
 	}
 }
+
+//draw_text(20,20,keyboard_string);

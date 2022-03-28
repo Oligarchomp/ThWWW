@@ -6,8 +6,8 @@ if(global.gp_active) and(spell_wait == 0)
 	{
 		case 0:
 			var way_off = 112;
-			var way_lenght = 80; // actually half the lengh
-			var way_spd = 80;
+			var way_lenght = 72; // actually half the lengh
+			var way_spd = 72;
 			
 			var knife_nbr = 0;
 			var knife_wait = 45;
@@ -70,7 +70,7 @@ if(global.gp_active) and(spell_wait == 0)
 			
 	}
 	
-	if(step % knife_wait == 0)
+	if(step % knife_wait == 0) and (knife_nbr > 0)
 	{
 		for(var i = 0; i < room_width; i += room_width / knife_nbr)
 		{

@@ -58,7 +58,7 @@ if(global.gp_active)
 				
 				var arrow_ring_nbr = 32;
 				var wait_arrow = 18;
-				var arrow_spd = 4.2;
+				var arrow_spd = 4.5;
 			break;
 		}
 		

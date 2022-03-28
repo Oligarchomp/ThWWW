@@ -630,3 +630,49 @@ music_lock_listen = goto_value(music_lock_listen,0,1);
 
 step += 1;
 
+
+//unlock code
+if(cursor[0] == 4) and (score_difficulty == 4) and (global.player_chosen == P_REIMU) 
+{
+	if(keyboard_string = "ilovetouhou")
+	{
+		play_sound(sfx_extend,1,false);
+		keyboard_string = "";
+		
+		data_write("Data.ini","data","rng_unlock",1);
+		data_write("Data.ini","data","reimu_extra",1);
+		data_write("Data.ini","data","marisa_extra",1); 
+		data_write("Data.ini","data","sanae_extra",1);
+		unlock_stage(7);
+		
+		for(var i = 0; i < 7; i += 1)
+		{
+			for(var j = 0; j < array_length( menu[3].param[i].param) ; j += 1)
+			{
+				var data = menu[3].param[i].param[j].data_name
+				var diffi = menu[3].param[i].param[j].diff;
+				var key_cap = get_difficulty_key(0,diffi);
+				var key_try = get_difficulty_key(1,diffi);
+				
+				data_write("SpellData.ini",data,key_cap,max(1,data_read("SpellData.ini",data,key_cap)));
+				data_write("SpellData.ini",data,key_try,max(1,data_read("SpellData.ini",data,key_try)));
+				
+				data_write("SpellDataPractice.ini",data,key_cap,max(1,data_read("SpellDataPractice.ini",data,key_cap)));
+				data_write("SpellDataPractice.ini",data,key_try,max(1,data_read("SpellDataPractice.ini",data,key_try)));
+			}
+		}
+		
+		cursor_lockout = 100;
+		room_transition(room_main,false);
+	}
+	
+	var len = string_length(keyboard_string);
+	if(len > 11)
+	{
+		keyboard_string = string_copy(keyboard_string,len - 10,11)
+	}
+}
+else
+{
+	keyboard_string = "";
+}

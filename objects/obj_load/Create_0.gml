@@ -291,5 +291,5 @@ global.difficulty = 3;
 
 add_stage_event(act_s6_0,0);// keep this one
 
-add_stage_event(boss_s6_3_non,1);
+add_stage_event(boss_s6_7_non,1);
 		

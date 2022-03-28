@@ -26,7 +26,7 @@ for (var i = 0; i < 10; i += 1)
 {
 	scores[i] = add_zero(data_read("Data.ini",index,i),global.score_lenght);	
 	var name = data_read_string("Data.ini",index + "_name",i);
-	names[i] = name == "0" ? "-------" : name;
+	names[i] = name == "0" ? "--------" : name;
 }
 
 score_pos = 0;

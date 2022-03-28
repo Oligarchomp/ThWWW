@@ -86,7 +86,7 @@ if(global.shot_pressed)
 			global.bomb_pressed = true;
 		break;
 		default:
-			if(string_length(global.name_entry) < 7)
+			if(string_length(global.name_entry) < 8)
 			{
 				global.name_entry += character[cursor];
 		

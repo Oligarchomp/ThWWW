@@ -17,18 +17,22 @@ if(global.gp_active)
 					var aim_spd_min = 2;
 					var aim_spd_max = 6;
 				
-					var mentos_wait = 12;
+					var mentos_wait = 14;
 					var mentos_off = 90;
-					var ball_wait = 12;
-					var ball_off = 30;
-					var bubble_wait = 40;
-					var bubble_off = 100;
+					var ball_wait = 14;
+					var ball_off = 70;
+
 			
 					var water_ring = 3;
 					var water_spd_shoot_min = 5.5;
 					var water_deccel = 0.1;
-					var water_spd_min = 1.1;
-					var water_dist = 2.1;
+					var water_spd_min = 1.05;
+					var water_dist = 3.1;
+					
+					var anchor_wait = 200; // must be even
+					var anchor_nbr = 10;
+					var anchor_accel = 0.03;
+					var anchor_spd_max = 5;
 				break;
 				case 1:
 					var aim_ring = 38;
@@ -36,18 +40,21 @@ if(global.gp_active)
 					var aim_spd_min = 2;
 					var aim_spd_max = 6;
 				
-					var mentos_wait = 7;
+					var mentos_wait = 9;
 					var mentos_off = 90;
-					var ball_wait = 7;
-					var ball_off = 30;
-					var bubble_wait = 22;
-					var bubble_off = 100;
+					var ball_wait = 9;
+					var ball_off = 32;
 			
 					var water_ring = 3;
 					var water_spd_shoot_min = 5.5;
 					var water_deccel = 0.1;
-					var water_spd_min = 1.3;
-					var water_dist = 2.1;
+					var water_spd_min = 1.1;
+					var water_dist = 1.95;
+					
+					var anchor_wait = 160; // must be even
+					var anchor_nbr = 15;
+					var anchor_accel = 0.03;
+					var anchor_spd_max = 5.5;
 				break;
 				case 2:
 					var aim_ring = 40;
@@ -56,17 +63,20 @@ if(global.gp_active)
 					var aim_spd_max = 6;
 				
 					var mentos_wait = 6;
-					var mentos_off = 90;
+					var mentos_off = 80;
 					var ball_wait = 6;
-					var ball_off = 28;
-					var bubble_wait = 16;
-					var bubble_off = -60;
+					var ball_off = 30;
 			
 					var water_ring = 3;
 					var water_spd_shoot_min = 5.5;
 					var water_deccel = 0.1;
-					var water_spd_min = 1.4;
+					var water_spd_min = 1.2;
 					var water_dist = 2.1;
+					
+					var anchor_wait = 134; // must be even
+					var anchor_nbr = 14;
+					var anchor_accel = 0.03;
+					var anchor_spd_max = 5.5;
 				break;
 				case 3:
 					var aim_ring = 44;
@@ -74,25 +84,25 @@ if(global.gp_active)
 					var aim_spd_min = 2;
 					var aim_spd_max = 6;
 				
-					var mentos_wait = 4;
+					var mentos_wait = 5;
 					var mentos_off = 90;
-					var ball_wait = 4;
+					var ball_wait = 5;
 					var ball_off = 33;
-					var bubble_wait = 17;
-					var bubble_off = -60;
 			
 					var water_ring = 3;
 					var water_spd_shoot_min = 12.5;
 					var water_deccel = 0.5;
-					var water_spd_min = 1.45;
+					var water_spd_min = 1.3;
 					var water_dist = 2.1;
+					
+					var anchor_wait = 110; // must be even
+					var anchor_nbr = 15;
+					var anchor_accel = 0.03;
+					var anchor_spd_max = 5.5;
 				break;
 			}
 			
-			var anchor_wait = 110;
-			var anchor_nbr = 13;
-			var anchor_accel = 0.05;
-			var anchor_spd_max = 5;
+			
 			
 			if(step == 0)
 			{
@@ -107,37 +117,26 @@ if(global.gp_active)
 			switch(state)
 			{
 				case 2: // phase 3
-					if(timeout_phase)
+				
+					if(anchor_time % anchor_wait == 0) or (timeout_phase and anchor_time % (anchor_wait / 2) == 0)
 					{
-						if(timeout_time % anchor_wait == 0)
+						shoot_ring(DAN_ANCHOR,1,anchor_nbr,obj_boss.x,obj_boss.y,999,0,sfx_spawn_light,8);
+						
+						var aim = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y);
+						
+						for(var i = 0; i < 360; i += 360 / anchor_nbr)
 						{
-							shoot_ring(DAN_ANCHOR,1,anchor_nbr,obj_boss.x,obj_boss.y,999,0,sfx_spawn_light,1);
-							with(obj_danmaku1)
-							{
-								state = 100;
-								is_cancelable = false;
-							}
+							boss_charge_row(obj_boss.x,obj_boss.y,aim + i,9,31,3)
 						}
-						timeout_time += 1;
-					}
-				
-				
-					if(step % bubble_wait == 0)
-					{
-						for(var i = 0; i < 360; i += 360 / water_ring)
+						
+						with(obj_danmaku8)
 						{
-							var ang = water_angle + i;
-							var inst = shoot(DAN_BUBBLE,1,obj_boss.x,obj_boss.y,ang,water_spd_shoot_min,sfx_redirect1,6);
-							inst.spd_to = water_spd_min;
-							inst.ang_plus = bubble_off;
-							inst.is_cancelable = false;
-			
-							var inst = shoot(DAN_BUBBLE,2,obj_boss.x,obj_boss.y,-ang - 360 / water_ring,water_spd_shoot_min,sfx_redirect1,7);
-							inst.spd_to = water_spd_min;
-							inst.ang_plus = -bubble_off;
-							inst.is_cancelable = false;
+							state = 100;
+							is_cancelable = false;
 						}
 					}
+					
+					anchor_time += 1;
 				case 1: // phase 2
 					if(step % ball_wait == 0)
 					{
@@ -206,14 +205,14 @@ if(global.gp_active)
 			switch(state)
 			{
 				case 0:
-					if(life_left < 2800)
+					if(life_left < 2850)
 					{
 						state = 1;
 						boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);
 					}
 				break;
 				case 1:
-					if(life_left < 1600)
+					if(life_left < 1650)
 					{
 						state = 2;
 						boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);

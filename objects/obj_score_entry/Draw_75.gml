@@ -15,7 +15,7 @@ switch(state)
 	
 			draw_set_font(font_scorename);
 	
-			draw_text_color(x +	15,y + i * 30,names[i],c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
+			draw_text_color(x +	5,y + i * 30,names[i],c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
 				
 			draw_text_color(x + 147,y + i * 30,"/",c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
 					
