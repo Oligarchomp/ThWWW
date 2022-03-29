@@ -5,7 +5,7 @@ if(global.gp_active)
 	switch(spell_wait)
 	{
 		case 0:
-			var note_wait = 68;
+			var note_wait = 76;
 			var note_ring = 26;
 			var note_row = 5;
 			var note_spd_shot = 7;
@@ -26,7 +26,7 @@ if(global.gp_active)
 			
 			if(step % note_wait == 0)
 			{
-				var aim = rng(360,false,5);
+				var aim = rng(180,false,5);
 				for(var i = 0; i < 360; i += 360 / note_ring)
 				{
 					for(var r = 0; r < note_row; r += 1)

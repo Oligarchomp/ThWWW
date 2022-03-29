@@ -11,21 +11,21 @@ if(global.gp_active)
 			boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);
 		break;
 		case 0:
-			var ring_wait = 70;
+			var ring_wait = 90;
 			var ring_nbr = 21;
 			var ring_spd_shot = 6;
 			var ring_deccel = 0.2;
 			
 			var note_row = 7;
-			var note_spd_min = 1.7;
-			var note_spd_max = 3.4;
+			var note_spd_min = 1.3;
+			var note_spd_max = 3;
 			var note_angle_min = 20;
 			var note_angle_max = 60;
 			var note_accel = 0.1;
 			
 			var bubble_row = 4;
-			var bubble_spd_min = 1.8;
-			var bubble_spd_max = 4.1;
+			var bubble_spd_min = 1.4;
+			var bubble_spd_max = 3.7;
 			var bubble_angle_min = 5;
 			var bubble_angle_max = 90;
 			var bubble_accel = 0.1;
@@ -40,8 +40,8 @@ if(global.gp_active)
 			
 			if(step % ring_wait == 0)
 			{
-				var aim = rng(360,false,5);
-				var aim2 = rng(360,false,6);
+				var aim = rng(180,false,5);
+				var aim2 = rng(180,false,6);
 				for(var i = 0; i < 360; i += 360 / ring_nbr)
 				{
 					for(var r = 0; r < note_row; r += 1)

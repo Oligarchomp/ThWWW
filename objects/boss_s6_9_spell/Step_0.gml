@@ -110,7 +110,8 @@ if(global.gp_active)
 				shoot_ring_row(DAN_BUBBLE,1,aim_ring,aim_row,obj_boss.x,obj_boss.y,90,aim_spd_min,aim_spd_max,noone,8);
 				with(obj_danmaku8)
 				{
-					state = 999;	
+					state = 999;
+					is_cancelable = false;
 				}
 			}
 	

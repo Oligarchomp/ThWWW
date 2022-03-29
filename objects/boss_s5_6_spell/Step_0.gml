@@ -104,6 +104,11 @@ if(global.gp_active) and (spell_wait == 0)
 				shoot_arc(DAN_ARROW,7,aim_arc,obj_boss.x,obj_boss.y,999,aim_dist,aim_spd,sfx_redirect2,4);
 				
 				shoot_ring(DAN_MENTOS,5,ball_nbr,obj_boss.x,obj_boss.y,rand,0,sfx_shot1,5);
+				
+				with(obj_danmaku5)
+				{
+					spawn_type = SPAWN_SCALE;	
+				}
 
 				
 				var inst = shoot(DAN_ARROW,3,obj_boss.x,obj_boss.y,999,0,sfx_spawn_light,3);

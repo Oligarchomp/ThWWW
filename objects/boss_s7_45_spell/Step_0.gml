@@ -5,18 +5,18 @@ if(global.gp_active) and (spell_wait == 0)
 	var marx_nbr = 14;
 	var marx_wait = 7;
 	
-	var mentos_nbr = 10;
+	var mentos_nbr = 9;
 	var mentos_spd_shot = 5;
 	var mentos_deccel = 0.2;
 	var mentos_spd_final = 2.5;
 	var mentos_accel = 0.02;
 	
 	var aim_ring = 10;
-	var aim_spd = 5;
+	var aim_spd = 4.5;
 	
 	var release_ring = 28;
 	var release_row = 5;
-	var release_spd_min = 3;
+	var release_spd_min = 2.7;
 	var release_spd_max = 6;
 	
 	var charge = 160;
