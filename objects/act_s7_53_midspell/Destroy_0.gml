@@ -2,6 +2,8 @@
 // You can write your code in this editor
 obj_boss.state = 2;
 
+obj_boss.pos_type = POS_SP;
+
 with(obj_boss_info)
 {
 	instance_destroy()

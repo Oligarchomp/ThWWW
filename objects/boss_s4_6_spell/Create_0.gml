@@ -6,7 +6,7 @@ event_inherited();
 
 spell_set_spell("s4_3",BOSS_YUUTO,24000000)
 spell_set_name("spell_s4_3a","spell_s4_3a","spell_s4_3b","spell_s4_3b")
-spell_set_life(1100,170);
+spell_set_life(1200,170);
 spell_set_time(45,false,95);
 
 boss_movement_goto(room_width / 2, 100,5);
@@ -33,5 +33,5 @@ switch(global.difficulty)
 
 
 
-familiar_wait_death = 240;
+familiar_wait_death = 200;
 //familiar giving info in obj_enemy detsroy event

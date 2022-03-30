@@ -3,6 +3,8 @@
 
 // Inherit the parent event
 event_inherited();
-
-boss_movement_random(5,1,1);// for sanae's spell
+if(global.game_type == GAME_FULL)
+{
+	boss_movement_random(5,1,1);// for sanae's spell
+}
 

@@ -4,11 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
-spell_set_life(900,180);
+spell_set_life(920,180);
 spell_set_time(40,false,90)
 
-dir_dan = 1;
+act_dir = 1;
 
-wave_nbr = 0;
-
-angle_shoot = 1000;

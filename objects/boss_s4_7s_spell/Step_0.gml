@@ -54,7 +54,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var spawn_time = 65;
 			var rice_accel = 0.02;
 			
-			var rock_nbr = 9;
+			var rock_nbr = 10;
 			var rock_wait = 66;
 			var rock_spd = 2;
 		break;
@@ -72,7 +72,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var spawn_time = 65;
 			var rice_accel = 0.02;
 			
-			var rock_nbr = 12;
+			var rock_nbr = 14;
 			var rock_wait = 60;
 			var rock_spd = 2.2;
 		break;
@@ -93,7 +93,7 @@ if(global.gp_active) and (spell_wait == 0)
 		rice_time_list[i] += 1;
 		if(rice_time_list[i] < spawn_time)
 		{
-			if (rice_time_list[i] % rice_wait == 0)
+			if (rice_time_list[i] % rice_wait == 1)
 			{
 				rice_angle_list[i] += rice_angle_plus * rice_dir_list[i];
 				rice_dist_list[i] += rice_dist;
