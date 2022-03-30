@@ -7,69 +7,73 @@ if(global.gp_active) and (spell_wait == 0)
 		case 0:
 			var rice_wave = 110;
 			var rice_wait = 9;
-			var rice_nbr = 8;
-			var rice_spd = 2;
+			var rice_nbr = 5;
+			var rice_spd = 1.5;
 			var rice_dist = 19;
 			var rice_dist_min = 20;
 			var rice_angle_plus = 5;
+			var rice_angle_off_plus = 0.1;
 			
 			var wait_move = 15;
 			var spawn_time = 65;
 			var rice_accel = 0.02;
 			
-			var rock_nbr = 6;
-			var rock_wait = 90;
-			var rock_spd = 1.8;
+			var rock_nbr = 5;
+			var rock_wait = 100;
+			var rock_spd = 1.5;
 		break;
 		case 1:
 			var rice_wave = 110;
-			var rice_wait = 6;
-			var rice_nbr = 14;
-			var rice_spd = 2.5;
+			var rice_wait = 7;
+			var rice_nbr = 7;
+			var rice_spd = 1.8;
 			var rice_dist = 17;
 			var rice_dist_min = 20;
 			var rice_angle_plus = 5;
+			var rice_angle_off_plus = 0.1;
 			
 			var wait_move = 15;
 			var spawn_time = 65;
 			var rice_accel = 0.02;
 			
-			var rock_nbr = 10;
-			var rock_wait = 70;
+			var rock_nbr = 7;
+			var rock_wait = 72;
 			var rock_spd = 2;
 		break;
 		case 2:
 			var rice_wave = 100;
-			var rice_wait = 5;
-			var rice_nbr = 15;
-			var rice_spd = 3;
-			var rice_dist = 15;
+			var rice_wait = 6;
+			var rice_nbr = 9;
+			var rice_spd = 1.9;
+			var rice_dist = 16;
 			var rice_dist_min = 20;
-			var rice_angle_plus = 4.8;
+			var rice_angle_plus = 4.7;
+			var rice_angle_off_plus = 0.8;
 			
 			var wait_move = 15;
 			var spawn_time = 65;
 			var rice_accel = 0.02;
 			
-			var rock_nbr = 13;
-			var rock_wait = 60;
+			var rock_nbr = 9;
+			var rock_wait = 66;
 			var rock_spd = 2;
 		break;
 		case 3:
 			var rice_wave = 90;
 			var rice_wait = 5;
-			var rice_nbr = 16;
-			var rice_spd = 3;
+			var rice_nbr = 10;
+			var rice_spd = 2;
 			var rice_dist = 15;
 			var rice_dist_min = 20;
-			var rice_angle_plus = 3.9;
+			var rice_angle_plus = 5;
+			var rice_angle_off_plus = 0.1;
 			
 			var wait_move = 15;
 			var spawn_time = 65;
 			var rice_accel = 0.02;
 			
-			var rock_nbr = 15;
-			var rock_wait = 50;
+			var rock_nbr = 12;
+			var rock_wait = 60;
 			var rock_spd = 2.2;
 		break;
 	}
@@ -110,8 +114,10 @@ if(global.gp_active) and (spell_wait == 0)
 					var x_aim = obj_boss.x + lengthdir_x(rice_dist_list[i] - rice_dist, rice_angle_list[i] - rice_angle_plus * rice_dir_list[i] + r);
 					var y_aim = obj_boss.y + lengthdir_y(rice_dist_list[i] - rice_dist, rice_angle_list[i] - rice_angle_plus * rice_dir_list[i] + r);
 					var ang = find_angle(x_pos,y_pos,x_aim,y_aim)
-					shoot(DAN_RICE,col,x_pos,y_pos,ang,0,sfx_shot2,3);
+					shoot(DAN_STARBIG,col,x_pos,y_pos,ang + rice_angle_off,0,sfx_shot2,3);
 				}
+				
+				rice_angle_off += rice_angle_off_plus * rice_dir_list[i];
 			}
 			
 		}
@@ -142,6 +148,8 @@ if(global.gp_active) and (spell_wait == 0)
 				array_delete(rice_time_list,i,1)
 				array_delete(rice_dist_list,i,1)
 				array_delete(rice_dir_list,i,1)
+				
+				rice_angle_off = 0;
 			}
 		}
 		
@@ -163,7 +171,7 @@ if(global.gp_active) and (spell_wait == 0)
 	//rock
 	if(step % rock_wait == 0)
 	{
-		shoot_ring(DAN_STARBIG,7,rock_nbr,obj_boss.x,obj_boss.y,999,rock_spd,sfx_shot1,6);
+		shoot_ring(DAN_BUBBLE,7,rock_nbr,obj_boss.x,obj_boss.y,999,rock_spd,sfx_shot1,6);
 	}
 	
 }

@@ -21,3 +21,5 @@ rice_dir_list = [];
 rice_wave_dir = -1;
 
 laser_dir = 1;
+
+rice_angle_off = 0;
