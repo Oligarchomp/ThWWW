@@ -39,10 +39,10 @@ if(global.gp_active)
 		break;
 	}
 	
-	var familiar_life = 20;
+	var familiar_life = 25;
 	var familiar_lenght = 180;
 	var familiar_wait = 38;
-	var active_lenght = time_active - 200;
+	var active_lenght = time_active - 230;
 	var x_min = 50;
 	var x_git = 300;
 	var y_min = 50;
@@ -63,10 +63,22 @@ if(global.gp_active)
 			{
 				var x_pos = x_min + rng(x_git,false,6);
 				var y_pos = y_min + rng(y_git,false,6);
-				play_sound(sfx_familiar_spawn,1,false);
-				create_enemy(EN_FAMILIAR,x_pos,y_pos,familiar_life,3,0,0);
+				
+				instance_create_depth(x_pos,y_pos,global.boss_depth,obj_familiar_spawn);
 			}
 		}
+		
+		with(obj_familiar_spawn)
+		{
+			if(ready_spawn)
+			{
+				play_sound(sfx_familiar_spawn,1,false);
+				create_enemy(EN_FAMILIAR,x,y,familiar_life,3,0,0);
+				
+				instance_destroy();
+			}
+		}
+		
 	
 		with(obj_enemy3)
 		{

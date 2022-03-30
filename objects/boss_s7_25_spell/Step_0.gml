@@ -58,6 +58,7 @@ if(global.gp_active) and (spell_wait == 0)
 				{
 					var aim = find_angle(obj_player.x,obj_player.y,obj_boss.x,obj_boss.y);
 					var inst = shoot(DAN_HEART,6,obj_boss.x,obj_boss.y,aim + 180,0,sfx_shot1,4);
+					inst.angle = aim + 180 //rng consistancy
 					inst.dist = sqrt(sqr(obj_boss.x - obj_player.x) + sqr(obj_boss.y - obj_player.y));
 					inst.x_ref = obj_player.x;
 					inst.y_ref = obj_player.y;

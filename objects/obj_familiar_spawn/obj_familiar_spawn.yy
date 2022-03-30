@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_boom",
-    "path": "sprites/spr_boom/spr_boom.yy",
+    "name": "spr_familiar",
+    "path": "sprites/spr_familiar/spr_familiar.yy",
   },
   "solid": false,
   "visible": true,
@@ -21,17 +21,18 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Effect",
-    "path": "folders/Objects/Effect.yy",
+    "name": "Stage5",
+    "path": "folders/Objects/STAGES/Stage5.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_boom",
+  "name": "obj_familiar_spawn",
   "tags": [],
   "resourceType": "GMObject",
 }

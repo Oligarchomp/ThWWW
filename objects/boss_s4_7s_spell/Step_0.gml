@@ -19,7 +19,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var rock_nbr = 6;
 			var rock_wait = 90;
-			var rock_spd = 2;
+			var rock_spd = 1.8;
 		break;
 		case 1:
 			var rice_wave = 110;
@@ -70,7 +70,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var rock_nbr = 15;
 			var rock_wait = 50;
-			var rock_spd = 2.5;
+			var rock_spd = 2.2;
 		break;
 	}
 	//RICE

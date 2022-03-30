@@ -370,6 +370,7 @@
     {"id":{"name":"obj_spell_bg_pale","path":"objects/obj_spell_bg_pale/obj_spell_bg_pale.yy",},"order":3,},
     {"id":{"name":"spr_pale_art","path":"sprites/spr_pale_art/spr_pale_art.yy",},"order":5,},
     {"id":{"name":"spr_borderline","path":"sprites/spr_borderline/spr_borderline.yy",},"order":4,},
+    {"id":{"name":"obj_familiar_spawn","path":"objects/obj_familiar_spawn/obj_familiar_spawn.yy",},"order":20,},
     {"id":{"name":"spr_bg_reverence","path":"sprites/spr_bg_reverence/spr_bg_reverence.yy",},"order":0,},
     {"id":{"name":"spr_feza_move_left","path":"sprites/spr_feza_move_left/spr_feza_move_left.yy",},"order":1,},
     {"id":{"name":"bg_s5","path":"objects/bg_s5/bg_s5.yy",},"order":0,},

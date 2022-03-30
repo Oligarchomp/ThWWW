@@ -171,6 +171,7 @@ if(global.gp_active) and (spell_wait == 0)
 			if(state_time == aim_wave_wait)
 			{
 				state = 0;
+				rock_id = rng(rock_nbr,true,1);
 			}
 		break;
 	}

@@ -15,8 +15,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var water_x_accel = 0.01;
 			var water_spd_shot_min = 1;
 			var water_spd_shot_git = 3;
-			var water_y_grav = 3;
-			var water_x_grav = -1;
+			var water_y_grav = 2.4;
+			var water_x_grav = -0.8;
 			var water_wait = 175;
 			var water_open = 70;
 			
@@ -24,7 +24,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var metal_nbr = 8;
 			var metal_spd_shot = 6;
 			var metal_deccel = 0.1;
-			var metal_spd_aim = 3;
+			var metal_spd_aim = 2.6;
 			
 			var earth_wait = 161;
 			var earth_nbr_wall = 13;
@@ -48,8 +48,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var water_x_accel = 0.01;
 			var water_spd_shot_min = 1;
 			var water_spd_shot_git = 3;
-			var water_y_grav = 3;
-			var water_x_grav = -1;
+			var water_y_grav = 2.7;
+			var water_x_grav = -0.9;
 			var water_wait = 170;
 			var water_open = 70;
 			
@@ -57,7 +57,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var metal_nbr = 8;
 			var metal_spd_shot = 6;
 			var metal_deccel = 0.1;
-			var metal_spd_aim = 3;
+			var metal_spd_aim = 2.6;
 			
 			var earth_wait = 141;
 			var earth_nbr_wall = 15;
@@ -81,36 +81,36 @@ if(global.gp_active) and (spell_wait == 0)
 			var water_x_accel = 0.01;
 			var water_spd_shot_min = 1;
 			var water_spd_shot_git = 3;
-			var water_y_grav = 3;
-			var water_x_grav = -1;
-			var water_wait = 170;
+			var water_y_grav = 2.7;
+			var water_x_grav = -0.9;
+			var water_wait = 168;
 			var water_open = 70;
 			
-			var metal_wait = 145;
+			var metal_wait = 140;
 			var metal_nbr = 8;
 			var metal_spd_shot = 6;
 			var metal_deccel = 0.1;
-			var metal_spd_aim = 3;
+			var metal_spd_aim = 2.6;
 			
-			var earth_wait = 141;
+			var earth_wait = 140;
 			var earth_nbr_wall = 15;
 			var earth_nbr_in = 5;
 			var earth_dist_in = 1;
 			var earth_spd = 1.5;
 			
-			var fire_wait = 150;
+			var fire_wait = 145;
 			var fire_spd = 0.9;
 			var fire_spd_git = 1.5;
 			var fire_nbr = 38;
 			
-			var sun_wait = 160;
+			var sun_wait = 155;
 			var sun_ring = 12;
 			var sun_row = 4;
 			var sun_spd_min = 2.5;
 			var sun_spd_max = 4;
 			
 			var moon_wait = 130;
-			var moon_nbr = 24;
+			var moon_nbr = 23;
 			var moon_spd = 1.5;
 		break;
 		case 3:
@@ -124,36 +124,36 @@ if(global.gp_active) and (spell_wait == 0)
 			var water_x_accel = 0.01;
 			var water_spd_shot_min = 1;
 			var water_spd_shot_git = 3;
-			var water_y_grav = 3;
-			var water_x_grav = -1;
-			var water_wait = 170;
+			var water_y_grav = 2.7;
+			var water_x_grav = -0.9;
+			var water_wait = 160;
 			var water_open = 70;
 			
-			var metal_wait = 145;
+			var metal_wait = 137;
 			var metal_nbr = 12;
 			var metal_spd_shot = 6;
 			var metal_deccel = 0.1;
-			var metal_spd_aim = 3;
+			var metal_spd_aim = 2.6;
 			
-			var earth_wait = 141;
+			var earth_wait = 135;
 			var earth_nbr_wall = 20;
 			var earth_nbr_in = 5;
 			var earth_dist_in = 1;
 			var earth_spd = 1.5;
 			
-			var fire_wait = 140;
+			var fire_wait = 132;
 			var fire_spd = 0.7;
 			var fire_spd_git = 2;
 			var fire_nbr = 45;
 			
-			var sun_wait = 150;
+			var sun_wait = 145;
 			var sun_ring = 15;
 			var sun_row = 4;
 			var sun_spd_min = 2.5;
 			var sun_spd_max = 4;
 			
-			var moon_wait = 130;
-			var moon_nbr = 30;
+			var moon_wait = 125;
+			var moon_nbr = 26;
 			var moon_spd = 1.5;
 		break;
 	}

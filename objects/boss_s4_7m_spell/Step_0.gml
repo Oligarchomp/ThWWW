@@ -21,7 +21,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var wave_wait = 130;
 			
 			var star_ring = 19;
-			var star_spd = 3.5;
+			var star_spd = 3.6;
 			var star_wait = 30;
 		break;
 		case 1:
@@ -41,7 +41,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var wave_wait = 110;
 			
 			var star_ring = 30;
-			var star_spd = 4.2;
+			var star_spd = 4.6;
 			var star_wait = 20;
 		break;
 		case 2:
@@ -61,8 +61,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var wave_wait = 100;
 			
 			var star_ring = 32;
-			var star_spd = 4.8;
-			var star_wait = 17;
+			var star_spd = 5.2;
+			var star_wait = 16;
 		break;
 		case 3:
 			var spark_nbr = 10;
@@ -81,8 +81,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var wave_wait = 90;
 			
 			var star_ring = 36;
-			var star_spd = 5.6;
-			var star_wait = 14;
+			var star_spd = 5.8;
+			var star_wait = 13;
 		break;
 	}
 	var charge_plus = 50;

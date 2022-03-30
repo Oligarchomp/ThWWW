@@ -125,14 +125,12 @@ if(global.gp_active)
 						
 						var aim = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y);
 						
-						for(var i = 0; i < 360; i += 360 / anchor_nbr)
-						{
-							boss_charge_row(obj_boss.x,obj_boss.y,aim + i,9,31,3)
-						}
-						
 						with(obj_danmaku8)
 						{
-							state = 100;
+							if(state == 0)
+							{
+								state = 99;
+							}
 							is_cancelable = false;
 						}
 					}
@@ -188,6 +186,12 @@ if(global.gp_active)
 							angle -= ang_plus
 							spd = spd_to;
 						}
+					break;
+					case 99: //anchor_spawn
+						state += 1;
+						is_cancelable = false;
+						
+						boss_charge_row(obj_boss.x,obj_boss.y,angle,9,31,3)
 					break;
 					case 100://anchor
 						spd = goto_value(spd,anchor_spd_max,anchor_accel);

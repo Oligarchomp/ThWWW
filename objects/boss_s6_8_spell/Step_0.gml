@@ -8,10 +8,10 @@ if(global.gp_active) and (spell_wait == 0)
 			var anchor_nbr = 8;
 			var anchor_spd = 6;
 			
-			var mentos_wait = 7;
-			var mentos_spd_final = 1.6;
-			var mentos_accel = 0.015;
-			var mentos_angle_plus = 30;
+			var mentos_wait = 4;
+			var mentos_spd_final = 1.5;
+			var mentos_accel = 0.01;
+			var mentos_angle_plus = 40;
 			
 			var arc_nbr = 7;
 			var arc_row = 2;
@@ -24,10 +24,10 @@ if(global.gp_active) and (spell_wait == 0)
 			var anchor_nbr = 10;
 			var anchor_spd = 6;
 			
-			var mentos_wait = 6;
-			var mentos_spd_final = 1.8;
-			var mentos_accel = 0.015;
-			var mentos_angle_plus = 20;
+			var mentos_wait = 4;
+			var mentos_spd_final = 1.65;
+			var mentos_accel = 0.012;
+			var mentos_angle_plus = 30;
 			
 			var arc_nbr = 9;
 			var arc_row = 2;
@@ -40,10 +40,10 @@ if(global.gp_active) and (spell_wait == 0)
 			var anchor_nbr = 11;
 			var anchor_spd = 6;
 			
-			var mentos_wait = 5;
-			var mentos_spd_final = 1.8;
+			var mentos_wait = 4;
+			var mentos_spd_final = 1.7;
 			var mentos_accel = 0.015;
-			var mentos_angle_plus = 20;
+			var mentos_angle_plus = 25;
 			
 			var arc_nbr = 11;
 			var arc_row = 2;
@@ -195,14 +195,17 @@ if(global.gp_active) and (spell_wait == 0)
 					}
 				}
 				
-				if(state_time % mentos_wait == 0)
+				if(!is_spawning)
 				{
-					var inst = shoot(DAN_MENTOS,7,x,y,angle_mentos,0,noone,4);
-					inst.angle_ref = angle + 180;
-					inst.dist_ref = sqrt(sqr(inst.x - x) + sqr(inst.y - y));
-					inst.is_cancelable = false;
+					if(state_time % mentos_wait == 0)
+					{
+						var inst = shoot(DAN_MENTOS,7,x,y,angle_mentos,0,noone,4);
+						inst.angle_ref = angle + 180;
+						inst.dist_ref = sqrt(sqr(inst.x - x) + sqr(inst.y - y));
+						inst.is_cancelable = false;
 					
-					angle_mentos += mentos_angle_plus * dan_dir;
+						angle_mentos += mentos_angle_plus * dan_dir;
+					}
 				}
 			break;
 			case 2:
