@@ -14,9 +14,9 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var rock_side_off = 258;
 			
-			var ring_nbr = 26;
+			var ring_nbr = 24;
 			var ring_spd_shoot = 7;
-			var ring_spd_final = 1.8;
+			var ring_spd_final = 1.5;
 			var ring_accel = 0.1;
 			
 			var wave_wait = 130;
@@ -31,9 +31,9 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var rock_side_off = 258;
 			
-			var ring_nbr = 32;
+			var ring_nbr = 30;
 			var ring_spd_shoot = 7;
-			var ring_spd_final = 1.8;
+			var ring_spd_final = 1.5;
 			var ring_accel = 0.1;
 			
 			var wave_wait = 125;
@@ -48,9 +48,9 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var rock_side_off = 258;
 			
-			var ring_nbr = 36;
+			var ring_nbr = 34;
 			var ring_spd_shoot = 7;
-			var ring_spd_final = 1.8;
+			var ring_spd_final = 1.5;
 			var ring_accel = 0.1;
 			
 			var wave_wait = 120;
@@ -67,7 +67,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var ring_nbr = 36;
 			var ring_spd_shoot = 7;
-			var ring_spd_final = 1.8;
+			var ring_spd_final = 1.5;
 			var ring_accel = 0.1;
 			
 			var wave_wait = 120;

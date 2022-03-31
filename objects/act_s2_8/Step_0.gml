@@ -108,10 +108,10 @@ if(global.gp_active)
 					{
 						for(var i = 0; i < crab_shoot_nbr; i += 1)
 						{
-							var inst = shoot(DAN_BALL,6,x,y,60 + rng(60,false,i),1 + rng(1,false,i + 1),sfx_shot3,3);
+							var inst = shoot(DAN_BALL,6,x,y,60 + rng(60,false,i),0.9 + rng(1,false,i + 1),sfx_shot3,3);
 							inst.pos_type = POS_SP;
-							inst.y_grav_accel = 0.05;
-							inst.y_grav_max = 6;	
+							inst.y_grav_accel = 0.04;
+							inst.y_grav_max = 5.5;	
 						}
 					}
 					

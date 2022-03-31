@@ -35,8 +35,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var wait_knife = 19;
 			var knife_nbr_row = 4;
 			var knife_nbr_arc = 4;
-			var knife_spd_min = 3;
-			var knife_spd_max = 5.5;
+			var knife_spd_min = 2.5;
+			var knife_spd_max = 5.2;
 			var knife_dist = 10
 			
 			var angle_shoot_plus = knife_dist * knife_nbr_arc;
@@ -47,8 +47,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var wait_knife = 17;
 			var knife_nbr_row = 5;
 			var knife_nbr_arc = 5;
-			var knife_spd_min = 3;
-			var knife_spd_max = 6;
+			var knife_spd_min = 2.7;
+			var knife_spd_max = 5.6;
 			var knife_dist = 10
 			
 			var angle_shoot_plus = knife_dist * knife_nbr_arc;

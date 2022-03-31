@@ -2,11 +2,11 @@
 // You can write your code in this editor
 if(global.gp_active)
 {
-	var mentos_wait = 9;
+	var mentos_wait = 12;
 	var mentos_ring = 7;
 	var mentos_spd_shot = 8;
 	var mentos_deccel = 0.2;
-	var mentos_spd_final = 3;
+	var mentos_spd_final = 2.4;
 	var mentos_accel = 0.1;
 	var mentos_spin = 8;
 	var mentos_angle_plus = -30;

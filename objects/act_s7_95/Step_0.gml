@@ -3,13 +3,13 @@
 if(global.gp_active)
 {
 
-	var bubble_arc = 8;
+	var bubble_arc = 6;
 	var bubble_row = 5;
 	var bubble_dist = 8;
 	var bubble_spd_min = 1.5;
 	var bubble_spd_max = 6;
 	
-	var mentos_ring = 38;
+	var mentos_ring = 30;
 	var mentos_row = 4;
 	var mentos_spd_min = 1.5;
 	var mentos_spd_max = 5.5;
