@@ -216,6 +216,18 @@ if (global.gp_active)
 				
 					x = x_origin;
 					y = y_origin;
+					
+					with(obj_option)
+					{
+						x = other.x;
+						y = other.y;
+						
+						for(var i = 1; i < 5; i += 1)
+						{
+							x_pos[i] = 0;
+							y_pos[i] = 0;
+						}
+					}
 				
 					state = 0;
 				

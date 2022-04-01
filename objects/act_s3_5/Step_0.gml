@@ -11,7 +11,7 @@ if(global.gp_active)
 			var bubble_arc = 1;
 			var bubble_dist = 40;
 			var bubble_spd_shoot = 11;
-			var bubble_spd_final = 3;
+			var bubble_spd_final = 2;
 			var bubble_deccel = 0.35;
 			
 			var ball_row = 3;
@@ -24,11 +24,11 @@ if(global.gp_active)
 			var bubble_arc = 3;
 			var bubble_dist = 40;
 			var bubble_spd_shoot = 12;
-			var bubble_spd_final = 3.2;
+			var bubble_spd_final = 2.5;
 			var bubble_deccel = 0.35;
 			
 			var ball_row = 4;
-			var ball_ring = 13;
+			var ball_ring = 12;
 			var ball_spd_min = 1.3;
 			var ball_spd_max = 3.2;
 		break;
@@ -37,20 +37,20 @@ if(global.gp_active)
 			var bubble_arc = 3;
 			var bubble_dist = 34;
 			var bubble_spd_shoot = 13.5;
-			var bubble_spd_final = 4;
+			var bubble_spd_final = 2.9;
 			var bubble_deccel = 0.35;
 			
-			var ball_row = 5;
-			var ball_ring = 18;
+			var ball_row = 4;
+			var ball_ring = 16;
 			var ball_spd_min = 1.5;
-			var ball_spd_max = 3.4;
+			var ball_spd_max = 3.2;
 		break;
 		case 3:
 			var bubble_wait = 10;
 			var bubble_arc = 5;
 			var bubble_dist = 30;
 			var bubble_spd_shoot = 13.5;
-			var bubble_spd_final = 4;
+			var bubble_spd_final = 3.1;
 			var bubble_deccel = 0.35;
 			
 			var ball_row = 5;

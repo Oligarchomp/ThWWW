@@ -9,7 +9,7 @@ spell_set_name("spell_s7_9","spell_s7_9","spell_s7_9","spell_s7_9")
 spell_set_life(1000,200);
 spell_set_time(60.5,true,90);
 
-boss_movement_goto(room_width / 2, 100,5);
+boss_movement_goto(room_width / 2, room_height / 2,5);
 
 
 

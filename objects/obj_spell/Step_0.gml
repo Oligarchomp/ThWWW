@@ -221,6 +221,10 @@ if (global.gp_active)
 			{
 				var inst = instance_create_depth(x,y,0,obj_score);
 				inst.bonus = plus;
+				if(plus == 8000)
+				{
+					inst.max_value = true;	
+				}
 				
 				total += plus;
 				plus = goto_value(plus,8000,20);

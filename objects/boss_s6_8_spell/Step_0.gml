@@ -31,8 +31,8 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var arc_nbr = 9;
 			var arc_row = 2;
-			var arc_spd_min = 0.8;
-			var arc_spd_max = 1.7;
+			var arc_spd_min = 0.7;
+			var arc_spd_max = 1.6;
 			
 			var wave_wait = 180;
 		break;
@@ -41,14 +41,14 @@ if(global.gp_active) and (spell_wait == 0)
 			var anchor_spd = 6;
 			
 			var mentos_wait = 4;
-			var mentos_spd_final = 1.7;
-			var mentos_accel = 0.015;
+			var mentos_spd_final = 1.6;
+			var mentos_accel = 0.013;
 			var mentos_angle_plus = 25;
 			
 			var arc_nbr = 11;
 			var arc_row = 2;
-			var arc_spd_min = 0.9;
-			var arc_spd_max = 1.8;
+			var arc_spd_min = 0.8;
+			var arc_spd_max = 1.7;
 			
 			var wave_wait = 160;
 		break;
@@ -57,15 +57,15 @@ if(global.gp_active) and (spell_wait == 0)
 			var anchor_spd = 6;
 			
 			var mentos_wait = 4;
-			var mentos_spd_final = 1.8;
-			var mentos_accel = 0.015;
+			var mentos_spd_final = 1.7;
+			var mentos_accel = 0.013;
 			var mentos_angle_plus = 20;
 		
 			
 			var arc_nbr = 12;
 			var arc_row = 2;
-			var arc_spd_min = 0.9;
-			var arc_spd_max = 1.8;
+			var arc_spd_min = 0.8;
+			var arc_spd_max = 1.7;
 			
 			var wave_wait = 150;
 		break;
