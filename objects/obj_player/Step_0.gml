@@ -18,7 +18,7 @@ if (global.gp_active)
 	}
 
 
-	if(state == 0)//before so you can die oon the same frame
+	if(state == 0)//before so you can die on the same frame
 	{
 		if (bomb_time == 0) and (!in_dialogue)
 		{

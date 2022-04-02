@@ -118,7 +118,7 @@ if(global.gp_active)
 }	
 
 
-if (global.pause_pressed)
+if (global.pause_pressed) and (pause_lockout == 0)
 {
 	if(global.gp_active)
 	{
@@ -131,6 +131,8 @@ if (global.pause_pressed)
 		level = 0;
 	}
 }
+
+pause_lockout = goto_value(pause_lockout,0,1);
 
 
 if(global.life < 0) and (pause_state == 0)
@@ -200,6 +202,9 @@ switch(pause_state)
 			}
 			else
 			{
+				//not here anymore, 'cause fails to save an input pressed on the
+				//same frame as a pause
+				/*
 				mem_shot_down = global.shot_down;
 				mem_focused_down = global.focused_down;
 				mem_bomb_down = global.bomb_down;
@@ -208,6 +213,7 @@ switch(pause_state)
 				mem_left_down = global.left_down;
 				mem_down_down = global.down_down;
 				mem_up_down = global.up_down;
+				*/
 				
 				if(pause_type == PAUSE_GAMEOVER) or (pause_type == PAUSE_END)
 				{
@@ -233,6 +239,8 @@ switch(pause_state)
 				continue_song = false;
 				set_bgm(-1);//-1 means restarting remembered song	
 			}
+			
+			pause_lockout = 10;
 			
 			pause_state = 0;
 			pause_type = PAUSE_MANUAL;
@@ -352,6 +360,16 @@ if(global.gp_active)
 	
 	if(global.play_type == PLAY_MANUAL)
 	{
+		// for pausing
+		mem_shot_down = global.shot_down;
+		mem_focused_down = global.focused_down;
+		mem_bomb_down = global.bomb_down;
+
+		mem_right_down = global.right_down;
+		mem_left_down = global.left_down;
+		mem_down_down = global.down_down;
+		mem_up_down = global.up_down;
+		
 		//replay
 		var rep = ""
 		
@@ -418,18 +436,7 @@ if(global.gp_active)
 					break;
 				}
 			}
-			/*
-			global.shot_down = string_count("a",input) == 1 ? !global.shot_down : global.shot_down;
-			global.shot_pressed = string_count("A",input) == 1;
-			global.bomb_down = string_count("b",input) == 1 ? !global.bomb_down : global.bomb_down;
-			global.bomb_pressed = string_count("B",input) == 1;
-			global.focused_down = string_count("x",input) == 1 ? !global.focused_down : global.focused_down;
-			global.focused_pressed = string_count("X",input) == 1;
-			global.up_down = string_count("u",input) == 1 ? !global.up_down : global.up_down;
-			global.down_down = string_count("d",input) == 1 ? !global.down_down : global.down_down;
-			global.left_down = string_count("l",input) == 1 ? !global.left_down : global.left_down;
-			global.right_down = string_count("r",input) == 1 ? !global.right_down : global.right_down;
-			*/
+			
 			next_input_time_index += 1;
 		}
 		

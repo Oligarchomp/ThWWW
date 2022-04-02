@@ -348,3 +348,5 @@ yingying_rot_spd = 0;
 step = 0;
 
 old_fps = 60;
+
+pause_lockout = 0;
