@@ -86,21 +86,23 @@ if(global.gp_active) and (spell_wait == 0)
 					//preparing claws
 					//left
 					shoot_row(DAN_BUBBLE,6,claw_lenght,x_claw_left,y_claw_left,90,1,claw_lenght,noone,4);
-					shoot_row(DAN_BUBBLE,6,claw_lenght - 2,x_claw_left,y_claw_left,110,1,claw_lenght - 2,noone,4);
+					shoot_row(DAN_BUBBLE,6,claw_lenght - 2,x_claw_left,y_claw_left,100,1,claw_lenght - 1.5,noone,4);
+					shoot_row(DAN_BUBBLE,6,claw_lenght - 4,x_claw_left,y_claw_left,110,1,claw_lenght - 3,noone,4);
 					
 					shoot_row(DAN_BUBBLE,6,9,x_claw_left,y_claw_left,0,1,9,noone,5);
 					shoot_row(DAN_BUBBLE,6,3,x_claw_left,y_claw_left,240,1,3,noone,5);
 					
 					//right
 					shoot_row(DAN_BUBBLE,6,claw_lenght,x_claw_right,y_claw_right,90,1,claw_lenght,noone,4);
-					shoot_row(DAN_BUBBLE,6,claw_lenght - 2,x_claw_right,y_claw_right,70,1,claw_lenght - 2,noone,4);
+					shoot_row(DAN_BUBBLE,6,claw_lenght - 2,x_claw_right,y_claw_right,80,1,claw_lenght - 1.5,noone,4);
+					shoot_row(DAN_BUBBLE,6,claw_lenght - 4,x_claw_right,y_claw_right,70,1,claw_lenght - 3,noone,4);
 					
 					shoot_row(DAN_BUBBLE,6,9,x_claw_right,y_claw_right,180,1,9,noone,5);
 					shoot_row(DAN_BUBBLE,6,3,x_claw_right,y_claw_right,-60,1,3,noone,5);
 					
 					with(obj_danmaku4)
 					{
-						x_offscreen = 250;
+						x_offscreen = 350;
 						is_cancelable = false;
 					}
 					with(obj_danmaku5)
