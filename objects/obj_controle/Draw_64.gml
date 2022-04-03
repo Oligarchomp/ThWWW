@@ -7,6 +7,9 @@ if(global.rng_patch)
 	draw_text(830,5,"RNG PATCH")	
 }
 
-draw_set_font(font_replay);
+if(room != room_credit)
+{
+	draw_set_font(font_replay);
 
-draw_text(952 - string_width(version),515,version);
+	draw_text(952 - string_width(version),515,version);
+}

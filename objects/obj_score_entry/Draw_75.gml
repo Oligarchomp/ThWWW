@@ -50,7 +50,7 @@ switch(state)
 	case 4: //results
 		draw_set_font(font_main);
 		var x_ref = 480;
-		var x_ref2 = 570
+		var x_ref2 = 590
 		var y_ref = 200;
 		var y_dist = 40;
 		var w = c_white;
@@ -82,7 +82,14 @@ switch(state)
 		draw_text_color(x_ref - string_width(text),y_ref,text,w,w,w,w,result_alpha);
 		
 		var text = add_zero(string(global.score),global.score_lenght);
+		var nbr = 0;
+		for(var i = 2; i < 10; i += 3)
+		{
+			text = string_insert(".",text,i + nbr);
+			nbr += 1;
+		}
 		draw_text_color(x_ref2 - string_width(text) / 2,y_ref,text,w,w,w,w,result_alpha);
+		
 		
 		
 		var text = get_text("result_diff")

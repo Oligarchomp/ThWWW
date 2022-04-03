@@ -16,8 +16,14 @@ else
 	state_time += 1;
 }
 
-
-
+if(global.shot_down)
+{
+	room_speed = 500;
+}
+else
+{
+	room_speed = 60;	
+}
 switch(state)
 {
 	case 0: // fan made project shrine maiden
@@ -194,7 +200,7 @@ switch(state)
 					wait = 10000;	
 				}
 			break;
-			case 310:
+			case 330:
 				state += 1;
 				done = true;
 			break;

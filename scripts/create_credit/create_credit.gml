@@ -9,7 +9,7 @@ function create_credit(xx,yy,text,spawn_type){
 	inst.spawn_type = spawn_type;
 	inst.str = text;
 	
-	inst.angle = spawn_type ? 130 : 0;
+	inst.angle = spawn_type ? 125 : 0;
 	
 	return inst;
 }
