@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
 global.gp_active = true; //for music, mostly
 
 if(global.need_intro) and (!global.debug)
@@ -1292,6 +1293,12 @@ menu =
 				comment : get_text("mus_com_end"),
 				action : MENU_MUSIC,
 				music : noone,
+			},
+			{
+				title : get_text("mus_room_credit"),
+				comment : get_text("mus_com_credit"),
+				action : MENU_MUSIC,
+				music : mus_credit,
 			},
 			{
 				title : get_text("mus_room_score"),

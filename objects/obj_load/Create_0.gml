@@ -93,7 +93,7 @@ instance_create_depth(0,0,0,obj_bgm);
 global.need_intro = true;
 
 //room_goto(room_score);
-room_goto(room_main);
+room_goto(room_credit);
 //room_goto(room_gp);
 
 global.game_x_offset =  156;

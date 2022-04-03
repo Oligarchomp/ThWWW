@@ -40,6 +40,7 @@ mus_room_b6 = From Beginning to End ~ Drunken Prophet
 mus_room_s7 = Nameless Discord
 mus_room_b7 = nothing
 mus_room_end = nothing
+mus_room_credit = nameless for now
 mus_room_score = Player's Score
 
 music_comment = Music Comment:
@@ -60,6 +61,7 @@ mus_com_b6 = Composition: sincx
 mus_com_s7 = Composition: Spectral Nexus
 mus_com_b7 = comment
 mus_com_end = comment
+mus_com_credit = Composition: sincx
 mus_com_score = Composition: Kaioshi Kojima
 
 
@@ -1079,11 +1081,40 @@ com_s7_9 = The universe as a pond, a frog resting in its middle.$An epitome of a
 com_s7_10 = God is leaving now.$The show is comming to its end.$Should we call for an encore?
 
 
-
-
-
-
-
+credit_touhou1 = Touhou Nemuri Sekai ~ Wonderful Waking World
+credit_touhou2 = Fan-made Project$Shrine Maiden
+credit_touhou3 = 00/00/2022
+credit_line = _____________________
+credit_zun1 = THE TOUHOU PROJECT:
+credit_zun2 = ZUN and Team Shanghai Alice
+credit_oligar1 = ART
+credit_oligar2 = PROGRAMMING
+credit_oligar3 = DANMAKU
+credit_oligar4 = STORY
+credit_oligar5 = CHARACTER DESIGN (That isn't Yuuto Ichika)
+credit_oligar6 = Oligarchomp
+credit_music1 = MUSIC:
+credit_music2 = Kaioshi Kojima
+credit_music3 = Sozoro Namimo
+credit_music4 = Princess Sylvysprit
+credit_music5 = Armand
+credit_music6 = Jani
+credit_music7 = Aka Kyuketsuki
+credit_music8 = Spectral Nexus
+credit_music9 = SlowBro
+credit_music10 = sincx
+credit_music11 = Featuring Arrangements of Toby Fox's Work
+credit_character1 = APPLE GIRLINGTON'S$ORIGINAL CONCEPT
+credit_character2 = YUUTO ICHIKA
+credit_character3 = Toby Fox
+credit_character4 = Koshi L
+credit_playtest1 = PLAYTESTER:
+credit_support1 = ADDITIONAL SUPPORT:
+credit_support2 = Hyuponia - Japanese Help
+credit_support3 = Aka Kyuketsuki - English Help (DEMO)
+credit_thanks1 = SPECIAL THANKS
+credit_you1 = AND YOU!
+credit_you2 = THANKS FOR PLAYING!
 
 
 

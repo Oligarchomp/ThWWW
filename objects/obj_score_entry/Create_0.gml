@@ -3,7 +3,7 @@
 
 if(room == room_score)
 {
-	instance_create_depth(0,0,0,obj_score_fadein);
+	instance_create_depth(0,0,depth - 10,obj_score_fadein);
 	set_bgm(mus_score);
 }
 

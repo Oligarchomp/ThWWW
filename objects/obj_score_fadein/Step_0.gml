@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-alpha = goto_value(alpha,0,0.05);
+alpha = goto_value(alpha,0,0.02);
 
 if(alpha == 0)
 {
