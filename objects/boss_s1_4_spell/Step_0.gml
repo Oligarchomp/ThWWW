@@ -45,7 +45,7 @@ if(global.gp_active)
 				
 				var arrow_ring_nbr = 28;
 				var wait_arrow = 24;
-				var arrow_spd = 3.7;
+				var arrow_spd = 4.2;
 			break;
 			case 3:
 				var ring_spd = 3;
@@ -58,7 +58,7 @@ if(global.gp_active)
 				
 				var arrow_ring_nbr = 32;
 				var wait_arrow = 18;
-				var arrow_spd = 4.5;
+				var arrow_spd = 4.8;
 			break;
 		}
 		

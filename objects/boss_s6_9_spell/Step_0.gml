@@ -107,7 +107,8 @@ if(global.gp_active)
 			if(step == 0)
 			{
 				boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);
-				shoot_ring_row(DAN_BUBBLE,1,aim_ring,aim_row,obj_boss.x,obj_boss.y,999,aim_spd_min,aim_spd_max,noone,8);
+				var aimm = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y) + 180;
+				shoot_ring_row(DAN_BUBBLE,1,aim_ring,aim_row,obj_boss.x,obj_boss.y,aimm,aim_spd_min,aim_spd_max,noone,8);
 				with(obj_danmaku8)
 				{
 					state = 999;
@@ -122,8 +123,6 @@ if(global.gp_active)
 					if(anchor_time % anchor_wait == 0) or (timeout_phase and anchor_time % (anchor_wait / 2) == 0)
 					{
 						shoot_ring(DAN_ANCHOR,1,anchor_nbr,obj_boss.x,obj_boss.y,999,0,sfx_spawn_light,8);
-						
-						var aim = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y);
 						
 						with(obj_danmaku8)
 						{
@@ -210,14 +209,14 @@ if(global.gp_active)
 			switch(state)
 			{
 				case 0:
-					if(life_left < 2850)
+					if(life_left < 2900)
 					{
 						state = 1;
 						boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);
 					}
 				break;
 				case 1:
-					if(life_left < 1650)
+					if(life_left < 1700)
 					{
 						state = 2;
 						boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);

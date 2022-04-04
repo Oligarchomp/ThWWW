@@ -6,6 +6,11 @@ old_state = -1;
 state_time = 0;
 
 
+set_bgm(mus_end);
+
+bgm_vol_ref = audio_emitter_get_gain(global.bgm_emitter);
+bgm_vol = bgm_vol_ref;
+
 alpha_bg = 0;//for the white bg
 black_alpha = 0; //when ending the ending
 

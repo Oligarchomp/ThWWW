@@ -1292,7 +1292,7 @@ menu =
 				title : get_text("mus_room_end"),
 				comment : get_text("mus_com_end"),
 				action : MENU_MUSIC,
-				music : noone,
+				music : mus_end,
 			},
 			{
 				title : get_text("mus_room_credit"),

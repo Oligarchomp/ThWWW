@@ -114,6 +114,7 @@
     {"id":{"name":"obj_enemy_defeat","path":"objects/obj_enemy_defeat/obj_enemy_defeat.yy",},"order":0,},
     {"id":{"name":"font_pause","path":"fonts/font_pause/font_pause.yy",},"order":6,},
     {"id":{"name":"obj_name_entry","path":"objects/obj_name_entry/obj_name_entry.yy",},"order":7,},
+    {"id":{"name":"mus_end","path":"sounds/mus_end/mus_end.yy",},"order":15,},
     {"id":{"name":"font_scorename","path":"fonts/font_scorename/font_scorename.yy",},"order":9,},
     {"id":{"name":"obj_boss_explode","path":"objects/obj_boss_explode/obj_boss_explode.yy",},"order":1,},
     {"id":{"name":"spr_tree","path":"sprites/spr_tree/spr_tree.yy",},"order":2,},

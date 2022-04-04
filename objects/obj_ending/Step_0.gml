@@ -98,7 +98,12 @@ switch(state)
 		}
 	break;
 	case 100: //end of ending
-		black_alpha = goto_value(black_alpha,1,0.004);
+	
+		black_alpha = goto_value(black_alpha,1,1 / 250);
+		
+		bgm_vol = goto_value(bgm_vol,0,bgm_vol_ref / 250);
+		audio_emitter_gain(global.bgm_emitter,bgm_vol)
+	
 		if(black_alpha == 1)
 		{
 			room_goto(room_credit);	

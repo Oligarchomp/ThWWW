@@ -48,7 +48,7 @@ switch(state)
 		{
 			case 0:
 				create_credit(middle,230,get_text("credit_zun1"),1);
-				create_credit(middle,230,get_text("credit_line"),1);
+				create_credit(middle,235,get_text("credit_line"),1);
 			break;
 			case 20:
 				create_credit(middle,300,get_text("credit_zun2"),1);
@@ -181,6 +181,11 @@ switch(state)
 			case 0:
 				create_credit(middle,200,get_text("credit_thanks1"),1);
 				create_credit(middle,205,get_text("credit_line"),1);
+				
+				
+			break;
+			case 20:
+				create_credit(middle,250,get_text("credit_thanks2"),1);
 			break;
 			case 330:
 				state += 1;

@@ -30,7 +30,7 @@ if(global.gp_active)
 		break;
 	}
 	
-	var fairy_life = 20;
+	var fairy_life = 38;
 	var fairy_spd = 3;
 	var fam_wait = 25;
 	

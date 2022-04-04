@@ -50,7 +50,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var ring_nbr = 34;
 			var ring_spd_shoot = 7;
-			var ring_spd_final = 1.5;
+			var ring_spd_final = 1.6;
 			var ring_accel = 0.1;
 			
 			var wave_wait = 120;
@@ -67,7 +67,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var ring_nbr = 36;
 			var ring_spd_shoot = 7;
-			var ring_spd_final = 1.5;
+			var ring_spd_final = 1.7;
 			var ring_accel = 0.1;
 			
 			var wave_wait = 120;
