@@ -27,8 +27,8 @@ if(global.gp_active)
 				
 				var bubble_arc = 3;
 				var bubble_spd = 4.5;
-				var arc_dist = 50;
-				var arc_dif = 27;
+				var arc_dist = 32;
+				var arc_dif = arc_dist;
 				
 				var arrow_ring_nbr = 18;
 				var wait_arrow = 34;
@@ -40,8 +40,8 @@ if(global.gp_active)
 				
 				var bubble_arc = 6;
 				var bubble_spd = 6;
-				var arc_dist = 28;
-				var arc_dif = -arc_dist - 1;
+				var arc_dist = 29;
+				var arc_dif = arc_dist;
 				
 				var arrow_ring_nbr = 28;
 				var wait_arrow = 24;

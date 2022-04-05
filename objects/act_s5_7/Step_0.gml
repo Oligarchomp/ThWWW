@@ -10,7 +10,7 @@ if(global.gp_active)
 			var ring_nbr = 12;
 			var ring_spd_shoot = 8;
 			var ring_start = 20;
-			var ring_spd_final = 2.5;
+			var ring_spd_final = 1.5;
 			var rice_around = 10;
 		break;
 		case 1:
@@ -18,7 +18,7 @@ if(global.gp_active)
 			var ring_nbr = 16;
 			var ring_spd_shoot = 8;
 			var ring_start = 20;
-			var ring_spd_final = 2.5;
+			var ring_spd_final = 2;
 			var rice_around = 10;
 		break;
 		case 2:

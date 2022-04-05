@@ -5,12 +5,12 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			var wood_wait = 52
+			var wood_wait = 48;
 			var wood_nbr = 8;
 			var wood_angle_plus = 25;
 			var wood_spd = 1.8;
 			
-			var water_nbr = 13;
+			var water_nbr = 16;
 			var water_y_accel = 0.05;
 			var water_x_accel = 0.01;
 			var water_spd_shot_min = 1;
@@ -20,22 +20,22 @@ if(global.gp_active) and (spell_wait == 0)
 			var water_wait = 175;
 			var water_open = 70;
 			
-			var metal_wait = 175;
+			var metal_wait = 170;
 			var metal_nbr = 8;
 			var metal_spd_shot = 6;
 			var metal_deccel = 0.1;
 			var metal_spd_aim = 1.8;
 			
-			var earth_wait = 161;
+			var earth_wait = 155;
 			var earth_nbr_wall = 13;
 			var earth_nbr_in = 5;
 			var earth_dist_in = 1;
 			var earth_spd = 1.5;
 			
-			var fire_wait = 210;
+			var fire_wait = 200;
 			var fire_spd = 1;
 			var fire_spd_git = 0.5;
-			var fire_nbr = 20;
+			var fire_nbr = 22;
 		break;
 		case 1:
 			var wood_wait = 36;

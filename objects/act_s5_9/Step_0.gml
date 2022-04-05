@@ -97,7 +97,19 @@ if(global.gp_active)
 			create_enemy(EN_FAMILIAR,room_width / 2,90,fam_life,3,0,0);
 			create_enemy(EN_FAMILIAR,50,200,fam_life,3,0,0);
 			create_enemy(EN_FAMILIAR,350,200,fam_life,3,0,0);
-			ring_less = 13;
+			
+			switch(global.difficulty)
+			{
+				case 0:
+					ring_less = 10;
+				break;
+				case 1:
+				case 2:
+				case 3:
+					ring_less = 13;
+				break;
+			}
+			
 			wall_less = 2;
 			wall_in_less = 1;
 		break;
@@ -107,7 +119,20 @@ if(global.gp_active)
 			create_enemy(EN_FAMILIAR,300,60,fam_life,3,0,0);
 			create_enemy(EN_FAMILIAR,30,210,fam_life,3,0,0);
 			create_enemy(EN_FAMILIAR,370,210,fam_life,3,0,0);
-			ring_less = 17;
+			switch(global.difficulty)
+			{
+				case 0:
+					ring_less = 9;
+				break;
+				case 1:
+					ring_less = 14;
+				break;
+				case 2:
+				case 3:
+					ring_less = 17;
+				break;
+			}
+			
 			wall_less = 2;
 			wall_in_less = 1;
 		break;

@@ -8,7 +8,7 @@ bg_col = c_black;
 
 x = room_width / 2;
 
-vsp = 1;
+vsp = 0.5;
 
 
 y_pos = [rng(room_height,true,1),rng(room_height,true,2),rng(room_height,true,3)];

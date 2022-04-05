@@ -19,14 +19,14 @@ if(global.gp_active)
 			var ring_nbr = 8;
 		break;
 		case 1:
-			var ice_row = 6;
-			var ice_dist = 20;
+			var ice_row = 7;
+			var ice_dist = 18;
 			var ice_spd_max = 5.2;
 			var ice_spd_min = 3.7;
 			var ice_wait = 34;
 			var ice_nbr = 3;//how many wall per shot
 			
-			var ring_wait = 35;
+			var ring_wait = 34;
 			var ring_spd = 3.2;
 			var ring_nbr = 12;
 		break;
