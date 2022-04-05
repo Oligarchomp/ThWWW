@@ -32,7 +32,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 3:
 			var fan_shoot_wait = 4;
 			var fan_nbr = 5;
-			var fan_dist = 5.5;
+			var fan_dist = 5.6;
 			var fan_spd = 4.4;
 			var fan_plus = 6.7;
 			var boss_wait = 150;

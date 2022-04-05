@@ -40,8 +40,8 @@ if(global.gp_active)
 					var bubble_wait = 40;
 			
 					var arrow_nbr = 8;
-					var arrow_spd = 3.5;
-					var arrow_wait = 11;
+					var arrow_spd = 4.2;
+					var arrow_wait = 10;
 					var arrow_dist = 180 / arrow_nbr / 4 ;
 				break;
 				case 3:
@@ -51,8 +51,8 @@ if(global.gp_active)
 					var bubble_wait = 30;
 			
 					var arrow_nbr = 10;
-					var arrow_spd = 4.2;
-					var arrow_wait = 9;
+					var arrow_spd = 4.8;
+					var arrow_wait = 8;
 					var arrow_dist = 3;
 				break;
 			}

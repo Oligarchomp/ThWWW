@@ -3,18 +3,18 @@
 if(global.gp_active)
 {
 	var laser_wave = 9;
-	var laser_wait = 100;
+	var laser_wait = 95;
 	
 	var aim_lenght = 200;
 	var aim_wait = 32;
-	var aim_ring = 12;
-	var aim_spd = 3;
+	var aim_ring = 11;
+	var aim_spd = 3; // is actually the blue mentos
 	
 	
 	switch(step)
 	{
 		case 0:
-			var inst = create_enemy(EN_RED,room_width / 2, -20,760,1,6,-90);
+			var inst = create_enemy(EN_RED,room_width / 2, -20,10000,1,6,-90);
 			inst.item_nbr = 20;
 		break;
 		case 50:
@@ -68,6 +68,7 @@ if(global.gp_active)
 				else
 				{
 					state = 2;
+					life = 6;
 				}
 			break;
 			case 10:
@@ -90,7 +91,8 @@ if(global.gp_active)
 				switch(state_time)
 				{
 					case 50:
-						shoot_ring(DAN_BUBBLE,6,20,x,y,999,3,sfx_redirect1,8);
+						shoot_ring(DAN_BUBBLE,6,18,x,y,999,3,sfx_redirect1,8);
+						shoot_ring(DAN_BUBBLE,6,18,x,y,998,2.2,sfx_redirect1,8);
 					break;
 					case laser_wait:
 						state = 1;

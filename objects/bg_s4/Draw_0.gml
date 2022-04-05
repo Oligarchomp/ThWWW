@@ -9,3 +9,5 @@ for (var i = -3; i < 3; i += 1)//vertcial
 		draw_sprite_ext(sprite_index,0,x + j * width,y + height * i,1,1,0,col,1);
 	}
 }
+
+

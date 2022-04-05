@@ -33,5 +33,5 @@ switch(global.difficulty)
 
 
 
-familiar_wait_death = 200;
+familiar_wait_death = 240;
 //familiar giving info in obj_enemy detsroy event

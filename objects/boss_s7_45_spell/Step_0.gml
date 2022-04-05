@@ -14,7 +14,7 @@ if(global.gp_active) and (spell_wait == 0)
 	var aim_ring = 10;
 	var aim_spd = 4.5;
 	
-	var release_ring = 28;
+	var release_ring = 24;
 	var release_row = 5;
 	var release_spd_min = 2.7;
 	var release_spd_max = 6;
@@ -129,6 +129,7 @@ if(global.gp_active) and (spell_wait == 0)
 				for(var i = release_spd_min; i < release_spd_max; i += (release_spd_max - release_spd_min) / release_row)
 				{
 					shoot_ring(DAN_BUBBLE,col,release_ring,obj_boss.x,room_height / 2 + 250 * act_dir,aim,i,noone,8);
+					shoot_ring(DAN_MENTOS,col,release_ring,obj_boss.x,room_height / 2 + 250 * act_dir,aim + 180 / release_ring,i,noone,7);
 					aim += 180 / release_ring;
 				}
 				

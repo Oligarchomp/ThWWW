@@ -13,9 +13,9 @@ bg_to_create = bg_s4;
 
 if(global.game_type == GAME_SPELL)
 {
-	music = get_next_event() == act_s4_5_midspell ? noone : noone;
+	music = get_next_event() == act_s4_5_midspell ? mus_stage4 : noone;
 }
 else
 {
-	music = noone;
+	music = mus_stage4;
 }

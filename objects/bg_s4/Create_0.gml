@@ -5,19 +5,21 @@ depth = global.bg_depth  ;
 x = 0;
 y = 0;
 
-vsp = 9;
+vsp = 7;
 
 
 height = sprite_get_height(sprite_index);
 width = sprite_get_width(sprite_index);
 
 var inst = instance_create_depth(0,0,global.spell_bg_depth + 10,obj_rain);
-inst.vsp *= 0.8;
-inst.hsp *= 0.8;
+inst.vsp *= 0.6;
+inst.hsp *= 0.6;
+inst.alpha = 0.22;
 
 var inst = instance_create_depth(0,0,global.spell_bg_depth + 20,obj_rain);
 inst.vsp *= 0.4;
 inst.hsp *= 0.4;
+inst.alpha = 0.22;
 
 
 y_flower = -300;

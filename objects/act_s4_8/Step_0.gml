@@ -11,26 +11,32 @@ if(global.gp_active)
 			var ring_spd2 = 2;
 			
 			var rev_row = 0;
-			var rev_spd_min = 3.5;
-			var rev_spd_max = 5;
+			var rev_spd_min = 2;
+			var rev_spd_max = 7;
+			var rev_spd_final = 4.5;
+			var rev_time = 60;
 		break;
 		case 1:
-			var ring_nbr = 9;
+			var ring_nbr = 8;
 			var ring_spd1 = 1.8;
 			var ring_spd2 = 2.4;
 			
 			var rev_row = 3;
-			var rev_spd_min = 3.5;
-			var rev_spd_max = 5;
+			var rev_spd_min = 2;
+			var rev_spd_max = 7;
+			var rev_spd_final = 3.5;
+			var rev_time = 60;
 		break;
 		case 2:
-			var ring_nbr = 12;
+			var ring_nbr = 11;
 			var ring_spd1 = 1.8;
 			var ring_spd2 = 2.4;
 			
 			var rev_row = 4;
-			var rev_spd_min = 3;
-			var rev_spd_max = 5.5;
+			var rev_spd_min = 2;
+			var rev_spd_max = 7;
+			var rev_spd_final = 4;
+			var rev_time = 60;
 		break;
 		case 3:
 			var ring_nbr = 16;
@@ -38,8 +44,10 @@ if(global.gp_active)
 			var ring_spd2 = 2.4;
 			
 			var rev_row = 4;
-			var rev_spd_min = 3;
-			var rev_spd_max = 5.5;
+			var rev_spd_min = 2;
+			var rev_spd_max = 7;
+			var rev_spd_final = 4.5;
+			var rev_time = 60;
 		break;
 	}
 	
@@ -71,6 +79,9 @@ if(global.gp_active)
 				var rand = rng(360,false,1);
 				shoot_ring(DAN_BALL,3,ring_nbr,x,y,rand,ring_spd1,sfx_shot1,4);
 				shoot_ring(DAN_BALL,4,ring_nbr,x,y,rand + 180 / ring_nbr,ring_spd2,sfx_shot1,4);
+				
+				idle_spr = spr_fairy_white_idle;
+				move_spr = spr_fairy_white_move;
 			}
 		}
 		else
@@ -84,6 +95,20 @@ if(global.gp_active)
 		for(var i = 0; i < ds_list_size(global.x_death_list); i += 1)
 		{
 			shoot_row(DAN_BUBBLE,6,rev_row,global.x_death_list[|i],global.y_death_list[|i],999,rev_spd_min,rev_spd_max,sfx_redirect1,5)
+		}
+	}
+	
+	with(obj_danmaku5)
+	{
+		switch(state)
+		{
+			case 0:
+				spd_ref = spd;
+				state += 1;
+			break;
+			case 1:
+				spd = goto_value(spd,rev_spd_final,abs((rev_spd_final - spd_ref) / rev_time));
+			break;
 		}
 	}
 	

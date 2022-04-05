@@ -1244,7 +1244,7 @@ menu =
 				title : get_text("mus_room_s4"),
 				comment : get_text("mus_com_s4"),
 				action : MENU_MUSIC,
-				music : noone,
+				music : mus_stage4,
 			},
 			{
 				title : get_text("mus_room_b4"),
