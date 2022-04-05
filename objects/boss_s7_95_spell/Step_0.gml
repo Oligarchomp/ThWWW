@@ -227,7 +227,7 @@ if(global.gp_active) and (spell_wait == 0)
 	
 	if(!timeout)
 	{
-		if(time_left < 20 * 60)
+		if(time_left < 25 * 60)
 		{
 			if(wave != 4)
 			{

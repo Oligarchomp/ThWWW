@@ -21,9 +21,11 @@ if(global.gp_active)
 					var mentos_spd_max = 4.5;
 					var mentos_angle_plus = 360 / mentos_ring / 5;
 					
-					var spam_bubble = 10;
-					var spam_mentos = 30;
-					var spam_ball = 55;
+					var spam_bubble = 2;
+					var spam_mentos = 6;
+					var spam_ball = 11;
+					
+					var spam_ring = 5;
 					
 					var spam_spd_min = 3;
 					var spam_spd_git = 5;
@@ -39,9 +41,11 @@ if(global.gp_active)
 					var mentos_spd_max = 5;
 					var mentos_angle_plus = 360 / mentos_ring / 6;
 					
-					var spam_bubble = 30;
-					var spam_mentos = 60;
-					var spam_ball = 115;
+					var spam_bubble = 6;
+					var spam_mentos = 12;
+					var spam_ball = 23;
+					
+					var spam_ring = 5;
 					
 					var spam_spd_min = 3;
 					var spam_spd_git = 6;
@@ -57,9 +61,11 @@ if(global.gp_active)
 					var mentos_spd_max = 5.5;
 					var mentos_angle_plus = 360 / mentos_ring / 8;
 					
-					var spam_bubble = 40;
-					var spam_mentos = 80;
-					var spam_ball = 145;
+					var spam_bubble = 8;
+					var spam_mentos = 16;
+					var spam_ball = 29;
+					
+					var spam_ring = 5;
 					
 					var spam_spd_min = 3;
 					var spam_spd_git = 6.2;
@@ -75,9 +81,11 @@ if(global.gp_active)
 					var mentos_spd_max = 6;
 					var mentos_angle_plus = 360 / mentos_ring / 10;
 					
-					var spam_bubble = 50;
-					var spam_mentos = 100;
-					var spam_ball = 180;
+					var spam_bubble = 9; // 50
+					var spam_mentos = 20; // 100
+					var spam_ball = 36; // 180
+					
+					var spam_ring = 5;
 					
 					var spam_spd_min = 3;
 					var spam_spd_git = 6.6;
@@ -116,17 +124,17 @@ if(global.gp_active)
 						
 						repeat(spam_ball)
 						{
-							shoot(DAN_RAINDROP,choose(2,1),obj_boss.x,obj_boss.y,rng(360,false,1),spam_spd_min + rng(spam_spd_git,false,1),noone,8);	
+							shoot_ring(DAN_RAINDROP,choose(2,1),spam_ring,obj_boss.x,obj_boss.y,rng(360,false,1),spam_spd_min + rng(spam_spd_git,false,1),noone,8);	
 						}
 						
 						repeat(spam_mentos)
 						{
-							shoot(DAN_MENTOS,choose(2,1),obj_boss.x,obj_boss.y,rng(360,false,1),spam_spd_min + rng(spam_spd_git,false,1),noone,8);	
+							shoot_ring(DAN_MENTOS,choose(2,1),spam_ring,obj_boss.x,obj_boss.y,rng(360,false,1),spam_spd_min + rng(spam_spd_git,false,1),noone,8);	
 						}
 						
 						repeat(spam_bubble)
 						{
-							shoot(DAN_BUBBLE,choose(2,1),obj_boss.x,obj_boss.y,rng(360,false,1),spam_spd_min + rng(spam_spd_git,false,1),noone,8);	
+							shoot_ring(DAN_BUBBLE,choose(2,1),spam_ring,obj_boss.x,obj_boss.y,rng(360,false,1),spam_spd_min + rng(spam_spd_git,false,1),noone,8);	
 						}
 					}
 				break;

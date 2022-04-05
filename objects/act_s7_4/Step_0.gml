@@ -30,14 +30,14 @@ if(global.gp_active)
 	var pale_spd = 7;
 	switch(state)
 	{
-		case 0:
+		case 1:
 			if(state_time == 0)
 			{
 				boss_movement_goto(room_width + pale_x_off, obj_boss.y + pale_y_off ,pale_spd);
 			}
 			if(obj_boss.x > room_width + pale_x_off - 10 * wave - 1)
 			{
-				state = 1;
+				state = 0;
 				obj_boss.y -= pale_y_off;
 				wave += 1;
 			}
@@ -46,14 +46,14 @@ if(global.gp_active)
 				dir = dir_max;
 			}
 		break;
-		case 1:
+		case 0:
 			if(state_time == 0)
 			{
 				boss_movement_goto(-pale_x_off, obj_boss.y + pale_y_off,pale_spd);
 			}
 			if(obj_boss.x < -pale_x_off + 10 * wave + 1)
 			{
-				state = 0;
+				state = 1;
 				obj_boss.y -= pale_y_off;
 				wave += 1;
 			}
@@ -103,7 +103,7 @@ if(global.gp_active)
 		}
 	}
 	
-	if(wave == 6)
+	if(wave == 7)
 	{
 		wave = -1;
 		state = 2;

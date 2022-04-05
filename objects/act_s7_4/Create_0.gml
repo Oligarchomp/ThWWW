@@ -4,10 +4,10 @@
 // Inherit the parent event
 event_inherited();
 
-act_set_time(600,600);
+act_set_time(665,665);
 global.boss = BOSS_PALE;
 
-instance_create_depth(-50,80,global.boss_depth,obj_boss);
+instance_create_depth(room_width  + 50,80,global.boss_depth,obj_boss);
 instance_destroy(obj_boss_indicator);
 
 

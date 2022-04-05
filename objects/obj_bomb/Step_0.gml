@@ -75,6 +75,11 @@ if(global.gp_active)
 				inst.angle = 90 - open + rng(open * 2,false,4);
 			}
 			
+			repeat(3)
+			{
+				instance_create_depth(obj_player.x,obj_player.y - 10,global.player_shot_depth,obj_masterspark_effect);
+			}
+			
 			create_shot_hitbox(obj_player.x,obj_player.y ,1,spr_bomb_masterspark_collision,1.4,2,true);
 		break;
 		case P_SANAE:

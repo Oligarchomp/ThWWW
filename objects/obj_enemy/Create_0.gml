@@ -22,7 +22,7 @@ move_type = 0;
 alpha = 1;
 scale = 1;
 
-idle_spd = 0.2;
+idle_spd = 0.15;
 switch(en_type)
 {
 	case EN_RED:

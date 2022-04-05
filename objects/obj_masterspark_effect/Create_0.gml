@@ -1,10 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-// Inherit the parent event
-event_inherited();
+angle = -20 + rng(220,false,1);
 
-act_set_time(615,615);
-
-
-act_dir = 1;
+spd = 6 + rng(6,false,1);
+scale = 0.8;
