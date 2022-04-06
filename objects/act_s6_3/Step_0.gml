@@ -16,7 +16,7 @@ if(global.gp_active)
 			var ball_spd = 2;
 		break;
 		case 1:
-			var bubble_wait = 52;
+			var bubble_wait = 54;
 			var bubble_ring = 16;
 			var bubble_spd_shoot = 6;
 			var bubble_spd_final = 3;
@@ -31,7 +31,7 @@ if(global.gp_active)
 			var bubble_ring = 18;
 			var bubble_spd_shoot = 7;
 			var bubble_spd_final = 3;
-			var bubble_lenght = 18;
+			var bubble_lenght = 19;
 			
 			var ball_wait = 5;
 			var ball_start = 30;

@@ -5,14 +5,14 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var mentos_wait = 10;
-			var mentos_spd_min = 2;
-			var mentos_spd_git = 1;
+			var mentos_wait = 12;
+			var mentos_spd_min = 1.2;
+			var mentos_spd_git = 0.8;
 		break;
 		case 1:
 			var mentos_wait = 6;
-			var mentos_spd_min = 2;
-			var mentos_spd_git = 1;
+			var mentos_spd_min = 1.7;
+			var mentos_spd_git = 0.9;
 		break;
 		case 2:
 			var mentos_wait = 4;

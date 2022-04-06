@@ -5,24 +5,25 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			var wine_spd = 1;
+			var wine_spd = 0.5;
 			var	wine_row = 5; // must be odd
 			var wine_dist = room_width / wine_row;
 			
 			var grape_col = 3;
+			var wine_col = 7;
 			
 			var mentos_nbr = 3;
-			var mentos_spd = 1.6;
-			var mentos_accel = 0.01;
+			var mentos_spd = 1.2;
+			var mentos_accel = 0.005;
 			
-			var misha_nbr = 16;
-			var misha_spd = 2;
+			var misha_nbr = 14;
+			var misha_spd = 1.5;
 			
 			var bubble_row = 1;
-			var bubble_spd_min = 3;
-			var bubble_spd_max = 5;
+			var bubble_spd_min = 2;
+			var bubble_spd_max = 4;
 			
-			var catch_nbr = 6;
+			var catch_nbr = 5;
 			var catch_spd_shot = 5;
 			var catch_angle_plus = 4;
 			
@@ -35,24 +36,25 @@ if(global.gp_active) and (spell_wait == 0)
 			var wine_dist = room_width / wine_row;
 			
 			var grape_col = 3;
+			var wine_col = 7;
 			
 			var mentos_nbr = 4;
-			var mentos_spd = 1.6;
-			var mentos_accel = 0.01;
+			var mentos_spd = 1.4;
+			var mentos_accel = 0.008;
 			
-			var misha_nbr = 24;
-			var misha_spd = 2;
+			var misha_nbr = 20;
+			var misha_spd = 1.8;
 			
 			var bubble_row = 2;
-			var bubble_spd_min = 3;
-			var bubble_spd_max = 4.2;
+			var bubble_spd_min = 2.1;
+			var bubble_spd_max = 3.2;
 			
-			var catch_nbr = 7;
+			var catch_nbr = 6;
 			var catch_spd_shot = 5;
 			var catch_angle_plus = 4;
 			
 			var nua_lenght = 280;
-			var nua_wait = 62;
+			var nua_wait = 70;
 		break;
 		case 2:
 			var wine_spd = 1;
@@ -60,13 +62,14 @@ if(global.gp_active) and (spell_wait == 0)
 			var wine_dist = room_width / wine_row;
 			
 			var grape_col = 3;
+			var wine_col = 7;
 			
 			var mentos_nbr = 3;
 			var mentos_spd = 1.6;
 			var mentos_accel = 0.01;
 			
-			var misha_nbr = 26;
-			var misha_spd = 2;
+			var misha_nbr = 25;
+			var misha_spd = 1.9;
 			
 			var bubble_row = 3;
 			var bubble_spd_min = 2.5;
@@ -77,7 +80,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var catch_angle_plus = 4;
 			
 			var nua_lenght = 280;
-			var nua_wait = 58;
+			var nua_wait = 60;
 		break;
 		case 3:
 			var wine_spd = 1;
@@ -85,6 +88,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var wine_dist = room_width / wine_row;
 			
 			var grape_col = 0;
+			var wine_col = 6;
 			
 			var mentos_nbr = 6;
 			var mentos_spd = 1.6;
@@ -204,7 +208,7 @@ if(global.gp_active) and (spell_wait == 0)
 				switch(state_time % nua_wait)
 				{
 					case 0:
-						shoot_ring(DAN_BUBBLE,6,misha_nbr,obj_boss.x,obj_boss.y,rng(360,false,7),misha_spd,sfx_redirect1,7);		
+						shoot_ring(DAN_BUBBLE,wine_col,misha_nbr,obj_boss.x,obj_boss.y,rng(360,false,7),misha_spd,sfx_redirect1,7);		
 						shoot_row(DAN_BUBBLE,grape_col,bubble_row,obj_boss.x,obj_boss.y,999,bubble_spd_min,bubble_spd_max,noone,8);
 					break;
 					case move:
@@ -230,14 +234,16 @@ if(global.gp_active) and (spell_wait == 0)
 		case 4://Lunatic
 			switch(state_time)
 			{
+				case 40:
+					play_sound(sfx_photo_charge,1,false);
+				break;
 				case 60:
 					with(obj_danmaku1)
 					{
 						state = 2;
 					}
-					play_sound(sfx_photo_charge,1,false);
 				break;
-				case 140:
+				case 130:
 					play_sound(sfx_redirect1,1,false);
 					with(obj_danmaku5)
 					{
@@ -246,7 +252,7 @@ if(global.gp_active) and (spell_wait == 0)
 						is_cancelable = true;
 					}
 				break;
-				case 240:
+				case 230:
 					state = 0;
 					with(obj_danmaku1)
 					{

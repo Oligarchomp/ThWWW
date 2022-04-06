@@ -5,14 +5,14 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			var wave_time = 80;
+			var wave_time = 90;
 			var wave_lenght = 65;
 			
 			var aim_wait = 6;
 			var aim_arc = 3;
 			var aim_dist = 40;
 			var aim_spd = 9;
-			var aim_spd_aim = 5;
+			var aim_spd_aim = 3.8;
 			var aim_deccel = 0.2;
 			
 			var ring_wait = 12;
@@ -24,14 +24,14 @@ if(global.gp_active) and (spell_wait == 0)
 			var ring_arc = 3;
 			var ring_spd_shoot = 7;
 			var ring_deccel = 0.2;
-			var ring_spd_aim = 3;
+			var ring_spd_aim = 2.5;
 			
 			var close_wait = 13;
-			var close_ring = 10;
+			var close_ring = 9;
 			var close_spd_shoot = 10;
 			var close_deccel = 0.2;
-			var close_dist = 48;
-			var close_spd_aim = 2;
+			var close_dist = 50;
+			var close_spd_aim = 1.7;
 		break;
 		case 1:
 			var wave_time = 80;
@@ -41,7 +41,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var aim_arc = 5;
 			var aim_dist = 25;
 			var aim_spd = 9;
-			var aim_spd_aim = 5;
+			var aim_spd_aim = 4.2;
 			var aim_deccel = 0.2;
 			
 			var ring_wait = 10;
@@ -53,14 +53,14 @@ if(global.gp_active) and (spell_wait == 0)
 			var ring_arc = 3;
 			var ring_spd_shoot = 8;
 			var ring_deccel = 0.2;
-			var ring_spd_aim = 3;
+			var ring_spd_aim = 2.8;
 			
 			var close_wait = 12;
 			var close_ring = 10;
 			var close_spd_shoot = 10.5;
 			var close_deccel = 0.2;
 			var close_dist = 48;
-			var close_spd_aim = 2;
+			var close_spd_aim = 1.9;
 		break;
 		case 2:
 			var wave_time = 80;
@@ -70,7 +70,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var aim_arc = 7;
 			var aim_dist = 22;
 			var aim_spd = 9;
-			var aim_spd_aim = 6;
+			var aim_spd_aim = 5;
 			var aim_deccel = 0.2;
 			
 			var ring_wait = 9;
@@ -82,14 +82,14 @@ if(global.gp_active) and (spell_wait == 0)
 			var ring_arc = 3;
 			var ring_spd_shoot = 8;
 			var ring_deccel = 0.2;
-			var ring_spd_aim = 3;
+			var ring_spd_aim = 2.9;
 			
 			var close_wait = 11;
 			var close_ring = 13;
 			var close_spd_shoot = 11;
 			var close_deccel = 0.2;
 			var close_dist = 46;
-			var close_spd_aim = 2;
+			var close_spd_aim = 1.9;
 		break;
 		case 3:
 			var wave_time = 80;

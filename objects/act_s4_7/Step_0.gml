@@ -67,22 +67,22 @@ if(global.gp_active)
 	switch(step)
 	{
 		case 0:
-			var inst = create_enemy(EN_RED,150, -20,fairy_life,1,7,-90);
+			var inst = create_enemy(EN_BLUE,150, -20,fairy_life,1,7,-90);
 			inst.item_nbr = 8;
 			inst.dir_dan = 1;
 		break;
 		case 260:
-			var inst = create_enemy(EN_RED,250, -20,fairy_life,1,7,-90);
+			var inst = create_enemy(EN_BLUE,250, -20,fairy_life,1,7,-90);
 			inst.item_nbr = 8;
 			inst.dir_dan = -1;
 		break;
 		case 520:
-			var inst = create_enemy(EN_RED,100, -20,fairy_life,1,7,-90);
+			var inst = create_enemy(EN_BLUE,100, -20,fairy_life,1,7,-90);
 			inst.item_nbr = 8;
 			inst.dir_dan = 1;
 		break;
 		case 780:
-			var inst = create_enemy(EN_RED,300, -20,fairy_life,1,7,-90);
+			var inst = create_enemy(EN_BLUE,300, -20,fairy_life,1,7,-90);
 			inst.item_nbr = 8;
 			inst.dir_dan = -1;
 		break;
@@ -121,7 +121,7 @@ if(global.gp_active)
 					}
 					if(state_time % bubble_wait == 0)
 					{
-						shoot_ring(DAN_BUBBLE,6,bubble_nbr,x,y,999,bubble_spd,sfx_redirect1,8);
+						shoot_ring(DAN_BUBBLE,1,bubble_nbr,x,y,999,bubble_spd,sfx_redirect1,8);
 					}
 				}
 				else

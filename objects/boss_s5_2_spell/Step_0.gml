@@ -166,10 +166,7 @@ if(global.gp_active) and (spell_wait == 0)
 							inst.dist = 60;
 						break;
 						case DAN_MENTOS:
-							inst.dist = 50;
-						break;
-						case DAN_BALL:
-							inst.dist = 30;
+							inst.dist = 43;
 						break;
 					}
 					inst.x_offscreen = 250;
@@ -184,10 +181,7 @@ if(global.gp_active) and (spell_wait == 0)
 							inst.dist = 30;
 						break;
 						case DAN_MENTOS:
-							inst.dist = 25;
-						break;
-						case DAN_BALL:
-							inst.dist = 15;
+							inst.dist = 16;
 						break;
 					}
 					inst.x_offscreen = 250;

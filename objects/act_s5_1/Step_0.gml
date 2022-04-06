@@ -21,10 +21,10 @@ if(global.gp_active)
 		case 1:
 			var shoot_wait = 8;
 			
-			var ball_spd = 2.5;
+			var ball_spd = 2.3;
 			var ball_angle = 90;
 			
-			var mentos_spd = 2;
+			var mentos_spd = 1.8;
 			var mentos_angle = 120;
 			
 			var rev_nbr = 20;

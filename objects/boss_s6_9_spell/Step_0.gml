@@ -20,7 +20,7 @@ if(global.gp_active)
 					var mentos_wait = 14;
 					var mentos_off = 90;
 					var ball_wait = 14;
-					var ball_off = 70;
+					var ball_off = 65;
 
 			
 					var water_ring = 3;

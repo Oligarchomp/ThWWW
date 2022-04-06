@@ -11,7 +11,7 @@ if(global.gp_active)
 			switch(global.difficulty)
 			{
 				case 0:
-					var sword_spd_max = 20;
+					var sword_spd_max = 22;
 					var sword_size = 7;
 					var sword_wait = 2;
 			
@@ -24,12 +24,12 @@ if(global.gp_active)
 					var wave_wait = 48;
 				break;
 				case 1:
-					var sword_spd_max = 14;
+					var sword_spd_max = 16;
 					var sword_size = 7;
 					var sword_wait = 2;
 			
 					var ice_row = 4;
-					var ice_spd = 2.5;
+					var ice_spd = 2.4;
 					
 					var ice_arc = 3;
 					var ice_dist = 60;
@@ -37,7 +37,7 @@ if(global.gp_active)
 					var wave_wait = 28;
 				break;
 				case 2:
-					var sword_spd_max = 18;
+					var sword_spd_max = 20;
 					var sword_size = 7;
 					var sword_wait = 1;
 			

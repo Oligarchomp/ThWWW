@@ -10,10 +10,35 @@ if(global.gp_active) and (spell_wait == 0)
 			var rice_open = 30;
 			var rice_spd_shoot = 4;
 			var rice_spd_git = 1.5;
-			var rice_spd_div = 2;
+			var rice_spd_div = 2.5;
 			var rice_nbr = 1;
 			
 			var sword_wait = 2;
+			var sword_row = 1;
+			var sword_arc = 3;
+			var sword_dist = 0;
+			var sword_spd_min = 1;
+			var sword_i_div = 100;
+			
+			var stab_phase = false;
+			var spin_dist = 30;
+			var spin_wait = 1;
+			var spin_row = 3;
+			var spin_spd = 2;
+			var spin_ring = 3;
+			
+			var wait_end = 100;
+		break;
+		case 1:
+			var sword_size = 5;
+			
+			var rice_open = 22;
+			var rice_spd_shoot = 4.5;
+			var rice_spd_git = 2;
+			var rice_spd_div = 2.3;
+			var rice_nbr = 2;
+			
+			var sword_wait = 1;
 			var sword_row = 1;
 			var sword_arc = 3;
 			var sword_dist = 0;
@@ -23,32 +48,11 @@ if(global.gp_active) and (spell_wait == 0)
 			var stab_phase = false;
 			var spin_dist = 24;
 			var spin_wait = 1;
-			var spin_row = 3;
-			var spin_spd = 2.5;
-			var spin_ring = 3;
-		break;
-		case 1:
-			var sword_size = 5;
-			
-			var rice_open = 22;
-			var rice_spd_shoot = 4.5;
-			var rice_spd_git = 2;
-			var rice_spd_div = 2;
-			var rice_nbr = 2;
-			
-			var sword_wait = 1;
-			var sword_row = 1;
-			var sword_arc = 3;
-			var sword_dist = 0;
-			var sword_spd_min = 2;
-			var sword_i_div = 100;
-			
-			var stab_phase = false;
-			var spin_dist = 24;
-			var spin_wait = 1;
 			var spin_row = 5;
-			var spin_spd = 2.5;
+			var spin_spd = 2;
 			var spin_ring = 3;
+			
+			var wait_end = 75;
 		break;
 		case 2:
 			var sword_size = 5;
@@ -56,7 +60,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var rice_open = 24;
 			var rice_spd_shoot = 4.5;
 			var rice_spd_git = 2;
-			var rice_spd_div = 2;
+			var rice_spd_div = 2.2;
 			var rice_nbr = 3;
 			
 			var sword_wait = 1;
@@ -72,6 +76,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var spin_row = 6;
 			var spin_spd = 2.5;
 			var spin_ring = 5;
+			
+			var wait_end = 50;
 		break;
 		case 3:
 			var sword_size = 5;
@@ -79,7 +85,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var rice_open = 22;
 			var rice_spd_shoot = 4;
 			var rice_spd_git = 2;
-			var rice_spd_div = 2;
+			var rice_spd_div = 2.2;
 			var rice_nbr = 5;
 			
 			var sword_wait = 1;
@@ -95,6 +101,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var stab_row = 3;
 			var stab_spd_min = 2;
 			var stab_spd_max = 4;
+			
+			var wait_end = 50;
 		break;
 	}
 	var swipe_spd = 32;
@@ -167,7 +175,7 @@ if(global.gp_active) and (spell_wait == 0)
 			}
 		break;
 		case 5:
-			var charge_wait = 42;
+			var charge_wait = 44;
 			if(state_time < charge_wait * 3)
 			{
 				if(state_time < charge_wait * 2)
@@ -192,8 +200,8 @@ if(global.gp_active) and (spell_wait == 0)
 				obj_danmaku8.state = 1;
 			}
 		break;
-		case 6:
-			if(state_time == 50)
+		case 6: // end
+			if(state_time == wait_end)
 			{
 				dir_act *= -1;
 				boss_movement_goto(room_width / 2 - start_x_off * dir_act,start_y_off,5);
@@ -226,7 +234,7 @@ if(global.gp_active) and (spell_wait == 0)
 				case 30:
 					with(obj_danmaku8)
 					{
-						angle_aim = find_angle(x,y,obj_player.x,obj_player.y) + 90;
+						angle_aim = rng(360,false,1);//find_angle(x,y,obj_player.x,obj_player.y) + 90;
 						state = 2;
 					}
 				break;

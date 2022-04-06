@@ -18,6 +18,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var need_ball = true;
 			var impact_ball_mult = 1.1;
 			
+			var tray_start = 90;
 			var tray_wait = 3;
 			var tray_row = 4;
 			var tray_spin = 30;
@@ -41,9 +42,10 @@ if(global.gp_active) and (spell_wait == 0)
 			var need_ball = true;
 			var impact_ball_mult = 1.1;
 			
+			var tray_start = 90;
 			var tray_wait = 2;
 			var tray_row = 4;
-			var tray_spin = 25;
+			var tray_spin = 24;
 			var tray_spd_min = 2;
 			var tray_spd_max = 4;
 			var tray_frame_accel = 90;
@@ -64,9 +66,10 @@ if(global.gp_active) and (spell_wait == 0)
 			var need_ball = true;
 			var impact_ball_mult = 1.1;
 			
+			var tray_start = 00;
 			var tray_wait = 1;
 			var tray_row = 5;
-			var tray_spin = 18;
+			var tray_spin = 19;
 			var tray_spd_min = 2;
 			var tray_spd_max = 4;
 			var tray_frame_accel = 90;
@@ -87,6 +90,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var need_ball = false;
 			var impact_ball_mult = 1;
 			
+			var tray_start = 90;
 			var tray_wait = 1;
 			var tray_row = 5;
 			var tray_spin = 14;
@@ -181,7 +185,7 @@ if(global.gp_active) and (spell_wait == 0)
 			case 0:
 				if(state_time = 0)
 				{
-					angle_dist = 90;	
+					angle_dist = tray_start;	
 				}
 				if(y > 0)
 				{

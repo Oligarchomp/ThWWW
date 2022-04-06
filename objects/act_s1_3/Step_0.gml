@@ -27,7 +27,7 @@ if(global.gp_active)
 		break;
 		case 1:
 			var aim_arc_nbr = 1;
-			var aim_spd = 4;
+			var aim_spd = 3.5;
 			
 			var mentos_nbr = 6;
 			var mentos_plus = 20;

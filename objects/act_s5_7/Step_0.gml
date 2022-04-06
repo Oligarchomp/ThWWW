@@ -14,8 +14,8 @@ if(global.gp_active)
 			var rice_around = 10;
 		break;
 		case 1:
-			var ring_wait = 59;
-			var ring_nbr = 16;
+			var ring_wait = 69;
+			var ring_nbr = 15;
 			var ring_spd_shoot = 8;
 			var ring_start = 20;
 			var ring_spd_final = 2;

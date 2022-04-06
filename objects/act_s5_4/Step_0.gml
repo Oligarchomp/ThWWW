@@ -12,10 +12,10 @@ if(global.gp_active)
 			
 			var bubble_open = 2;
 			
-			var ring_wait = 44;
-			var ring_nbr = 6;
-			var ring_spd_min = 3.5;
-			var ring_spd_max = 5.5;
+			var ring_wait = 42;
+			var ring_nbr = 5;
+			var ring_spd_min = 3;
+			var ring_spd_max = 4.2;
 			var ring_spd_div = 2;
 			
 		break;
@@ -28,8 +28,8 @@ if(global.gp_active)
 			
 			var ring_wait = 36;
 			var ring_nbr = 12;
-			var ring_spd_min = 4;
-			var ring_spd_max = 6;
+			var ring_spd_min = 3.5;
+			var ring_spd_max = 5.5;
 			var ring_spd_div = 2;
 		break;
 		case 2:

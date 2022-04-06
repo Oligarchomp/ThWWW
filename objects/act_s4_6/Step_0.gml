@@ -61,9 +61,9 @@ if(global.gp_active)
 		{
 			if (step % fairy_wait == 0)
 			{	
-				var inst = create_enemy(EN_RED,280,-20,fairy_life,5,6,-90);
+				var inst = create_enemy(EN_GREEN,280,-20,fairy_life,5,6,-90);
 				inst.shot_dir = 1;
-				var inst = create_enemy(EN_RED,120,-20,fairy_life,5,6,-90);
+				var inst = create_enemy(EN_GREEN,120,-20,fairy_life,5,6,-90);
 				inst.shot_dir = -1;
 			}
 		}
@@ -91,7 +91,7 @@ if(global.gp_active)
 						{
 							for(var i = 0; i < 360; i += 360 / shot_ring)
 							{
-								var inst = shoot(first ? DAN_BUBBLE : DAN_MENTOS,6,x,y,aim + i,shot_spd_shoot,sfx_shot1,3 - first);
+								var inst = shoot(first ? DAN_BUBBLE : DAN_MENTOS,3,x,y,aim + i,shot_spd_shoot,sfx_shot1,3 - first);
 							}
 							first = false;
 							shoot_nbr += 1;

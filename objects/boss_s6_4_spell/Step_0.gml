@@ -5,7 +5,7 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			var bird_wait = 8;
+			var bird_wait = 7;
 			var bird_accel = 0.05;
 			var bird_spd_min = 1.7;
 			var bird_spd_git = 0.2;

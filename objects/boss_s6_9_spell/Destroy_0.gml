@@ -6,9 +6,12 @@ with(obj_boss_info)
 	instance_destroy()
 }
 
-with(obj_rain)
+if(global.game_type = GAME_FULL)
 {
-	instance_destroy();	
+	with(obj_rain)
+	{
+		instance_destroy();	
+	}
 }
 
 clear_charge();

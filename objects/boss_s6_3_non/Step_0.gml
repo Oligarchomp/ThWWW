@@ -33,6 +33,7 @@ if(global.gp_active)
 					var spam_deccel = 0.2;
 					
 					var wave_length = 150;
+					var wait = 120;
 				break;
 				case 1:
 					var mentos_wait = 6;
@@ -53,6 +54,7 @@ if(global.gp_active)
 					var spam_deccel = 0.2;
 					
 					var wave_length = 150;
+					var wait = 90;
 				break;
 				case 2:
 					var mentos_wait = 4;
@@ -73,6 +75,7 @@ if(global.gp_active)
 					var spam_deccel = 0.2;
 					
 					var wave_length = 150;
+					var wait = 80;
 				break;
 				case 3:
 					var mentos_wait = 3;
@@ -93,6 +96,7 @@ if(global.gp_active)
 					var spam_deccel = 0.2;
 					
 					var wave_length = 150;
+					var wait = 80;
 				break;
 			}
 		
@@ -139,12 +143,13 @@ if(global.gp_active)
 					}
 				break;
 				case 1:
+					var wait2 = wait - 30;
 					switch(state_time)
 					{
-						case 50:
+						case wait2:
 							boss_charge(obj_boss.x,obj_boss.y);
 						break;
-						case 80:
+						case wait:
 							state = 0;
 						break;
 					}

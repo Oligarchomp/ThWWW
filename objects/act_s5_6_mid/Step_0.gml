@@ -36,7 +36,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var arrow_size = 2;
 			var arrow_ring = 20;
 			var arrow_spd = 2.8;
-			var arrow_wait = 55;
+			var arrow_wait = 44;
 		break;
 		case 2:
 			var futo_wait = 5;

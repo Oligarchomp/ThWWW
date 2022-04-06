@@ -38,7 +38,7 @@ if(global.gp_active)
 			var aim_spd_min = 2.5;
 			var aim_spd_max = 5;
 			var aim_grav_accel = 0.05;
-			var aim_dist = 42;
+			var aim_dist = 52;
 		break;
 		case 2:
 			var boss_wait_move = 180;

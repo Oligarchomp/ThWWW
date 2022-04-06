@@ -24,7 +24,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			//wave 3
 			var tss_arc = 6;
-			var tss_dist = 14;
+			var tss_dist = 18;
 			var tss_spd = 3.5;
 			var tss_wait = 4;
 			var tss_change = 8;
@@ -58,7 +58,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			//wave 3
 			var tss_arc = 8;
-			var tss_dist = 11;
+			var tss_dist = 13;
 			var tss_spd = 4.3;
 			var tss_wait = 3;
 			var tss_change = 6;

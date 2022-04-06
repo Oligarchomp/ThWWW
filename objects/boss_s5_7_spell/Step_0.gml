@@ -53,14 +53,14 @@ if(global.gp_active) and (spell_wait == 0)
 			var fire_wait = 2;
 			var fire_lenght = 180;
 			
-			var ring_nbr = 15;
+			var ring_nbr = 17;
 			var ring_spd = 2;
 			var ring_wait = 52;
 			
 			var arrow_wait = 36;
 			var arrow_arc = 7;
 			var arrow_spd = 4.5;
-			var arrow_dist = 25;
+			var arrow_dist = 24;
 			var arrow_lenght = 100;
 			var arrow_size = 2;
 		break;
@@ -83,7 +83,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var fire_wait = 2;
 			var fire_lenght = 180;
 			
-			var ring_nbr = 20;
+			var ring_nbr = 21;
 			var ring_spd = 2;
 			var ring_wait = 48;
 			

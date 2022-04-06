@@ -11,13 +11,13 @@ if(global.gp_active)
 			var aim_ring = 1;
 		break;
 		case 1:
-			var aim_wait = 28;
+			var aim_wait = 40;
 			var aim_spd = 3.2;
 			var aim_open = 5;
 			var aim_ring = 2;
 		break;
 		case 2:
-			var aim_wait = 16;
+			var aim_wait = 18;
 			var aim_spd = 3.4;
 			var aim_open = 5;
 			var aim_ring = 2;

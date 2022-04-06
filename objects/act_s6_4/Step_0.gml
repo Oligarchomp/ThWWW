@@ -5,22 +5,22 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var mentos_wait = 34;
-			var mentos_spd_shot = 1;
+			var mentos_wait = 60;
+			var mentos_spd_shot = 0.5;
 			var mentos_open = 10;
-			var mentos_accel = 0.05;
+			var mentos_accel = 0.02;
 		break;
 		case 1:
-			var mentos_wait = 18;
-			var mentos_spd_shot = 1;
+			var mentos_wait = 28;
+			var mentos_spd_shot = 0.7;
 			var mentos_open = 10;
-			var mentos_accel = 0.05;
+			var mentos_accel = 0.03;
 		break;
 		case 2:
 			var mentos_wait = 14;
-			var mentos_spd_shot = 1;
+			var mentos_spd_shot = 0.8;
 			var mentos_open = 10;
-			var mentos_accel = 0.05;
+			var mentos_accel = 0.04;
 		break;
 		case 3:
 			var mentos_wait = 10;
@@ -44,13 +44,14 @@ if(global.gp_active)
 			var y_pos = y_min + rng(y_git,false,7);
 			var inst = create_enemy(EN_BLUE,200 - 230 * act_dir + rng(5,false,3),y_pos,fairy_life,3,fairy_spd,90 - 90 * act_dir)
 			inst.item_nbr = 2;
+			inst.shot_off = rng(mentos_wait,true,1);
 			act_dir *= -1;
 		}
 	}
 	
 	with(obj_enemy3)
 	{
-		if(step % mentos_wait == 0)
+		if(step % mentos_wait == shot_off)
 		{
 			var ang = 90 - mentos_open + rng(mentos_open * 2,false,6);
 			var inst = shoot(DAN_MENTOS,7,x,y,ang,mentos_spd_shot,sfx_shot2,4);

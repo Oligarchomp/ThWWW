@@ -22,11 +22,11 @@ if(global.gp_active)
 			break;
 			case 1:
 				var y_grav = 0;
-				var bubble_spd = 4;
+				var bubble_spd = 3;
 				var bubble_wait = 45;
 				var bubble_nbr = 14;
 				
-				var arrow_row = 5;
+				var arrow_row = 4;
 				var arrow_dist = 19;
 				var arrow_angle = 999;
 				var arrow_spd = 4;

@@ -36,7 +36,7 @@ if (global.gp_active)
 			
 			var boss_death = boss_id;
 			
-			if(global.game_type = GAME_SPELL) and (boss_death != BOSS_YUUTO)
+			if(global.game_type != GAME_FULL) and (boss_death != BOSS_YUUTO)
 			{
 				boss_death = 0;//default to normal death	
 			}
