@@ -24,8 +24,8 @@ audio_emitter_gain(global.sfx_emitter,(global.sfx_volume - 1) * global.sound_mul
 var bgm = data_read("Data.ini","option","bgm");
 if(bgm == 0)
 {
-	data_write("Data.ini","option","bgm",7);
-	global.bgm_volume = 7;
+	data_write("Data.ini","option","bgm",8);
+	global.bgm_volume = 8;
 }
 else
 {

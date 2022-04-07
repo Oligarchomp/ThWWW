@@ -44,7 +44,7 @@ switch(global.stage)
 	break;
 }
 
-x = global.game_x_offset - 30;
+x = global.game_x_offset - 30 - spell_nbr * sprite_get_width(spr_bomb_hud) - string_width(name);
 y = 20;
 
 x_to = global.game_x_offset + 2;

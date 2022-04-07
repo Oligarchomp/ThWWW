@@ -7,6 +7,6 @@ event_inherited();
 act_set_time(3625,3625);
 
 need_fairy_time = 0;
-act_dir = 1;
+act_dir = -1;
 
 time_wait = 0;

@@ -141,7 +141,7 @@ switch(level)
 			break;
 			case 6: // options
 				var xx = 460;
-				var yy = 118;
+				var yy = 130;
 				var xx2 = xx + 50;
 				
 				for(var i = 0; i < array_length(check); i += 1)
@@ -334,7 +334,7 @@ switch(level)
 			case 6: //controle
 			
 				var xx = 450;
-				var yy = 120;
+				var yy = 110;
 				var xx2 = xx + 50;
 				
 				for(var i = 0; i < array_length(check); i += 1)
