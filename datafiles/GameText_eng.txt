@@ -365,7 +365,7 @@ diag_s3_s23 = Rain? It didn't seem like it was going to rain when I was down the
 
 diag_s4_r1 = Lady Hakurei!
 diag_s4_r2 = I'm sensing something abnormal about the current weather and I am requiring your assistance.
-diag_s4_r3 = Yeah, Thanks Sherlock! But I'm kind of in the middle of something right now. You know, the sky and all.
+diag_s4_r3 = Yeah, thanks Sherlock! But I'm kind of in the middle of something right now. You know, the sky and all.
 diag_s4_r4 = We do not have time to bargain. Please, revisit your priorities!
 diag_s4_r5 = Huh? I am having strange feelings of déjà vu...
 diag_s4_r6 = Also, what the heck. How is it raining in Heaven? Aren't we above the clouds?

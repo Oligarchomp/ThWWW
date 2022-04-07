@@ -31,14 +31,14 @@ if(global.gp_active) and (spell_wait == 0)
 			var crab_start = 150;
 		
 			var knife_row_dist = 90;
-			var knife_row_spd = 1.5;
-			var knife_row_wait = 50;
+			var knife_row_spd = 1.4;
+			var knife_row_wait = 56;
 			
-			var crab_lenght = 125;
+			var crab_lenght = 115;
 			var crab_wait = 40;
 			var crab_spd = 5;
 			
-			var crab_step_wait = 100;
+			var crab_step_wait = 135;
 			
 			var crab_step_max = 1000;
 			

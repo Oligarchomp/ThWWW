@@ -42,7 +42,7 @@ if(global.gp_active)
 					var bubble = shoot(DAN_BUBBLE,col,obj_boss.x,obj_boss.y,aim + i * act_dir,0,sfx_redirect1,1);
 					bubble.x_ref = obj_boss.x;
 					bubble.y_ref = obj_boss.y;
-					bubble.angle_ref = aim + i * act_dir;
+					bubble.angle_ref = global.rng_patch ? rng(360,false,1) : aim + i * act_dir;
 					bubble.dist_ref = 0;
 					bubble.x_offscreen = 120;
 					bubble.y_offscreen = 160;
@@ -52,7 +52,7 @@ if(global.gp_active)
 					{
 						var inst = shoot(DAN_MENTOS,col,obj_boss.x,obj_boss.y,aim2 + j,0,noone,4);
 						inst.my_bubble = bubble;
-						inst.angle_ref = aim + j;
+						inst.angle_ref = global.rng_patch ? rng(360,false,1) : aim + j;
 						inst.dist_ref = 0;
 						inst.dir_dan = act_dir;
 					}

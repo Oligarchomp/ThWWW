@@ -1250,7 +1250,7 @@ menu =
 				title : get_text("mus_room_b4"),
 				comment : get_text("mus_com_b4"),
 				action : MENU_MUSIC,
-				music : noone,
+				music : mus_boss4,
 			},
 			{
 				title : get_text("mus_room_s5"),
@@ -1262,7 +1262,7 @@ menu =
 				title : get_text("mus_room_b5"),
 				comment : get_text("mus_com_b5"),
 				action : MENU_MUSIC,
-				music : noone,
+				music : mus_boss5,
 			},
 			{
 				title : get_text("mus_room_s6"),
@@ -1286,7 +1286,7 @@ menu =
 				title : get_text("mus_room_b7"),
 				comment : get_text("mus_com_b7"),
 				action : MENU_MUSIC,
-				music : noone,
+				music : mus_boss7,
 			},
 			{
 				title : get_text("mus_room_end"),

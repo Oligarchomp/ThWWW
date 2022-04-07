@@ -20,7 +20,7 @@ if(global.game_type != GAME_SPELL)
 }
 else
 {
-	music = noone;
+	music = mus_boss7;
 	var ev = get_next_event();
 	
 	if(ev == act_s7_51_midspell) or (ev == act_s7_52_midspell) or (ev == act_s7_53_midspell)

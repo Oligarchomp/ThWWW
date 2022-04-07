@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"mus_boss7","path":"sounds/mus_boss7/mus_boss7.yy",},"order":19,},
     {"id":{"name":"spr_reimu_art","path":"sprites/spr_reimu_art/spr_reimu_art.yy",},"order":1,},
     {"id":{"name":"obj_bubble_timeout","path":"objects/obj_bubble_timeout/obj_bubble_timeout.yy",},"order":8,},
     {"id":{"name":"spr_iku_idle","path":"sprites/spr_iku_idle/spr_iku_idle.yy",},"order":0,},
@@ -238,6 +239,7 @@
     {"id":{"name":"boss_s6_4_spell","path":"objects/boss_s6_4_spell/boss_s6_4_spell.yy",},"order":11,},
     {"id":{"name":"check_damage","path":"scripts/check_damage/check_damage.yy",},"order":2,},
     {"id":{"name":"mus_stage1","path":"sounds/mus_stage1/mus_stage1.yy",},"order":0,},
+    {"id":{"name":"mus_boss4","path":"sounds/mus_boss4/mus_boss4.yy",},"order":17,},
     {"id":{"name":"obj_bosstitle","path":"objects/obj_bosstitle/obj_bosstitle.yy",},"order":2,},
     {"id":{"name":"mus_boss1","path":"sounds/mus_boss1/mus_boss1.yy",},"order":2,},
     {"id":{"name":"get_distance","path":"scripts/get_distance/get_distance.yy",},"order":4,},
@@ -319,6 +321,7 @@
     {"id":{"name":"obj_ending","path":"objects/obj_ending/obj_ending.yy",},"order":6,},
     {"id":{"name":"spr_danmaku_grazbox","path":"sprites/spr_danmaku_grazbox/spr_danmaku_grazbox.yy",},"order":3,},
     {"id":{"name":"dialogue_s4_post","path":"objects/dialogue_s4_post/dialogue_s4_post.yy",},"order":15,},
+    {"id":{"name":"mus_boss5","path":"sounds/mus_boss5/mus_boss5.yy",},"order":18,},
     {"id":{"name":"act_s3_8","path":"objects/act_s3_8/act_s3_8.yy",},"order":13,},
     {"id":{"name":"sfx_liberate","path":"sounds/sfx_liberate/sfx_liberate.yy",},"order":3,},
     {"id":{"name":"room_score","path":"rooms/room_score/room_score.yy",},"order":5,},
@@ -450,7 +453,7 @@
     {"id":{"name":"spr_reverence_move_left","path":"sprites/spr_reverence_move_left/spr_reverence_move_left.yy",},"order":1,},
     {"id":{"name":"obj_player_grazebox","path":"objects/obj_player_grazebox/obj_player_grazebox.yy",},"order":2,},
     {"id":{"name":"spr_bubble_farewell","path":"sprites/spr_bubble_farewell/spr_bubble_farewell.yy",},"order":2,},
-    {"id":{"name":"obj_load","path":"objects/obj_load/obj_load.yy",},"order":3,},
+    {"id":{"name":"obj_load","path":"objects/obj_load/obj_load.yy",},"order":16,},
     {"id":{"name":"act_s1_7","path":"objects/act_s1_7/act_s1_7.yy",},"order":6,},
     {"id":{"name":"boss_s7_8_non","path":"objects/boss_s7_8_non/boss_s7_8_non.yy",},"order":12,},
     {"id":{"name":"room_transition","path":"scripts/room_transition/room_transition.yy",},"order":36,},
@@ -818,7 +821,7 @@
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"Omake.txt","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
-    "IDEVersion": "2022.3.0.624",
+    "IDEVersion": "2022.3.0.625",
   },
   "resourceVersion": "1.5",
   "name": "thWWW",

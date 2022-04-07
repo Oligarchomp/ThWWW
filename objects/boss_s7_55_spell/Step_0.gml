@@ -37,15 +37,19 @@ if(global.gp_active)
 							var inst = shoot(DAN_PELLET,7,room_width / 2, -200,-45,0,noone,8);
 							inst.is_cancelable = false;
 							inst.y_offscreen = 400;
+							inst.angle = -45 //rng patch
 							var inst = shoot(DAN_PELLET,7,room_width / 2, room_height + 200,-45,0,noone,8);
 							inst.is_cancelable = false;
 							inst.y_offscreen = 400;
+							inst.angle = -45 //rng patch
 							var inst = shoot(DAN_PELLET,7,-200, room_height / 2,135,0,noone,8);
 							inst.is_cancelable = false;
 							inst.x_offscreen = 400;
+							inst.angle = 135//rng patch
 							var inst = shoot(DAN_PELLET,7,room_width + 200, room_height / 2,135,0,noone,8);
 							inst.is_cancelable = false;
 							inst.x_offscreen = 400;
+							inst.angle = 135//rng patch
 						break;
 						case 40:
 							play_sound(sfx_boss_release,1,false);
@@ -97,7 +101,7 @@ if(global.gp_active)
 						{
 							angle += shoot_angle_plus;
 							shoot_row(DAN_AMULET,1,amulet_row,x + lengthdir_x(dist_shoot,angle),y + lengthdir_y(dist_shoot,angle),angle,amulet_spd_min,amulet_spd_max,sfx_shot2,2);
-							var sp = amulet_spd_max //+ (amulet_spd_max - amulet_spd_min) / amulet_row
+							var sp = amulet_spd_max 
 							shoot(DAN_KNIFE,6,x + lengthdir_x(dist_shoot,angle),y + lengthdir_y(dist_shoot,angle),angle,sp,sfx_shot2,1);
 						}
 					break;

@@ -662,6 +662,14 @@ if(cursor[0] == 4) and (score_difficulty == 4) and (global.player_chosen == P_RE
 			}
 		}
 		
+		//unlockig music room
+		var check = menu[7].param
+		
+		for(var i = 0; i < array_length(check); i += 1)
+		{
+			data_write("Data.ini","music",check[i].music,1)
+		}
+		
 		cursor_lockout = 100;
 		room_transition(room_main,false);
 	}

@@ -284,12 +284,12 @@ global.play_type = PLAY_MANUAL;
 #macro REPLAY_DIFFICULTY 7
 #macro REPLAY_STAGE_NBR 8
 
-
+/*
 room_goto(room_gp)
 
 global.difficulty = 3;
 
-add_stage_event(act_s6_0,0);// keep this one
+add_stage_event(act_s7_0,0);// keep this one
 
-add_stage_event(act_s6_4,1);
+add_stage_event(boss_s7_55_spell,1);
 		

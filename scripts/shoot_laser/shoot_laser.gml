@@ -6,15 +6,9 @@
 ///@param lenght real
 ///@param col color
 ///@param sfx sound
-function shoot_laser(argument0,argument1,argument2,argument3,argument4,argument5,argument6){
-
-	var x1 = argument0;
-	var y1 = argument1;
-	var ang = argument2;
-	var charge = argument3;
-	var lenght = argument4;
-	var col = argument5;
-	var sfx = argument6;
+function shoot_laser(x1,y1,ang,charge,lenght,col,sfx){
+	
+	ang = global.rng_patch ? rng(360,false,1) : ang;
 	var size = sprite_get_width(spr_laser_hitbox);
 	
 	var inst = instance_create_depth(x1,y1,0,obj_laser);
