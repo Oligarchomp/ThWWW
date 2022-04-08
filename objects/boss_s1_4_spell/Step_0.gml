@@ -56,7 +56,7 @@ if(global.gp_active)
 				var arc_dist = 25;
 				var arc_dif = arc_dist;
 				
-				var arrow_ring_nbr = 32;
+				var arrow_ring_nbr = 30;
 				var wait_arrow = 18;
 				var arrow_spd = 4.8;
 			break;

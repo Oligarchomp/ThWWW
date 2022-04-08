@@ -9,13 +9,13 @@ if(global.gp_active) and (spell_wait == 0)
 	var metronome_row = 2;
 	var metronome_arc = 3;
 	var metronome_dist = 50;
-	var metronome_spd_min = 2;
-	var metronome_spd_max = 5;
+	var metronome_spd_min = 1.8;
+	var metronome_spd_max = 4.8;
 	
 	var ring_nbr = 17;
 	var ring_row = 3;
-	var ring_spd_min = 1.8;
-	var ring_spd_max = 3.5;
+	var ring_spd_min = 1.6;
+	var ring_spd_max = 3.3;
 	
 	switch(state)
 	{

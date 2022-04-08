@@ -25,7 +25,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 1:
 			var aim_arc = 3;
 			var aim_spd = 3.3;
-			var aim_dist = 35;
+			var aim_dist = 39;
 			
 			var arrow_size = 5;
 			var arrow_spd = 4;
@@ -34,16 +34,16 @@ if(global.gp_active) and (spell_wait == 0)
 			var ball_spd = 0.9;
 			var ball_accel = 0.03;
 			
-			var fill_ring = 11;
+			var fill_ring = 12;
 			var fill_spd = 2;
-			var fill_wait = 39;
+			var fill_wait = 37;
 			
 			var wave_wait = 150;
 		break;
 		case 2:
 			var aim_arc = 5;
 			var aim_spd = 3.6;
-			var aim_dist = 29;
+			var aim_dist = 33;
 			
 			var arrow_size = 5;
 			var arrow_spd = 5;
@@ -52,7 +52,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var ball_spd = 1;
 			var ball_accel = 0.03;
 			
-			var fill_ring = 15;
+			var fill_ring = 16;
 			var fill_spd = 2;
 			var fill_wait = 34;
 			
@@ -61,7 +61,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 3:
 			var aim_arc = 7;
 			var aim_spd = 3.6;
-			var aim_dist = 22;
+			var aim_dist = 26;
 			
 			var arrow_size = 5;
 			var arrow_spd = 5;
@@ -102,6 +102,21 @@ if(global.gp_active) and (spell_wait == 0)
 				
 				var rand = rng(360,false,1);
 				shoot_arc(DAN_ARROW,7,aim_arc,obj_boss.x,obj_boss.y,999,aim_dist,aim_spd,sfx_redirect2,4);
+				
+				with(obj_danmaku4)
+					{
+						if(state == 0)
+						{
+							spawn_type = SPAWN_SCALE;
+							image_xscale = 2;
+							image_yscale = 2;
+							state = 1;
+							x_offscreen *= 2;
+							y_offscreen *= 2;
+						}
+					}
+				
+				
 				
 				shoot_ring(DAN_MENTOS,5,ball_nbr,obj_boss.x,obj_boss.y,rand,0,sfx_shot1,5);
 				

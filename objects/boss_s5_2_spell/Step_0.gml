@@ -11,9 +11,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var spam_grav_max = 1.5;
 			var spam_grav_git = 0.2;
 			var spam_accel = 0.1;
-			var spam_bubble_nbr = 2;
-			var spam_ball_nbr = 10;
-			var spam_rice_nbr = 14;
+			var spam_arrow_nbr = 15;
 			var spam_open = 10;
 			
 			var tree_dan = DAN_MENTOS;
@@ -26,7 +24,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var aim_wait = 12;
 			var aim_spd = 1.5;
 			var aim_arc = 5;
-			var aim_dist = 30;
+			var aim_dist = 36;
 		break;
 		case 1:
 			var shock_wave = 3;
@@ -35,9 +33,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var spam_grav_max = 1.75;
 			var spam_grav_git = 0.4;
 			var spam_accel = 0.1;
-			var spam_bubble_nbr = 3;
-			var spam_ball_nbr = 18;
-			var spam_rice_nbr = 24;
+			var spam_arrow_nbr = 28;
 			var spam_open = 16;
 			
 			var tree_dan = DAN_MENTOS;
@@ -50,7 +46,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var aim_wait = 8;
 			var aim_spd = 2.5;
 			var aim_arc = 7;
-			var aim_dist = 19;
+			var aim_dist = 25;
 		break;
 		case 2:
 			var shock_wave = 4;
@@ -59,9 +55,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var spam_grav_max = 2;
 			var spam_grav_git = 0.5;
 			var spam_accel = 0.1;
-			var spam_bubble_nbr = 4;
-			var spam_ball_nbr = 24;
-			var spam_rice_nbr = 32;
+			var spam_arrow_nbr = 36;
 			var spam_open = 18;
 			
 			var tree_dan = DAN_BUBBLE;
@@ -83,9 +77,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var spam_grav_max = 2;
 			var spam_grav_git = 0.5;
 			var spam_accel = 0.1;
-			var spam_bubble_nbr = 4;
-			var spam_ball_nbr = 26;
-			var spam_rice_nbr = 34;
+			var spam_arrow_nbr = 45;
 			var spam_open = 20;
 			
 			var tree_dan = DAN_BUBBLE;
@@ -118,38 +110,22 @@ if(global.gp_active) and (spell_wait == 0)
 					screen_shake(5,0);
 					play_sound(sfx_shock,1,false);
 					
-					for(var i = 0; i < spam_bubble_nbr; i += 1)
+					for(var i = 0; i < spam_arrow_nbr; i += 1)
 					{
 						var sp = spam_shoot_spd + rng(spam_shoot_spd_git,false,i + 3);
 						var ang = 90 - spam_open + rng(spam_open * 2, false,i + 1);
-						var inst = shoot(DAN_BUBBLE,3,rng(room_width,false,i),-50,ang,sp,noone,7);	
+						var inst = shoot(DAN_ARROW,3,rng(room_width,false,i),-50,ang,sp,noone,7);
+						inst.spawn_type = SPAWN_SCALE;
+						inst.image_xscale = 2;
+						inst.image_yscale = 2;
+						inst.x_offscreen *= 2;
+						inst.y_offscreen *= 2;
 						inst.pos_type = POS_SP;
 						inst.y_grav_accel = spam_accel;
 						inst.y_grav_max = spam_grav_max + rng(spam_grav_git,false, i + 2);	
 						inst.y_offscreen = 90;
 					}
 					
-					for(var i = 0; i < spam_ball_nbr; i += 1)
-					{
-						var sp = spam_shoot_spd + rng(spam_shoot_spd_git,false,i + 3);
-						var ang = 90 - spam_open + rng(spam_open * 2, false,i + 1);
-						var inst = shoot(DAN_BALL,3,rng(room_width,false,i),-30,ang,sp,noone,6);	
-						inst.pos_type = POS_SP;
-						inst.y_grav_accel = spam_accel;
-						inst.y_grav_max = spam_grav_max + rng(spam_grav_git,false, i + 2);	
-						inst.y_offscreen = 70;
-					}
-					
-					for(var i = 0; i < spam_rice_nbr; i += 1)
-					{
-						var sp = spam_shoot_spd + rng(spam_shoot_spd_git,false,i + 3);
-						var ang = 90 - spam_open + rng(spam_open * 2, false,i + 1);
-						var inst = shoot(DAN_RICE,3,rng(room_width,false,i),-30,ang,sp,noone,5);	
-						inst.pos_type = POS_SP;
-						inst.y_grav_accel = spam_accel;
-						inst.y_grav_max = spam_grav_max + rng(spam_grav_git,false, i + 2);	
-						inst.y_offscreen = 70;
-					}
 				}
 			}
 			else
@@ -229,7 +205,23 @@ if(global.gp_active) and (spell_wait == 0)
 			{
 				if(state_time % aim_wait == aim_wait - 1) //and (obj_boss.y > 0)
 				{
-					shoot_arc(aim_dan,7,aim_arc,obj_boss.x,obj_boss.y,999,aim_dist,aim_spd,sfx_shot1,4);	
+					shoot_arc(aim_dan,7,aim_arc,obj_boss.x,obj_boss.y,999,aim_dist,aim_spd,sfx_shot1,4);
+					
+					if(aim_dan == DAN_ARROW)
+					{
+						with(obj_danmaku4)
+						{
+							if(state == 0)
+							{
+								spawn_type = SPAWN_SCALE;
+								image_xscale = 2;
+								image_yscale = 2;
+								state = 1;
+								x_offscreen *= 2;
+								y_offscreen *= 2;
+							}
+						}	
+					}
 				}
 			}
 			else
