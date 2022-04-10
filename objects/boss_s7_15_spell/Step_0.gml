@@ -49,7 +49,7 @@ if(global.gp_active) and (spell_wait == 0)
 				{
 					state = 1;
 					spd = 0;
-					color_id = 1;
+					color_id = 6;
 					angle = angle_re;
 					x_offscreen = 30;
 					y_offscreen = 30;
@@ -69,7 +69,7 @@ if(global.gp_active) and (spell_wait == 0)
 		for(var i = 0; i < 360; i += 360 / bubble_nbr)
 		{
 			var ang = an + i + global.rng_patch * rng(360,false,1); 
-			var inst = shoot(DAN_BUBBLE,6,room_width / 2 + lengthdir_x(dist,ang),room_height / 2 + lengthdir_y(dist,ang),0,0,sfx_redirect1,7);
+			var inst = shoot(DAN_BUBBLE,1,room_width / 2 + lengthdir_x(dist,ang),room_height / 2 + lengthdir_y(dist,ang),0,0,sfx_redirect1,7);
 			inst.spawn_type = SPAWN_SCALE;
 			inst.x_offscreen = 400;
 			inst.y_offscreen = 400;

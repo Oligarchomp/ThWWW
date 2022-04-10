@@ -5,7 +5,7 @@ if(global.gp_active)
 	x += lengthdir_x(spd,angle);
 	y += lengthdir_y(spd,angle);
 	
-	scale = goto_value(scale,0,0.04);
+	scale = goto_value(scale,0,0.02);
 	
 	if(scale == 0)
 	{

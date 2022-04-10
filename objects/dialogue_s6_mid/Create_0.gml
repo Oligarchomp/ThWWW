@@ -15,7 +15,7 @@ switch(global.player_chosen)
 	case P_REIMU:
 		boss_step = 0;
 		title_step = 10;
-		set_dialogue(spr_reimu_art,0,false,spr_feza_art,8,true,get_text("diag_s6_r1"),150);
+		set_dialogue(spr_reimu_art,5,false,spr_feza_art,8,true,get_text("diag_s6_r1"),150);
 		set_dialogue(spr_reimu_art,1,true,spr_feza_art,8,false,get_text("diag_s6_r2"),150);
 	break;
 	case P_MARISA:

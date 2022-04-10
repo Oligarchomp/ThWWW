@@ -1,17 +1,100 @@
+// Here are all the text that appear as graphics in game. I'm putting everything here so it's easily accessible, but i'll do the graphics myself
+
+Stage 1: A Sweet Pink Lady	// "pink lady" being a variety of Apple. Its the same for "Red Delicious" of apple's title
+Green Road - The sky was shattered into pieces. Yet, some people are just too attracted by the earth.
+
+Stage 2: The Elegant and Grudgeless Grudge Youkai.
+Misty Lake - The Misty Lake was brimming with life as usual. It was looking as badly cracked as the ominus sky.
+
+Stage 3: A Groupie with a Flower Pattern
+Above the Youkai Mountain - Heaven was just within reach. But was this Paradise truly as unchanging as said?
+
+Stage 4: Azure Fantasy Above and Below The Clouds
+Heaven - Torrentiel precipitations were hiding the sky. Forfeit all of your desires and you shall rise above the rain.
+
+Stage 5: Hope Brought by the One in White
+Inside the Mysterious Boat - The ship came from above the broken sky. It felt both empty and full of life at the same time.
+
+Stage 6: She Who Could Not Reach The Horizon
+Wheelhouse of the Mysterious Boat - Gensokyo was likea prison to them. AFter breaking the sky, they were now trying to break free.
+
+Extra Stage: Il Maestro Che Crea Mondi
+Above the Great Ark - The sky was almost completely gone. I her name, most compassionate, most merciful. She created heaven and eart, but was stranger to phantasm and fantasy.
+
+
+This game is a Bullet-Hell, a shooting game where the screen is filled with projectiles.
+Your main objective is to not get yourself hit by those.
+You can make your life easier by shooting down enemies.
+To help you, you have a number of resources atyour disposal:
+Lifes	: If you got hit, you will lose one of them. Lose them all and it's Game Over.
+Bombes	: Limited use super attack. Just press the button once and watch as the screen clear hitself.
+You can gain more lives by collecting Point Items
+
+By going very close to a bullet, you will graze it and make the graze counter go up.
+Grazing is purely for scoring purpose and is not important if your only goal is to finish the game.
+At the end of each stage, a boss is waiting for you. They have multiple attacks, each one of them with their own HP bar. 
+They will also occasionally cast what is called a Spell Card.
+Spell Cards are usually harder patterns to dodge, but were you to deplete the boss's HP without dying or bombing, you will "Capture" the Spell, giving you additional score.
+Defeat the boss and you can move on to the next stage.
+
+The story takes place in Gensokyo, a world of fantasy. 
+This place is home to phantasm and Youkai, forgotten by the Outside World.
+Reimu Hakurei, the shrine maiden of the Hakurei Shrine, is tasked to protect the Great Barrier, a powerful seal that allows Gensokyo to persist.
+One day however, something or someone broke Gensokyo's sky, leaving the barrier with a gaping hole.
+Gensokyo is often subject to major incidents, and it is up to Reimu and other incident resolvers to find the culprit and give them a good lesson.
+
+Point Item: Gives you score based on your difficulty. The higher on screen you grab it, the more valuable it is.
+Going above the Point of Collection will attract all the items on the screen to you.
+Star Item: Gives you score based on your graze count. They will be created when cancelling bullets.
+Bomb Extend: Gives you an extra bomb. Some midbosses will leave one behind.
+Life Extend: Gives you an extra life. Some midbosses will leave one behind.
+
+This game is pretty bare bones when it comes to its scoring system.
+The main ways to gain score are:
+-Point Items: Don't let enemies leave with their items. Always try to go to the Point of Collection for collecting items, as they will 
+only reach their full value there.
+-Spell Card Bonuses: Capture spells as fast as possible.
+-Graze and cancels: Graze as much as possible, and try to end boss patterns when the screen is filled with a lot of projectiles.
+Try using your bomb is smart places in order to cancel as many bullets as you can!
+
+
+Secondary Shot: Homing Amulet
+Spell Card: Spirit Sign - [Fantasy Seal]
+Special Attributes: 
+-Smaller Hurtbox
+-Longer Border of Life and Death
+
+Secondary Shot: Piercing Laser
+Spell Card: Love Sign - [Master Spark]
+Special Attributes: 
+-High Mobility
+-Point Items are easier to collect
+
+Secondary Shot: Wily Toad
+Spell Card: Esoterica - [Nine Syllable Stabs]
+Special Attributes: 
+-Bigger Grazebox
+-Wide Range and Shotgun Power
+
+
+// end of graphics
+
+
+
 ver = 0.0.42
 bomb_reimu = Spirit Sign - [Fantasy Seal]
 bomb_marisa = Love Sign - [Master Spark]
 bomb_sanae = Esoterica - [Nine Syllable Stabs]
 
-boss_apple = Apple Girlington
-boss_serene = Serene Heikegani
+boss_apple = Apple Girlington		//the names here are for the boss info, with the spells and lifebar, so it's just need to be switched
+boss_serene = Serene Heikegani		// everything relaed to the characters, names and titles, can be found in the Omake.
 boss_pale = Pale Fanhead
 boss_yuuto = Yuuto Ichika
 boss_feza = Feza
 boss_nua = Nua Kozui
-boss_reverence = Reverence U'n-Llisardggy
+boss_reverence = Reverence U'n-Llisardggy 		//For the translation of "U'n-Llisardggy", you can keep the "U'n" romanized (is that the actual correct word?).
 
-mus_stage1 = Magical Hopalong Cassidy Station [Arr: Sozoro Namimo]
+mus_stage1 = Magical Hopalong Cassidy Station [Arr: Sozoro Namimo]		//None of the songs should be translated, as this is their actual title
 mus_boss1 = AN APPLE DISASTER!! [Arr: Princess Sylvysprit]
 mus_stage2 = The Broken Sky Reflected by the Lake~Crustacean Parade
 mus_stage2_comp = [Comp: Armand]
@@ -108,7 +191,7 @@ menu_lock_comment_extra = Capture this spell to unlock its comment.
 menu_music_lock = You haven't encounter this track in game yet.$But you can still listen to it if you want.$Select it two times in quick succession.
 
 pause_pause = Pause
-pause_gameover = Game Over
+pause_gameover = Game Over		// Stay in english
 pause_endreplay = End of Simulation
 pause_resume = Resume
 pause_title = Go back to title
@@ -130,26 +213,26 @@ result_miss = MISS :
 result_bomb = BOMB USED :
 result_spell = SPELL CAPTURED :
 
-spell_s1_mida = Apple Sign "Apfelkuchen"
+spell_s1_mida = Apple Sign "Apfelkuchen"		//Everything that isn't English should remains in whatever language it is.
 spell_s1_midb = Heaven Sign "Adam and Eve Falling From Heaven"
 spell_s1_1a = Physics Sign "Newton's Laws of Motion"
-spell_s1_1b = Apple Sign "Celebration of the Homonym Apple and Mount"
+spell_s1_1b = Apple Sign "Celebration of the Homonym Apple and Mount"	// i don't know (but it should be fine) if the name works in japanese. It's referencing the fact that their is an Apple variety called "Fuji", the same as mount fuji. 
 spell_s1_1c = Japanese Folklore "Apple Buffet on Mt. Fuji"
 spell_s1_2a = Rotten Sign "One to Spoil the Bunch"
-spell_s1_2b = Rotten Sign "Bad Apple"
+spell_s1_2b = Rotten Sign "Bad Apple"		//obviously based of the touhou song of the same name
 
 spell_s2_mida = Enmity Sign "Fallen Soldier Resting Undersea"
 spell_s2_midb = Grudge Sign "Downfall of The Heike Clan"
 spell_s2_1a = Crab Sign "Crab's Walk"
 spell_s2_1b = Migration Sign "Crab Voyage Throughout the Land"
 spell_s2_2a = Summon "Coming of The Giant Crab"
-spell_s2_2b = Weak Point Sign "Massive Damage"
+spell_s2_2b = Weak Point Sign "Massive Damage"		// that's one of many "Makes more sense in english" name but whatever (since the meme is originaly in english)
 spell_s2_3a = Team Attack "Stratagem To Kill a Mere Monkey"
-spell_s2_3b = "The War of Monkey and Crab Is Not Over Yet"
+spell_s2_3b = "The War of Monkey and Crab Is Not Over Yet"		//is a reference to Ranran's final spell is HSoB. 「新約・猿蟹合戦大絵卷」
 
-spell_s3_mida = Service Sign "Fantastic Kaleidoscope!"
-spell_s3_midb = Service Sign "Forfeit Unanimateness!"
-spell_s3_1a = Fiction Sign "An Eastern Tale From My Home Country!"
+spell_s3_mida = Service Sign "Fantastic Kaleidoscope!"		//okay, for those ones I dont' know. The joke with Pale's spell signs is that you have to had "fan" at the start
+spell_s3_midb = Service Sign "Forfeit Unanimateness!"		//Next - In this case, it's fan service. But you have fan game, fan favourite and so on. 
+spell_s3_1a = Fiction Sign "An Eastern Tale From My Home Country!"	//Next - I highly doubt it also works in Japanese. So you'll have to see.
 spell_s3_1b = Fiction Sign "Sole Against All Canons!"
 spell_s3_2a = Fancy Sign "All Around the World!"
 spell_s3_2b = Fanatic Sign "Hyperventilation!"
@@ -172,41 +255,41 @@ spell_s4_4s = Bootleg Sign "Godless Solar Wind"
 spell_s5_1a = Hope Sign "Bringing Bough"
 spell_s5_1b = Hope Sign "Promise of a Better World"
 spell_s5_1c = Horizon Sign "Olive Tree Uprooting"
-spell_s5_2a = Leaf Sign "Razor Leaf"
-spell_s5_2b = Leaf Sign "Leaf Blade"
+spell_s5_2a = Leaf Sign "Razor Leaf"		//based on the pokémon moves. Should have the official japanese name for those move as well.
+spell_s5_2b = Leaf Sign "Leaf Blade"		//same
 spell_s5_2c = Leaf Sign "Four Generations Stabs"
 spell_s5_3a = Pole Sign "Little Dove Will Always Find the North"
 spell_s5_3b = Magnetic Sign "Magnetoreception"
 spell_s5_4a = Hope Sign "Cardinal Compass Rose"
-spell_s5_4b = Horizon Sign "Flower Ponders the Wind"
+spell_s5_4b = Horizon Sign "Flower Ponders the Wind"	//reference to the Mitori fan boss, the stage theme being called "葉は華を惟ひ、華は葉を惟ふ"
 
-spell_s6_mid = Charming Sign "Meek Dominance"
+spell_s6_mid = Charming Sign "Meek Dominance"		// is a reference to "Eternal Meek" and "Illusionary Dominance"
 spell_s6_1a = Mooring Sign "Drop Anchor on a Mountain"
 spell_s6_1b = Mooring Sign "Berthing on Mt. Ararat"
 spell_s6_2a = Releasing Dove "Opening The Dovecote"
 spell_s6_2b = Releasing Dove "One of Them Will Surely Find Land One Day"
 spell_s6_2c = Releasing Dove "Mass Expedition"
-spell_s6_3a = Farmland "Grape Farmer Nua"
+spell_s6_3a = Farmland "Grape Farmer Nua"	//based of Set's 農園「レタスファーマーセト」 , in HSoB. The english name is "Farmland "Lettuce Farmer Set"" The reference just still need to be present
 spell_s6_3b = Wine Sign "Curse of Ham"
 spell_s6_3c = Vintner Sign "Alcoholic Stupor"
 spell_s6_4a = Patriarch "Immutable Prophet"
 spell_s6_4b = Patriarch "Titanic Prophet"
-spell_s6_5a = "Wonderful Waking World"
+spell_s6_5a = "Wonderful Waking World"		//Similar to Kanako's "Mountain of Faith". In japanese, it's 「マウンテン・オブ・フェイス」.
 spell_s6_5b = "Rise of the Waking World"
 
 spell_s7_mid1 = Art Sign "My Personal Interpretation!"
 spell_s7_mid2 = Game Sign "Admirer For the Likes of You!"
-spell_s7_mid3 = "See? The World is Revolving!"
-spell_s7_1 = World Creation "Bienvenue Chez Moi"
+spell_s7_mid3 = "See? The World is Revolving!"		// reference to Jevil's Theme (I don't know if that helps)
+spell_s7_1 = World Creation "Bienvenue Chez Moi"	// I like using French sentence at random point of my game. And italians too
 spell_s7_2 = World of Self "Reborned Revelation"
-spell_s7_3 = World of Entropy "A Broken Metronome I Picked Up Over There"
-spell_s7_4 = Death World "Unmoving Dreamland"
+spell_s7_3 = World of Entropy "A Broken Metronome I Picked Up Over There" 	// reference to 絵合「その辺で拾った聖者の硝子」 from HSoB, and 三剣「その辺で拾った熾天使の剣」 from RSS
+spell_s7_4 = Death World "Unmoving Dreamland"		//the dreamland here is also a reference to Kirby. Also, the "death" part is done in a similar way as Raiko's fourth spell. With my limited knowledge of japanese, I know four and death sounds alike, so this play on word is even made for japanese in the first place.
 spell_s7_5 = Imaginary and Real World "Flammarion Engraving"
 spell_s7_6 = New World Symphony "Largo Ma Non Troppo"
 spell_s7_7 = Idle World "Remember the Sabbath Day"
 spell_s7_8 = World of Sorrow "God Complex"
 spell_s7_9 = Bubble World "Universe in a Pond"
-spell_s7_10 = My Bow "Bidding Farewell"
+spell_s7_10 = My Bow "Bidding Farewell"			// MAYBE keeping the last part of the name in English??
 
 diag_s1_r1 = The air sure is fresh and moist.
 diag_s1_r2 = I just wished there wasn't that massive hole in the Great Barrier. 
@@ -219,7 +302,7 @@ diag_s1_r8 = Why are you even asking then? And what would you gain from getting 
 diag_s1_r9 = All of Gensokyo needs to know the fruits of my hard work! The Hakurei shrine maiden is no exception!
 diag_s1_r10 = Great for you. Not going to eat it.
 diag_s1_r11 = Maybe you will be more cooperative if you were to have them directly in your face?
-diag_s1_r12 = Take your apples and go make yourself an apple humble pie or something.
+diag_s1_r12 = Take your apples and go make yourself an apple humble pie or something.		// I'm pretty sure the joke doesn't work in Japanese.
 
 diag_s1_m1 = The sky being gone is kinda funny, not gonna lie.
 diag_s1_m2 = Hey, the black and white one over there!
@@ -287,7 +370,7 @@ diag_s2_s5 = My hair dye? It's my natural color!
 diag_s2_s6 = What? B-but aren't you human?
 diag_s2_s7 = It comes with the "Living God" starter pack, you can choose a new hair color! 
 diag_s2_s8 = It used to be brown, but Lady Kanako told me that you had better stand out in Gensokyo.
-diag_s2_s9 = Hair with godly power?
+diag_s2_s9 = Hair with godly power?						// I feel like there is some "done 1000 times play of word" potential here :)
 diag_s2_s10 = Now, THAT'S a challenge for me! Come here, I'll give you a sweet new haircut!
 diag_s2_s11 = No way, back off!
 diag_s2_s12 = The enemy Youkai: Exterminated!     My hair condition: Intact!            Clear Bonus: All mine!
@@ -300,7 +383,7 @@ diag_s3_r4 = But it's not Lady Kochiya. How sad!
 diag_s3_r5 = Yeah, it's easy to tell us apart because the Moriya have faith and food while I do not.
 diag_s3_r6 = So, where are you heading to, not-Moriya shrine maiden?
 diag_s3_r7 = Why do you want to know? To try and stop me if you don't like where I'm going?
-diag_s3_r8 = What? No, I'm just curious! ^^
+diag_s3_r8 = What? No, I'm just curious! ^^				// I know japanese smiley are executed a little differently, are they not? Like ( ￣ω￣ ) or (ﾟ▽ﾟ *) idk. This can be adjusted if it needs to be.
 diag_s3_r9 = I'm doing my duty as the guardian of the Hakurei Barrier, now if you'll excuse me, I'll...
 diag_s3_r10 = Hakurei?
 diag_s3_r11 = Could it be...that you are the Hakurei shrine maiden? :?
@@ -319,8 +402,8 @@ diag_s3_m2 = Guess they finally understood who's the boss around here!
 diag_s3_m3 = Huh? Boss?
 diag_s3_m4 = Are you talking about me?
 diag_s3_m5 = No, I'm not. And you are?
-diag_s3_m6 = I'm a fan, obviously! :)
-diag_s3_m7 = Yeah, sorry, I don't do autographs. 
+diag_s3_m6 = I'm a fan, obviously! :)			//  I checked, and I THINK the whole fan joke also works in Japanese?? I sure hope it does.
+diag_s3_m7 = Yeah, sorry, I don't do autographs.
 diag_s3_m8 = Aren't you a fan fan?
 diag_s3_m9 = If you are looking for fans, I know Yuyuko has a really big one.
 diag_s3_m10 = So you are a fan fan fan then?
@@ -467,19 +550,19 @@ diag_s5_r8 = You're sure you don't just spontaneously have an urge to leave alre
 diag_s5_r9 = Alright, start of extermination in 5...4...3...
 diag_s5_r10 = Wait, listen! We are just trying to leave this place, so if you let the flood happen, we'll be gone in no time! 
 diag_s5_r11 = I strangely don't feel drawn to the idea of you destroying the place I live in...
-diag_s5_r12 = Only one world disappearing? Big deal. Come on, nobody will ever miss you.
-diag_s5_r13 = That's kind of the point of Gensokyo to not be missed but whatever, stay in your little bubble.
+diag_s5_r12 = Only one world disappearing? Big deal. Come on, nobody will ever miss you.		// If after reading the dialogues and the Omake, there is things unclear abouts worlds and bubbles, ask me
+diag_s5_r13 = That's kind of the point of Gensokyo to not be missed but whatever, stay in your little bubble.		// those the play of word with bubbles even works in Japanese?
 diag_s5_r14 = Uh...No? That's EXACTLY what we are trying to not do. I already told you, we are trying to leave your fake world. 
 diag_s5_r15 = Fake?
 diag_s5_r16 = Yeah? You know, like, you can literally pierce it? Not the strongest thing ever, your barrier.
 diag_s5_r17 = So you are ALSO responsible for the hole in the sky? Is it Christmas? I got to solve two incidents at once!
 diag_s5_r18 = Come again? I cannot allow you to go further, you know? We can't stay here, and the sooner we leave the better. 
 diag_s5_r19 = 2...1...0. Extermination time.
-diag_s5_r20 = Serves you right! I hope you liked that demonstration of what a shinto shrine maiden can do!
+diag_s5_r20 = Serves you right! I hope you liked that demonstration of what a shinto shrine maiden can do!		// this sounds maybe a bit random, but originally Feza and Nua had crosses instead of anchors. I kept this line because why not.
 diag_s5_r21 = Why are you telling me this like I'm part of some religious movement? Cause we aren't.
-diag_s5_r22 = Oh? I thought that...Nevermind. I won, you lose. Bring in the real deal!
+diag_s5_r22 = Oh? I thought that...Nevermind. I won, you lose. Bring in the real deal!		
 diag_s5_r23 = Dang it! I oughta do a report on the situation.
-diag_s5_r24 = I'm leaving now, but do not follow me. I'm not going to see the one causing the rain or anything. See you...not!
+diag_s5_r24 = I'm leaving now, but do not follow me. I'm not going to see the one causing the rain or anything. See you...not!		// Feza not being a Tsundere
 diag_s5_r25 = Hey! You think you can just leave like that? Come back here!
 
 diag_s5_m1 = Why do incidents always makes me go throught giant empty hallway that seems to never end?
@@ -502,7 +585,7 @@ diag_s5_m17 = Eh. We can't be forgotten more than we already are.
 diag_s5_m18 = But what we REALLY care about, is beating people like you that act out like they are super important and all.
 diag_s5_m19 = Guess that fighting is unavoidable. Too bad. But don't go thinking I'm no opponent just because I'm a bird! 
 diag_s5_m20 = Don't worry, the idea of gauging you didn't even cross my mind.
-diag_s5_m21 = Pop! Y'hear that? That's the sounds of a bubble poping. I already heard it inside another ship.
+diag_s5_m21 = Pop! Y'hear that? That's the sounds of a bubble poping. I already heard it inside another ship.		// if it wasn't clear, this is a reference to ufo's stage 4 theme with the window pop sfx. It's not important for the translation.
 diag_s5_m22 = I don't have a single clue of what you are talking about...
 diag_s5_m23 = But this is bad! I don't want to be stuck down here! Birds need space to fly and this place is suffocating!
 diag_s5_m24 = Why does it have to be this complicated? How did it come to this?
@@ -538,12 +621,16 @@ diag_s5_s25 = I won't, 'cause I'm going to do something unrelated to what I just
 diag_s5_s26 = Got it. I'm right behind you!
 
 
+// Ok so, from the very few thing i know about japanese, i know people ends their sentence with a some character or something like this
+// Like when I read "Momoyo is currently the only character in the series to use ore (俺) to refer to herself. It is generally considered a very informal masculine-sounding pronoun." in the touhou wiki
+// maybe not EXACTLY the same, but i can totally see Nua talking in a similar masculin manner (in a more formal way, since she is formal when she is sober). (I even thought about making her a trans man, in a similar way as Yamato in One Piece, but since I don't know how to handle those kind of thing, i prefered to forgot the idea)
+
 diag_s6_r1 = Don't you ever know when it's time to give up?
 diag_s6_r2 = I'M the one suppose to say this, you know?
 diag_s6_r3 = All of this rain!
 diag_s6_r4 = Alright, I've had enough. Show yourself now!
 diag_s6_r5 = What is it? Stowaways?
-diag_s6_r6 = If it's for a ride out of this world, we do not take passengers. Even less so when they invite themselves. 
+diag_s6_r6 = If it's for a ride out of this world, we do not take passengers. Even less so when they invite themselves. 	// Nua talks using naval terms. If something sounds of in English, you are free to tell me about it.
 diag_s6_r7 = No one will be leaving Gensokyo today, should it be me, you or anyone trying to mess with the barrier.
 diag_s6_r8 = A ship can only stay at bay for so long. And this place is not the harbor we have been looking for.
 diag_s6_r9 = But allow me to introduce myself. Nua Kozui, Captain of the Great Ark and currently looking for a new home.
@@ -561,12 +648,12 @@ diag_s6_r20 = Ah, ah! You're not even that far off. Except you are not the batht
 diag_s6_r21 = Okay, I officialy give up on the idea to understand anything anyone is saying in that boat...
 diag_s6_r22 = And when I don't understand things, I just shoot down whatever is in front of me!
 diag_s6_r23 = As expected, humans just can't get the bigger picture. What frivolous creatures.
-diag_s6_r24 = Nua: I will not be regretting this world once it's gone!                           Reimu: Gensokyo loves dreaming people.
+diag_s6_r24 = Nua: I will not be regretting this world once it's gone!                           Reimu: Gensokyo loves dreaming people.		// it's not the clearest thing ever what reimu is saying, i meant like "Yeah, in your dream"
 
 diag_s6_m1 = Can you tell me what word you don't understand in "Don't follow me." exactly?
 diag_s6_m2 = Why "Don't" obviously.
 diag_s6_m3 = Now that I think about it. An incident about rain and flood...
-diag_s6_m4 = I somehow got the feeling I already saw that before?
+diag_s6_m4 = I somehow got the feeling I already saw that before?		//there is a lot of fangames with rain or flood as their incident
 diag_s6_m5 = What am I hearing? Stowaways?
 diag_s6_m6 = Oh. Nevermind, it's just a little girl. Too bad for you, human passengers are forbidden.
 diag_s6_m7 = For it to be passengers, this thing needs to start moving, and thus the one causing the rain still standing.
@@ -586,7 +673,7 @@ diag_s6_m20 = You missed the line, but I'll say it anyway: Thirteen.
 diag_s6_m21 = Having discussion with humans is such a pain.
 diag_s6_m22 = No wonder, you're talking alone.
 diag_s6_m23 = Do not worry, for I am also qualified when it comes to more violent exchanges!
-diag_s6_m24 = Nua: Now come drowning like the rest of your counterfeit world!                Marisa: Will you shut up, Murasa 2?
+diag_s6_m24 = Nua: Now come drowning like the rest of your counterfeit world!                Marisa: Will you shut up, Murasa 2?	//Nua do be Gouyoku Ibun Murasa with inverted colors
 
 diag_s6_s1 = Leave. Me. Be. Please use your human brain to recognize this human speech pattern!
 diag_s6_s2 = The mighty Space Warrior is dangerously approaching the one that is pulling the strings. 
@@ -632,7 +719,7 @@ diag_s7_r15 = It is true. It's largely within my capabilities.
 diag_s7_r16 = So do it?
 diag_s7_r17 = No.
 diag_s7_r18 = I've figured it wasn't going to be that easy...
-diag_s7_r19 = Sorry Carmen, but the god that I am can't interfere with whatever is happening to their creations!
+diag_s7_r19 = Sorry Carmen, but the god that I am can't interfere with whatever is happening to their creations!	// SO, the thing with reverence is that she's referencing song title from a french artist called "Stromae", and "Carmen" is one of them. This will just not work in Japanese, so you can make her say something like "Sorry Bella" but Sorry is in japanese.
 diag_s7_r20 = I'm not in a position to say what should or shouldn't happen. If your world is decading, it means it has to be so.
 diag_s7_r21 = Didn't you just said you aren't the one who created Gensokyo?
 diag_s7_r22 = That's beside the point.
@@ -643,19 +730,19 @@ diag_s7_r26 = Please, don't go insulting me like that. But yeah, that's the plan
 diag_s7_r27 = How amusing. How adorable. Understood. I will play your little child game.
 diag_s7_r28 = So now, if you please, silence in the audience, and...
 diag_s7_r29 = Music, Maestro!
-diag_s7_r30 = Bravo! Formidable! To think a human could stand up against a god!
+diag_s7_r30 = Bravo! Formidable! To think a human could stand up against a god!		//bravo and formidable should remains as is I think.
 diag_s7_r31 = You gods REALLY like to say this whenever I beat you up...
 diag_s7_r32 = This place is really full of surprises! I like it! I'm sure Nua is thinking the same!
 diag_s7_r33 = Could this place be the one she has been looking for all of these years? 
 diag_s7_r34 = I don't know and I don't care. Just fix the sky already.
 diag_s7_r35 = Ah, ah! Alright! I want to see more of what this world can offer now!
-diag_s7_r36 = What color do you want your new sky to be? Green? Yellow? Octarine Maybe?
+diag_s7_r36 = What color do you want your new sky to be? Green? Yellow? Octarine Maybe?		// Octarine is a fictional colour appearing in the book "The Colour of Magic". I don't know if there is a japanese equivalent.
 diag_s7_r37 = Just make it blue, that will be enough!
 
 diag_s7_m1 = Back by popular demand: Me! :D
 diag_s7_m2 = Don't expect me to join your inexisting fan club.
 diag_s7_m3 = I couldn't let my fans await my return any longer! ^^
-diag_s7_m4 = Here am I, back to the giant boat, running after some soap god.
+diag_s7_m4 = Here am I, back to the giant boat, running after some soap god.		//the running gag of the soap god come from the fact Reverence creates world iside bubbles, and bubbles are generally made of soap. Meaning Reverence is technically a god of soap.
 diag_s7_m5 = I don't get how soap can fix a broken sky but hey, I'm ready to be surprised.
 diag_s7_m6 = Ah ah, silly Nua. She's still a real child at heart, isn't she?
 diag_s7_m7 = Ciao Bella! You're the human who came here earlier to stop Nua, right? 
@@ -680,7 +767,7 @@ diag_s7_m25 = And I respect it.
 diag_s7_m26 = But to reach full atheism, I must defeat every existing god. And there happen to be one just in front of me.
 diag_s7_m27 = Your conversion went pretty fast. I'm impressed.
 diag_s7_m28 = Now, the orchestra has taken its seats! The show can finally begins!
-diag_s7_m29 = Here is my latest composition: "Summertime Rhapsody of a Dying World"!
+diag_s7_m29 = Here is my latest composition: "Summertime Rhapsody of a Dying World"!		// the name of the song will be the name of her actual theme. I don't have it right now, so its a placeholder for now. But eitherway, you don't need to translate it.
 diag_s7_m30 = Hallelujah! Wonderful! Very impressive for a human!
 diag_s7_m31 = I give up on being atheist, it's asking way too much work.
 diag_s7_m32 = Knowing Nua, she probably find this world to be very small...
@@ -703,7 +790,7 @@ diag_s7_s10 = Finally! After all of these years! An extraterrestrial encounter!
 diag_s7_s11 = The last one I saw with red and blue wings was a fake alien, but this time it's the real deal!
 diag_s7_s12 = I guess? It's more of an extra-universal encounter, wouldn't it be?
 diag_s7_s13 = And more than that, I am also a god. Reverence U'n-Llisardggy, creator of many worlds and many universes!
-diag_s7_s14 = Sanae, creator of the anmitsu with oden.
+diag_s7_s14 = Sanae, creator of the anmitsu with oden.			// props to you if you get the reference (It's not important for the translation)
 diag_s7_s15 = It's the first time I come down here, in "Gensokyo". That's a cute name. A cute name for a cute dying world.
 diag_s7_s16 = But you're the bubble god, aren't you? Can't you just fix the sky? I was told you could.
 diag_s7_s17 = I can.
@@ -963,9 +1050,9 @@ com_s1_1n = Newton's third law is the law of Action and Reaction. It can easily 
 com_s1_1h = The Mt. Fuji and the apples from the Fuji variety share their names.$Honestly, anyone would immediately rejoice after hearing such a cool fact.
 com_s1_1l = Apple is sadly not a Wizard from Mt. Fuji.$Also there is no power system in this game.$And also Reimu doesn't mention diabetes.
 com_s1_2e = Not a lot of people will eat Apple's apple, so she always ends up with baskets full of rotten ones.$At least, she can still throw them at your face. 
-com_s1_2n = Did you know that Apple is Eirin's arch nemesis?
+com_s1_2n = Did you know that Apple is Eirin's arch nemesis?		// literally doesn't work in japanese. It's based on the "an apple a day keep the doctor away". Would need to find something different in japanese
 com_s1_2h = Apple's not that bad, come on, the world isn't black and white! She just doesn't know how to properly interact with peoples.
-com_s1_2l = Ever on and on, I continue circling with nothing but my hate in a carousel of agony, till slowly I forget and my heart starts vanishing and suddenly I see that I can't break free.
+com_s1_2l = Ever on and on, I continue circling with nothing but my hate in a carousel of agony, till slowly I forget and my heart starts vanishing and suddenly I see that I can't break free.		// replace with the japanese lyrics of bad apple
 com_s2_mide = The weapons and armors of the fallen soldiers slowly sink into to bottom of the sea.$What a peaceful sight...if it wasn't for the corpse of said soldiers.
 com_s2_midn = Thanks to all of this equipment, the Heikegani form a strong society of samourai-crab living undersea in the Outside World. The Genji clan is gone since a long time by now, but the Heikegani will keep bearing grudges over things in order to subsiss.
 com_s2_midh = I wonder now...If the Heike were the one being victorious over the Genji, would the Heikegani have been named the Genjigani instead?
@@ -980,8 +1067,8 @@ com_s2_2h = So here's this giant enemy crab! What I'll do is use Reimu here to f
 com_s2_2l = I'll switch over to Marisa, hop on its stomach...$And you attack its weak point...for massive damage!
 com_s2_3e = The crabs are done with the monkey's mischiefs!$Where is the monkey, you ask?$It's you, obviously. You are the monkey.
 com_s2_3n = Serene tried asking for help to a chestnut, to a cow dung, to a bee and to an usu in order to defeat you.$But then she realized that three quarter of those things aren't even alive.
-com_s2_3h = The monkey doesn't stand a single chance in this war! Crabs literally are the pinnacle of evolution!$Why do you think species naturally tend to evolve into one? Because they are perfect!
-com_s2_3l = If a Touhou monkey character were to actually exists, her and Serene would definitely be strong rivals.$Huh? What do you say? Ran? Two Rans? What are you talking about?
+com_s2_3h = The monkey doesn't stand a single chance in this war! Crabs literally are the pinnacle of evolution!$Why do you think species naturally tend to evolve into one? Because they are perfect!		//obligatory carcinisation joke
+com_s2_3l = If a Touhou monkey character were to actually exists, her and Serene would definitely be strong rivals.$Huh? What do you say? Ran? Two Rans? What are you talking about?		// Referring to Ranran from HSoB once again.
 com_s3_mide = Kaleidoscopes are very similar to Danmaku: you can achieve unlimited number of pretty combination with a limited number of elements.
 com_s3_midn = The main difference between kaleidoscopes and Danmaku is that the latter's beauty also come from the power and danger it creates.$Kaleidoscope pattern can't make you go Pichu-un.
 com_s3_midh = Being an inanimate object for 100 years is cool and all, but it's kinda boring.$I know it's weird for an eletric fans, of all things, to become a Tsukumogami but they were already around 100 years ago so it's not impossible. 
@@ -989,15 +1076,15 @@ com_s3_midl = This spell is really just meant to scare you. Some Tsukumogami are
 com_s3_1e = Which one are you talking about Pale?$There is like 8 billions japanese tales and legends, so you'll need to be more precise here.
 com_s3_1n = Say, did you read the Omake?$There is a lot of cool backstories and interesting character descriptions so you should definitely check it out! 
 com_s3_1h = And what about all of those awesome spell comments? Are you reading them all? Or at all?$You are AT LEAST reading this one so that's cool.
-com_s3_unused = Hey! What do you think you are doing? You're supposed to unlock those comments by playing the game! Stop reading them in the text file! >:(
+com_s3_unused = Hey! What do you think you are doing? You're supposed to unlock those comments by playing the game! Stop reading them in the text file! >:(		// I guess you reading this is fine :)
 com_s3_1l = It's called "Fiction Sign" because this is a reading spell with very fast bullet.$Since nobody ever read the dialogues, I have no choice but to make you read Danmaku instead.
 com_s3_2e = This spell's name sounds way less impressive when you remember how small Gensokyo truly is.$You can see everything in it in less than 80 days for sure.
-com_s3_2n = Do you know about that one song?$You know, the one that goes "Around the world" 144 times in a row?
-com_s3_2h = Pale can be a little "fantasque" and fanciful sometimes.$But that's expected from someone living the the fantasyland.
+com_s3_2n = Do you know about that one song?$You know, the one that goes "Around the world" 144 times in a row?			//referring to the darf punk song
+com_s3_2h = Pale can be a little "fantasque" and fanciful sometimes.$But that's expected from someone living the the fantasyland.		//more fan joke
 com_s3_2l = This spell really stands to its name! I can barely breathe when doing such a precise manoeuver!$Or maybe is it because I'm lacking oxygen this high in the clouds?
 com_s3_3e = Here comes the washing-mach...err I mean the actual fan spell!$I don't know if you get it by now, but Pale likes spinning.$I hope you do too.
 com_s3_3n = A survival spell in the main game? How rare!$Pale can't even keep up with her own attack so she will eventually blow up by herself.
-com_s3_3h = (Translator's note: Danmaku means bullet curtain)
+com_s3_3h = (Translator's note: Danmaku means bullet curtain)		//okay, something else will be needed here
 com_s3_3l = Trust me.$You can believe in the Danmaku.$:)
 com_s4_mide = You might be tempted to stop shooting for an easy timeout, but if you do you'll miss on a Bomb Extend.$The choice is yours.
 com_s4_midn = The thunder is growling stronger and stronger.$Try to shoot down the familiars when close to them to prevent them from shooting arrows.
@@ -1034,17 +1121,17 @@ com_s5_1l = Olive branches alone aren't enough anymore.$Let's just take the whol
 com_s5_2e = Sharp-edged leaves flyig all over the screen.$It's like when you cut yourself with paper.$It's seems harmless but it's actually not.
 com_s5_2n = Feza being a pet, it only makes sense for her to have such a move.$She even has four spells in her boss fight.
 com_s5_2h = You thought the branch she's holding was just for look? Think again!$Be careful now. This spell has a high critical-hit ratio!
-com_s5_2l = I can't be the only one who has been marked by this move's animation, right?$It's based on the one from the fourth generation and onward.
+com_s5_2l = I can't be the only one who has been marked by this move's animation, right?$It's based on the one from the fourth generation and onward.	//I'm talking about Leaf Blade's animation in the pokémon game
 com_s5_3e = Homing pigeon are known to be able to find their way back home.$Feza wished she even had a home at all.
 com_s5_3n = Thanks to her abilities, Feza is basically a living compass.$Doesn't it make the one she is wearing on her strap a little redundant?
 com_s5_3h = Gensokyo, being isolated from the Outside World, has it very own magnetic field.$With Youkai Mountain serving as the north pole.
 com_s5_3l = Feza, you have the whole top of the screen for yourself, please let me at least keep the bottom part of it.
 com_s5_4e = Based on this spell, we can see we are currently heading south.$This information doesn't serve any purpose.
 com_s5_4n = Or maybe Feza is just trying to show you the exit?$How nice.$Let's ignore her.
-com_s5_4h = Danmaku is coming from all four of the cardinal points.$Don't be like the forgotten puppeteer and free yourself from the horizon.
+com_s5_4h = Danmaku is coming from all four of the cardinal points.$Don't be like the forgotten puppeteer and free yourself from the horizon.		// Hat in Time Moonjumper cut content reference
 com_s5_4l = If you were wondering what's those paper scroll in Feza's bag are all about, they are maps she made of the place outside worlds.$They are still mostly incomplete because of the nameless place's infinite nature.
 com_s6_mide = There she is again.$Stage 5 bosses really hate giving people a break, huh?
-com_s6_midn = If you time this spell out during a run, it looks like Feza is flying into a wall and that's hilarious.
+com_s6_midn = If you time this spell out during a run, it looks like Feza is flying into a wall and that's hilarious.		// it is
 com_s6_midh = Let's take two spells known for their RNG aspect and mix them together!$What could possibly go wrong?
 com_s6_midl = When it comes to flying speed, Feza really can't complain.$It still pales compare to Tengu's though.
 com_s6_1e = All good captains need to have spells based around anchors!$This one's really big for some reason.
@@ -1059,7 +1146,7 @@ com_s6_3e = A spell similar to one of a certain foreign god.$Both Nua and them a
 com_s6_3n = There is places in the ark that are allocated to grape culture and wine making.$Nua herself is a really good winemaker.
 com_s6_3h = Seeing Nua not being drunk is a rather rare occurrence.$She only managed to refrain herself for 2 spells before starting to drink.
 com_s6_3l = Nua is literally making wine as the fight progresses.$She drank a little too much of it and now you have to deal with whatever is going on in this spell.
-com_s6_4e = Nua and Feza are Patriarchs. One can become a Patriarch by being exposed to the nothingness of the nameless place for an extremely long period of time (more details in the Omake).$These two are the only ones to ever fully reach this state.
+com_s6_4e = Nua and Feza are Patriarchs. One can become a Patriarch by being exposed to the nothingness of the nameless place for an extremely long period of time (more details in the Omake).$These two are the only ones to ever fully reach this state.		//Yeah, there is the Patriarch Species that was made up for this game. I think it's important it stays in the masculin form.
 com_s6_4n = Once you fully become a Patriarch, you body will cease to change.$This means you stop aging and don't need to sleep or to eat anymore for exemple.$You become a constant. An unchanging yourself.
 com_s6_4h = Patriarchs also ressent emotions on a lesser scale. As if they were constantly depressed, expect they can't even feel despression.$Nua tries to compensate this hollow feeling as she can with alcohol.
 com_s6_4l = I should maybe talk about the spell now.$Yeah...anchors.$Don't get hit.
@@ -1071,16 +1158,17 @@ com_s7_mid1 = Danmaku can be considered as a form of art.$If what you are dodgin
 com_s7_mid2 = Danmaku can be considered as a pure gameplay mecanic.$As long as it's fun to dodge, beauty doesn't matter.
 com_s7_mid3 = Who or what is keeping the world spinning around?$Inertia.$It's inertia.
 com_s7_1 = God will accept anyone in her home.$You may not believe in God in a literal sense, but you can take it as "the universe".$The universe is accepting you. Because you already exists.
-com_s7_2 = What about all of those revelations? Did I stole them?$No, no, you are mistaken.$Those were given to me.
+com_s7_2 = What about all of those revelations? Did I stole them?$No, no, you are mistaken.$Those were given to me.		// referring to the fan made Chara fight. I don't think it's relevent for the translation, but here it is anyway.
 com_s7_3 = Reverence uses a metronome she found for this Spell Card, but it changes direction and speed too abruptly to be used correctly. She tries to keep up as she can but the tempo being too fast to think about a pattern she just shoots random things.
 com_s7_4 = Some people stays unmoved by the Dreamland, while some other wants to rule over it.$Reverence will refuse to grant wishes to anyone but everybody isn't like her.
 com_s7_5 = It's called "Flammarion Engraving" but this isn't actually Flammarion's.$Did the actual author knew about worlds and Reverence, or was it just a lucky close guess?
 com_s7_6 = Here is one of Reverence's composition.$Music is too abstract for me, so that's why I had to ask help to some chosen one that knows how to make music for this game's soundtrack.
 com_s7_7 = All of this fight was really tiresome, so Reverence decided to take a short break.$She locks herself in a bubble and let her familiars do the hard work.
 com_s7_8 = Did you ever wanted to know how it feels like to be a god? Well today is your chance! $Reverence will gladly forces you into her shoes for you to have a better idea on the subject.
-com_s7_9 = The universe as a pond, a frog resting in its middle.$An epitome of a world.$First Creation, then Expension, and finally Destruction.
+com_s7_9 = The universe as a pond, a frog resting in its middle.$An epitome of a world.$First Creation, then Expension, and finally Destruction.		// is that a Homestuck reference? Yes it is.
 com_s7_10 = God is leaving now.$The show is comming to its end.$Should we call for an encore?
 
+// Credits are WIP
 
 credit_touhou1 = Touhou Nemuri Sekai ~ Wonderful Waking World
 credit_touhou2 = Fan-made Project$Shrine Maiden

@@ -203,12 +203,13 @@ switch(level)
 			case 7://music room
 				
 				var y_minus = 170;
+				/*
 				if(rng_unlock)
 				{
 					draw_sprite(spr_rev_music,step / 40,300,220)
 					var y_minus = 0;
 				}
-				
+				*/
 				draw_set_font(font_spellpractice);
 				for(var i = 0; i < array_length(check) ; i += 1)
 				{
@@ -239,8 +240,8 @@ switch(level)
 				draw_sprite_ext(spr_manual,cursor[level],300,0,1,1,0,c_white,menu_description_alpha)
 			break;
 			case 9://credit
-				draw_sprite(spr_credit,0,600,50);
-				draw_sprite(spr_pale_credit,step / 40,170,340);
+				draw_sprite(spr_credit,0,room_width / 2,50);
+				//draw_sprite(spr_pale_credit,step / 40,170,340);
 			break;
 		}
 	break;

@@ -8,23 +8,27 @@ if(global.gp_active)
 			var aim_wait = 92;
 			var aim_arc = 1;
 			var aim_row = 3;
-			var aim_dist = 40;
+			var aim_dist = 56;
 			var aim_spd_min = 2;
-			var aim_spd_max = 4;
+			var aim_spd_max = 3.5;
 			
-			var ring_nbr = 7;
-			var ring_spd = 2;
+			var ring_wait = 52;
+			var ring_nbr = 1;
+			var ring_accel = 0.01;
+			var ring_shoot_spd = 0.1;
 		break;
 		case 1:
 			var aim_wait = 86;
 			var aim_arc = 3;
 			var aim_row = 3;
-			var aim_dist = 40;
+			var aim_dist = 46;
 			var aim_spd_min = 2;
-			var aim_spd_max = 5;
+			var aim_spd_max = 4;
 			
-			var ring_nbr = 9;
-			var ring_spd = 2;
+			var ring_wait = 36;
+			var ring_nbr = 2;
+			var ring_accel = 0.014;
+			var ring_shoot_spd = 0.3;
 		break;
 		case 2:
 			var aim_wait = 78;
@@ -34,8 +38,10 @@ if(global.gp_active)
 			var aim_spd_min = 2;
 			var aim_spd_max = 5;
 			
-			var ring_nbr = 12;
-			var ring_spd = 2;
+			var ring_wait = 26;
+			var ring_nbr = 3;
+			var ring_accel = 0.018;
+			var ring_shoot_spd = 0.5;
 		break;
 		case 3:
 			var aim_wait = 76;
@@ -45,8 +51,10 @@ if(global.gp_active)
 			var aim_spd_min = 2;
 			var aim_spd_max = 5;
 			
-			var ring_nbr = 14;
-			var ring_spd = 2;
+			var ring_wait = 22;
+			var ring_nbr = 4;
+			var ring_accel = 0.018;
+			var ring_shoot_spd = 0.5;
 		break;
 	}
 	
@@ -118,18 +126,28 @@ if(global.gp_active)
 				{
 					if(state_time % aim_wait == 0)
 					{
-						shoot_arc_row(DAN_BUBBLE,3,aim_arc,aim_row,x,y,999,aim_dist,aim_spd_min,aim_spd_max,sfx_redirect1,5);
+						shoot_arc_row(DAN_BUBBLE,1,aim_arc,aim_row,x,y,999,aim_dist,aim_spd_min,aim_spd_max,sfx_redirect1,5);
 					
+					}
+					
+					if(state_time % ring_wait == 0)
+					{
 						var en = self;
 						with(obj_enemy3)
 						{
 							if(my_fairy == en)
 							{
-								shoot_ring(DAN_BUBBLE,1,ring_nbr,x,y,999,ring_spd,sfx_shot1,6);
+								repeat(ring_nbr)
+								{
+									var inst = shoot(DAN_AMULET,7,x,y,rng(180,false,1),ring_shoot_spd + rng(0.5,false,1),sfx_shot1,4);
+									inst.pos_type = POS_SP;
+									inst.y_grav_accel = ring_accel;
+									inst.y_grav_max = 8;	
+								}
 							}
 						}
-					
 					}
+					
 				}
 				else
 				{
