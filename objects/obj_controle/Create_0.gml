@@ -1,4 +1,5 @@
 
+version = get_text("ver");
 
 /// INPUT
 // BUTTON DETECTION

@@ -5,6 +5,7 @@ window_set_fullscreen(data_read("Data.ini","option","fullscreen"));
 global.rng_patch = data_read("Data.ini","option","rng")
 
 
+
 global.sound_mult = 1.1;
 
 var sfx = data_read("Data.ini","option","sfx");
@@ -92,9 +93,6 @@ instance_create_depth(0,0,0,obj_bgm);
 
 global.need_intro = true;
 
-//room_goto(room_score);
-room_goto(room_main);
-//room_goto(room_gp);
 
 global.game_x_offset =  156;
 global.game_y_offset =  20;
@@ -283,6 +281,38 @@ global.play_type = PLAY_MANUAL;
 #macro REPLAY_PLAYER 6
 #macro REPLAY_DIFFICULTY 7
 #macro REPLAY_STAGE_NBR 8
+
+//define language
+// 0 = not set yet
+#macro LAN_ENG 1
+#macro LAN_JAP 2
+
+
+global.text_file = "\GameText_eng.txt";
+
+//room_goto(room_score);
+var lan = data_read("Data.ini","option","language");
+global.lan = lan;
+
+if(lan != 0)
+{
+	room_goto(room_main);
+	
+	switch(global.lan)
+	{
+		case LAN_ENG:
+			global.text_file = "\GameText_eng.txt";
+		break;
+		case LAN_JAP:
+			global.text_file = "\GameText_jap.txt";
+		break;
+	}
+}
+else
+{
+	room_goto(room_language);
+}
+//room_goto(room_gp);
 
 /*
 room_goto(room_gp)

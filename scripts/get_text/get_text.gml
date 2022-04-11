@@ -5,8 +5,9 @@ function get_text(argument0) {
 
 	var string_name = argument0;
 	var final_string = argument0;
+	
 
-	var file = file_text_open_read(working_directory + "\GameText_eng.txt");
+	var file = file_text_open_read(working_directory + global.text_file);
 	
 	do 
 	{
