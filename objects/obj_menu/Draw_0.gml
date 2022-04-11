@@ -45,7 +45,7 @@ switch(level)
 						draw_set_font(font_spellpractice);
 					break;
 					case LAN_JAP:
-						draw_set_font(font_spellpractice_j);
+						draw_set_font(global.font_spellpractice_j);
 					break;
 				}
 				draw_text_color(580 + menu[i].active_offset - string_width(menu[i].description) / 2,480,menu[i].description,c_white,c_white,c_white,c_white,menu_description_alpha);
@@ -228,7 +228,7 @@ switch(level)
 						draw_set_font(font_spellpractice);
 					break;
 					case LAN_JAP:
-						draw_set_font(font_spellpractice_j);
+						draw_set_font(global.font_spellpractice_j);
 					break;
 				}
 				
@@ -306,7 +306,7 @@ switch(level)
 							draw_set_font(font_spellpractice);
 						break;
 						case LAN_JAP:
-							draw_set_font(font_spellpractice_j);
+							draw_set_font(global.font_spellpractice_j);
 						break;
 					}
 				
@@ -315,6 +315,16 @@ switch(level)
 					check[i].active_offset = goto_value(check[i].active_offset, is_active * 10,3);
 					
 					draw_text_color(200 + check[i].active_offset,60 + (i - i_start) * 20,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
+					
+					//spell comment
+					if(is_active)
+					{
+						draw_text_color(100,410,get_text("spell_comment"),c_white,c_white,c_white,c_white,menu_description_alpha);
+						draw_text_color(100,426,"------------------------------------------------------",c_white,c_white,c_white,c_white,menu_description_alpha);
+						draw_text_ext_color(100,448,check[i].comment,20,750,c_white,c_white,c_white,c_white,menu_description_alpha);
+					}
+					
+					draw_set_font(font_spellpractice);
 					
 					//attempts
 					switch(check[i].diff)
@@ -335,15 +345,6 @@ switch(level)
 					
 					draw_text_color(660 + check[i].active_offset,60 + (i - i_start) * 20,diff_letter,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
 					
-					//spell comment
-					if(is_active)
-					{
-						draw_text_color(100,410,get_text("spell_comment"),c_white,c_white,c_white,c_white,menu_description_alpha);
-						draw_text_color(100,426,"------------------------------------------------------",c_white,c_white,c_white,c_white,menu_description_alpha);
-						draw_text_ext_color(100,448,check[i].comment,20,750,c_white,c_white,c_white,c_white,menu_description_alpha);
-					}
-					
-					draw_set_font(font_spellpractice);
 					
 					//ignore this error
 					var str = "Game: " + string(min(999,add_zero(check[i].cap_game,3))) + " / " + string(min(999,add_zero(check[i].try_game,3))) + "  Prac.:" + string(min(999,add_zero(check[i].cap_prac,3))) + " / " + string(min(999,add_zero(check[i].try_prac,3)))

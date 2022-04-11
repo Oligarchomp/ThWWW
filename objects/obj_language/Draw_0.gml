@@ -3,7 +3,7 @@
 
 draw_sprite(spr_main,1,0,0);
 
-draw_set_font(font_main_j);
+draw_set_font(global.font_main_j);
 
 for(var i = 0; i < array_length(menu); i += 1)
 {

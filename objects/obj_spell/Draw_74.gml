@@ -2,7 +2,15 @@
 // You can write your code in this editor
 
 //I'm sorry for everything below
-draw_set_font(font_spell);
+switch(global.lan)
+{
+	case LAN_ENG:
+		draw_set_font(font_spell);
+	break;
+	case LAN_JAP:
+		draw_set_font(global.font_spellpractice_j);
+	break;
+}
 
 var y_pos = y + 18;
 var x_black = 0;
@@ -55,23 +63,20 @@ else
 
 draw_line_width_color(x -1,y_pos,min(life_uncover,x_black),y_pos,1,c_black,c_black);
 
-// draw time
-
-var x_draw_time = x + 366;
-var y_draw_time = 24
-var time_draw = add_zero(floor(time_left / 60),2);
-draw_score(time_draw,x_draw_time,y_draw_time,spr_number,1,spell_info_alpha)
-
-var dec = floor((time_left % 60) * 100 / 60)
-var str = add_zero(string(dec),2);
-draw_score(str,x_draw_time + 20,y_draw_time + 8,spr_number,0.5,spell_info_alpha)
-
-
-var col_out = c_black// $1c1c47;
 
 // draw spell name
 if (is_spell)
 {
+	//name
+	var col_out = c_black// $1c1c47;
+	
+	var x_pos = x + text_x - string_width(spell_name);
+	var y_pos = y + text_y;
+
+	draw_text_outline(x_pos,y_pos,spell_name,text_col_top,text_col_top,text_col_bottom,text_col_bottom,text_alpha,col_out);
+	
+	
+	draw_set_font(font_spell);
 	//draw bonus
 	if(is_capturing)
 	{
@@ -108,19 +113,27 @@ if (is_spell)
 		draw_text_outline(x_pos + 70,y_pos, "Master" ,text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);
 		
 	}
-	
-
-	
 
 	//hey as long as it works
 	draw_text_outline(x_pos - 100,y_pos - 17,"_____________________________",text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);
 
 	
-	
-	var x_pos = x + text_x - string_width(spell_name);
-	var y_pos = y + text_y;
 
-	draw_text_outline(x_pos,y_pos,spell_name,text_col_top,text_col_top,text_col_bottom,text_col_bottom,text_alpha,col_out);
 }
+
+draw_set_font(font_spell);
+
+// draw time
+
+var x_draw_time = x + 366;
+var y_draw_time = 24
+var time_draw = add_zero(floor(time_left / 60),2);
+draw_score(time_draw,x_draw_time,y_draw_time,spr_number,1,spell_info_alpha)
+
+var dec = floor((time_left % 60) * 100 / 60)
+var str = add_zero(string(dec),2);
+draw_score(str,x_draw_time + 20,y_draw_time + 8,spr_number,0.5,spell_info_alpha)
+
+
 
 

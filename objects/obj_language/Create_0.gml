@@ -10,7 +10,7 @@ menu =
 		language : LAN_ENG
 	},
 	{
-		title : "日本語 はまやらわがざだ",
+		title : "日本語",
 		language : LAN_JAP
 	},
 ]

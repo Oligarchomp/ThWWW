@@ -288,7 +288,12 @@ global.play_type = PLAY_MANUAL;
 #macro LAN_JAP 2
 
 
-global.text_file = "\GameText_eng.txt";
+global.font_main_j = font_add("font/MochiyPopOne_Regular.ttf",18,false,false,32,128);
+global.font_dialogue_j = font_add("font/umeboshi.ttf",18,false,false,32,128);
+global.font_spellpractice_j = font_add("font/Unifont.ttf",12,false,false,32,128);
+//MadouFutoMaruGothic
+
+global.text_file = "GameText_eng.txt";
 
 //room_goto(room_score);
 var lan = data_read("Data.ini","option","language");
@@ -301,10 +306,10 @@ if(lan != 0)
 	switch(global.lan)
 	{
 		case LAN_ENG:
-			global.text_file = "\GameText_eng.txt";
+			global.text_file = "GameText_eng.txt";
 		break;
 		case LAN_JAP:
-			global.text_file = "\GameText_j.txt";
+			global.text_file = "GameText_j.txt";
 		break;
 	}
 }
@@ -319,7 +324,9 @@ room_goto(room_gp)
 
 global.difficulty = 3;
 
-add_stage_event(act_s5_0,0);// keep this one
+add_stage_event(act_s1_0,0);// keep this one
 
-add_stage_event(boss_s5_6_spell,1);
-		
+add_stage_event(dialogue_s1_pre,1);
+
+
+

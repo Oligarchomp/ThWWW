@@ -31,10 +31,10 @@ if(cursor_lockout == 0)
 		switch(global.lan)
 		{
 			case LAN_ENG:
-				global.text_file = "\GameText_eng.txt";
+				global.text_file = "GameText_eng.txt";
 			break;
 			case LAN_JAP:
-				global.text_file = "\GameText_j.txt";
+				global.text_file = "GameText_j.txt";
 			break;
 		}
 		
