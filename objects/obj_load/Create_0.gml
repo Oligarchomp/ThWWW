@@ -42,7 +42,7 @@ global.default_focused_btn = gp_face3;
 global.default_bomb_btn = gp_face2;
 global.default_pause_btn = gp_shoulderl;
 
-global.default_shot_vk = ord("Y");
+global.default_shot_vk = ord("Z");
 global.default_focused_vk = vk_shift;
 global.default_bomb_vk = ord("X");
 global.default_pause_vk = vk_escape;

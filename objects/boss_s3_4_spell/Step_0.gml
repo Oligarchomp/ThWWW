@@ -15,7 +15,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var head_spd = 3;
 			var head_time = 5;
 			var head_layer = 0;
-			var head_accel = 0.08;
+			var head_accel = 0.03;
+			var bubble_accel = 0.03;
 		break;
 		case 1:
 			var spin_spd = 4;
@@ -28,7 +29,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var head_spd = 2.4;
 			var head_time = 3;
 			var head_layer = 1;
-			var head_accel = 0.08;
+			var head_accel = 0.03;
+			var bubble_accel = 0.03;
 		break;
 		case 2:
 			var spin_spd = 4;
@@ -41,7 +43,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var head_spd = 2.5;
 			var head_time = 3;
 			var head_layer = 2;
-			var head_accel = 0.08;
+			var head_accel = 0.03;
+			var bubble_accel = 0.03;
 		break;
 		case 3:
 			var spin_spd = 4;
@@ -54,7 +57,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var head_spd = 2.8;
 			var head_time = 3;
 			var head_layer = 4;
-			var head_accel = 0.08;
+			var head_accel = 0.03;
+			var bubble_accel = 0.03;
 		break;
 	}
 	
@@ -161,7 +165,7 @@ if(global.gp_active) and (spell_wait == 0)
 		{
 			if(wait_start == 0)
 			{
-				spd = goto_value(spd,pot_spd,0.1);
+				spd = goto_value(spd,pot_spd,bubble_accel);
 			}
 			else
 			{

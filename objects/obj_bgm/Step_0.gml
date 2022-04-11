@@ -25,8 +25,8 @@ switch(asset_get_index(audio_get_name(currently_playing)))
 		var loop_lenght = 79.059;
 	break;
 	case mus_boss6:	
-		var intro_length = 38.452;
-		var loop_lenght = 89.570;
+		var intro_length = 40.452;
+		var loop_lenght = 89.600;
 	break;
 	case mus_stage2:
 		var intro_length = 15.58;
