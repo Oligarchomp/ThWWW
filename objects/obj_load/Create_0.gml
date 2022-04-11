@@ -291,7 +291,7 @@ global.play_type = PLAY_MANUAL;
 global.font_main_j = font_add("font/MochiyPopOne_Regular.ttf",18,false,false,32,128);
 global.font_dialogue_j = font_add("font/umeboshi.ttf",18,false,false,32,128);
 global.font_spellpractice_j = font_add("font/Unifont.ttf",12,false,false,32,128);
-//MadouFutoMaruGothic
+global.font_pause_j = font_add("font/SNsanafonkakuP.ttf",17,false,false,32,128);
 
 global.text_file = "GameText_eng.txt";
 

@@ -37,7 +37,17 @@ switch(pause_type)
 	break;
 }
 
-draw_set_font(font_pause);
+switch(global.lan)
+{
+	case LAN_ENG:
+		draw_set_font(font_pause);
+	break;
+	case LAN_JAP:
+		draw_set_font(global.font_pause_j);
+	break;
+}
+
+
 if(pause_state >= 1)
 {
 	if(!instance_exists(obj_score_entry))

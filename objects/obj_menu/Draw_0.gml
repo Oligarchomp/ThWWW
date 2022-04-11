@@ -68,7 +68,7 @@ switch(level)
 				draw_sprite(spr_difficulty,4,difficuly[4].x_is,difficuly[4].y_is);
 			break;
 			case 3://spell practice stage
-		
+				
 				var xx = 520 - 20;
 				var yy = 120 - 20;
 				var width = 236;
@@ -294,6 +294,8 @@ switch(level)
 				
 				draw_text(xx - string_width(txt) / 2,yy,txt);
 				//spell practice spell select
+				
+				
 				var max_spell = 16;
 				
 				var i_start = (cursor[level] >= max_spell) * max_spell;
@@ -314,7 +316,9 @@ switch(level)
 					
 					check[i].active_offset = goto_value(check[i].active_offset, is_active * 10,3);
 					
-					draw_text_color(200 + check[i].active_offset,60 + (i - i_start) * 20,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
+					var lan_off = global.lan = LAN_JAP ? 1 : 0;
+					//name
+					draw_text_color(200 + check[i].active_offset,60 + (i - i_start) * 20 + lan_off,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
 					
 					//spell comment
 					if(is_active)
