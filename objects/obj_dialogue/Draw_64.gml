@@ -47,7 +47,15 @@ draw_sprite_ext(spr_dialoguebox,0,x_diag,y_diag,1,1,0,c_white,diag_alpha);
 
 //draw the stupid things they say
 
-draw_set_font(font_dialogue);
+switch(global.lan)
+{
+	case LAN_ENG:
+		draw_set_font(font_dialogue);
+	break;
+	case LAN_JAP:
+		draw_set_font(font_dialogue_j);
+	break;
+}
 var text = text_list[current_nbr];
 var text_x = x_diag - 175;
 var text_y = y_diag - 46;

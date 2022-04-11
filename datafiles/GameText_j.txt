@@ -212,16 +212,16 @@ spell_s7_10 = My Bow "Bidding Farewell"
 
 diag_s1_r1 = 流れてく 時の中ででも 気だるさが ほらグルグル廻って
 diag_s1_r2 = 私から 離れる心も 見えないわ そう知らない？
-diag_s1_r3 = Roman Text 12345
+diag_s1_r3 = 夢見てる？ なにも見てない？ 語るも無駄な 自分の言葉
 diag_s1_r4 = 知らないわ 周りのことなど 私は私 それだけ
-diag_s1_r5 = Do you want to give one of these little ones a try?
-diag_s1_r6 = An apple? No thanks, I've been on a diet since recently.
-diag_s1_r7 = Huh? No! You HAVE to eat one or else I won't let you through!
-diag_s1_r8 = Why are you even asking then? And what would you gain from getting in my way?
-diag_s1_r9 = All of Gensokyo needs to know the fruits of my hard work! The Hakurei shrine maiden is no exception!
-diag_s1_r10 = Great for you. Not going to eat it.
-diag_s1_r11 = Maybe you will be more cooperative if you were to have them directly in your face?
-diag_s1_r12 = Take your apples and go make yourself an apple humble pie or something.
+diag_s1_r5 = こんな私も 変われるのなら もし変われるのなら 白になる？
+diag_s1_r6 = 無駄な時間に 未来はあるの？ こんな所に 私は居るの？
+diag_s1_r7 = もし私から 動くのならば すべて変えるのなら 黒にする
+diag_s1_r8 = 悲しむならば 悲しむならば 私の心 白く変われる？
+diag_s1_r9 = 重い目蓋を 開けたのならば すべて壊すのなら 黒になれ!!!
+diag_s1_r10 = 自分から 動くこともなく 時の隙間に 流され続けて
+diag_s1_r11 = 戸惑う言葉 与えられても 自分の心 ただ上の空
+diag_s1_r12 = 動くのならば 動くのならば すべて壊すわ すべて壊すわ
 
 diag_s1_m1 = The sky being gone is kinda funny, not gonna lie.
 diag_s1_m2 = Hey, the black and white one over there!
