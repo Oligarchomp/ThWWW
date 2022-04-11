@@ -25,7 +25,15 @@ switch(state)
 	case 1:
 		if(!instance_exists(obj_replay))
 		{
-			draw_set_font(font_pause)
+			switch(global.lan)
+			{
+				case LAN_ENG:
+					draw_set_font(font_pause);
+				break;
+				case LAN_JAP:
+					draw_set_font(global.font_pause_j);
+				break;
+			}
 		
 			var txt = get_text("score_replay");
 			draw_text_color(480 - string_width(txt) / 2,180,txt,c_white,c_white,c_white,c_white,menu_alpha);
@@ -42,13 +50,32 @@ switch(state)
 	break;
 	case 2:
 	case 3:
-		draw_set_font(font_pause)
+		switch(global.lan)
+		{
+			case LAN_ENG:
+				draw_set_font(font_pause);
+			break;
+			case LAN_JAP:
+				draw_set_font(global.font_pause_j);
+			break;
+		}
 	
 		var txt = get_text("score_no_replay");
 		draw_text_color(480 - string_width(txt) / 2,250,txt,c_white,c_white,c_white,c_white,menu_alpha);
 	break;
 	case 4: //results
-		draw_set_font(font_main);
+		
+		
+		switch(global.lan)
+			{
+				case LAN_ENG:
+					draw_set_font(font_main);
+				break;
+				case LAN_JAP:
+					draw_set_font(global.font_main_j);
+				break;
+			}
+			
 		var x_ref = 480;
 		var x_ref2 = 590
 		var y_ref = 200;

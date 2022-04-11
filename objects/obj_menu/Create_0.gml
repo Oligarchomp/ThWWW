@@ -1682,6 +1682,11 @@ for(var i = 1; i < array_length(menu[7].param) ; i += 1)
 music_lock_listen = 0;
 
 //create bubbles
+with(obj_bubble_main)
+{
+	instance_destroy();	
+}
+
 for(var y_bubble = 300; y_bubble > 0; y_bubble -= 50)
 {
 	instance_create_depth(80 - 100 + rng(200,false,6),y_bubble - rng(60,false,3),depth + 1,obj_bubble_main);

@@ -1084,7 +1084,7 @@ com_s7_9 = The universe as a pond, a frog resting in its middle.$An epitome of a
 com_s7_10 = God is leaving now.$The show is comming to its end.$Should we call for an encore?
 
 
-credit_touhou1 = Touhou Nemuri Sekai ~ Wonderful Waking World
+credit_touhou1 = 東方眠世界 ~ Wonderful Waking World
 credit_touhou2 = Fan-made Project$Shrine Maiden
 credit_touhou3 = 00/00/2022
 credit_line = _____________________

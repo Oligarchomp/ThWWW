@@ -7,7 +7,15 @@ draw_sprite_ext(spr_ending_bg,0,room_width / 2, 200,1,1,0,c_white,alpha_bg);
 //image
 draw_sprite_ext(spr_endings,image_is,room_width / 2,200,1,1,0,c_white,alpha);
 
-draw_set_font(font_dialogue);
+switch(global.lan)
+{
+	case LAN_ENG:
+		draw_set_font(font_dialogue);
+	break;
+	case LAN_JAP:
+		draw_set_font(global.font_dialogue_j);
+	break;
+}
 
 
 var x_ref = 105;
