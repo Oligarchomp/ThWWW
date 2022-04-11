@@ -304,7 +304,7 @@ if(lan != 0)
 			global.text_file = "\GameText_eng.txt";
 		break;
 		case LAN_JAP:
-			global.text_file = "\GameText_jap.txt";
+			global.text_file = "\GameText_j.txt";
 		break;
 	}
 }

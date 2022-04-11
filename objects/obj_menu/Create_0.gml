@@ -1187,6 +1187,10 @@ menu =
 				]
 			},
 			{
+				title : get_text("menu_language1"),
+				action : MENU_MAKE_SOUND,
+			},
+			{
 				title : rng_unlock ? get_text("menu_rng") : get_text("menu_rng_lock"),
 				action : rng_unlock ? MENU_MAKE_SOUND : MENU_INVALID
 			}

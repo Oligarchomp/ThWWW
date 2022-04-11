@@ -354,7 +354,38 @@ if(cursor_lockout == 0)
 							data_write("Data.ini","option","bgm",bgm);
 						}
 					break;
-					case 4://rng patch
+					case 4:	//language
+						if(global.shot_pressed)
+						{
+							switch(global.lan)
+							{
+								case LAN_ENG:
+									global.lan = LAN_JAP;
+								break;
+								case LAN_JAP:
+									global.lan = LAN_ENG;
+								break;
+							}
+							
+							switch(global.lan)
+							{
+								case LAN_ENG:
+									global.text_file = "\GameText_eng.txt";
+								break;
+								case LAN_JAP:
+									global.text_file = "\GameText_j.txt";
+								break;
+							}
+		
+							data_write("Data.ini","option","language",global.lan);
+							
+							global.menu_level = level;
+							global.menu_cursor = cursor;
+						
+							event_perform(ev_create,0)
+						}
+					break;
+					case 5://rng patch
 						if(rng_unlock)
 						{
 							if(global.shot_pressed)

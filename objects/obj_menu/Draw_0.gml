@@ -141,7 +141,7 @@ switch(level)
 			break;
 			case 6: // options
 				var xx = 460;
-				var yy = 130;
+				var yy = 100;
 				var xx2 = xx + 50;
 				
 				for(var i = 0; i < array_length(check); i += 1)
@@ -151,7 +151,7 @@ switch(level)
 					var txt = check[i].title;
 					
 					var off = 0;
-					if((i == array_length(check) - 1) and (!rng_unlock)) or (i == array_length(check) - 2)
+					if((i == array_length(check) - 1) and (!rng_unlock)) or (i == array_length(check) - 3)
 					{
 						off = string_width(txt) / 2 + (xx2 - xx) / 2;
 					}
@@ -186,7 +186,11 @@ switch(level)
 							draw_line_width_color(xc,y1 - 10,xc,y1 + 10,4,c_white,c_white);
 							
 						break;
-						case 4:
+						case 4:	//language
+							txt = get_text("menu_language2")
+							draw_text_color(xx2,yy + i * 60,txt,c_white,c_white,c_white,c_white,1);
+						break;
+						case 5:
 							if(rng_unlock)
 							{
 								var fs = data_read("Data.ini","option","rng");
