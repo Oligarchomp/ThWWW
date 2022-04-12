@@ -37,15 +37,7 @@ switch(pause_type)
 	break;
 }
 
-switch(global.lan)
-{
-	case LAN_ENG:
-		draw_set_font(font_pause);
-	break;
-	case LAN_JAP:
-		draw_set_font(global.font_pause_j);
-	break;
-}
+set_font(FONT_PAUSE);
 
 
 if(pause_state >= 1)

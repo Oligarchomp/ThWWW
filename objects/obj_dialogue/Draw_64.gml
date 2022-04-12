@@ -47,18 +47,11 @@ draw_sprite_ext(spr_dialoguebox,0,x_diag,y_diag,1,1,0,c_white,diag_alpha);
 
 //draw the stupid things they say
 
-switch(global.lan)
-{
-	case LAN_ENG:
-		draw_set_font(font_dialogue);
-	break;
-	case LAN_JAP:
-		draw_set_font(global.font_dialogue_j);
-	break;
-}
+set_font(FONT_DIALOGUE);
+
 var text = text_list[current_nbr];
-var text_x = x_diag - 175;
-var text_y = y_diag - 46;
+var text_x = x_diag - 175 - 4 * (global.lan == LAN_JAP);
+var text_y = y_diag - 48 + 4 * (global.lan == LAN_JAP);
 var text_lenght = 350;
-var text_height = string_height(text) + 10 * (global.lan == LAN_JAP);
-draw_text_ext_color(text_x,text_y,text,text_height ,text_lenght,c_white,c_white,c_white,c_white,text_alpha * text_alpha_diag)
+var text_height = 32;
+draw_text_ext_color(text_x,text_y,text,text_height,text_lenght,c_white,c_white,c_white,c_white,text_alpha * text_alpha_diag)

@@ -282,6 +282,13 @@ global.play_type = PLAY_MANUAL;
 #macro REPLAY_DIFFICULTY 7
 #macro REPLAY_STAGE_NBR 8
 
+#macro FONT_MAIN 0
+#macro FONT_SPELLPRACTICE 1
+#macro FONT_DIALOGUE 2
+#macro FONT_PAUSE 3
+
+
+
 //define language
 // 0 = not set yet
 #macro LAN_ENG 1
@@ -289,7 +296,7 @@ global.play_type = PLAY_MANUAL;
 
 
 global.font_main_j = font_add("font/MochiyPopOne_Regular.ttf",18,false,false,32,128);
-global.font_dialogue_j = font_add("font/umeboshi.ttf",18,false,false,32,128);
+global.font_dialogue_j = font_add("font/umeboshi.ttf",16,false,false,32,128);
 global.font_spellpractice_j = font_add("font/Unifont.ttf",12,false,false,32,128);
 global.font_pause_j = font_add("font/SNsanafonkakuP.ttf",17,false,false,32,128);
 

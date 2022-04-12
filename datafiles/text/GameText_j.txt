@@ -1,15 +1,15 @@
 ver = 0.0.42
-bomb_reimu = Spirit Sign - [Fantasy Seal]
-bomb_marisa = Love Sign - [Master Spark]
-bomb_sanae = Esoterica - [Nine Syllable Stabs]
+bomb_reimu = 霊符「夢想封印」
+bomb_marisa = 恋符「マスタースパーク」
+bomb_sanae = 秘法「九字刺し」
 
-boss_apple = Apple Girlington
-boss_serene = Serene Heikegani
-boss_pale = Pale Fanhead
-boss_yuuto = Yuuto Ichika
+boss_apple = Girlington Apple
+boss_serene = Heikegani Serene
+boss_pale = Fanhead Pale
+boss_yuuto = Ichika Yuuto
 boss_feza = Feza
-boss_nua = Nua Kozui
-boss_reverence = Reverence U'n-Llisardggy
+boss_nua = Kouzui Nua
+boss_reverence = U'n-Llisardggy Reverence
 
 mus_stage1 = Magical Hopalong Cassidy Station [Arr: Sozoro Namimo]
 mus_boss1 = AN APPLE DISASTER!! [Arr: Princess Sylvysprit]
@@ -43,26 +43,26 @@ mus_room_end = nameless for now
 mus_room_credit = nameless for now
 mus_room_score = Player's Score
 
-music_comment = Music Comment:
+music_comment = コメント：
 
 mus_com_title = Composition: Kaioshi Kojima
-mus_com_s1 = Composition: Toby Fox$Arrangement: Sozoro Namimo
-mus_com_b1 = Composition: Toby Fox$Arrangement: Princess Sylvysprit
-mus_com_s2 = Composition: Armand
-mus_com_b2 = Composition: Jani
-mus_com_s3 = Composition: Aka Kyuketsuki
-mus_com_b3 = Composition: Jani
-mus_com_s4 = Composition: Armand
+mus_com_s1 = 作曲： Toby Fox$Arrangement: Sozoro Namimo
+mus_com_b1 = 作曲： Toby Fox$Arrangement: Princess Sylvysprit
+mus_com_s2 = 作曲： Armand
+mus_com_b2 = 作曲： Jani
+mus_com_s3 = 作曲： Aka Kyuketsuki
+mus_com_b3 = 作曲： Jani
+mus_com_s4 = 作曲： Armand
 mus_com_b4 = comment
-mus_com_s5 = Composition: sincx
+mus_com_s5 = 作曲： sincx
 mus_com_b5 = comment
-mus_com_s6 = Composition: sincx
-mus_com_b6 = Composition: sincx
-mus_com_s7 = Composition: Spectral Nexus
+mus_com_s6 = 作曲： sincx
+mus_com_b6 = 作曲： sincx
+mus_com_s7 = 作曲： Spectral Nexus
 mus_com_b7 = comment
-mus_com_end = Composition: sincx
-mus_com_credit = Composition: sincx
-mus_com_score = Composition: Kaioshi Kojima
+mus_com_end = 作曲： sincx
+mus_com_credit = 作曲： sincx
+mus_com_score = 作曲： Kaioshi Kojima
 
 
 menu_start = Start Game
@@ -210,18 +210,18 @@ spell_s7_8 = World of Sorrow "God Complex"
 spell_s7_9 = Bubble World "Universe in a Pond"
 spell_s7_10 = My Bow "Bidding Farewell"
 
-diag_s1_r1 = 流れてく 時の中ででも 気だるさが ほらグルグル廻って 私から 離れる心も
-diag_s1_r2 = 私から 離れる心も 見えないわ そう知らない？私から 離れる心も
-diag_s1_r3 = 夢見てる？ なにも見てない？ 語るも無駄な 自分の言葉 私から 離れる心も
-diag_s1_r4 = 知らないわ 周りのことなど 私は私 それだけ
-diag_s1_r5 = こんな私も 変われるのなら もし変われるのなら 白になる？
-diag_s1_r6 = 無駄な時間に 未来はあるの？ こんな所に 私は居るの？
-diag_s1_r7 = もし私から 動くのならば すべて変えるのなら 黒にする
-diag_s1_r8 = 悲しむならば 悲しむならば 私の心 白く変われる？
-diag_s1_r9 = 重い目蓋を 開けたのならば すべて壊すのなら 黒になれ!!!
-diag_s1_r10 = 自分から 動くこともなく 時の隙間に 流され続けて
-diag_s1_r11 = 戸惑う言葉 与えられても 自分の心 ただ上の空
-diag_s1_r12 = 動くのならば 動くのならば すべて壊すわ すべて壊すわ
+diag_s1_r1 = 今日の空気は新鮮で湿っているねぇ
+diag_s1_r2 = …大結界に大きな穴が入ってなければいいけど
+diag_s1_r3 = 異変解決は給料が足りないって言いたいところだけど、実際給料なんて受けてないわよ！
+diag_s1_r4 = ごきげんよう、博麗の巫女！
+diag_s1_r5 = りんごを一ついかが？
+diag_s1_r6 = りんご？最近ダイエットしているからパス
+diag_s1_r7 = ええ？いいえいいえ、食べないと通さわないよ！
+diag_s1_r8 = じゃあさっきの「一ついかが」はなん$だったの？そもそも私の邪魔をするの$は何の得になってないじゃないの？
+diag_s1_r9 = 幻想郷の皆さんは私の努力の成果を知らないといけないよ！博麗の巫女は例外じゃない！
+diag_s1_r10 = あっそう。食べないけど。
+diag_s1_r11 = 顔に押し付けたら食べたい気分になるのかな？
+diag_s1_r12 = そのりんごを使って屈辱味のパイを作りなさい！
 
 diag_s1_m1 = The sky being gone is kinda funny, not gonna lie.
 diag_s1_m2 = Hey, the black and white one over there!

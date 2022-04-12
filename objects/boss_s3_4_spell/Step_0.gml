@@ -15,8 +15,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var head_spd = 3;
 			var head_time = 5;
 			var head_layer = 0;
-			var head_accel = 0.03;
-			var bubble_accel = 0.03;
+			var head_accel = 0.02;
+			var bubble_accel = 0.02;
 		break;
 		case 1:
 			var spin_spd = 4;
@@ -29,8 +29,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var head_spd = 2.4;
 			var head_time = 3;
 			var head_layer = 1;
-			var head_accel = 0.03;
-			var bubble_accel = 0.03;
+			var head_accel = 0.02;
+			var bubble_accel = 0.02;
 		break;
 		case 2:
 			var spin_spd = 4;
@@ -43,8 +43,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var head_spd = 2.5;
 			var head_time = 3;
 			var head_layer = 2;
-			var head_accel = 0.03;
-			var bubble_accel = 0.03;
+			var head_accel = 0.02;
+			var bubble_accel = 0.02;
 		break;
 		case 3:
 			var spin_spd = 4;
@@ -57,8 +57,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var head_spd = 2.8;
 			var head_time = 3;
 			var head_layer = 4;
-			var head_accel = 0.03;
-			var bubble_accel = 0.03;
+			var head_accel = 0.02;
+			var bubble_accel = 0.02;
 		break;
 	}
 	
@@ -99,18 +99,26 @@ if(global.gp_active) and (spell_wait == 0)
 			var aim = find_angle(obj_boss.x,obj_boss.y,x_ref,y_ref);
 			//bubble
 			var inst = shoot(DAN_BUBBLE,7,obj_boss.x,obj_boss.y,aim,0,sfx_redirect2,2);
-			inst.pos_type = POS_MANUAL;
-			inst.pot_spd = bubble_spd;
-			inst.wait_start = (abs(angle_pale - angle_start) % (360 / bubble_way)) * bubble_time;
+			if(inst != noone)
+			{
+				inst.move_time = 0;
+				inst.pos_type = POS_MANUAL;
+				inst.pot_spd = bubble_spd;
+				inst.wait_start = (abs(angle_pale - angle_start) % (360 / bubble_way)) * bubble_time;
+			}
 			
 			//arrowhead
 			for(var i = 0; i < head_layer ; i += 1)
 			{
 				var inst = shoot(DAN_ARROWHEAD,3,obj_boss.x,obj_boss.y,aim,0,sfx_redirect3,1);
-				inst.pos_type = POS_MANUAL;
-				inst.pot_spd = head_spd;
-				inst.wait_start = (abs(angle_pale - angle_start) % (360 / head_way)) * head_time;
-				inst.wait_start += ((360 / head_way) * head_time) * i;
+				if(inst != noone)
+				{
+					inst.move_time = 0;
+					inst.pos_type = POS_MANUAL;
+					inst.pot_spd = head_spd;
+					inst.wait_start = (abs(angle_pale - angle_start) % (360 / head_way)) * head_time;
+					inst.wait_start += ((360 / head_way) * head_time) * i;
+				}
 			}
 
 			
@@ -165,7 +173,8 @@ if(global.gp_active) and (spell_wait == 0)
 		{
 			if(wait_start == 0)
 			{
-				spd = goto_value(spd,pot_spd,bubble_accel);
+				spd = goto_value(spd,pot_spd,bubble_accel * ((move_time > 40) * 2 + 1));
+				move_time += 1;
 			}
 			else
 			{
@@ -180,7 +189,8 @@ if(global.gp_active) and (spell_wait == 0)
 		{
 			if(wait_start == 0)
 			{
-				spd = goto_value(spd,pot_spd,head_accel);
+				spd = goto_value(spd,pot_spd,head_accel * ((move_time > 40) * 2 + 1));
+				move_time += 1;
 			}
 			else
 			{

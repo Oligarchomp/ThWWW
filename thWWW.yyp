@@ -275,6 +275,7 @@
     {"id":{"name":"obj_bonus_failed","path":"objects/obj_bonus_failed/obj_bonus_failed.yy",},"order":8,},
     {"id":{"name":"spr_helm","path":"sprites/spr_helm/spr_helm.yy",},"order":8,},
     {"id":{"name":"act_s3_2","path":"objects/act_s3_2/act_s3_2.yy",},"order":21,},
+    {"id":{"name":"set_font","path":"scripts/set_font/set_font.yy",},"order":41,},
     {"id":{"name":"obj_bgm","path":"objects/obj_bgm/obj_bgm.yy",},"order":7,},
     {"id":{"name":"obj_enemy1","path":"objects/obj_enemy1/obj_enemy1.yy",},"order":5,},
     {"id":{"name":"spr_reimu_idle","path":"sprites/spr_reimu_idle/spr_reimu_idle.yy",},"order":0,},

@@ -39,15 +39,8 @@ switch(level)
 	
 			if(is_active)
 			{
-				switch(global.lan)
-				{
-					case LAN_ENG:
-						draw_set_font(font_spellpractice);
-					break;
-					case LAN_JAP:
-						draw_set_font(global.font_spellpractice_j);
-					break;
-				}
+				set_font(FONT_SPELLPRACTICE);
+				
 				draw_text_color(580 + menu[i].active_offset - string_width(menu[i].description) / 2,480,menu[i].description,c_white,c_white,c_white,c_white,menu_description_alpha);
 				draw_set_font(font_main);
 			}
@@ -222,15 +215,6 @@ switch(level)
 					var y_minus = 0;
 				}
 				*/
-				switch(global.lan)
-				{
-					case LAN_ENG:
-						draw_set_font(font_spellpractice);
-					break;
-					case LAN_JAP:
-						draw_set_font(global.font_spellpractice_j);
-					break;
-				}
 				
 				for(var i = 0; i < array_length(check) ; i += 1)
 				{
@@ -238,13 +222,27 @@ switch(level)
 					
 					check[i].active_offset = goto_value(check[i].active_offset, is_active * 10,3);
 					
+					draw_set_font(font_spellpractice);
+					
 					draw_text_color(530 + check[i].active_offset,90 + i * 20,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
-				
+					
+					switch(global.lan)
+					{
+						case LAN_ENG:
+							draw_set_font(font_spellpractice);
+							var dot = "------------------------------------------------------";
+						break;
+						case LAN_JAP:
+							draw_set_font(global.font_spellpractice_j);
+							var dot = "--------------------------------------";
+						break;
+					}
+					
 					//spell comment
 					if(is_active)
 					{
 						draw_text_color(160,410 - y_minus,get_text("music_comment"),c_white,c_white,c_white,c_white,menu_description_alpha);
-						draw_text_color(160,426 - y_minus,"------------------------------------------------------",c_white,c_white,c_white,c_white,menu_description_alpha);
+						draw_text_color(160,426 - y_minus,dot,c_white,c_white,c_white,c_white,menu_description_alpha);
 						draw_text_ext_color(160,448 - y_minus,check[i].comment,20,750,c_white,c_white,c_white,c_white,menu_description_alpha);
 					}
 				}
@@ -279,22 +277,23 @@ switch(level)
 				switch(global.player_chosen)
 				{
 					case P_REIMU:
-						var txt = "Reimu";
+						var txt = global.lan == LAN_ENG ? "Reimu" : "霊夢";
 					break;
 					case P_MARISA:
-						var txt = "Marisa";
+						var txt = global.lan == LAN_ENG ? "Marisa" : "魔理沙";
 					break;
 					case P_SANAE:
-						var txt = "Sanae";
+						var txt = global.lan == LAN_ENG ? "Sanae" : "早苗";
 					break;
 				}
 				
 				var xx = 310 + player[global.player_chosen].x_is / 2;
 				var yy = 20;
 				
+				set_font(FONT_MAIN);
+				
 				draw_text(xx - string_width(txt) / 2,yy,txt);
 				//spell practice spell select
-				
 				
 				var max_spell = 16;
 				
@@ -302,15 +301,7 @@ switch(level)
 				
 				for(var i = i_start; i < min(max_spell + i_start,array_length(check)) ; i += 1)
 				{
-					switch(global.lan)
-					{
-						case LAN_ENG:
-							draw_set_font(font_spellpractice);
-						break;
-						case LAN_JAP:
-							draw_set_font(global.font_spellpractice_j);
-						break;
-					}
+					set_font(FONT_SPELLPRACTICE);
 				
 					var is_active = (cursor[level] == i);
 					
