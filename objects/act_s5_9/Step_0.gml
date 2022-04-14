@@ -129,7 +129,7 @@ if(global.gp_active)
 				break;
 				case 2:
 				case 3:
-					ring_less = 17;
+					ring_less = 16;
 				break;
 			}
 			

@@ -14,6 +14,12 @@ function draw_text_outline(xx,yy,text,c1,c2,c3,c4,alpha,outline){
 	draw_text_color(xx,yy + 1,text,outline,outline,outline,outline,alpha);
 	draw_text_color(xx + 1,yy ,text,outline,outline,outline,outline,alpha);
 	draw_text_color(xx - 1,yy ,text,outline,outline,outline,outline,alpha);
+	
+	// for corners
+	draw_text_color(xx - 1,yy - 1,text,outline,outline,outline,outline,alpha);
+	draw_text_color(xx - 1,yy + 1,text,outline,outline,outline,outline,alpha);
+	draw_text_color(xx + 1,yy - 1,text,outline,outline,outline,outline,alpha);
+	draw_text_color(xx + 1,yy + 1,text,outline,outline,outline,outline,alpha);
 
 	draw_text_color(xx,yy,text,c1,c2,c3,c4,alpha);
 	

@@ -3,7 +3,7 @@
 
 draw_sprite_ext(art,0,art_x,art_y,1,1,0,c_white,art_alpha);
 
-draw_set_font(font_spell);
+set_font(FONT_SPELLPRACTICE);
 
 var col = c_black//$1c1c47;
 

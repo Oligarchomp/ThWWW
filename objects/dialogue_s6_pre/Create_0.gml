@@ -83,8 +83,8 @@ switch(global.player_chosen)
 		set_dialogue(spr_sanae_art,5,true,spr_nua_art,1,false,get_text("diag_s6_s15"),-1);
 		set_dialogue(spr_sanae_art,5,false,spr_nua_art,0,true,get_text("diag_s6_s16"),-1);
 		set_dialogue(spr_sanae_art,5,false,spr_nua_art,6,true,get_text("diag_s6_s17"),-1);
-		set_dialogue(spr_sanae_art,5,false,spr_nua_art,0,true,get_text("diag_s6_s18"),-1);
-		set_dialogue(spr_sanae_art,5,true,spr_nua_art,0,false,get_text("diag_s6_s19"),-1);
+		set_dialogue(spr_sanae_art,5,false,spr_nua_art,5,true,get_text("diag_s6_s18"),-1);
+		set_dialogue(spr_sanae_art,5,true,spr_nua_art,5,false,get_text("diag_s6_s19"),-1);
 		set_dialogue(spr_sanae_art,5,false,spr_nua_art,1,true,get_text("diag_s6_s20"),-1);
 		set_dialogue(spr_sanae_art,5,false,spr_nua_art,6,true,get_text("diag_s6_s21"),-1);
 		set_dialogue(spr_sanae_art,3,true,spr_nua_art,6,false,get_text("diag_s6_s22"),-1);

@@ -121,6 +121,12 @@ global.spell_captured = 0;
 
 global.item = 0;//
 
+hud_hiscore = get_text("hud_hiscore");
+hud_score = get_text("hud_score");
+hud_lives = get_text("hud_lives");
+hud_bombs = get_text("hud_bombs");
+hud_graze = get_text("hud_graze");
+hud_item = get_text("hud_item");
 
 global.spell_life = 1; //use for sharing heath bar between nons and spells
 

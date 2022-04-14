@@ -17,3 +17,5 @@ act_dir = 1;
 
 obj_boss.y_disjoint = 120;
 obj_boss.y_dis_max = 140;
+
+aim_shoot = 0;

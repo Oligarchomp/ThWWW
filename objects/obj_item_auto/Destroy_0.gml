@@ -36,6 +36,8 @@ switch(item_type)
 	break;
 	case ITEM_BOMB:
 		global.bomb += 1;
+		
+		play_sound(sfx_spell_capture,1,false);
 	break;
 	case ITEM_LIFEPIECE:
 	break;

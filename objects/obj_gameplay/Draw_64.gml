@@ -43,15 +43,17 @@ else
 	var col = $bf80e1;
 }
 
-draw_set_font(font_game_info)
+draw_set_font(font_game_info);
+
 draw_text_color(720 - string_width(dif_text) / 2,20,dif_text,col,col,col,col,1)
 
+set_font(FONT_GAME_INFO)
 
 //draw score
-
-draw_text(595,64,"HISCORE:");
-draw_text(614,103,"SCORE:");
-
+draw_set_valign(fa_middle);
+draw_text(689 - string_width(hud_hiscore),77,hud_hiscore);
+draw_text(689 - string_width(hud_score),116,hud_score);
+draw_set_valign(fa_top);
 
 var hiscore = global.game_type == GAME_FULL or global.game_type == GAME_EXTRA ? max(global.hiscore,score_to_draw) : 0;
 hiscore = global.continues_max - global.continues == 0 ? hiscore : global.hiscore;
@@ -71,8 +73,8 @@ var y_graze = 327;
 var x_score = 790;
 
 
-draw_text(x_info,y_item, "ITEM:")
-draw_text(x_info,y_graze, "GRAZE:")
+draw_text(x_info,y_item,hud_item)
+draw_text(x_info,y_graze,hud_graze)
 
 
 var lenght = string_length(string(item_extend[0]));
@@ -90,13 +92,13 @@ draw_score(global.graze,x_score,y_graze + 5,spr_score,1,1);
 var y_life = 170;
 var y_bomb = 210;
 
-draw_text(x_info,y_life,"LIFE:");
-draw_text(x_info,y_bomb,"BOMB:");
+draw_text(x_info,y_life,hud_lives);
+draw_text(x_info,y_bomb,hud_bombs);
 
 for(var i = 0; i < 7; i += 1)
 {
-	draw_sprite(spr_life_hud,i >= global.life,x_info + 90 + i * 28,y_life + 12);	
-	draw_sprite(spr_bomb_hud,i >= global.bomb,x_info + 90 + i * 28,y_bomb + 12);
+	draw_sprite(spr_life_hud,i >= global.life,x_info + 96 + i * 28,y_life + 12);	
+	draw_sprite(spr_bomb_hud,i >= global.bomb,x_info + 96 + i * 28,y_bomb + 12);
 }
 
 //draw boss indicator

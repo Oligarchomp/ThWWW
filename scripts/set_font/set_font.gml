@@ -50,6 +50,17 @@ function set_font(macro){
 				break;
 			}
 		break;
+		case FONT_GAME_INFO:
+			switch(global.lan)
+			{
+				case LAN_ENG:
+					var font = font_game_info;
+				break;
+				case LAN_JAP:
+					var font = global.font_game_info_j;
+				break;
+			}
+		break;
 	}
 	
 	draw_set_font(font);
