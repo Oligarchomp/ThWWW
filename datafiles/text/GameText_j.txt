@@ -1,4 +1,4 @@
-ver = 0.0.42
+ver = CHANGE ME
 bomb_reimu = 霊符「夢想封印」
 bomb_marisa = 恋符「マスタースパーク」
 bomb_sanae = 秘法「九字刺し」
@@ -91,7 +91,7 @@ menu_pause = Pause
 menu_default = Default
 menu_back = Back
 menu_rng_lock = Locked option (Complete the Extra Stage)
-menu_chose_player = Select your Character!
+menu_chose_player = 主人公を選択！
 menu_manual_howtoplay1 = -How to play (1)
 menu_manual_howtoplay2 = -How to play (2)
 menu_manual_controle = -Controls
@@ -109,10 +109,10 @@ menu_lock_comment = Capture this spell on this difficulty or higher to unlock it
 menu_lock_comment_extra = Capture this spell to unlock its comment.
 menu_music_lock = You haven't encounter this track in game yet.$But you can still listen to it if you want.$Select it two times in quick succession.
 
-hud_lives = LIVES:
-hud_bombs = BOMBS:
-hud_item = ITEM:
-hud_graze = GRAZE:
+hud_lives = 残り人数:
+hud_bombs = 霊撃:
+hud_item = アイテム:
+hud_graze = グレイズ:
 hud_score = スコア:
 hud_hiscore = ハイスコア:
 
@@ -139,13 +139,13 @@ result_miss = MISS :
 result_bomb = BOMB USED :
 result_spell = SPELL CAPTURED :
 
-spell_s1_mida = 月符「ムーンライトレイ」
-spell_s1_midb = 夜符「ナイトバード」
-spell_s1_1a = 魂魄「幽明求聞持聡明の法」
-spell_s1_1b = 奥義「西行春風斬」
-spell_s1_1c = 風神「風神木の葉隠れ」
-spell_s1_2a = Rotten Sign "One to Spoil the Bunch"
-spell_s1_2b = Rotten Sign "Bad Apple"
+spell_s1_mida = 檎符「アプフェルクーヘン」
+spell_s1_midb = 天符「天から落ちるアダムとイヴ」
+spell_s1_1a = 物符「ニュートンの運動の法則」
+spell_s1_1b = 檎符「林檎と山のホモニムの祝典」
+spell_s1_1c = 日本民話「富士山で林檎ビュッフェ」
+spell_s1_2a = 腐符「樽を腐蝕する一個」
+spell_s1_2b = 腐符「バッドアップル」
 
 spell_s2_mida = Enmity Sign "Fallen Soldier Resting Undersea"
 spell_s2_midb = Grudge Sign "Downfall of The Heike Clan"
@@ -224,7 +224,7 @@ diag_s1_r4 = ごきげんよう、博麗の巫女！
 diag_s1_r5 = りんごを一ついかが？
 diag_s1_r6 = りんご？最近ダイエットしているからパス
 diag_s1_r7 = ええ？いいえいいえ、食べないと通さわないよ！
-diag_s1_r8 = じゃあさっきの「一ついかが」はなんだっ$たの？そもそも私の邪魔をするのは何の得$になってないじゃないの？
+diag_s1_r8 = じゃあさっきの「一ついかが」は？$私の邪魔をしても$何の得にもならないじゃない！
 diag_s1_r9 = 幻想郷の皆さんは私の努力の成果を知らないといけないよ！博麗の巫女は例外じゃない！
 diag_s1_r10 = あっそう。食べないけど。
 diag_s1_r11 = 顔に押し付けたら食べたい気分になるのかな？
@@ -279,7 +279,7 @@ diag_s2_r16 = *Sigh* So much for a free meal...
 diag_s2_m1 = Lotsa crabs, huh?
 diag_s2_m2 = Makes me hungry for some shabu-shabu. Shame it's summer right now...
 diag_s2_m5 = My God, I can't believe it!
-diag_s2_m6 = You! Your hair! It looks so dry! Do you even TRY to take care of it?
+diag_s2_m6 = そこのあんた！髪がパサパサだよ！$ちゃんと手入れしてるの！？
 diag_s2_m7 = Hey, at least I succesfully managed to not make it look like a pineapple!
 diag_s2_m8 = You should wash it more often! Seeing people mistreat their hair like this makes me so mad!
 diag_s2_m9 = What do you mean? Every day I empty a whole basin of water on myself and then dry off using my mini-hakkero.
@@ -961,9 +961,9 @@ end_bad_s16_1 = --------Bad Ending. The Moriya became the branch shrine of the K
 end_bad_s16_2 = ---------------Try beating the game without using continues----------------
 
 
-spell_comment = Spell Comment:
+spell_comment = コメント：
 
-com_s1_mide = Apple has a lot of different existing designs out there. Now there is one more.$It's more "Minoriko-like" than "literally an apple" since she isn't a "personification of an apple" but a simple apple Youkai here.
+com_s1_mide = アップルにはいろんなデザインがあるけどこれで一つ増えたね。$林檎の見かけじゃなくて穣子っぽいデザインなのは林檎の擬人化じゃなくただの林檎妖怪だから。
 com_s1_midn = Apple will sometimes makes apple pie out of the apple she grew.$They sadly are just as popular as her unprepared apples.$Yeah, and the name is in German because "Apple Pie" is a really boring name for a spell.
 com_s1_midh = The first two humans have been banish from heaven because they ate the forbidden fruit.$While that fruit is an apple in most people head, its true nature is not really clear and is up to interpretation.
 com_s1_midl = In that case, the Adam's apple's name can be changed to whatever fruit you want it to be.$The Adam's pear? The Adam's fig? The Adam's Pitaya? You name it!

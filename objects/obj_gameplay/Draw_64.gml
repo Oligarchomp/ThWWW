@@ -51,9 +51,10 @@ set_font(FONT_GAME_INFO)
 
 //draw score
 draw_set_valign(fa_middle);
-draw_text(689 - string_width(hud_hiscore),77,hud_hiscore);
-draw_text(689 - string_width(hud_score),116,hud_score);
-draw_set_valign(fa_top);
+var is_j = (global.lan == LAN_JAP)
+draw_text(689 - string_width(hud_hiscore),78 - is_j,hud_hiscore);
+draw_text(689 - string_width(hud_score),117 - is_j,hud_score);
+
 
 var hiscore = global.game_type == GAME_FULL or global.game_type == GAME_EXTRA ? max(global.hiscore,score_to_draw) : 0;
 hiscore = global.continues_max - global.continues == 0 ? hiscore : global.hiscore;
@@ -73,15 +74,15 @@ var y_graze = 327;
 var x_score = 790;
 
 
-draw_text(x_info,y_item,hud_item)
-draw_text(x_info,y_graze,hud_graze)
+draw_text(x_info,y_item + 14,hud_item)
+draw_text(x_info,y_graze + 14,hud_graze)
 
 
 var lenght = string_length(string(item_extend[0]));
 var pos = x_score - sprite_get_width(spr_score) * lenght - floor((lenght - 1) / 3) * 6;
 
 draw_score(global.item_nbr,pos - 15,y_item + 5,spr_score,1,1);
-draw_text(pos,y_item,"/");
+draw_text(pos,y_item + 14,"/");
 draw_score(item_extend[0],x_score,y_item + 5,spr_score,1,1);
 
 draw_score(global.graze,x_score,y_graze + 5,spr_score,1,1);
@@ -89,17 +90,20 @@ draw_score(global.graze,x_score,y_graze + 5,spr_score,1,1);
 
 //draw ressources
 
-var y_life = 170;
-var y_bomb = 210;
+var y_life = 182;
+var y_bomb = 222;
 
-draw_text(x_info,y_life,hud_lives);
-draw_text(x_info,y_bomb,hud_bombs);
+draw_text(x_info,y_life + (global.lan == LAN_ENG ? 2 : 1),hud_lives);
+draw_text(x_info,y_bomb + 2,hud_bombs);
 
 for(var i = 0; i < 7; i += 1)
 {
-	draw_sprite(spr_life_hud,i >= global.life,x_info + 96 + i * 28,y_life + 12);	
-	draw_sprite(spr_bomb_hud,i >= global.bomb,x_info + 96 + i * 28,y_bomb + 12);
+	draw_sprite(spr_life_hud,i >= global.life,x_info + 96 + i * 28,y_life);	
+	draw_sprite(spr_bomb_hud,i >= global.bomb,x_info + 96 + i * 28,y_bomb);
 }
+
+
+draw_set_valign(fa_top);
 
 //draw boss indicator
 with(obj_boss)

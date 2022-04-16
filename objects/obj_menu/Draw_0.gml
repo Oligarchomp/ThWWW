@@ -47,6 +47,9 @@ switch(level)
 		}
 	break;
 	case 1:
+		
+		var spr = global.lan == LAN_ENG ? spr_difficulty : spr_difficulty_j;
+		
 		switch(cursor[0])
 		{
 			case 0://difficulty
@@ -54,11 +57,11 @@ switch(level)
 				for(var i = 0; i < 4; i += 1)
 				{
 					var is_active = i == global.difficulty;
-					draw_sprite_ext(spr_difficulty,i,difficuly[i].x_is,difficuly[i].y_is,1,1,0,c_white,1 - !is_active * 0.7);
+					draw_sprite_ext(spr,i,difficuly[i].x_is,difficuly[i].y_is,1,1,0,c_white,1 - !is_active * 0.7);
 				}
 			break;
 			case 1:
-				draw_sprite(spr_difficulty,4,difficuly[4].x_is,difficuly[4].y_is);
+				draw_sprite(spr,4,difficuly[4].x_is,difficuly[4].y_is);
 			break;
 			case 3://spell practice stage
 				
@@ -435,11 +438,11 @@ switch(level)
 
 if(draw_player)
 {
-	draw_set_font(font_main);
+	set_font(FONT_MAIN);
 	var txt = get_text("menu_chose_player");
 	draw_text(480 - string_width(txt) / 2,34,txt);
 	
-	draw_line_width(465,228,821,228,2);
+	draw_line_width(465,198,global.lan == LAN_ENG ? 821 : 748,198,2);
 				
 	for(var i = 0; i < 3; i += 1)
 	{
@@ -479,13 +482,15 @@ if(draw_player)
 		shader_reset();
 					
 		//draw description
-		draw_sprite_ext(spr_player_description,global.player_chosen,685,270,1,1,0,c_white,1);
+		var spr = global.lan == LAN_ENG ? spr_player_description : spr_player_description_j;
+		draw_sprite_ext(spr,global.player_chosen,685,240,1,1,0,c_white,1);
 					
 	}
 				
 	var dif = cursor[0] != 1 ? global.difficulty : 4;
+	var spr = global.lan == LAN_ENG ? spr_difficulty : spr_difficulty_j;
 			
-	draw_sprite_ext(spr_difficulty,dif,difficuly[dif].x_is,difficuly[dif].y_is,1,1,0,c_white,1);
+	draw_sprite_ext(spr,dif,difficuly[dif].x_is,difficuly[dif].y_is,1,1,0,c_white,1);
 
 }
 

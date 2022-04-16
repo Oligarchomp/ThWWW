@@ -1530,8 +1530,8 @@ over_offset = 26;
 
 difficuly = [{},{},{},{},{}]
 
-diff_x_to = 647;
-diff_y_to = 460;
+diff_x_to = global.lan == LAN_ENG ? 647 : 610;
+diff_y_to = 430;
 
 for(var i = 0; i < 5; i += 1)
 {
