@@ -17,3 +17,5 @@ death_time = 0;
 
 // to sync with the music
 instance_create_depth(0,0,0,act_s4_6);
+
+

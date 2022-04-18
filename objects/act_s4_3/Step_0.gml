@@ -42,9 +42,9 @@ if(global.gp_active)
 			var aim_dist = 42;
 			var aim_spd = 3.5;
 			
-			var spam_nbr = 120;
+			var spam_nbr = 130;
 			var spam_spd_min = 1.8;
-			var spam_spd_git = 2.3;
+			var spam_spd_git = 2.4;
 		break;
 		case 2:
 			var wall_wait = 9;
@@ -63,9 +63,9 @@ if(global.gp_active)
 			var aim_dist = 36;
 			var aim_spd = 3.7;
 			
-			var spam_nbr = 170;
+			var spam_nbr = 180;
 			var spam_spd_min = 1.8;
-			var spam_spd_git = 2.5;
+			var spam_spd_git = 2.6;
 		break;
 		case 3:
 			var wall_wait = 8;
@@ -84,9 +84,9 @@ if(global.gp_active)
 			var aim_dist = 30;
 			var aim_spd = 4;
 			
-			var spam_nbr = 220;
+			var spam_nbr = 240;
 			var spam_spd_min = 1.8;
-			var spam_spd_git = 2.8;
+			var spam_spd_git = 3;
 		break;
 	}
 	
@@ -208,13 +208,21 @@ if(global.gp_active)
 	
 	for(var i = 0; i < ds_list_size(global.x_death_list); i += 1)
 	{
-		boss_release(global.x_death_list[|i],global.y_death_list[|i],sfx_boss_release);
+		var xx = global.x_death_list[|i];
+		var yy = global.y_death_list[|i];
+		boss_release(xx,yy,sfx_boss_release);
 		//screen_clean(true,true);
-		instance_create_depth(global.x_death_list[|i],global.y_death_list[|i],global.boss_depth,obj_clean_radius)
+		instance_create_depth(xx,yy,global.boss_depth,obj_clean_radius);
+		
+		for(var i = 0; i < 360; i += 10)
+		{
+			var inst = instance_create_depth(xx,yy,global.boss_depth,obj_thunder);
+			inst.angle = i;
+		}
 	
 		repeat(spam_nbr)
 		{
-			shoot(DAN_ARROW,choose(4,5),global.x_death_list[|i],global.y_death_list[|i],rng(360,false,1),spam_spd_min + rng(spam_spd_git,false,1),noone,1);	
+			shoot(DAN_ARROW,choose(4,5),xx,yy,rng(360,false,1),spam_spd_min + rng(spam_spd_git,false,1),noone,1);	
 		}
 	
 	}

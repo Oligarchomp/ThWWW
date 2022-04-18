@@ -338,9 +338,7 @@ global.difficulty = 3;
 
 add_stage_event(act_s4_0,0)
 
-add_stage_event(act_s4_3,0)
-/*
-add_stage(4);
+add_stage_event(boss_s4_4_spell,0)
 
 
 

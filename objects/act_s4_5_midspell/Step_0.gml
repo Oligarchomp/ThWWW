@@ -92,7 +92,12 @@ if(global.gp_active) and (spell_wait == 0)
 				{
 					var inst = create_enemy(EN_FAMILIAR,off + i,-25,familiar_life,1,familiar_spd,-90);
 					inst.item_nbr = 0;
+					
+					var inst = instance_create_depth(off + i,-4,global.boss_depth,obj_thunder);
+					inst.angle = -90 - 10 + rng(20,false,1);
 				}
+				
+				
 			}
 			
 			if(state_time % boss_wait == boss_wait -1)
