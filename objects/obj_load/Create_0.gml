@@ -329,14 +329,18 @@ else
 }
 //room_goto(room_gp);
 
-/*
+
 room_goto(room_gp)
 
 global.difficulty = 3;
 
-add_stage_event(act_s1_0,0);// keep this one
 
-add_stage_event(dialogue_s1_pre,1);
+
+add_stage_event(act_s4_0,0)
+
+add_stage_event(act_s4_3,0)
+/*
+add_stage(4);
 
 
 

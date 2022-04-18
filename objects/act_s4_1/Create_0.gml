@@ -4,6 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
-act_set_time(480,480);
+act_set_time(610,610);
 
-stagecard_time = 240;
+stagecard_time = 350;

@@ -5,168 +5,218 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var ring_wall = 2;
-			var ring_wall_dist = 1;
-			var ring_wait = 7;
-			var ring_nbr = 5;
-			var ring_spd_shoot = 9;
-			var ring_spd_final = 3;
-			var angle_dist = 17;
+			var wall_wait = 16;
+		
+			var wall_ring = 6;
+			var wall_arc = 3;
+			var wall_dist = 2;
 			
-			var aim_row = 1;
-			var aim_ring = 8;
-			var aim_spd_min = 2.6;
-			var aim_spd_max = 5;
+			var wall_spd_max = 9;
+			var wall_spd_min = 6;
+			var wall_spd_div = 3;
+			var wall_spin = 27.72;
+			var wall_spd_time = 14;
+		
+			var aim_arc = 1;
+			var aim_dist = 1;
+			var aim_spd = 3.2;
+			
+			var spam_nbr = 60;
+			var spam_spd_min = 1.8;
+			var spam_spd_git = 2.1;
 		break;
 		case 1:
-			var ring_wall = 2;
-			var ring_wall_dist = 1;
-			var ring_wait = 5;
-			var ring_nbr = 6;
-			var ring_spd_shoot = 11;
-			var ring_spd_final = 3;
-			var angle_dist = 34;
+			var wall_wait = 11;
+		
+			var wall_ring = 7;
+			var wall_arc = 3;
+			var wall_dist = 2.7;
 			
-			var aim_row = 2;
-			var aim_ring = 11;
-			var aim_spd_min = 2.6;
-			var aim_spd_max = 5;
+			var wall_spd_max = 10;
+			var wall_spd_min = 7;
+			var wall_spd_div = 3;
+			var wall_spin = 21.72;
+			var wall_spd_time = 14;
+		
+			var aim_arc = 3;
+			var aim_dist = 42;
+			var aim_spd = 3.5;
+			
+			var spam_nbr = 120;
+			var spam_spd_min = 1.8;
+			var spam_spd_git = 2.3;
 		break;
 		case 2:
-			var ring_wall = 3;
-			var ring_wall_dist = 1;
-			var ring_wait = 5;
-			var ring_nbr = 7;
-			var ring_spd_shoot = 11;
-			var ring_spd_final = 3;
-			var angle_dist = 35;
+			var wall_wait = 9;
+		
+			var wall_ring = 8;
+			var wall_arc = 3;
+			var wall_dist = 2.7;
 			
-			var aim_row = 3;
-			var aim_ring = 14;
-			var aim_spd_min = 3;
-			var aim_spd_max = 5.5;
+			var wall_spd_max = 11;
+			var wall_spd_min = 7.5;
+			var wall_spd_div = 3;
+			var wall_spin = 19.17;
+			var wall_spd_time = 14;
+		
+			var aim_arc = 3;
+			var aim_dist = 36;
+			var aim_spd = 3.7;
+			
+			var spam_nbr = 170;
+			var spam_spd_min = 1.8;
+			var spam_spd_git = 2.5;
 		break;
 		case 3:
-			var ring_wall = 3;
-			var ring_wall_dist = 1;
-			var ring_wait = 4;
-			var ring_nbr = 8;
-			var ring_spd_shoot = 11;
-			var ring_spd_final = 3;
-			var angle_dist = 34;
+			var wall_wait = 8;
+		
+			var wall_ring = 9;
+			var wall_arc = 3;
+			var wall_dist = 2.7;
 			
-			var aim_row = 3;
-			var aim_ring = 20;
-			var aim_spd_min = 3;
-			var aim_spd_max = 5.5;
+			var wall_spd_max = 12;
+			var wall_spd_min = 8;
+			var wall_spd_div = 3;
+			var wall_spin = 17.37;
+			var wall_spd_time = 14;
+		
+			var aim_arc = 3;
+			var aim_dist = 30;
+			var aim_spd = 4;
+			
+			var spam_nbr = 220;
+			var spam_spd_min = 1.8;
+			var spam_spd_git = 2.8;
 		break;
 	}
 	
-	var fairy_life = 50;
-	var fairy_wait = 25;
+	var fam_x_dist = 160;
+	var fam_life = 245;
+	var fam_spd_start = 8;
+	var fam_deccel = 0.25;
+	var fam_spd_final = 1.1;
+	var fam_angle_plus = 2.5;
 	
-	var small_fairy_life = 10;
+	var fairy_x_dist = 145;
+	var fairy_wait = 10;
+	var fairy_length = 100;
+	var fairy_life = 5;
+	var fairy_spd = 4;
+	var fairy_angle_plus = 0.05;
+	
 	
 	switch(step)
 	{
 		case 0:
-			var inst = create_enemy(EN_RED,-20,80,fairy_life,4,2.5,0);
-			inst.dir_dan = 1;
+		//case 560:
+			var inst = create_enemy(EN_FAMILIAR,room_width / 2 - fam_x_dist,-30,fam_life,3,fam_spd_start,-90);
+			inst.item_nbr = 14;
+			inst.angle_to = 0;
+			inst.angle_shoot = rng(360,false,1);
+			inst.fam_dir = 1;
 		break;
-		case 50:
-			need_fairy_time = 76;
-			x_fairy = 300;
+		case 170:
+		//case 680:
+			need_fairy_time = fairy_length;
+			act_dir = 1;
 		break;
-		case 200:
-			var inst = create_enemy(EN_RED,room_width + 20,80,fairy_life,4,2.5,180);
-			inst.dir_dan = -1;
+		case 340:
+		//case 840:
+			var inst = create_enemy(EN_FAMILIAR,room_width / 2 + fam_x_dist,-30,fam_life,3,fam_spd_start,-90);
+			inst.item_nbr = 14;
+			inst.angle_to = -180;
+			inst.angle_shoot = rng(360,false,1);
+			inst.fam_dir = -1;
 		break;
-		case 250:
-			need_fairy_time = 76;
-			x_fairy = 100;
-		break;
-		case 400:
-			var inst = create_enemy(EN_RED,-20,80,fairy_life,4,2.5,0);
-			inst.dir_dan = 1;
-		break;
-		case 450:
-			need_fairy_time = 76;
-			x_fairy = 300;
-		break;
-		case 600:
-			var inst = create_enemy(EN_RED,room_width + 20,80,fairy_life,4,2.5,180);
-			inst.dir_dan = -1;
-		break;
-		case 650:
-			need_fairy_time = 76;
-			x_fairy = 100;
+		case 510:
+	//	case 960:
+			need_fairy_time = fairy_length;
+			act_dir = -1;
 		break;
 	}
-	
-	var x_git = 40;
 	
 	if(need_fairy_time > 0)
 	{
-		if(need_fairy_time % fairy_wait == 0)
+		if((fairy_length - need_fairy_time) % fairy_wait == 0)
 		{
-			create_enemy(EN_GREEN,x_fairy - x_git + rng(2 * x_git,false,3),-20,small_fairy_life,3,4,-90);
+			var inst = create_enemy(EN_BLUE,room_width / 2 + fairy_x_dist * act_dir,-30,fairy_life,4,fairy_spd,-90);
+			inst.angle_to = -90 + 10 * act_dir;
+			inst.can_revenge = false;
+			inst.item_nbr = 2;
 		}
+		
 		need_fairy_time -= 1;
 	}
 	
-	//arrow side
-	with(obj_enemy4)
+	
+	with(obj_enemy3)//familiar
 	{
 		switch(state)
 		{
 			case 0:
-				angle_shoot = 0;
-				state = 1;
+				play_sound(sfx_familiar_spawn,1,false);
+				state += 1;
 			break;
 			case 1:
-				if(state_time % ring_wait == 0)
+				spd = goto_value(spd,fam_spd_final,fam_deccel);
+				angle = goto_value(angle,angle_to,fam_angle_plus);
+				if(angle == angle_to)
 				{
-					for(var i = 0; i < 360; i += 360 / ring_nbr)
+					state += 1;
+				}
+			break;
+			case 2:
+				if(state_time % wall_wait == 0)
+				{
+					for(var i = 0; i < 360; i += 360 / wall_ring)
 					{
-						shoot_arc(DAN_ARROW,4,ring_wall,x,y,angle_shoot + i,ring_wall_dist,ring_spd_shoot,sfx_shot2,4);	
+						shoot_arc(DAN_ARROW,5,wall_arc,x,y,angle_shoot + i,wall_dist,wall_spd_min,sfx_shot1,4);
+						shoot_arc(DAN_ARROW,4,wall_arc,x,y,angle_shoot + i,wall_dist,wall_spd_max,sfx_shot1,4)
 					}
-					angle_shoot += angle_dist * dir_dan;  
+					
+					angle_shoot -= wall_spin * fam_dir;
 				}
 			break;
 		}
 	}
 	
-	with(obj_danmaku4)
+	with(obj_enemy4)//fairy
 	{
-		spd = goto_value(spd,ring_spd_final,0.3);
+		angle = goto_value(angle,angle_to,fairy_angle_plus);
+		
+		if(step == 16)
+		{
+			shoot_arc(DAN_BUBBLE,1,aim_arc,x,y,999,aim_dist,aim_spd,sfx_redirect1,6);
+		}
 	}
-	//aim bubble
-	with(obj_enemy3)
+	
+	with(obj_danmaku4)//arrow
 	{
 		switch(state)
 		{
 			case 0:
-				spd = goto_value(spd,0,0.1);
-				if(spd == 0)
-				{
-					state = 1;
-				}
+				spd_ref = spd;
+				spd_to = spd / wall_spd_div;
+				
+				state += 1;
 			break;
-			case 1://shoot aim
-				state = 2;
-				shoot_ring_row(DAN_BUBBLE,3,aim_ring,aim_row,x,y,999,aim_spd_min,aim_spd_max,sfx_redirect1,6);
-			break;
-			case 2:
-				if(state_time == 30)
-				{
-					state = 3;
-					angle = find_angle(x,y,room_width / 2,y);
-				}
-			break;
-			case 3:
-				spd = goto_value(spd,3,0.04);
+			case 1:
+				spd = goto_value(spd,spd_to,(spd_ref - spd_to) / wall_spd_time)
 			break;
 		}
+	}
+	
+	for(var i = 0; i < ds_list_size(global.x_death_list); i += 1)
+	{
+		boss_release(global.x_death_list[|i],global.y_death_list[|i],sfx_boss_release);
+		//screen_clean(true,true);
+		instance_create_depth(global.x_death_list[|i],global.y_death_list[|i],global.boss_depth,obj_clean_radius)
+	
+		repeat(spam_nbr)
+		{
+			shoot(DAN_ARROW,choose(4,5),global.x_death_list[|i],global.y_death_list[|i],rng(360,false,1),spam_spd_min + rng(spam_spd_git,false,1),noone,1);	
+		}
+	
 	}
 	
 }

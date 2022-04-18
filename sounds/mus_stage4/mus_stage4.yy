@@ -1,7 +1,7 @@
 {
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.9,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_stage4.wav",
-  "duration": 122.874741,
+  "duration": 197.328979,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",

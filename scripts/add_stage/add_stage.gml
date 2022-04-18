@@ -71,11 +71,12 @@ function add_stage(stage){
 			add_stage_event(act_s4_2,0)
 			add_stage_event(act_s4_25,0)
 			add_stage_event(act_s4_3,0)
-			add_stage_event(act_s4_35,0)
+			//add_stage_event(act_s4_35,0)
 			add_stage_event(act_s4_4_books,0);
-			add_stage_event(dialogue_s4_mid,50)
+			add_stage_event(dialogue_s4_mid,0)
 			add_stage_event(act_s4_5_midspell,0);
 			add_stage_event(act_s4_6,0)
+			//add_stage_event(act_s4_35,0)
 			add_stage_event(act_s4_7,0)
 			add_stage_event(act_s4_8,0)
 			add_stage_event(act_s4_9,30)

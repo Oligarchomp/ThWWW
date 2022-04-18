@@ -47,7 +47,7 @@ if(global.gp_active)
 		break;
 	}
 	
-	var book_time = 300;
+	var book_time = 500;
 	var fairy_life = 100;
 	if(step == 0)
 	{
@@ -80,7 +80,7 @@ if(global.gp_active)
 			case 1://shoot
 				if(state_time < book_time)
 				{
-					if(state_time % book_wait == 0)
+					if(state_time % book_wait == 18) // for music timing
 					{
 						var ang = rng(360,false,1)
 						shoot_ring_row(DAN_BALL,3,book_ring,book_row,x,y,ang,book_spd_shoot_min,book_spd_shoot_max,sfx_shot2,5);
