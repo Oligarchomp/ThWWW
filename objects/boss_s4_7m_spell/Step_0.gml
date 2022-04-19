@@ -41,8 +41,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var wave_wait = 110;
 			
 			var star_ring = 30;
-			var star_spd = 4.6;
-			var star_wait = 20;
+			var star_spd = 5.4;
+			var star_wait = 18;
 		break;
 		case 2:
 			var spark_nbr = 10;
@@ -61,8 +61,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var wave_wait = 100;
 			
 			var star_ring = 32;
-			var star_spd = 5.2;
-			var star_wait = 16;
+			var star_spd = 6.2;
+			var star_wait = 15;
 		break;
 		case 3:
 			var spark_nbr = 10;
@@ -80,14 +80,14 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var wave_wait = 90;
 			
-			var star_ring = 36;
-			var star_spd = 5.8;
-			var star_wait = 13;
+			var star_ring = 35;
+			var star_spd = 7;
+			var star_wait = 12;
 		break;
 	}
 	var charge_plus = 50;
 	var wait_shoot = 40;
-	var shoot_off = 30;
+	var shoot_off = 0;
 	
 	switch(state)
 	{

@@ -17,7 +17,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var star_nbr = 22;
 			var star_spd_shoot = 5;
-			var star_spd_final = 2;
+			var star_spd_final = 1.9;
 			
 			var ball_spd_max = 8;
 			var ball_accel = 0.05
@@ -41,7 +41,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var star_nbr = 27;
 			var star_spd_shoot = 6;
-			var star_spd_final = 2;
+			var star_spd_final = 1.9;
 			
 			var ball_spd_max = 8;
 			var ball_accel = 0.05
@@ -64,7 +64,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var star_nbr = 32;
 			var star_spd_shoot = 6;
-			var star_spd_final = 2.1;
+			var star_spd_final = 2;
 			
 			var ball_spd_max = 8;
 			var ball_accel = 0.05
@@ -87,7 +87,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var star_nbr = 36;
 			var star_spd_shoot = 6;
-			var star_spd_final = 2.3;
+			var star_spd_final = 2.1;
 			
 			var ball_spd_max = 8;
 			var ball_accel = 0.05

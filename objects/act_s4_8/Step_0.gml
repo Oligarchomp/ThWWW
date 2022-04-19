@@ -64,7 +64,7 @@ if(global.gp_active)
 		{
 			var ang = -90 + fairy_open - rng(fairy_open * 2,false,6);
 			var inst = create_enemy(EN_GREEN,40 + rng(320,true,2),-20,fairy_life,5,fairy_spd,ang);
-			inst.wait_shot = 10 + rng(70,true,9);
+			inst.wait_shot = 10 + rng(66,true,9);
 			inst.item_nbr = 2;
 		}
 	}

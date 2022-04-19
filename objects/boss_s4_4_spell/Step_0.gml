@@ -31,7 +31,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var rock_side_off = 258;
 			
-			var ring_nbr = 24;
+			var ring_nbr = 23;
 			var ring_spd_shoot = 7;
 			var ring_spd_final = 1.5;
 			var ring_accel = 0.1;
@@ -48,7 +48,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var rock_side_off = 258;
 			
-			var ring_nbr = 30;
+			var ring_nbr = 29;
 			var ring_spd_shoot = 7;
 			var ring_spd_final = 1.6;
 			var ring_accel = 0.1;
@@ -65,7 +65,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var rock_side_off = 253;
 			
-			var ring_nbr = 29;
+			var ring_nbr = 28;
 			var ring_spd_shoot = 7;
 			var ring_spd_final = 1.6;
 			var ring_accel = 0.1;

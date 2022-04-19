@@ -71,7 +71,7 @@ if(global.gp_active)
 					state = 1;
 					aim_shot = rng(360,false,1);
 					open = 0;
-					col = 3;
+					col = 4;
 					first = true;
 				}
 			break;
@@ -81,7 +81,7 @@ if(global.gp_active)
 					if(state_time % (card_change * card_wait) == 0)
 					{
 						aim_shot = rng(360,false,1);
-						col = col == 3 ? 4 : 3;
+						col = col == 4 ? 2 : 4;
 						first = true;
 					}
 					

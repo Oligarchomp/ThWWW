@@ -31,6 +31,11 @@ if(global.gp_active)
 			var row_spd1 = 2.2;
 			var row_spd2 = 1.5;
 			var row_dist = 26;
+			
+			var rev_spd_shot = 6;
+			var rev_spd_final = 3.4;
+			var rev_deccel = 0.1;
+			var rev_ring = 6;
 		break;
 		case 2:
 			var card_ring = 11;
@@ -45,6 +50,11 @@ if(global.gp_active)
 			var row_spd1 = 2.2;
 			var row_spd2 = 1.5;
 			var row_dist = 22;
+			
+			var rev_spd_shot = 6;
+			var rev_spd_final = 3.4;
+			var rev_deccel = 0.1;
+			var rev_ring = 10;
 		break;
 		case 3:
 			var card_ring = 13;
@@ -59,6 +69,11 @@ if(global.gp_active)
 			var row_spd1 = 2.2;
 			var row_spd2 = 1.5;
 			var row_dist = 19;
+			
+			var rev_spd_shot = 6;
+			var rev_spd_final = 3.5;
+			var rev_deccel = 0.1;
+			var rev_ring = 14;
 		break;
 	}
 	
@@ -84,6 +99,7 @@ if(global.gp_active)
 		case 100:	
 			var inst = create_enemy(EN_GREEN,100,-20,fairy_life,1,7,-90);
 			inst.item_nbr = 5;
+			inst.can_revenge = false;
 		break;
 		case 240:
 			need_fairy_time = lots_length;
@@ -94,6 +110,7 @@ if(global.gp_active)
 		case 340:
 			var inst = create_enemy(EN_GREEN,300,-20,fairy_life,1,7,-90);
 			inst.item_nbr = 5;
+			inst.can_revenge = false;
 		break;
 		case 480:
 			need_fairy_time = lots_length + 30;
@@ -104,6 +121,7 @@ if(global.gp_active)
 		case 610:
 			var inst = create_enemy(EN_GREEN,200,-20,fairy_life,1,7,-90);
 			inst.item_nbr = 5;
+			inst.can_revenge = false;
 		break;
 	}
 	
@@ -112,13 +130,13 @@ if(global.gp_active)
 	{
 		if((fairy_length - need_fairy_time) % lots_wait == 0)
 		{
-			var inst = create_enemy(EN_RED,200 - 220 * act_dir,80,lots_life,2,lots_spd,-90 + act_dir * 45);
+			var inst = create_enemy(EN_WHITE,200 - 220 * act_dir,80,lots_life,2,lots_spd,-90 + act_dir * 45);
 			inst.item_nbr = 2;
 			inst.angle_to = -90 + act_dir * 90;
 			
 			if(final)
 			{
-				var inst = create_enemy(EN_RED,200 - 220 * -act_dir,80,lots_life,2,lots_spd,-90 + -act_dir * 45);
+				var inst = create_enemy(EN_WHITE,200 - 220 * -act_dir,80,lots_life,2,lots_spd,-90 + -act_dir * 45);
 				inst.item_nbr = 2;
 				inst.angle_to = -90 + -act_dir * 90;
 			}
@@ -143,7 +161,7 @@ if(global.gp_active)
 					state = 1;
 					aim_shot = rng(360,false,1);
 					open = 0;
-					col = 3;
+					col = 2;
 				}
 			break;
 			case 1://shoot aim
@@ -152,7 +170,7 @@ if(global.gp_active)
 					if(state_time % (card_change * card_wait) == 0)
 					{
 						aim_shot = rng(360,false,1);
-						col = col == 4 ? 3 : 4;
+						col = col == 4 ? 2 : 4;
 					}
 					
 					if(state_time % card_wait == 0)
@@ -182,11 +200,13 @@ if(global.gp_active)
 	{
 		angle = goto_value(angle,angle_to,lots_angle_plus);
 		
-		if(step == 16)
+		if(step == 15)
 		{
 			var aim = find_angle(x,y,spell.x_aim,spell.y_aim);
-			shoot_arc(DAN_AMULET,5,row_arc - 1,x,y,aim,row_dist,row_spd2,sfx_shot2,4);
-			shoot_arc(DAN_AMULET,6,row_arc,x,y,aim,row_dist,row_spd1,sfx_shot2,4);
+			shoot_arc(DAN_AMULET,1,row_arc - 1,x,y,aim,row_dist,row_spd2,sfx_shot2,4);
+			shoot_arc(DAN_AMULET,7,row_arc,x,y,aim,row_dist,row_spd1,sfx_shot2,4);
+			
+			can_revenge = false;
 		}
 	}
 	
@@ -223,8 +243,26 @@ if(global.gp_active)
 			break;
 		}
 	}
-
 	
+	if(global.difficulty > 0)
+	{
+		for(var i = 0; i < ds_list_size(global.x_death_list); i += 1)
+		{
+			var aim = rng(360,false,1);
+			for(var j = 0; j < 360; j += 360 / rev_ring)
+			{
+				var inst = shoot(DAN_AMULET,6,global.x_death_list[|i],global.y_death_list[|i],aim + j,rev_spd_shot,sfx_shot1,1);
+				inst.image_xscale = 2;
+				inst.image_yscale = 2;
+			}
+		}
+	}
+	
+	with(obj_danmaku1)
+	{
+		spd = goto_value(spd,rev_spd_final,rev_deccel);
+	}
+
 }
 // Inherit the parent event
 event_inherited();

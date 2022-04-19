@@ -42,7 +42,7 @@ if(global.gp_active)
 		{
 			if(need_fairy_time % fairy_wait == 0)
 			{
-				var inst = create_enemy(EN_RED,room_width / 2 - 220 * act_dir,20 + rng(50,false,5),fairy_life,1,fairy_spd,90 - 90 * act_dir);
+				var inst = create_enemy(EN_WHITE,room_width / 2 - 220 * act_dir,20 + rng(50,false,5),fairy_life,1,fairy_spd,90 - 90 * act_dir);
 				inst.time_off = rng(shoot_wait,true,9);
 				inst.item_nbr = 2;
 			}

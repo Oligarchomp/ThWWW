@@ -373,7 +373,7 @@ diag_s3_s22 = Is that rain? Oh man, I can't stay here! Lady Kochiya! I'll catch 
 diag_s3_s23 = Rain? It didn't seem like it was going to rain when I was down there...
 
 
-diag_s4_r1 = Lady Hakurei!
+diag_s4_r1 = Miss Hakurei!
 diag_s4_r2 = I'm sensing something abnormal about the current weather and I am requiring your assistance.
 diag_s4_r3 = Yeah, thanks Sherlock! But I'm kind of in the middle of something right now. You know, the sky and all.
 diag_s4_r4 = We do not have time to bargain. Please, revisit your priorities!
@@ -405,7 +405,7 @@ diag_s4_r29 = I beg your pardon? A giant boat? What?
 diag_s4_r30 = Y-yeah? It's so big we can even somewhat see it over there, through the rain...
 diag_s4_r31 = That's a boat? I thought it was a part of the landscape! My shrine maiden sense is tingling...
 
-diag_s4_m1 = Lady Kirisame!
+diag_s4_m1 = Miss Kirisame!
 diag_s4_m2 = I can sense that this rain is no natural phenomena. I would like you to act...
 diag_s4_m3 = After you try to shot me down?
 diag_s4_m4 = This is ridiculous but you leave me no choice.
@@ -421,7 +421,7 @@ diag_s4_m13 = Yeah, yeah, but you basically are blue Patchouli so I'm still call
 diag_s4_m14 = P-Please don't? Would you like if I were to call you, Uh..."Stupid...Lame...Magician that......stinks"...or something?
 diag_s4_m15 = Sure, go ahead.
 diag_s4_m16 = I won't stand for that! I-I won't let anyone treat me like a bootleg anymore!
-diag_s4_m17 = What are you gonna do? Fight me? With your little "How to beat the black and white in front of me?" book? 
+diag_s4_m17 = What are you gonna do? Fight me? With your "How to beat the black and white in front of me?" book? 
 diag_s4_m18 = I-I've already defeated you once! I can do it again!
 diag_s4_m19 = Yeah, It was just like that one fight I had against Cirno. I went easy on you back then, y'know?
 diag_s4_m20 = Y-you're bluffing! A-anyway, I've learned a ton of new spell since last time! I can definitely do it! I think?
@@ -434,7 +434,7 @@ diag_s4_m26 = Sure thing, Cirno.
 diag_s4_m27 = My telekinesis power will get so strong, I'd be able to lift things as heavy as that giant boat that came from the sky!
 diag_s4_m28 = Ah ah, yeah. Why don't you tell me where that boat is? It's for a boat enthusiast friend of mine.
 
-diag_s4_s1 = Lady Kochiya!
+diag_s4_s1 = Miss Kochiya!
 diag_s4_s2 = The rain! Something is wrong! As an incident resolver, please do something about it!
 diag_s4_s3 = Uh...And why are you telling me this? Don't you see I'm already in a hurry?
 diag_s4_s4 = I'm trying to be of help, but if you won't cooperate, I'll force you to.

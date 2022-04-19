@@ -42,7 +42,7 @@ if(global.gp_active)
 		if(step % fairy_wait == 0)
 		{
 			var y_pos = y_min + rng(y_git,false,7);
-			var inst = create_enemy(EN_BLUE,200 - 230 * act_dir + rng(5,false,3),y_pos,fairy_life,3,fairy_spd,90 - 90 * act_dir)
+			var inst = create_enemy(EN_WHITE,200 - 230 * act_dir + rng(5,false,3),y_pos,fairy_life,3,fairy_spd,90 - 90 * act_dir)
 			inst.item_nbr = 2;
 			inst.shot_off = rng(mentos_wait,true,1);
 			act_dir *= -1;
