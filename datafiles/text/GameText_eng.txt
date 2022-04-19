@@ -19,6 +19,7 @@ mus_boss2 = The Crab's One Way Cycle ~ Sideway Motion [Comp: Jani]
 mus_stage3 = The Colorful Maiden, Through the Colorless World
 mus_stage3_comp = [Comp: Aka Kyuketsuki]
 mus_boss3 = Fantastic Friend [Comp: Jani]
+mus_stage4 = WIP [Comp: Armand]
 mus_stage5 = All of the World's Creatures [Comp: sincx]
 mus_stage6 = 40 Days Condensed Into One [Comp: sincx]
 mus_boss6 = From Beginning to End ~ Drunken Prophet [Comp: sincx]

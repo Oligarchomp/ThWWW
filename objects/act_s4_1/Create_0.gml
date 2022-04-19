@@ -7,3 +7,5 @@ event_inherited();
 act_set_time(610,610);
 
 stagecard_time = 350;
+
+fairy_off = 80;

@@ -18,6 +18,7 @@ if(global.gp_active)
 		break;
 	}
 	
+
 	
 }
 // Inherit the parent event

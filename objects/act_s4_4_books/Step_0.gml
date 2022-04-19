@@ -53,11 +53,11 @@ if(global.gp_active)
 	{
 		var x_off1 = 50;
 		var x_off2 = 120;
-		create_enemy(EN_GREEN,room_width / 2,-20,fairy_life,1,4,-90);
-		create_enemy(EN_GREEN,room_width / 2 + x_off1,-20,fairy_life,1,6,-90);
-		create_enemy(EN_GREEN,room_width / 2 - x_off1,-20,fairy_life,1,6,-90);
-		create_enemy(EN_GREEN,room_width / 2 + x_off2,-20,fairy_life,1,5,-90);
-		create_enemy(EN_GREEN,room_width / 2 - x_off2,-20,fairy_life,1,5,-90);
+		create_enemy(EN_GREEN,room_width / 2,-20,fairy_life,5,4,-90);
+		create_enemy(EN_GREEN,room_width / 2 + x_off1,-20,fairy_life,5,6,-90);
+		create_enemy(EN_GREEN,room_width / 2 - x_off1,-20,fairy_life,5,6,-90);
+		create_enemy(EN_GREEN,room_width / 2 + x_off2,-20,fairy_life,5,5,-90);
+		create_enemy(EN_GREEN,room_width / 2 - x_off2,-20,fairy_life,5,5,-90);
 		with(obj_enemy1)
 		{
 			item_nbr = 5;
@@ -65,7 +65,7 @@ if(global.gp_active)
 	}
 	
 	//books
-	with(obj_enemy1)
+	with(obj_enemy5)
 	{
 		switch(state)
 		{

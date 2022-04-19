@@ -5,66 +5,54 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var bubble_wait = 10;
-			var bubble_nbr = 6;
-			var bubble_spd_shoot = 14;
-			var bubble_spd_final = 3;
-			var bubble_dist = 360 / bubble_nbr / 2;
-			
-			var aim_wait = 30;
-			var aim_spd_shoot = 15;
-			var aim_spd_final = 2;
-			var aim_ring = 24;
+			var card_ring = 5;
+			var card_wait = 6;
+			var card_change = 3;
+			var card_spd_shot = 8;
+			var card_deccel = 0.25;
+			var card_accel = 0.04;
+			var card_spd_final = 2.8;
 		break;
 		case 1:
-			var bubble_wait = 10;
-			var bubble_nbr = 8;
-			var bubble_spd_shoot = 14;
-			var bubble_spd_final = 3;
-			var bubble_dist = 360 / bubble_nbr / 2;
-			
-			var aim_wait = 20;
-			var aim_spd_shoot = 15;
-			var aim_spd_final = 2;
-			var aim_ring = 32;
+			var card_ring = 9;
+			var card_wait = 5;
+			var card_change = 3;
+			var card_spd_shot = 8;
+			var card_deccel = 0.25;
+			var card_accel = 0.05;
+			var card_spd_final = 3.1;
 		break;
 		case 2:
-			var bubble_wait = 10;
-			var bubble_nbr = 9;
-			var bubble_spd_shoot = 14;
-			var bubble_spd_final = 3;
-			var bubble_dist = 360 / bubble_nbr / 2;
-			
-			var aim_wait = 18;
-			var aim_spd_shoot = 15;
-			var aim_spd_final = 2;
-			var aim_ring = 34;
+			var card_ring = 11;
+			var card_wait = 4;
+			var card_change = 3;
+			var card_spd_shot = 8;
+			var card_deccel = 0.25;
+			var card_accel = 0.08;
+			var card_spd_final = 3.6;
 		break;
 		case 3:
-			var bubble_wait = 10;
-			var bubble_nbr = 10;
-			var bubble_spd_shoot = 14;
-			var bubble_spd_final = 3;
-			var bubble_dist = 360 / bubble_nbr / 2;
-			
-			var aim_wait = 16;
-			var aim_spd_shoot = 15;
-			var aim_spd_final = 2;
-			var aim_ring = 40;
+			var card_ring = 13;
+			var card_wait = 4;
+			var card_change = 3;
+			var card_spd_shot = 8;
+			var card_deccel = 0.25;
+			var card_accel = 0.1;
+			var card_spd_final = 4.5;
 		break;
 	}
 	
-	var shoot_lenght = 150;
-	var fairy_life = 90;
+	var fairy_life = 60;
+	var fairy_length = 150;
 	
 	switch(step)
 	{
+		case 150:
+			fairy_off = 150;
 		case 0:
-			var inst = create_enemy(EN_GREEN,100,-20,fairy_life,1,5,-90);
-			inst.dir_shoot = 1;
+			var inst = create_enemy(EN_GREEN,room_width / 2 + fairy_off,-20,fairy_life,1,7,-90);
 			inst.item_nbr = 5;
-			var inst = create_enemy(EN_GREEN,300,-20,fairy_life,1,5,-90);
-			inst.dir_shoot = -1;
+			var inst = create_enemy(EN_GREEN,room_width / 2 - fairy_off,-20,fairy_life,1,7,-90);
 			inst.item_nbr = 5;
 		break;
 		case stagecard_time:
@@ -72,38 +60,46 @@ if(global.gp_active)
 		break;
 	}
 	
-	
-	with(obj_enemy1)
+	with(obj_enemy1) // card
 	{
 		switch(state)
 		{
 			case 0:
-				spd = goto_value(spd,0,0.1);
+				spd = goto_value(spd,0,0.2);
 				if(spd == 0)
 				{
 					state = 1;
-					angle_shoot = find_angle(x,y,obj_player.x,obj_player.y);
+					aim_shot = rng(360,false,1);
+					open = 0;
+					col = 3;
+					first = true;
 				}
 			break;
 			case 1://shoot aim
-				if(state_time < shoot_lenght)
+				if(state_time < fairy_length)
 				{
-					if(state_time % bubble_wait == 0)
+					if(state_time % (card_change * card_wait) == 0)
 					{
-						angle_shoot += bubble_dist * dir_shoot;
-						var aim = angle_shoot;
-						
-						shoot_ring(DAN_BUBBLE,3,bubble_nbr,x,y,aim,bubble_spd_shoot,sfx_shot1,6);
+						aim_shot = rng(360,false,1);
+						col = col == 3 ? 4 : 3;
+						first = true;
 					}
 					
-					if(state_time % aim_wait == 0)
+					if(state_time % card_wait == 0)
 					{
-						shoot_ring(DAN_BALL,2,aim_ring,x,y,999,aim_spd_shoot,sfx_shot2,5);
+						for (var i = 0; i < 360; i += 360 / card_ring)
+						{
+							var inst = shoot(DAN_AMULET,col,x,y,aim_shot + i,card_spd_shot,sfx_shot1,3);
+							inst.image_xscale = 2;
+							inst.image_yscale = 2;
+						}
+						
+						first = false;
 					}
 				}
 				else
 				{
-					state = 2;
+					state += 1;	
 				}
 			break;
 			case 2:
@@ -118,17 +114,24 @@ if(global.gp_active)
 			break;
 		}
 	}
-	//aim
-	with(obj_danmaku5)
+	
+	with(obj_danmaku3)
 	{
-		spd = goto_value(spd,aim_spd_final,0.5);
+		switch(state)
+		{
+			case 0:
+				spd = goto_value(spd,0,card_deccel);
+				if(spd == 0)
+				{
+					state += 1;	
+				}
+			break;
+			case 1:
+				spd = goto_value(spd,card_spd_final,card_accel);
+			break;
+		}
 	}
 	
-	//bubble
-	with(obj_danmaku6)
-	{
-		spd = goto_value(spd,bubble_spd_final,0.5);
-	}
 }
 // Inherit the parent event
 event_inherited();

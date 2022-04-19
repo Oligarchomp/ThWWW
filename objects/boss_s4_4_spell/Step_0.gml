@@ -6,8 +6,25 @@ if(global.gp_active) and (spell_wait == 0)
 	{
 		case 0:
 			var rock_spd = 9;
-			var rock_arc_side = 4;
-			var rock_arc_top = 5; // odd, and the middle one isn't spawn ( so it's -1)
+			var rock_arc_side = 5;
+			var rock_arc_top = 7; // odd, and the middle one isn't spawn ( so it's -1)
+			var rock_angle_dist_side = 22;
+			var rock_angle_dist_top = 30;
+			var rock_dist_max = 90;
+			
+			var rock_side_off = 258;
+			
+			var ring_nbr = 18;
+			var ring_spd_shoot = 7;
+			var ring_spd_final = 1.5;
+			var ring_accel = 0.1;
+			
+			var wave_wait = 135;
+		break;
+		case 1:
+			var rock_spd = 9;
+			var rock_arc_side = 6;
+			var rock_arc_top = 9; // odd, and the middle one isn't spawn ( so it's -1)
 			var rock_angle_dist_side = 22;
 			var rock_angle_dist_top = 30;
 			var rock_dist_max = 90;
@@ -21,23 +38,6 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var wave_wait = 130;
 		break;
-		case 1:
-			var rock_spd = 9;
-			var rock_arc_side = 5;
-			var rock_arc_top = 7; // odd, and the middle one isn't spawn ( so it's -1)
-			var rock_angle_dist_side = 22;
-			var rock_angle_dist_top = 30;
-			var rock_dist_max = 90;
-			
-			var rock_side_off = 258;
-			
-			var ring_nbr = 32;
-			var ring_spd_shoot = 7;
-			var ring_spd_final = 1.5;
-			var ring_accel = 0.1;
-			
-			var wave_wait = 125;
-		break;
 		case 2:
 			var rock_spd = 9;
 			var rock_arc_side = 7;
@@ -48,12 +48,12 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var rock_side_off = 258;
 			
-			var ring_nbr = 32;
+			var ring_nbr = 30;
 			var ring_spd_shoot = 7;
 			var ring_spd_final = 1.6;
 			var ring_accel = 0.1;
 			
-			var wave_wait = 120;
+			var wave_wait = 125;
 		break;
 		case 3:
 			var rock_spd = 9;
@@ -65,7 +65,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var rock_side_off = 253;
 			
-			var ring_nbr = 30;
+			var ring_nbr = 29;
 			var ring_spd_shoot = 7;
 			var ring_spd_final = 1.6;
 			var ring_accel = 0.1;

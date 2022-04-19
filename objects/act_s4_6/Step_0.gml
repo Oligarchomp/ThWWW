@@ -41,7 +41,7 @@ if(global.gp_active)
 			var shot_row = 5;
 		break;
 	}
-	var fairy_wait = 70;
+	var fairy_wait = 75;
 	var fairy_life = 40;
 	var fairy_lenght = 1300;
 	
@@ -55,9 +55,9 @@ if(global.gp_active)
 		wait_time -= 1;
 	}
 	
-	if(wait_time == 0)
+	if(wait_time == 0) 
 	{
-		if(step < fairy_lenght)
+		if(step < fairy_lenght) and (step < 21 * 60)
 		{
 			if (step % fairy_wait == 0)
 			{	
