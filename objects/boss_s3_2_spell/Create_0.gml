@@ -5,7 +5,7 @@
 event_inherited();
 
 spell_set_spell("s3_1",BOSS_PALE,20000000)
-spell_set_name("spell_s3_1a","spell_s3_1a","spell_s3_1b","spell_s3_1b")
+spell_set_name("spell_s3_1a","spell_s3_1a","spell_s3_1b","spell_s3_1c")
 spell_set_life(1000,160);
 spell_set_time(40,false,95);
 

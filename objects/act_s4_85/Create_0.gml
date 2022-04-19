@@ -4,6 +4,13 @@
 // Inherit the parent event
 event_inherited();
 
-act_set_time(720,720);
+act_set_time(860,900);
 
-spd = 1;
+
+need_fairy_time = 0;
+act_dir = 1;
+
+final = false;
+
+x_aim = 0;
+y_aim = 0;

@@ -459,7 +459,7 @@ menu =
 						diff : 2
 					},
 					{
-						title : get_text("spell_s3_1b"),
+						title : get_text("spell_s3_1c"),
 						data_name : "s3_1",
 						comment : get_text("com_s3_1l"),
 						param : boss_s3_2_spell,

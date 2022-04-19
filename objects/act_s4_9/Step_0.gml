@@ -70,13 +70,13 @@ if(global.gp_active)
 	
 	if(step == 0)
 	{
-		var inst = create_enemy(EN_RED,room_width / 2,-20,fairy_life,1,7,-90);
+		var inst = create_enemy(EN_RED,room_width / 2,-20,fairy_life,6,7,-90);
 		inst.item_nbr = 14;
 		inst.dir_dan = 1;
 		
 	}
 	
-	with(obj_enemy1)
+	with(obj_enemy6)
 	{
 		switch(state)
 		{
@@ -92,7 +92,7 @@ if(global.gp_active)
 			case 1://shoot aim
 				if(state_time < shoot_lenght)
 				{
-					if(state_time == 250)
+					if(state_time == 260)
 					{
 						life = fairy_life_killable;
 					}
