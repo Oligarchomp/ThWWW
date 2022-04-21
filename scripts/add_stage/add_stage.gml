@@ -77,11 +77,11 @@ function add_stage(stage){
 			add_stage_event(act_s4_5_midspell,0);//
 			add_stage_event(act_s4_6,0)//
 			add_stage_event(act_s4_7,0)//
-			add_stage_event(act_s4_75,0)
+			//add_stage_event(act_s4_75,0)
 			add_stage_event(act_s4_8,0)//
 			add_stage_event(act_s4_85,0)//
 			add_stage_event(act_s4_9,30)//
-			add_stage_event(dialogue_s4_pre,230);
+			add_stage_event(dialogue_s4_pre,170);
 			add_stage_event(boss_s4_1_non,0);
 			add_stage_event(boss_s4_2_spell,0);
 			add_stage_event(boss_s4_3_non,40);

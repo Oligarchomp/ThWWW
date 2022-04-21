@@ -51,3 +51,4 @@ spd = 1;
 
 step = 0;
 
+image = 0;

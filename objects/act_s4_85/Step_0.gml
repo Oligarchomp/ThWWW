@@ -77,8 +77,8 @@ if(global.gp_active)
 		break;
 	}
 	
-	var fairy_life = 100;
-	var fairy_length = 180;
+	var fairy_life = 200;
+	var fairy_length = 200;
 	
 	var lots_wait = 8;
 	var lots_life = 8;
@@ -90,37 +90,37 @@ if(global.gp_active)
 	
 	switch(step)
 	{
-		case 0:
+		case 100:
 			need_fairy_time = lots_length;
 			act_dir = -1;
 			x_aim = obj_player.x;
 			y_aim = obj_player.y;
 		break;
-		case 100:	
+		case 0:	
 			var inst = create_enemy(EN_GREEN,100,-20,fairy_life,1,7,-90);
-			inst.item_nbr = 5;
+			inst.item_nbr = 9;
 			inst.can_revenge = false;
 		break;
-		case 240:
+		case 340:
 			need_fairy_time = lots_length;
 			act_dir = 1;
 			x_aim = obj_player.x;
 			y_aim = obj_player.y;
 		break;
-		case 340:
+		case 240:
 			var inst = create_enemy(EN_GREEN,300,-20,fairy_life,1,7,-90);
-			inst.item_nbr = 5;
+			inst.item_nbr = 9;
 			inst.can_revenge = false;
 		break;
-		case 480:
+		case 580:
 			need_fairy_time = lots_length + 30;
 			final = true;
 			x_aim = obj_player.x;
 			y_aim = obj_player.y;
 		break;
-		case 610:
+		case 480:
 			var inst = create_enemy(EN_GREEN,200,-20,fairy_life,1,7,-90);
-			inst.item_nbr = 5;
+			inst.item_nbr = 9;
 			inst.can_revenge = false;
 		break;
 	}
@@ -200,7 +200,7 @@ if(global.gp_active)
 	{
 		angle = goto_value(angle,angle_to,lots_angle_plus);
 		
-		if(step == 15)
+		if(step == 17)
 		{
 			var aim = find_angle(x,y,spell.x_aim,spell.y_aim);
 			shoot_arc(DAN_AMULET,1,row_arc - 1,x,y,aim,row_dist,row_spd2,sfx_shot2,4);
@@ -243,7 +243,7 @@ if(global.gp_active)
 			break;
 		}
 	}
-	
+	/*
 	if(global.difficulty > 0)
 	{
 		for(var i = 0; i < ds_list_size(global.x_death_list); i += 1)
@@ -256,7 +256,7 @@ if(global.gp_active)
 				inst.image_yscale = 2;
 			}
 		}
-	}
+	}*/
 	
 	with(obj_danmaku1)
 	{

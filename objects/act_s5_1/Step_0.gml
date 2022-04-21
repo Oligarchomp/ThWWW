@@ -69,7 +69,7 @@ if(global.gp_active)
 		case 0:
 			var fairy = create_enemy(EN_RED,room_width / 2,-50,f_life,1,9.5,-90)
 			fairy.can_revenge = false;
-			fairy.item_nbr = 16;
+			fairy.item_nbr = 18;
 			
 			var rand = rng(360,false,1);
 			for(var i = 0; i < 360; i += 360 / familiar_nbr)

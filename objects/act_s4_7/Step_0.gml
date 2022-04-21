@@ -61,29 +61,29 @@ if(global.gp_active)
 			var bubble_spd = 2.5;
 		break;
 	}
-	var fairy_life = 190;
-	var shoot_lenght = 200;
+	var fairy_life = 280;
+	var shoot_lenght = 300;
 	
 	switch(step)
 	{
 		case 0:
 			var inst = create_enemy(EN_BLUE,150, -20,fairy_life,1,7,-90);
-			inst.item_nbr = 8;
+			inst.item_nbr = 11;
 			inst.dir_dan = 1;
 		break;
-		case 260:
+		case 350:
 			var inst = create_enemy(EN_BLUE,250, -20,fairy_life,1,7,-90);
-			inst.item_nbr = 8;
+			inst.item_nbr = 11;
 			inst.dir_dan = -1;
 		break;
-		case 520:
+		case 700:
 			var inst = create_enemy(EN_BLUE,100, -20,fairy_life,1,7,-90);
-			inst.item_nbr = 8;
+			inst.item_nbr = 11;
 			inst.dir_dan = 1;
 		break;
-		case 780:
+		case 1050:
 			var inst = create_enemy(EN_BLUE,300, -20,fairy_life,1,7,-90);
-			inst.item_nbr = 8;
+			inst.item_nbr = 11;
 			inst.dir_dan = -1;
 		break;
 	}

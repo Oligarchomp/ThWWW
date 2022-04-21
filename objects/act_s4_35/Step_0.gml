@@ -13,10 +13,13 @@ if(global.gp_active)
 			var card_accel = 0.04;
 			var card_spd_final = 2.8;
 			
-			var mentos_arc = 1;
-			var mentos_dist = 99;
-			var mentos_wait = 40;
-			var mentos_spd = 4;
+			var row_wait = 38;
+			var row_row = 2;
+			var row_spd_shot_max = 4.5;
+			var row_spd_shot_min = 1.5;
+			var row_spd_final = 3;
+			var row_accel = 0.08;
+			var row_ring = 4;
 		break;
 		case 1:
 			var card_ring = 9;
@@ -27,10 +30,13 @@ if(global.gp_active)
 			var card_accel = 0.05;
 			var card_spd_final = 3.1;
 			
-			var mentos_arc = 3;
-			var mentos_dist = 26;
-			var mentos_wait = 26;
-			var mentos_spd = 5.8;
+			var row_wait = 32;
+			var row_row = 2;
+			var row_spd_shot_max = 5;
+			var row_spd_shot_min = 2;
+			var row_spd_final = 3.5;
+			var row_accel = 0.08;
+			var row_ring = 5;
 		break;
 		case 2:
 			var card_ring = 11;
@@ -41,10 +47,13 @@ if(global.gp_active)
 			var card_accel = 0.08;
 			var card_spd_final = 3.6;
 			
-			var mentos_arc = 5;
-			var mentos_dist = 22;
-			var mentos_wait = 18;
-			var mentos_spd = 6.5;
+			var row_wait = 27;
+			var row_row = 2;
+			var row_spd_shot_max = 5.5;
+			var row_spd_shot_min = 2.5;
+			var row_spd_final = 4;
+			var row_accel = 0.08;
+			var row_ring = 5;
 		break;
 		case 3:
 			var card_ring = 13;
@@ -55,10 +64,13 @@ if(global.gp_active)
 			var card_accel = 0.1;
 			var card_spd_final = 4.5;
 			
-			var mentos_arc = 7;
-			var mentos_dist = 19;
-			var mentos_wait = 16;
-			var mentos_spd = 7;
+			var row_wait = 25;
+			var row_row = 2;
+			var row_spd_shot_max = 6;
+			var row_spd_shot_min = 3;
+			var row_spd_final = 4.5;
+			var row_accel = 0.08;
+			var row_ring = 6;
 		break;
 	}
 	
@@ -67,7 +79,7 @@ if(global.gp_active)
 	
 	var lots_life = 6;
 	var lots_wait = 8;
-	var lots_length = 130;
+	var lots_length = 115;
 	var lots_spd = 4;
 	var lots_angle_plus = 0.5;
 	
@@ -75,7 +87,7 @@ if(global.gp_active)
 	{
 		case 0:
 			var inst = create_enemy(EN_GREEN,310,-20,fairy_life,1,7,-90);
-			inst.item_nbr = 5;
+			inst.item_nbr = 9;
 		break;
 		case 150:
 			need_fairy_time = lots_length;
@@ -83,7 +95,7 @@ if(global.gp_active)
 		break;
 		case 348:
 			var inst = create_enemy(EN_GREEN,90,-20,fairy_life,1,7,-90);
-			inst.item_nbr = 5;
+			inst.item_nbr = 9;
 		break;
 		case 498:
 			need_fairy_time = lots_length;
@@ -99,7 +111,7 @@ if(global.gp_active)
 			var inst = create_enemy(EN_BLUE,200 - 220 * act_dir,180,lots_life,2,lots_spd,90 - act_dir * 45);
 			inst.item_nbr = 2;
 			inst.angle_to = 90 - act_dir * 90;
-			inst.wait_off = rng(mentos_wait,true,1);
+			inst.wait_off = rng(row_wait,true,1);
 		}
 		
 		need_fairy_time -= 1;
@@ -179,13 +191,13 @@ if(global.gp_active)
 	{
 		angle = goto_value(angle,angle_to,lots_angle_plus);
 		
-		if(step % mentos_wait == wait_off)
+		if(step % row_wait == wait_off)
 		{
-			shoot_arc(DAN_AMULET,1,mentos_arc,x,y,999,mentos_dist,mentos_spd,sfx_shot2,4);
+			shoot_ring_row(DAN_AMULET,1,row_ring,row_row,x,y,rng(360,false,1),row_spd_shot_min,row_spd_shot_max,sfx_shot2,2);
 		}
 	}
 	
-	with(obj_danmaku4)
+	with(obj_danmaku2)
 	{
 		switch(state)
 		{
@@ -193,6 +205,9 @@ if(global.gp_active)
 				image_xscale = 2;
 				image_yscale = 2;
 				state += 1;
+			break;
+			case 1:
+				spd = goto_value(spd,row_spd_final,row_accel);
 			break;
 		}
 	}

@@ -4,7 +4,12 @@
 
 screen_clear(false,true);
 
+with(obj_item)
+{
+	auto_collect = true;
+}
 
+item_collected = false;
 
 state = 0;
 old_state = -1;

@@ -5,6 +5,8 @@ global.boss = BOSS_FEZA;
 // Inherit the parent event
 event_inherited();
 
+
+
 spell_set_spell("s6_mid",BOSS_FEZA,30000000)
 spell_set_name("spell_s6_mid","spell_s6_mid","spell_s6_mid","spell_s6_mid")
 

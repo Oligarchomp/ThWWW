@@ -2,6 +2,11 @@
 // You can write your code in this editor
 if(global.gp_active)
 {
+	if(instance_exists(obj_spell_art))
+	{
+		obj_spell_art.image = 8;
+	}
+	
 	var boss_spd = 20;
 	boss_sp = goto_value(boss_sp,boss_spd,0.3);
 	obj_boss.spd_max = boss_sp;

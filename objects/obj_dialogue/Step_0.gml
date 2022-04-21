@@ -14,14 +14,8 @@ if(global.gp_active)
 		state_time += 1;
 	}
 	
-	with(obj_item)
-	{
-		auto_collect = true;
-	}
-	with(obj_item_auto)
-	{
-		max_value = true;
-	}
+	
+	
 	
 	switch(state)
 	{

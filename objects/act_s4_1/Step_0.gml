@@ -51,9 +51,9 @@ if(global.gp_active)
 			fairy_off = 150;
 		case 0:
 			var inst = create_enemy(EN_GREEN,room_width / 2 + fairy_off,-20,fairy_life,1,7,-90);
-			inst.item_nbr = 5;
+			inst.item_nbr = 9;
 			var inst = create_enemy(EN_GREEN,room_width / 2 - fairy_off,-20,fairy_life,1,7,-90);
-			inst.item_nbr = 5;
+			inst.item_nbr = 9;
 		break;
 		case stagecard_time:
 			instance_create_depth(0,0,0,obj_stagecard);

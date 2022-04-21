@@ -7,37 +7,37 @@ if(global.gp_active)
 		case 0:
 			var shot_wait = 6;
 			var shot_spd_shoot = 7;
-			var shot_spd_final = 20;
+			var shot_spd_final = 4;
 			var shot_deccel = 0.2;
-			var shot_accel = 0.03;
-			var shot_ring = 11;
+			var shot_accel = 0.1;
+			var shot_ring = 14;
 			var shot_row = 5;
 		break;
 		case 1:
 			var shot_wait = 6;
 			var shot_spd_shoot = 7;
-			var shot_spd_final = 20;
+			var shot_spd_final = 4.7;
 			var shot_deccel = 0.2;
-			var shot_accel = 0.04;
-			var shot_ring = 18;
+			var shot_accel = 0.1;
+			var shot_ring = 28;
 			var shot_row = 5;
 		break;
 		case 2:
-			var shot_wait = 6;
+			var shot_wait = 5;
 			var shot_spd_shoot = 7;
-			var shot_spd_final = 20;
+			var shot_spd_final = 5.2;
 			var shot_deccel = 0.2;
-			var shot_accel = 0.045;
-			var shot_ring = 25;
+			var shot_accel = 0.1;
+			var shot_ring = 32;
 			var shot_row = 5;
 		break;
 		case 3:
-			var shot_wait = 6;
+			var shot_wait = 5;
 			var shot_spd_shoot = 7;
-			var shot_spd_final = 20;
+			var shot_spd_final = 5.5;
 			var shot_deccel = 0.2;
-			var shot_accel = 0.05;
-			var shot_ring = 28;
+			var shot_accel = 0.1;
+			var shot_ring = 36;
 			var shot_row = 5;
 		break;
 	}
@@ -91,7 +91,9 @@ if(global.gp_active)
 						{
 							for(var i = 0; i < 360; i += 360 / shot_ring)
 							{
-								var inst = shoot(first ? DAN_BUBBLE : DAN_MENTOS,3,x,y,aim + i,shot_spd_shoot,sfx_shot1,3 - first);
+								var inst = shoot(DAN_AMULET,3,x,y,aim + i,shot_spd_shoot,sfx_shot1,3);
+								inst.image_xscale = 2;
+								inst.image_yscale = 2;
 							}
 							first = false;
 							shoot_nbr += 1;
@@ -116,22 +118,6 @@ if(global.gp_active)
 		}
 	
 		with(obj_danmaku3)
-		{
-			switch(state)
-			{
-				case 0:
-					spd = goto_value(spd,0,shot_deccel);
-					if(spd == 0)
-					{
-						state += 1;	
-					}
-				break;
-				case 1:
-					spd = goto_value(spd,shot_spd_final,shot_accel);
-				break;
-			}
-		}
-		with(obj_danmaku2) // same
 		{
 			switch(state)
 			{
