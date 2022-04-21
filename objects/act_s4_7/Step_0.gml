@@ -71,17 +71,17 @@ if(global.gp_active)
 			inst.item_nbr = 11;
 			inst.dir_dan = 1;
 		break;
-		case 350:
+		case 340:
 			var inst = create_enemy(EN_BLUE,250, -20,fairy_life,1,7,-90);
 			inst.item_nbr = 11;
 			inst.dir_dan = -1;
 		break;
-		case 700:
+		case 680:
 			var inst = create_enemy(EN_BLUE,100, -20,fairy_life,1,7,-90);
 			inst.item_nbr = 11;
 			inst.dir_dan = 1;
 		break;
-		case 1050:
+		case 1020:
 			var inst = create_enemy(EN_BLUE,300, -20,fairy_life,1,7,-90);
 			inst.item_nbr = 11;
 			inst.dir_dan = -1;

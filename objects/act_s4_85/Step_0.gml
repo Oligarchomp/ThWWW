@@ -24,8 +24,8 @@ if(global.gp_active)
 			var card_change = 3;
 			var card_spd_shot = 8;
 			var card_deccel = 0.25;
-			var card_accel = 0.05;
-			var card_spd_final = 3.1;
+			var card_accel = 0.08;
+			var card_spd_final = 3.8;
 			
 			var row_arc = 5;
 			var row_spd1 = 2.2;
@@ -38,13 +38,13 @@ if(global.gp_active)
 			var rev_ring = 6;
 		break;
 		case 2:
-			var card_ring = 11;
+			var card_ring = 12;
 			var card_wait = 4;
 			var card_change = 3;
 			var card_spd_shot = 8;
 			var card_deccel = 0.25;
-			var card_accel = 0.08;
-			var card_spd_final = 3.6;
+			var card_accel = 0.1;
+			var card_spd_final = 4.2;
 			
 			var row_arc = 7;
 			var row_spd1 = 2.2;
@@ -57,13 +57,13 @@ if(global.gp_active)
 			var rev_ring = 10;
 		break;
 		case 3:
-			var card_ring = 13;
+			var card_ring = 14;
 			var card_wait = 4;
 			var card_change = 3;
 			var card_spd_shot = 8;
 			var card_deccel = 0.25;
-			var card_accel = 0.1;
-			var card_spd_final = 4.5;
+			var card_accel = 0.15;
+			var card_spd_final = 5;
 			
 			var row_arc = 9;
 			var row_spd1 = 2.2;
@@ -128,19 +128,18 @@ if(global.gp_active)
 	
 	if(need_fairy_time > 0)
 	{
-		if((fairy_length - need_fairy_time) % lots_wait == 0)
+		if((lots_length - need_fairy_time) % lots_wait == 0)
 		{
 			var inst = create_enemy(EN_WHITE,200 - 220 * act_dir,80,lots_life,2,lots_spd,-90 + act_dir * 45);
-			inst.item_nbr = 2;
+			inst.item_nbr = 1;
 			inst.angle_to = -90 + act_dir * 90;
 			
 			if(final)
 			{
 				var inst = create_enemy(EN_WHITE,200 - 220 * -act_dir,80,lots_life,2,lots_spd,-90 + -act_dir * 45);
-				inst.item_nbr = 2;
+				inst.item_nbr = 1;
 				inst.angle_to = -90 + -act_dir * 90;
 			}
-			//inst.wait_off = rng(mentos_wait,true,1);
 		}
 		
 		need_fairy_time -= 1;
@@ -203,8 +202,8 @@ if(global.gp_active)
 		if(step == 17)
 		{
 			var aim = find_angle(x,y,spell.x_aim,spell.y_aim);
-			shoot_arc(DAN_AMULET,1,row_arc - 1,x,y,aim,row_dist,row_spd2,sfx_shot2,4);
-			shoot_arc(DAN_AMULET,7,row_arc,x,y,aim,row_dist,row_spd1,sfx_shot2,4);
+			shoot_arc(DAN_AMULET,7,row_arc - 1,x,y,aim,row_dist,row_spd2,sfx_shot2,4);
+			shoot_arc(DAN_AMULET,3,row_arc,x,y,aim,row_dist,row_spd1,sfx_shot2,4);
 			
 			can_revenge = false;
 		}

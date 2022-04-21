@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+with(obj_enemy)
+{
+	item_nbr = 0;	
+}
 // Inherit the parent event
 event_inherited();
 

@@ -27,8 +27,8 @@ if(global.gp_active)
 			var card_change = 3;
 			var card_spd_shot = 8;
 			var card_deccel = 0.25;
-			var card_accel = 0.05;
-			var card_spd_final = 3.1;
+			var card_accel = 0.08;
+			var card_spd_final = 3.8;
 			
 			var row_wait = 32;
 			var row_row = 2;
@@ -39,13 +39,13 @@ if(global.gp_active)
 			var row_ring = 5;
 		break;
 		case 2:
-			var card_ring = 11;
+			var card_ring = 12;
 			var card_wait = 4;
 			var card_change = 3;
 			var card_spd_shot = 8;
 			var card_deccel = 0.25;
-			var card_accel = 0.08;
-			var card_spd_final = 3.6;
+			var card_accel = 0.1;
+			var card_spd_final = 4.2;
 			
 			var row_wait = 27;
 			var row_row = 2;
@@ -56,13 +56,13 @@ if(global.gp_active)
 			var row_ring = 5;
 		break;
 		case 3:
-			var card_ring = 13;
+			var card_ring = 14;
 			var card_wait = 4;
 			var card_change = 3;
 			var card_spd_shot = 8;
 			var card_deccel = 0.25;
-			var card_accel = 0.1;
-			var card_spd_final = 4.5;
+			var card_accel = 0.15;
+			var card_spd_final = 5;
 			
 			var row_wait = 25;
 			var row_row = 2;
@@ -74,7 +74,7 @@ if(global.gp_active)
 		break;
 	}
 	
-	var fairy_life = 250;
+	var fairy_life = 200;
 	var fairy_length = 240;
 	
 	var lots_life = 6;
@@ -193,7 +193,7 @@ if(global.gp_active)
 		
 		if(step % row_wait == wait_off)
 		{
-			shoot_ring_row(DAN_AMULET,1,row_ring,row_row,x,y,rng(360,false,1),row_spd_shot_min,row_spd_shot_max,sfx_shot2,2);
+			shoot_ring_row(DAN_AMULET,3,row_ring,row_row,x,y,rng(360,false,1),row_spd_shot_min,row_spd_shot_max,sfx_shot2,2);
 		}
 	}
 	

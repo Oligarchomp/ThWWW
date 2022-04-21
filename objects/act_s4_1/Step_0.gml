@@ -19,26 +19,26 @@ if(global.gp_active)
 			var card_change = 3;
 			var card_spd_shot = 8;
 			var card_deccel = 0.25;
-			var card_accel = 0.05;
-			var card_spd_final = 3.1;
+			var card_accel = 0.08;
+			var card_spd_final = 3.8;
 		break;
 		case 2:
-			var card_ring = 11;
-			var card_wait = 4;
-			var card_change = 3;
-			var card_spd_shot = 8;
-			var card_deccel = 0.25;
-			var card_accel = 0.08;
-			var card_spd_final = 3.6;
-		break;
-		case 3:
-			var card_ring = 13;
+			var card_ring = 12;
 			var card_wait = 4;
 			var card_change = 3;
 			var card_spd_shot = 8;
 			var card_deccel = 0.25;
 			var card_accel = 0.1;
-			var card_spd_final = 4.5;
+			var card_spd_final = 4.2;
+		break;
+		case 3:
+			var card_ring = 14;
+			var card_wait = 4;
+			var card_change = 3;
+			var card_spd_shot = 8;
+			var card_deccel = 0.25;
+			var card_accel = 0.15;
+			var card_spd_final = 5;
 		break;
 	}
 	
