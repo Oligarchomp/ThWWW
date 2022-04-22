@@ -165,7 +165,7 @@ if(global.gp_active) and (spell_wait == 0)
 						
 						for(var j = 0; j < 360; j += 360 / sphere_ring)
 						{
-							var inst = shoot(dan,8,room_width / 2,room_height / 2,j - i,0,sfx_spawn_water,5);
+							var inst = shoot(dan,9,room_width / 2,room_height / 2,j - i,0,sfx_spawn_water,5);
 							var angle2 = degtorad(j);
 							
 							inst.xx = bubble_ray * sin(angle1) * cos(angle2);

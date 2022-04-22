@@ -15,7 +15,7 @@ function add_stage(stage){
 			add_stage_event(act_s1_7,0);
 			add_stage_event(act_s1_8,0);
 			add_stage_event(act_s1_9,0)
-			add_stage_event(dialogue_s1_pre,100);
+			add_stage_event(dialogue_s1_pre,60);
 			add_stage_event(boss_s1_1_non,0);
 			add_stage_event(boss_s1_2_spell,0);
 			add_stage_event(boss_s1_3_non,40);

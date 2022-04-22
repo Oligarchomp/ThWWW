@@ -38,14 +38,14 @@ if(global.gp_active)
 		break;
 	}
 	
-	var fairy_lenght = 110;
+	var fairy_lenght = 70;
 	
-	var wave_wait = 180;
+	var wave_wait = 100;
 	
 	
 	if(instance_exists(obj_spell))
 	{
-		wait_time = 72;
+		wait_time = 90;
 	}
 	
 	wait_time = goto_value(wait_time,0,1);
@@ -58,8 +58,8 @@ if(global.gp_active)
 			{
 				for(var i = 50; i <= 350; i += 50)
 				{
-					var inst = create_enemy(EN_WHITE,i,-20,14,7,4,-90);
-					inst.item_nbr = 2;
+					var inst = create_enemy(EN_WHITE,i,-20,12,7,4,-90);
+					inst.item_nbr = 1;
 				}
 			}
 		}

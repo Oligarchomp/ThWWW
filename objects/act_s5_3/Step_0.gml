@@ -41,7 +41,7 @@ if(global.gp_active)
 	{
 		if(step % 60 == 0)
 		{
-			var inst = create_enemy(EN_RED,room_width / 2 - 220 * act_dir,50 + step % 166,fairy_life,2,fairy_spd,90 - 90 * act_dir);
+			var inst = create_enemy(EN_BLUE,room_width / 2 - 220 * act_dir,50 + step % 166,fairy_life,2,fairy_spd,90 - 90 * act_dir);
 			inst.item_nbr = 4;
 			act_dir *= -1;
 		}
