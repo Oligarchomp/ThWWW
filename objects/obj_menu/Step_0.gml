@@ -44,11 +44,11 @@ if(cursor_lockout == 0)
 	//holding
 	if(abs(global.down_down - global.up_down))
 	{
-		hold_direction_time += 1;
+		vhold_direction_time += 1;
 		
-		if(hold_direction_time > 20)
+		if(vhold_direction_time > 20)
 		{
-			if(hold_direction_time % 6 == 0)
+			if(vhold_direction_time % 6 == 0)
 			{
 				global.down_pressed = global.down_down;
 				global.up_pressed = global.up_down;
@@ -57,7 +57,25 @@ if(cursor_lockout == 0)
 	}
 	else
 	{
-		hold_direction_time = 0;
+		vhold_direction_time = 0;
+	}
+	
+	if(abs(global.right_down - global.left_down))
+	{
+		hhold_direction_time += 1;
+		
+		if(hhold_direction_time > 20)
+		{
+			if(hhold_direction_time % 6 == 0)
+			{
+				global.right_pressed = global.right_down;
+				global.left_pressed = global.left_down;
+			}
+		}
+	}
+	else
+	{
+		hhold_direction_time = 0;
 	}
 
 	if(abs(global.down_pressed - global.up_pressed))

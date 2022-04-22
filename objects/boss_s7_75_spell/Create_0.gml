@@ -24,3 +24,4 @@ shoot_step = 0;
 
 resting = false;
 rest_image = 0;
+

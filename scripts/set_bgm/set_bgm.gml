@@ -56,6 +56,9 @@ function set_bgm(argument0){
 			case mus_boss6:
 				var name = get_text("mus_boss6");
 			break;
+			case mus_boss7:
+				var name = get_text("mus_boss7");
+			break;
 			default:
 				return;
 			break;

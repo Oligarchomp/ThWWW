@@ -33,7 +33,8 @@ ds_list_clear(global.event_list);
 ds_list_clear(global.wait_list);
 
 
-hold_direction_time = 0;
+vhold_direction_time = 0;
+hhold_direction_time = 0;
 
 last_controle = 0;
 //0 = keyboard;

@@ -21,6 +21,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var arc_spd = 1.6;
 			var arc_spd_div = 1;
 			var arc_aim_open = 20;
+			
+			var bird_off = 100;
 		break;
 		case 1:
 			var bird_wait = 4;
@@ -39,6 +41,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var arc_spd = 1.6;
 			var arc_spd_div = 1;
 			var arc_aim_open = 20;
+			
+			var bird_off = 80;
 		break;
 		case 2:
 			var bird_wait = 2
@@ -57,6 +61,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var arc_spd = 1.6;
 			var arc_spd_div = 1;
 			var arc_aim_open = 20;
+			
+			var bird_off = 50;
 		break;
 		case 3:
 			var bird_wait = 1;
@@ -75,10 +81,12 @@ if(global.gp_active) and (spell_wait == 0)
 			var arc_spd = 1.6;
 			var arc_spd_div = 1;
 			var arc_aim_open = 20;
+			
+			var bird_off = 115;
 		break;
 	}
 	
-	var bird_off = 130;
+	
 	
 	
 	switch(state)

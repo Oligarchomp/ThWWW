@@ -58,17 +58,17 @@ if(global.gp_active)
 	
 	if(step == 0)
 	{
-		var inst = create_enemy(EN_RED,room_width / 2, -20,140,2,4.5,-90);
+		var inst = create_enemy(EN_BLUE,room_width / 2, -20,140,2,4.5,-90);
 	}
 	
 	if(step < fairy_lenght)
 	{
 		if(step % fairy_wait == 0)
 		{
-			var inst = create_enemy(EN_BLUE,-10,fairy_y_off + rng(50,false,3),fairy_life,1,3 + rng(2,false,2),0);
+			var inst = create_enemy(EN_WHITE,-10,fairy_y_off + rng(50,false,3),fairy_life,1,3 + rng(2,false,2),0);
 			inst.item_nbr = 1;
 			
-			var inst = create_enemy(EN_BLUE,room_width + 10,fairy_y_off + rng(50,false,3),fairy_life,1,3 + rng(2,false,2),180);
+			var inst = create_enemy(EN_WHITE,room_width + 10,fairy_y_off + rng(50,false,3),fairy_life,1,3 + rng(2,false,2),180);
 			inst.item_nbr = 1;
 		}
 		

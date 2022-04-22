@@ -93,6 +93,7 @@ auto_skip_ref = auto_skip;
 boss_step = 0;
 bgm_step = 0;
 title_step = 0;
+bgm_step_real = -5; // used for reverence
 
 need_boss_info = false;
 need_clear_bonus = false;

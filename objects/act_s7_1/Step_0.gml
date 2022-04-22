@@ -30,10 +30,12 @@ if(global.gp_active)
 	var arc_spd = 5;
 	var arc_dist = 15;
 	
+	var fairy_life = 5;
+	
 
 	if (step > wave1_start) and (step < wave1_end) and (step % wave_wait == 0)
 	{
-		var inst = create_enemy(EN_GREEN,room_width - x_off_spawn,-y_off_spawn,2,2,fairy_spd,-90)
+		var inst = create_enemy(EN_GREEN,room_width - x_off_spawn,-y_off_spawn,fairy_life,2,fairy_spd,-90)
 		inst.item_nbr = 2;
 	}
 	with(obj_enemy1)
@@ -67,7 +69,7 @@ if(global.gp_active)
 	
 	if (step > wave2_start) and (step < wave2_end) and (step % wave_wait == 0)
 	{
-		var inst = create_enemy(EN_GREEN,x_off_spawn,-y_off_spawn,2,1,fairy_spd,-90);
+		var inst = create_enemy(EN_GREEN,x_off_spawn,-y_off_spawn,fairy_life,1,fairy_spd,-90);
 		inst.item_nbr = 2;
 	}
 	with(obj_enemy2)
@@ -101,7 +103,7 @@ if(global.gp_active)
 	
 	if (step > wave3_start) and (step < wave3_end) and (step % wave_wait == 0)
 	{
-		var inst = create_enemy(EN_GREEN,room_width - x_off_spawn,room_height + y_off_spawn,2,4,fairy_spd,90)
+		var inst = create_enemy(EN_GREEN,room_width - x_off_spawn,room_height + y_off_spawn,fairy_life,4,fairy_spd,90)
 		inst.item_nbr = 2;
 	}
 	with(obj_enemy3)
@@ -134,7 +136,7 @@ if(global.gp_active)
 	
 	if (step > wave4_start) and (step < wave4_end) and (step % wave_wait == 0)
 	{
-		var inst = create_enemy(EN_GREEN,x_off_spawn,room_height + y_off_spawn,2,3,fairy_spd,90)
+		var inst = create_enemy(EN_GREEN,x_off_spawn,room_height + y_off_spawn,fairy_life,3,fairy_spd,90)
 		inst.item_nbr = 2;
 	}
 	with(obj_enemy4)

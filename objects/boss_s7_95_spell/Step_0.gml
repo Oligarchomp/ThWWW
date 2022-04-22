@@ -141,10 +141,11 @@ if(global.gp_active) and (spell_wait == 0)
 			case 29:
 			case 59:
 			case 89:
-				play_sound(sfx_redirect3,1,false);
+				play_sound(sfx_pofv_level,1,false);
 			break;
 			case 119:
 				screen_shake(5,0);
+				play_sound(sfx_photo_ready,1,false);
 				play_sound(sfx_spawn_light,1,false);
 				farewell *= -1;	
 			break;

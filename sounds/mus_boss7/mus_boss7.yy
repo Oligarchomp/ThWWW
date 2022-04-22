@@ -1,7 +1,7 @@
 {
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.9,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_boss7.wav",
-  "duration": 0.1,
+  "duration": 190.830246,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",

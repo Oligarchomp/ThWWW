@@ -30,7 +30,6 @@ if(global.gp_active) and (spell_wait == 0)
 					obj_hitbox.sprite_index = spr_nothing;
 					instance_create_depth(obj_boss.x,obj_boss.y,obj_boss.depth - 1, obj_shield_reverence);
 				
-				
 					boss_release(x_pos,y_pos,sfx_boss_release);
 					
 					var inst = create_enemy(EN_FAMILIAR,x_pos,y_pos,99999999,1,0,0);

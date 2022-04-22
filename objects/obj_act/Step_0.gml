@@ -23,10 +23,13 @@ if(global.gp_active)
 	
 	step += 1;
 	
-	if(!instance_exists(obj_spell))
+	if(get_current_event() == object_index)
 	{
-		ds_list_clear(global.x_death_list);//need to be used right away by the act object
-		ds_list_clear(global.y_death_list);
+		//if(!instance_exists(obj_spell))
+		{
+			ds_list_clear(global.x_death_list);//need to be used right away by the act object
+			ds_list_clear(global.y_death_list);
+		}
 	}
 	
 }

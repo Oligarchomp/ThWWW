@@ -13,7 +13,8 @@ switch(global.player_chosen)
 {
 	case P_REIMU:
 		boss_step = 2;
-		bgm_step = 20;
+		bgm_step = 24;
+		bgm_step_real = 25; 
 		title_step = 5;
 		set_dialogue(spr_reimu_art,2,true,spr_nothing,0,false,get_text("diag_s7_r4"),-1);
 		set_dialogue(spr_reimu_art,1,true,spr_nothing,0,false,get_text("diag_s7_r5"),-1);
@@ -44,7 +45,8 @@ switch(global.player_chosen)
 	break;
 	case P_MARISA:
 		boss_step = 2;
-		bgm_step = 20;
+		bgm_step = 24;
+		bgm_step_real = 25;
 		title_step = 6;
 		set_dialogue(spr_marisa_art,2,true,spr_nothing,0,false,get_text("diag_s7_m4"),-1);
 		set_dialogue(spr_marisa_art,0,true,spr_nothing,0,false,get_text("diag_s7_m5"),-1);
@@ -75,7 +77,8 @@ switch(global.player_chosen)
 	break;
 	case P_SANAE:
 		boss_step = 2;
-		bgm_step = 20;
+		bgm_step = 25;
+		bgm_step_real = 26; 
 		title_step = 9;
 		set_dialogue(spr_sanae_art,5,true,spr_nothing,0,false,get_text("diag_s7_s4"),-1);
 		set_dialogue(spr_sanae_art,2,true,spr_nothing,0,false,get_text("diag_s7_s5"),-1);

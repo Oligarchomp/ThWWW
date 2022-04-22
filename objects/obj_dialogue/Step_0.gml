@@ -202,10 +202,10 @@ if(global.gp_active)
 						set_bgm(mus_boss3);
 					break;
 					case 4:
-						set_bgm(noone);
+						set_bgm(mus_boss4);
 					break;
 					case 5:
-						set_bgm(noone);
+						set_bgm(mus_boss5);
 					break;
 					case 6:
 						set_bgm(mus_boss6);
@@ -214,6 +214,12 @@ if(global.gp_active)
 						set_bgm(noone);
 					break;
 				}
+			}
+		break;
+		case bgm_step_real:
+			if(current_step == 0)
+			{
+				set_bgm(mus_boss7);
 			}
 		break;
 		case title_step :

@@ -18,7 +18,7 @@ act_dir = 1;
 farewell = 1;
 
 wave1_aim = 90;
-wave2_aim = 0;
+wave2_aim = rng (360,false,1); // is wave 3
 
 wave = 1;
 

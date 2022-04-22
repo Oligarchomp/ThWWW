@@ -77,12 +77,12 @@ if(global.gp_active)
 						}
 					break;
 					case 2:
-						visual_xscale = goto_value(visual_xscale,0,0.1);
-						visual_yscale = goto_value(visual_yscale,0,0.1);
+						visual_xscale = goto_value(visual_xscale,0,0.03);
+						visual_yscale = goto_value(visual_yscale,0,0.03);
 						
 						if(visual_xscale == 0)
 						{
-							cancel_bullet(self);
+							instance_destroy();
 						}
 					break;
 				}
@@ -116,18 +116,16 @@ if(global.gp_active)
 						}
 					break;
 					case 2:
-						visual_xscale = goto_value(visual_xscale,0,0.1);
-						visual_yscale = goto_value(visual_yscale,0,0.1);
+						visual_xscale = goto_value(visual_xscale,0,0.03);
+						visual_yscale = goto_value(visual_yscale,0,0.03);
 						
 						if(visual_xscale == 0)
 						{
-							cancel_bullet(self);
+							instance_destroy();
 						}
 					break;
 				}
 			}
-		
-		
 		break;
 	}
 	
