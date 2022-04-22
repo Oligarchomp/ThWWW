@@ -95,10 +95,10 @@ if(global.gp_active)
 			{
 				if (state_time % fairy_wait == 0)
 				{
-					var inst = create_enemy(EN_WHITE,room_width / 2 + x_fairy[state_time/fairy_wait],-20,fairy_life,4,4,-90)
+					var inst = create_enemy(EN_BLACK,room_width / 2 + x_fairy[state_time/fairy_wait],-20,fairy_life,4,4,-90)
 					inst.item_nbr = 3;
 					
-					var inst = create_enemy(EN_WHITE,room_width / 2 - x_fairy[state_time/fairy_wait],-20,fairy_life,4,4,-90)
+					var inst = create_enemy(EN_BLACK,room_width / 2 - x_fairy[state_time/fairy_wait],-20,fairy_life,4,4,-90)
 					inst.item_nbr = 3;
 				}
 			}
@@ -114,11 +114,11 @@ if(global.gp_active)
 				{
 					if(aim_dir == 1)
 					{
-						var inst = create_enemy(EN_WHITE,-20,aim_y_off,aim_life,3,6,0);
+						var inst = create_enemy(EN_BLACK,-20,aim_y_off,aim_life,3,6,0);
 					}
 					else
 					{
-						var inst = create_enemy(EN_WHITE,room_width +20,aim_y_off,aim_life,3,6,180);
+						var inst = create_enemy(EN_BLACK,room_width +20,aim_y_off,aim_life,3,6,180);
 					}
 					inst.item_nbr = 1;
 					aim_dir *= -1;
@@ -143,18 +143,18 @@ if(global.gp_active)
 			case 1://shoot
 				
 				var ang = rng(360,false,4)
-				shoot_ring(DAN_BALL,7,ball_ring,x,y,ang + 360 / ball_ring / 2,ball_spd2,sfx_redirect2,7);
-				shoot_ring(DAN_BALL,7,ball_ring,x,y,ang,ball_spd1,sfx_redirect2,7);
+				shoot_ring(DAN_BALL,8,ball_ring,x,y,ang + 360 / ball_ring / 2,ball_spd2,sfx_redirect2,7);
+				shoot_ring(DAN_BALL,8,ball_ring,x,y,ang,ball_spd1,sfx_redirect2,7);
 				switch(extra_wave)
 				{
 					case 2:
-					shoot_ring(DAN_BALL,7,ball_ring,x,y,ang  + 360 / ball_ring / 2,ball_spd2 + (ball_spd2 - ball_spd1) * 2,sfx_redirect2,7);
+					shoot_ring(DAN_BALL,8,ball_ring,x,y,ang  + 360 / ball_ring / 2,ball_spd2 + (ball_spd2 - ball_spd1) * 2,sfx_redirect2,7);
 					case 1:
-					shoot_ring(DAN_BALL,7,ball_ring,x,y,ang,ball_spd2 + (ball_spd2 - ball_spd1),sfx_redirect2,7);
+					shoot_ring(DAN_BALL,8,ball_ring,x,y,ang,ball_spd2 + (ball_spd2 - ball_spd1),sfx_redirect2,7);
 					break;
 				}
 				
-				shoot_arc_row(DAN_BUBBLE,7,aim_arc,aim_row,x,y,999,aim_dist,aim_spd_min,aim_spd_max,sfx_redirect1,8);
+				shoot_arc_row(DAN_BUBBLE,8,aim_arc,aim_row,x,y,999,aim_dist,aim_spd_min,aim_spd_max,sfx_redirect1,8);
 				state = 2;
 			break;
 			case 2:
@@ -177,17 +177,14 @@ if(global.gp_active)
 		{
 			if(step < 70)
 			{
-				shoot_arc(DAN_BUBBLE,7,bubble_arc,x,y,999,bubble_dist,bubble_spd_shoot,sfx_shot3,8);
+				shoot_arc(DAN_BUBBLE,8,bubble_arc,x,y,999,bubble_dist,bubble_spd_shoot,sfx_shot3,8);
 			}
 		}
 	}
 	
 	with(obj_danmaku8)
 	{
-		if(color_id == 7)
-		{
-			spd = goto_value(spd,bubble_spd_final,0.35);
-		}
+		spd = goto_value(spd,bubble_spd_final,0.35);
 	}
 	
 }

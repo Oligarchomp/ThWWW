@@ -41,6 +41,10 @@ switch(en_type)
 		idle_spr = spr_fairy_white_idle;
 		move_spr = spr_fairy_white_move;
 	break;
+	case EN_BLACK:
+		idle_spr = spr_fairy_black_idle;
+		move_spr = spr_fairy_black_move;
+	break;
 	case EN_CRAB:
 		idle_spr = spr_enemy_crab;
 		move_spr = spr_enemy_crab;

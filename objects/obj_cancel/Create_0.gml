@@ -3,4 +3,4 @@
 
 image_speed = 0;
 alpha = 1;
-scale = 1;
+scale = 1.4;

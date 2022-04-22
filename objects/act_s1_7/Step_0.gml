@@ -110,11 +110,11 @@ if(global.gp_active)
 					if(state_time == 2)
 					{
 						state = 3;
-						angle = find_angle(x,y,room_width / 2 + room_width * dir_to_go, -10)
+						angle = find_angle(x,y,obj_player.x,obj_player.y);//find_angle(x,y,room_width / 2 + room_width * dir_to_go, -10)
 					}
 				break;
 				case 3:
-					spd = goto_value(5,spd,0.05)
+					spd = goto_value(spd,5,0.04);
 				break;
 			}
 		}

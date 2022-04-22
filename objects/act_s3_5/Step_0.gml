@@ -73,7 +73,7 @@ if(global.gp_active)
 					var dist = room_width / 5;
 					for(var i = dist; i <= room_width - dist; i += dist)
 					{
-						var inst = create_enemy(EN_WHITE,i,-20,20,3,4,-90);
+						var inst = create_enemy(EN_BLACK,i,-20,20,3,4,-90);
 						inst.item_nbr = 2;
 					}
 					
@@ -96,10 +96,10 @@ if(global.gp_active)
 	{
 		if(need_fairy_time % fairy_wait == 0)
 		{
-			var inst = create_enemy(EN_WHITE,-20,80,aim_life,6,5,0);
+			var inst = create_enemy(EN_BLACK,-20,80,aim_life,6,5,0);
 			inst.item_nbr = 1;
 			
-			var inst = create_enemy(EN_WHITE,room_width + 20,80,aim_life,6,5,180);
+			var inst = create_enemy(EN_BLACK,room_width + 20,80,aim_life,6,5,180);
 			inst.item_nbr = 1;
 			
 		}
@@ -122,7 +122,7 @@ if(global.gp_active)
 				var aim = rng(360,false,1);
 				for(var i = ball_spd_min; i < ball_spd_max; i += (ball_spd_max - ball_spd_min) / ball_row)
 				{
-					shoot_ring(DAN_BALL,7,ball_ring,x,y,aim,i,sfx_redirect1,5)
+					shoot_ring(DAN_BALL,8,ball_ring,x,y,aim,i,sfx_redirect1,5)
 					aim += 180 / ball_ring;
 				}
 				state = 2;
@@ -147,7 +147,7 @@ if(global.gp_active)
 		{
 			if(step % bubble_wait == 0)
 			{
-				shoot_arc(DAN_BUBBLE,7,bubble_arc,x,y,999,bubble_dist,bubble_spd_shoot,sfx_shot1,6);
+				shoot_arc(DAN_BUBBLE,8,bubble_arc,x,y,999,bubble_dist,bubble_spd_shoot,sfx_shot1,6);
 			}
 		}
 	}

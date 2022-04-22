@@ -60,14 +60,14 @@ if(global.gp_active)
 	
 	if(step == 0)
 	{
-		create_enemy(EN_WHITE,-20,y_off_blue,fairy_life,2,6,0);
-		create_enemy(EN_WHITE,room_width + 20,y_off_blue,fairy_life,2,6,180);
+		create_enemy(EN_BLACK,-20,y_off_blue,fairy_life,2,6,0);
+		create_enemy(EN_BLACK,room_width + 20,y_off_blue,fairy_life,2,6,180);
 		
-		create_enemy(EN_WHITE,room_width /2,-20,fairy_life,1,6,-90)
+		create_enemy(EN_BLACK,room_width /2,-20,fairy_life,1,6,-90)
 		
 		var x_off = 50;
-		create_enemy(EN_WHITE,room_width /2 + x_off,-20,fairy_life,1,6,-90)
-		create_enemy(EN_WHITE,room_width /2 - x_off,-20,fairy_life,1,6,-90)
+		create_enemy(EN_BLACK,room_width /2 + x_off,-20,fairy_life,1,6,-90)
+		create_enemy(EN_BLACK,room_width /2 - x_off,-20,fairy_life,1,6,-90)
 		
 	}
 	
@@ -85,7 +85,7 @@ if(global.gp_active)
 				}
 			break;
 			case 1://shoot
-				shoot_ring_row(DAN_BUBBLE,7,aim_ring,aim_row,x,y,999,aim_spd_min,aim_spd_max,sfx_redirect1,3);
+				shoot_ring_row(DAN_BUBBLE,8,aim_ring,aim_row,x,y,999,aim_spd_min,aim_spd_max,sfx_redirect1,3);
 				state = 2;
 				life = min(life,10);
 			break;
@@ -115,7 +115,7 @@ if(global.gp_active)
 				}
 			break;
 			case 1://shoot
-				shoot_arc_row(DAN_MENTOS,7,mentos_arc,mentos_row,x,y,999,mentos_dist,mentos_spd_min,mentos_spd_max,sfx_shot1,2);
+				shoot_arc_row(DAN_MENTOS,8,mentos_arc,mentos_row,x,y,999,mentos_dist,mentos_spd_min,mentos_spd_max,sfx_shot1,2);
 				state = 2;
 				life = min(life,10)
 			break;

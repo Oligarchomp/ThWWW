@@ -11,9 +11,11 @@ if(global.gp_active)
 			
 			var orb_spin = 360 / orb_ring / 2.5
 			
-			var mentos_wait = 18;
-			var mentos_ring = 6;
-			var mentos_spd_min = 2;
+			var mentos_wait = 25;
+			var mentos_ring = 8;
+			var mentos_open = 3;
+			var mentos_spd_min = 2.5;
+			var mentos_spd_git = 0.8;
 		break;
 		case 1:
 			var orb_wait = 26;
@@ -22,9 +24,11 @@ if(global.gp_active)
 			
 			var orb_spin = 360 / orb_ring / 2.5
 			
-			var mentos_wait = 12;
-			var mentos_ring = 8;
-			var mentos_spd_min = 2.3;
+			var mentos_wait = 14;
+			var mentos_ring = 10;
+			var mentos_open = 3.5;
+			var mentos_spd_min = 3.2;
+			var mentos_spd_git = 1;
 		break;
 		case 2:
 			var orb_wait = 22;
@@ -33,9 +37,11 @@ if(global.gp_active)
 			
 			var orb_spin = 360 / orb_ring / 2.5
 			
-			var mentos_wait = 9;
-			var mentos_ring = 12;
-			var mentos_spd_min = 2.5;
+			var mentos_wait = 8;
+			var mentos_ring = 11;
+			var mentos_open = 4;
+			var mentos_spd_min = 4.4;
+			var mentos_spd_git = 1.2;
 		break;
 		case 3:
 			var orb_wait = 20;
@@ -44,9 +50,11 @@ if(global.gp_active)
 			
 			var orb_spin = 360 / orb_ring / 2.5
 			
-			var mentos_wait = 8;
-			var mentos_ring = 14;
-			var mentos_spd_min = 3;
+			var mentos_wait = 6;
+			var mentos_ring = 13;
+			var mentos_open = 4;
+			var mentos_spd_min = 5;
+			var mentos_spd_git = 1.4;
 		break;
 	}
 	
@@ -58,15 +66,15 @@ if(global.gp_active)
 	{
 		case 0:
 		case 300:
-			var inst = create_enemy(EN_WHITE,room_width / 2,-20,90,2,4,-90)
+			var inst = create_enemy(EN_BLACK,room_width / 2,-20,90,2,4,-90)
 			inst.item_nbr = 12;
 			inst.fairy_dir = act_dir;
 			act_dir *= -1;
 			
-			var inst = create_enemy(EN_WHITE,80,-20,small_life,1,4.5,-90)
+			var inst = create_enemy(EN_BLACK,80,-20,small_life,1,4.5,-90)
 			inst.item_nbr = 4;
 			
-			var inst = create_enemy(EN_WHITE,320,-20,small_life,1,4.5,-90)
+			var inst = create_enemy(EN_BLACK,320,-20,small_life,1,4.5,-90)
 			inst.item_nbr = 4;
 		break;
 	}
@@ -89,7 +97,7 @@ if(global.gp_active)
 				{
 					if(state_time % orb_wait == 0)
 					{
-						shoot_ring(DAN_BUBBLE,7,orb_ring,x,y,angle_shoot,orb_spd,sfx_redirect1,7);	
+						shoot_ring(DAN_BUBBLE,8,orb_ring,x,y,angle_shoot,orb_spd,sfx_redirect1,7);	
 						angle_shoot += orb_spin * fairy_dir;
 					}
 				}
@@ -129,7 +137,8 @@ if(global.gp_active)
 				{
 					if(state_time % mentos_wait == 0)
 					{
-						shoot_ring(DAN_BALL,7,mentos_ring,x,y,rng(360,false,6),mentos_spd_min,sfx_shot1,6);
+						var aim = find_angle(x,y,obj_player.x,obj_player.y) - mentos_open + rng(mentos_open * 2,false,1);
+						shoot_ring(DAN_MENTOS,8,mentos_ring,x,y,aim,mentos_spd_min + rng(mentos_spd_git,false,1),sfx_shot1,6);
 					}
 				}
 				else

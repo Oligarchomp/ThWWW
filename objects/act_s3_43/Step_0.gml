@@ -74,7 +74,7 @@ if(global.gp_active)
 	{
 		if(need_fairy_time % fairy_wait == 0)
 		{
-			var inst = create_enemy(EN_WHITE,room_width / 2 + (170 + need_fairy_time / 1.5) * act_dir,fairy_y_off, fairy_life,1,10.5,-90 - 110 * act_dir);
+			var inst = create_enemy(EN_BLACK,room_width / 2 + (170 + need_fairy_time / 1.5) * act_dir,fairy_y_off, fairy_life,1,10.5,-90 - 110 * act_dir);
 			inst.dir_dan = act_dir;
 			inst.angle_shoot = 0;
 		}
@@ -102,7 +102,7 @@ if(global.gp_active)
 					{
 						var ang = find_angle(x,y,obj_player.x,obj_player.y) + bubble_open - rng(bubble_open * 2,false,8);
 						var sp = bubble_spd_min + rng(bubble_spd_git,false,5);
-						shoot_ring(DAN_MENTOS,7,bubble_ring,x,y,ang,sp,sfx_shot1,8)
+						shoot_ring(DAN_MENTOS,8,bubble_ring,x,y,ang,sp,sfx_shot1,8)
 					}
 				}
 				else

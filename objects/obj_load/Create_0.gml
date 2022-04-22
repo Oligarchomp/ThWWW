@@ -180,6 +180,7 @@ global.y_death_list = ds_list_create();
 #macro EN_BLUE 1
 #macro EN_GREEN 2
 #macro EN_WHITE 3
+#macro EN_BLACK 4
 #macro EN_CRAB 6
 #macro EN_FAMILIAR 7
 #macro EN_DOVE 8
@@ -334,8 +335,8 @@ room_goto(room_gp)
 
 global.difficulty = 3;
 
-add_stage_event(act_s3_0,0)
-add_stage_event(act_s3_8,1)
+add_stage_event(act_s1_0,0)
+add_stage_event(act_s1_7,1)
 
 
 

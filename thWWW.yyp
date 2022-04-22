@@ -25,6 +25,7 @@
     {"id":{"name":"spr_grid_reverence","path":"sprites/spr_grid_reverence/spr_grid_reverence.yy",},"order":1,},
     {"id":{"name":"room_language","path":"rooms/room_language/room_language.yy",},"order":7,},
     {"id":{"name":"spr_reimu_left","path":"sprites/spr_reimu_left/spr_reimu_left.yy",},"order":1,},
+    {"id":{"name":"spr_fairy_black_idle","path":"sprites/spr_fairy_black_idle/spr_fairy_black_idle.yy",},"order":0,},
     {"id":{"name":"get_replay","path":"scripts/get_replay/get_replay.yy",},"order":0,},
     {"id":{"name":"obj_circlecharge","path":"objects/obj_circlecharge/obj_circlecharge.yy",},"order":11,},
     {"id":{"name":"spr_laser_grazebox","path":"sprites/spr_laser_grazebox/spr_laser_grazebox.yy",},"order":7,},
@@ -345,6 +346,7 @@
     {"id":{"name":"boss_s3_3_non","path":"objects/boss_s3_3_non/boss_s3_3_non.yy",},"order":3,},
     {"id":{"name":"mus_stage5","path":"sounds/mus_stage5/mus_stage5.yy",},"order":12,},
     {"id":{"name":"obj_tower","path":"objects/obj_tower/obj_tower.yy",},"order":1,},
+    {"id":{"name":"spr_fairy_black_move","path":"sprites/spr_fairy_black_move/spr_fairy_black_move.yy",},"order":1,},
     {"id":{"name":"act_s7_9","path":"objects/act_s7_9/act_s7_9.yy",},"order":26,},
     {"id":{"name":"spr_dove_idle","path":"sprites/spr_dove_idle/spr_dove_idle.yy",},"order":0,},
     {"id":{"name":"obj_cancel","path":"objects/obj_cancel/obj_cancel.yy",},"order":15,},
@@ -817,6 +819,7 @@
     {"folderPath":"folders/Objects/CREDIT.yy","order":15,"resourceVersion":"1.0","name":"CREDIT","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Credit.yy","order":19,"resourceVersion":"1.0","name":"Credit","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/Text.yy","order":42,"resourceVersion":"1.0","name":"Text","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Enemy/Black fairy.yy","order":10,"resourceVersion":"1.0","name":"Black fairy","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

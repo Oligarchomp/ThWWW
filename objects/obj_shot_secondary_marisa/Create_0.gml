@@ -4,6 +4,9 @@
 x_scale = 1;
 x_scale_min = 1;
 
+x = round(x);
+y = round(y);
+
 alpha = 0.4;
 col = $fcfdd7;
 

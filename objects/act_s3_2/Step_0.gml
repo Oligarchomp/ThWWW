@@ -43,9 +43,9 @@ if(global.gp_active)
 		case 162:
 		case 324:
 		case 488:
-			var inst = create_enemy(EN_WHITE,-20,75 + y_plus,f_life,1,4,0);
+			var inst = create_enemy(EN_BLACK,-20,75 + y_plus,f_life,1,4,0);
 			inst.item_nbr = 4;
-			var inst = create_enemy(EN_WHITE,room_width + 20,75 + y_plus,f_life,1,4,180);
+			var inst = create_enemy(EN_BLACK,room_width + 20,75 + y_plus,f_life,1,4,180);
 			inst.item_nbr = 4;
 			
 			y_plus += 25;
@@ -70,7 +70,7 @@ if(global.gp_active)
 					{
 						var sp = mentos_spd_min + rng(mentos_spd_git,false,9);
 						var ang = find_angle(x,y,obj_player.x,obj_player.y) + mentos_open - rng(mentos_open * 2,false,7);
-						shoot_ring(DAN_MENTOS,7,mentos_ring,x,y,ang,sp,sfx_shot1,7);
+						shoot_ring(DAN_MENTOS,8,mentos_ring,x,y,ang,sp,sfx_shot1,7);
 					}
 				}
 				else
