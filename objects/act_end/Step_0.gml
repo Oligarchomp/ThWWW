@@ -9,7 +9,7 @@ if(global.gp_active)
 	
 	if(alpha == 1)
 	{
-		room_goto(room_end);
+		room_goto(global.game_type == GAME_FULL ? room_end : room_score);
 	}
 
 }

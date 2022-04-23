@@ -12,7 +12,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var rock_nbr = 4;
 			var rock_wait_aim = 30;
-			var rock_accel = 0.05;
+			var rock_accel = 0.04;
 			var rock_spd_max = 8;
 			
 			var star_nbr = 22;

@@ -11,7 +11,7 @@ if(global.gp_active)
 			var row_spd2 = 1.5;
 			var row_dist = 38;
 			
-			var aim_ring = 9;
+			var aim_ring = 7;
 			var aim_spd = 2.2;
 		break;
 		case 1:
@@ -20,7 +20,7 @@ if(global.gp_active)
 			var row_spd2 = 1.5;
 			var row_dist = 26;
 			
-			var aim_ring = 18;
+			var aim_ring = 15;
 			var aim_spd = 3.4;
 		break;
 		case 2:
@@ -38,7 +38,7 @@ if(global.gp_active)
 			var row_spd2 = 1.5;
 			var row_dist = 19;
 			
-			var aim_ring = 28;
+			var aim_ring = 29;
 			var aim_spd = 4;
 		break;
 	}

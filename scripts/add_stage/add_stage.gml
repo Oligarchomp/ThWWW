@@ -184,6 +184,7 @@ function add_stage(stage){
 			add_stage_event(boss_s7_9_spell,80);
 			add_stage_event(boss_s7_95_spell,70);
 			add_stage_event(dialogue_s7_post,135);
+			add_stage_event(act_end,200);
 		break;
 	}
 

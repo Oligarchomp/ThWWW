@@ -129,7 +129,7 @@ switch(state)
 				var text = "EASY";
 			break;
 			case 1:
-				var text = "NORMAL";
+				var text = global.game_type == GAME_FULL ? "NORMAL" : "EXTRA";
 			break;
 			case 2:
 				var text = "HARD";

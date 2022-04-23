@@ -8,7 +8,7 @@ if(global.gp_active)
 		case 0:
 			var mentos_wait = 6;
 			var mentos_ring = 5;
-			var mentos_spd = 1.8;
+			var mentos_spd = 1.6;
 			var mentos_accel = 0.012;
 			var mentos_start = 50;
 			var mentos_spin = 20;

@@ -15,7 +15,7 @@ if(global.gp_active)
 			var arrow_dist = 25;
 			
 			var bubble_nbr = 8;
-			var bubble_wait = 40;
+			var bubble_wait = 60;
 			var bubble_spd = 2;
 		break;
 		case 1:
@@ -29,7 +29,7 @@ if(global.gp_active)
 			var arrow_dist = 17;
 			
 			var bubble_nbr = 10;
-			var bubble_wait = 36;
+			var bubble_wait = 42;
 			var bubble_spd = 2;
 		break;
 		case 2:

@@ -6,7 +6,7 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var ring_nbr = 5;
+			var ring_nbr = 4;
 			var ring_spd1 = 1.5;
 			var ring_spd2 = 2;
 			
@@ -17,24 +17,24 @@ if(global.gp_active)
 			var rev_time = 60;
 		break;
 		case 1:
-			var ring_nbr = 8;
-			var ring_spd1 = 1.8;
-			var ring_spd2 = 2.4;
+			var ring_nbr = 7;
+			var ring_spd1 = 1.6;
+			var ring_spd2 = 2.2;
 			
-			var rev_row = 3;
-			var rev_spd_min = 2;
-			var rev_spd_max = 7;
+			var rev_row = 2;
+			var rev_spd_min = 3;
+			var rev_spd_max = 6;
 			var rev_spd_final = 3.5;
 			var rev_time = 60;
 		break;
 		case 2:
-			var ring_nbr = 11;
+			var ring_nbr = 12;
 			var ring_spd1 = 1.8;
 			var ring_spd2 = 2.4;
 			
-			var rev_row = 4;
-			var rev_spd_min = 2;
-			var rev_spd_max = 7;
+			var rev_row = 3;
+			var rev_spd_min = 2.5;
+			var rev_spd_max = 6.5;
 			var rev_spd_final = 4;
 			var rev_time = 60;
 		break;

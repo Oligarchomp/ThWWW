@@ -5,7 +5,7 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var bubble_wait = 16;
+			var bubble_wait = 18;
 			var bubble_arc = 1;
 			var bubble_dist = 45;
 			var bubble_open = 4;
@@ -45,7 +45,7 @@ if(global.gp_active)
 	
 	if(instance_exists(obj_spell))
 	{
-		wait_time = 90;
+		wait_time = 120;
 	}
 	
 	wait_time = goto_value(wait_time,0,1);

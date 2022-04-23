@@ -298,7 +298,7 @@
     {"id":{"name":"spr_manual","path":"sprites/spr_manual/spr_manual.yy",},"order":8,},
     {"id":{"name":"sfx_isoterica","path":"sounds/sfx_isoterica/sfx_isoterica.yy",},"order":4,},
     {"id":{"name":"spr_apple_idle","path":"sprites/spr_apple_idle/spr_apple_idle.yy",},"order":1,},
-    {"id":{"name":"act_end","path":"objects/act_end/act_end.yy",},"order":17,},
+    {"id":{"name":"act_end","path":"objects/act_end/act_end.yy",},"order":8,},
     {"id":{"name":"spr_intro_broken","path":"sprites/spr_intro_broken/spr_intro_broken.yy",},"order":12,},
     {"id":{"name":"dialogue_s5_pre","path":"objects/dialogue_s5_pre/dialogue_s5_pre.yy",},"order":3,},
     {"id":{"name":"spr_item","path":"sprites/spr_item/spr_item.yy",},"order":11,},

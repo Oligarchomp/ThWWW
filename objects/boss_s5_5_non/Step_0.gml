@@ -12,7 +12,7 @@ if(global.gp_active)
 			{
 				case 0:
 					var knife_row = 4;
-					var knife_ring = 11;
+					var knife_ring = 12;
 					var knife_size = 2;
 					var knife_dist = 60;
 					var knife_spd = 3;
@@ -151,13 +151,13 @@ if(global.gp_active)
 						var found_wall = false;
 						if (y < 480)
 						{
-							if(x < -10) or (x > room_width + 10)
+							if(x < -20) or (x > room_width + 20)
 							{
 								found_wall = true;
 								angle = -angle + 180;
 							}
 				
-							if(y < -10)
+							if(y < -20)
 							{
 								found_wall = true;
 								angle *= -1;

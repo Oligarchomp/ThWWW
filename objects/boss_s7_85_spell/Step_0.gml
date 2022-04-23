@@ -45,6 +45,8 @@ if(global.gp_active) and (spell_wait == 0)
 					
 					obj_player.x = obj_boss.x;
 					obj_player.y = obj_boss.y;
+					obj_option.x = obj_player.x;
+					obj_option.y = obj_player.y;
 					
 					obj_boss.x = x_mem;
 					obj_boss.y = y_mem;

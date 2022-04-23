@@ -13,7 +13,7 @@ if(global.gp_active)
 			var card_accel = 0.04;
 			var card_spd_final = 2.8;
 			
-			var row_wait = 38;
+			var row_wait = 42;
 			var row_row = 2;
 			var row_spd_shot_max = 4.5;
 			var row_spd_shot_min = 1.5;
@@ -30,7 +30,7 @@ if(global.gp_active)
 			var card_accel = 0.08;
 			var card_spd_final = 3.8;
 			
-			var row_wait = 32;
+			var row_wait = 28;
 			var row_row = 2;
 			var row_spd_shot_max = 5;
 			var row_spd_shot_min = 2;
@@ -47,13 +47,13 @@ if(global.gp_active)
 			var card_accel = 0.1;
 			var card_spd_final = 4.2;
 			
-			var row_wait = 27;
+			var row_wait = 24;
 			var row_row = 2;
 			var row_spd_shot_max = 5.5;
 			var row_spd_shot_min = 2.5;
 			var row_spd_final = 4;
 			var row_accel = 0.08;
-			var row_ring = 5;
+			var row_ring = 6;
 		break;
 		case 3:
 			var card_ring = 14;
@@ -64,13 +64,13 @@ if(global.gp_active)
 			var card_accel = 0.15;
 			var card_spd_final = 5;
 			
-			var row_wait = 25;
+			var row_wait = 22;
 			var row_row = 2;
 			var row_spd_shot_max = 6;
 			var row_spd_shot_min = 3;
 			var row_spd_final = 4.5;
 			var row_accel = 0.08;
-			var row_ring = 6;
+			var row_ring = 7;
 		break;
 	}
 	
@@ -108,7 +108,7 @@ if(global.gp_active)
 	{
 		if((fairy_length - need_fairy_time) % lots_wait == 0)
 		{
-			var inst = create_enemy(EN_BLUE,200 - 220 * act_dir,180,lots_life,2,lots_spd,90 - act_dir * 45);
+			var inst = create_enemy(EN_WHITE,200 - 220 * act_dir,180,lots_life,2,lots_spd,90 - act_dir * 45);
 			inst.item_nbr = 2;
 			inst.angle_to = 90 - act_dir * 90;
 			inst.wait_off = rng(row_wait,true,1);
