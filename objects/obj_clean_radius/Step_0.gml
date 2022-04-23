@@ -5,16 +5,18 @@ if(global.gp_active)
 	var me = self;
 	with(obj_danmaku)
 	{
-		if (depth != global.danmaku_depth) //all but danmaku1
+		if(depth != global.danmaku_depth) // ignore danmaku 1
 		{
-			if(get_distance(x,y,me.x,me.y) < me.rad)
+			if(place_meeting(x,y,me))
 			{
-				cancel_bullet_item(self);	
+				cancel_bullet_item(self);
 			}
 		}
-	
 	}
-
+	
+	image_xscale += 0.2;
+	image_yscale += 0.2;
+	
 	rad += rad_spd;
 	alpha -= 0.04;
 

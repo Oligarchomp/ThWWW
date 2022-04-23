@@ -16,16 +16,16 @@ if(global.gp_active) and (spell_wait == 0)
 			var wave_wait = 320;
 			
 			var arc_wait = 60;
-			var arc_nbr = 3;
-			var arc_dist = 20;
+			var arc_nbr = 4;
+			var arc_dist = 17;
 			var arc_spd = 1.6;
 			var arc_spd_div = 1;
 			var arc_aim_open = 20;
 			
-			var bird_off = 100;
+			var bird_off = 90;
 		break;
 		case 1:
-			var bird_wait = 4;
+			var bird_wait = 3;
 			var bird_accel = 0.05;
 			var bird_spd_min = 1.9;
 			var bird_spd_git = 0.25;

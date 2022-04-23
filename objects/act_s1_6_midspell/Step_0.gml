@@ -26,7 +26,7 @@ if(global.gp_active)
 				var bubble_wait = 45;
 				var bubble_nbr = 14;
 				
-				var arrow_row = 4;
+				var arrow_row = 5;
 				var arrow_dist = 19;
 				var arrow_angle = 999;
 				var arrow_spd = 4;

@@ -11,10 +11,10 @@ if(global.gp_active) and (spell_wait == 0)
 			var rice_spd_shoot = 4;
 			var rice_spd_git = 1.5;
 			var rice_spd_div = 2.5;
-			var rice_nbr = 1;
+			var rice_nbr = 2;
 			
 			var sword_wait = 2;
-			var sword_row = 1;
+			var sword_row = 2;
 			var sword_arc = 3;
 			var sword_dist = 0;
 			var sword_spd_min = 1;
@@ -36,10 +36,10 @@ if(global.gp_active) and (spell_wait == 0)
 			var rice_spd_shoot = 4.5;
 			var rice_spd_git = 2;
 			var rice_spd_div = 2.3;
-			var rice_nbr = 2;
+			var rice_nbr = 3;
 			
 			var sword_wait = 1;
-			var sword_row = 1;
+			var sword_row = 2;
 			var sword_arc = 3;
 			var sword_dist = 0;
 			var sword_spd_min = 1.5;
@@ -61,7 +61,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var rice_spd_shoot = 4.5;
 			var rice_spd_git = 2;
 			var rice_spd_div = 2.2;
-			var rice_nbr = 3;
+			var rice_nbr = 4;
 			
 			var sword_wait = 1;
 			var sword_row = 2;

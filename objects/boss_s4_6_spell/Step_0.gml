@@ -5,12 +5,12 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			var wood_wait = 48;
-			var wood_nbr = 8;
+			var wood_wait = 46;
+			var wood_nbr = 10;
 			var wood_angle_plus = 25;
-			var wood_spd = 1.8;
+			var wood_spd = 2;
 			
-			var water_nbr = 16;
+			var water_nbr = 18;
 			var water_y_accel = 0.05;
 			var water_x_accel = 0.01;
 			var water_spd_shot_min = 1;
@@ -20,28 +20,28 @@ if(global.gp_active) and (spell_wait == 0)
 			var water_wait = 175;
 			var water_open = 70;
 			
-			var metal_wait = 170;
+			var metal_wait = 165;
 			var metal_nbr = 8;
 			var metal_spd_shot = 6;
 			var metal_deccel = 0.1;
 			var metal_spd_aim = 1.8;
 			
-			var earth_wait = 155;
+			var earth_wait = 150;
 			var earth_nbr_wall = 13;
 			var earth_nbr_in = 5;
 			var earth_dist_in = 1;
 			var earth_spd = 1.5;
 			
-			var fire_wait = 200;
+			var fire_wait = 190;
 			var fire_spd = 1;
 			var fire_spd_git = 0.5;
-			var fire_nbr = 22;
+			var fire_nbr = 30;
 		break;
 		case 1:
 			var wood_wait = 36;
 			var wood_nbr = 12;
 			var wood_angle_plus = 25;
-			var wood_spd = 2.5;
+			var wood_spd = 2.4;
 			
 			var water_nbr = 22;
 			var water_y_accel = 0.05;
@@ -68,11 +68,11 @@ if(global.gp_active) and (spell_wait == 0)
 			var fire_wait = 175;
 			var fire_spd = 1;
 			var fire_spd_git = 0.5;
-			var fire_nbr = 32;
+			var fire_nbr = 35;
 		break;
 		case 2:
 			var wood_wait = 34;
-			var wood_nbr = 12;
+			var wood_nbr = 14;
 			var wood_angle_plus = 25;
 			var wood_spd = 2.5;
 			
@@ -171,20 +171,52 @@ if(global.gp_active) and (spell_wait == 0)
 			switch(id_list[i])
 			{
 				case 1:
-					var sp = 3;
-					var ang = 190;
+					if(global.difficulty >= 2)
+					{
+						var sp = 3;
+						var ang = 190;
+					}
+					else
+					{
+						var sp = 3.5;
+						var ang = 190;
+					}
 				break;
 				case 2:
-					var sp = 3;
-					var ang = -10;
+					if(global.difficulty >= 2)
+					{
+						var sp = 3;
+						var ang = -10;
+					}
+					else
+					{
+						var sp = 3.5;
+						var ang = -10;
+					}
 				break;
 				case 3:
-					var sp = 4.6;
-					var ang = 5;
+					if(global.difficulty >= 2)
+					{
+						var sp = 4.6;
+						var ang = 5;
+					}
+					else
+					{
+						var sp = 5;
+						var ang = 5;
+					}
 				break;
 				case 4:
-					var sp = 4.6;
-					var ang = 175;
+					if(global.difficulty >= 2)
+					{
+						var sp = 4.6;
+						var ang = 175;
+					}
+					else
+					{
+						var sp = 5;
+						var ang = 175;
+					}
 				break;
 				case 6:
 					var sp = 5.6;

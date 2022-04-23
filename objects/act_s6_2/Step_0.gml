@@ -12,7 +12,7 @@ if(global.gp_active)
 			var aim_spd_min = 2;
 			var aim_spd_max = 3.5;
 			
-			var ring_wait = 44;
+			var ring_wait = 40;
 			var ring_nbr = 1;
 			var ring_accel = 0.01;
 			var ring_shoot_spd = 0.1;
@@ -25,7 +25,7 @@ if(global.gp_active)
 			var aim_spd_min = 2;
 			var aim_spd_max = 4;
 			
-			var ring_wait = 36;
+			var ring_wait = 30;
 			var ring_nbr = 2;
 			var ring_accel = 0.014;
 			var ring_shoot_spd = 0.3;

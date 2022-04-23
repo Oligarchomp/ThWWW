@@ -10,26 +10,28 @@ if(global.gp_active)
 			var tri_spd = 2.5;
 			var tri_dist = 2;
 			var tri_div = 2;
+			var tri_length = 40;
 		break;
 		case 1:
-			
 			var crab_shoot_nbr = 1;
-			var tri_spd = 3;
+			var tri_spd = 2;
 			var tri_dist = 2;
-			var tri_div = 10;
+			var tri_div = 6;
+			var tri_length = 40;
 		break;
 		case 2:
 			var crab_shoot_nbr = 1;
-			var tri_spd = 3;
+			var tri_spd = 2;
 			var tri_dist = 2;
-			var tri_div = 6;
+			var tri_div = 4;
+			var tri_length = 40;
 		break;
 		case 3:
 			var crab_shoot_nbr = 2;
-			var tri_spd = 3;
+			var tri_spd = 2;
 			var tri_dist = 2;
-			var tri_div = 5;
-			
+			var tri_div = 3;
+			var tri_length = 40;
 		break;
 	}
 	
@@ -137,7 +139,7 @@ if(global.gp_active)
 				}
 			break;
 			case 1://shoot
-				if(state_time < 40)
+				if(state_time < tri_length )
 				{
 					if(state_time % tri_div == 0)
 					{

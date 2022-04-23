@@ -11,7 +11,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var knife_dist = 50;
 			var knife_spd = 7;
 			
-			var stab_ring = 10;
+			var stab_ring = 11;
 			var stab_spd_shoot = 6;
 			var stab_spd_final = 2;
 			var stab_deccel = 0.3;
@@ -23,7 +23,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var fire_wait = 2;
 			var fire_lenght = 180;
 			
-			var ring_nbr = 10;
+			var ring_nbr = 11;
 			var ring_spd = 1.8;
 			var ring_wait = 58;
 			
@@ -41,7 +41,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var knife_dist = 50;
 			var knife_spd = 7;
 			
-			var stab_ring = 18;
+			var stab_ring = 19;
 			var stab_spd_shoot = 6;
 			var stab_spd_final = 2;
 			var stab_deccel = 0.3;
@@ -53,14 +53,14 @@ if(global.gp_active) and (spell_wait == 0)
 			var fire_wait = 2;
 			var fire_lenght = 180;
 			
-			var ring_nbr = 17;
+			var ring_nbr = 18;
 			var ring_spd = 2;
 			var ring_wait = 52;
 			
 			var arrow_wait = 36;
 			var arrow_arc = 7;
 			var arrow_spd = 4.5;
-			var arrow_dist = 24;
+			var arrow_dist = 22;
 			var arrow_lenght = 100;
 			var arrow_size = 2;
 		break;
@@ -71,7 +71,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var knife_dist = 60;
 			var knife_spd = 7;
 			
-			var stab_ring = 25;
+			var stab_ring = 26;
 			var stab_spd_shoot = 6;
 			var stab_spd_final = 2;
 			var stab_deccel = 0.3;
@@ -101,7 +101,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var knife_dist = 60;
 			var knife_spd = 7;
 			
-			var stab_ring = 29;
+			var stab_ring = 30;
 			var stab_spd_shoot = 6;
 			var stab_spd_final = 2;
 			var stab_deccel = 0.3;
@@ -283,7 +283,7 @@ if(global.gp_active) and (spell_wait == 0)
 				{
 					state = 3;
 					spd = 0;
-					shoot_ring(DAN_MENTOS,color_id,stab_ring,x,y,rng(360,false,8),stab_spd_shoot,sfx_shot1,5);
+					shoot_ring(DAN_ARROW,color_id,stab_ring,x,y,rng(360,false,8),stab_spd_shoot,sfx_shot1,5);
 				}
 			break;
 			case 4:
@@ -321,13 +321,22 @@ if(global.gp_active) and (spell_wait == 0)
 		switch(state)
 		{
 			case 0:
+				image_xscale = 2;
+				image_yscale = 2;
+				x_offscreen *= 2;
+				y_offscreen *= 2;
+				spawn_type = SPAWN_SCALE;
+				
+				state += 1;
+			break;
+			case 1:
 				spd = goto_value(spd,0,stab_deccel);
 				if(spd == 0)
 				{
-					state = 1;
+					state += 1;
 				}
 			break;
-			case 1:
+			case 2:
 				spd = goto_value(spd,stab_spd_final,stab_accel);
 			break;
 		}

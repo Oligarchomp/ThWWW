@@ -6,9 +6,9 @@ if(global.gp_active) and(spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			var bubble_nbr = 11;
+			var bubble_nbr = 12;
 			var shoot_wait = 4;
-			var bubble_spd = 1.8;
+			var bubble_spd = 2;
 			var step1_angle_spd = 4;
 			var step2_angle_spd = 0.5;
 			
@@ -17,9 +17,9 @@ if(global.gp_active) and(spell_wait == 0)
 			var angle_max = 80;
 		break;
 		case 1:
-			var bubble_nbr = 16;
+			var bubble_nbr = 17;
 			var shoot_wait = 3;
-			var bubble_spd = 2.5;
+			var bubble_spd = 3;
 			var step1_angle_spd = 4;
 			var step2_angle_spd = 1;
 			
@@ -30,7 +30,7 @@ if(global.gp_active) and(spell_wait == 0)
 		case 2:
 			var bubble_nbr = 20;
 			var shoot_wait = 3;
-			var bubble_spd = 3.6;
+			var bubble_spd = 3.9;
 			var step1_angle_spd = 7;
 			var step2_angle_spd = 2;
 			

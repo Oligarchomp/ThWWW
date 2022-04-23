@@ -10,4 +10,5 @@ spell_set_time(30,false,80)
 
 move_time_ref = 0;
 
+attack_step = 0;
 

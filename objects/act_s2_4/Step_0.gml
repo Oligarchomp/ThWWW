@@ -13,7 +13,8 @@ if(global.gp_active)
 			
 			var tri_spd = 1.5;
 			var tri_dist = 2;
-			var tri_div = 20;
+			var tri_div = 8;
+			var tri_length = 32;
 		break;
 		case 1:
 			var aim_spd_shoot = 6;
@@ -24,6 +25,7 @@ if(global.gp_active)
 			var tri_spd = 2;
 			var tri_dist = 2;
 			var tri_div = 6;
+			var tri_length = 40;
 		break;
 		case 2:
 			var aim_spd_shoot = 7;
@@ -34,6 +36,7 @@ if(global.gp_active)
 			var tri_spd = 2;
 			var tri_dist = 2;
 			var tri_div = 4;
+			var tri_length = 40;
 		break;
 		case 3:
 			var aim_spd_shoot = 8;
@@ -43,6 +46,7 @@ if(global.gp_active)
 			var tri_spd = 2;
 			var tri_dist = 2;
 			var tri_div = 3;
+			var tri_length = 40;
 		break;
 	}
 	
@@ -105,7 +109,7 @@ if(global.gp_active)
 				}
 			break;
 			case 1://shoot
-				if(state_time < 40)
+				if(state_time < tri_length)
 				{
 					if(state_time % tri_div == 0)
 					{

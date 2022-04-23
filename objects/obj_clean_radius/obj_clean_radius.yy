@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_circle_big",
+    "path": "sprites/spr_circle_big/spr_circle_big.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

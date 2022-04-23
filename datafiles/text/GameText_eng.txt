@@ -703,7 +703,7 @@ diag_s7_m37 = You don't actually want me to do it, right?
 
 diag_s7_s1 = Hey Miss Sanae, it's not raining anymore! So, what I wanted to tell you was...
 diag_s7_s2 = You again? I'm tired of you taunting me with my fan, just give it back to me already! It was my favourite!
-diag_s7_s3 = Don't try to flatter me! This time, you ARE going to listen to what I have to say! >:(
+diag_s7_s3 = Flattering me won't change a thing! This time, you ARE going to listen to what I have to say! >:(
 diag_s7_s4 = I have no idea of what I am doing. Is that bubble god really around here?
 diag_s7_s5 = It's not like I can go closer to the barrier, Gensokyo being non-euclidean and stuff. 
 diag_s7_s6 = Gensokyo? Is that the name of this world?

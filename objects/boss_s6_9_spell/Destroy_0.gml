@@ -6,7 +6,7 @@ with(obj_boss_info)
 	instance_destroy()
 }
 
-if(global.game_type = GAME_FULL)
+if(global.game_type == GAME_FULL)
 {
 	with(obj_rain)
 	{

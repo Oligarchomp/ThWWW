@@ -22,7 +22,7 @@ if(global.gp_active)
 			
 			if(step % boss_wait = boss_wait -1)
 			{
-				boss_movement_random(2,2,1);	
+				boss_movement_random(4,50,10);	
 			}
 			
 			if(step % bubble_wait == 0)

@@ -7,7 +7,7 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var shoot_wait = 14;
+			var shoot_wait = 15;
 			
 			var ball_spd = 2;
 			var ball_angle = 90;

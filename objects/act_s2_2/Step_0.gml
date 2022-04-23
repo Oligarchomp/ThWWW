@@ -8,11 +8,11 @@ if(global.gp_active)
 		case 0:
 			//arrow
 			var shoot_lenght = 90;
-			var shoot_wait = 15;
-			var shoot_nbr = 10;
+			var shoot_wait = 18;
+			var shoot_nbr = 8;
 			//green arrowhead
 			var wall_nbr = 1;
-			var wall_ring = shoot_nbr / 2;
+			var wall_ring = shoot_nbr;
 			var wall_spd = 2.5;
 			
 			//aim

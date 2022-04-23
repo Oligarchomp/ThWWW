@@ -18,15 +18,15 @@ if(global.gp_active)
 			case 0:
 				var arrow_wait = 1;
 				var arrow_nbr = 1;
-				var arrow_spd_min = 2.5;
-				var arrow_spd_git = 1.3;
+				var arrow_spd_min = 2.6;
+				var arrow_spd_git = 1.4;
 				var arrow_size = 2;
 			break;
 			case 1:
 				var arrow_wait = 1;
 				var arrow_nbr = 2;
-				var arrow_spd_min = 3;
-				var arrow_spd_git = 1.8;
+				var arrow_spd_min = 3.1;
+				var arrow_spd_git = 1.9;
 				var arrow_size = 2;
 			break;
 			case 2:
