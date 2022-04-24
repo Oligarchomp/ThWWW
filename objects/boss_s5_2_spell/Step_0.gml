@@ -66,7 +66,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var aim_dan = DAN_MENTOS;
 			var aim_wait = 6;
-			var aim_spd = 3;
+			var aim_spd = 2.7;
 			var aim_arc = 9;
 			var aim_dist = 18;
 		break;
@@ -88,7 +88,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var aim_dan = DAN_MENTOS;
 			var aim_wait = 5;
-			var aim_spd = 3;
+			var aim_spd = 2.8;
 			var aim_arc = 11;
 			var aim_dist = 15;
 		break;

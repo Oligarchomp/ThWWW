@@ -126,7 +126,6 @@
     {"id":{"name":"obj_agra_flower","path":"objects/obj_agra_flower/obj_agra_flower.yy",},"order":1,},
     {"id":{"name":"transform_3d","path":"scripts/transform_3d/transform_3d.yy",},"order":32,},
     {"id":{"name":"obj_enemy4","path":"objects/obj_enemy4/obj_enemy4.yy",},"order":3,},
-    {"id":{"name":"spr_grass","path":"sprites/spr_grass/spr_grass.yy",},"order":0,},
     {"id":{"name":"obj_controle","path":"objects/obj_controle/obj_controle.yy",},"order":8,},
     {"id":{"name":"spr_pellet","path":"sprites/spr_pellet/spr_pellet.yy",},"order":12,},
     {"id":{"name":"obj_player_grabbox","path":"objects/obj_player_grabbox/obj_player_grabbox.yy",},"order":8,},

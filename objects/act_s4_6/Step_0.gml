@@ -25,7 +25,7 @@ if(global.gp_active)
 		case 2:
 			var shot_wait = 5;
 			var shot_spd_shoot = 7;
-			var shot_spd_final = 5.2;
+			var shot_spd_final = 5;
 			var shot_deccel = 0.2;
 			var shot_accel = 0.1;
 			var shot_ring = 32;

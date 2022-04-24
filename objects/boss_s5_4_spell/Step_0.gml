@@ -104,6 +104,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var stab_spd_max = 4;
 			
 			var wait_end = 50;
+			
+			var charge_wait = 45;
 		break;
 	}
 	var swipe_spd = 32;
@@ -176,7 +178,6 @@ if(global.gp_active) and (spell_wait == 0)
 			}
 		break;
 		case 5:
-			var charge_wait = 44;
 			if(state_time < charge_wait * 3)
 			{
 				if(state_time < charge_wait * 2)
