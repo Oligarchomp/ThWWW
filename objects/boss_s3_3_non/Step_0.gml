@@ -25,8 +25,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var wait_wave = 40;
 		break;
 		case 2:
-			var aim_spd_max = 3.1;
-			var aim_spd_min = 2.4;
+			var aim_spd_max = 3.2;
+			var aim_spd_min = 2.7;
 			var aim_row = 3;
 			var aim_wait = 2;
 			var aim_arc = 7;

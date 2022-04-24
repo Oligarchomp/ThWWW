@@ -6,17 +6,17 @@ if(global.gp_active)
 	{
 		case 0:
 			var ball_wait = 22;
-			var ball_spd = 2;
+			var ball_spd = 1.9;
 			var ball_ring = 20;
 			
 			var bubble_wait = 30;
-			var bubble_spd = 2.5;
+			var bubble_spd = 2;
 			var bubble_ring = 8;
 			var bubble_angle_plus = 13;
 			
 			var mentos_ring = 12;
 			var mentos_wait = 25;
-			var mentos_spd = 3;
+			var mentos_spd = 2.5;
 			var mentos_angle_plus = -6.7;
 		break;
 		case 1:
@@ -25,13 +25,13 @@ if(global.gp_active)
 			var ball_ring = 27;
 			
 			var bubble_wait = 20;
-			var bubble_spd = 3.3;
+			var bubble_spd = 2.8;
 			var bubble_ring = 10;
 			var bubble_angle_plus = 10.5;
 			
 			var mentos_ring = 18;
 			var mentos_wait = 17;
-			var mentos_spd = 3.7;
+			var mentos_spd = 3.2;
 			var mentos_angle_plus = -6.7;
 		break;
 		case 2:
@@ -40,13 +40,13 @@ if(global.gp_active)
 			var ball_ring = 30;
 			
 			var bubble_wait = 20;
-			var bubble_spd = 3.5;
+			var bubble_spd = 3.1;
 			var bubble_ring = 12;
 			var bubble_angle_plus = 7.7;
 			
 			var mentos_ring = 20;
 			var mentos_wait = 16;
-			var mentos_spd = 4;
+			var mentos_spd = 3.6;
 			var mentos_angle_plus = -5.7;
 		case 3:
 			var ball_wait = 10;

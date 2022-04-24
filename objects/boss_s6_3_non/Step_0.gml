@@ -40,11 +40,11 @@ if(global.gp_active)
 					var mentos_ring = 4;
 					var mentos_spd_min = 4;
 					var mentos_spd_max = 5;
-					var mentos_angle_plus = 360 / mentos_ring / 6;
+					var mentos_angle_plus = 360 / mentos_ring / 7;
 					
 					var spam_bubble = 6;
-					var spam_mentos = 12;
-					var spam_ball = 23;
+					var spam_mentos = 14;
+					var spam_ball = 25;
 					
 					var spam_ring = 5;
 					
@@ -61,11 +61,11 @@ if(global.gp_active)
 					var mentos_ring = 4;
 					var mentos_spd_min = 4.5;
 					var mentos_spd_max = 5.5;
-					var mentos_angle_plus = 360 / mentos_ring / 8;
+					var mentos_angle_plus = 360 / mentos_ring / 9;
 					
 					var spam_bubble = 8;
-					var spam_mentos = 16;
-					var spam_ball = 29;
+					var spam_mentos = 17;
+					var spam_ball = 31;
 					
 					var spam_ring = 5;
 					
@@ -84,9 +84,9 @@ if(global.gp_active)
 					var mentos_spd_max = 6;
 					var mentos_angle_plus = 360 / mentos_ring / 10;
 					
-					var spam_bubble = 9; // 50
-					var spam_mentos = 20; // 100
-					var spam_ball = 36; // 180
+					var spam_bubble = 9; 
+					var spam_mentos = 20; 
+					var spam_ball = 36;
 					
 					var spam_ring = 5;
 					

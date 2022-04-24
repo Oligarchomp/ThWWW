@@ -5,7 +5,7 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			var familiar_wait = 90;
+			var familiar_wait = 85;
 			var familiar_spd = 3;
 			var familiar_nbr = 6;
 			
@@ -16,14 +16,14 @@ if(global.gp_active) and (spell_wait == 0)
 			var bean_spd_shot = 5;
 			var bean_angle_git = 5;
 			var bean_spd_final = 3;
-			var bean_wait = 50;
+			var bean_wait = 38;
 			var bean_ring = 20;
 			
 			var revenge_spd = 1.8;
-			var revenge_nbr = 8;
+			var revenge_nbr = 9;
 		break;
 		case 1:
-			var familiar_wait = 80;
+			var familiar_wait = 70;
 			var familiar_spd = 3;
 			var familiar_nbr = 8;
 			
@@ -34,14 +34,14 @@ if(global.gp_active) and (spell_wait == 0)
 			var bean_spd_shot = 5;
 			var bean_angle_git = 5;
 			var bean_spd_final = 3;
-			var bean_wait = 35;
+			var bean_wait = 28;
 			var bean_ring = 22;
 			
 			var revenge_spd = 2;
-			var revenge_nbr = 13;
+			var revenge_nbr = 16;
 		break;
 		case 2:
-			var familiar_wait = 66;
+			var familiar_wait = 60;
 			var familiar_spd = 3;
 			var familiar_nbr = 8;
 			
@@ -52,11 +52,11 @@ if(global.gp_active) and (spell_wait == 0)
 			var bean_spd_shot = 5;
 			var bean_angle_git = 5;
 			var bean_spd_final = 3.5;
-			var bean_wait = 24;
+			var bean_wait = 22;
 			var bean_ring = 30;
 			
 			var revenge_spd = 2;
-			var revenge_nbr = 16;
+			var revenge_nbr = 20;
 		break;
 		case 3:
 			var familiar_wait = 55;

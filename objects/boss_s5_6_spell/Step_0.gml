@@ -18,7 +18,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var fill_ring = 8;
 			var fill_spd = 2;
-			var fill_wait = 45;
+			var fill_wait = 44;
 			
 			var wave_wait = 150;
 		break;
@@ -30,13 +30,13 @@ if(global.gp_active) and (spell_wait == 0)
 			var arrow_size = 5;
 			var arrow_spd = 4;
 			
-			var ball_nbr = 9;
+			var ball_nbr = 13;
 			var ball_spd = 0.9;
 			var ball_accel = 0.03;
 			
-			var fill_ring = 12;
+			var fill_ring = 15;
 			var fill_spd = 2;
-			var fill_wait = 37;
+			var fill_wait = 36;
 			
 			var wave_wait = 150;
 		break;
@@ -48,11 +48,11 @@ if(global.gp_active) and (spell_wait == 0)
 			var arrow_size = 5;
 			var arrow_spd = 5;
 			
-			var ball_nbr = 16;
+			var ball_nbr = 18;
 			var ball_spd = 1;
 			var ball_accel = 0.03;
 			
-			var fill_ring = 16;
+			var fill_ring = 19;
 			var fill_spd = 2;
 			var fill_wait = 34;
 			
@@ -66,11 +66,11 @@ if(global.gp_active) and (spell_wait == 0)
 			var arrow_size = 5;
 			var arrow_spd = 5;
 			
-			var ball_nbr = 21;
+			var ball_nbr = 22;
 			var ball_spd = 1;
 			var ball_accel = 0.03;
 			
-			var fill_ring = 23;
+			var fill_ring = 24;
 			var fill_spd = 2;
 			var fill_wait = 30;
 			

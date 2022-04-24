@@ -53,9 +53,9 @@ if(global.gp_active) and (spell_wait == 0)
 			var fire_wait = 2;
 			var fire_lenght = 180;
 			
-			var ring_nbr = 18;
+			var ring_nbr = 19;
 			var ring_spd = 2;
-			var ring_wait = 52;
+			var ring_wait = 51;
 			
 			var arrow_wait = 36;
 			var arrow_arc = 7;
@@ -83,14 +83,14 @@ if(global.gp_active) and (spell_wait == 0)
 			var fire_wait = 2;
 			var fire_lenght = 180;
 			
-			var ring_nbr = 21;
+			var ring_nbr = 24;
 			var ring_spd = 2;
-			var ring_wait = 48;
+			var ring_wait = 46;
 			
-			var arrow_wait = 32;
+			var arrow_wait = 31;
 			var arrow_arc = 9;
 			var arrow_spd = 5;
-			var arrow_dist = 20;
+			var arrow_dist = 19;
 			var arrow_lenght = 100;
 			var arrow_size = 2;
 		break;
@@ -113,7 +113,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var fire_wait = 2;
 			var fire_lenght = 180;
 			
-			var ring_nbr = 26;
+			var ring_nbr = 28;
 			var ring_spd = 2;
 			var ring_wait = 42;
 			

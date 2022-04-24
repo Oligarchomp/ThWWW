@@ -6,6 +6,11 @@ with(obj_boss_info)
 	instance_destroy()
 }
 
+clear_charge();
+// Inherit the parent event
+event_inherited();
+
+
 if(global.game_type == GAME_FULL)
 {
 	with(obj_rain)
@@ -13,8 +18,4 @@ if(global.game_type == GAME_FULL)
 		instance_destroy();	
 	}
 }
-
-clear_charge();
-// Inherit the parent event
-event_inherited();
 

@@ -24,7 +24,7 @@ if(global.gp_active)
 				break;
 				case 1:
 					var knife_row = 5;
-					var knife_ring = 18;
+					var knife_ring = 19;
 					var knife_size = 2;
 					var knife_dist = 60;
 					var knife_spd = 3.4;
@@ -36,7 +36,7 @@ if(global.gp_active)
 				break;
 				case 2:
 					var knife_row = 5;
-					var knife_ring = 24;
+					var knife_ring = 26;
 					var knife_size = 2;
 					var knife_dist = 60;
 					var knife_spd = 3.5;

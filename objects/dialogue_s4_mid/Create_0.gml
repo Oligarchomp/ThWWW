@@ -17,8 +17,8 @@ switch(global.player_chosen)
 	case P_REIMU:
 		boss_step = 0;
 		title_step = 1;
-		set_dialogue(spr_reimu_art,0,false,spr_nothing,0,false,get_text("diag_s4_r1"),90);
-		set_dialogue(spr_reimu_art,0,false,spr_iku_art,2,true,get_text("diag_s4_r2"),130);
+		set_dialogue(spr_reimu_art,5,false,spr_nothing,0,false,get_text("diag_s4_r1"),90);
+		set_dialogue(spr_reimu_art,5,false,spr_iku_art,2,true,get_text("diag_s4_r2"),130);
 		set_dialogue(spr_reimu_art,1,true,spr_iku_art,2,false,get_text("diag_s4_r3"),130);
 		set_dialogue(spr_reimu_art,2,false,spr_iku_art,1,true,get_text("diag_s4_r4"),120);
 	break;

@@ -40,7 +40,7 @@ if(global.gp_active)
 			var bubble_open = 4;
 			
 			var ring_wait = 32;
-			var ring_nbr = 15;
+			var ring_nbr = 16;
 			var ring_spd_min = 4;
 			var ring_spd_max = 6;
 			var ring_spd_div = 2;

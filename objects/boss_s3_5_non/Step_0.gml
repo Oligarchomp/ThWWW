@@ -34,10 +34,10 @@ if(global.gp_active)
 					var arrow_dist = 180 / arrow_nbr / 4 ;
 				break;
 				case 2:
-					var bubble_nbr = 20;
+					var bubble_nbr = 21;
 					var bubble_spd = 3;
 	
-					var bubble_wait = 35;
+					var bubble_wait = 34;
 			
 					var arrow_nbr = 10;
 					var arrow_spd = 4.2;

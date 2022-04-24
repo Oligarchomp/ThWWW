@@ -52,17 +52,17 @@ if(global.gp_active) and (spell_wait == 0)
 			var im = 5;
 		break;
 		case 2:
-			var fire_ring = 15;
+			var fire_ring = 16;
 			var fire_ring_nbr = 12;
 			var fire_spd_min = 2.4;
-			var fire_spd_git = 2.8;
+			var fire_spd_git = 2.7;
 			
 			var rock_nbr = 8;
 			var rock_wait_aim = 30;
 			var rock_accel = 0.05;
 			var rock_spd_max = 8;
 			
-			var star_nbr = 32;
+			var star_nbr = 33;
 			var star_spd_shoot = 6;
 			var star_spd_final = 2;
 			

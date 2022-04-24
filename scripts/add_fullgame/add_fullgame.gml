@@ -8,5 +8,5 @@ function add_fullgame(){
 			add_stage_event(act_end_stage,0);
 		}
 	}
-	add_stage_event(act_end,120);
+	add_stage_event(act_end,60);
 }
