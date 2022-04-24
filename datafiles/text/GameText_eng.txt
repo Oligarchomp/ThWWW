@@ -1088,7 +1088,7 @@ com_s7_4 = Some people stays unmoved by the Dreamland, while some other wants to
 com_s7_5 = It's called "Flammarion Engraving" but this isn't actually Flammarion's.$Did the actual author knew about worlds and Reverence, or was it just a lucky close guess?
 com_s7_6 = Here is one of Reverence's composition.$Music is too abstract for me, so that's why I had to ask help to some chosen one that knows how to make music for this game's soundtrack.
 com_s7_7 = All of this fight was really tiresome, so Reverence decided to take a short break.$She locks herself in a bubble and let her familiars do the hard work.
-com_s7_8 = Did you ever wanted to know how it feels like to be a god? Well today is your chance! $Reverence will gladly forces you into her shoes for you to have a better idea on the subject.
+com_s7_8 = Did you ever wanted to know how it feels like to be a god? Well today is your chance! $Reverence will gladly force you into her shoes for you to have a better idea on the subject.
 com_s7_9 = The universe as a pond, a frog resting in its middle.$An epitome of a world.$First Creation, then Expension, and finally Destruction.
 com_s7_10 = God is leaving now.$The show is comming to its end.$Should we call for an encore?
 

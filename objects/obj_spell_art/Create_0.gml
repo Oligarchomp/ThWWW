@@ -28,7 +28,7 @@ switch(user_id)
 		sprite_index = spr_yuuto_art;
 	break;
 	case BOSS_IKU:
-		sprite_index = spr_nothing;
+		sprite_index = global.game_type == GAME_SPELL ? spr_iku_art : spr_nothing;
 	break;
 	case BOSS_SERENE:
 		sprite_index = spr_serene_art;

@@ -24,43 +24,43 @@ if(global.gp_active)
 			var ball_spd = 2.7;
 			var ball_ring = 27;
 			
-			var bubble_wait = 20;
+			var bubble_wait = 22;
 			var bubble_spd = 2.8;
 			var bubble_ring = 10;
 			var bubble_angle_plus = 10.5;
 			
 			var mentos_ring = 18;
-			var mentos_wait = 17;
+			var mentos_wait = 19;
 			var mentos_spd = 3.2;
 			var mentos_angle_plus = -6.7;
 		break;
 		case 2:
 			var ball_wait = 10;
 			var ball_spd = 3;
-			var ball_ring = 30;
+			var ball_ring = 29;
 			
 			var bubble_wait = 20;
-			var bubble_spd = 3.1;
+			var bubble_spd = 3;
 			var bubble_ring = 12;
-			var bubble_angle_plus = 7.7;
+			var bubble_angle_plus = 8.7;
 			
 			var mentos_ring = 20;
-			var mentos_wait = 16;
-			var mentos_spd = 3.6;
-			var mentos_angle_plus = -5.7;
+			var mentos_wait = 17;
+			var mentos_spd = 3.5;
+			var mentos_angle_plus = -5.8;
 		case 3:
 			var ball_wait = 10;
 			var ball_spd = 3;
 			var ball_ring = 32;
 			
 			var bubble_wait = 18;
-			var bubble_spd = 3.5;
+			var bubble_spd = 3.3;
 			var bubble_ring = 14;
 			var bubble_angle_plus = 7.2;
 			
 			var mentos_ring = 22;
 			var mentos_wait = 15;
-			var mentos_spd = 4;
+			var mentos_spd = 3.8;
 			var mentos_angle_plus = -5.5;
 		break;
 	}
