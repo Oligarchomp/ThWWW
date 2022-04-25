@@ -31,8 +31,8 @@ if(global.gp_active) and(spell_wait == 0)
 			var bubble_nbr = 20;
 			var shoot_wait = 3;
 			var bubble_spd = 3.9;
-			var step1_angle_spd = 7;
-			var step2_angle_spd = 2;
+			var step1_angle_spd = 4.5;
+			var step2_angle_spd = 1;
 			
 			var bubble_wait = 30;//must be a multiple of 2
 			var wait_wave = 40;

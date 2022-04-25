@@ -30,7 +30,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var bird_spd_min = 1.9;
 			var bird_spd_git = 0.25;
 			var bird_angle = 80;
-			var bird_open = 7;
+			var bird_open = 6;
 			
 			var wave_lenght = 240;
 			var wave_wait = 320;
@@ -50,7 +50,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var bird_spd_min = 2.2;
 			var bird_spd_git = 0.4;
 			var bird_angle = 80;
-			var bird_open = 7;
+			var bird_open = 6;
 			
 			var wave_lenght = 240;
 			var wave_wait = 320;
@@ -62,15 +62,15 @@ if(global.gp_active) and (spell_wait == 0)
 			var arc_spd_div = 1;
 			var arc_aim_open = 20;
 			
-			var bird_off = 50;
+			var bird_off = 70;
 		break;
 		case 3:
 			var bird_wait = 1;
 			var bird_accel = 0.05;
-			var bird_spd_min = 2.4;
+			var bird_spd_min = 2.3;
 			var bird_spd_git = 0.4;
 			var bird_angle = 80;
-			var bird_open = 7;
+			var bird_open = 6;
 			
 			var wave_lenght = 240;
 			var wave_wait = 320;
@@ -82,7 +82,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var arc_spd_div = 1;
 			var arc_aim_open = 20;
 			
-			var bird_off = 115;
+			var bird_off = 150;
 		break;
 	}
 	

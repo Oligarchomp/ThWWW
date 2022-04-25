@@ -90,7 +90,7 @@ if(global.gp_active) and (spell_wait == 0)
 				state = 2;
 				angle_pale = 90;
 				obj_boss.pos_type = POS_SP;
-				boss_movement_goto(room_width / 2, room_height / 2,8);
+				boss_movement_goto(room_width / 2, room_height / 2,5);
 				var inst = boss_charge(obj_boss.x,obj_boss.y);
 				inst.owner = obj_boss;
 			}

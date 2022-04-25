@@ -11,7 +11,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var spam_grav_max = 1.5;
 			var spam_grav_git = 0.2;
 			var spam_accel = 0.1;
-			var spam_arrow_nbr = 22;
+			var spam_arrow_nbr = 20;
 			var spam_open = 10;
 			
 			var tree_dan = DAN_MENTOS;
@@ -33,7 +33,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var spam_grav_max = 1.75;
 			var spam_grav_git = 0.4;
 			var spam_accel = 0.1;
-			var spam_arrow_nbr = 39;
+			var spam_arrow_nbr = 38;
 			var spam_open = 16;
 			
 			var tree_dan = DAN_MENTOS;
@@ -55,7 +55,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var spam_grav_max = 2;
 			var spam_grav_git = 0.5;
 			var spam_accel = 0.1;
-			var spam_arrow_nbr = 47;
+			var spam_arrow_nbr = 46;
 			var spam_open = 18;
 			
 			var tree_dan = DAN_BUBBLE;
@@ -66,7 +66,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var aim_dan = DAN_MENTOS;
 			var aim_wait = 6;
-			var aim_spd = 2.7;
+			var aim_spd = 2.8;
 			var aim_arc = 9;
 			var aim_dist = 18;
 		break;
@@ -77,7 +77,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var spam_grav_max = 2;
 			var spam_grav_git = 0.5;
 			var spam_accel = 0.1;
-			var spam_arrow_nbr = 54;
+			var spam_arrow_nbr = 52;
 			var spam_open = 20;
 			
 			var tree_dan = DAN_BUBBLE;
@@ -88,7 +88,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var aim_dan = DAN_MENTOS;
 			var aim_wait = 5;
-			var aim_spd = 2.8;
+			var aim_spd = 3;
 			var aim_arc = 11;
 			var aim_dist = 15;
 		break;

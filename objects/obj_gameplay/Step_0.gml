@@ -49,6 +49,13 @@ if(pause_state == 1)
 {
 	if (cursor_lockout == 0)
 	{
+		if(keyboard_check_pressed(ord("R")))
+		{
+			room_transition(room_reload,global.game_type != GAME_SPELL);
+			cursor_lockout = 1000;
+		}
+		
+		
 		if(abs(global.down_pressed - global.up_pressed))
 		{
 		

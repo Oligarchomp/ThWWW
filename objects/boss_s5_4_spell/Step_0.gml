@@ -29,6 +29,8 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var wait_end = 100;
 			
+			var y_min = room_height - 200;
+			
 		break;
 		case 1:
 			var sword_size = 5;
@@ -54,6 +56,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var spin_ring = 6;
 			
 			var wait_end = 75;
+			
+			var y_min = room_height - 140;
 		break;
 		case 2:
 			var sword_size = 5;
@@ -79,15 +83,17 @@ if(global.gp_active) and (spell_wait == 0)
 			var spin_ring = 7;
 			
 			var wait_end = 50;
+			
+			var y_min = room_height;
 		break;
 		case 3:
 			var sword_size = 5;
 			
 			var rice_open = 22;
 			var rice_spd_shoot = 4;
-			var rice_spd_git = 2;
+			var rice_spd_git = 2.5;
 			var rice_spd_div = 2.2;
-			var rice_nbr = 5;
+			var rice_nbr = 4;
 			
 			var sword_wait = 1;
 			var sword_row = 3;
@@ -105,7 +111,9 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var wait_end = 50;
 			
-			var charge_wait = 45;
+			var charge_wait = 44;
+			
+			var y_min = room_height;
 		break;
 	}
 	var swipe_spd = 32;
@@ -255,15 +263,18 @@ if(global.gp_active) and (spell_wait == 0)
 			case 0: //slashes
 				if(boss_spd >= 16)
 				{
-					if(state_time % sword_wait == 0)
+					if(y < y_min)
 					{
-						for(var i = dist * 2 / sword_row; i <= dist * 2; i += dist * 2 / sword_row)
+						if(state_time % sword_wait == 0)
 						{
-							var xx = obj_boss.x + lengthdir_x(i - dist / sword_row,angle)
-							var yy = obj_boss.y + lengthdir_y(i - dist / sword_row,angle)
-							var sw_ang = 999//angle + i + angle_plus;
-							var sw_spd = sword_spd_min + i / sword_i_div;
-							shoot_arc(DAN_ARROW,7,sword_arc,xx,yy,sw_ang,sword_dist,sw_spd,sfx_shot2,6);
+							for(var i = dist * 2 / sword_row; i <= dist * 2; i += dist * 2 / sword_row)
+							{
+								var xx = obj_boss.x + lengthdir_x(i - dist / sword_row,angle)
+								var yy = obj_boss.y + lengthdir_y(i - dist / sword_row,angle)
+								var sw_ang = 999//angle + i + angle_plus;
+								var sw_spd = sword_spd_min + i / sword_i_div;
+								shoot_arc(DAN_ARROW,7,sword_arc,xx,yy,sw_ang,sword_dist,sw_spd,sfx_shot2,6);
+							}
 						}
 					}
 				}
@@ -329,9 +340,10 @@ if(global.gp_active) and (spell_wait == 0)
 				}
 			break;
 		}
+		
 		if(boss_spd >= 16)
 		{
-			for(var i = 0; i < rice_nbr; i += 1)
+			for(var i = 0; i < rice_nbr + (global.difficulty == 3 ? state_time % 2 : 0) ; i += 1)
 			{
 				var ang = 90 - rice_open + rng(rice_open * 2, false,i);
 				var inst = shoot(DAN_RICE,3,x,y,ang,rice_spd_shoot + rng(rice_spd_git,false,i + 2),sfx_shot3,4);

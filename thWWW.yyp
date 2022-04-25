@@ -833,7 +833,6 @@
   "IncludedFiles": [
     {"CopyToMask":-1,"filePath":"datafiles/text","resourceVersion":"1.0","name":"GameText_eng.txt","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"Omake.txt","resourceType":"GMIncludedFile",},
-    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"TEXT_FULL_NOTE.txt","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/text","resourceVersion":"1.0","name":"GameText_j.txt","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/font","resourceVersion":"1.0","name":"MochiyPopOne_Regular.ttf","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/font","resourceVersion":"1.0","name":"umeboshi.ttf","resourceType":"GMIncludedFile",},
