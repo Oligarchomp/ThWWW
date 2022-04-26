@@ -25,12 +25,8 @@ switch(player_id)
 		sprite_index = spr_base_sanae;
 		im_spd = 1;
 	break;
-	case 3: //suika
-		sprite_index = spr_base_suika;
-	break;
 	default://reimu
 		sprite_index = spr_base_reimu;
-		
 	break;
 }
 
