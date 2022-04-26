@@ -22,7 +22,8 @@ if(global.gp_active)
 	wall_plus += vsp;
 	wall_plus %= wall_size;
 	//wall 
-	wall_buff = vertex_create_buffer();
+	//vertex_delete_buffer(wall_buff);
+	//wall_buff = vertex_create_buffer();
 	vertex_begin(wall_buff,vForm)
 		//left
 		vertex_add_wall(wall_buff,x_pos,wall_size + wall_plus,zz,x_pos,wall_plus,zz + ceiling,c_white,1);

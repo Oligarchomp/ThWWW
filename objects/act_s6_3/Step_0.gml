@@ -33,7 +33,7 @@ if(global.gp_active)
 			var bubble_spd_final = 3;
 			var bubble_lenght = 19;
 			
-			var ball_wait = 5;
+			var ball_wait = 4;
 			var ball_start = 30;
 			var ball_spd = 2;
 		break;

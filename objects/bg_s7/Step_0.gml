@@ -10,7 +10,8 @@ if(global.gp_active)
 	roof_plus %= roof_size;
 	
 	//roof 
-	roof_buff = vertex_create_buffer();
+	//vertex_delete_buffer(roof_buff);
+	//roof_buff = vertex_create_buffer();
 	vertex_begin(roof_buff,vForm)
 	//left
 		var x_ref = x - width / 2;

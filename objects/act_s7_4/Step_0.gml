@@ -3,19 +3,18 @@
 if(global.gp_active)
 {
 	
-	var bubble_nbr = 5;
+	var bubble_nbr = 6;
 	var bubble_wait = 6;
 	var bubble_start = 0;
 	var bubble_spd_final = 2.3;
 	var bubble_accel = 0.05;
 	var bubble_spd_div = 1.6;
 	
-	var ball_nbr = 21;
-	var ball_wait = 13;
+	var ball_nbr = 20;
+	var ball_wait = 8;
 	var ball_start = 0;
 	var ball_spd_final = 3.4;
 	var ball_accel = 0.1;
-	var ball_spd_div = 1.6;
 	
 		
 	var pale_y_off = 200;
@@ -80,11 +79,11 @@ if(global.gp_active)
 			{
 				for(var i = 0; i < 360; i += 360 / ball_nbr)
 				{
-					var inst = shoot(DAN_BALL,3,obj_boss.x,obj_boss.y,aim + i,0,sfx_shot2,5);
+					var inst = shoot(DAN_MENTOS,3,obj_boss.x,obj_boss.y,aim + i,0,sfx_shot1,5);
 					inst.spd_to = ball_spd_final;
 					
-					var inst = shoot(DAN_BALL,3,obj_boss.x,obj_boss.y,aim + i + 180 / ball_nbr,0,sfx_shot2,5);
-					inst.spd_to = ball_spd_final / ball_spd_div;
+					//var inst = shoot(DAN_BALL,3,obj_boss.x,obj_boss.y,aim + i + 180 / ball_nbr,0,sfx_shot1,5);
+					//inst.spd_to = ball_spd_final / ball_spd_div;
 				}
 			}
 		}
