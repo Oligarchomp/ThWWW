@@ -31,7 +31,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var aim_nbr_ring = 38;
 			var aim_nbr_row = 1;
 			var aim_spd_min = 2.5;
-			var aim_spd_max = 3.4;
+			var aim_spd_max = 3.2;
 		break;
 		case 2:
 			var claw_final_x_off = 10;
@@ -45,7 +45,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var aim_nbr_ring = 46;
 			var aim_nbr_row = 1;
 			var aim_spd_min = 2.8;
-			var aim_spd_max = 3.5;
+			var aim_spd_max = 3.3;
 		break;
 		case 3:
 			var claw_final_x_off = 10;
@@ -59,7 +59,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var aim_nbr_ring = 55;
 			var aim_nbr_row = 1;
 			var aim_spd_min = 3;
-			var aim_spd_max = 3.7;
+			var aim_spd_max = 3.5;
 		break;
 	}
 	

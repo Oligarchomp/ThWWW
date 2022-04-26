@@ -18,9 +18,9 @@ if(global.gp_active)
 		case 1:
 			var mentos_row = 3;
 			var mentos_spd_min = 2.3;
-			var mentos_spd_max = 3;
+			var mentos_spd_max = 3.7;
 			
-			var pretty_wait = 12;
+			var pretty_wait = 14;
 			var pretty_ring = 12;
 			var pretty_spd = 3;
 			var pretty_div = 2;
@@ -30,9 +30,9 @@ if(global.gp_active)
 			var mentos_spd_min = 2.5;
 			var mentos_spd_max = 5;
 			
-			var pretty_wait = 10;
+			var pretty_wait = 12;
 			var pretty_ring = 18;
-			var pretty_spd = 4;
+			var pretty_spd = 3.7;
 			var pretty_div = 2;
 		break;
 		case 3:

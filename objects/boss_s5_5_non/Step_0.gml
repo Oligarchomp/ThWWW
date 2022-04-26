@@ -76,7 +76,7 @@ if(global.gp_active)
 							inst.image_yscale = knife_size;
 							inst.pos_type = POS_MANUAL;
 							inst.dist = 0;
-							inst.angle_to = aim + i + 220 * dir_act;
+							inst.angle_to = global.rng_patch ? rng(360,false,1) : aim + i + 220 * dir_act;
 							inst.wait = n * knife_wait;
 							inst.dir_dan = dir_act;
 						}

@@ -91,7 +91,7 @@ if(global.gp_active)
 	}
 	
 	var fam_x_dist = 160;
-	var fam_life = 245;
+	var fam_life = 226;
 	var fam_spd_start = 8;
 	var fam_deccel = 0.25;
 	var fam_spd_final = 1.1;

@@ -38,7 +38,7 @@ if(global.gp_active)
 			var row_spd2 = 1.5;
 			var row_dist = 19;
 			
-			var aim_ring = 29;
+			var aim_ring = 28;
 			var aim_spd = 4;
 		break;
 	}

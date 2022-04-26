@@ -10,19 +10,12 @@ if(global.gp_active)
 	var bubble_accel = 0.05;
 	var bubble_spd_div = 1.6;
 	
-	var ball_nbr = 18;
-	var ball_wait = 18;
+	var ball_nbr = 21;
+	var ball_wait = 13;
 	var ball_start = 0;
 	var ball_spd_final = 3.4;
 	var ball_accel = 0.1;
 	var ball_spd_div = 1.6;
-	
-	var aim_wait = 12;
-	var aim_row = 3;
-	var aim_arc = 3;
-	var aim_dist = 30;
-	var aim_spd_min = 1.5;
-	var aim_spd_max = 5.5;
 	
 		
 	var pale_y_off = 200;
@@ -94,12 +87,6 @@ if(global.gp_active)
 					inst.spd_to = ball_spd_final / ball_spd_div;
 				}
 			}
-			
-			if(step % aim_wait == 0)
-			{
-				shoot_arc_row(DAN_ARROWHEAD,1,aim_arc,aim_row,obj_boss.x,obj_boss.y,999,aim_dist,aim_spd_min,aim_spd_max,sfx_shot1,3);
-			}
-			
 		}
 	}
 	
@@ -107,7 +94,6 @@ if(global.gp_active)
 	{
 		wave = -1;
 		state = 2;
-		//boss_movement_goto(room_width / 2, 100,pale_spd);
 		with(obj_boss)
 		{
 			instance_destroy();

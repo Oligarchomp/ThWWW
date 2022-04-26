@@ -31,4 +31,6 @@ dir_act = -1;
 
 boss_sp = 0;
 
-boss_movement_goto(550,obj_boss.y - 50,boss_sp)
+boss_movement_goto(550,obj_boss.y - 50,boss_sp);
+
+angle_shoot = rng(360,false,1);

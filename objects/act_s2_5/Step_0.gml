@@ -72,6 +72,7 @@ if(global.gp_active)
 			{
 				global.boss = BOSS_SERENE;
 				var inst = instance_create_depth(0,0,0,obj_boss);
+				inst.depth -= 1;
 				instance_destroy(obj_boss_indicator);
 				inst.x = x_pos;
 				inst.y = i * crab_dist;

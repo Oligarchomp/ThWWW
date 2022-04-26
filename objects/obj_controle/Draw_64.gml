@@ -11,5 +11,5 @@ if(room != room_credit)
 {
 	draw_set_font(font_replay);
 
-	draw_text(952 - string_width(version),515,version);
+	//draw_text(952 - string_width(version),515,version);
 }

@@ -7,7 +7,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 0:
 			var wood_wait = 46;
 			var wood_nbr = 10;
-			var wood_angle_plus = 25;
+			var wood_angle_plus = -25;
 			var wood_spd = 2;
 			
 			var water_nbr = 18;
@@ -40,7 +40,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 1:
 			var wood_wait = 36;
 			var wood_nbr = 12;
-			var wood_angle_plus = 25;
+			var wood_angle_plus = -25;
 			var wood_spd = 2.4;
 			
 			var water_nbr = 22;
@@ -73,8 +73,8 @@ if(global.gp_active) and (spell_wait == 0)
 		case 2:
 			var wood_wait = 34;
 			var wood_nbr = 14;
-			var wood_angle_plus = 25;
-			var wood_spd = 2.5;
+			var wood_angle_plus = -21;
+			var wood_spd = 2;
 			
 			var water_nbr = 26;
 			var water_y_accel = 0.05;

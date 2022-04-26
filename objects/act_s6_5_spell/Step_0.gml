@@ -18,30 +18,38 @@ if(global.gp_active)
 			case 0:
 				var arrow_wait = 1;
 				var arrow_nbr = 1;
-				var arrow_spd_min = 2.6;
-				var arrow_spd_git = 1.4;
+				var arrow_spd_min = 3.2;
+				var arrow_spd_git = 0;
 				var arrow_size = 2;
+				
+				var angle_plus = 30;
 			break;
 			case 1:
 				var arrow_wait = 1;
 				var arrow_nbr = 2;
-				var arrow_spd_min = 3.1;
-				var arrow_spd_git = 1.9;
+				var arrow_spd_min = 3.8;
+				var arrow_spd_git = 0;
 				var arrow_size = 2;
+				
+				var angle_plus = 20;
 			break;
 			case 2:
 				var arrow_wait = 1;
 				var arrow_nbr = 3;
-				var arrow_spd_min = 3.3;
-				var arrow_spd_git = 2;
+				var arrow_spd_min = 4;
+				var arrow_spd_git = 0;
 				var arrow_size = 2;
+				
+				var angle_plus = 15.5;
 			break;
 			case 3:
 				var arrow_wait = 1;
 				var arrow_nbr = 4;
-				var arrow_spd_min = 3.5;
-				var arrow_spd_git = 2;
+				var arrow_spd_min = 4.3;
+				var arrow_spd_git = 0;
 				var arrow_size = 2;
+				
+				var angle_plus = 15;
 			break;
 		}
 		
@@ -63,6 +71,7 @@ if(global.gp_active)
 						state = 0;
 						dir_act *= -1;
 						obj_boss.dir = -obj_boss.dir_max;
+						angle_shoot = rng(360,false,1);
 					}
 				}
 				else
@@ -72,6 +81,7 @@ if(global.gp_active)
 						state = 0;
 						dir_act *= -1;
 						obj_boss.dir = obj_boss.dir_max;
+						angle_shoot = rng(360,false,1);
 					}
 				}
 			break;
@@ -79,7 +89,7 @@ if(global.gp_active)
 	
 		if(step % arrow_wait == 0)
 		{
-			var aim = rng(360,false,1);
+			var aim = angle_shoot;
 			for (var i = 0; i < arrow_nbr; i += 1)
 			{
 				var sp = arrow_spd_min + rng(arrow_spd_git,false,i);
@@ -91,6 +101,8 @@ if(global.gp_active)
 				inst.y_offscreen *= arrow_size;
 			}
 		}
+		
+		angle_shoot += -dir_act * angle_plus;
 	}
 	
 }
