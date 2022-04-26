@@ -52,17 +52,6 @@ switch(player_id)
 		
 		hb_scale = 1;
 	break;
-	case P_SUIKA: 
-		idle_spr = spr_suika_idle;
-		left_spr = spr_suika_left;
-		right_spr = spr_suika_right;
-
-		// Stats
-		focus_spd = 2.5;
-		unfocus_spd = 4.8;
-		
-		deathbomb_time = 10;
-	break;
 	default: //REIMU
 		idle_spr = spr_reimu_idle;
 		left_spr = spr_reimu_left;

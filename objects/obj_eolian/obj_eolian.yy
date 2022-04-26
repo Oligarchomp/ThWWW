@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_eolian",
-    "path": "sprites/spr_eolian/spr_eolian.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

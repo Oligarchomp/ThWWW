@@ -37,12 +37,10 @@ switch(boss_id)
 {
 	case BOSS_APPLE:
 		idle_spr = spr_apple_idle;
-		attack_spr = spr_apple_attack;
 		move_spr = spr_apple_move;
 	break;
 	case BOSS_SERENE:
 		idle_spr = spr_serene_idle;
-		attack_spr = spr_apple_attack;
 		move_spr = spr_serene_move;
 		x = 520;
 		y = 90;

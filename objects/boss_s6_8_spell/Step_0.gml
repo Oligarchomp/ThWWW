@@ -25,11 +25,11 @@ if(global.gp_active) and (spell_wait == 0)
 			var anchor_spd = 6;
 			
 			var mentos_wait = 4;
-			var mentos_spd_final = 1.5;
+			var mentos_spd_final = 1.4;
 			var mentos_accel = 0.01;
 			var mentos_angle_plus = 30;
 			
-			var arc_nbr = 9;
+			var arc_nbr = 8;
 			var arc_row = 2;
 			var arc_spd_min = 0.7;
 			var arc_spd_max = 1.6;
@@ -41,14 +41,14 @@ if(global.gp_active) and (spell_wait == 0)
 			var anchor_spd = 6;
 			
 			var mentos_wait = 4;
-			var mentos_spd_final = 1.6;
-			var mentos_accel = 0.013;
+			var mentos_spd_final = 1.5;
+			var mentos_accel = 0.011;
 			var mentos_angle_plus = 25;
 			
-			var arc_nbr = 11;
+			var arc_nbr = 10;
 			var arc_row = 2;
-			var arc_spd_min = 0.8;
-			var arc_spd_max = 1.7;
+			var arc_spd_min = 0.7;
+			var arc_spd_max = 1.6;
 			
 			var wave_wait = 160;
 		break;
@@ -57,15 +57,15 @@ if(global.gp_active) and (spell_wait == 0)
 			var anchor_spd = 6;
 			
 			var mentos_wait = 4;
-			var mentos_spd_final = 1.7;
+			var mentos_spd_final = 1.6;
 			var mentos_accel = 0.013;
 			var mentos_angle_plus = 20;
 		
 			
 			var arc_nbr = 12;
 			var arc_row = 2;
-			var arc_spd_min = 0.8;
-			var arc_spd_max = 1.7;
+			var arc_spd_min = 0.7;
+			var arc_spd_max = 1.6;
 			
 			var wave_wait = 150;
 		break;
@@ -169,13 +169,13 @@ if(global.gp_active) and (spell_wait == 0)
 				if(collision_rectangle(x - sq + hsp,y - sq ,x + sq + hsp,y + sq,obj_wall,false,true))
 				{
 					found_wall = true;
-					screen_shake(floor(spd / 1.3),0);
+					screen_shake(3,0);
 				}
 				
 				if (collision_rectangle(x - sq,y - sq + vsp,x + sq,y + sq + vsp,obj_wall,false,true))
 				{
 					found_wall = true;
-					screen_shake(0,floor(spd / 1.3));
+					screen_shake(0,3);
 				}
 				
 				
