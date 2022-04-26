@@ -7,11 +7,11 @@ if(global.gp_active)
 	{
 		case 0:
 			var row_arc = 3;
-			var row_spd1 = 2.2;
+			var row_spd1 = 2;
 			var row_spd2 = 1.5;
-			var row_dist = 38;
+			var row_dist = 40;
 			
-			var aim_ring = 7;
+			var aim_ring = 6;
 			var aim_spd = 2.2;
 		break;
 		case 1:

@@ -19,7 +19,7 @@ if(global.gp_active)
 			var row_spd_shot_min = 1.5;
 			var row_spd_final = 3;
 			var row_accel = 0.08;
-			var row_ring = 4;
+			var row_ring = 3;
 		break;
 		case 1:
 			var card_ring = 9;

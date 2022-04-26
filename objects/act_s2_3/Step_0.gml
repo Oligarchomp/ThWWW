@@ -19,7 +19,6 @@ if(global.gp_active)
 			var mentos_row = 3;
 			var mentos_spd_min = 2.3;
 			var mentos_spd_max = 3.7;
-			
 			var pretty_wait = 14;
 			var pretty_ring = 12;
 			var pretty_spd = 3;

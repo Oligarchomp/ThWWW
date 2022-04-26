@@ -12,4 +12,4 @@ spell_set_time(35,false,90)
 
 
 
-angle_shoot = 0;
+angle_shoot = 1000;

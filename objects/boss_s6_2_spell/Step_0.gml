@@ -22,8 +22,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var tray_wait = 3;
 			var tray_row = 4;
 			var tray_spin = 30;
-			var tray_spd_min = 2;
-			var tray_spd_max = 4;
+			var tray_spd_min = 1.6;
+			var tray_spd_max = 3.2;
 			var tray_frame_accel = 90;
 			
 			var wave_wait = 60;
@@ -46,8 +46,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var tray_wait = 2;
 			var tray_row = 4;
 			var tray_spin = 24;
-			var tray_spd_min = 2;
-			var tray_spd_max = 4;
+			var tray_spd_min = 1.9;
+			var tray_spd_max = 3.8;
 			var tray_frame_accel = 90;
 			
 			var wave_wait = 50;

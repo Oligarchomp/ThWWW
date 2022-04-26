@@ -15,8 +15,8 @@ if(global.gp_active)
 				var bubble_nbr = 9;
 				var bubble_grav_max = 7;
 				
-				var arrow_row = 1;
-				var arrow_dist = 20;
+				var arrow_row = 3;
+				var arrow_dist = 46;
 				var arrow_angle = 999;
 				var arrow_spd = 3;
 				var arrow_grav = 0;

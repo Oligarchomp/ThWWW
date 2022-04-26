@@ -6,13 +6,13 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var mentos_arc = 5;
+			var mentos_arc = 7;
 			var mentos_row = 4;
 			var mentos_spd_min = 2;
-			var mentos_spd_max = 4;
-			var mentos_dist = 36;
+			var mentos_spd_max = 4.5;
+			var mentos_dist = 29;
 			
-			var aim_ring = 5;
+			var aim_ring = 8;
 			var aim_row = 3;
 			var aim_spd_min = 1;
 			var aim_spd_max = 5;

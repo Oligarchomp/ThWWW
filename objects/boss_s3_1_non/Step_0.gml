@@ -9,8 +9,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var fan_shoot_wait = 15;
 			var fan_nbr = 3;
 			var fan_dist = 9;
-			var fan_spd = 2.6;
-			var fan_plus = 9;
+			var fan_spd = 2.5;
+			var fan_plus = 10;
 			var boss_wait = 180;
 		break;
 		case 1:

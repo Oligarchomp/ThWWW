@@ -32,7 +32,8 @@ if(global.gp_active)
 	
 	var fairy_life = 38;
 	var fairy_spd = 3;
-	var fam_wait = 25;
+	var fam_wait = 28;
+	var fam_nbr = 4;
 	
 	var fam_life = 15;
 	var fam_lenght = 190;
@@ -43,6 +44,7 @@ if(global.gp_active)
 		{
 			var inst = create_enemy(EN_BLUE,room_width / 2 - 220 * act_dir,50 + step % 166,fairy_life,2,fairy_spd,90 - 90 * act_dir);
 			inst.item_nbr = 4;
+			inst.fam_spawn = 0;
 			act_dir *= -1;
 		}
 	}
@@ -53,12 +55,17 @@ if(global.gp_active)
 	{
 		if(step % fam_wait == fam_wait - 1)
 		{	
-			if(x > 0) and ( x < room_width)
+			if(fam_spawn < fam_nbr)
 			{
-				play_sound(sfx_familiar_spawn,1,false);
-				var inst = create_enemy(EN_FAMILIAR,x,y,fam_life,1,0,0);
-				inst.can_revenge = false;
-				inst.item = 2;
+				if(x > 0) and ( x < room_width)
+				{
+					play_sound(sfx_familiar_spawn,1,false);
+					var inst = create_enemy(EN_FAMILIAR,x,y,fam_life,1,0,0);
+					inst.can_revenge = false;
+					inst.item = 2;
+				}
+				
+				fam_spawn += 1;
 			}
 		}
 	}

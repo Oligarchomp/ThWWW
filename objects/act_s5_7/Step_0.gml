@@ -6,7 +6,7 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var ring_wait = 80;
+			var ring_wait = 91;
 			var ring_nbr = 12;
 			var ring_spd_shoot = 8;
 			var ring_start = 20;

@@ -8,7 +8,7 @@ if(global.gp_active) and(spell_wait == 0)
 		case 0:
 			var bubble_nbr = 12;
 			var shoot_wait = 4;
-			var bubble_spd = 2;
+			var bubble_spd = 2.5;
 			var step1_angle_spd = 4;
 			var step2_angle_spd = 0.5;
 			
@@ -21,7 +21,7 @@ if(global.gp_active) and(spell_wait == 0)
 			var shoot_wait = 3;
 			var bubble_spd = 3;
 			var step1_angle_spd = 4;
-			var step2_angle_spd = 1;
+			var step2_angle_spd = 0.7;
 			
 			var bubble_wait = 30;//must be a multiple of 2
 			var wait_wave = 50;
@@ -32,7 +32,7 @@ if(global.gp_active) and(spell_wait == 0)
 			var shoot_wait = 3;
 			var bubble_spd = 3.9;
 			var step1_angle_spd = 4.5;
-			var step2_angle_spd = 1;
+			var step2_angle_spd = 0.8;
 			
 			var bubble_wait = 30;//must be a multiple of 2
 			var wait_wave = 40;

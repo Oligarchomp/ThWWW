@@ -6,8 +6,8 @@ if(global.gp_active) and(spell_wait == 0)
 	{
 		case 0:
 			var way_off = 112;
-			var way_lenght = 72; // actually half the lengh
-			var way_spd = 72;
+			var way_lenght = 68; // actually half the lengh
+			var way_spd = 68;
 			
 			var knife_nbr = 0;
 			var knife_wait = 45;
@@ -17,7 +17,7 @@ if(global.gp_active) and(spell_wait == 0)
 		case 1:
 			var way_off = 120;
 			var way_lenght = 65; // actually half the lengh
-			var way_spd = 66;
+			var way_spd = 64;
 			
 			var knife_nbr = 4;
 			var knife_wait = 45;

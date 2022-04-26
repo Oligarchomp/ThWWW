@@ -14,9 +14,9 @@ if(global.gp_active)
 			var card_spd_final = 2.8;
 			
 			var row_arc = 3;
-			var row_spd1 = 2.2;
+			var row_spd1 = 2;
 			var row_spd2 = 1.5;
-			var row_dist = 38;
+			var row_dist = 40;
 		break;
 		case 1:
 			var card_ring = 9;
