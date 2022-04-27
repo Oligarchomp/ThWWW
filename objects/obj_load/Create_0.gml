@@ -289,6 +289,27 @@ global.play_type = PLAY_MANUAL;
 #macro FONT_PAUSE 3
 #macro FONT_GAME_INFO 4
 
+//define music
+
+#macro MUS_CONTINUE -1
+#macro MUS_MAIN 0
+#macro MUS_S1 1
+#macro MUS_S2 2
+#macro MUS_S3 3
+#macro MUS_S4 4
+#macro MUS_S5 5
+#macro MUS_S6 6
+#macro MUS_S7 7
+#macro MUS_B1 8
+#macro MUS_B2 9
+#macro MUS_B3 10
+#macro MUS_B4 11
+#macro MUS_B5 12
+#macro MUS_B6 13
+#macro MUS_B7 14
+#macro MUS_GAMEOVER 15
+#macro MUS_END 16
+#macro MUS_CREDIT 17
 
 
 //define language

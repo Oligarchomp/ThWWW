@@ -2,65 +2,66 @@
 // You can write your code in this editor
 
 
-switch(asset_get_index(audio_get_name(currently_playing)))
+
+switch(last_bgm)
 {
-	case mus_title:
+	case "title":
 		var intro_length = 9.973;
 		var loop_lenght = 74.483;
 	break;
-	case mus_score:
+	case "score":
 		var intro_length = 10.175;
 		var loop_lenght = 40.865;
 	break;
-	case mus_boss1:	
+	case "boss1":	
 		var intro_length = 7.112;
 		var loop_lenght = 119.998;
 	break;
-	case mus_boss2:	
+	case "boss2":	
 		var intro_length = 5.707;
 		var loop_lenght = 67.214;
 	break;
-	case mus_boss3:	
+	case "boss3":	
 		var intro_length = 5.488;
 		var loop_lenght = 79.059;
 	break;
-	case mus_boss6:	
+	case "boss6":	
 		var intro_length = 40.452;
 		var loop_lenght = 89.600;
 	break;
-	case mus_boss7:	
+	case "boss7":	
 		var intro_length = 11.354;
 		var loop_lenght = 174.683;
 	break;
-	case mus_stage2:
+	case "stage2":
 		var intro_length = 15.58;
 		var loop_lenght = 112.21;
 	break;
-	case mus_stage3:
+	case "stage3":
 		var intro_length = 13.246;
 		var loop_lenght = 113.255;
 	break;
-	case mus_stage4:
+	case "stage4":
 		var intro_length = 11.56;
 		var loop_lenght = 170.60;
 	break;
-	case mus_stage5:
+	case "stage5":
 		var intro_length = 9.082;
 		var loop_lenght = 149.953;
 	break;
-	case mus_stage6:
+	case "stage6":
 		var intro_length = 3.849;
 		var loop_lenght = 76.8;
 	break;
-	case mus_stage7:
+	case "stage7":
 		var intro_length = 16.187;
 		var loop_lenght = 217.076;
 	break;
-	case mus_end:
+	case "end":
 		var intro_length = 4.3;
 		var loop_lenght = 49.143;
 	break;
-	case mus_credit:
+	case "credit":
 		var intro_length = 14.987;
 		var loop_lenght = 44.646;
 	break;
@@ -98,11 +99,27 @@ if(update)
 	update = false;
 	audio_stop_sound(currently_playing);
 	
-	if(bgm != noone)
+	if(bgm != "")
 	{
-		if(bgm != -1)
+		if(bgm != "continue")
 		{
-			currently_playing = audio_play_sound_on(global.bgm_emitter,bgm,true,1);
+			if(music_buffer != -1)
+			{
+				audio_free_buffer_sound(music_buffer);
+			}
+			
+			buffer_load_ext(buffer,working_directory + "/music/" + bgm + ".wav",0)
+			buffer_seek(buffer,buffer_seek_start,40);
+			var size = buffer_read(buffer,buffer_u32);
+			
+			buffer_seek(buffer,buffer_seek_start,24);
+			var sampling = buffer_read(buffer,buffer_u32);
+			
+			music_buffer = audio_create_buffer_sound(buffer,buffer_s16,sampling,44,size,audio_stereo);
+			
+			last_bgm = bgm;
+			
+			currently_playing = audio_play_sound_on(global.bgm_emitter,music_buffer,true,1);
 		}
 		else // continuing song after gameover
 		{

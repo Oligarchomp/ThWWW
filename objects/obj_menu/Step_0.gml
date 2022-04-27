@@ -9,7 +9,7 @@ if(instance_exists(obj_intro))
 
 if(need_music_time == 0)
 {
-	set_bgm(mus_title);	
+	set_bgm("title");	
 }
 
 need_music_time = goto_value(need_music_time,-1,1);

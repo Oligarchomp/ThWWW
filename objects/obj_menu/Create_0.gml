@@ -16,7 +16,7 @@ else
 {
 	if(!audio_is_playing(mus_title))
 	{
-		set_bgm(mus_title);
+		set_bgm("title");
 	}
 }
 need_music_time = -1;
@@ -1210,109 +1210,109 @@ menu =
 				title : get_text("mus_room_title"),
 				comment : get_text("mus_com_title"),
 				action : MENU_MUSIC,
-				music : mus_title,
+				music : "title",
 			},
 			{
 				title : get_text("mus_room_s1"),
 				comment : get_text("mus_com_s1"),
 				action : MENU_MUSIC,
-				music : mus_stage1,
+				music : "stage1",
 			},
 			{
 				title : get_text("mus_room_b1"),
 				comment : get_text("mus_com_b1"),
 				action : MENU_MUSIC,
-				music : mus_boss1,
+				music : "boss1",
 			},
 			{
 				title : get_text("mus_room_s2"),
 				comment : get_text("mus_com_s2"),
 				action : MENU_MUSIC,
-				music : mus_stage2,
+				music : "stage2",
 			},
 			{
 				title : get_text("mus_room_b2"),
 				comment : get_text("mus_com_b2"),
 				action : MENU_MUSIC,
-				music : mus_boss2,
+				music : "boss2",
 			},
 			{
 				title : get_text("mus_room_s3"),
 				comment : get_text("mus_com_s3"),
 				action : MENU_MUSIC,
-				music : mus_stage3,
+				music : "stage3",
 			},
 			{
 				title : get_text("mus_room_b3"),
 				comment : get_text("mus_com_b3"),
 				action : MENU_MUSIC,
-				music : mus_boss3,
+				music : "boss3",
 			},
 			{
 				title : get_text("mus_room_s4"),
 				comment : get_text("mus_com_s4"),
 				action : MENU_MUSIC,
-				music : mus_stage4,
+				music : "stage4",
 			},
 			{
 				title : get_text("mus_room_b4"),
 				comment : get_text("mus_com_b4"),
 				action : MENU_MUSIC,
-				music : mus_boss4,
+				music : "boss4",
 			},
 			{
 				title : get_text("mus_room_s5"),
 				comment : get_text("mus_com_s5"),
 				action : MENU_MUSIC,
-				music : mus_stage5,
+				music : "stage5",
 			},
 			{
 				title : get_text("mus_room_b5"),
 				comment : get_text("mus_com_b5"),
 				action : MENU_MUSIC,
-				music : mus_boss5,
+				music : "boss5",
 			},
 			{
 				title : get_text("mus_room_s6"),
 				comment : get_text("mus_com_s6"),
 				action : MENU_MUSIC,
-				music : mus_stage6,
+				music : "stage6",
 			},
 			{
 				title : get_text("mus_room_b6"),
 				comment : get_text("mus_com_b6"),
 				action : MENU_MUSIC,
-				music : mus_boss6,
+				music : "boss6",
 			},
 			{
 				title : get_text("mus_room_s7"),
 				comment : get_text("mus_com_s7"),
 				action : MENU_MUSIC,
-				music : mus_stage7,
+				music : "stage7",
 			},
 			{
 				title : get_text("mus_room_b7"),
 				comment : get_text("mus_com_b7"),
 				action : MENU_MUSIC,
-				music : mus_boss7,
+				music : "boss7",
 			},
 			{
 				title : get_text("mus_room_end"),
 				comment : get_text("mus_com_end"),
 				action : MENU_MUSIC,
-				music : mus_end,
+				music : "end",
 			},
 			{
 				title : get_text("mus_room_credit"),
 				comment : get_text("mus_com_credit"),
 				action : MENU_MUSIC,
-				music : mus_credit,
+				music : "credit",
 			},
 			{
 				title : get_text("mus_room_score"),
 				comment : get_text("mus_com_score"),
 				action : MENU_MUSIC,
-				music : mus_score,
+				music : "score",
 			},
 		]
 	},
