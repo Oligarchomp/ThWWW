@@ -1,15 +1,14 @@
-ver = CHANGE ME
 bomb_reimu = 霊符「夢想封印」
 bomb_marisa = 恋符「マスタースパーク」
 bomb_sanae = 秘法「九字刺し」
 
-boss_apple = Girlington Apple
+boss_apple = Apple Girlington
 boss_serene = Heikegani Serene
-boss_pale = Fanhead Pale
+boss_pale = Pale Fanhead
 boss_yuuto = Ichika Yuuto
 boss_feza = Feza
 boss_nua = Kouzui Nua
-boss_reverence = U'n-Llisardggy Reverence
+boss_reverence = Reverence U'n-Llisardggy
 
 mus_stage1 = Magical Hopalong Cassidy Station [Arr: Sozoro Namimo]
 mus_boss1 = AN APPLE DISASTER!! [Arr: Princess Sylvysprit]

@@ -12,7 +12,7 @@ if(global.gp_active)
 		break;
 		case 0:
 			var bubble_wait = 4;
-			var bubble_nbr = 18;
+			var bubble_nbr = 17;
 			var time_change = 30;
 			var bubble_spd = 9;
 			var note_spd1 = 1.3;

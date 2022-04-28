@@ -90,9 +90,9 @@ if(audio_pos > intro_length + loop_lenght)
 
 if(update)
 {
-	if(bgm == mus_score)
+	if(bgm == "score")
 	{
-		score_music_mem = asset_get_index(audio_get_name(currently_playing))
+		score_music_mem = last_bgm; //asset_get_index(audio_get_name(currently_playing))
 		score_time_mem = audio_sound_get_track_position(currently_playing);
 	}
 	
@@ -101,32 +101,38 @@ if(update)
 	
 	if(bgm != "")
 	{
-		if(bgm != "continue")
+		
+		var was_continued = false;
+		if(bgm == "continue")
 		{
-			if(music_buffer != -1)
-			{
-				audio_free_buffer_sound(music_buffer);
-			}
-			
-			buffer_load_ext(buffer,working_directory + "/music/" + bgm + ".wav",0)
-			buffer_seek(buffer,buffer_seek_start,40);
-			var size = buffer_read(buffer,buffer_u32);
-			
-			buffer_seek(buffer,buffer_seek_start,24);
-			var sampling = buffer_read(buffer,buffer_u32);
-			
-			music_buffer = audio_create_buffer_sound(buffer,buffer_s16,sampling,44,size,audio_stereo);
-			
-			last_bgm = bgm;
-			
-			currently_playing = audio_play_sound_on(global.bgm_emitter,music_buffer,true,1);
+			bgm = score_music_mem;
+			was_continued = true;
 		}
-		else // continuing song after gameover
+		
+		if(music_buffer != -1)
 		{
-			currently_playing = audio_play_sound_on(global.bgm_emitter,score_music_mem,true,1);
+			audio_free_buffer_sound(music_buffer);
+		}
+			
+		buffer_load_ext(buffer,working_directory + "/music/" + bgm + ".wav",0)
+		buffer_seek(buffer,buffer_seek_start,40);
+		var size = buffer_read(buffer,buffer_u32);
+			
+		buffer_seek(buffer,buffer_seek_start,24);
+		var sampling = buffer_read(buffer,buffer_u32);
+			
+		music_buffer = audio_create_buffer_sound(buffer,buffer_s16,sampling,44,size,audio_stereo);
+			
+		last_bgm = bgm;
+			
+		currently_playing = audio_play_sound_on(global.bgm_emitter,music_buffer,true,1);
+		
+		
+		if(was_continued)
+		{
 			audio_sound_set_track_position(currently_playing,score_time_mem);
-			bgm = asset_get_index(audio_get_name(currently_playing));
 		}
+		
 	}
 }
 	
@@ -136,7 +142,7 @@ if(global.gp_active)
 }
 else
 {
-	if(global.game_type != GAME_SPELL) and (asset_get_index(audio_get_name(currently_playing)) != mus_score)
+	if(global.game_type != GAME_SPELL) and (last_bgm != "score")
 	{
 		audio_pause_sound(currently_playing);
 	}

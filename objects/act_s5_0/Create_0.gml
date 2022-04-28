@@ -12,9 +12,9 @@ bg_to_create = bg_s5;
 
 if(global.game_type == GAME_SPELL)
 {
-	music = mus_boss5;//only feza
+	music = "boss5";//only feza
 }
 else
 {
-	music = mus_stage5;
+	music = "stage5";
 }

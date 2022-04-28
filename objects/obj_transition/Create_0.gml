@@ -10,5 +10,3 @@ scale = scale_max;
 spd = 0.05;
 
 room_to = noone;
-
-//set_bgm(noone);

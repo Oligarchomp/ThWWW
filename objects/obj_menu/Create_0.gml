@@ -14,7 +14,7 @@ if(global.need_intro) and (!global.debug)
 }
 else
 {
-	if(!audio_is_playing(mus_title))
+	if(obj_bgm.last_bgm == "noone")
 	{
 		set_bgm("title");
 	}

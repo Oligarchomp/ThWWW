@@ -193,25 +193,25 @@ if(global.gp_active)
 				switch(global.stage)
 				{
 					case 1:
-						set_bgm(mus_boss1);
+						set_bgm("boss1");
 					break;
 					case 2:
-						set_bgm(mus_boss2);
+						set_bgm("boss2");
 					break;
 					case 3:
-						set_bgm(mus_boss3);
+						set_bgm("boss3");
 					break;
 					case 4:
-						set_bgm(mus_boss4);
+						set_bgm("boss4");
 					break;
 					case 5:
-						set_bgm(mus_boss5);
+						set_bgm("boss5");
 					break;
 					case 6:
-						set_bgm(mus_boss6);
+						set_bgm("boss6");
 					break;
 					case 7:
-						set_bgm(noone);
+						set_bgm("noone");
 					break;
 				}
 			}
@@ -219,7 +219,7 @@ if(global.gp_active)
 		case bgm_step_real:
 			if(current_step == 0)
 			{
-				set_bgm(mus_boss7);
+				set_bgm("boss7");
 			}
 		break;
 		case title_step :

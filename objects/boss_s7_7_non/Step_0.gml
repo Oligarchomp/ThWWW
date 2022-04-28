@@ -20,7 +20,7 @@ if(global.gp_active)
 			
 			var laser_nbr = 1;
 			
-			var note_ring = 40;
+			var note_ring = 41;
 			var note_spd_shoot = 7;
 			var note_spd_final = 1.5;
 			var note_deccel = 0.1;

@@ -4,7 +4,7 @@
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
-set_bgm(noone);
+set_bgm("noone");
 audio_emitter_gain(global.bgm_emitter,bgm_vol_ref)
 
 room_speed = 60;

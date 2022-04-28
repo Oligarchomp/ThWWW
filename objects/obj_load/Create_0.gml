@@ -4,7 +4,7 @@
 window_set_fullscreen(data_read("Data.ini","option","fullscreen"));
 global.rng_patch = data_read("Data.ini","option","rng")
 
-
+global.ver = "0.0.45";
 
 global.sound_mult = 1.1;
 
@@ -289,29 +289,6 @@ global.play_type = PLAY_MANUAL;
 #macro FONT_PAUSE 3
 #macro FONT_GAME_INFO 4
 
-//define music
-
-#macro MUS_CONTINUE -1
-#macro MUS_MAIN 0
-#macro MUS_S1 1
-#macro MUS_S2 2
-#macro MUS_S3 3
-#macro MUS_S4 4
-#macro MUS_S5 5
-#macro MUS_S6 6
-#macro MUS_S7 7
-#macro MUS_B1 8
-#macro MUS_B2 9
-#macro MUS_B3 10
-#macro MUS_B4 11
-#macro MUS_B5 12
-#macro MUS_B6 13
-#macro MUS_B7 14
-#macro MUS_GAMEOVER 15
-#macro MUS_END 16
-#macro MUS_CREDIT 17
-
-
 //define language
 // 0 = not set yet
 #macro LAN_ENG 1
@@ -358,8 +335,9 @@ room_goto(room_gp)
 
 global.difficulty = 3;
 
-add_stage_event(act_s6_0,0)
-add_stage_event(act_s6_3,1)
+add_stage_event(act_s5_0,0)
+add_stage_event(act_s5_7,1)
+add_stage_event(act_s5_8,1)
 
 
 

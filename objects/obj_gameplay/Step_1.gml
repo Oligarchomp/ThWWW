@@ -71,9 +71,7 @@ if(global.gp_active)
 						case GAME_EXTRA:
 							instance_create_depth(280,40,0,obj_score_entry);
 							
-							set_bgm(mus_score);
-							
-							data_write("Data.ini","data","rng_unlock",1); //unlock rng patch
+							set_bgm("score");
 						break;
 					}
 				}
@@ -185,7 +183,7 @@ switch(pause_state)
 			
 			if(pause_type = PAUSE_GAMEOVER)
 			{
-				set_bgm(mus_score);
+				set_bgm("score");
 			}
 			
 			// replay sync
@@ -237,7 +235,7 @@ switch(pause_state)
 			if(continue_song)
 			{
 				continue_song = false;
-				set_bgm(-1);//-1 means restarting remembered song	
+				set_bgm("continue");	
 			}
 			
 			pause_lockout = 10;

@@ -4,7 +4,12 @@
 if(room == room_score)
 {
 	instance_create_depth(0,0,depth - 10,obj_score_fadein);
-	set_bgm(mus_score);
+	set_bgm("score");
+	
+	if(global.game_type == GAME_EXTRA)
+	{
+		data_write("Data.ini","data","rng_unlock",1); //unlock rng patch	
+	}
 }
 
 state = 0;

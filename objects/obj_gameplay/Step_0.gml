@@ -133,7 +133,7 @@ if(pause_state == 1)
 					play_sound(sfx_extend,1,false);
 				
 					continue_song = true;
-					set_bgm(noone);
+					set_bgm("noone");
 					
 					array_delete(item_extend,0,array_length(item_extend));
 					for(var i = 0; i < array_length(item_extend_ref); i += 1)

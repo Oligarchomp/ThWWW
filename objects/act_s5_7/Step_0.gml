@@ -73,7 +73,8 @@ if(global.gp_active)
 			if(ready_spawn)
 			{
 				play_sound(sfx_familiar_spawn,1,false);
-				create_enemy(EN_FAMILIAR,x,y,familiar_life,3,0,0);
+				var inst = create_enemy(EN_FAMILIAR,x,y,familiar_life,3,0,0);
+				inst.can_revenge = false;
 				
 				instance_destroy();
 			}

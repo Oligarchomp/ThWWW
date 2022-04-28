@@ -16,16 +16,16 @@ if(global.game_type != GAME_SPELL)
 {
 	instance_create_depth(0,global.poc,0,obj_borderline);
 	
-	music = mus_stage7;
+	music = "stage7";
 }
 else
 {
-	music = mus_boss7;
+	music = "boss7";
 	var ev = get_next_event();
 	
 	if(ev == act_s7_51_midspell) or (ev == act_s7_52_midspell) or (ev == act_s7_53_midspell)
 	{
-		music = mus_stage7;
+		music = "stage7";
 	}
 	
 }

@@ -12,4 +12,3 @@ event_inherited();
 
 act_set_time(120,121);
 
-//set_bgm(noone);

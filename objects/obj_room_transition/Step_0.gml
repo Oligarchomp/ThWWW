@@ -35,7 +35,7 @@ if(global.gp_active)
 				}
 				else
 				{
-					if(!audio_is_playing(music))
+					if(obj_bgm.last_bgm != music)
 					{
 						set_bgm(music);
 					}

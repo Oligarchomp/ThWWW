@@ -1,4 +1,3 @@
-ver = 0.0.42
 bomb_reimu = Spirit Sign - [Fantasy Seal]
 bomb_marisa = Love Sign - [Master Spark]
 bomb_sanae = Esoterica - [Nine Syllable Stabs]

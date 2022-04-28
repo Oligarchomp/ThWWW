@@ -10,5 +10,5 @@ ds_list_destroy(line4_list);
 ds_list_destroy(name_list);
 ds_list_destroy(color_ref_list);
 
-set_bgm(noone);
+set_bgm("noone");
 audio_emitter_gain(global.bgm_emitter,bgm_vol_ref)

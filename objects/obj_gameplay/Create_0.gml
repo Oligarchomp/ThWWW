@@ -177,6 +177,8 @@ if(global.play_type == PLAY_MANUAL)
 	file_text_writeln(file);
 	file_text_write_string(file,wait_str);
 	file_text_writeln(file);
+	file_text_write_string(file,"version = " + global.ver);
+	file_text_writeln(file);
 	file_text_write_string(file,"game_type = " + string(global.game_type));
 	file_text_writeln(file);
 	file_text_write_string(file,"player = " + string(global.player_chosen));

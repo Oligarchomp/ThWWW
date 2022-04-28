@@ -3,7 +3,7 @@
 
 if(step == 1)
 {
-	set_bgm(mus_credit);
+	set_bgm("credit");
 }
 
 if (old_state != state)

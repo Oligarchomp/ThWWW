@@ -9,7 +9,7 @@ old_state = -1;
 
 state_time = 0;
 
-music = noone;
+music = "noone";
 
 bg_to_create = noone;
 
