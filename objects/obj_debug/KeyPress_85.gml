@@ -1,8 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-/*
-with(my_hitbox)
+if(global.debug)
 {
-	x = other.x;
-	y = other.y;
+	screen_clean(false,false)
 }

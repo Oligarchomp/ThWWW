@@ -143,9 +143,6 @@ if (global.gp_active)
 				alpha = 1;
 			}
 			
-			
-			
-		
 			//item
 			while(place_meeting(x,y,obj_item_auto))
 			{

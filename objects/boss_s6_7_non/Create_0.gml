@@ -9,8 +9,6 @@ spell_set_time(45,false,90);
 
 wave_id = 0;
 
-dist_bullet = 0;
-
 bullet_aim = 0;
 
 tss_angle = -90;

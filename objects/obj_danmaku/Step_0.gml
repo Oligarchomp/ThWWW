@@ -55,6 +55,7 @@ if(global.gp_active)
 		if (y < -y_offscreen) or (x < - x_offscreen) or (x > room_width + x_offscreen) or (y > room_height + y_offscreen)
 		{
 			instance_destroy(self);
+			
 		}
 	
 		
@@ -82,5 +83,6 @@ if(global.gp_active)
 		sprite_index = spr_danmaku_hitbox;
 		image_index = danmaku_id;
 		instance_deactivate_object(self);
+	
 	}
 }

@@ -10,32 +10,32 @@
 
 function shoot(danmaku,color,x_pos,y_pos,angle,spd,snd,id_number){
 
-	
+	var dan = obj_danmaku1
 	switch(id_number)
 	{
 		case 1:
-			var dan = obj_danmaku1;
+			dan = obj_danmaku1;
 		break;
 		case 2:
-			var dan = obj_danmaku2;
+			dan = obj_danmaku2;
 		break;
 		case 3:
-			var dan = obj_danmaku3;
+			dan = obj_danmaku3;
 		break;
 		case 4:
-			var dan = obj_danmaku4;
+			dan = obj_danmaku4;
 		break;
 		case 5:
-			var dan = obj_danmaku5;
+			dan = obj_danmaku5;
 		break;
 		case 6:
-			var dan = obj_danmaku6;
+			dan = obj_danmaku6;
 		break;
 		case 7:
-			var dan = obj_danmaku7;
+			dan = obj_danmaku7;
 		break;
 		default: // and 8
-			var dan = obj_danmaku8;
+			dan = obj_danmaku8;
 		break;
 	}
 	

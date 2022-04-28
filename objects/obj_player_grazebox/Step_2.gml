@@ -11,7 +11,6 @@ if (global.gp_active)
 		{
 			var meet = instance_place(x,y,obj_grazebox);
 		
-			play_sound(sfx_graze,1,false);
 			global.graze += 1;
 			add_score(1000);
 		

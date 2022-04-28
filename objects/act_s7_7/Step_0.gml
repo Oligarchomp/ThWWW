@@ -2,11 +2,6 @@
 // You can write your code in this editor
 if(global.gp_active)
 {
-	var arrow_wait = 10;
-	var arrow_arc = 3;
-	var arrow_dist = 44;
-	var arrow_spd = 5;
-	
 	var green_lenght = 100;
 	var mentos_wait = 8;
 	var mentos_ring = 8;

@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-global.debug = true;
+global.debug = false;
 global.hb_mode = false;
 
 global.view_hitbox = false;

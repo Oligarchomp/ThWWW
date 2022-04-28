@@ -162,7 +162,6 @@ global.y_death_list = ds_list_create();
 #macro P_REIMU 0
 #macro P_MARISA 1
 #macro P_SANAE 2
-#macro P_SUIKA 3
 
 //define boss_id
 #macro BOSS_APPLE 1
@@ -335,11 +334,7 @@ room_goto(room_gp)
 
 global.difficulty = 3;
 
-add_stage_event(act_s5_0,0)
-add_stage_event(act_s5_7,1)
-add_stage_event(act_s5_8,1)
-
-
-
+add_stage_event(act_s1_0,0)
+add_stage_event(act_s1_test,1)
 
 
