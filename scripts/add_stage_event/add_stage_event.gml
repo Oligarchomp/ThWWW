@@ -4,6 +4,6 @@
 
 function add_stage_event(argument0,argument1){
 	
-	ds_list_add(global.event_list,argument0);
-	ds_list_add(global.wait_list,argument1);
+	array_push(global.event_list,argument0);
+	array_push(global.wait_list,argument1);
 }

@@ -162,13 +162,13 @@ if(global.play_type == PLAY_MANUAL)
 {
 	var ev_str = "ev = "
 	var wait_str = "wait = "
-	for(var i = 0; i < ds_list_size(global.event_list); i += 1)
+	for(var i = 0; i < array_length(global.event_list); i += 1)
 	{
-		var ev = global.event_list[|i];
+		var ev = global.event_list[i];
 		if(ev != act_end)
 		{
 			ev_str += string(ev) + ",";
-			wait_str += string(global.wait_list[|i]) + ",";
+			wait_str += string(global.wait_list[i]) + ",";
 		}
 	}
 	

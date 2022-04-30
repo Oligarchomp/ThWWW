@@ -29,8 +29,8 @@ if(global.need_change_rng)
 }
 
 
-ds_list_clear(global.event_list);
-ds_list_clear(global.wait_list);
+global.event_list = [];
+global.wait_list = [];
 
 
 vhold_direction_time = 0;
