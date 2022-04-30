@@ -155,11 +155,8 @@ if(pause_state == 1)
 				case MENU_REPLAY:
 					instance_create_depth(200,200,depth - 1,obj_replay);
 				break;
-			}
-		
-			
+			}		
 		}
-	
 	
 	
 		if(global.bomb_pressed)

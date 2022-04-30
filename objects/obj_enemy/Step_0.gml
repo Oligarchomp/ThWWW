@@ -56,7 +56,7 @@ if (global.gp_active)
 	var damage = 0;
 	if (y > 0) //and (y < room_width) and (x > 0) and (x < room_width) 
 	{
-		var damage = check_damage();
+		damage = check_damage();
 	}
 	
 	life -= damage;

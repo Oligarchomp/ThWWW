@@ -76,6 +76,7 @@
     {"id":{"name":"create_shot_hitbox","path":"scripts/create_shot_hitbox/create_shot_hitbox.yy",},"order":6,},
     {"id":{"name":"spr_player_wall_collision","path":"sprites/spr_player_wall_collision/spr_player_wall_collision.yy",},"order":2,},
     {"id":{"name":"sfx_spawn_water","path":"sounds/sfx_spawn_water/sfx_spawn_water.yy",},"order":1,},
+    {"id":{"name":"sfx_noone","path":"sounds/sfx_noone/sfx_noone.yy",},"order":26,},
     {"id":{"name":"obj_credit_effect","path":"objects/obj_credit_effect/obj_credit_effect.yy",},"order":2,},
     {"id":{"name":"spr_reverence_art","path":"sprites/spr_reverence_art/spr_reverence_art.yy",},"order":10,},
     {"id":{"name":"sfx_timer1","path":"sounds/sfx_timer1/sfx_timer1.yy",},"order":3,},

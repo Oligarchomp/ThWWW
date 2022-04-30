@@ -10,10 +10,10 @@ function set_font(macro){
 			switch(global.lan)
 			{
 				case LAN_ENG:
-					var font = font_main;
+					font = font_main;
 				break;
 				case LAN_JAP:
-					var font = global.font_main_j;
+					font = global.font_main_j;
 				break;
 			}
 		break;
@@ -21,10 +21,10 @@ function set_font(macro){
 			switch(global.lan)
 			{
 				case LAN_ENG:
-					var font = font_spellpractice;
+					font = font_spellpractice;
 				break;
 				case LAN_JAP:
-					var font = global.font_spellpractice_j;
+					font = global.font_spellpractice_j;
 				break;
 			}
 		break;
@@ -32,10 +32,10 @@ function set_font(macro){
 			switch(global.lan)
 			{
 				case LAN_ENG:
-					var font = font_pause;
+					font = font_pause;
 				break;
 				case LAN_JAP:
-					var font = global.font_pause_j;
+					font = global.font_pause_j;
 				break;
 			}
 		break;
@@ -43,10 +43,10 @@ function set_font(macro){
 			switch(global.lan)
 			{
 				case LAN_ENG:
-					var font = font_dialogue;
+					font = font_dialogue;
 				break;
 				case LAN_JAP:
-					var font = global.font_dialogue_j;
+					font = global.font_dialogue_j;
 				break;
 			}
 		break;
@@ -54,10 +54,10 @@ function set_font(macro){
 			switch(global.lan)
 			{
 				case LAN_ENG:
-					var font = font_game_info;
+					font = font_game_info;
 				break;
 				case LAN_JAP:
-					var font = global.font_game_info_j;
+					font = global.font_game_info_j;
 				break;
 			}
 		break;

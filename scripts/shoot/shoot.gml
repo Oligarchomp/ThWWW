@@ -48,7 +48,7 @@ function shoot(danmaku,color,x_pos,y_pos,angle,spd,snd,id_number){
 	
 	global.danmaku_id = danmaku;
 	global.danmaku_color = color;
-	global.danmaku_angle = angle;
+	global.danmaku_angle = angle;                                 
 	global.danmaku_speed = spd;
 	
 	

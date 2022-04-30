@@ -35,7 +35,7 @@ if(global.gp_active)
 				var count = 0;
 				for(var i = 0; i < 360; i += 360 / mentos_ring)
 				{
-					var ment = shoot(DAN_MENTOS,3,x,y,aim + i,0,noone,6);
+					var ment = shoot(DAN_MENTOS,3,x,y,aim + i,0,sfx_noone,6);
 					ment.dist_ref = 50;
 					ment.my_fairy = inst;
 					ment.y_offscreen = 200;

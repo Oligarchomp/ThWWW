@@ -139,9 +139,11 @@ if (global.gp_active)
 
 	
 	//
-	if (abs(hsp) > 0) 
+
+	
+	if (abs(hsp) > 0) or (abs(vsp) > 0)
 	{
-		dir = goto_value(dir,dir_max * sign(hsp),dir_spd);
+		dir = goto_value(dir,dir_max * (hsp == 0 ? spr_dir : sign(hsp)),dir_spd);
 		
 		switch(movement_type)
 		{

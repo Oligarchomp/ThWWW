@@ -1,8 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
-
 //PAUSE
 
 switch(pause_type)
@@ -11,12 +9,12 @@ switch(pause_type)
 		if(global.play_type == PLAY_MANUAL)
 		{
 			var menu = pause;
-			var pause_title = get_text("pause_pause");
+			var pause_title = pause_title_pause;
 		}
 		else
 		{
 			var menu = replay_menu;
-			var pause_title = get_text("pause_pause");
+			var pause_title = pause_title_pause;
 		}
 	break;
 	case PAUSE_END:
@@ -28,12 +26,12 @@ switch(pause_type)
 		else
 		{
 			var menu = replay_menu;
-			var pause_title = get_text("pause_endreplay");
+			var pause_title = pause_title_endreplay;
 		}
 	break;
 	case PAUSE_GAMEOVER:
 		var menu = gameover;
-		var pause_title = get_text("pause_gameover");
+		var pause_title = pause_title_gameover;
 	break;
 }
 
@@ -68,7 +66,7 @@ if(pause_state >= 1)
 	
 		if(pause_type == PAUSE_GAMEOVER)
 		{
-			draw_text_outline(300,400,get_text("pause_continue"),c_white,c_white,c_white,c_white,pause_alpha,c_black)
+			draw_text_outline(300,400,pause_continue,c_white,c_white,c_white,c_white,pause_alpha,c_black)
 			draw_text_outline(380,400," :  " + string(global.continues),c_white,c_white,c_white,c_white,pause_alpha,c_black)
 		}
 	
@@ -81,7 +79,7 @@ if(pause_state >= 1)
 				var is_active = (cursor[1] == i);
 				menu[cursor[0]].param[i].active_offset = goto_value(menu[cursor[0]].param[i].active_offset,is_active * menu_offset,3);
 			
-				draw_text_outline(380,170,get_text("pause_sure"),c_white,c_white,c_white,c_white,1,c_black);
+				draw_text_outline(380,170,pause_sure,c_white,c_white,c_white,c_white,1,c_black);
 				draw_text_outline(380 + menu[cursor[0]].param[i].active_offset ,210 + i * 40,menu[cursor[0]].param[i].title,c_white,c_white,c_white,c_white,pause_alpha * (1 - !is_active * 0.5),c_black);	
 			}
 		}

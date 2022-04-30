@@ -358,3 +358,10 @@ step = 0;
 old_fps = 60;
 
 pause_lockout = 0;
+
+pause_title_pause = get_text("pause_pause");
+pause_title_endreplay = get_text("pause_endreplay");
+pause_title_gameover = get_text("pause_gameover");
+
+pause_continue = get_text("pause_continue");
+pause_sure = get_text("pause_sure");
