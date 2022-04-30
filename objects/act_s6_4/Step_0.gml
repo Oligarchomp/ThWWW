@@ -61,10 +61,10 @@ if(global.gp_active)
 		}
 	}
 	
-	for(var i = 0; i < ds_list_size(global.x_death_list); i += 1)
+	for(var i = 0; i < array_length(global.x_death_list); i += 1)
 	{
 		var ang = 90 - mentos_open + rng(mentos_open * 2,false,7);
-		var inst = shoot(DAN_BUBBLE,6,global.x_death_list[|i],global.y_death_list[|i],ang,mentos_spd_shot,sfx_redirect2,5);
+		var inst = shoot(DAN_BUBBLE,6,global.x_death_list[i],global.y_death_list[i],ang,mentos_spd_shot,sfx_redirect2,5);
 		inst.pos_type = POS_SP;
 		inst.y_grav_accel = mentos_accel;
 		inst.y_grav_max = 8;	

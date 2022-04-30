@@ -154,13 +154,13 @@ if(global.gp_active) and (spell_wait == 0)
 	death_time = goto_value(death_time,0,1);
 	
 	//revenge
-	for(var i = 0; i < ds_list_size(global.x_death_list); i += 1)
+	for(var i = 0; i < array_length(global.x_death_list); i += 1)
 	{
 		if(death_time == 0)
 		{
-			if (sqrt(sqr(obj_player.x - global.x_death_list[|i]) + sqr(obj_player.y - global.y_death_list[|i])) > revenge_dist_min)
+			if (sqrt(sqr(obj_player.x - global.x_death_list[i]) + sqr(obj_player.y - global.y_death_list[i])) > revenge_dist_min)
 			{
-				shoot_ring(DAN_ARROW,4,revenge_nbr,global.x_death_list[|i],global.y_death_list[|i],rng(360,false,2),revenge_spd,sfx_shot1,2); 
+				shoot_ring(DAN_ARROW,4,revenge_nbr,global.x_death_list[i],global.y_death_list[i],rng(360,false,2),revenge_spd,sfx_shot1,2); 
 			}
 		}
 	}

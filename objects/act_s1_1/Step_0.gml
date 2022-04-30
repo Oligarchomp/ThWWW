@@ -174,11 +174,11 @@ if(global.gp_active)
 	
 		if(global.difficulty == 3)
 		{
-			for(var i = 0; i < ds_list_size(global.x_death_list); i += 1)
+			for(var i = 0; i < array_length(global.x_death_list); i += 1)
 			{
 				repeat(4)
 				{
-					shoot(DAN_BALL,4,global.x_death_list[|i],global.y_death_list[|i], 90 + rng(60,true,1) - 30,3,sfx_shot3,2); 
+					shoot(DAN_BALL,4,global.x_death_list[i],global.y_death_list[i], 90 + rng(60,true,1) - 30,3,sfx_shot3,2); 
 				}
 			}
 		}

@@ -206,10 +206,10 @@ if(global.gp_active)
 		}
 	}
 	
-	for(var i = 0; i < ds_list_size(global.x_death_list); i += 1)
+	for(var i = 0; i < array_length(global.x_death_list); i += 1)
 	{
-		var xx = global.x_death_list[|i];
-		var yy = global.y_death_list[|i];
+		var xx = global.x_death_list[i];
+		var yy = global.y_death_list[i];
 		boss_release(xx,yy,sfx_boss_release);
 		//screen_clean(true,true);
 		instance_create_depth(xx,yy,global.boss_depth,obj_clean_radius);

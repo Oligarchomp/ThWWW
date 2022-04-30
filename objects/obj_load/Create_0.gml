@@ -154,8 +154,8 @@ global.replay_seed = [];
 
 global.name_entry = "";
 
-global.x_death_list = ds_list_create();
-global.y_death_list = ds_list_create();
+global.x_death_list = [];
+global.y_death_list = [];
 
 
 //define player_id

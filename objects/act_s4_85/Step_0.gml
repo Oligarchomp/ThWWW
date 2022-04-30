@@ -242,20 +242,6 @@ if(global.gp_active)
 			break;
 		}
 	}
-	/*
-	if(global.difficulty > 0)
-	{
-		for(var i = 0; i < ds_list_size(global.x_death_list); i += 1)
-		{
-			var aim = rng(360,false,1);
-			for(var j = 0; j < 360; j += 360 / rev_ring)
-			{
-				var inst = shoot(DAN_AMULET,6,global.x_death_list[|i],global.y_death_list[|i],aim + j,rev_spd_shot,sfx_shot1,1);
-				inst.image_xscale = 2;
-				inst.image_yscale = 2;
-			}
-		}
-	}*/
 	
 	with(obj_danmaku1)
 	{

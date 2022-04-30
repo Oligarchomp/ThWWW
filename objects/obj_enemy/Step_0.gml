@@ -81,8 +81,8 @@ if (global.gp_active)
 		
 		if (can_revenge)
 		{
-			ds_list_add(global.x_death_list,x);
-			ds_list_add(global.y_death_list,y);	
+			array_push(global.x_death_list,x);
+			array_push(global.y_death_list,y);	
 		}
 		
 		//instance_create_depth(x,y,depth,obj_enemy_defeat);

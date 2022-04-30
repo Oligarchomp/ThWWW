@@ -3,8 +3,8 @@
 
 if (global.gp_active)
 {
-	ds_list_clear(global.x_death_list);//need to be used right away by the act object
-	ds_list_clear(global.y_death_list);
+	global.x_death_list = [];//need to be used right away by the act object
+	global.y_death_list = [];
 	
 	
 	// start of the spell

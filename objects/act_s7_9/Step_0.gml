@@ -153,9 +153,9 @@ if(global.gp_active)
 	
 	
 	
-	for(var i = 0; i < ds_list_size(global.x_death_list); i += 1)
+	for(var i = 0; i < array_length(global.x_death_list); i += 1)
 	{
-		create_item(ITEM_LIFE,global.x_death_list[|i],global.y_death_list[|i]);
+		create_item(ITEM_LIFE,global.x_death_list[i],global.y_death_list[i]);
 		with(obj_laser)
 		{
 			instance_destroy();	

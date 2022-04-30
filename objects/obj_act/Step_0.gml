@@ -25,8 +25,8 @@ if(global.gp_active)
 	
 	if(get_current_event() == object_index)
 	{
-		ds_list_clear(global.x_death_list);//need to be used right away by the act object
-		ds_list_clear(global.y_death_list);
+		global.x_death_list = [];//need to be used right away by the act object
+		global.y_death_list = [];
 	}
 	
 }
