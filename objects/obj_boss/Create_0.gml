@@ -85,7 +85,8 @@ switch(boss_id)
 		instance_create_depth(x,y,depth + 1, obj_reverence_indicator);
 	break;
 }
-	
+
+sprite_index = idle_spr;
 
 pos_type = POS_SP;
 

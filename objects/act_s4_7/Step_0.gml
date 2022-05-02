@@ -160,11 +160,10 @@ if(global.gp_active)
 				if(spd == 0)
 				{
 					state = 2;
-					angle_max = angle + (sqrt(sqr(x - x_ref) + sqr(y - y_ref))) * dir_dan ;
+					angle = angle + (global.rng_patch ? rng(360,false,1) : (sqrt(sqr(x - x_ref) + sqr(y - y_ref))) * dir_dan );
 				}
 			break;
 			case 2:
-				angle = goto_value(angle_max,angle,0.5);
 				spd = goto_value(spd,spd_ref / arrow_spd_div,0.1)
 				if(state_time == 120)
 				{

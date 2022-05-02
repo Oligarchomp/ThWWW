@@ -13,11 +13,7 @@
 ///@param id_number real
 function shoot_arc_row(danmaku,color,inst_number_arc,inst_number_row,x_pos,y_pos,angle,angle_dist,spd_min,spd_max,snd,id_number){
 
-	if (angle == 999)
-	{
-		angle = find_angle(x_pos,y_pos,obj_player.x,obj_player.y);
-	}
-	
+	angle = angle == 999 ? find_angle(x_pos,y_pos,obj_player.x,obj_player.y) : angle;
 	
 	var off = ((inst_number_arc - 1) * angle_dist / 2)
 	var new_angle = angle - off

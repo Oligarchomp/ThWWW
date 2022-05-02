@@ -39,10 +39,7 @@ function shoot(danmaku,color,x_pos,y_pos,angle,spd,snd,id_number){
 		break;
 	}
 	
-	if (angle == 999) //aimed
-	{
-		angle = find_angle(x_pos,y_pos,obj_player.x,obj_player.y)
-	}
+	angle = angle == 999 ? find_angle(x_pos,y_pos,obj_player.x,obj_player.y) : angle;
 	
 	angle = global.rng_patch ? rng(360,false,1) : angle;
 	
@@ -53,8 +50,7 @@ function shoot(danmaku,color,x_pos,y_pos,angle,spd,snd,id_number){
 	
 	
 	var inst = noone;
-	var cap = global.bullet_cap;
-	if (instance_number(obj_danmaku) < cap)
+	if (instance_number(obj_danmaku) < global.bullet_cap)
 	{
 		var inst = instance_create_depth(x_pos,y_pos,0,dan)
 	

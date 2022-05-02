@@ -3,10 +3,6 @@
 if (instance_exists(obj_spell))
 {
 	user_id = obj_spell.user_id;
-	// 0 = wakasagihime
-	// 1 = apple;
-	// 2 = serinu
-	//etc
 }
 else
 {

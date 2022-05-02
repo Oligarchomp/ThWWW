@@ -134,7 +134,7 @@ if(global.gp_active)
 					state = 2;
 					var x_pos = obj_player.x - rice_around + rng(rice_around * 2,false,7);
 					var y_pos = obj_player.y - rice_around + rng(rice_around * 2,false,1);
-					angle = find_angle(x,y,x_pos,y_pos);
+					angle = global.rng_patch ? rng(360,false,1) : find_angle(x,y,x_pos,y_pos);
 					spd = ring_spd_final;
 				}
 			}

@@ -182,7 +182,7 @@ if(global.gp_active)
 						if(spd == 0)
 						{
 							state = 1;
-							angle -= ang_plus
+							angle -= global.rng_patch ? rng(360,false,1) : ang_plus
 							spd = spd_to;
 						}
 					break;

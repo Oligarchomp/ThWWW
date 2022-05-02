@@ -31,6 +31,11 @@ dir_act = -1;
 
 boss_sp = 0;
 
+if(global.game_type == GAME_SPELL)
+{
+	obj_boss.y = 100;
+	obj_boss.x = -50;
+}
 boss_movement_goto(550,obj_boss.y - 50,boss_sp);
 
 angle_shoot = rng(360,false,1);

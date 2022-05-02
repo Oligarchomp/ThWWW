@@ -207,7 +207,7 @@ if(global.gp_active) and (spell_wait == 0)
 				if(state_time == aim_redirect_wait)
 				{
 					state = 2;
-					angle = find_angle(x,y,obj_player.x,obj_player.y);
+					angle = global.rng_patch ? rng(360,false,1) : find_angle(x,y,obj_player.x,obj_player.y);
 					spd = aim_redirect_spd;
 					color_id = 7;
 				}
@@ -223,7 +223,7 @@ if(global.gp_active) and (spell_wait == 0)
 				if(state_time == aim_redirect_wait)
 				{
 					state = 4;
-					angle = find_angle(x,y,obj_player.x,obj_player.y);
+					angle = global.rng_patch ? rng(360,false,1) : find_angle(x,y,obj_player.x,obj_player.y);
 					spd = aim_home_spd;
 					color_id = 0;
 				}

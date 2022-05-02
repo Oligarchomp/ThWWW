@@ -173,7 +173,7 @@ if(global.gp_active) and (spell_wait == 0)
 				{
 					state = 1;
 					spd = aim_spd_aim;
-					angle = find_angle(x,y,obj_player.x,obj_player.y);
+					find_angle(x,y,obj_player.x,obj_player.y);
 				}
 			break;
 			case 1:
@@ -282,7 +282,7 @@ if(global.gp_active) and (spell_wait == 0)
 						spell.close_x_to = obj_player.x;	
 						spell.close_y_to = obj_player.y;	
 					}
-					var aim = find_angle(x,y,spell.close_x_to,spell.close_y_to);
+					var aim = global.rng_patch ? rng(360,false,1) : find_angle(x,y,spell.close_x_to,spell.close_y_to);
 					
 					
 					angle = aim + dan_id * 360 / close_ring;

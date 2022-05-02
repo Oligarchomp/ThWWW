@@ -12,10 +12,7 @@
 function shoot_arc(danmaku,color,inst_number,x_pos,y_pos,angle,angle_dist,spd,snd,id_number){
 
 	
-	if(angle == 999)
-	{
-		angle = find_angle(x_pos,y_pos,obj_player.x,obj_player.y);
-	}
+	angle = angle == 999 ? find_angle(x_pos,y_pos,obj_player.x,obj_player.y) : angle;
 	
 	var off = ((inst_number - 1) * angle_dist / 2)
 	var new_angle = angle - off

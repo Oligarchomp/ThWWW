@@ -321,8 +321,7 @@ if(global.gp_active) and (spell_wait == 0)
 				if(spd == 0)
 				{
 					state = 1;
-					var ang = find_angle(x_ref,y_ref,obj_player.x,obj_player.y);
-					angle = ang;
+					angle = global.rng_patch ? rng(360,false,1) : find_angle(x_ref,y_ref,obj_player.x,obj_player.y);
 					spd = metal_spd_aim;
 				}
 			break;
