@@ -4,8 +4,10 @@
 ///@param loops boolean
 function play_sound(snd,priority,loop){
 	
-	snd = snd == noone ? sfx_noone : snd;
-	audio_stop_sound(snd);
+	if(snd != noone)
+	{
+		audio_stop_sound(snd);
 	
-	audio_play_sound_on(global.sfx_emitter,snd,loop,priority)
+		audio_play_sound_on(global.sfx_emitter,snd,loop,priority)
+	}
 }

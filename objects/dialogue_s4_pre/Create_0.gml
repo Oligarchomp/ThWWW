@@ -56,7 +56,7 @@ switch(global.player_chosen)
 	break;
 	case P_SANAE:
 		boss_step = 2;
-		bgm_step = 16;
+		bgm_step = 17;
 		title_step = 3;
 		set_dialogue(spr_sanae_art,3,true,spr_nothing,0,false,get_text("diag_s4_s5"),-1);
 		set_dialogue(spr_sanae_art,3,true,spr_nothing,0,false,get_text("diag_s4_s6"),-1);
@@ -75,6 +75,6 @@ switch(global.player_chosen)
 		set_dialogue(spr_sanae_art,3,true,spr_yuuto_art,1,false,get_text("diag_s4_s19"),-1);
 		set_dialogue(spr_sanae_art,3,false,spr_yuuto_art,0,true,get_text("diag_s4_s20"),-1);
 		set_dialogue(spr_sanae_art,4,true,spr_yuuto_art,0,false,get_text("diag_s4_s21"),-1);
-		set_dialogue(spr_sanae_art,4,false,spr_yuuto_art,1,true,get_text("diag_s4_s22"),-1);
+		set_dialogue(spr_sanae_art,4,false,spr_yuuto_art,2,true,get_text("diag_s4_s22"),-1);
 	break;
 }

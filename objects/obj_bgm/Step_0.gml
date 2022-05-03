@@ -25,6 +25,10 @@ switch(last_bgm)
 		var intro_length = 5.488;
 		var loop_lenght = 79.059;
 	break;
+	case "boss4":	
+		var intro_length = 10.463;
+		var loop_lenght = 87.28;
+	break;
 	case "boss6":	
 		var intro_length = 40.452;
 		var loop_lenght = 89.600;
@@ -127,7 +131,6 @@ if(update)
 			
 		currently_playing = audio_play_sound_on(global.bgm_emitter,music_buffer,true,1);
 		
-		
 		if(was_continued)
 		{
 			audio_sound_set_track_position(currently_playing,score_time_mem);
@@ -147,3 +150,4 @@ else
 		audio_pause_sound(currently_playing);
 	}
 }
+

@@ -65,7 +65,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var wine_col = 7;
 			
 			var mentos_nbr = 3;
-			var mentos_spd = 1.6;
+			var mentos_spd = 1.5;
 			var mentos_accel = 0.01;
 			
 			var misha_nbr = 25;
@@ -91,7 +91,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var wine_col = 6;
 			
 			var mentos_nbr = 6;
-			var mentos_spd = 1.6;
+			var mentos_spd = 1.5;
 			var mentos_accel = 0.005;
 			
 			var misha_nbr = 30;

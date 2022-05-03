@@ -74,7 +74,7 @@ if(global.gp_active)
 		break;
 	}
 	
-	var fairy_life = 200;
+	var fairy_life = 150;
 	var fairy_length = 240;
 	
 	var lots_life = 6;
