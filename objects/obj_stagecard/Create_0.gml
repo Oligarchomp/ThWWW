@@ -15,3 +15,5 @@ y = room_height / 2;
 state = 0;
 old_state = -1;
 state_time = 0;
+
+sprite_index = global.lan == LAN_ENG ? spr_stagecard : spr_stagecard_j;

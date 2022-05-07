@@ -93,10 +93,12 @@ if(global.continues == global.continues_max) //good endings
 			add_end(7,get_text("end_good_s5_1"),get_text("end_good_s5_2"),get_text("end_good_s5_3"),get_text("end_good_s5_4"));
 			add_end(7,get_text("end_good_s6_1"),get_text("end_good_s6_2"),get_text("end_good_s6_3"),"");
 			add_end(7,get_text("end_good_s7_1"),get_text("end_good_s7_2"),get_text("end_good_s7_3"),get_text("end_good_s7_4"));
-			add_end(8,get_text("end_good_s8_1"),get_text("end_good_s8_2"),get_text("end_good_s8_3"),"");
-			add_end(8,get_text("end_good_s9_1"),get_text("end_good_s9_2"),get_text("end_good_s9_3"),get_text("end_good_s9_4"));
-			add_end(8,get_text("end_good_s10_1"),get_text("end_good_s10_2"),"","");
-			add_end(8,get_text("end_good_s11"),"","","");
+			
+			var im = global.lan = LAN_ENG ? 8 : 18;
+			add_end(im,get_text("end_good_s8_1"),get_text("end_good_s8_2"),get_text("end_good_s8_3"),"");
+			add_end(im,get_text("end_good_s9_1"),get_text("end_good_s9_2"),get_text("end_good_s9_3"),get_text("end_good_s9_4"));
+			add_end(im,get_text("end_good_s10_1"),get_text("end_good_s10_2"),"","");
+			add_end(im,get_text("end_good_s11"),"","","");
 		break;
 	}
 }
@@ -141,18 +143,19 @@ else //bad endings
 			add_end(16,get_text("end_bad_s2_1"),get_text("end_bad_s2_2"),get_text("end_bad_s2_3"),"");
 			add_end(16,get_text("end_bad_s3_1"),get_text("end_bad_s3_2"),get_text("end_bad_s3_3"),"");
 			add_end(16,get_text("end_bad_s4_1"),get_text("end_bad_s4_2"),get_text("end_bad_s4_3"),get_text("end_bad_s4_4"));
-			add_end(17,get_text("end_bad_s5_1"),get_text("end_bad_s5_2"),get_text("end_bad_s5_3"),"");
-			add_end(17,get_text("end_bad_s6_1"),get_text("end_bad_s6_2"),get_text("end_bad_s6_3"),"");
-			add_end(17,get_text("end_bad_s7_1"),get_text("end_bad_s7_2"),"","");
-			add_end(17,get_text("end_bad_s8_1"),get_text("end_bad_s8_2"),get_text("end_bad_s8_3"),"");
-			add_end(17,get_text("end_bad_s9_1"),get_text("end_bad_s9_2"),get_text("end_bad_s9_3"),"");
-			add_end(17,get_text("end_bad_s10_1"),get_text("end_bad_s10_2"),get_text("end_bad_s10_3"),"");
-			add_end(17,get_text("end_bad_s11_1"),get_text("end_bad_s11_2"),get_text("end_bad_s11_3"),"");
-			add_end(17,get_text("end_bad_s12"),"","","");
-			add_end(17,get_text("end_bad_s13_1"),get_text("end_bad_s13_2"),"","");
-			add_end(17,get_text("end_bad_s14_1"),get_text("end_bad_s14_2"),get_text("end_bad_s14_3"),"");
-			add_end(17,get_text("end_bad_s15_1"),get_text("end_bad_s15_2"),"","");
-			add_end(17,get_text("end_bad_s16_1"),get_text("end_bad_s16_2"),"","");
+			var im = global.lan = LAN_ENG ? 17 : 19;
+			add_end(im,get_text("end_bad_s5_1"),get_text("end_bad_s5_2"),get_text("end_bad_s5_3"),"");
+			add_end(im,get_text("end_bad_s6_1"),get_text("end_bad_s6_2"),get_text("end_bad_s6_3"),"");
+			add_end(im,get_text("end_bad_s7_1"),get_text("end_bad_s7_2"),"","");
+			add_end(im,get_text("end_bad_s8_1"),get_text("end_bad_s8_2"),get_text("end_bad_s8_3"),"");
+			add_end(im,get_text("end_bad_s9_1"),get_text("end_bad_s9_2"),get_text("end_bad_s9_3"),"");
+			add_end(im,get_text("end_bad_s10_1"),get_text("end_bad_s10_2"),get_text("end_bad_s10_3"),"");
+			add_end(im,get_text("end_bad_s11_1"),get_text("end_bad_s11_2"),get_text("end_bad_s11_3"),"");
+			add_end(im,get_text("end_bad_s12"),"","","");
+			add_end(im,get_text("end_bad_s13_1"),get_text("end_bad_s13_2"),"","");
+			add_end(im,get_text("end_bad_s14_1"),get_text("end_bad_s14_2"),get_text("end_bad_s14_3"),"");
+			add_end(im,get_text("end_bad_s15_1"),get_text("end_bad_s15_2"),"","");
+			add_end(im,get_text("end_bad_s16_1"),get_text("end_bad_s16_2"),"","");
 		break;
 	}
 	
@@ -180,7 +183,7 @@ if(global.lan = LAN_ENG)
 }
 else
 {
-	ds_list_add(name_list,"霊夢：","魔理沙：","早苗","フェザ：","ヌア：","紫：","神奈子：","諏訪子：","にとり：","アリス：");
+	ds_list_add(name_list,"霊夢:","魔理沙:","早苗:","フェザ:","ヌア:","紫:","神奈子:","諏訪子:","にとり:","アリス:");
 }
 color_ref_list = ds_list_create();
 ds_list_add(color_ref_list,$8383ec,$a18e8a,$5ca14e,$61afd8,$ae9156,$ca8eb8,$5252a3,$60b9a0,$dbc57d,$f0e5b1);

@@ -166,7 +166,7 @@ if(global.gp_active) and (spell_wait == 0)
 			case 2:
 				if(state_time == rock_wait_aim)
 				{
-					angle = find_angle(x,y,obj_player.x,obj_player.y);
+					angle = global.rng_patch ? rng(360,false,1) : find_angle(x,y,obj_player.x,obj_player.y);
 					state = 3;
 					play_sound(sfx_redirect1,1,false);
 				}

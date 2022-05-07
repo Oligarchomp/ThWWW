@@ -8,13 +8,13 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 381,
+  "bbox_right": 383,
   "bbox_top": 0,
   "bbox_bottom": 127,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 382,
+  "width": 384,
   "height": 128,
   "textureGroupId": {
     "name": "Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6a85544b-ceeb-4efd-a635-acb400dfe733","path":"sprites/spr_dialoguebox/spr_dialoguebox.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6a85544b-ceeb-4efd-a635-acb400dfe733","path":"sprites/spr_dialoguebox/spr_dialoguebox.yy",},"LayerId":{"name":"1ca64a7a-79e7-4910-97d9-c246d3226fee","path":"sprites/spr_dialoguebox/spr_dialoguebox.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_dialoguebox","path":"sprites/spr_dialoguebox/spr_dialoguebox.yy",},"resourceVersion":"1.0","name":"6a85544b-ceeb-4efd-a635-acb400dfe733","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"2ec729e3-06ff-4e3e-ab09-19d623df1999","path":"sprites/spr_dialoguebox/spr_dialoguebox.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"2ec729e3-06ff-4e3e-ab09-19d623df1999","path":"sprites/spr_dialoguebox/spr_dialoguebox.yy",},"LayerId":{"name":"7c254cb9-0108-42b2-b70b-8a50ae122fed","path":"sprites/spr_dialoguebox/spr_dialoguebox.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_dialoguebox","path":"sprites/spr_dialoguebox/spr_dialoguebox.yy",},"resourceVersion":"1.0","name":"2ec729e3-06ff-4e3e-ab09-19d623df1999","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_dialoguebox","path":"sprites/spr_dialoguebox/spr_dialoguebox.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"32ba9f82-9797-4903-b558-4788766e948c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6a85544b-ceeb-4efd-a635-acb400dfe733","path":"sprites/spr_dialoguebox/spr_dialoguebox.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ad746400-2626-490f-8060-9beb5c3c0f55","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2ec729e3-06ff-4e3e-ab09-19d623df1999","path":"sprites/spr_dialoguebox/spr_dialoguebox.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -54,7 +54,7 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 191,
+    "xorigin": 192,
     "yorigin": 64,
     "eventToFunction": {},
     "eventStubScript": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1ca64a7a-79e7-4910-97d9-c246d3226fee","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7c254cb9-0108-42b2-b70b-8a50ae122fed","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

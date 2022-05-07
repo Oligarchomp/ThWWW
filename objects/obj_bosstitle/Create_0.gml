@@ -12,7 +12,7 @@ state_time = 0;
 
 spr = global.lan = LAN_ENG ? spr_bosstitle : spr_bosstitle_j;
 
-if (global.lan = LAN_JAP)
+if (global.lan == LAN_JAP)
 {
-	y -= 10;	
+	y += 5;	
 }
