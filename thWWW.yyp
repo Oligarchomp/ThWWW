@@ -798,7 +798,6 @@
   ],
   "IncludedFiles": [
     {"CopyToMask":-1,"filePath":"datafiles/text","resourceVersion":"1.0","name":"GameText_eng.txt","resourceType":"GMIncludedFile",},
-    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"Omake.txt","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/text","resourceVersion":"1.0","name":"GameText_j.txt","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/font","resourceVersion":"1.0","name":"MochiyPopOne_Regular.ttf","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/font","resourceVersion":"1.0","name":"umeboshi.ttf","resourceType":"GMIncludedFile",},
@@ -824,6 +823,8 @@
     {"CopyToMask":-1,"filePath":"datafiles/music","resourceVersion":"1.0","name":"boss2.wav","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/music","resourceVersion":"1.0","name":"stage3.wav","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/music","resourceVersion":"1.0","name":"boss4.wav","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"Omake_eng.txt","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"Omake_j.txt","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2022.3.0.625",

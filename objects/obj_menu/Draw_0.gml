@@ -41,7 +41,7 @@ switch(level)
 			{
 				set_font(FONT_SPELLPRACTICE);
 				
-				draw_text_color(580 + menu[i].active_offset - string_width(menu[i].description) / 2,480,menu[i].description,c_white,c_white,c_white,c_white,menu_description_alpha);
+				draw_text_outline(580 + menu[i].active_offset - string_width(menu[i].description) / 2,480,menu[i].description,c_white,c_white,c_white,c_white,menu_description_alpha,c_black);
 				draw_set_font(font_main);
 			}
 		}
@@ -144,9 +144,13 @@ switch(level)
 				draw_replay = true;
 			break;
 			case 6: // options
-				var xx = 460;
-				var yy = 100;
+				var xx = 460; 
+				var yy = 110
 				var xx2 = xx + 50;
+				
+				draw_set_valign(fa_middle);
+				
+				set_font(FONT_MAIN);
 				
 				for(var i = 0; i < array_length(check); i += 1)
 				{
@@ -173,7 +177,7 @@ switch(level)
 						case 1:
 							var x1 = xx2;
 							var x2 = x1 + 200;
-							var y1 = yy + i * 60 + 16;
+							var y1 = yy + i * 60;
 							draw_line_width_color(x1,y1,x2,y1,4,c_white,c_white);
 							
 							var xc = x1 + (x2 - x1) / 9 * (data_read("Data.ini","option","sfx") - 1);
@@ -183,7 +187,7 @@ switch(level)
 						case 2:
 							var x1 = xx2;
 							var x2 = x1 + 200;
-							var y1 = yy + i * 60 + 16;
+							var y1 = yy + i * 60;
 							draw_line_width_color(x1,y1,x2,y1,4,c_white,c_white);
 							
 							var xc = x1 + (x2 - x1) / 9 * (data_read("Data.ini","option","bgm") - 1);
@@ -205,8 +209,9 @@ switch(level)
 						break;
 						
 					}
-				
 				}
+				
+				draw_set_valign(fa_top);
 			break;
 			case 7://music room
 				
@@ -253,6 +258,9 @@ switch(level)
 				
 			break;
 			case 8://manual
+			
+				set_font(FONT_MAIN);
+				
 				for(var i = 0; i < array_length(check); i += 1)
 				{
 					var is_active = (cursor[level] == i);
@@ -362,7 +370,9 @@ switch(level)
 				draw_replay = true;
 			break;
 			case 6: //controle
-			
+				
+				set_font(FONT_MAIN);
+				
 				var xx = 450;
 				var yy = 110;
 				var xx2 = xx + 50;
@@ -518,7 +528,9 @@ if(draw_stage_practice)
 		var col = check[i].action != MENU_INVALID ? c_white : $5a5a5a;
 					
 		check[i].active_offset = goto_value(check[i].active_offset,13 * is_active,6);
-					
+				
+		draw_set_font(font_main);
+		
 		draw_text_color(450 + check[i].active_offset,140 + i * 40,check[i].title,col,col,col,col,1 - !is_active * 0.6);
 	}	
 }
@@ -530,13 +542,25 @@ if(draw_replay)
 {
 	var check = menu[cursor[0]].param;
 	
-	draw_set_font(font_replay);
-				
+	switch(global.lan)
+	{
+		case LAN_ENG:
+			draw_set_font(font_replay);
+		break;
+		case LAN_JAP:
+			draw_set_font(global.font_spellpractice_j);
+		break;
+	}
+		
+	
+			
 	draw_text(170,32,get_text("menu_look_replay"));
 	var xx = 230;
 	var yy = 70;
 	var dist = 22;
-				
+	
+	draw_set_font(font_replay);
+	
 	for(var i = 0; i < array_length(check); i += 1)
 	{
 		is_active = (cursor[1] == i)
@@ -554,8 +578,7 @@ if(draw_replay)
 		// difficulty
 		draw_text_color(xx + 360,yy + i * dist,"/ " + check[i].difficulty,c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
 		// game_type
-		draw_text_color(xx + 460,yy + i * dist,"/ " + check[i].game_type,c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );
-					
+		draw_text_color(xx + 460,yy + i * dist,"/ " + check[i].game_type,c_white,c_white,c_white,c_white,1 - !is_active * 0.6 );		
 	}
 	
 	

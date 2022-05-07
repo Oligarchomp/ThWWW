@@ -110,7 +110,7 @@ else //bad endings
 			add_end(10,get_text("end_bad_r3_1"),get_text("end_bad_r3_2"),get_text("end_bad_r3_3"),get_text("end_bad_r3_4"));
 			add_end(10,get_text("end_bad_r4_1"),get_text("end_bad_r4_2"),"","");
 			add_end(10,get_text("end_bad_r5_1"),get_text("end_bad_r5_2"),get_text("end_bad_r5_3"),"");
-			add_end(10,get_text("end_bad_r6_1"),get_text("end_bad_r6_2"),get_text("end_bad_r6_3"),"");
+			add_end(10,get_text("end_bad_r6_1"),get_text("end_bad_r6_2"),get_text("end_bad_r6_3"),get_text("end_bad_r6_4"));
 			add_end(10,get_text("end_bad_r7_1"),get_text("end_bad_r7_2"),get_text("end_bad_r7_3"),"");
 			add_end(11,get_text("end_bad_r8_1"),get_text("end_bad_r8_2"),get_text("end_bad_r8_3"),"");
 			add_end(11,get_text("end_bad_r9_1"),get_text("end_bad_r9_2"),"","");
@@ -174,8 +174,14 @@ if(ds_list_find_value(line4_list,end_step) == "")
 }
 
 name_list = ds_list_create();
-ds_list_add(name_list,"Reimu","Marisa","Sanae","Feza","Nua","Yukari","Kanako","Suwako","Nitori","Alice");
-
+if(global.lan = LAN_ENG)
+{
+	ds_list_add(name_list,"Reimu:","Marisa:","Sanae:","Feza:","Nua:","Yukari:","Kanako:","Suwako:","Nitori:","Alice:");
+}
+else
+{
+	ds_list_add(name_list,"霊夢：","魔理沙：","早苗","フェザ：","ヌア：","紫：","神奈子：","諏訪子：","にとり：","アリス：");
+}
 color_ref_list = ds_list_create();
 ds_list_add(color_ref_list,$8383ec,$a18e8a,$5ca14e,$61afd8,$ae9156,$ca8eb8,$5252a3,$60b9a0,$dbc57d,$f0e5b1);
 

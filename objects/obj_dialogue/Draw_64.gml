@@ -50,7 +50,7 @@ draw_sprite_ext(spr_dialoguebox,0,x_diag,y_diag,1,1,0,c_white,diag_alpha);
 set_font(FONT_DIALOGUE);
 
 var text = text_list[current_nbr];
-var text_x = x_diag - 175 - 5 * (global.lan == LAN_JAP);
+var text_x = x_diag - 175 - 8 * (global.lan == LAN_JAP);
 var text_y = y_diag - 48 + 4 * (global.lan == LAN_JAP);
 var text_lenght = 350;
 var text_height = 32;

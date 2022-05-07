@@ -21,10 +21,22 @@ switch(global.lan)
 var x_ref = 105;
 var y_ref = 480;
 
+
 for(var i = 0; i < 4; i += 1)
 {
-	draw_text_color(x_ref,y_ref - text_y_dist * 3 + text_y_dist * i,line_list[|i],color_list[|i],color_list[|i],color_list[|i],color_list[|i],1);
+	if (string_char_at(line_list[|i],0) == "-")
+	{
+		draw_set_halign(fa_center);
+		draw_text_color(room_width / 2,y_ref - text_y_dist * 3 + text_y_dist * i,line_list[|i],color_list[|i],color_list[|i],color_list[|i],color_list[|i],1);
+	}
+	else
+	{
+		draw_set_halign(fa_left);
+		draw_text_color(x_ref,y_ref - text_y_dist * 3 + text_y_dist * i,line_list[|i],color_list[|i],color_list[|i],color_list[|i],color_list[|i],1);
+	}
 }
+
+draw_set_halign(fa_left)
 //hide text
 draw_sprite_pos(spr_black,0,0,y_ref + text_y_dist - text_hide_plus,room_width,y_ref + text_y_dist - text_hide_plus,room_width,room_height,0,room_height,1);
 

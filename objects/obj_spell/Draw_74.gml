@@ -72,6 +72,7 @@ if (is_spell)
 	
 	var x_pos = x + text_x - string_width(spell_name);
 	var y_pos = y + text_y;
+	
 
 	draw_text_outline(x_pos,y_pos,spell_name,text_col_top,text_col_top,text_col_bottom,text_col_bottom,text_alpha,col_out);
 	
