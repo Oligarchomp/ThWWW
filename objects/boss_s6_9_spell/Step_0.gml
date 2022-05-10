@@ -52,7 +52,7 @@ if(global.gp_active)
 					var water_dist = 1.95;
 					
 					var anchor_wait = 160; // must be even
-					var anchor_nbr = 15;
+					var anchor_nbr = 12;
 					var anchor_accel = 0.03;
 					var anchor_spd_max = 5.5;
 				break;

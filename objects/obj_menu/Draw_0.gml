@@ -232,7 +232,7 @@ switch(level)
 					
 					draw_set_font(font_spellpractice);
 					
-					draw_text_color(530 + check[i].active_offset,90 + i * 20,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
+					draw_text_color(510 + check[i].active_offset,90 + i * 20,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.6);
 					
 					switch(global.lan)
 					{

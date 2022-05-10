@@ -5,7 +5,7 @@ if(global.gp_active) and (spell_wait == 0)
 	var spell = self;
 	
 	
-	var bubble_size = 166;
+	var bubble_size = 165;
 	
 	//wave1
 	var mentos_nbr = 14;

@@ -117,6 +117,7 @@ if(global.gp_active)
 						y_offscreen = 400;
 						x_offscreen = 400;
 						spd_ref = spd;
+						rot_type = ROT_SET;
 						state = 1;
 					break;
 					case 1:

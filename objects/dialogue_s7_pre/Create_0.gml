@@ -19,10 +19,10 @@ switch(global.player_chosen)
 		set_dialogue(spr_reimu_art,2,true,spr_nothing,0,false,get_text("diag_s7_r4"),-1);
 		set_dialogue(spr_reimu_art,1,true,spr_nothing,0,false,get_text("diag_s7_r5"),-1);
 		set_dialogue(spr_reimu_art,1,false,spr_nothing,0,false,get_text("diag_s7_r6"),-1);
-		set_dialogue(spr_reimu_art,1,false,spr_reverence_art,1,true,get_text("diag_s7_r7"),-1);
-		set_dialogue(spr_reimu_art,4,true,spr_reverence_art,1,false,get_text("diag_s7_r8"),-1);
-		set_dialogue(spr_reimu_art,4,false,spr_reverence_art,0,true,get_text("diag_s7_r9"),-1);
-		set_dialogue(spr_reimu_art,3,true,spr_reverence_art,0,false,get_text("diag_s7_r10"),-1);
+		set_dialogue(spr_reimu_art,1,false,spr_reverence_art,0,true,get_text("diag_s7_r7"),-1);
+		set_dialogue(spr_reimu_art,4,true,spr_reverence_art,0,false,get_text("diag_s7_r8"),-1);
+		set_dialogue(spr_reimu_art,4,false,spr_reverence_art,1,true,get_text("diag_s7_r9"),-1);
+		set_dialogue(spr_reimu_art,3,true,spr_reverence_art,1,false,get_text("diag_s7_r10"),-1);
 		set_dialogue(spr_reimu_art,3,false,spr_reverence_art,4,true,get_text("diag_s7_r11"),-1);
 		set_dialogue(spr_reimu_art,3,false,spr_reverence_art,1,true,get_text("diag_s7_r12"),-1);
 		set_dialogue(spr_reimu_art,3,false,spr_reverence_art,3,true,get_text("diag_s7_r13"),-1);
