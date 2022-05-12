@@ -16,3 +16,8 @@ menu =
 ]
 
 cursor_lockout = 0;
+
+
+cont = ["OK/Shoot","Back/Bomb","Focus","Pause"];
+cont_key = ["Z","X","Shift","Esc"];
+cont_xbox = ["A","B","X","LB"];
