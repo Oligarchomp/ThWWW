@@ -392,6 +392,7 @@
     {"id":{"name":"spr_shot_laser_collision","path":"sprites/spr_shot_laser_collision/spr_shot_laser_collision.yy",},"order":2,},
     {"id":{"name":"obj_staybubble","path":"objects/obj_staybubble/obj_staybubble.yy",},"order":11,},
     {"id":{"name":"spr_boss_indicator","path":"sprites/spr_boss_indicator/spr_boss_indicator.yy",},"order":0,},
+    {"id":{"name":"spr_manual_j","path":"sprites/spr_manual_j/spr_manual_j.yy",},"order":16,},
     {"id":{"name":"spr_feza_idle","path":"sprites/spr_feza_idle/spr_feza_idle.yy",},"order":0,},
     {"id":{"name":"obj_shield_reverence","path":"objects/obj_shield_reverence/obj_shield_reverence.yy",},"order":7,},
     {"id":{"name":"dialogue_s4_yuuto","path":"objects/dialogue_s4_yuuto/dialogue_s4_yuuto.yy",},"order":6,},

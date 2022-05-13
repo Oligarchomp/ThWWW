@@ -267,7 +267,7 @@ switch(level)
 					draw_text_color(80,90 + i * 40,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.7)
 				}
 				
-				draw_sprite_ext(spr_manual,cursor[level],300,0,1,1,0,c_white,menu_description_alpha)
+				draw_sprite_ext(global.lan == LAN_ENG ? spr_manual : spr_manual_j,cursor[level],300,20,1,1,0,c_white,menu_description_alpha)
 			break;
 			case 9://credit
 				draw_sprite(spr_credit,0,room_width / 2,50);
