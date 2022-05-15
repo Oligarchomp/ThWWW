@@ -3,7 +3,7 @@
 
 // Inherit the parent event
 event_inherited();
-need_clear_bonus = true;
+need_clear_bonus = false;
 
 switch(global.player_chosen)
 {

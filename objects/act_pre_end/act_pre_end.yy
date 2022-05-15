@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Stage6",
-    "path": "folders/Objects/STAGES/Stage6.yy",
+    "name": "STAGES",
+    "path": "folders/Objects/STAGES.yy",
   },
   "resourceVersion": "1.0",
   "name": "act_pre_end",

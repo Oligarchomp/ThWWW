@@ -356,7 +356,7 @@
     {"id":{"name":"obj_spell_art","path":"objects/obj_spell_art/obj_spell_art.yy",},"order":0,},
     {"id":{"name":"set_dialogue","path":"scripts/set_dialogue/set_dialogue.yy",},"order":5,},
     {"id":{"name":"boss_s5_4_spell","path":"objects/boss_s5_4_spell/boss_s5_4_spell.yy",},"order":2,},
-    {"id":{"name":"act_pre_end","path":"objects/act_pre_end/act_pre_end.yy",},"order":19,},
+    {"id":{"name":"act_pre_end","path":"objects/act_pre_end/act_pre_end.yy",},"order":9,},
     {"id":{"name":"obj_enemy2","path":"objects/obj_enemy2/obj_enemy2.yy",},"order":1,},
     {"id":{"name":"boss_s6_2_spell","path":"objects/boss_s6_2_spell/boss_s6_2_spell.yy",},"order":4,},
     {"id":{"name":"shoot_ring","path":"scripts/shoot_ring/shoot_ring.yy",},"order":3,},

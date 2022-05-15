@@ -192,6 +192,7 @@ if(global.gp_active) and (spell_wait == 0)
 						state = 2;	
 						pos_type = POS_ANGLE;
 						y_offscreen = 40;
+						angle = global.rng_patch ? rng(360,false,1) : angle;
 					}
 				break;
 				case 96:
@@ -238,7 +239,6 @@ if(global.gp_active) and (spell_wait == 0)
 		{
 			case 0:
 				angle += tree_spin * spell.dir_act;
-				QED = 0;
 			break;
 			case 1:
 				angle_spd = goto_value(angle_spd,0,0.05);
@@ -246,23 +246,6 @@ if(global.gp_active) and (spell_wait == 0)
 			break;
 			case 2:
 				spd = goto_value(spd,-spd_to,0.05);
-				
-				var sq = 18;
-				if(QED > 0)
-				{
-					if(collision_rectangle(x - sq + hsp,y - sq ,x + sq + hsp,y + sq,obj_wall,false,true))
-					{
-						angle = -angle + 180;
-						QED -= 1;
-					}
-				
-					if(collision_rectangle(x - sq,y - sq + vsp,x + sq,y + sq + vsp,obj_wall,false,true))
-					{
-						angle = -angle;
-						QED -= 1;
-					}
-				}
-				
 			break;
 		}
 		if(pos_type == POS_MANUAL)
