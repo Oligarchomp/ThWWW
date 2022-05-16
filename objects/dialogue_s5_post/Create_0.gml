@@ -25,13 +25,13 @@ switch(global.player_chosen)
 		set_dialogue(spr_marisa_art,0,true,spr_nothing,0,false,get_text("diag_s5_m27"),-1);
 	break;
 	case P_SANAE:
-		set_dialogue(spr_sanae_art,2,true,spr_feza_art,6,false,get_text("diag_s5_s20"),-1);
-		set_dialogue(spr_sanae_art,2,false,spr_feza_art,6,true,get_text("diag_s5_s21"),-1);
-		set_dialogue(spr_sanae_art,2,false,spr_feza_art,7,true,get_text("diag_s5_s22"),-1);
+		set_dialogue(spr_sanae_art,2,true,spr_feza_art,6,false,get_text("diag_s5_s21"),-1);
+		set_dialogue(spr_sanae_art,2,false,spr_feza_art,6,true,get_text("diag_s5_s22"),-1);
 		set_dialogue(spr_sanae_art,2,false,spr_feza_art,7,true,get_text("diag_s5_s23"),-1);
-		set_dialogue(spr_sanae_art,0,true,spr_feza_art,7,false,get_text("diag_s5_s24"),-1);
-		set_dialogue(spr_sanae_art,0,false,spr_feza_art,8,true,get_text("diag_s5_s25"),-1);
-		set_dialogue(spr_sanae_art,0,true,spr_nothing,0,false,get_text("diag_s5_s26"),-1);
+		set_dialogue(spr_sanae_art,2,false,spr_feza_art,7,true,get_text("diag_s5_s24"),-1);
+		set_dialogue(spr_sanae_art,0,true,spr_feza_art,7,false,get_text("diag_s5_s25"),-1);
+		set_dialogue(spr_sanae_art,0,false,spr_feza_art,8,true,get_text("diag_s5_s26"),-1);
+		set_dialogue(spr_sanae_art,0,true,spr_nothing,0,false,get_text("diag_s5_s27"),-1);
 	break;
 	
 }

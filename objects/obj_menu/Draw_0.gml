@@ -270,8 +270,10 @@ switch(level)
 				draw_sprite_ext(global.lan == LAN_ENG ? spr_manual : spr_manual_j,cursor[level],300,20,1,1,0,c_white,menu_description_alpha)
 			break;
 			case 9://credit
-				draw_sprite(spr_credit,0,room_width / 2,50);
-				//draw_sprite(spr_pale_credit,step / 40,170,340);
+				draw_sprite(global.lan == LAN_ENG ? spr_credit : spr_credit_j,cursor[level],room_width / 2,room_height / 2);
+				
+				draw_sprite_ext(spr_morespell,0,room_width / 2, 30,1,1,180,c_white,1);
+				draw_sprite_ext(spr_morespell,0,room_width / 2, room_height - 30,1,1,0,c_white,1);
 			break;
 		}
 	break;

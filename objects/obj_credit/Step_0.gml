@@ -43,7 +43,7 @@ switch(state)
 			break;
 		}
 	break;
-	case 1:
+	case 1://touhou
 		switch(state_time)
 		{
 			case 0:
@@ -58,7 +58,7 @@ switch(state)
 			break;
 		}
 	break;
-	case 2:
+	case 2://oligar
 		switch(state_time)
 		{
 			case 0:
@@ -85,7 +85,7 @@ switch(state)
 			break;
 		}
 	break;
-	case 3:
+	case 3://music
 		var off = 160;
 		switch(state_time)
 		{
@@ -126,7 +126,7 @@ switch(state)
 			break;
 		}
 	break;
-	case 4:
+	case 4://characters
 		var off = 200;
 		switch(state_time)
 		{
@@ -145,54 +145,89 @@ switch(state)
 			break;
 		}
 	break;
-	case 5:
+	case 6://playtest
 		switch(state_time)
 		{
 			case 0:
 				create_credit(middle,180,get_text("credit_playtest1"),1);
 				create_credit(middle,185,get_text("credit_line"),1);
 			break;
-			case 340:
+			case 10:
+				create_credit(middle,230,get_text("credit_playtest2"),1);
+			break;
+			case 20:
+				create_credit(middle,265,get_text("credit_playtest3"),1);
+			break;
+			case 30:
+				create_credit(middle,300,get_text("credit_playtest4"),1);
+			break;
+			case 40:
+				create_credit(middle,335,get_text("credit_playtest5"),1);
+			break;
+			case 50:
+				create_credit(middle,370,get_text("credit_playtest6"),1);
+			break;
+			case 360:
 				state += 1;
 			break;
 		}
 	break;
-	case 6:
+	case 5://script
 		switch(state_time)
 		{
 			case 0:
-				create_credit(middle,210,get_text("credit_support1"),1);
-				create_credit(middle,215,get_text("credit_line"),1);
+				create_credit(middle,80,get_text("credit_support1"),1);
+				create_credit(middle,85,get_text("credit_line"),1);
+			break;
+			case 10:
+				create_credit(middle,150,get_text("credit_support2"),1);
 			break;
 			case 20:
-				create_credit(middle,260,get_text("credit_support2"),1);
+				create_credit(middle,190,get_text("credit_support3"),1);
+			break;
+			case 30:
+				create_credit(middle,230,get_text("credit_support4"),1);
 			break;
 			case 40:
-				create_credit(middle,300,get_text("credit_support3"),1);
+				create_credit(middle,320,get_text("credit_support5"),1);
 			break;
-			case 350:
+			case 50:
+				create_credit(middle,360,get_text("credit_support6"),1);
+			break;
+			case 60:
+				create_credit(middle,400,get_text("credit_support7"),1);
+			break;
+			case 80:
+				create_credit(middle,440,get_text("credit_support8"),1);
+				with(obj_credit_spawn)
+				{
+					wait += 50;	
+				}
+			break;
+			case 440:
 				state += 1;
 			break;
 		}
 	break;
-	case 7:
+	case 7://special thanks
 		switch(state_time)
 		{
 			case 0:
 				create_credit(middle,200,get_text("credit_thanks1"),1);
 				create_credit(middle,205,get_text("credit_line"),1);
-				
-				
 			break;
 			case 20:
 				create_credit(middle,250,get_text("credit_thanks2"),1);
 			break;
-			case 330:
+			case 30:
+				create_credit(middle,285,get_text("credit_thanks3"),1);
+			break;
+			case 340:
 				state += 1;
 			break;
 		}
 	break;
-	case 8:
+	case 8://and you
 		switch(state_time)
 		{
 			case 0:
@@ -210,9 +245,6 @@ switch(state)
 				done = true;
 			break;
 		}
-	break;
-	case 9:
-		
 	break;
 }
 

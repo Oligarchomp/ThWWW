@@ -1351,9 +1351,15 @@ menu =
 	{
 		title : "CREDIT",
 		description : get_text("menu_credit"),
-		action : is_extra_valid ? MENU_MENU : MENU_INVALID,
+		action : MENU_MENU,
 		param : 
 		[
+			{
+				action : MENU_NOTHING
+			},
+			{
+				action : MENU_NOTHING
+			},
 			{
 				action : MENU_NOTHING
 			}

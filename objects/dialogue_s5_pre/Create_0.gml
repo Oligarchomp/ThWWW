@@ -78,10 +78,11 @@ switch(global.player_chosen)
 		set_dialogue(spr_sanae_art,1,false,spr_feza_art,3,true,get_text("diag_s5_s12"),-1);
 		set_dialogue(spr_sanae_art,5,true,spr_feza_art,3,false,get_text("diag_s5_s13"),-1);
 		set_dialogue(spr_sanae_art,1,true,spr_feza_art,3,false,get_text("diag_s5_s14"),-1);
-		set_dialogue(spr_sanae_art,1,false,spr_feza_art,0,true,get_text("diag_s5_s15"),-1);
-		set_dialogue(spr_sanae_art,1,false,spr_feza_art,2,true,get_text("diag_s5_s16"),-1);
-		set_dialogue(spr_sanae_art,4,true,spr_feza_art,2,false,get_text("diag_s5_s17"),-1);
-		set_dialogue(spr_sanae_art,4,false,spr_feza_art,3,true,get_text("diag_s5_s18"),-1);
-		set_dialogue(spr_sanae_art,0,true,spr_feza_art,3,false,get_text("diag_s5_s19"),-1);
+		set_dialogue(spr_sanae_art,1,false,spr_feza_art,3,true,get_text("diag_s5_s15"),-1);
+		set_dialogue(spr_sanae_art,1,false,spr_feza_art,0,true,get_text("diag_s5_s16"),-1);
+		set_dialogue(spr_sanae_art,1,false,spr_feza_art,2,true,get_text("diag_s5_s17"),-1);
+		set_dialogue(spr_sanae_art,4,true,spr_feza_art,2,false,get_text("diag_s5_s18"),-1);
+		set_dialogue(spr_sanae_art,4,false,spr_feza_art,3,true,get_text("diag_s5_s19"),-1);
+		set_dialogue(spr_sanae_art,0,true,spr_feza_art,3,false,get_text("diag_s5_s20"),-1);
 	break;
 }

@@ -326,13 +326,12 @@ else
 	room_goto(room_language);
 }
 
-/*
 
 
 room_goto(room_gp)
 
 global.difficulty = 3;
 
-add_stage_event(act_s1_0,0)
-add_stage_event(act_s1_test,1)
+add_stage_event(act_s5_0,0)
+add_stage_event(dialogue_s5_pre,1)
 
