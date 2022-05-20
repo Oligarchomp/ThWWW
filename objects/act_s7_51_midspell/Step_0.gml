@@ -4,7 +4,10 @@ if(global.gp_active)
 {
 	with(obj_spell_art)
 	{
-		sprite_index = spr_nothing;	
+		if(global.game_type == GAME_EXTRA)
+		{
+			sprite_index = spr_nothing;
+		}
 	}
 	
 	if (spell_wait == 0)

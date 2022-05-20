@@ -219,12 +219,28 @@ switch(pause_state)
 					final_stage_replay = true;
 				}
 			}
-			
-			
 		}
 		
 		text_offset = goto_value(text_offset,0,-text_offset_max / pause_spd );
 		pause_alpha = goto_value(pause_alpha,1,1 / pause_spd);
+		
+		if(abs(global.down_down - global.up_down))
+		{
+			vhold_direction_time += 1;
+		
+			if(vhold_direction_time > 20)
+			{
+				if(vhold_direction_time % 6 == 0)
+				{
+					global.down_pressed = global.down_down;
+					global.up_pressed = global.up_down;
+				}
+			}
+		}
+		else
+		{
+			vhold_direction_time = 0;
+		}
 	break;
 	case 2: // leaving pause
 		text_offset = goto_value(text_offset,text_offset_max,-text_offset_max / pause_spd );

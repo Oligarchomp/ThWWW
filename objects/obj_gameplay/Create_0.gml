@@ -220,6 +220,8 @@ level = 0;
 
 continue_song = false;
 
+vhold_direction_time = 0;
+
 pause = 
 [
 	{

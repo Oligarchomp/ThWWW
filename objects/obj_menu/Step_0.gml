@@ -419,13 +419,11 @@ if(cursor_lockout == 0)
 		}
 	}
 	
-	
 
 	if(!checking_input)
 	{
 		if(global.shot_pressed)
 		{
-		
 			var act = array_check[cursor[level]].action;
 	
 			switch(act)

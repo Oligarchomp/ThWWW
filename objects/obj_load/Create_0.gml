@@ -4,7 +4,7 @@
 window_set_fullscreen(data_read("Data.ini","option","fullscreen"));
 global.rng_patch = data_read("Data.ini","option","rng")
 
-global.ver = "0.0.45";
+global.ver = "0.9.0";
 
 global.sound_mult = 1.1;
 
@@ -326,7 +326,7 @@ else
 	room_goto(room_language);
 }
 
-
+/*
 
 room_goto(room_gp)
 

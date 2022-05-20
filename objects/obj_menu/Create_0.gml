@@ -1423,11 +1423,46 @@ for(var i = 0; i < 20; i += 1)
 		{
 			case GAME_EXTRA:	
 				var is_extra = true;
+				var type = "Extra";
+			break;
 			case GAME_FULL:
 				var type = "All";
 			break;
-			case GAME_STAGE:	
-				var type = "Stage Practice";
+			case GAME_STAGE:
+				var num_full = get_text_file("ev",replay_check);
+				
+				var r = 1;
+				var num_id = "";
+				while(string_char_at(num_full,r) != ",")
+				{
+					num_id = num_id + string_char_at(num_full,r);
+					r += 1;
+				}
+				
+				var num = "0";
+				switch(num_id)
+				{
+					case act_s1_0:
+						num = "1";
+					break;
+					case act_s2_0:
+						num = "2";
+					break;
+					case act_s3_0:
+						num = "3";
+					break;
+					case act_s4_0:
+						num = "4";
+					break;
+					case act_s5_0:
+						num = "5";
+					break;
+					case act_s6_0:
+						num = "6";
+					break;
+				}
+				
+				var type = "Stage " + num + " Practice";
 			break;
 			case GAME_SPELL:	
 				var type = "Spell Practice";
