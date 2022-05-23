@@ -825,7 +825,6 @@
     {"CopyToMask":-1,"filePath":"datafiles/music","resourceVersion":"1.0","name":"boss4.wav","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"Omake_eng.txt","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"Omake_j.txt","resourceType":"GMIncludedFile",},
-    {"CopyToMask":-1,"filePath":"datafiles/music","resourceVersion":"1.0","name":"stage4_old.wav","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/music","resourceVersion":"1.0","name":"stage4.wav","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {

@@ -129,7 +129,7 @@ draw_set_font(font_spell);
 var x_draw_time = x + 366;
 var y_draw_time = 24
 var time_draw = add_zero(floor(time_left / 60),2);
-draw_score(time_draw,x_draw_time,y_draw_time,spr_number,1,spell_info_alpha)
+draw_score(time_draw,x_draw_time,y_draw_time - time_height * (time_scale - 1) / 2,spr_number,time_scale,spell_info_alpha)
 
 var dec = floor((time_left % 60) * 100 / 60)
 var str = add_zero(string(dec),2);

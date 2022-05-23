@@ -11,6 +11,13 @@ with(obj_shield_reverence)
 {
 	state = 1;	
 }
+
+with(obj_item) // for the anchor point cancel item
+{
+	x = max(x,-30);
+	x = min(x,room_width + 30);	
+}
+
 // Inherit the parent event
 event_inherited();
 

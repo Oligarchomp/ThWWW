@@ -82,6 +82,9 @@ time_left = time;
 
 time_ticking_low = 20.1 * 60 // if time above this value, clock starts ticking at 10, else at 5
 
+time_scale = 1;
+time_height = sprite_get_height(spr_number);
+
 bonus = 0;
 bonus_max = bonus;
 

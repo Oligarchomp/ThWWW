@@ -19,5 +19,3 @@ metronome_wave = 0;
 
 metronome_angle = -180;
 
-last_dan = 3;
-last_dep = 3;

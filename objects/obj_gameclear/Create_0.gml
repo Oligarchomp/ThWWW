@@ -9,10 +9,10 @@ state = 0;
 old_state = -1;
 state_time = 0;
 
-bonus_life = 20000000
+bonus_life = 10000000
 life_nbr = global.life;
 
-bonus_bomb = 5000000;
+bonus_bomb = 3000000;
 bomb_nbr = global.bomb;
 
 bonus = bonus_life * life_nbr + bonus_bomb * bomb_nbr;

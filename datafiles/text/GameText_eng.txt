@@ -203,7 +203,7 @@ spell_s6_3c = Vintner Sign "Alcoholic Stupor"
 spell_s6_4a = Patriarch "Immutable Prophet"
 spell_s6_4b = Patriarch "Titanic Prophet"
 spell_s6_5a = "Wonderful Waking World"
-spell_s6_5b = "Rise of the Waking World"
+spell_s6_5b = "Savior of the Waking World"
 
 spell_s7_mid1 = Art Sign "My Personal Interpretation!"
 spell_s7_mid2 = Game Sign "Admirer For the Likes of You!"
@@ -367,10 +367,10 @@ diag_s3_s15 = Miss Sanae, please let me explain! T-T
 diag_s3_s16 = I don't negotiate with criminals! Give it back to me! 
 diag_s3_s17 = If you don't want to listen to me, guess I'll need to calm you down first! >:(
 diag_s3_s18 = Had enough? You choose to surrender?
-diag_s3_s19 = Lady Kochiya, I have a lot of things to explain to you! Please listen to me!
+diag_s3_s19 = Miss Sanae, I have a lot of things to explain to you! Please listen to me!
 diag_s3_s20 = You lost, why would I?
 diag_s3_s21 = Well you see, I...There was...I mean, I was...Where do I start?? 
-diag_s3_s22 = Is that rain? Oh man, I can't stay here! Lady Kochiya! I'll catch you up later!
+diag_s3_s22 = Is that rain? Oh man, I can't stay here! Miss Sanae! I'll catch you up later!
 diag_s3_s23 = Rain? It didn't seem like it was going to rain when I was down there...
 
 
@@ -1141,18 +1141,6 @@ credit_thanks2 = ChairGTables
 credit_thanks3 = HakanaiBlue
 credit_you1 = AND YOU!
 credit_you2 = THANKS FOR PLAYING!
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

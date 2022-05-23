@@ -55,12 +55,12 @@ if(global.gp_active)
 					var sword_wait = 1;
 			
 					var ice_row = 4;
-					var ice_spd = 3.5;
+					var ice_spd = 3.2;
 					
 					var ice_arc = 3;
 					var ice_dist = 46;
 			
-					var wave_wait = 8;
+					var wave_wait = 12;
 				break;
 			}
 	

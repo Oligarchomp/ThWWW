@@ -6,72 +6,72 @@ if(global.gp_active) and (spell_wait == 0)
 	{
 		case 0:
 			var aim_arc = 1;
-			var aim_spd = 3;
+			var aim_spd = 2.9;
 			var aim_dist = 0;
 			
 			var arrow_size = 5;
 			var arrow_spd = 3;
 			
 			var ball_nbr = 4;
-			var ball_spd = 0.8;
-			var ball_accel = 0.03;
+			var ball_spd = 0.7;
+			var ball_accel = 0.02;
 			
 			var fill_ring = 8;
-			var fill_spd = 2;
+			var fill_spd = 1.8;
 			var fill_wait = 44;
 			
 			var wave_wait = 150;
 		break;
 		case 1:
 			var aim_arc = 3;
-			var aim_spd = 3.3;
+			var aim_spd = 3.2;
 			var aim_dist = 39;
 			
 			var arrow_size = 5;
 			var arrow_spd = 4;
 			
 			var ball_nbr = 13;
-			var ball_spd = 0.9;
-			var ball_accel = 0.03;
+			var ball_spd = 0.8;
+			var ball_accel = 0.025;
 			
 			var fill_ring = 15;
-			var fill_spd = 2;
+			var fill_spd = 1.8;
 			var fill_wait = 36;
 			
 			var wave_wait = 150;
 		break;
 		case 2:
 			var aim_arc = 5;
-			var aim_spd = 3.6;
+			var aim_spd = 3.5;
 			var aim_dist = 33;
 			
 			var arrow_size = 5;
 			var arrow_spd = 5;
 			
 			var ball_nbr = 18;
-			var ball_spd = 1;
+			var ball_spd = 0.9;
 			var ball_accel = 0.03;
 			
 			var fill_ring = 19;
-			var fill_spd = 2;
+			var fill_spd = 1.8;
 			var fill_wait = 34;
 			
 			var wave_wait = 150;
 		break;
 		case 3:
 			var aim_arc = 7;
-			var aim_spd = 3.6;
+			var aim_spd = 3.5;
 			var aim_dist = 26;
 			
 			var arrow_size = 5;
 			var arrow_spd = 5;
 			
 			var ball_nbr = 22;
-			var ball_spd = 1;
+			var ball_spd = 0.9;
 			var ball_accel = 0.03;
 			
 			var fill_ring = 24;
-			var fill_spd = 2;
+			var fill_spd = 1.8;
 			var fill_wait = 30;
 			
 			var wave_wait = 150;

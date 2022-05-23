@@ -138,11 +138,10 @@ if(global.gp_active)
 				if(spd == 0)
 				{
 					state += 1;
-					aim_to = rng(360,false,1)//find_angle(x,y,obj_player.x,obj_player.y);
 				}
 			break;
 			case 1:
-				shoot_ring(DAN_MENTOS,3,aim_ring,x,y,aim_to,aim_spd,sfx_redirect2,2);
+				shoot_ring(DAN_MENTOS,3,aim_ring,x,y,999,aim_spd,sfx_redirect2,2);
 				state += 1;
 			break;
 			case 2:

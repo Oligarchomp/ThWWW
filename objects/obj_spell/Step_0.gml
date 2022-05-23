@@ -153,11 +153,13 @@ if (global.gp_active)
 			case 300:
 			case 240:
 				play_sound(sfx_timer1,1,false);
+				time_scale = 1.3;
 			break;
 			case 180:
 			case 120:
 			case 60:
 				play_sound(sfx_timer2,1,false);
+				time_scale = 1.6;
 			break;
 		}
 	}
@@ -170,17 +172,20 @@ if (global.gp_active)
 			case 360:
 			case 300:
 				play_sound(sfx_timer1,1,false);
+				time_scale = 1.3;
 			break;
 			case 240:
 			case 180:
 			case 120:
 			case 60:
 				play_sound(sfx_timer2,1,false);
+				time_scale = 1.6;
 			break;
 		}
 	}
 	time_left -= 1;
 	
+	time_scale = goto_value(time_scale,1,0.05);
 
 	
 	// end of spell
