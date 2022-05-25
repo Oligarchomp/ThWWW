@@ -295,9 +295,9 @@ global.play_type = PLAY_MANUAL;
 
 
 global.font_main_j = font_add("font/MochiyPopOne_Regular.ttf",18,false,false,32,128);
-global.font_dialogue_j =  font_add("font/Unifont.ttf",12,false,false,32,128);//font_add("font/umeboshi.ttf",11,false,false,32,128);
+global.font_dialogue_j =  font_add("font/Unifont.ttf",12,false,false,32,128);
 global.font_spellpractice_j = font_add("font/Unifont.ttf",12,false,false,32,128);
-global.font_pause_j = font_add("font/SNsanafonkakuP.ttf",17,false,false,32,128);
+global.font_pause_j = font_add("font/umeboshi.ttf",17,false,false,32,128);
 global.font_game_info_j = font_add("font/MadouFutoMaruGothic.ttf",12,true,false,32,128);
 
 
@@ -327,7 +327,7 @@ else
 }
 
 
-
+/*
 room_goto(room_gp)
 
 global.difficulty = 3;

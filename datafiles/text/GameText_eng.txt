@@ -804,7 +804,7 @@ end_good_m9_2 = Nua: "I dunno."
 end_good_m9_3 = Feza: "She's most likely around the ark. Worlds don't break every day." 
 end_good_m9_4 = Nua: "Yeah, I was about to say it."
 end_good_m10 = Marisa: "Guess I'll need to go through some extras to clear this incident for good."
-end_good_m11 = --------Good Ending! A god of soap? What? Try out the Extra Stage!--------
+end_good_m11 = -----Good Ending! A god of soap? What? Try out the Extra Stage!-----
 
 end_good_s1_1 = Youkai Mountain, Gensokyo's highest peak.
 end_good_s1_2 = The abnormal rain has been successfully stopped, but the sky was still into pieces.
@@ -876,8 +876,8 @@ end_bad_r11_2 =  The sky was shattered, people were afraid of Gensoyko breaking 
 end_bad_r11_3 =  And nobody seemed wanting to remember the forgotten ones anymore.
 end_bad_r12_1 =  Reimu took full responsability over what was left of the Hakurei barrier. 
 end_bad_r12_2 =  But she knew that the sky could never go back to its previous unbroken state. 
-end_bad_r13_1 = ----------Bad Ending. Gensokyo has been forgotten by its creator.------------
-end_bad_r13_2 = --------------Try beating the game without using continues.----------------
+end_bad_r13_1 = -----Bad Ending. Gensokyo has been forgotten by its creator.-----
+end_bad_r13_2 = -----Try beating the game without using continues.-----
 
 end_bad_m1_1 = Forest of Magic, not far from the Human Village.
 end_bad_m1_2 = The abnormal rain has been stopped but not quickly enough.
@@ -916,8 +916,8 @@ end_bad_m13_2 = Together, they tried to find a spell powerful enough to lower th
 end_bad_m13_3 = It was hard times, but they keep hoping that one day, things will maybe get better. 
 end_bad_m14_1 = However, everytime Marisa would look over at the flooded Gensokyo...
 end_bad_m14_2 = She would see the ominous reflection of the ever-lasting broken sky.
-end_bad_m15_1 = ----------Bad Ending. Gensokyo's flooded and the sky is still shattered.---------
-end_bad_m15_2 = ----------------Try beating the game without using continues.---------------
+end_bad_m15_1 = -----Bad Ending. Gensokyo's flooded and the sky is still shattered.------
+end_bad_m15_2 = -----Try beating the game without using continues.-----
 
 
 end_bad_s1_1 = Youkai Mountain, Gensokyo's highest peak.
@@ -961,8 +961,8 @@ end_bad_s14_2 = Youkai Mountain was one of the only places that was high enough 
 end_bad_s14_3 = So it became crowded with humans and youkai alike.
 end_bad_s15_1 = And every time someone where to look at the Great Barrier...
 end_bad_s15_2 = The sky would show its ominous unhealable scar.
-end_bad_s16_1 = --------Bad Ending. The Moriya became the branch shrine of the Kappa.--------
-end_bad_s16_2 = ---------------Try beating the game without using continues----------------
+end_bad_s16_1 = -----Bad Ending. The Moriya became the branch shrine of the Kappa.-----
+end_bad_s16_2 = -----Try beating the game without using continues-----
 
 
 spell_comment = Spell Comment:

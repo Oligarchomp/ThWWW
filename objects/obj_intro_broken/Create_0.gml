@@ -72,3 +72,8 @@ dist = get_distance(xx,yy,x,y);
 
 vsp = 0;
 hsp = rng(0.5,false,1) - 0.25;
+
+if(global.lan == LAN_JAP)
+{
+	sprite_index = spr_intro_broken_j;
+}

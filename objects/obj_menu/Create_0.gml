@@ -1362,6 +1362,9 @@ menu =
 			},
 			{
 				action : MENU_NOTHING
+			},
+			{
+				action : MENU_NOTHING
 			}
 		]
 	},
