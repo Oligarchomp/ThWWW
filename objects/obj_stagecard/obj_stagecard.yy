@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_stagecard",
-    "path": "sprites/spr_stagecard/spr_stagecard.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

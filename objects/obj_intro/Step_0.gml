@@ -15,7 +15,7 @@ if(step == 180) or ((global.shot_down) and (step > 1))
 	play_sound(sfx_mofbomb,1,false);
 	play_sound(sfx_shock,1,false);
 	
-	var num = sprite_get_number(spr_intro_broken);
+	var num = sprite_get_number(global.spr_intro_piece);
 	
 	for(var i = 0; i < num; i += 1)
 	{

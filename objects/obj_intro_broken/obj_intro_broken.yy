@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_intro_broken",
-    "path": "sprites/spr_intro_broken/spr_intro_broken.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

@@ -327,6 +327,9 @@ else
 }
 
 
+load_language_sprite();
+
+
 /*
 room_goto(room_gp)
 

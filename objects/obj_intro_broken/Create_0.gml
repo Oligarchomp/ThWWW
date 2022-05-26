@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+sprite_index = global.spr_intro_piece;
 image_speed = 0;
 image_index = instance_number(obj_intro_broken) - 1;
 		
@@ -73,7 +74,3 @@ dist = get_distance(xx,yy,x,y);
 vsp = 0;
 hsp = rng(0.5,false,1) - 0.25;
 
-if(global.lan == LAN_JAP)
-{
-	sprite_index = spr_intro_broken_j;
-}

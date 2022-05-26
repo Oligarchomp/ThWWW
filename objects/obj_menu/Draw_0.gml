@@ -48,7 +48,7 @@ switch(level)
 	break;
 	case 1:
 		
-		var spr = global.lan == LAN_ENG ? spr_difficulty : spr_difficulty_j;
+		var spr = global.spr_difficulties;
 		
 		switch(cursor[0])
 		{
@@ -267,10 +267,10 @@ switch(level)
 					draw_text_color(80,90 + i * 40,check[i].title,c_white,c_white,c_white,c_white,1 - !is_active * 0.7)
 				}
 				
-				draw_sprite_ext(global.lan == LAN_ENG ? spr_manual : spr_manual_j,cursor[level],300,20,1,1,0,c_white,menu_description_alpha)
+				draw_sprite_ext(global.spr_manual,cursor[level],300,20,1,1,0,c_white,menu_description_alpha)
 			break;
 			case 9://credit
-				draw_sprite(global.lan == LAN_ENG ? spr_credit : spr_credit_j,cursor[level],room_width / 2,room_height / 2);
+				draw_sprite(global.spr_credit,cursor[level],room_width / 2,room_height / 2);
 				
 				draw_sprite_ext(spr_morespell,0,room_width / 2, 30,1,1,180,c_white,1);
 				draw_sprite_ext(spr_morespell,0,room_width / 2, room_height - 30,1,1,0,c_white,1);
@@ -494,15 +494,13 @@ if(draw_player)
 		shader_reset();
 					
 		//draw description
-		var spr = global.lan == LAN_ENG ? spr_player_description : spr_player_description_j;
-		draw_sprite_ext(spr,global.player_chosen,685,240,1,1,0,c_white,1);
+		draw_sprite_ext(global.spr_player_description,global.player_chosen,685,240,1,1,0,c_white,1);
 					
 	}
 				
 	var dif = cursor[0] != 1 ? global.difficulty : 4;
-	var spr = global.lan == LAN_ENG ? spr_difficulty : spr_difficulty_j;
 			
-	draw_sprite_ext(spr,dif,difficuly[dif].x_is,difficuly[dif].y_is,1,1,0,c_white,1);
+	draw_sprite_ext(global.spr_difficulties,dif,difficuly[dif].x_is,difficuly[dif].y_is,1,1,0,c_white,1);
 
 }
 

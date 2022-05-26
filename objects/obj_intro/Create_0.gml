@@ -5,3 +5,5 @@ alpha = 1;
 step = 0;
 
 instance_create_depth(870,510,depth - 1,obj_loading)
+
+sprite_index = global.spr_intro;

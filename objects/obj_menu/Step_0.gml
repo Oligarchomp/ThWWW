@@ -400,6 +400,9 @@ if(cursor_lockout == 0)
 							global.menu_level = level;
 							global.menu_cursor = cursor;
 						
+							delete_language_sprite();
+							load_language_sprite()
+						
 							event_perform(ev_create,0)
 						}
 					break;

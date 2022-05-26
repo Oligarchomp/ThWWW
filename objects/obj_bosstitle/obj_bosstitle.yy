@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_bosstitle",
-    "path": "sprites/spr_bosstitle/spr_bosstitle.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

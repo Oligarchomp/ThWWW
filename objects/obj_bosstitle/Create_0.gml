@@ -10,7 +10,6 @@ state = 0;
 old_state = -1;
 state_time = 0;
 
-spr = global.lan = LAN_ENG ? spr_bosstitle : spr_bosstitle_j;
 
 if (global.lan == LAN_JAP)
 {
