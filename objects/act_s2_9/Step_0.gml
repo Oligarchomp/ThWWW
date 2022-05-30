@@ -20,7 +20,7 @@ if(global.gp_active)
 		break;
 		case 1:
 			var ice_row = 7;
-			var ice_dist = 18;
+			var ice_dist = 16;
 			var ice_spd_max = 5.2;
 			var ice_spd_min = 3.7;
 			var ice_wait = 34;

@@ -254,7 +254,7 @@ switch(pause_state)
 				set_bgm("continue");	
 			}
 			
-			pause_lockout = 10;
+			pause_lockout = 15;
 			
 			pause_state = 0;
 			pause_type = PAUSE_MANUAL;

@@ -13,3 +13,5 @@ boss_movement_goto(room_width / 2, 100,6);
 
 obj_boss.y_dis_max = 110;
 obj_boss.x_disjoint = 100; 
+
+act_dir = -1;

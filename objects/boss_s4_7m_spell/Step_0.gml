@@ -20,8 +20,8 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var wave_wait = 130;
 			
-			var star_ring = 19;
-			var star_spd = 3.6;
+			var star_ring = 21;
+			var star_spd = 4.3;
 			var star_wait = 30;
 		break;
 		case 1:
@@ -61,7 +61,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var wave_wait = 100;
 			
 			var star_ring = 32;
-			var star_spd = 6.2;
+			var star_spd = 6.1;
 			var star_wait = 15;
 		break;
 		case 3:
@@ -81,7 +81,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var wave_wait = 90;
 			
 			var star_ring = 35;
-			var star_spd = 7;
+			var star_spd = 6.7;
 			var star_wait = 12;
 		break;
 	}

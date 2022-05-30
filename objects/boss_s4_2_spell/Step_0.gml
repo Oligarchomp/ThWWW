@@ -127,7 +127,7 @@ if(global.gp_active) and (spell_wait == 0)
 			for(var i = 0; i < fire_ring_nbr; i += 1)
 			{
 				shoot_ring(DAN_FIREBALL,6,fire_ring,obj_boss.x,obj_boss.y,ang,fire_spd_min + fire_spd_git / fire_ring_nbr * i ,noone,3);
-				ang += 360 / fire_ring / 3;
+				ang += 360 / fire_ring / 3 * act_dir;
 			}
 			state = 2;
 		break;
@@ -139,6 +139,7 @@ if(global.gp_active) and (spell_wait == 0)
 				break;
 				case wait_wave:
 					state = 0;
+					act_dir *= -1;
 				break;
 			}
 			

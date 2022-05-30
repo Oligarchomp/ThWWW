@@ -36,8 +36,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var sword_size = 5;
 			
 			var rice_open = 22;
-			var rice_spd_shoot = 4.5;
-			var rice_spd_git = 1.8;
+			var rice_spd_shoot = 4.2;
+			var rice_spd_git = 2.5;
 			var rice_spd_div = 2.4;
 			var rice_nbr = 3;
 			

@@ -318,10 +318,14 @@ if(global.gp_active) and (spell_wait == 0)
 				}
 				
 				//for hard
-				if(collision_circle(x,y,30,obj_danmaku6,false,true))
+				if(instance_exists(obj_danmaku6))
 				{
-					state = 1;
-					play_sound(sfx_redirect2,1,false);
+					var obj = instance_nearest(x,y,obj_danmaku6);
+					if(get_distance(x,y,obj.x,obj.y) < 44) //collision_circle(x,y,30,obj_danmaku6,false,true))
+					{
+						state = 1;
+						play_sound(sfx_redirect2,1,false);
+					}
 				}
 			break;
 			case 1:

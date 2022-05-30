@@ -22,7 +22,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var arc_spd_div = 1;
 			var arc_aim_open = 20;
 			
-			var bird_off = 90;
+			var bird_off = 70;
 		break;
 		case 1:
 			var bird_wait = 3;

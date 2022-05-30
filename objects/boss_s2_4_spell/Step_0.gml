@@ -41,7 +41,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var move_start = 160;
 			var move_wait = 130;
 			
-			var aim_wait = 40;
+			var aim_wait = 43;
 			var aim_nbr_ring = 46;
 			var aim_nbr_row = 1;
 			var aim_spd_min = 2.8;
@@ -55,7 +55,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var move_start = 160;
 			var move_wait = 130;
 			
-			var aim_wait = 36;
+			var aim_wait = 38;
 			var aim_nbr_ring = 55;
 			var aim_nbr_row = 1;
 			var aim_spd_min = 3;

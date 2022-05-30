@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "spr_player_wall_collision",
     "path": "sprites/spr_player_wall_collision/spr_player_wall_collision.yy",

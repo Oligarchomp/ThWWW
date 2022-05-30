@@ -34,7 +34,7 @@ if(global.gp_active)
 			
 			if(step % laser_wait == 40)
 			{
-				boss_movement_random(2,4,1);	
+				boss_movement_random(2,15,1);	
 				
 				if(laser_dir == 1)
 				{
