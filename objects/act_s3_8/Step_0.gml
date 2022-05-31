@@ -58,7 +58,7 @@ if(global.gp_active)
 			{
 				for(var i = 50; i <= 350; i += 50)
 				{
-					var inst = create_enemy(EN_BLACK,i,-20,12,7,6,-90);
+					var inst = create_enemy(EN_BLACK,i,-20,15,7,6,-90);
 					inst.item_nbr = 2;
 				}
 			}

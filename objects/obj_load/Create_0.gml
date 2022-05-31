@@ -326,7 +326,7 @@ else
 	room_goto(room_language);
 }
 
-
+/*
 
 room_goto(room_gp)
 
