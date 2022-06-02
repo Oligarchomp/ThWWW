@@ -48,7 +48,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var arrow_size = 5;
 			var arrow_spd = 5;
 			
-			var ball_nbr = 18;
+			var ball_nbr = 17;
 			var ball_spd = 0.9;
 			var ball_accel = 0.03;
 			
@@ -66,7 +66,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var arrow_size = 5;
 			var arrow_spd = 5;
 			
-			var ball_nbr = 22;
+			var ball_nbr = 21;
 			var ball_spd = 0.9;
 			var ball_accel = 0.03;
 			

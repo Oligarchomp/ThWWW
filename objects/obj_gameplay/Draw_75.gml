@@ -50,7 +50,7 @@ if(pause_state >= 1)
 	
 		if(level == 0)
 		{
-			draw_sprite_ext(spr_leaf,0,180,300,1,1, sin(step / 50) * 2.5,c_white,pause_alpha);
+			draw_sprite_ext(spr_leaf,0,180,294,1,1, sin(step / 50) * 2.5,c_white,pause_alpha);
 		}
 		
 		draw_text_outline(240,180,pause_title,c_white,c_white,c_white,c_white,pause_alpha,c_black);
