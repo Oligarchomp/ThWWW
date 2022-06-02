@@ -13,7 +13,7 @@ switch(player_id)
 	case P_MARISA:
 		art = spr_marisa_art;
 		text = get_text("bomb_marisa");
-		open = 18;
+		open = 5;
 		open_ref = open;
 		time = 250;
 		y_shoot_off = 100;

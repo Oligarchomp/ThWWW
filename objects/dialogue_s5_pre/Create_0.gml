@@ -12,7 +12,7 @@ switch(global.player_chosen)
 {
 	case P_REIMU:
 		boss_step = 2;
-		bgm_step = 18;
+		bgm_step = 17;
 		title_step = 3;
 		set_dialogue(spr_reimu_art,2,true,spr_nothing,0,false,get_text("diag_s5_r1"),-1);
 		set_dialogue(spr_reimu_art,5,true,spr_nothing,0,false,get_text("diag_s5_r2"),-1);
