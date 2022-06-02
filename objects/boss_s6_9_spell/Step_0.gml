@@ -231,28 +231,29 @@ if(global.gp_active)
 				boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);
 				play_sound(sfx_boat,1,false);
 			}
-	
-			if(obj_player.bomb_time != 0)
-			{
-				if(can_shield)
-				{
-					obj_boss.alpha = 0.4;
-					obj_boss.mask_index = spr_nothing;
-					can_shield = false;
-					instance_create_depth(obj_boss.x,obj_boss.y,obj_boss.depth - 1, obj_shield_nua);
-				}
-			}
-			else
-			{
-				obj_boss.alpha = 1;
-				obj_boss.mask_index = spr_boss_hurtbox;
-				can_shield = true;
-				with(obj_shield_nua)
-				{
-					state = 1;	
-				}
-			}
 		break;
+	}
+	
+	//shield
+	if(obj_player.bomb_time != 0)
+	{
+		if(can_shield)
+		{
+			obj_boss.alpha = 0.4;
+			obj_boss.mask_index = spr_nothing;
+			can_shield = false;
+			instance_create_depth(obj_boss.x,obj_boss.y,obj_boss.depth - 1, obj_shield_nua);
+		}
+	}
+	else
+	{
+		obj_boss.alpha = 1;
+		obj_boss.mask_index = spr_boss_hurtbox;
+		can_shield = true;
+		with(obj_shield_nua)
+		{
+			state = 1;	
+		}
 	}
 }
 

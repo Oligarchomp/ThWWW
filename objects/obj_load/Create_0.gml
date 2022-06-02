@@ -4,7 +4,7 @@
 window_set_fullscreen(data_read("Data.ini","option","fullscreen"));
 global.rng_patch = data_read("Data.ini","option","rng")
 
-global.ver = "0.9.0";
+global.ver = "1.0.0";
 
 global.sound_mult = 1.1;
 
@@ -25,8 +25,8 @@ audio_emitter_gain(global.sfx_emitter,(global.sfx_volume - 1) * global.sound_mul
 var bgm = data_read("Data.ini","option","bgm");
 if(bgm == 0)
 {
-	data_write("Data.ini","option","bgm",8);
-	global.bgm_volume = 8;
+	data_write("Data.ini","option","bgm",9);
+	global.bgm_volume = 9;
 }
 else
 {

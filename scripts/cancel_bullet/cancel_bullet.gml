@@ -14,6 +14,7 @@ function cancel_bullet(argument0){
 				cancel_size = 2.5;
 			break;
 			case DAN_MENTOS:
+			case DAN_CRAB:
 				cancel_size = 1.5;
 			break;
 			case DAN_ANCHOR:
@@ -23,7 +24,7 @@ function cancel_bullet(argument0){
 				cancel_size = 2.2;
 			break;
 			case DAN_HEART:
-				cancel_size = 1.4;
+				cancel_size = 1.3;
 			break;
 			case DAN_STARBIG:
 				cancel_size = 1.1;
