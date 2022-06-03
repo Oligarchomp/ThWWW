@@ -824,10 +824,10 @@
     {"CopyToMask":-1,"filePath":"datafiles/music","resourceVersion":"1.0","name":"stage1.wav","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/music","resourceVersion":"1.0","name":"stage6.wav","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/music","resourceVersion":"1.0","name":"end.wav","resourceType":"GMIncludedFile",},
-    {"CopyToMask":-1,"filePath":"datafiles/music","resourceVersion":"1.0","name":"boss5.wav","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/music","resourceVersion":"1.0","name":"stage5.wav","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/music","resourceVersion":"1.0","name":"boss6.wav","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/music","resourceVersion":"1.0","name":"boss1.wav","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/music","resourceVersion":"1.0","name":"boss5.wav","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2022.5.0.8",

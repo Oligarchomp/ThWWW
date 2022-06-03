@@ -87,6 +87,8 @@ else
 	event_step = global.replay_event_step; // current event step
 	obj_player.x = global.replay_x;
 	obj_player.y = global.replay_y;
+	obj_option.x = global.replay_x;
+	obj_option.y = global.replay_y;
 	
 	global.life = global.replay_life;
 	global.bomb = global.replay_bomb;
@@ -359,7 +361,7 @@ step = 0;
 
 old_fps = 60;
 
-pause_lockout = 0;
+pause_lockout = 10;
 
 pause_title_pause = get_text("pause_pause");
 pause_title_endreplay = get_text("pause_endreplay");
