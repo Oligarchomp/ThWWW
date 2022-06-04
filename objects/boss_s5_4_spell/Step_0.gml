@@ -156,7 +156,7 @@ if(global.gp_active) and (spell_wait == 0)
 				obj_boss.y = start_y_off - 100;
 				obj_boss.dir = -obj_boss.dir_max * dir_act;
 				boss_movement_goto(obj_boss.x - 800 * dir_act,obj_boss.y + 800,swipe_spd);
-				obj_danmaku8.angle = -90 + 45 * dir_act;
+				obj_danmaku8.angle = global.rng_patch ? rng(360,false,1) : -90 + 45 * dir_act;
 			}
 		break;
 		case 2: 
@@ -166,7 +166,7 @@ if(global.gp_active) and (spell_wait == 0)
 				obj_boss.y = room_height / 2 - 80;
 				obj_boss.dir = obj_boss.dir_max * dir_act;
 				boss_movement_goto(floor(obj_boss.x + 800 * dir_act),obj_boss.y,swipe_spd);
-				obj_danmaku8.angle = -90;
+				obj_danmaku8.angle = global.rng_patch ? rng(360,false,1) : -90;
 			}
 		break;
 		case 3:

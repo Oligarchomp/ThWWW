@@ -5,7 +5,7 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			var wine_spd = 0.5;
+			var wine_spd = 0.75;
 			var	wine_row = 5; // must be odd
 			var wine_dist = room_width / wine_row;
 			
@@ -13,15 +13,15 @@ if(global.gp_active) and (spell_wait == 0)
 			var wine_col = 7;
 			
 			var mentos_nbr = 3;
-			var mentos_spd = 1.2;
-			var mentos_accel = 0.005;
+			var mentos_spd = 1.3;
+			var mentos_accel = 0.006;
 			
-			var misha_nbr = 14;
-			var misha_spd = 1.5;
+			var misha_nbr = 15;
+			var misha_spd = 1.6;
 			
 			var bubble_row = 1;
-			var bubble_spd_min = 2;
-			var bubble_spd_max = 4;
+			var bubble_spd_min = 2.1;
+			var bubble_spd_max = 4.2;
 			
 			var catch_nbr = 5;
 			var catch_spd_shot = 5;

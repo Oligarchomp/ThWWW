@@ -291,7 +291,7 @@ if(cursor_lockout == 0)
 						if(cursor[level] == 5) //back
 						{
 							level -= 1;
-							cursor_lockout = 8;
+							cursor_lockout = 4;
 						}
 						else//default
 						{

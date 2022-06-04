@@ -40,8 +40,6 @@ for(var i = 0; i < 20; i += 1)
 		{
 			case GAME_EXTRA:	
 				var is_extra = true;
-				var type = "Extra";
-			break;
 			case GAME_FULL:
 				var type = "All";
 			break;

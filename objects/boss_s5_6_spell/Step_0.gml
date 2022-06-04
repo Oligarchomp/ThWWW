@@ -130,8 +130,9 @@ if(global.gp_active) and (spell_wait == 0)
 				inst.spawn_type = SPAWN_SCALE;
 				inst.image_xscale = arrow_size;
 				inst.image_yscale = arrow_size;
-				inst.x_offscreen *=  arrow_size;
-				inst.y_offscreen *=  arrow_size;
+				inst.x_offscreen *= arrow_size;
+				inst.y_offscreen *= arrow_size;
+				inst.angle_off = inst.angle - find_angle(inst.x,inst.y,obj_player.x,obj_player.y) 
 			}
 		break;
 		case 2:
@@ -194,7 +195,7 @@ if(global.gp_active) and (spell_wait == 0)
 		switch(state)
 		{
 			case 0:
-				angle = find_angle(x,y,obj_player.x,obj_player.y);
+				angle = find_angle(x,y,obj_player.x,obj_player.y) + angle_off;
 			break;
 			case 1:
 				spd = goto_value(spd,arrow_spd,0.1);
