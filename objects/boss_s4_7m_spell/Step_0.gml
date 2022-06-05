@@ -20,8 +20,8 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var wave_wait = 130;
 			
-			var star_ring = 21;
-			var star_spd = 4.3;
+			var star_ring = 23;
+			var star_spd = 4.5;
 			var star_wait = 30;
 		break;
 		case 1:
@@ -41,7 +41,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var wave_wait = 110;
 			
 			var star_ring = 30;
-			var star_spd = 5.4;
+			var star_spd = 5.5;
 			var star_wait = 18;
 		break;
 		case 2:
@@ -127,7 +127,7 @@ if(global.gp_active) and (spell_wait == 0)
 					{
 						var open = sin(state_time / spark_open_spd) * spark_open_max;		
 						var ang = aim_dir - open + rng(open * 2,false,i + 1);
-						shoot(DAN_BUBBLE,9,x_pos,y_pos,ang,spark_spd_aim + rng(5,false,i),noone,4);
+						shoot(DAN_BUBBLE,79,x_pos,y_pos,ang,spark_spd_aim + rng(5,false,i),noone,4);
 					}
 				}
 				else
