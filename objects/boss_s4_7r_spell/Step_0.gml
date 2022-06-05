@@ -37,7 +37,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var mentos_spd = 2;
 			
 			var aim_arc = 3;
-			var aim_row = 3;
+			var aim_row = 4;
 			var aim_shoot_wait = 19;
 			var aim_dist = 7;
 			

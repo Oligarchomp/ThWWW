@@ -108,7 +108,7 @@ switch(state)
 		var text = get_text("result_score")
 		draw_text_color(x_ref - string_width(text),y_ref,text,w,w,w,w,result_alpha);
 		
-		var text = add_zero(string(global.score),global.score_lenght);
+		var text = add_zero(string(global.score + (global.continues_max - global.continues)),global.score_lenght);
 		var nbr = 0;
 		for(var i = 2; i < 10; i += 3)
 		{

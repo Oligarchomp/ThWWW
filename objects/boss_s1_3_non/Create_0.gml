@@ -5,7 +5,7 @@
 event_inherited();
 
 
-spell_set_life(700,110);
+spell_set_life(645,110);
 spell_set_time(30,false,80)
 
 move_time_ref = 0;

@@ -681,7 +681,7 @@ step += 1;
 //unlock code
 if(cursor[0] == 4) and (score_difficulty == 4) and (global.player_chosen == P_REIMU) 
 {
-	if(keyboard_string = "ilovetouhou")
+	if(keyboard_string = "i<3touhou")
 	{
 		play_sound(sfx_extend,1,false);
 		keyboard_string = "";
@@ -722,9 +722,9 @@ if(cursor[0] == 4) and (score_difficulty == 4) and (global.player_chosen == P_RE
 	}
 	
 	var len = string_length(keyboard_string);
-	if(len > 11)
+	if(len > 9)
 	{
-		keyboard_string = string_copy(keyboard_string,len - 10,11)
+		keyboard_string = string_copy(keyboard_string,len - 8,9)
 	}
 }
 else

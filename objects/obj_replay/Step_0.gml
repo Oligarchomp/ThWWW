@@ -3,6 +3,21 @@
 
 if(!instance_exists(obj_name_entry))
 {
+	if(global.up_down or global.down_down)
+	{
+		vhold += 1;
+	
+		if (vhold > 20) and (vhold % 6 == 0)
+		{
+			global.up_pressed = global.up_down;
+			global.down_pressed = global.down_down;
+		}
+	}
+	else
+	{
+		vhold = 0;	
+	}
+
 	if(entering_name)
 	{
 		entering_name = false;

@@ -7,10 +7,10 @@ if(global.gp_active)
 	{
 		case 0:
 			var book_wait = 50;
-			var book_ring = 6;
-			var book_row = 1;
+			var book_ring = 5;
+			var book_row = 2;
 			var book_spd_shoot_min = 9.5;
-			var book_spd_shoot_max = 12;
+			var book_spd_shoot_max = 12.6;
 			var book_div = 3.5;
 			
 			var pellet_dist = 8;

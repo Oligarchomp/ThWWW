@@ -66,7 +66,7 @@ if(pause_state >= 1)
 	
 		if(pause_type == PAUSE_GAMEOVER)
 		{
-			var off = (global.lan == LAN_JAP) * 28;
+			var off = (global.lan == LAN_JAP) * 39;
 			draw_text_outline(300 - off,400,pause_continue,c_white,c_white,c_white,c_white,pause_alpha,c_black)
 			draw_text_outline(380 + off,400," :  " + string(global.continues),c_white,c_white,c_white,c_white,pause_alpha,c_black)
 		}

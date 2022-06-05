@@ -13,6 +13,8 @@ if(global.gp_active)
 			
 			var aim_ring = 6;
 			var aim_spd = 2.2;
+			
+			var fairy_wait = 24;
 		break;
 		case 1:
 			var row_arc = 5;
@@ -22,6 +24,8 @@ if(global.gp_active)
 			
 			var aim_ring = 15;
 			var aim_spd = 3.4;
+			
+			var fairy_wait = 18;
 		break;
 		case 2:
 			var row_arc = 7;
@@ -31,6 +35,8 @@ if(global.gp_active)
 			
 			var aim_ring = 24;
 			var aim_spd = 3.8;
+			
+			var fairy_wait = 18;
 		break;
 		case 3:
 			var row_arc = 9;
@@ -40,12 +46,14 @@ if(global.gp_active)
 			
 			var aim_ring = 28;
 			var aim_spd = 4;
+			
+			var fairy_wait = 18;
 		break;
 	}
 	
 	
 	var fairy_life = 9;
-	var fairy_wait = 18;
+	
 	
 	var lots_wait = 8;
 	var lots_life = 8;

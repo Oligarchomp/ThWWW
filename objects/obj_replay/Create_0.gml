@@ -125,3 +125,5 @@ for(var i = 0; i < 20; i += 1)
 		menu[i].action = MENU_NAME;
 	}
 }
+
+vhold = 0;

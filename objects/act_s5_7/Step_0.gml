@@ -122,6 +122,8 @@ if(global.gp_active)
 			switch(state)
 			{
 				case 0:
+					x_offscreen = 200;
+					y_offscreen = 200;
 					spd = goto_value(spd,0,0.2);
 					if(spd == 0)
 					{
@@ -129,14 +131,22 @@ if(global.gp_active)
 					}
 				break;
 				case 1:
-				if(state_time = ring_start)
-				{
-					state = 2;
-					var x_pos = obj_player.x - rice_around + rng(rice_around * 2,false,7);
-					var y_pos = obj_player.y - rice_around + rng(rice_around * 2,false,1);
-					angle = global.rng_patch ? rng(360,false,1) : find_angle(x,y,x_pos,y_pos);
-					spd = ring_spd_final;
-				}
+					if(state_time = ring_start)
+					{
+						state = 2;
+						var x_pos = obj_player.x - rice_around + rng(rice_around * 2,false,7);
+						var y_pos = obj_player.y - rice_around + rng(rice_around * 2,false,1);
+						angle = global.rng_patch ? rng(360,false,1) : find_angle(x,y,x_pos,y_pos);
+						spd = ring_spd_final;
+					}
+				break;
+				case 2:
+					if(state_time == 200)
+					{
+						x_offscreen = 26;
+						y_offscreen = 26;
+					}
+				break;
 			}
 		}
 	}

@@ -43,7 +43,7 @@ draw_sprite_ext(boss_spr,boss_im,x_boss,y_boss,1,1,0,col,art_alpha_boss);
 
 
 //draw the dialogue box
-draw_sprite_ext(spr_dialoguebox,0,x_diag,y_diag,1,1,0,c_white,diag_alpha);
+draw_sprite_ext(spr_dialoguebox,global.lan - 1,x_diag,y_diag,1,1,0,c_white,diag_alpha);
 
 //draw the stupid things they say
 

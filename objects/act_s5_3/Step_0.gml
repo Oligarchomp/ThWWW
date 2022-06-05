@@ -5,19 +5,19 @@ if(global.gp_active)
 	switch(global.difficulty)
 	{
 		case 0:
-			var aim_wait = 65;
+			var aim_wait = 62;
 			var aim_spd = 2.5;
 			var aim_open = 3;
 			var aim_ring = 1;
 		break;
 		case 1:
-			var aim_wait = 40;
+			var aim_wait = 34;
 			var aim_spd = 3.2;
 			var aim_open = 5;
 			var aim_ring = 2;
 		break;
 		case 2:
-			var aim_wait = 18;
+			var aim_wait = 17;
 			var aim_spd = 3.4;
 			var aim_open = 5;
 			var aim_ring = 2;

@@ -136,6 +136,7 @@ if(global.gp_active) and (spell_wait == 0)
 				{
 					var inst = shoot(tree_dan,3,obj_boss.x,obj_boss.y,rand + i,0,noone,8);
 					inst.pos_type = POS_MANUAL;
+					inst.is_cancelable = false;
 					switch(tree_dan)
 					{
 						case DAN_BUBBLE:
@@ -151,6 +152,7 @@ if(global.gp_active) and (spell_wait == 0)
 					
 					var inst = shoot(tree_dan,3,obj_boss.x,obj_boss.y,rand + i + 360 / tree_nbr / 2,0,noone,8);
 					inst.pos_type = POS_MANUAL;
+					inst.is_cancelable = false;
 					switch(tree_dan)
 					{
 						case DAN_BUBBLE:

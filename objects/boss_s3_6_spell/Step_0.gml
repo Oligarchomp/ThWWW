@@ -5,11 +5,11 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			var fan_spd_max = 0.35;
+			var fan_spd_max = 0.38;
 		
 			var bubble_nbr = 5;
 			var bubble_spd = 1;
-			var bubble_dist = -20;
+			var bubble_dist = -28;
 			var bubble_wait = 100;
 		break;
 		case 1:

@@ -23,7 +23,11 @@ angle_ref = 0;
 
 last_boss_in_position = false;
 
-screen_clean(false,false);
+with(obj_enemy)
+{
+	item_nbr = 0;	
+}
+screen_clear(false,false);
 
 // to sync with the music
 instance_create_depth(0,0,0,act_s1_7);

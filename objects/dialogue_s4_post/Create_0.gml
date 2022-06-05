@@ -8,9 +8,10 @@ need_clear_bonus = true;
 switch(global.player_chosen)
 {
 	case P_REIMU:
-		set_dialogue(spr_reimu_art,1,true,spr_yuuto_art,5,false,get_text("diag_s4_r22"),-1);
-		set_dialogue(spr_reimu_art,1,false,spr_yuuto_art,5,true,get_text("diag_s4_r23"),-1);
-		set_dialogue(spr_reimu_art,1,false,spr_yuuto_art,6,true,get_text("diag_s4_r24"),-1);
+		var im = global.lan == LAN_ENG ? 1 : 2;
+		set_dialogue(spr_reimu_art,im,true,spr_yuuto_art,5,false,get_text("diag_s4_r22"),-1);
+		set_dialogue(spr_reimu_art,im,false,spr_yuuto_art,5,true,get_text("diag_s4_r23"),-1);
+		set_dialogue(spr_reimu_art,im,false,spr_yuuto_art,6,true,get_text("diag_s4_r24"),-1);
 		set_dialogue(spr_reimu_art,5,true,spr_yuuto_art,6,false,get_text("diag_s4_r25"),-1);
 		set_dialogue(spr_reimu_art,5,false,spr_yuuto_art,6,true,get_text("diag_s4_r26"),-1);
 		set_dialogue(spr_reimu_art,2,true,spr_yuuto_art,6,false,get_text("diag_s4_r27"),-1);

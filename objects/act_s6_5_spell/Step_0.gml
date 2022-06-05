@@ -18,8 +18,7 @@ if(global.gp_active)
 			case 0:
 				var arrow_wait = 1;
 				var arrow_nbr = 1;
-				var arrow_spd_min = 3.2;
-				var arrow_spd_git = 0;
+				var arrow_spd_min = 3.5;
 				var arrow_size = 2;
 				
 				var angle_plus = 30;
@@ -28,7 +27,6 @@ if(global.gp_active)
 				var arrow_wait = 1;
 				var arrow_nbr = 2;
 				var arrow_spd_min = 3.8;
-				var arrow_spd_git = 0;
 				var arrow_size = 2;
 				
 				var angle_plus = 20;
@@ -37,7 +35,6 @@ if(global.gp_active)
 				var arrow_wait = 1;
 				var arrow_nbr = 3;
 				var arrow_spd_min = 4;
-				var arrow_spd_git = 0;
 				var arrow_size = 2;
 				
 				var angle_plus = 15.5;
@@ -46,7 +43,6 @@ if(global.gp_active)
 				var arrow_wait = 1;
 				var arrow_nbr = 4;
 				var arrow_spd_min = 4.3;
-				var arrow_spd_git = 0;
 				var arrow_size = 2;
 				
 				var angle_plus = 15;
@@ -92,8 +88,7 @@ if(global.gp_active)
 			var aim = angle_shoot;
 			for (var i = 0; i < arrow_nbr; i += 1)
 			{
-				var sp = arrow_spd_min + rng(arrow_spd_git,false,i);
-				var inst = shoot(DAN_ARROW,7,obj_boss.x,obj_boss.y,aim,sp,sfx_shot1,7);
+				var inst = shoot(DAN_ARROW,7,obj_boss.x,obj_boss.y,aim,arrow_spd_min,sfx_shot1,7);
 				aim += 360 / arrow_nbr;
 				inst.image_xscale = arrow_size;
 				inst.image_yscale = arrow_size;
