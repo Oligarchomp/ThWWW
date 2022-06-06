@@ -58,8 +58,6 @@ if(global.gp_active)
 			
 		}
 	
-		
-	
 		step += 1
 	}
 	else

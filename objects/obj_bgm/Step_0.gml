@@ -7,7 +7,7 @@ switch(last_bgm)
 {
 	case "title":
 		var intro_length = 9.973;
-		var loop_lenght = 74.483;
+		var loop_lenght = 74.47;
 	break;
 	case "score":
 		var intro_length = 10.175;

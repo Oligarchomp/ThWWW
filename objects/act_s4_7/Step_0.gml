@@ -70,21 +70,25 @@ if(global.gp_active)
 			var inst = create_enemy(EN_BLUE,150, -20,fairy_life,1,7,-90);
 			inst.item_nbr = 11;
 			inst.dir_dan = 1;
+			inst.can_revenge = false;
 		break;
 		case 340:
 			var inst = create_enemy(EN_BLUE,250, -20,fairy_life,1,7,-90);
 			inst.item_nbr = 11;
 			inst.dir_dan = -1;
+			inst.can_revenge = false;
 		break;
 		case 680:
 			var inst = create_enemy(EN_BLUE,100, -20,fairy_life,1,7,-90);
 			inst.item_nbr = 11;
 			inst.dir_dan = 1;
+			inst.can_revenge = false;
 		break;
 		case 1020:
 			var inst = create_enemy(EN_BLUE,300, -20,fairy_life,1,7,-90);
 			inst.item_nbr = 11;
 			inst.dir_dan = -1;
+			inst.can_revenge = false;
 		break;
 	}
 	
