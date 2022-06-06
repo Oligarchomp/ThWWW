@@ -209,14 +209,14 @@ if(global.gp_active)
 			switch(state)
 			{
 				case 0:
-					if(life_left < 2900)
+					if(life_left < 3000)
 					{
 						state = 1;
 						boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);
 					}
 				break;
 				case 1:
-					if(life_left < 1700)
+					if(life_left < 1800)
 					{
 						state = 2;
 						boss_release(obj_boss.x,obj_boss.y,sfx_boss_release);

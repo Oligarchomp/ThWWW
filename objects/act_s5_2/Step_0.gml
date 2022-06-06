@@ -13,7 +13,7 @@ if(global.gp_active)
 			var mentos_start = 50;
 			var mentos_spin = 20;
 			
-			var ring_nbr = 6;
+			var ring_nbr = 3;
 			var ring_spd = 1;
 		break;
 		case 1:
@@ -24,7 +24,7 @@ if(global.gp_active)
 			var mentos_start = 50;
 			var mentos_spin = 17;
 			
-			var ring_nbr = 12;
+			var ring_nbr = 5;
 			var ring_spd = 1;
 		break;
 		case 2:
@@ -35,7 +35,7 @@ if(global.gp_active)
 			var mentos_start = 50;
 			var mentos_spin = 14;
 			
-			var ring_nbr = 14;
+			var ring_nbr = 7;
 			var ring_spd = 1;
 		break;
 		case 3:
@@ -46,7 +46,7 @@ if(global.gp_active)
 			var mentos_start = 50;
 			var mentos_spin = 12;
 			
-			var ring_nbr = 16;
+			var ring_nbr = 9;
 			var ring_spd = 1;
 		break;
 	}
@@ -113,7 +113,7 @@ if(global.gp_active)
 				}
 			break;
 			case 2://shoot aim
-				shoot_ring(DAN_MENTOS,7,ring_nbr,x,y,rng(360,false,4),ring_spd,sfx_redirect1,8);
+				shoot_ring(DAN_BUBBLE,7,ring_nbr,x,y,999,ring_spd,sfx_redirect1,8);
 				state = 3;
 				can_revenge = false;
 			break;
@@ -149,7 +149,7 @@ if(global.gp_active)
 	
 	for(var i = 0; i < array_length(global.x_death_list); i += 1)
 	{
-		shoot_ring(DAN_MENTOS,6,ring_nbr,global.x_death_list[i],global.y_death_list[i],rng(360,false,4),ring_spd,sfx_redirect1,8);
+		shoot_ring(DAN_BUBBLE,6,ring_nbr,global.x_death_list[i],global.y_death_list[i],999,ring_spd,sfx_redirect1,8);
 	}
 }
 // Inherit the parent event

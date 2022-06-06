@@ -62,6 +62,7 @@ if(global.gp_active)
 				{
 					state = 1;
 					play_sound(sfx_shot1,1,false);
+					angle = global.rng_patch ? rng(360,false,1) : angle;
 				}
 			break;
 			case 1:

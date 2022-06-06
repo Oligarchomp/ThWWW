@@ -70,7 +70,7 @@ if(global.gp_active)
 				{
 					state = 1;
 					play_sound(sfx_redirect1,1,false);
-					angle += mentos_angle_plus * dan_dir;
+					angle += global.rng_patch ? rng(360,false,1) : mentos_angle_plus * dan_dir;
 				}
 			break;
 			case 1:

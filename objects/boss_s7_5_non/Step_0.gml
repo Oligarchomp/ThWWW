@@ -57,7 +57,7 @@ if(global.gp_active)
 						
 						var inst = shoot(DAN_NOTE,col,obj_boss.x,obj_boss.y,aim + i * act_dir,ring_spd_shot,sfx_redirect1,5);
 						inst.spd_to = note_spd_max - (note_spd_max - note_spd_min) / note_row * r;
-						inst.angle_plus = (note_angle_max - (note_angle_max - note_angle_min) / note_row * r) * act_dir;
+						inst.angle_plus = global.rng_patch ? rng(360,false,1) : (note_angle_max - (note_angle_max - note_angle_min) / note_row * r) * act_dir;
 					}
 					
 					for(var r = 0; r < bubble_row; r += 1)
@@ -73,7 +73,7 @@ if(global.gp_active)
 						
 						var inst = shoot(DAN_BUBBLE,col,obj_boss.x,obj_boss.y,aim2 + i * act_dir,ring_spd_shot,sfx_redirect1,6);
 						inst.spd_to = bubble_spd_min + (bubble_spd_max - bubble_spd_min) / bubble_row * r;
-						inst.angle_plus = (bubble_angle_min + (bubble_angle_max - bubble_angle_min) / bubble_row * r) * act_dir;
+						inst.angle_plus = global.rng_patch ? rng(360,false,1) : (bubble_angle_min + (bubble_angle_max - bubble_angle_min) / bubble_row * r) * act_dir;
 					}
 				}
 				

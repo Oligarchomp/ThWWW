@@ -307,6 +307,7 @@ if(global.gp_active) and (spell_wait == 0)
 			case 0:
 				spd_ref = spd;
 				state = 1;
+				spawn_type = SPAWN_SCALE;
 			break;
 			case 1:
 				spd = goto_value(spd,spd_ref / spd_div,spd_ref / spd_time_deccel);

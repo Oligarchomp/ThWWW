@@ -131,7 +131,7 @@ if(global.gp_active)
 				
 					if(visual_xscale == 0)
 					{
-						cancel_bullet(self);	
+						instance_destroy();
 					}
 				break;
 			}
