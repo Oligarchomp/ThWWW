@@ -71,24 +71,28 @@ if(global.gp_active)
 			inst.item_nbr = 11;
 			inst.dir_dan = 1;
 			inst.can_revenge = false;
+			inst.is_last = false;
 		break;
 		case 340:
 			var inst = create_enemy(EN_BLUE,250, -20,fairy_life,1,7,-90);
 			inst.item_nbr = 11;
 			inst.dir_dan = -1;
 			inst.can_revenge = false;
+			inst.is_last = false;
 		break;
 		case 680:
 			var inst = create_enemy(EN_BLUE,100, -20,fairy_life,1,7,-90);
 			inst.item_nbr = 11;
 			inst.dir_dan = 1;
 			inst.can_revenge = false;
+			inst.is_last = false;
 		break;
 		case 1020:
 			var inst = create_enemy(EN_BLUE,300, -20,fairy_life,1,7,-90);
 			inst.item_nbr = 11;
 			inst.dir_dan = -1;
 			inst.can_revenge = false;
+			inst.is_last = true;
 		break;
 	}
 	
@@ -106,7 +110,7 @@ if(global.gp_active)
 				}
 			break;
 			case 1://shoot aim
-				if(state_time < shoot_lenght)
+				if(state_time < (shoot_lenght - is_last * 60))
 				{
 					if(state_time % arrow_wait == 0)
 					{

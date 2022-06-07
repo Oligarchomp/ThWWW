@@ -195,7 +195,7 @@ if(global.gp_active)
 		}
 	}
 	
-	with(obj_danmaku4)
+	with(obj_danmaku4) //bubble
 	{
 		if(step == 0)
 		{
@@ -212,8 +212,8 @@ if(global.gp_active)
 		}
 		if(state_time == wall_frame * 2)
 		{
-			y_offscreen = 25;
-			x_offscreen = 25;
+			y_offscreen = 30;
+			x_offscreen = 30;
 		}
 	}
 	
