@@ -303,11 +303,12 @@ if(global.gp_active) and (spell_wait == 0)
 				var x_pos = -20;
 				var ang = 0;
 			}
-			shoot(DAN_KNIFE,6,x_pos,i,ang,knife_row_spd,sfx_shot3,3);
-			
+			var inst = shoot(DAN_KNIFE,6,x_pos,i,ang,knife_row_spd,sfx_shot3,3);
+			inst.spawn_type = SPAWN_SCALE;
 			if(vertical)
 			{
-				shoot(DAN_KNIFE,6,i,-20,-90,knife_row_spd,sfx_shot3,3);
+				var inst = shoot(DAN_KNIFE,6,i,-20,-90,knife_row_spd,sfx_shot3,3);
+				inst.spawn_type = SPAWN_SCALE;
 			}
 		}
 	}

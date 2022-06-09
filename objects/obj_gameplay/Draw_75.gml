@@ -59,9 +59,12 @@ if(pause_state >= 1)
 		for(var i = 0; i < array_length(menu); i += 1)
 		{
 			var is_active = (cursor[0] == i);
-			var col = menu[i].action != MENU_INVALID ? c_white : $5a5a5a;
+			var col_num = menu[i].action != MENU_INVALID ? 255 : 85;
+			col_num = is_active ? col_num : col_num / 2.1;
+			col_num = (level != 0) ? col_num / 2.8 : col_num;
+			var col = make_color_hsv(0,0,col_num);
 			menu[i].active_offset = goto_value(menu[i].active_offset,is_active * menu_offset,3)
-			draw_text_outline(180 + text_offset + menu[i].active_offset + i * 15,230 + i * 40,menu[i].title,col,col,col,col,pause_alpha * (1 - !is_active * 0.4 - (level != 0) * 0.4),c_black);
+			draw_text_outline(180 + text_offset + menu[i].active_offset + i * 15,230 + i * 40,menu[i].title,col,col,col,col,pause_alpha ,c_black); //* (1 - !is_active * 0.4 - (level != 0) * 0.4)
 		}
 	
 		if(pause_type == PAUSE_GAMEOVER)
