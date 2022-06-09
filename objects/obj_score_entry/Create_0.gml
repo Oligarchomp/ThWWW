@@ -72,7 +72,7 @@ if (global.continues != global.continues_max)
 }
 
 menu_alpha = 0;
-cursor = 1;
+cursor = 0;
 cursor_lockout = 0;
 
 menu =

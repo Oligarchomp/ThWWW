@@ -76,9 +76,17 @@ switch(state)
 				
 				if(global.bomb_pressed)
 				{
-					play_sound(sfx_menu_back,1,false);
-					cursor_lockout = 10000;
-					room_transition(room_main,true);
+					if(cursor == 1)
+					{
+						play_sound(sfx_menu_back,1,false);
+						cursor_lockout = 10000;
+						room_transition(room_main,true);
+					}
+					else
+					{
+						cursor = 1;
+						play_sound(sfx_menu_back,1,false);
+					}
 				}
 			}
 			else

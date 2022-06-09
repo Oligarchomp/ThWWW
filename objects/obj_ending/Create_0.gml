@@ -146,7 +146,7 @@ else //bad endings
 			var im = global.lan = LAN_ENG ? 17 : 19;
 			add_end(im,get_text("end_bad_s5_1"),get_text("end_bad_s5_2"),get_text("end_bad_s5_3"),"");
 			add_end(im,get_text("end_bad_s6_1"),get_text("end_bad_s6_2"),get_text("end_bad_s6_3"),"");
-			add_end(im,get_text("end_bad_s7_1"),get_text("end_bad_s7_2"),"","");
+			add_end(im,get_text("end_bad_s7_1"),get_text("end_bad_s7_2"),get_text("end_bad_s7_3"),"");
 			add_end(im,get_text("end_bad_s8_1"),get_text("end_bad_s8_2"),get_text("end_bad_s8_3"),"");
 			add_end(im,get_text("end_bad_s9_1"),get_text("end_bad_s9_2"),get_text("end_bad_s9_3"),"");
 			add_end(im,get_text("end_bad_s10_1"),get_text("end_bad_s10_2"),get_text("end_bad_s10_3"),"");

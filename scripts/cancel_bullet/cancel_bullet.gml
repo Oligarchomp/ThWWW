@@ -10,6 +10,7 @@ function cancel_bullet(argument0){
 		inst.image_index = color_id * image_nbr;
 		
 		inst.scale *= visual_xscale;
+		inst.scale_ref = inst.scale;
 		
 		instance_destroy();
 	}

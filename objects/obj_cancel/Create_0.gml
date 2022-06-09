@@ -3,6 +3,7 @@
 
 image_speed = 0;
 alpha = 1;
-scale = 0.8;
+scale_ref = 0.9;
+scale = 0.9;
 
 angle = 0;

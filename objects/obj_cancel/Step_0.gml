@@ -2,8 +2,11 @@
 // You can write your code in this editor
 if(global.gp_active)
 {
-	alpha = goto_value(alpha,0,0.1)
-	scale += recursiv(scale,0,10,0.01); // goto_value(scale,0,0.05)
+	alpha = goto_value(alpha,0,1 / 12)
+	
+
+	scale = goto_value(scale,0,scale_ref / 12);
+	
 	
 	if(alpha == 0)
 	{
