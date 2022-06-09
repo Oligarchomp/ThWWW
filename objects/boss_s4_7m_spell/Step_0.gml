@@ -127,7 +127,7 @@ if(global.gp_active) and (spell_wait == 0)
 					{
 						var open = sin(state_time / spark_open_spd) * spark_open_max;		
 						var ang = aim_dir - open + rng(open * 2,false,i + 1);
-						shoot(DAN_BUBBLE,79,x_pos,y_pos,ang,spark_spd_aim + rng(5,false,i),noone,4);
+						shoot(DAN_BUBBLE,9,x_pos,y_pos,ang,spark_spd_aim + rng(5,false,i),noone,4);
 					}
 				}
 				else

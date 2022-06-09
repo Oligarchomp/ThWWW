@@ -4,3 +4,5 @@
 image_speed = 0;
 alpha = 1;
 scale = 0.8;
+
+angle = 0;

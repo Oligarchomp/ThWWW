@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_cancel",
-    "path": "sprites/spr_cancel/spr_cancel.yy",
+    "name": "spr_nothing",
+    "path": "sprites/spr_nothing/spr_nothing.yy",
   },
   "solid": false,
   "visible": true,

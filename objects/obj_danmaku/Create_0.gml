@@ -180,4 +180,5 @@ sprite_index = spr_nothing;
 
 is_danmaku = true;
 
-
+visual_xscale = 1;
+visual_yscale = 1;
