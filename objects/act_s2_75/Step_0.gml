@@ -119,7 +119,7 @@ if(global.gp_active)
 			{
 				var x_pos = room_width - fairy_off - ((step - step_ref) * 45) % (room_width - fairy_off * 3);
 			}
-			var inst = create_enemy(EN_BLUE,x_pos,-20,small_fairy_life,4,5,-90);
+			var inst = create_enemy(EN_GREEN,x_pos,-20,small_fairy_life,4,5,-90);
 			inst.item_nbr = 1;
 		}
 		need_fairy_time -= 1;

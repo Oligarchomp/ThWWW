@@ -35,7 +35,7 @@ switch(global.player_chosen)
 		set_dialogue(spr_sanae_art,5,true,spr_yuuto_art,5,false,get_text("diag_s4_s24"),-1);
 		set_dialogue(spr_sanae_art,5,false,spr_yuuto_art,5,true,get_text("diag_s4_s25"),-1);
 		set_dialogue(spr_sanae_art,5,false,spr_yuuto_art,6,true,get_text("diag_s4_s26"),-1);
-		set_dialogue(spr_sanae_art,0,true,spr_yuuto_art,6,false,get_text("diag_s4_s27"),-1);
+		set_dialogue(spr_sanae_art,3,true,spr_yuuto_art,6,false,get_text("diag_s4_s27"),-1);
 		set_dialogue(spr_sanae_art,4,true,spr_yuuto_art,6,false,get_text("diag_s4_s28"),-1);
 	break;
 	

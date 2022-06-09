@@ -157,7 +157,7 @@ if(global.gp_active) and (spell_wait == 0)
 		
 	}
 	
-	with(obj_danmaku3)
+	with(obj_danmaku3)//anchors
 	{
 		switch(state)
 		{
@@ -187,9 +187,21 @@ if(global.gp_active) and (spell_wait == 0)
 					
 					var n = 0;
 					var aim = rng(360,false,1);
+					
+					var xx = x;
+					var yy = y;
+					var fail = 0;
+					
+					while(!collision_circle(xx,yy,2,obj_wall,false,true) and (fail < 60))
+					{
+						xx += lengthdir_x(2,angle);
+						yy += lengthdir_y(2,angle);
+						fail += 1;
+					}
+					
 					for(var i = arc_spd_min; i < arc_spd_max; i += (arc_spd_max - arc_spd_min) / arc_row)
 					{
-						shoot_ring(DAN_MENTOS,1,arc_nbr,x,y,aim + n * 180 / arc_nbr,i,noone,2)
+						shoot_ring(DAN_MENTOS,1,arc_nbr,xx,yy,aim + n * 180 / arc_nbr,i,noone,2)
 						n += 1;
 						n %= 2;
 					}

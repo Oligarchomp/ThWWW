@@ -400,6 +400,7 @@
     {"id":{"name":"boss_s7_55_spell","path":"objects/boss_s7_55_spell/boss_s7_55_spell.yy",},"order":22,},
     {"id":{"name":"sfx_heartpiece","path":"sounds/sfx_heartpiece/sfx_heartpiece.yy",},"order":4,},
     {"id":{"name":"font_info","path":"fonts/font_info/font_info.yy",},"order":2,},
+    {"id":{"name":"spr_cancel_reverse","path":"sprites/spr_cancel_reverse/spr_cancel_reverse.yy",},"order":8,},
     {"id":{"name":"act_s1_4","path":"objects/act_s1_4/act_s1_4.yy",},"order":5,},
     {"id":{"name":"obj_danmaku2","path":"objects/obj_danmaku2/obj_danmaku2.yy",},"order":1,},
     {"id":{"name":"obj_shot_base_dust","path":"objects/obj_shot_base_dust/obj_shot_base_dust.yy",},"order":0,},
@@ -830,7 +831,7 @@
     {"CopyToMask":-1,"filePath":"datafiles/music","resourceVersion":"1.0","name":"boss4.wav","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
-    "IDEVersion": "2022.5.0.8",
+    "IDEVersion": "2022.5.1.14",
   },
   "resourceVersion": "1.5",
   "name": "thWWW",

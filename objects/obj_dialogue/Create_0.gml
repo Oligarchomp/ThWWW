@@ -59,7 +59,7 @@ plr_im = 0;
 boss_im = 0;
 
 diag_alpha = 0;
-diag_alpha_max = 0.85
+diag_alpha_max = 0.9;
 
 x_diag = middle;
 y_diag = 443;
