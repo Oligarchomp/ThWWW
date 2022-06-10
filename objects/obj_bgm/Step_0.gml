@@ -55,7 +55,7 @@ switch(last_bgm)
 	break;
 	case "stage5":
 		var intro_length = 9.082;
-		var loop_lenght = 149.933;
+		var loop_lenght = 149.93;
 	break;
 	case "stage6":
 		var intro_length = 3.849;

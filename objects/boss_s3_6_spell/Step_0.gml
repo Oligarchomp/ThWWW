@@ -29,7 +29,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var bubble_wait = 75;
 		break;
 		case 3:
-			var fan_spd_max = 0.9;
+			var fan_spd_max = 0.86;
 		
 			var bubble_nbr = 14;
 			var bubble_spd = 1;

@@ -81,11 +81,11 @@ if(global.gp_active)
 				}
 				
 				state = 2;
-				angle = find_angle(x,y,room_width / 2 + dir_go * 180, y - 300);
+				angle = find_angle(x,y,room_width / 2 + ((x < room_width / 2) * 2 - 1) * 800,-350);
 				can_revenge = false;
 			break;
 			case 2://leaving for a better world
-				spd = goto_value(spd,5,0.1);
+				spd = goto_value(spd,5,0.03);
 				
 			break;
 			

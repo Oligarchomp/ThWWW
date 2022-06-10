@@ -29,7 +29,7 @@ if(global.gp_active)
 			}
 		break;
 		case 1://here it waits!
-			if (state_time == 160)
+			if (state_time == 210)
 			{
 				state = 2;
 			}

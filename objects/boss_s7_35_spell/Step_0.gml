@@ -53,18 +53,21 @@ if(global.gp_active)
 						var dan = rng(19,true,7);
 						switch(dan)
 						{
-							case 5: //bubble
+							case DAN_BUBBLE: 
 								var dep = 8;
 							break;
-							case 8://heart
-							case 12:
+							case DAN_HEART:
+							case DAN_MENTOS:
 								var dep = 7;
 							break;
-							case 1://anchor
-								dan = 19;
+							case DAN_STARBIG:
+								var dep = 6;
+							break;
+							case DAN_ANCHOR:
+								dan = DAN_STARSMALL;
 								var dep = 3;
 							break;
-							case 14: //pellet
+							case DAN_PELLET: //pellet
 								var dep = 1;
 							break;
 							default:

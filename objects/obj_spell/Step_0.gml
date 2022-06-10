@@ -212,9 +212,7 @@ if (global.gp_active)
 		{
 			global.spell_life = 1;
 			
-			
 			create_confetti(obj_boss.x,obj_boss.y,30,8);
-			
 		}
 		
 		if(need_cancel_bonus) and ((time_left > 0) or is_timeout)
