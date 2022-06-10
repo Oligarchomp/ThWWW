@@ -81,6 +81,7 @@
     {"id":{"name":"spr_reverence_art","path":"sprites/spr_reverence_art/spr_reverence_art.yy",},"order":10,},
     {"id":{"name":"sfx_timer1","path":"sounds/sfx_timer1/sfx_timer1.yy",},"order":3,},
     {"id":{"name":"sfx_boss_preexplosion","path":"sounds/sfx_boss_preexplosion/sfx_boss_preexplosion.yy",},"order":2,},
+    {"id":{"name":"obj_fake_life","path":"objects/obj_fake_life/obj_fake_life.yy",},"order":20,},
     {"id":{"name":"obj_iso_part","path":"objects/obj_iso_part/obj_iso_part.yy",},"order":6,},
     {"id":{"name":"spr_bird","path":"sprites/spr_bird/spr_bird.yy",},"order":22,},
     {"id":{"name":"act_s1_1","path":"objects/act_s1_1/act_s1_1.yy",},"order":2,},

@@ -214,6 +214,10 @@ if (global.gp_active)
 			
 			create_confetti(obj_boss.x,obj_boss.y,30,8);
 		}
+		else if(!non_only)
+		{
+			instance_create_depth(0,0,depth,obj_fake_life);	
+		}
 		
 		if(need_cancel_bonus) and ((time_left > 0) or is_timeout)
 		{
