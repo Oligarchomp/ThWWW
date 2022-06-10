@@ -98,20 +98,15 @@ if (is_spell)
 	if(cap_history < 99)
 	{
 		var cap_hist = string(add_zero(cap_history,2));
-		if(try_history < 99)
-		{
-			var try_hist = add_zero(try_history,2);
-		}
-		else
-		{
-			var try_hist = "99+";
-		}
-		draw_text_outline(x_pos + 70,y_pos,cap_hist + "/" ,text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);
+		
+		var try_hist = try_history < 99 ?  add_zero(try_history,2) : "99+";
+		
+		draw_text_outline(x_pos + 68,y_pos,cap_hist + " /" ,text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);
 		draw_text_outline(x_pos + 94,y_pos,try_hist,text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);
 	}
 	else
 	{
-		draw_text_outline(x_pos + 70,y_pos, "Master" ,text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);
+		draw_text_outline(x_pos + 68,y_pos, "Master" ,text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);
 		
 	}
 

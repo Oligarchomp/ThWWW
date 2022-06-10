@@ -117,7 +117,8 @@ with(obj_boss)
 	
 	var text = "BOSS";
 	var cam_ref =  global.game_x_offset
-	var x_pos = x + cam_ref - string_width(text) / 2;
+	var x_pos = x + cam_ref;
+	var x_pos_true = x_pos - string_width(text) / 2;
 	var boss_indicator_y = 524;
 	
 	if ( x_pos > cam_ref) and( x_pos < cam_ref + room_width)
@@ -131,7 +132,7 @@ with(obj_boss)
 	
 	
 	var col = $262687
-	draw_text_color(x_pos,boss_indicator_y ,text,col,col,col,col,boss_indicator_alpha);
+	draw_text_color(x_pos_true,boss_indicator_y ,text,col,col,col,col,boss_indicator_alpha);
 }
 
 

@@ -19,7 +19,7 @@ switch(last_bgm)
 	break;
 	case "boss2":	
 		var intro_length = 5.707;
-		var loop_lenght = 67.214;
+		var loop_lenght = 67.2;
 	break;
 	case "boss3":	
 		var intro_length = 5.488;

@@ -49,7 +49,7 @@ spell_name = "Memory Sign - [Makes-You-Forget-To-Set-A-Name-and-Die Devil Sword]
 text_x = 0;
 text_x_final = room_width;
 text_y = 400; 
-text_y_final = 21 + (global.lan == LAN_JAP) * 4;
+text_y_final = 22 + (global.lan == LAN_JAP) * 3;
 
 
 text_alpha = 0;

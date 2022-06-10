@@ -145,6 +145,7 @@ if(global.gp_active) and (spell_wait == 0)
 				inst.is_cancelable = false;
 				inst.pos_type = POS_MANUAL;
 				inst.dist = i;
+				inst.rot_type = ROT_SET;
 			}
 			state = 1;
 		break;
