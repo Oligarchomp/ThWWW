@@ -2,8 +2,11 @@
 // You can write your code in this editor
 // Begin step makes all the difference
 
+var special_case = (global.play_type == PLAY_MANUAL) and global.gp_active and (room == room_gp) and (((global.is_controller != gamepad_is_connected(0)) and (global.is_controller == true)) or (!window_has_focus()))
+global.pause_pressed = special_case or (gamepad_button_check_pressed(0,global.pause_btn)) or (keyboard_check_pressed(global.pause_vk))
 
-global.pause_pressed = (gamepad_button_check_pressed(0,global.pause_btn)) or (keyboard_check_pressed(global.pause_vk))
+global.is_controller = gamepad_is_connected(0);
+window_has_focus()
 
 var pause = false;
 with(obj_gameplay)

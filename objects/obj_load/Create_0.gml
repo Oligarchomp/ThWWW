@@ -325,6 +325,8 @@ else
 {
 	room_goto(room_language);
 }
+
+global.is_controller = gamepad_is_connected(0);
 /*
 
 room_goto(room_gp)
