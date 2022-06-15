@@ -72,7 +72,7 @@ extra_unlock[P_REIMU] = data_read("Data.ini","data","reimu_extra");
 extra_unlock[P_MARISA] = data_read("Data.ini","data","marisa_extra");
 extra_unlock[P_SANAE] = data_read("Data.ini","data","sanae_extra");
 var res = 0;
-for(var i = P_REIMU; i < P_SANAE; i += 1)
+for(var i = P_REIMU; i <= P_SANAE; i += 1)
 {
 	res += extra_unlock[i];
 }
