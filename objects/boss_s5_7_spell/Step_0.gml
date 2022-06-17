@@ -173,6 +173,7 @@ if(global.gp_active) and (spell_wait == 0)
 					with(obj_danmaku6)
 					{
 						boss_charge(x,y);
+						boss_charge_row(x,y,angle + 180,5,36,9);
 					}
 				break;
 				case 120:

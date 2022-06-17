@@ -15,15 +15,15 @@ if(global.gp_active)
 			switch(global.difficulty)
 			{
 				case 0:
-					var mentos_wait = 8;
+					var mentos_wait = 7;
 					var mentos_ring = 4;
 					var mentos_spd_min = 3.5;
 					var mentos_spd_max = 4.5;
 					var mentos_angle_plus = 360 / mentos_ring / 5;
 					
 					var spam_bubble = 2;
-					var spam_mentos = 6;
-					var spam_ball = 11;
+					var spam_mentos = 8;
+					var spam_ball = 12;
 					
 					var spam_ring = 5;
 					
@@ -33,18 +33,18 @@ if(global.gp_active)
 					var spam_deccel = 0.2;
 					
 					var wave_length = 150;
-					var wait = 120;
+					var wait = 110;
 				break;
 				case 1:
-					var mentos_wait = 6;
+					var mentos_wait = 5;
 					var mentos_ring = 4;
 					var mentos_spd_min = 4;
 					var mentos_spd_max = 5;
 					var mentos_angle_plus = 360 / mentos_ring / 7;
 					
 					var spam_bubble = 6;
-					var spam_mentos = 14;
-					var spam_ball = 25;
+					var spam_mentos = 15;
+					var spam_ball = 26;
 					
 					var spam_ring = 5;
 					
@@ -54,7 +54,7 @@ if(global.gp_active)
 					var spam_deccel = 0.2;
 					
 					var wave_length = 150;
-					var wait = 90;
+					var wait = 88;
 				break;
 				case 2:
 					var mentos_wait = 4;
@@ -64,8 +64,8 @@ if(global.gp_active)
 					var mentos_angle_plus = 360 / mentos_ring / 9;
 					
 					var spam_bubble = 8;
-					var spam_mentos = 17;
-					var spam_ball = 31;
+					var spam_mentos = 18;
+					var spam_ball = 32;
 					
 					var spam_ring = 5;
 					
@@ -85,8 +85,8 @@ if(global.gp_active)
 					var mentos_angle_plus = 360 / mentos_ring / 10;
 					
 					var spam_bubble = 9; 
-					var spam_mentos = 20; 
-					var spam_ball = 36;
+					var spam_mentos = 21; 
+					var spam_ball = 38;
 					
 					var spam_ring = 5;
 					

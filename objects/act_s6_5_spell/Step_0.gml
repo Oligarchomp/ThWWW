@@ -18,7 +18,7 @@ if(global.gp_active)
 			case 0:
 				var arrow_wait = 1;
 				var arrow_nbr = 1;
-				var arrow_spd_min = 3.6;
+				var arrow_spd_min = 3.8;
 				var arrow_size = 2;
 				
 				var angle_plus = 30;
@@ -26,7 +26,7 @@ if(global.gp_active)
 			case 1:
 				var arrow_wait = 1;
 				var arrow_nbr = 2;
-				var arrow_spd_min = 3.8;
+				var arrow_spd_min = 4;
 				var arrow_size = 2;
 				
 				var angle_plus = 20;
@@ -34,7 +34,7 @@ if(global.gp_active)
 			case 2:
 				var arrow_wait = 1;
 				var arrow_nbr = 3;
-				var arrow_spd_min = 4;
+				var arrow_spd_min = 4.1;
 				var arrow_size = 2;
 				
 				var angle_plus = 15.5;

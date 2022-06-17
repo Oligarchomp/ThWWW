@@ -6,13 +6,13 @@ if(global.gp_active) and (spell_wait == 0)
 	{
 		case 0:
 			var anchor_size = 2;
-			var anchor_spd = 16;
+			var anchor_spd = 17;
 			var anchor_stay = 100;
 			var anchor_accel = 0.05;
 			
-			var impact_ring = 12;
+			var impact_ring = 13;
 			var impact_row = 6;
-			var impact_spd_min = 0.7;
+			var impact_spd_min = 0.68;
 			var impact_spd_max = 1.8;
 			
 			var need_ball = true;
@@ -26,17 +26,17 @@ if(global.gp_active) and (spell_wait == 0)
 			var tray_spd_max = 3.2;
 			var tray_frame_accel = 90;
 			
-			var wave_wait = 60;
+			var wave_wait = 52;
 		break;
 		case 1:
 			var anchor_size = 2;
-			var anchor_spd = 20;
+			var anchor_spd = 21;
 			var anchor_stay = 90;
 			var anchor_accel = 0.05;
 			
 			var impact_ring = 18;
 			var impact_row = 7;
-			var impact_spd_min = 0.7;
+			var impact_spd_min = 0.6;
 			var impact_spd_max = 1.8;
 			
 			var need_ball = true;
@@ -45,12 +45,12 @@ if(global.gp_active) and (spell_wait == 0)
 			var tray_start = 90;
 			var tray_wait = 2;
 			var tray_row = 4;
-			var tray_spin = 24;
+			var tray_spin = 23;
 			var tray_spd_min = 1.9;
 			var tray_spd_max = 3.8;
 			var tray_frame_accel = 90;
 			
-			var wave_wait = 50;
+			var wave_wait = 45;
 		break;
 		case 2:
 			var anchor_size = 2;
@@ -58,9 +58,9 @@ if(global.gp_active) and (spell_wait == 0)
 			var anchor_stay = 50;
 			var anchor_accel = 0.05;
 			
-			var impact_ring = 20;
+			var impact_ring = 21;
 			var impact_row = 7;
-			var impact_spd_min = 0.7;
+			var impact_spd_min = 0.65;
 			var impact_spd_max = 1.8;
 			
 			var need_ball = true;
@@ -69,7 +69,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var tray_start = 00;
 			var tray_wait = 1;
 			var tray_row = 5;
-			var tray_spin = 19;
+			var tray_spin = 18;
 			var tray_spd_min = 2;
 			var tray_spd_max = 4;
 			var tray_frame_accel = 90;

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if(global.gp_active)
 {
-	var mentos_wait = 12;
+	var mentos_wait = 13;
 	var mentos_ring = 7;
 	var mentos_spd_shot = 8;
 	var mentos_deccel = 0.2;
@@ -11,7 +11,7 @@ if(global.gp_active)
 	var mentos_spin = 8;
 	var mentos_angle_plus = -30;
 	
-	var bubble_wait = 52;
+	var bubble_wait = 54;
 	var bubble_ring = 15;
 	var bubble_spd_shoot = 7;
 	var bubble_spd_final = 1.5;

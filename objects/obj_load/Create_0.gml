@@ -4,7 +4,7 @@
 window_set_fullscreen(data_read("Data.ini","option","fullscreen"));
 global.rng_patch = data_read("Data.ini","option","rng")
 
-global.ver = "1.0.0";
+global.ver = "1.0.1";
 
 global.sound_mult = 1.1;
 
@@ -327,12 +327,12 @@ else
 }
 
 global.is_controller = gamepad_is_connected(0);
-/*
+
 
 room_goto(room_gp)
 
-global.difficulty = 3;
+global.difficulty = 1;
 
-add_stage_event(act_s3_0,0)
-add_stage_event(boss_s3_6_spell,1);
+add_stage_event(act_s6_0,0)
+add_stage_event(boss_s6_2_spell,1);
 

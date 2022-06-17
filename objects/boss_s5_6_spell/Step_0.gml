@@ -12,11 +12,11 @@ if(global.gp_active) and (spell_wait == 0)
 			var arrow_size = 5;
 			var arrow_spd = 3;
 			
-			var ball_nbr = 4;
+			var ball_nbr = 5;
 			var ball_spd = 0.7;
 			var ball_accel = 0.02;
 			
-			var fill_ring = 8;
+			var fill_ring = 9;
 			var fill_spd = 1.8;
 			var fill_wait = 44;
 			

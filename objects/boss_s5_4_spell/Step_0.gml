@@ -332,12 +332,8 @@ if(global.gp_active) and (spell_wait == 0)
 				}
 			break;
 			case 4:
-				image_yscale = goto_value(image_yscale,0,0.6);
-				if(image_yscale == 0)
-				{
-					cancel_bullet(self);
-					spell.state = 6;
-				}
+				cancel_bullet(self);
+				spell.state = 6;
 			break;
 		}
 		

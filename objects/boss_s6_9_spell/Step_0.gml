@@ -20,7 +20,7 @@ if(global.gp_active)
 					var mentos_wait = 14;
 					var mentos_off = 90;
 					var ball_wait = 14;
-					var ball_off = 65;
+					var ball_off = 78;
 
 			
 					var water_ring = 3;
@@ -29,7 +29,7 @@ if(global.gp_active)
 					var water_spd_min = 1.05;
 					var water_dist = 3.1;
 					
-					var anchor_wait = 200; // must be even
+					var anchor_wait = 184; // must be even
 					var anchor_nbr = 10;
 					var anchor_accel = 0.03;
 					var anchor_spd_max = 5;
@@ -43,7 +43,7 @@ if(global.gp_active)
 					var mentos_wait = 9;
 					var mentos_off = 90;
 					var ball_wait = 9;
-					var ball_off = 75;
+					var ball_off = 64;//75
 			
 					var water_ring = 3;
 					var water_spd_shoot_min = 5.5;
@@ -51,7 +51,7 @@ if(global.gp_active)
 					var water_spd_min = 1.1;
 					var water_dist = 1.95;
 					
-					var anchor_wait = 160; // must be even
+					var anchor_wait = 150; // must be even
 					var anchor_nbr = 12;
 					var anchor_accel = 0.03;
 					var anchor_spd_max = 5.5;
@@ -73,7 +73,7 @@ if(global.gp_active)
 					var water_spd_min = 1.2;
 					var water_dist = 2.05;
 					
-					var anchor_wait = 134; // must be even
+					var anchor_wait = 130; // must be even
 					var anchor_nbr = 14;
 					var anchor_accel = 0.03;
 					var anchor_spd_max = 5.5;

@@ -5,9 +5,9 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			var bird_wait = 7;
+			var bird_wait = 5;
 			var bird_accel = 0.05;
-			var bird_spd_min = 1.7;
+			var bird_spd_min = 1.8;
 			var bird_spd_git = 0.2;
 			var bird_angle = 80;
 			var bird_open = 5;
@@ -22,12 +22,12 @@ if(global.gp_active) and (spell_wait == 0)
 			var arc_spd_div = 1;
 			var arc_aim_open = 20;
 			
-			var bird_off = 70;
+			var bird_off = 80;
 		break;
 		case 1:
 			var bird_wait = 3;
 			var bird_accel = 0.05;
-			var bird_spd_min = 1.9;
+			var bird_spd_min = 2;
 			var bird_spd_git = 0.25;
 			var bird_angle = 80;
 			var bird_open = 6;
@@ -37,12 +37,12 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var arc_wait = 46;
 			var arc_nbr = 6;
-			var arc_dist = 15;
+			var arc_dist = 14;
 			var arc_spd = 1.6;
 			var arc_spd_div = 1;
 			var arc_aim_open = 20;
 			
-			var bird_off = 80;
+			var bird_off = 58;
 		break;
 		case 2:
 			var bird_wait = 2
@@ -62,7 +62,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var arc_spd_div = 1;
 			var arc_aim_open = 20;
 			
-			var bird_off = 70;
+			var bird_off = 55;
 		break;
 		case 3:
 			var bird_wait = 1;

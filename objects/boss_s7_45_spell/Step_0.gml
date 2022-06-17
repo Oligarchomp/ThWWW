@@ -148,7 +148,11 @@ if(global.gp_active)
 				}
 			break;
 		}
-	
+		
+		with(obj_boss_charge)
+		{
+			x = obj_boss.x;	
+		}
 	
 	
 		with(obj_danmaku5)

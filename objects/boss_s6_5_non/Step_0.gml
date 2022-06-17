@@ -11,11 +11,11 @@ if(global.gp_active)
 			switch(global.difficulty)
 			{
 				case 0:
-					var torpedo_wait = 120;
-					var torpedo_tail_wait = 25;
+					var torpedo_wait = 116;
+					var torpedo_tail_wait = 22;
 					var torpedo_lenght = 100;
 					var torpedo_ring = 13;
-					var torpedo_spd = 1.5;
+					var torpedo_spd = 1.7;
 					var torpedo_angle_plus = 1.7;
 					var torpedo_angle_max = 90;
 			
@@ -23,7 +23,7 @@ if(global.gp_active)
 				break;
 				case 1:
 					var torpedo_wait = 86;
-					var torpedo_tail_wait = 15;
+					var torpedo_tail_wait = 14;
 					var torpedo_lenght = 70;
 					var torpedo_ring = 16;
 					var torpedo_spd = 2;
@@ -37,7 +37,7 @@ if(global.gp_active)
 					var torpedo_tail_wait = 12;
 					var torpedo_lenght = 60;
 					var torpedo_ring = 18;
-					var torpedo_spd = 2;
+					var torpedo_spd = 2.1;
 					var torpedo_angle_plus = 1.7;
 					var torpedo_angle_max = 110;
 			
@@ -65,16 +65,14 @@ if(global.gp_active)
 	
 			if(step % torpedo_wait == 0)
 			{
-				array_push(angle_list,angle_torpedo);
+				array_push(angle_list,rng(360,false,1));
 				array_push(time_list,torpedo_lenght);
 				array_push(dir_list,act_dir);
 		
-				array_push(angle_list,angle_torpedo);
+				array_push(angle_list,rng(360,false,1));
 				array_push(time_list,torpedo_lenght);
 				array_push(dir_list,-act_dir);
 		
-		
-				angle_torpedo = rng(360,false,5);
 			}
 	
 			for(var i = 0; i < array_length(angle_list); i += 1)

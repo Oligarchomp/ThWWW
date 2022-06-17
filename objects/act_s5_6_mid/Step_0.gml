@@ -19,7 +19,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var arrow_size = 2;
 			var arrow_ring = 15;
 			var arrow_spd = 2;
-			var arrow_wait = 70;
+			var arrow_wait = 68;
 		break;
 		case 1:
 			var futo_wait = 5;
@@ -36,7 +36,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var arrow_size = 2;
 			var arrow_ring = 20;
 			var arrow_spd = 2.8;
-			var arrow_wait = 44;
+			var arrow_wait = 40;
 		break;
 		case 2:
 			var futo_wait = 5;
@@ -53,7 +53,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var arrow_size = 2;
 			var arrow_ring = 26;
 			var arrow_spd = 3;
-			var arrow_wait = 36;
+			var arrow_wait = 35;
 		break;
 		case 3:
 			var futo_wait = 5;

@@ -41,7 +41,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var wave_wait = 110;
 			
 			var star_ring = 30;
-			var star_spd = 5.5;
+			var star_spd = 5.6;
 			var star_wait = 18;
 		break;
 		case 2:

@@ -13,15 +13,15 @@ if(global.gp_active) and (spell_wait == 0)
 			var wine_col = 7;
 			
 			var mentos_nbr = 3;
-			var mentos_spd = 1.3;
-			var mentos_accel = 0.006;
+			var mentos_spd = 1.4;
+			var mentos_accel = 0.008;
 			
-			var misha_nbr = 15;
+			var misha_nbr = 16;
 			var misha_spd = 1.6;
 			
-			var bubble_row = 1;
+			var bubble_row = 2;
 			var bubble_spd_min = 2.1;
-			var bubble_spd_max = 4.2;
+			var bubble_spd_max = 3.0;
 			
 			var catch_nbr = 5;
 			var catch_spd_shot = 5;
@@ -39,13 +39,13 @@ if(global.gp_active) and (spell_wait == 0)
 			var wine_col = 7;
 			
 			var mentos_nbr = 4;
-			var mentos_spd = 1.4;
+			var mentos_spd = 1.45;
 			var mentos_accel = 0.008;
 			
-			var misha_nbr = 20;
+			var misha_nbr = 21;
 			var misha_spd = 1.8;
 			
-			var bubble_row = 2;
+			var bubble_row = 3;
 			var bubble_spd_min = 2.1;
 			var bubble_spd_max = 3.2;
 			
@@ -53,8 +53,8 @@ if(global.gp_active) and (spell_wait == 0)
 			var catch_spd_shot = 5;
 			var catch_angle_plus = 4;
 			
-			var nua_lenght = 280;
-			var nua_wait = 70;
+			var nua_lenght = 290;
+			var nua_wait = 65;
 		break;
 		case 2:
 			var wine_spd = 1;

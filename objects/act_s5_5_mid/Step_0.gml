@@ -7,7 +7,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 0:
 			var arrow_wait = 15;
 			var arrow_lenght = 40;
-			var arrow_ring = 22;
+			var arrow_ring = 23;
 			var arrow_spd = 3;
 			var arrow_spd_redirect = 2.5;
 			var arrow_size = 2;
@@ -17,11 +17,11 @@ if(global.gp_active) and (spell_wait == 0)
 		case 1:
 			var arrow_wait = 11;
 			var arrow_lenght = 45;
-			var arrow_ring = 31;
+			var arrow_ring = 32;
 			var arrow_spd = 3.5;
 			var arrow_spd_redirect = 2.5;
 			var arrow_size = 2;
-			var wave_wait = 50;
+			var wave_wait = 48;
 			var arrow_type = DAN_ARROW;
 		break;
 		case 2:

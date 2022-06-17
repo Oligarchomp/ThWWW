@@ -8,32 +8,32 @@ if(global.gp_active) and (spell_wait == 0)
 			var shock_wave = 3;
 			var shock_wait = 42;
 			
-			var spam_grav_max = 1.5;
-			var spam_grav_git = 0.2;
+			var spam_grav_max = 1.6;
+			var spam_grav_git = 0.3;
 			var spam_accel = 0.1;
-			var spam_arrow_nbr = 20;
+			var spam_arrow_nbr = 22;
 			var spam_open = 10;
 			
 			var tree_dan = DAN_MENTOS;
 			var tree_nbr = 10;
 			var tree_spin = 2;
-			var tree_spd = 1;
+			var tree_spd = 1.1;
 			var tree_spd_div = 1.5;
 			
 			var aim_dan = DAN_ARROW;
 			var aim_wait = 12;
-			var aim_spd = 1.5;
+			var aim_spd = 1.9;
 			var aim_arc = 5;
-			var aim_dist = 36;
+			var aim_dist = 32;
 		break;
 		case 1:
 			var shock_wave = 3;
 			var shock_wait = 40;
 			
-			var spam_grav_max = 1.75;
-			var spam_grav_git = 0.4;
+			var spam_grav_max = 1.8;
+			var spam_grav_git = 0.55;
 			var spam_accel = 0.1;
-			var spam_arrow_nbr = 38;
+			var spam_arrow_nbr = 39;
 			var spam_open = 16;
 			
 			var tree_dan = DAN_MENTOS;
@@ -46,7 +46,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var aim_wait = 8;
 			var aim_spd = 2.5;
 			var aim_arc = 7;
-			var aim_dist = 25;
+			var aim_dist = 24;
 		break;
 		case 2:
 			var shock_wave = 4;
