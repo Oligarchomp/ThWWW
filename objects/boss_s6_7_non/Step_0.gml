@@ -15,7 +15,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var bubble_wait = 18;
 			var bubble_arc = 5;
 			var bubble_dist = 32;
-			var bubble_spd = 4.2;
+			var bubble_spd = 4;
 			
 			var bullet_wait = 10;
 			var bullet_ring = 17;
@@ -49,7 +49,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var bubble_wait = 14;
 			var bubble_arc = 7;
 			var bubble_dist = 24;
-			var bubble_spd = 5.7;
+			var bubble_spd = 5;
 			
 			var bullet_wait = 8;
 			var bullet_ring = 29;

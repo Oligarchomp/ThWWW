@@ -33,7 +33,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var spam_grav_max = 1.5;
 			var spam_grav_git = 0.45;
 			var spam_accel = 0.1;
-			var spam_arrow_nbr = 38;
+			var spam_arrow_nbr = 37;
 			var spam_open = 16;
 			
 			var tree_dan = DAN_MENTOS;
