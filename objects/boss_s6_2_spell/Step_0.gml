@@ -26,7 +26,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var tray_spd_max = 3.2;
 			var tray_frame_accel = 90;
 			
-			var wave_wait = 52;
+			var wave_wait = 56;
 		break;
 		case 1:
 			var anchor_size = 2;
@@ -50,7 +50,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var tray_spd_max = 3.8;
 			var tray_frame_accel = 90;
 			
-			var wave_wait = 45;
+			var wave_wait = 48;
 		break;
 		case 2:
 			var anchor_size = 2;

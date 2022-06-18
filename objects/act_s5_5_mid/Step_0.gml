@@ -17,7 +17,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 1:
 			var arrow_wait = 11;
 			var arrow_lenght = 45;
-			var arrow_ring = 32;
+			var arrow_ring = 31;
 			var arrow_spd = 3.5;
 			var arrow_spd_redirect = 2.5;
 			var arrow_size = 2;

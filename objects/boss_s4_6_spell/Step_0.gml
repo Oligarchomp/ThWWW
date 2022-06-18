@@ -158,7 +158,7 @@ if(global.gp_active) and (spell_wait == 0)
 		break;
 	}
 	
-	var familiar_life = 100;
+	var familiar_life = 95;
 	
 	for(var i = 0; i < array_length(id_list); i += 1)
 	{

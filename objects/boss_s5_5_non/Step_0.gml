@@ -12,7 +12,7 @@ if(global.gp_active)
 			{
 				case 0:
 					var knife_row = 4;
-					var knife_ring = 11;
+					var knife_ring = 12;
 					var knife_size = 2;
 					var knife_dist = 60;
 					var knife_spd = 3;

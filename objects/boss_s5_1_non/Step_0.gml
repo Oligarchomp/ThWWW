@@ -5,7 +5,7 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			var wave_time = 88;
+			var wave_time = 90;
 			var wave_lenght = 66;
 			
 			var aim_wait = 6;

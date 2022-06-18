@@ -33,7 +33,7 @@ if(global.gp_active)
 					var spam_deccel = 0.2;
 					
 					var wave_length = 150;
-					var wait = 112;
+					var wait = 116;
 				break;
 				case 1:
 					var mentos_wait = 5;
