@@ -1,0 +1,14 @@
+1.0.0
+- Initial release.
+
+1.0.1
+- Fixed some typos.
+- Fixed Feza's seconde spell not proceeding properly during a bomb, on easy to hard.
+- Fixed the arrows of the exploding familiar in stage 4 not slowing down at the end of the second wave.
+- Made Nua's fight overall slightly more difficult, on easy to hard. 
+	Most notably, Nua's final spell on easy and normal now works in a similar as the hard version. 
+- Made the first half of the extra stage slightly easier.
+- Made Reverence's 8th spell "God Complex" slightly easier.
+- Replays now display the version they were recorded on.
+- Reworded text related to the animal realm incident, to now be the aether world incident, to be clear it's not meant to be the event of WBaWC.
+- Changed the way "Heaven" is spelled in Japanese in some places.

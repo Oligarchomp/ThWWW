@@ -88,6 +88,7 @@ if(global.gp_active)
 		case 0:
 			var inst = create_enemy(EN_GREEN,310,-20,fairy_life,1,7,-90);
 			inst.item_nbr = 9;
+			inst.can_revenge = false;
 		break;
 		case 150:
 			need_fairy_time = lots_length;
@@ -96,6 +97,7 @@ if(global.gp_active)
 		case 348:
 			var inst = create_enemy(EN_GREEN,90,-20,fairy_life,1,7,-90);
 			inst.item_nbr = 9;
+			inst.can_revenge = false;
 		break;
 		case 498:
 			need_fairy_time = lots_length;
@@ -112,6 +114,7 @@ if(global.gp_active)
 			inst.item_nbr = 2;
 			inst.angle_to = 90 - act_dir * 90;
 			inst.wait_off = rng(row_wait,true,1);
+			inst.can_revenge = false;
 		}
 		
 		need_fairy_time -= 1;

@@ -828,6 +828,7 @@
     {"CopyToMask":-1,"filePath":"datafiles/music","resourceVersion":"1.0","name":"boss5.wav","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/music","resourceVersion":"1.0","name":"stage4.wav","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/music","resourceVersion":"1.0","name":"boss4.wav","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"Changelog.txt","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2022.5.1.16",
