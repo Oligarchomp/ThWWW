@@ -3,14 +3,14 @@
 if(global.gp_active)
 {
 	
-	var bubble_nbr = 6;
+	var bubble_nbr = 5;
 	var bubble_wait = 6;
 	var bubble_start = 0;
 	var bubble_spd_final = 2.3;
 	var bubble_accel = 0.05;
 	var bubble_spd_div = 1.6;
 	
-	var ball_nbr = 20;
+	var ball_nbr = 18;
 	var ball_wait = 8;
 	var ball_start = 0;
 	var ball_spd_final = 3.4;

@@ -9,10 +9,10 @@ if(global.gp_active)
 		var rice_angle_plus = 12.5;
 		var rice_dist = 10;
 		var rice_nbr = 6;
-		var wait_move = 68;
+		var wait_move = 66;
 	
 		var note_spd = 3.5;
-		var note_accel = 0.0125;
+		var note_accel = 0.0128;
 	
 		var bubble_ring = 7;
 		var bubble_row = 9;

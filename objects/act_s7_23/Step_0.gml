@@ -4,7 +4,7 @@ if(global.gp_active)
 {
 	
 	var mentos_ring = 5;
-	var mentos_wait = 8;
+	var mentos_wait = 9;
 	var mentos_spd_max = 5;
 	var mentos_spd_min = 4.9;
 	var mentos_open = 1.5;

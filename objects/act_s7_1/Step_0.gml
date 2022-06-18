@@ -28,7 +28,7 @@ if(global.gp_active)
 		
 	var arc_nbr = 7;
 	var arc_spd = 5;
-	var arc_dist = 16;
+	var arc_dist = 20;
 	
 	var fairy_life = 5;
 	
