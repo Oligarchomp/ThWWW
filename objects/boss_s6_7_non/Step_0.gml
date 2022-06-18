@@ -201,7 +201,7 @@ if(global.gp_active) and (spell_wait == 0)
 				
 				var open = 160;
 				var aim = find_angle(obj_boss.x,obj_boss.y,obj_player.x,obj_player.y) + 180;
-				repeat(14)
+				repeat(12)
 				{
 					shoot(DAN_BULLET,7,obj_boss.x,obj_boss.y,aim + open - rng(open * 2,false,1),5 + rng(5,false,1),sfx_shot2,4);
 				}

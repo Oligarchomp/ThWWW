@@ -288,6 +288,9 @@ global.play_type = PLAY_MANUAL;
 #macro FONT_PAUSE 3
 #macro FONT_GAME_INFO 4
 
+
+global.is_controller = gamepad_is_connected(0);
+
 //define language
 // 0 = not set yet
 #macro LAN_ENG 1
@@ -326,7 +329,9 @@ else
 	room_goto(room_language);
 }
 
-global.is_controller = gamepad_is_connected(0);
+
+
+
 
 
 room_goto(room_gp)
@@ -334,5 +339,5 @@ room_goto(room_gp)
 global.difficulty = 1;
 
 add_stage_event(act_s6_0,0)
-add_stage_event(boss_s6_2_spell,1);
+add_stage_event(boss_s6_9_spell,1);
 

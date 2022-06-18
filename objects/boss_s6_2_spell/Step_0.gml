@@ -69,7 +69,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var tray_start = 00;
 			var tray_wait = 1;
 			var tray_row = 5;
-			var tray_spin = 18;
+			var tray_spin = 18.5;
 			var tray_spd_min = 2;
 			var tray_spd_max = 4;
 			var tray_frame_accel = 90;

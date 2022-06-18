@@ -30,7 +30,7 @@ switch(player_id)
 		
 		ms_spd = 1;
 		
-		deathbomb_time = 9;
+		deathbomb_time = 10;
 		
 		hb_scale = 1;
 	break;
@@ -48,7 +48,7 @@ switch(player_id)
 		hurt_im = 1;
 		grab_im = 0;
 		
-		deathbomb_time = 11;
+		deathbomb_time = 12;
 		
 		hb_scale = 1;
 	break;
@@ -66,7 +66,7 @@ switch(player_id)
 		hurt_im = 0;
 		grab_im = 0;
 		
-		deathbomb_time = 14;
+		deathbomb_time = 15;
 		
 		hb_scale = 0.9;
 	break;

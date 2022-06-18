@@ -33,6 +33,8 @@ if (global.gp_active)
 					{
 						play_sound(sfx_death,1,false);
 						plr.state = 1;
+						plr.old_state = 1;
+						plr.state_time = 0;
 					}
 						
 					if(meet.is_danmaku) and (meet.is_cancelable)

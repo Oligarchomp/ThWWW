@@ -22,7 +22,7 @@ if(global.gp_active)
 					var off_div = 4;
 				break;
 				case 1:
-					var torpedo_wait = 86;
+					var torpedo_wait = 80;
 					var torpedo_tail_wait = 14;
 					var torpedo_lenght = 70;
 					var torpedo_ring = 16;

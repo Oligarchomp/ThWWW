@@ -11,7 +11,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var spam_grav_max = 1.6;
 			var spam_grav_git = 0.3;
 			var spam_accel = 0.1;
-			var spam_arrow_nbr = 22;
+			var spam_arrow_nbr = 20;
 			var spam_open = 10;
 			
 			var tree_dan = DAN_MENTOS;
@@ -22,29 +22,29 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var aim_dan = DAN_ARROW;
 			var aim_wait = 12;
-			var aim_spd = 1.9;
+			var aim_spd = 1.7;
 			var aim_arc = 5;
-			var aim_dist = 32;
+			var aim_dist = 34;
 		break;
 		case 1:
 			var shock_wave = 3;
 			var shock_wait = 40;
 			
-			var spam_grav_max = 1.8;
-			var spam_grav_git = 0.55;
+			var spam_grav_max = 1.5;
+			var spam_grav_git = 0.45;
 			var spam_accel = 0.1;
-			var spam_arrow_nbr = 39;
+			var spam_arrow_nbr = 38;
 			var spam_open = 16;
 			
 			var tree_dan = DAN_MENTOS;
-			var tree_nbr = 20;
+			var tree_nbr = 19;
 			var tree_spin = 2;
-			var tree_spd = 1.5;
+			var tree_spd = 1.4;
 			var tree_spd_div = 1.5;
 			
 			var aim_dan = DAN_ARROW;
 			var aim_wait = 8;
-			var aim_spd = 2.5;
+			var aim_spd = 2.4;
 			var aim_arc = 7;
 			var aim_dist = 24;
 		break;

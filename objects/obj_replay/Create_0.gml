@@ -113,6 +113,8 @@ for(var i = 0; i < 20; i += 1)
 		}
 		menu[i].difficulty = diff;
 		menu[i].action = MENU_NAME;
+		
+		menu[i].version = string(get_text_file("version",replay_check));
 	}
 	else
 	{
@@ -123,6 +125,7 @@ for(var i = 0; i < 20; i += 1)
 		menu[i].difficulty = "-------"
 		menu[i].game_type = "-----------------";
 		menu[i].action = MENU_NAME;
+		menu[i].version = "0.0.0";
 	}
 }
 

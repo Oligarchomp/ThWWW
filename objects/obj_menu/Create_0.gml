@@ -1546,6 +1546,12 @@ for(var i = 0; i < 20; i += 1)
 				}
 			}
 		}
+		
+		menu[rep].param[i].version = string(get_text_file("version",replay_check));
+		if(menu[rep].param[i].version != global.ver)
+		{
+			menu[rep].param[i].action = MENU_INVALID;
+		}
 	}
 	else
 	{
@@ -1556,6 +1562,7 @@ for(var i = 0; i < 20; i += 1)
 		menu[rep].param[i].difficulty = "-------"
 		menu[rep].param[i].game_type = "-----------------";
 		menu[rep].param[i].action = MENU_NOTHING;
+		menu[rep].param[i].version = "0.0.0";
 	}
 }
 

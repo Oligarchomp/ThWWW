@@ -18,7 +18,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var arc_spd_min = 0.6;
 			var arc_spd_max = 1.5;
 			
-			var wave_wait = 178;
+			var wave_wait = 195;
 		break;
 		case 1:
 			var anchor_nbr = 10;
@@ -34,7 +34,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var arc_spd_min = 0.7;
 			var arc_spd_max = 1.6;
 			
-			var wave_wait = 166;
+			var wave_wait = 175;
 		break;
 		case 2:
 			var anchor_nbr = 11;

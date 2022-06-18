@@ -22,7 +22,7 @@ if(global.gp_active)
 					var mentos_angle_plus = 360 / mentos_ring / 5;
 					
 					var spam_bubble = 2;
-					var spam_mentos = 8;
+					var spam_mentos = 7;
 					var spam_ball = 12;
 					
 					var spam_ring = 5;
@@ -33,7 +33,7 @@ if(global.gp_active)
 					var spam_deccel = 0.2;
 					
 					var wave_length = 150;
-					var wait = 110;
+					var wait = 112;
 				break;
 				case 1:
 					var mentos_wait = 5;
@@ -86,7 +86,7 @@ if(global.gp_active)
 					
 					var spam_bubble = 9; 
 					var spam_mentos = 21; 
-					var spam_ball = 38;
+					var spam_ball = 37;
 					
 					var spam_ring = 5;
 					
