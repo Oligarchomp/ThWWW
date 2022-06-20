@@ -7,7 +7,7 @@ if(global.gp_active) and (spell_wait == 0)
 		case 0:
 			var arrow_wait = 15;
 			var arrow_lenght = 40;
-			var arrow_ring = 23;
+			var arrow_ring = 22;
 			var arrow_spd = 3;
 			var arrow_spd_redirect = 2.5;
 			var arrow_size = 2;

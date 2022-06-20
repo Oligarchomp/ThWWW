@@ -30,7 +30,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var shock_wave = 3;
 			var shock_wait = 40;
 			
-			var spam_grav_max = 1.6;
+			var spam_grav_max = 1.7;
 			var spam_grav_git = 0.45;
 			var spam_accel = 0.1;
 			var spam_arrow_nbr = 38;
@@ -44,7 +44,7 @@ if(global.gp_active) and (spell_wait == 0)
 			
 			var aim_dan = DAN_ARROW;
 			var aim_wait = 8;
-			var aim_spd = 2.4;
+			var aim_spd = 2.5;
 			var aim_arc = 7;
 			var aim_dist = 24;
 		break;

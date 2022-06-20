@@ -14,13 +14,13 @@ if(global.gp_active)
 				case 0:
 					var aim_ring = 26;
 					var aim_row = 5;
-					var aim_spd_min = 2;
-					var aim_spd_max = 6;
+					var aim_spd_min = 1.5;
+					var aim_spd_max = 5;
 				
 					var mentos_wait = 14;
 					var mentos_off = 90;
 					var ball_wait = 14;
-					var ball_off = 78;
+					var ball_off = 65;
 
 			
 					var water_ring = 3;
@@ -37,8 +37,8 @@ if(global.gp_active)
 				case 1:
 					var aim_ring = 34;
 					var aim_row = 5;
-					var aim_spd_min = 2;
-					var aim_spd_max = 6;
+					var aim_spd_min = 1.8;
+					var aim_spd_max = 5.8;
 				
 					var mentos_wait = 9;
 					var mentos_off = 90;
