@@ -19,7 +19,7 @@ for(var i = 0; i < array_length(check); i += 1)
 {
 	is_active = cursor == i
 					
-	var col_val = is_active ? c_white : $5a5a5a; 
+	var col_val = is_active ? c_white : $696969; 
 					
 	//relplay number
 	draw_text_color(xx - 140,yy + i * dist,"ReplayN" + string(add_zero(i + 1,2)) + " //",col_val,col_val,col_val,col_val,1);

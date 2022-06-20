@@ -43,7 +43,7 @@ if(global.gp_active)
 					var mentos_wait = 9;
 					var mentos_off = 90;
 					var ball_wait = 9;
-					var ball_off = 64;//75
+					var ball_off = 75;
 			
 					var water_ring = 3;
 					var water_spd_shoot_min = 5.5;
