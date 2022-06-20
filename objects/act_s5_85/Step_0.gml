@@ -31,7 +31,7 @@ if(global.gp_active)
 			var mentos_arc = 3;
 			var mentos_dist = 50;
 			
-			var rev_ring = 6;
+			var rev_ring = 7;
 			var rev_row = 3;
 			var rev_spd_min = 2.5;
 			var rev_spd_max = 4;

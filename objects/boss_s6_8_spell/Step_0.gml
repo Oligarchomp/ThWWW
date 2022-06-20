@@ -29,7 +29,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var mentos_accel = 0.01;
 			var mentos_angle_plus = 30;
 			
-			var arc_nbr = 9;
+			var arc_nbr = 8;
 			var arc_row = 2;
 			var arc_spd_min = 0.7;
 			var arc_spd_max = 1.6;

@@ -12,25 +12,25 @@ if(global.gp_active)
 			{
 				case 0:
 					var bubble_nbr = 10;
-					var bubble_spd = 2.2;
+					var bubble_spd = 2.1;
 	
 					var bubble_wait = 52;
 			
 					var arrow_nbr = 6;
-					var arrow_spd = 2.5;
+					var arrow_spd = 2.4;
 			
 					var arrow_wait = 20;
 					var arrow_dist = 180 / arrow_nbr / 4 ;
 				break;
 				case 1:
-					var bubble_nbr = 18;
-					var bubble_spd = 2.8;
+					var bubble_nbr = 17;
+					var bubble_spd = 2.6;
 	
 					var bubble_wait = 40;
 			
 					var arrow_nbr = 8;
-					var arrow_spd = 3.5;
-					var arrow_wait = 13;
+					var arrow_spd = 3;
+					var arrow_wait = 14;
 					var arrow_dist = 180 / arrow_nbr / 4 ;
 				break;
 				case 2:
@@ -40,7 +40,7 @@ if(global.gp_active)
 					var bubble_wait = 34;
 			
 					var arrow_nbr = 10;
-					var arrow_spd = 4.2;
+					var arrow_spd = 4;
 					var arrow_wait = 10;
 					var arrow_dist = 180 / arrow_nbr / 4 ;
 				break;
