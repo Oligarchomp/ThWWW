@@ -5,9 +5,9 @@ if(global.gp_active) and (spell_wait == 0)
 	switch(global.difficulty)
 	{
 		case 0:
-			var bullet_wait = 24;
+			var bullet_wait = 25;
 			var bullet_ring = 11;
-			var bullet_spd = 2.1;
+			var bullet_spd = 2;
 			var bullet_angle_max = 160;
 			var bullet_angle_plus = 2.6;
 			var bullet_dist = -6;	

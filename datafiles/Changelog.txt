@@ -3,7 +3,7 @@
 
 1.0.1
 - Fixed some typos.
-- Made Pale's 3rd non slower on easy to hard.
+- Made Pale's "midnon" and 3rd non slower on easy to hard.
 - Fixed Feza's seconde spell not proceeding properly during a bomb, on easy to hard.
 - Added warnings on Feza's final spell.
 - Fixed the arrows of the exploding familiar in stage 4 not slowing down at the end of the second wave.

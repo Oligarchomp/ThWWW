@@ -7,31 +7,31 @@ if(global.gp_active)
 		case 0:
 			var angle_ball_spd = -12;
 			var ball_start = 20;
-			var ball_spd = 2.2;
+			var ball_spd = 2;
 			var ball_wait = 6;
 			var ball_ring = 5;
 			
 			var bubble_nbr = 3;
 			var bubble_start = ball_start;
-			var bubble_spd = 2.5;
+			var bubble_spd = 2.2;
 			var bubble_wait = 20;
 		break;
 		case 1:
 			var angle_ball_spd = -10;
 			var ball_start = 20;
-			var ball_spd = 3.1;
+			var ball_spd = 2.6;
 			var ball_wait = 4;
 			var ball_ring = 8;
 			
 			var bubble_nbr = 10;
 			var bubble_start = ball_start;
-			var bubble_spd = 2.7;
+			var bubble_spd = 2.5;
 			var bubble_wait = 12;
 		break;
 		case 2:
 			var angle_ball_spd = -9;
 			var ball_start = 20;
-			var ball_spd = 3.5;
+			var ball_spd = 3.4;
 			var ball_wait = 3;
 			var ball_ring = 10;
 			
