@@ -4,11 +4,11 @@
 1.0.1
 - Fixed some typos.
 - Made Pale's "midnon" and 3rd non slower on easy to hard.
-- Fixed Feza's seconde spell not proceeding properly during a bomb, on easy to hard.
+- Fixed Feza's second spell not proceeding properly during a bomb, on easy to hard.
 - Added warnings on Feza's final spell.
-- Fixed the arrows of the exploding familiar in stage 4 not slowing down at the end of the second wave.
-- Made Nua's fight overall slightly more difficult, on easy to hard. 
-- Made the first half of the extra stage slightly easier.
+- Fixed the arrows of the exploding familiars in stage 4 not slowing down at the end of the second wave.
+- Made Nua's fight overall slightly harder, on easy to hard. 
+- Made the first half of the extra stage's stage portion slightly easier.
 - Made Reverence's 8th spell "God Complex" slightly easier.
 - Replays now display the version they were recorded on.
 - Reworded text related to the animal realm incident, to now be the aether world incident, to be clear it's not meant to be the event of WBaWC.

@@ -82,7 +82,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var bubble_wait = 10;
 			var bubble_arc = 7;
 			var bubble_dist = 24;
-			var bubble_spd = 6;
+			var bubble_spd = 5.8;
 			
 			var bullet_wait = 7;
 			var bullet_ring = 35;
