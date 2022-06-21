@@ -173,7 +173,28 @@ if(global.gp_active) and (spell_wait == 0)
 					with(obj_danmaku6)
 					{
 						boss_charge(x,y);
-						boss_charge_row(x,y,angle + 180,5,36,9);
+					}
+				break;
+				case 81:
+				case 86:
+				case 91:
+				case 96:
+					if(!global.rng_patch)
+					{
+						var inst = instance_create_depth(obj_boss.x,obj_boss.y,global.boss_depth,obj_thunder);
+						inst.is_thunder = false;
+					
+						var inst = instance_create_depth(obj_boss.x,obj_boss.y,global.boss_depth,obj_thunder);
+						inst.is_thunder = false;
+						inst.w_angle = 180;
+					
+						var inst = instance_create_depth(obj_boss.x,obj_boss.y,global.boss_depth,obj_thunder);
+						inst.is_thunder = false;
+						inst.w_angle = 90;
+					
+						var inst = instance_create_depth(obj_boss.x,obj_boss.y,global.boss_depth,obj_thunder);
+						inst.is_thunder = false;
+						inst.w_angle = 270;
 					}
 				break;
 				case 120:

@@ -335,6 +335,6 @@ room_goto(room_gp)
 
 global.difficulty = 1;
 
-add_stage_event(act_s6_0,0)
-add_stage_event(boss_s6_5_non,1);
+add_stage_event(act_s5_0,0)
+add_stage_event(boss_s5_7_spell,1);
 
