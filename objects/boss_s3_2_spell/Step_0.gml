@@ -41,7 +41,7 @@ if(global.gp_active) and(spell_wait == 0)
 		case 3:
 			var bubble_nbr = 24;
 			var shoot_wait = 3;
-			var bubble_spd = 4.6;
+			var bubble_spd = 4.5;
 			var step1_angle_spd = 5;
 			var step2_angle_spd = 1;
 			

@@ -9,7 +9,6 @@
 - Fixed the arrows of the exploding familiars in stage 4 not slowing down at the end of the second wave.
 - Made Nua's fight overall slightly harder, on easy to hard. 
 - Made the first half of the extra stage's stage portion slightly easier.
-- Made Reverence's 8th spell "God Complex" slightly easier.
 - Replays now display the version they were recorded on.
 - Reworded text related to the animal realm incident, to now be the aether world incident, to be clear it's not meant to be the event of WBaWC.
 - Changed the way "Heaven" is spelled in Japanese in some places.

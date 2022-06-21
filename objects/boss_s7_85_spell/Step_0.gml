@@ -12,7 +12,7 @@ if(global.gp_active)
 		var wait_move = 66;
 	
 		var note_spd = 3.5;
-		var note_accel = 0.0125;
+		var note_accel = 0.013;
 	
 		var bubble_ring = 7;
 		var bubble_row = 9;
