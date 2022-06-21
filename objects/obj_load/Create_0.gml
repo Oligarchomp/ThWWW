@@ -329,12 +329,12 @@ else
 	room_goto(room_language);
 }
 
-/*
 
+/*
 room_goto(room_gp)
 
 global.difficulty = 1;
 
-add_stage_event(act_s3_0,0)
-add_stage_event(act_s3_6,1);
+add_stage_event(act_s6_0,0)
+add_stage_event(boss_s6_5_non,1);
 

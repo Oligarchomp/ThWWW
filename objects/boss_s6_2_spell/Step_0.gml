@@ -10,7 +10,7 @@ if(global.gp_active) and (spell_wait == 0)
 			var anchor_stay = 100;
 			var anchor_accel = 0.05;
 			
-			var impact_ring = 13;
+			var impact_ring = 12;
 			var impact_row = 6;
 			var impact_spd_min = 0.68;
 			var impact_spd_max = 1.8;
