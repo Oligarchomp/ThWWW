@@ -87,31 +87,30 @@ if (is_spell)
 	{
 		var text = "Failed";
 	}
-	var x_pos = 440;
+	var x_pos = 425;
 	var x_pos_score = x_pos - string_width(text);
 	var y_pos = spell_info_y;
-	draw_text_outline(x_pos - 100,y_pos,"Bonus:",text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);
-	draw_text_outline(x_pos_score,y_pos,text,text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);
+	draw_text_outline(x_pos - 98,y_pos,"Bonus:",text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);
+	draw_text_outline(x_pos_score + 2,y_pos,text,text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);
 
 	draw_text_outline(x_pos + 5,y_pos,"| History:",text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);
 	
-	if(cap_history < 99)
+	if(cap_history < 999)
 	{
-		var cap_hist = string(add_zero(cap_history,2));
+		var cap_hist = string(add_zero(cap_history,3));
 		
-		var try_hist = try_history < 99 ?  add_zero(try_history,2) : "99+";
+		var try_hist = try_history < 999 ?  add_zero(try_history,3) : "999+";
 		
 		draw_text_outline(x_pos + 68,y_pos,cap_hist + " /" ,text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);
-		draw_text_outline(x_pos + 94,y_pos,try_hist,text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);
+		draw_text_outline(x_pos + 101,y_pos,try_hist,text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);
 	}
 	else
 	{
-		draw_text_outline(x_pos + 68,y_pos, "Master" ,text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);
-		
+		draw_text_outline(x_pos + 70,y_pos, "Master +" ,text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);
 	}
 
 	//hey as long as it works
-	draw_text_outline(x_pos - 100,y_pos - 17,"_____________________________",text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);
+	draw_text_outline(x_pos - 100,y_pos - 17,"________________________________",text_col_top,text_col_top,text_col_bottom,text_col_bottom,spell_info_alpha,col_out);
 
 	
 
