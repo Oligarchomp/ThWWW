@@ -5,8 +5,20 @@ if(room != room_credit)
 {
 	if(global.rng_patch)
 	{
-		draw_set_font(font_scorename);
-		draw_text(830,5,"RNG PATCH")	
+		switch(global.lan)
+		{
+			case LAN_ENG:
+				draw_set_font(font_scorename);
+				var text = "RNG PATCH";
+			break;
+			case LAN_JAP:
+				draw_set_font(global.font_pause_j);
+				var text = "ランダムモード";
+			break;
+		}
+		draw_set_halign(fa_right);
+		draw_text(950,5,text);	
+		draw_set_halign(fa_left);
 	}
 
 	draw_set_font(font_replay);
