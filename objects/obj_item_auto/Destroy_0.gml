@@ -27,7 +27,7 @@ switch(item_type)
 		inst.max_value = scr == global.piv;
 	break;
 	case ITEM_CANCEL:
-		var sc = floor(global.graze / 40) * 10 + 300;
+		var sc = floor(global.graze / 3) * 10 + 1000;
 		add_score(sc);
 	break;
 	case ITEM_LIFE :

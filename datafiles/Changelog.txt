@@ -10,5 +10,6 @@
 - Made Nua's fight overall slightly harder, on easy to hard. 
 - Made the first half of the extra stage's stage portion slightly easier.
 - Replays now display the version they were recorded on.
+- Cancel items give more score.
 - Reworded text related to the animal realm incident, to now be the aether world incident, to be clear it's not meant to be the event of WBaWC.
 - Changed the way "Heaven" is spelled in Japanese in some places.
